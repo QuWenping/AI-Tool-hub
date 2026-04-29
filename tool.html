@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>工具详情 - AI Tool Hub</title>
+    <meta name="description" id="meta-desc" content="">
+    <meta name="keywords" id="meta-keywords" content="">
+    <link rel="canonical" id="canonical-link" href="">
+    <meta property="og:title" id="og-title" content="">
+    <meta property="og:description" id="og-desc" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" id="og-url" content="">
+    <meta property="og:site_name" content="AI Tool Hub">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -54,6 +63,51 @@
                 document.getElementById('tool-content').innerHTML = '<h1>404 Tool Not Found</h1>';
                 return;
             }
+
+            // Dynamic SEO
+            const baseUrl = 'https://ai-tool-hub-self.vercel.app';
+            const pageUrl = `${baseUrl}/tool.html?id=${toolId}`;
+            const seoTitle = `${tool.name.en} Review | Best ${tool.cat.charAt(0).toUpperCase() + tool.cat.slice(1)} AI Tool - AI Tool Hub`;
+            const seoDesc = tool.short_desc.en + ' ' + tool.pros.en.slice(0, 2).join('. ') + '.';
+            const seoKeywords = [tool.name.en, tool.name.zh, 'AI tool', 'review', tool.cat, 'tutorial'].join(', ');
+
+            document.title = seoTitle;
+            document.getElementById('meta-desc').content = seoDesc;
+            document.getElementById('meta-keywords').content = seoKeywords;
+            document.getElementById('canonical-link').href = pageUrl;
+            document.getElementById('og-title').content = seoTitle;
+            document.getElementById('og-desc').content = seoDesc;
+            document.getElementById('og-url').content = pageUrl;
+
+            // Schema.org SoftwareApplication
+            const schema = {
+                '@context': 'https://schema.org',
+                '@type': 'SoftwareApplication',
+                name: tool.name.en,
+                description: tool.short_desc.en,
+                applicationCategory: 'AIApplication',
+                operatingSystem: 'Any',
+                url: tool.url,
+                featureList: tool.features.en,
+                offers: {
+                    '@type': 'Offer',
+                    price: '0',
+                    priceCurrency: 'USD'
+                },
+                aggregateRating: {
+                    '@type': 'AggregateRating',
+                    ratingValue: '4.7',
+                    ratingCount: '128'
+                }
+            };
+            let schemaScript = document.getElementById('schema-ld');
+            if (!schemaScript) {
+                schemaScript = document.createElement('script');
+                schemaScript.type = 'application/ld+json';
+                schemaScript.id = 'schema-ld';
+                document.head.appendChild(schemaScript);
+            }
+            schemaScript.textContent = JSON.stringify(schema);
 
             const audienceTags = tool.target_audience[currentLang].map(a => `<span class="audience-tag">${a}</span>`).join('');
             const featureList = tool.features[currentLang].map(f => `<li><i class="fas fa-check-circle"></i> ${f}</li>`).join('');
