@@ -475,8 +475,8 @@ const i18n = {
 
 // AFFILIATE CONFIG: replace '#' with your actual referral links
 const affiliateUrls = {
-    digitalocean: '#', // https://m.do.co/c/YOUR_CODE
-    vultr: '#',        // https://www.vultr.com/?ref=YOUR_ID
+    digitalocean: 'https://m.do.co/c/24cff868d546',
+    vultr: 'https://www.vultr.com/?ref=9897939',
     linode: '#',       // https://www.linode.com/lp/refer/?r=YOUR_CODE
     elevenlabs: 'https://try.elevenlabs.io/j50wgji2obha',   // ElevenLabs referral link
     notion: 'https://notion.so/product/ai' // replace with affiliate link when approved
