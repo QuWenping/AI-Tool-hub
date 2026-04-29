@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具详情 - AI Tool Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">AI<span id="logo-span">Hub</span></div>
+            <div class="header-actions">
+                <div class="action-group">
+                    <select id="lang-select" class="style-select">
+                        <option value="zh">🇨🇳 中文</option>
+                        <option value="en">🇺🇸 English</option>
+                    </select>
+                    <button id="theme-toggle" title="Toggle Theme">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="detail-navigation">
+            <a href="index.html" class="back-link" data-i18n="detail_back">
+                <i class="fas fa-arrow-left"></i> 返回首页
+            </a>
+        </div>
+
+        <div id="tool-content" class="tool-detail-container">
+            <!-- JS will populate this -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p data-i18n="footer_text">&copy; 2026 AI Tool Hub. Designed for Productivity.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const toolId = params.get('id');
+            const tool = getToolById(toolId);
+
+            if (!tool) {
+                document.getElementById('tool-content').innerHTML = '<h1>404 Tool Not Found</h1>';
+                return;
+            }
+
+            const audienceTags = tool.target_audience[currentLang].map(a => `<span class="audience-tag">${a}</span>`).join('');
+            const featureList = tool.features[currentLang].map(f => `<li><i class="fas fa-check-circle"></i> ${f}</li>`).join('');
+            const prosList = tool.pros[currentLang].map(p => `<li><i class="fas fa-check"></i> ${p}</li>`).join('');
+            const consList = tool.cons[currentLang].map(c => `<li><i class="fas fa-times"></i> ${c}</li>`).join('');
+            const useCaseList = tool.use_cases[currentLang].map(u => `<li><i class="fas fa-lightbulb"></i> ${u}</li>`).join('');
+
+            const contentDiv = document.getElementById('tool-content');
+            contentDiv.innerHTML = `
+                <div class="detail-header">
+                    <div class="detail-icon"><i class="fas ${tool.icon}"></i></div>
+                    <div class="detail-title-group">
+                        <h1>${tool.name[currentLang]}</h1>
+                        <div class="detail-tag">${i18n[currentLang].category_labels[tool.cat] || tool.cat}</div>
+                    </div>
+                    <a href="${tool.url}" target="_blank" class="detail-use-btn">👉 ${i18n[currentLang].detail_use_btn}</a>
+                </div>
+
+                <div class="detail-grid">
+                    <section class="detail-section">
+                        <h2 class="section-title" data-i18n="detail_intro">${i18n[currentLang].detail_intro}</h2>
+                        <p class="section-content">${tool.long_desc[currentLang]}</p>
+                    </section>
+
+                    <section class="detail-section">
+                        <h2 class="section-title" data-i18n="detail_audience">${i18n[currentLang].detail_audience}</h2>
+                        <div class="audience-tags">${audienceTags}</div>
+                    </section>
+
+                    <section class="detail-section">
+                        <h2 class="section-title" data-i18n="detail_features">${i18n[currentLang].detail_features}</h2>
+                        <ul class="feature-list">${featureList}</ul>
+                    </section>
+
+                    <section class="detail-section">
+                        <h2 class="section-title">${i18n[currentLang].detail_pros} & ${i18n[currentLang].detail_cons}</h2>
+                        <div class="pros-cons-box">
+                            <div class="pro-text">
+                                <strong>✔ ${i18n[currentLang].detail_pros}</strong>
+                                <ul class="pro-list">${prosList}</ul>
+                            </div>
+                            <div class="con-text">
+                                <strong>✖ ${i18n[currentLang].detail_cons}</strong>
+                                <ul class="con-list">${consList}</ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="detail-section">
+                        <h2 class="section-title" data-i18n="detail_use_cases">${i18n[currentLang].detail_use_cases}</h2>
+                        <ul class="use-case-list">${useCaseList}</ul>
+                    </section>
+                </div>
+            `;
+
+            // Initialize general page elements using functions from main.js
+            const langSelect = document.getElementById('lang-select');
+            if (langSelect) langSelect.value = currentLang;
+            applyTheme(currentTheme);
+            updateText();
+        });
+    </script>
+</body>
+</html>

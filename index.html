@@ -3,85 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI工具导航网 | 发现全球最强的AI效率工具 - AI Tool Hub</title>
-    <meta name="description" content="AI工具导航网提供最全面的AI资源汇总，涵盖文本创作、图像生成、编程助手、视频制作等领域，助你快速发现提升生产力的AI神器。">
-    <meta name="keywords" content="AI工具, AI导航, 人工智能, ChatGPT, Midjourney, 效率工具, AI资源">
-    <link rel="canonical" href="https://your-project-name.vercel.app/" />
-    <meta property="og:title" content="AI工具导航网 | 发现全球最强的AI效率工具">
-    <meta property="og:description" content="一个简洁、纯净的 AI 资源导航站，助你高效提升生产力。">
+    <title>AI Tool Hub | Find the Best AI Tools for Any Task</title>
+    <meta name="description" content="Curated AI tools for writing, coding, design & business. Discover the most powerful AI resources to boost your productivity.">
+    <meta name="keywords" content="AI tools, AI writing, AI image, AI coding, AI business, productivity">
+    <link rel="canonical" href="https://ai-tool-hub-self.vercel.app/" />
+    <meta property="og:title" content="AI Tool Hub | Find the Best AI Tools for Any Task">
+    <meta property="og:description" content="Curated AI tools for writing, coding, design & business.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-project-name.vercel.app/">
+    <meta property="og:url" content="https://ai-tool-hub-self.vercel.app/">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">AI<span>Hub</span></div>
+            <div class="logo">AI<span id="logo-span">Hub</span></div>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#" class="active">首页</a></li>
-                    <li><a href="#">提交工具</a></li>
-                    <li><a href="#">关于</a></li>
+                    <li><a href="index.html" class="active" data-i18n="nav_home">首页</a></li>
+                    <li><a href="deploy.html">部署教程</a></li>
+                    <li><a href="contact.html" data-i18n="nav_submit">提交工具</a></li>
+                    <li><a href="#" data-i18n="nav_about">关于</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
-                <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+                <div class="action-group">
+                    <select id="lang-select" class="style-select">
+                        <option value="zh">🇨🇳 中文</option>
+                        <option value="en">🇺🇸 English</option>
+                    </select>
+                    <button id="theme-toggle" title="Toggle Theme">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
 
     <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 data-i18n="hero_title">Find the Best AI Tools for Any Task</h1>
+            <p data-i18n="hero_subtitle">Curated AI tools for writing, coding, design & business</p>
+            <div class="hero-cta">
+                <a href="#tool-grid" id="cta-browse" class="cta-btn cta-primary" data-i18n="cta_browse">Browse Tools</a>
+                <a href="tool.html?id=chatgpt" class="cta-btn cta-secondary" data-i18n="cta_start_free">Start Free</a>
+            </div>
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" data-i18n-placeholder="search_placeholder" placeholder="Search for AI tools...">
+            </div>
+        </section>
+
+        <!-- 4大分类入口 -->
+        <section class="category-hero">
+            <div class="cat-hero-grid">
+                <div class="cat-hero-card" data-category="text">
+                    <div class="cat-hero-icon"><i class="fas fa-pen-nib"></i></div>
+                    <h3>AI Writing Tools</h3>
+                    <p>Text generation, copywriting & translation</p>
+                </div>
+                <div class="cat-hero-card" data-category="image">
+                    <div class="cat-hero-icon"><i class="fas fa-image"></i></div>
+                    <h3>AI Image Tools</h3>
+                    <p>Art generation, editing & design</p>
+                </div>
+                <div class="cat-hero-card" data-category="code">
+                    <div class="cat-hero-icon"><i class="fas fa-code"></i></div>
+                    <h3>AI Coding Tools</h3>
+                    <p>Code completion, debugging & refactoring</p>
+                </div>
+                <div class="cat-hero-card" data-category="productivity">
+                    <div class="cat-hero-icon"><i class="fas fa-briefcase"></i></div>
+                    <h3>AI Business Tools</h3>
+                    <p>Search, automation & workflow</p>
+                </div>
+            </div>
+        </section>
+
         <!-- 顶部广告位 -->
         <div class="ad-banner top-ad">
             <div class="ad-content">
-                <span class="ad-tag">赞助</span>
-                <p>这里是顶级AI工具的广告位 - 立即点击了解更多详情！</p>
-                <a href="#" class="ad-button">了解更多</a>
+                <span class="ad-tag" data-i18n="ad_sponsored">赞助</span>
+                <p data-i18n="ad_top_text">广告位招租 | 欢迎顶级 AI 工具品牌合作，请联系洽谈。</p>
+                <a href="contact.html" class="ad-button" data-i18n="ad_learn_more">联系我们</a>
             </div>
         </div>
 
-        <!-- 搜索区域 -->
-        <section class="hero">
-            <h1>发现最强大的 <span>AI 工具</span></h1>
-            <p>一个简洁、纯净的 AI 资源导航站，助你高效提升生产力。</p>
-            <div class="search-box">
-                <i class="fas fa-search"></i>
-                <input type="text" id="search-input" placeholder="搜索你需要的 AI 工具...">
+        <!-- 价值主张 Section -->
+        <section class="value-proposition">
+            <h2 class="section-main-title" data-i18n="value_title">为什么选择 AI Tool Hub?</h2>
+            <div class="value-grid">
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-award"></i></div>
+                    <h3 data-i18n="value_item1">精挑细选</h3>
+                    <p data-i18n="value_item1_desc">拒绝垃圾信息，每款工具均经过人工实测。</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-microscope"></i></div>
+                    <h3 data-i18n="value_item2">深度评测</h3>
+                    <p data-i18n="value_item2_desc">不只是链接，提供真实的场景分析与优缺点对比。</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3 data-i18n="value_item3">实时更新</h3>
+                    <p data-i18n="value_item3_desc">捕捉 AI 领域最前沿的动态，第一时间同步更新。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 推荐工具 Section -->
+        <section class="recommended-section">
+            <div class="section-header">
+                <h2 data-i18n="rec_title">本周推荐工具</h2>
+                <p data-i18n="rec_desc">根据社区热度和实用度筛选出的顶尖AI神器</p>
+            </div>
+            <div class="rec-grid" id="rec-grid">
+                <!-- JS populate -->
             </div>
         </section>
 
         <!-- 分类筛选 -->
         <section class="categories">
             <div class="category-list">
-                <button class="cat-btn active" data-category="all">全部</button>
-                <button class="cat-btn" data-category="text">文本创作</button>
-                <button class="cat-btn" data-category="image">图像生成</button>
-                <button class="cat-btn" data-category="code">编程助手</button>
-                <button class="cat-btn" data-category="video">视频制作</button>
-                <button class="cat-btn" data-category="audio">音频处理</button>
-                <button class="cat-btn" data-category="productivity">效率工具</button>
+                <button class="cat-btn active" data-category="all" data-i18n="cat_all">全部</button>
+                <button class="cat-btn" data-category="text" data-i18n="cat_text">文本创作</button>
+                <button class="cat-btn" data-category="image" data-i18n="cat_image">图像生成</button>
+                <button class="cat-btn" data-category="code" data-i18n="cat_code">编程助手</button>
+                <button class="cat-btn" data-category="video" data-i18n="cat_video">视频制作</button>
+                <button class="cat-btn" data-category="audio" data-i18n="cat_audio">音频处理</button>
+                <button class="cat-btn" data-category="productivity" data-i18n="cat_prod">商业效率</button>
             </div>
         </section>
 
-        <!-- 工具网格 -->
+        <!-- 全部工具网格 -->
         <section class="tool-grid" id="tool-grid">
-            <!-- JS will populate this -->
+            <!-- JS populate -->
         </section>
 
         <!-- 中间广告位 -->
         <div class="ad-banner mid-ad">
             <div class="ad-content">
-                <span class="ad-tag">推广</span>
-                <p>🚀 想要提升你的 AI 效率吗？尝试这款新型自动化工作流！</p>
-                <a href="#" class="ad-button">立即试用</a>
+                <span class="ad-tag" data-i18n="ad_promo">推广</span>
+                <p data-i18n="ad_mid_text">📢 想要在这里展示你的 AI 产品？联系我们获取合作方案。</p>
+                <a href="contact.html" class="ad-button" data-i18n="ad_try_now">联系我们</a>
             </div>
         </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 AI Tool Hub. Designed for Productivity.</p>
+            <div class="footer-links">
+                <a href="privacy.html" data-i18n="footer_privacy">隐私政策</a>
+                <a href="terms.html" data-i18n="footer_terms">服务条款</a>
+                <a href="contact.html" data-i18n="footer_contact">联系我们</a>
+            </div>
+            <p data-i18n="footer_text">&copy; 2026 AI Tool Hub. Designed for Productivity.</p>
         </div>
     </footer>
 
