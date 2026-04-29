@@ -543,6 +543,56 @@ docker logs -f hermes</code></pre>
                 </div>
             </div>
         </section>
+
+        <!-- 云服务器推荐 -->
+        <section class="deploy-section affiliate-section">
+            <div class="deploy-header">
+                <div class="deploy-icon"><i class="fas fa-cloud"></i></div>
+                <div>
+                    <h2>本地跑不动？云端一键部署</h2>
+                    <p>如果你的电脑没有独立显卡，或者想 7×24 小时运行 AI 服务，推荐使用云服务器。新人注册即送 $100–200 额度。</p>
+                </div>
+            </div>
+
+            <div class="affiliate-grid">
+                <a href="#" target="_blank" class="affiliate-card" data-provider="digitalocean">
+                    <div class="affiliate-logo"><i class="fab fa-digital-ocean"></i></div>
+                    <h3>DigitalOcean</h3>
+                    <ul>
+                        <li>新人注册送 $200 额度</li>
+                        <li>$4/月起，按小时计费</li>
+                        <li>全球 15 个数据中心</li>
+                    </ul>
+                    <span class="affiliate-cta">免费试用 →</span>
+                </a>
+
+                <a href="#" target="_blank" class="affiliate-card" data-provider="vultr">
+                    <div class="affiliate-logo"><i class="fas fa-server"></i></div>
+                    <h3>Vultr</h3>
+                    <ul>
+                        <li>新人注册送 $100 额度</li>
+                        <li>$2.5/月起，SSD 云服务器</li>
+                        <li>支持 NVIDIA GPU 实例</li>
+                    </ul>
+                    <span class="affiliate-cta">免费试用 →</span>
+                </a>
+
+                <a href="#" target="_blank" class="affiliate-card" data-provider="linode">
+                    <div class="affiliate-logo"><i class="fas fa-network-wired"></i></div>
+                    <h3>Linode (Akamai)</h3>
+                    <ul>
+                        <li>新人注册送 $100 额度</li>
+                        <li>$5/月起，稳定性口碑最佳</li>
+                        <li>适合生产环境长期运行</li>
+                    </ul>
+                    <span class="affiliate-cta">免费试用 →</span>
+                </a>
+            </div>
+
+            <div class="affiliate-note">
+                <p>💡 以上链接为联盟推广链接，你注册后我可以获得一定佣金，但<strong>不会增加你的任何费用</strong>，反而能拿到新人专属额度。感谢支持！</p>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -580,6 +630,15 @@ docker logs -f hermes</code></pre>
             updateText();
             const langSelect = document.getElementById('lang-select');
             if (langSelect) langSelect.value = currentLang;
+
+            // Inject affiliate links from main.js config
+            if (typeof affiliateUrls !== 'undefined') {
+                document.querySelectorAll('[data-provider]').forEach(card => {
+                    const provider = card.dataset.provider;
+                    const url = affiliateUrls[provider];
+                    if (url && url !== '#') card.href = url;
+                });
+            }
         });
     </script>
 </body>
