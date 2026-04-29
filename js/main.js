@@ -314,7 +314,7 @@ const tools = {
     "elevenlabs": {
         name: { zh: "ElevenLabs", en: "ElevenLabs" },
         cat: "audio",
-        url: "https://elevenlabs.io",
+        url: "https://try.elevenlabs.io/j50wgji2obha",
         icon: "fa-microphone-alt",
         short_desc: { zh: "业界最逼真的 AI 语音合成与克隆", en: "The most realistic AI voice synthesis and cloning" },
         long_desc: {
@@ -478,7 +478,7 @@ const affiliateUrls = {
     digitalocean: '#', // https://m.do.co/c/YOUR_CODE
     vultr: '#',        // https://www.vultr.com/?ref=YOUR_ID
     linode: '#',       // https://www.linode.com/lp/refer/?r=YOUR_CODE
-    elevenlabs: 'https://elevenlabs.io',   // replace with partner link when approved
+    elevenlabs: 'https://try.elevenlabs.io/j50wgji2obha',   // ElevenLabs referral link
     notion: 'https://notion.so/product/ai' // replace with affiliate link when approved
 };
 
