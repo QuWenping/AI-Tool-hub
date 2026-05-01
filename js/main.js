@@ -1,4 +1,44 @@
 const tools = {
+    "codewords": {
+        name: { zh: "CodeWords", en: "CodeWords" },
+        cat: "code",
+        url: "https://codewords.agemo.ai/r/CMOMWBZK?utm_source=copy_link&utm_medium=referral&utm_campaign=user_invite&utm_content=CMOMWBZK&ref=cmomwbzkh0000c6dtjz0fcu8e",
+        icon: "fa-terminal",
+        featured: true,
+        short_desc: { zh: "AI 编程协作与智能代码生成平台", en: "AI-powered collaborative coding and code generation platform" },
+        long_desc: {
+            zh: "CodeWords 是一个基于 AI 的编程协作平台，支持智能代码补全、自然语言生成代码、代码审查与优化。它深度融合了大型语言模型，能够理解项目上下文并提供精准的编程建议，显著提升开发效率。",
+            en: "CodeWords is an AI-powered collaborative coding platform featuring intelligent code completion, natural language to code generation, and code review & optimization. It deeply integrates large language models to understand project context and provide precise programming suggestions."
+        },
+        scenes: {
+            zh: ["快速生成样板代码", "代码重构与优化", "自然语言转代码", "团队协作编程"],
+            en: ["Rapid boilerplate generation", "Code refactoring & optimization", "Natural language to code", "Team collaborative coding"]
+        },
+        pros: {
+            zh: ["上下文感知的智能补全", "支持多种编程语言", "邀请好友获得额外额度"],
+            en: ["Context-aware intelligent completion", "Supports multiple programming languages", "Earn extra credits by inviting friends"]
+        },
+        cons: {
+            zh: ["新平台生态尚在建设中", "部分高级功能需订阅", "复杂项目理解有限"],
+            en: ["New platform with building ecosystem", "Some advanced features require subscription", "Limited understanding of complex projects"]
+        },
+        example: {
+            zh: "示例：'请帮我写一个 Python 函数，使用 asyncio 并发下载多个图片，并添加错误重试机制。'",
+            en: "Example: 'Write a Python function using asyncio to concurrently download multiple images with error retry logic.'"
+        },
+        target_audience: {
+            zh: ["开发者", "编程初学者", "技术团队", "全栈工程师"],
+            en: ["Developers", "Programming beginners", "Tech teams", "Full-stack engineers"]
+        },
+        features: {
+            zh: ["AI 代码补全", "自然语言生成代码", "代码审查建议", "多语言支持"],
+            en: ["AI code completion", "Natural language code generation", "Code review suggestions", "Multi-language support"]
+        },
+        use_cases: {
+            zh: ["用一句话生成完整函数实现", "自动审查代码潜在 Bug", "将旧代码重构为现代语法", "快速理解陌生代码库"],
+            en: ["Generate full function from a sentence", "Auto-detect potential bugs in code", "Refactor legacy code to modern syntax", "Quickly understand unfamiliar codebases"]
+        }
+    },
     "chatgpt": {
         name: { zh: "ChatGPT", en: "ChatGPT" },
         cat: "text",
@@ -316,6 +356,7 @@ const tools = {
         cat: "audio",
         url: "https://try.elevenlabs.io/j50wgji2obha",
         icon: "fa-microphone-alt",
+        featured: true,
         short_desc: { zh: "业界最逼真的 AI 语音合成与克隆", en: "The most realistic AI voice synthesis and cloning" },
         long_desc: {
             zh: "ElevenLabs 提供近乎以假乱真的文本转语音 (TTS) 服务。它支持 29 种语言，能够克隆任意人的声音仅需几秒样本，并提供精细的情感、语调和停顿控制，是播客、有声书和游戏配音的首选。",
@@ -530,12 +571,17 @@ function renderTools(filterCat = 'all', searchTerm = '') {
         return matchCat && matchSearch;
     });
 
+    // Featured tools with referral links go first
+    filtered.sort((a, b) => (b[1].featured ? 1 : 0) - (a[1].featured ? 1 : 0));
+
     filtered.forEach(([id, t]) => {
         const card = document.createElement('a');
         card.href = `tool.html?id=${id}`;
         card.target = '_blank';
         card.className = 'tool-card';
+        const featuredBadge = t.featured ? `<span style="position:absolute;top:14px;right:14px;padding:3px 10px;border-radius:6px;background:var(--accent-color);color:#fff;font-size:11px;font-weight:600;">${currentLang === 'zh' ? '推荐' : 'Featured'}</span>` : '';
         card.innerHTML = `
+            ${featuredBadge}
             <div class="tool-icon"><i class="fas ${t.icon}"></i></div>
             <h3>${t.name[currentLang]}</h3>
             <p>${t.short_desc[currentLang]}</p>
@@ -635,7 +681,7 @@ window.addEventListener('DOMContentLoaded', () => {
         // Special logic for Recommended section on Homepage
         const recGrid = document.getElementById('rec-grid');
         if (recGrid) {
-            const recommendedIds = ['chatgpt', 'claude', 'midjourney'];
+            const recommendedIds = ['codewords', 'elevenlabs', 'chatgpt', 'claude', 'midjourney'];
             recommendedIds.forEach(id => {
                 const tool = getToolById(id);
                 if (tool) {
@@ -644,7 +690,9 @@ window.addEventListener('DOMContentLoaded', () => {
                     card.className = 'tool-card rec-card';
                     const prosList = tool.pros[currentLang].slice(0, 2).map(p => `<li><i class="fas fa-check"></i> ${p}</li>`).join('');
                     const sceneTags = tool.scenes[currentLang].slice(0, 2).map(s => `<span class="scene-tag">${s}</span>`).join('');
+                    const recFeaturedBadge = tool.featured ? `<span style="position:absolute;top:14px;right:14px;padding:3px 10px;border-radius:6px;background:var(--accent-color);color:#fff;font-size:11px;font-weight:600;">${currentLang === 'zh' ? '推荐' : 'Featured'}</span>` : '';
                     card.innerHTML = `
+                        ${recFeaturedBadge}
                         <div class="tool-icon"><i class="fas ${tool.icon}"></i></div>
                         <h3>${tool.name[currentLang]}</h3>
                         <p class="rec-desc">${tool.short_desc[currentLang]}</p>
