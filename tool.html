@@ -39,6 +39,9 @@
             <a href="index.html" class="back-link" data-i18n="detail_back">
                 <i class="fas fa-arrow-left"></i> 返回首页
             </a>
+            <a href="virtual-card.html" class="back-link card-helper-link">
+                <i class="fas fa-credit-card"></i> AI 订阅卡
+            </a>
         </div>
 
         <div id="tool-content" class="tool-detail-container">
@@ -123,7 +126,10 @@
                         <h1>${tool.name[currentLang]}</h1>
                         <div class="detail-tag">${i18n[currentLang].category_labels[tool.cat] || tool.cat}</div>
                     </div>
-                    <a href="${tool.url}" target="_blank" class="detail-use-btn">👉 ${i18n[currentLang].detail_use_btn}</a>
+                    <div class="detail-actions">
+                        <a href="${tool.url}" target="_blank" class="detail-use-btn">👉 ${i18n[currentLang].detail_use_btn}</a>
+                        <a href="virtual-card.html" class="detail-card-btn"><i class="fas fa-credit-card"></i> Need subscription help?</a>
+                    </div>
                 </div>
 
                 <div class="detail-grid">

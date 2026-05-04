@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Subscription Card - AI Tool Hub</title>
+    <meta name="description" content="Apply for a semi-automated AI subscription card service for ChatGPT, Claude, Midjourney, Cursor and other AI tools.">
+    <link rel="canonical" href="https://ai-tool-hub-self.vercel.app/virtual-card.html">
+    <meta property="og:title" content="AI Subscription Card - AI Tool Hub">
+    <meta property="og:description" content="A semi-automated card request workflow for AI tool subscriptions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai-tool-hub-self.vercel.app/virtual-card.html">
+    <meta property="og:site_name" content="AI Tool Hub">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a class="logo logo-link" href="index.html">AI<span>Hub</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="virtual-card.html" class="active">Subscription Card</a></li>
+                    <li><a href="orders.html">Orders</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="action-group">
+                    <button id="theme-toggle" title="Toggle Theme">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="card-hero">
+            <div class="container card-hero-grid">
+                <div class="card-hero-copy">
+                    <span class="eyebrow">Semi-automated service</span>
+                    <h1>AI 工具订阅支付助手</h1>
+                    <p>为 ChatGPT、Claude、Midjourney、Cursor 等 AI 工具收集订阅需求，人工审核后交付可用的支付方案或订阅支持。</p>
+                    <div class="hero-cta card-hero-actions">
+                        <a href="#card-request-form" class="cta-btn cta-primary">立即申请</a>
+                        <a href="orders.html" class="cta-btn cta-secondary">查看订单</a>
+                    </div>
+                </div>
+                <div class="virtual-card-visual" aria-label="AI subscription card preview">
+                    <div class="card-chip"></div>
+                    <div class="card-brand">AI Tool Hub</div>
+                    <div class="card-number">AI-SUB **** 2026</div>
+                    <div class="card-meta">
+                        <span>For AI subscriptions</span>
+                        <strong>USD</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container service-flow">
+            <div class="section-header">
+                <h2>半自动流程</h2>
+                <p>先把申请、审核、付款和交付流程跑通，后续再接支付回调、发卡 API 或用户钱包。</p>
+            </div>
+            <div class="flow-grid">
+                <div class="flow-step">
+                    <span>01</span>
+                    <h3>提交需求</h3>
+                    <p>选择目标 AI 工具、订阅预算、联系方式和付款偏好。</p>
+                </div>
+                <div class="flow-step">
+                    <span>02</span>
+                    <h3>人工审核</h3>
+                    <p>确认工具是否支持、费用是否足够、是否需要额外资料。</p>
+                </div>
+                <div class="flow-step">
+                    <span>03</span>
+                    <h3>确认付款</h3>
+                    <p>通过邮件或客服发送付款方式，后台更新订单状态。</p>
+                </div>
+                <div class="flow-step">
+                    <span>04</span>
+                    <h3>交付订阅</h3>
+                    <p>交付订阅结果、支付凭证或下一步操作说明。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container packages-section">
+            <div class="section-header">
+                <h2>推荐套餐</h2>
+                <p>用于快速选择常见 AI 工具订阅预算，最终费用以人工确认为准。</p>
+            </div>
+            <div class="package-grid">
+                <button class="package-card" data-package="Starter" data-amount="20">
+                    <span class="package-label">Starter</span>
+                    <strong>$20</strong>
+                    <p>适合 ChatGPT Plus、Claude Pro 等单月订阅咨询。</p>
+                </button>
+                <button class="package-card featured-package" data-package="Creator" data-amount="35">
+                    <span class="package-label">Creator</span>
+                    <strong>$35</strong>
+                    <p>适合 Midjourney、Runway、ElevenLabs 等创作工具。</p>
+                </button>
+                <button class="package-card" data-package="Team" data-amount="100">
+                    <span class="package-label">Team</span>
+                    <strong>$100+</strong>
+                    <p>适合团队账号、多工具组合或长期订阅。</p>
+                </button>
+            </div>
+        </section>
+
+        <section class="container request-layout" id="card-request-form">
+            <div class="request-panel">
+                <div class="section-header">
+                    <h2>提交申请</h2>
+                    <p>当前版本会把订单保存在浏览器本地，适合演示和早期人工处理。上线生产前应接入后端数据库。</p>
+                </div>
+                <form id="virtual-card-form" class="card-form">
+                    <div class="form-row">
+                        <label for="customer-email">邮箱</label>
+                        <input id="customer-email" name="email" type="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="customer-contact">联系方式</label>
+                        <input id="customer-contact" name="contact" type="text" placeholder="Telegram / WeChat / WhatsApp">
+                    </div>
+                    <div class="form-row">
+                        <label for="ai-tool">目标 AI 工具</label>
+                        <select id="ai-tool" name="tool" required>
+                            <option value="">请选择</option>
+                            <option>ChatGPT Plus</option>
+                            <option>Claude Pro</option>
+                            <option>Midjourney</option>
+                            <option>Cursor</option>
+                            <option>Perplexity Pro</option>
+                            <option>ElevenLabs</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-row split-row">
+                        <div>
+                            <label for="budget">预算 USD</label>
+                            <input id="budget" name="budget" type="number" min="5" step="1" placeholder="20" required>
+                        </div>
+                        <div>
+                            <label for="payment-method">付款方式</label>
+                            <select id="payment-method" name="payment" required>
+                                <option value="">请选择</option>
+                                <option>USDT</option>
+                                <option>Stripe</option>
+                                <option>PayPal</option>
+                                <option>Alipay / WeChat</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label for="request-note">备注</label>
+                        <textarea id="request-note" name="note" rows="4" placeholder="例如：需要订阅 ChatGPT Plus 1 个月，账号地区为..."></textarea>
+                    </div>
+                    <button class="cta-btn cta-primary form-submit" type="submit">生成申请订单</button>
+                    <p class="form-disclaimer">本页面不发行真实银行卡，不存储真实卡号，也不托管用户资金。</p>
+                </form>
+            </div>
+
+            <aside class="request-sidebar">
+                <h3>适合先验证的能力</h3>
+                <ul class="check-list">
+                    <li><i class="fas fa-check"></i> 订阅需求收集</li>
+                    <li><i class="fas fa-check"></i> 人工审核队列</li>
+                    <li><i class="fas fa-check"></i> 状态跟踪</li>
+                    <li><i class="fas fa-check"></i> 邮件交付入口</li>
+                </ul>
+                <div id="order-success" class="order-success" hidden></div>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <p>&copy; 2026 AI Tool Hub. Designed for Productivity.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/virtual-card.js"></script>
+</body>
+</html>

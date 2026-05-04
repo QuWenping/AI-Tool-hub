@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Orders - AI Tool Hub</title>
+    <meta name="description" content="Track and manage semi-automated AI subscription card requests.">
+    <link rel="canonical" href="https://ai-tool-hub-self.vercel.app/orders.html">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a class="logo logo-link" href="index.html">AI<span>Hub</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="virtual-card.html">Subscription Card</a></li>
+                    <li><a href="orders.html" class="active">Orders</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="action-group">
+                    <button id="theme-toggle" title="Toggle Theme">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container orders-page">
+        <section class="orders-header">
+            <div>
+                <span class="eyebrow">Local admin queue</span>
+                <h1>AI 订阅申请订单</h1>
+                <p>半自动版本使用浏览器本地存储展示订单流。生产环境应替换为后端数据库、登录权限和支付回调。</p>
+            </div>
+            <a href="virtual-card.html#card-request-form" class="cta-btn cta-primary">新建申请</a>
+        </section>
+
+        <section class="orders-toolbar">
+            <div class="search-box order-search">
+                <i class="fas fa-search"></i>
+                <input type="text" id="order-search-input" placeholder="搜索订单号、邮箱或工具">
+            </div>
+            <button id="export-orders" class="cta-btn cta-secondary" type="button">
+                <i class="fas fa-download"></i> Export CSV
+            </button>
+        </section>
+
+        <section id="orders-list" class="orders-list"></section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <p>&copy; 2026 AI Tool Hub. Designed for Productivity.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/virtual-card.js"></script>
+</body>
+</html>
