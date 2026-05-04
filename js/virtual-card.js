@@ -78,7 +78,7 @@
                     <p>订单号：${order.id}</p>
                     <div class="success-actions">
                         <a href="orders.html" class="ad-button">查看订单</a>
-                        <a href="mailto:contact@ai-tool-hub.com?subject=${subject}&body=${body}" class="ad-button secondary-button">邮件确认</a>
+                        <a href="mailto:qiuranlong@126.com?subject=${subject}&body=${body}" class="ad-button secondary-button">邮件确认</a>
                     </div>
                 `;
             }
