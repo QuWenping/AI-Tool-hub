@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended AI Tools - AI Tool Hub</title>
+    <meta name="description" content="Recommended AI services and productivity tools selected by AI Tool Hub.">
+    <link rel="canonical" href="https://ai-tool-hub-self.vercel.app/recommended.html">
+    <meta property="og:title" content="Recommended AI Tools - AI Tool Hub">
+    <meta property="og:description" content="Recommended AI services and productivity tools selected by AI Tool Hub.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ai-tool-hub-self.vercel.app/recommended.html">
+    <meta property="og:site_name" content="AI Tool Hub">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a class="logo logo-link" href="index.html">AI<span>Hub</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recommended.html" class="active">Recommended</a></li>
+                    <li><a href="deploy.html">Deploy Guide</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="action-group">
+                    <button id="theme-toggle" title="Toggle Theme">
+                        <i class="fas fa-moon" id="theme-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="recommend-hero">
+            <div class="container recommend-hero-grid">
+                <div class="recommend-hero-copy">
+                    <span class="eyebrow">Recommended tools</span>
+                    <h1>精选 AI 工具与服务</h1>
+                    <p>这里放置经过筛选的 AI 订阅、效率工具和配套服务。优先推荐能解决真实使用门槛、交付清晰、适合 AI 工具用户的产品。</p>
+                    <div class="hero-cta card-hero-actions">
+                        <a href="#recommended-tools" class="cta-btn cta-primary">查看推荐</a>
+                        <a href="index.html#tool-grid" class="cta-btn cta-secondary">浏览全部工具</a>
+                    </div>
+                </div>
+                <div class="recommend-visual" aria-label="Recommended tools preview">
+                    <div class="recommend-orbit">
+                        <span><i class="fas fa-robot"></i></span>
+                        <span><i class="fas fa-credit-card"></i></span>
+                        <span><i class="fas fa-wand-magic-sparkles"></i></span>
+                        <span><i class="fas fa-code"></i></span>
+                    </div>
+                    <strong>AI Tool Hub Picks</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="container recommended-tools-page" id="recommended-tools">
+            <div class="section-header">
+                <h2>重点推荐</h2>
+                <p>当前推荐入口会跳转到外部服务，注册或使用前请自行确认价格、服务条款和可用地区。</p>
+            </div>
+
+            <div class="featured-recommend-card">
+                <div class="featured-recommend-icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <div class="featured-recommend-content">
+                    <span class="eyebrow">AI subscription support</span>
+                    <h3>AiSubHub</h3>
+                    <p>面向 AI 工具订阅场景的服务平台，可作为 ChatGPT、Claude、Midjourney、Cursor 等工具用户的订阅辅助入口。</p>
+                    <ul class="recommend-feature-list">
+                        <li><i class="fas fa-check"></i> 适合 AI 工具订阅用户</li>
+                        <li><i class="fas fa-check"></i> 支持常见海外 AI 服务场景</li>
+                        <li><i class="fas fa-check"></i> 可通过邀请链接注册</li>
+                    </ul>
+                    <a class="cta-btn cta-primary recommend-main-link" href="https://app.aisubhub.com/user/auth?ref=UW8YEEW5" target="_blank" rel="noopener sponsored">
+                        使用邀请链接访问 AiSubHub
+                    </a>
+                </div>
+            </div>
+
+            <div class="recommend-grid">
+                <a class="tool-card" href="tool.html?id=chatgpt">
+                    <div class="tool-icon"><i class="fas fa-comment-dots"></i></div>
+                    <h3>ChatGPT</h3>
+                    <p>通用 AI 助手，适合写作、学习、代码和日常效率场景。</p>
+                    <div class="tool-tag">AI Assistant</div>
+                </a>
+                <a class="tool-card" href="tool.html?id=claude">
+                    <div class="tool-icon"><i class="fas fa-feather-alt"></i></div>
+                    <h3>Claude</h3>
+                    <p>长文本处理和文档分析表现突出，适合研究和内容工作。</p>
+                    <div class="tool-tag">Writing</div>
+                </a>
+                <a class="tool-card" href="tool.html?id=midjourney">
+                    <div class="tool-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Midjourney</h3>
+                    <p>高质量 AI 图像生成工具，适合设计、海报和创意视觉。</p>
+                    <div class="tool-tag">Image</div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <p>&copy; 2026 AI Tool Hub. Designed for Productivity.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
