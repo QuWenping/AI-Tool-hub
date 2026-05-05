@@ -1,0 +1,23 @@
+{
+  "name": "primary",
+  "version": "1.0.0",
+  "description": "An ultra-minimal, clean AI resource index. No clutter—only carefully curated, truly useful AI tools. Explore the limitless possibilities of artificial intelligence, and bring tools back to what matters most: efficiency.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuWenping/AI-Tool-hub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuWenping/AI-Tool-hub/issues"
+  },
+  "homepage": "https://github.com/QuWenping/AI-Tool-hub#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
