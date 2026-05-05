@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ai-tool-hub-self.vercel.app/sitemap.xml
