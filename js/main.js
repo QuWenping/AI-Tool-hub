@@ -468,6 +468,46 @@ const tools = {
             zh: ["将凌乱的会议记录转为行动项", "根据 bullet list 撰写项目提案", "即时将文档翻译成日语", "从任务数据库生成周报"],
             en: ["Turn messy meeting notes into action items", "Write a project proposal from a bullet list", "Translate a document into Japanese instantly", "Generate a weekly report from a task database"]
         }
+    },
+    "hostinger": {
+        name: { zh: "Hostinger", en: "Hostinger" },
+        cat: "productivity",
+        url: "https://www.hostinger.com?REFERRALCODE=5YF251676FDR",
+        icon: "fa-server",
+        hidden: true,
+        short_desc: { zh: "高性价比的网站主机与建站服务", en: "High-performance web hosting and website builder" },
+        long_desc: {
+            zh: "Hostinger 是全球知名的网站主机服务商，提供共享主机、VPS、云主机和域名注册等服务。它以极高的性价比、稳定的服务器和友好的 hPanel 控制面板著称，特别适合个人站长、开发者和中小企业快速搭建网站。",
+            en: "Hostinger is a globally recognized web hosting provider offering shared hosting, VPS, cloud hosting, and domain registration. Known for exceptional value, reliable servers, and the user-friendly hPanel control panel, it's ideal for individual webmasters, developers, and small businesses."
+        },
+        scenes: {
+            zh: ["搭建个人博客与作品集网站", "部署 AI 工具导航站点", "中小企业官网托管", "跨境电商独立站"],
+            en: ["Building personal blogs and portfolio sites", "Deploying AI tool directories", "Small business website hosting", "E-commerce independent stores"]
+        },
+        pros: {
+            zh: ["价格极具竞争力，新手友好", "hPanel 控制面板简洁直观", "全球多数据中心，访问速度快"],
+            en: ["Extremely competitive pricing, beginner-friendly", "Clean and intuitive hPanel control panel", "Global data centers with fast access speeds"]
+        },
+        cons: {
+            zh: ["低价套餐资源有限", "部分高级功能需升级套餐", "中文客服支持相对有限"],
+            en: ["Low-tier plans have limited resources", "Some advanced features require plan upgrades", "Chinese customer support is relatively limited"]
+        },
+        example: {
+            zh: "示例：购买 Business 套餐后，一键安装 WordPress，10 分钟内即可上线一个专业的博客或电商网站。",
+            en: "Example: After purchasing the Business plan, install WordPress with one click and launch a professional blog or e-commerce site within 10 minutes."
+        },
+        target_audience: {
+            zh: ["个人站长", "开发者", "中小企业主", "跨境电商卖家"],
+            en: ["Individual webmasters", "Developers", "Small business owners", "Cross-border e-commerce sellers"]
+        },
+        features: {
+            zh: ["一键 WordPress 安装", "免费 SSL 证书与 CDN", "hPanel 可视化控制面板", "每日自动备份"],
+            en: ["One-click WordPress installation", "Free SSL certificate and CDN", "hPanel visual control panel", "Daily automatic backups"]
+        },
+        use_cases: {
+            zh: ["使用 WordPress 快速搭建博客", "为 AI 项目部署独立展示页面", "搭建跨境电商 WooCommerce 站点", "托管多个子域名项目"],
+            en: ["Quickly build a blog with WordPress", "Deploy standalone landing pages for AI projects", "Set up a cross-border e-commerce WooCommerce store", "Host multiple subdomain projects"]
+        }
     }
 };
 
@@ -565,6 +605,7 @@ function renderTools(filterCat = 'all', searchTerm = '') {
 
     toolGrid.innerHTML = '';
     const filtered = Object.entries(tools).filter(([id, t]) => {
+        if (t.hidden) return false;
         const matchCat = filterCat === 'all' || t.cat === filterCat;
         const matchSearch = t.name[currentLang].toLowerCase().includes(searchTerm.toLowerCase()) ||
                             t.short_desc[currentLang].toLowerCase().includes(searchTerm.toLowerCase());
