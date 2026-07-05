@@ -1,0 +1,61 @@
+---
+const { title, description, keywords, canonical, lang = "en" } = Astro.props;
+const siteUrl = "https://ai-tool-hub-self.vercel.app";
+const fullTitle = title ? `${title} | AI Tool Hub` : "AI Tool Hub | Best AI Tools Directory";
+const desc = description || "Explore curated AI tools for writing, coding, image generation, video, audio and productivity.";
+const kw = keywords || "AI tools, best AI tools, AI writing, AI coding, AI image generators";
+const url = canonical || `${siteUrl}${Astro.url.pathname}`;
+---
+<!DOCTYPE html>
+<html lang={lang === "zh" ? "zh-CN" : "en-US"}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{fullTitle}</title>
+    <meta name="description" content={desc}>
+    <meta name="keywords" content={kw}>
+    <link rel="canonical" href={url} />
+    <meta property="og:title" content={fullTitle}>
+    <meta property="og:description" content={desc}>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content={url}>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={fullTitle}>
+    <meta name="twitter:description" content={desc}>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="alternate" hreflang="en" href={`${siteUrl}${Astro.url.pathname.replace(/^\/zh/, "")}`} />
+    <link rel="alternate" hreflang="zh" href={`${siteUrl}${Astro.url.pathname}`} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AI Tool Hub",
+      "url": siteUrl
+    })} />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3930397953691472" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav>
+            <a href="/" class="logo">AI Tool Hub</a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/recommended.html">Recommended</a></li>
+                <li><a href="/deploy.html">Build Yours</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <slot />
+    </main>
+    <footer>
+        <p>&copy; 2026 AI Tool Hub. An ultra-minimal, curated directory of useful AI tools.</p>
+        <ul>
+            <li><a href="/privacy.html">Privacy</a></li>
+            <li><a href="/terms.html">Terms</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

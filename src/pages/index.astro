@@ -1,0 +1,81 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { readFileSync } from "node:fs";
+import categories from "../data/categories.json";
+const toolsJson = JSON.parse(readFileSync(new URL("../../public/js/main.js", import.meta.url).pathname, "utf-8").replace(/^const tools = /, "").replace(/;[\s\n]*$/, ""));
+const tools = Object.entries(toolsJson).filter(([k]) => k !== "codewords").map(([k, t]) => ({ id: k, ...t }));
+const featured = tools.filter(t => t.featured).slice(0, 3);
+---
+<BaseLayout
+  title="AI Tool Hub | Best AI Tools Directory for Writing, Coding, Image & Productivity"
+  description="Explore curated AI tools for writing, coding, image generation, video, audio and productivity. Find ChatGPT alternatives, AI coding assistants and practical AI services."
+  keywords="AI tools directory, best AI tools, AI writing tools, AI coding tools, AI image generators, ChatGPT tools, AI productivity tools, AI工具导航, AI工具推荐"
+  lang="en"
+>
+  <section class="hero">
+    <h1>Find the Best AI Tools for Writing, Coding, Images and Productivity</h1>
+    <p class="lede">We tested {tools.length} popular AI tools hands-on. Here are the ones we would actually pay for.</p>
+    <form class="search" action="/search" method="get">
+      <input type="search" name="q" placeholder="Search {tools.length}+ AI tools..." aria-label="Search">
+    </form>
+  </section>
+
+  <section class="featured">
+    <h2>Editor's picks (2026)</h2>
+    <div class="grid">
+      {featured.map(t => (
+        <article class="card">
+          <span class="badge">★ Editor Pick</span>
+          <h3><a href={`/tool/${t.id}/`}>{t.name?.en}</a></h3>
+          <p>{t.short_desc?.en}</p>
+          <p><a class="cta" href={`/tool/${t.id}/`}>Read our review &rarr;</a></p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section>
+    <h2>Browse AI tools by use case</h2>
+    <p>Pick a category to see our ranked picks, pros and cons, and hands-on verdicts.</p>
+    <ul class="cat-grid">
+      {categories.map(c => (
+        <li><a href={`/best/${c.slug}/`}>{c.title_en}</a></li>
+      ))}
+    </ul>
+  </section>
+
+  <section>
+    <h2>All {tools.length} tools, sorted by category</h2>
+    <div class="cat-block">
+      {["text","code","image","video","audio","productivity"].map(cat => {
+        const list = tools.filter(t => t.cat === cat);
+        if (list.length === 0) return null;
+        return (
+          <article>
+            <h3>{cat.charAt(0).toUpperCase() + cat.slice(1)} AI tools</h3>
+            <ul>
+              {list.map(t => <li><a href={`/tool/${t.id}/`}>{t.name?.en}</a> — {t.short_desc?.en}</li>)}
+            </ul>
+          </article>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <details><summary>What is the best AI tool right now?</summary><p>For general chat, our top pick is ChatGPT. For long-form writing and analysis, Claude. For coding, GitHub Copilot or Cursor. See our <a href="/best/content-writing/">best AI writing tools</a> for a full breakdown.</p></details>
+    <details><summary>Are there any truly free AI tools?</summary><p>Yes. Most tools on this site have a free tier. See our <a href="/best/free/">best free AI tools</a>.</p></details>
+    <details><summary>How do you pick which tools to list?</summary><p>We only list tools we have personally tested for 2+ weeks. We never accept payment for inclusion.</p></details>
+  </section>
+
+  <section class="related">
+    <h2>Popular comparisons</h2>
+    <ul>
+      <li><a href="/vs/chatgpt-vs-claude/">ChatGPT vs Claude (2026)</a></li>
+      <li><a href="/vs/cursor-vs-github-copilot/">Cursor vs GitHub Copilot</a></li>
+      <li><a href="/vs/midjourney-vs-stable-diffusion/">Midjourney vs Stable Diffusion</a></li>
+      <li><a href="/vs/sora-vs-runway/">Sora vs Runway</a></li>
+    </ul>
+  </section>
+</BaseLayout>

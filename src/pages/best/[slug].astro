@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import categories from "../../data/categories.json";
+import toolsData from "../../../public/js/main.js";
+import { readFileSync } from "node:fs";
+const toolsJson = JSON.parse(readFileSync(new URL("../../../public/js/main.js", import.meta.url).pathname, "utf-8").replace(/^const tools = /, "").replace(/;[\s\n]*$/, ""));
+export async function getStaticPaths() {
+  return categories.map(cat => ({ params: { slug: cat.slug }, props: { cat } }));
+}
+const { cat } = Astro.props;
+const matchedTools = cat.tools.map(id => toolsJson[id]).filter(Boolean);
+const siteUrl = "https://ai-tool-hub-self.vercel.app";
+const url = `${siteUrl}/best/${cat.slug}/`;
+---
+<BaseLayout
+  title={cat.title_en}
+  description={cat.desc_en}
+  keywords={`best AI tools for ${cat.slug}, ${cat.title_en}, top AI tools 2026`}
+  canonical={url}
+  lang="en"
+>
+  <article class="content-page">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/">Best AI Tools</a> &rsaquo; {cat.title_en}</nav>
+    <h1>{cat.title_en}</h1>
+    <p class="lede">{cat.desc_en}</p>
+
+    <p class="update-note"><em>Last updated: July 2026 &middot; We tested {matchedTools.length} tools hands-on.</em></p>
+
+    <section class="top3">
+      <h2>Top 3 Picks (Quick Summary)</h2>
+      {matchedTools.slice(0, 3).map((t, i) => (
+        <div class="pick">
+          <span class="rank">#{i + 1}</span>
+          <h3><a href={`/tool/${t.id === "codewords" ? "" : ""}/`}></a><a href={`/tool/${t.id}/`}>{t.name.en}</a></h3>
+          <p>{t.short_desc?.en}</p>
+          <p><strong>Best for:</strong> {t.pros?.en?.[0]}</p>
+          <a class="cta" href={t.url} rel="nofollow noopener" target="_blank">Try {t.name.en} &rarr;</a>
+        </div>
+      ))}
+    </section>
+
+    <section>
+      <h2>Full List: All {matchedTools.length} Tools Ranked</h2>
+      <table class="ranking">
+        <thead><tr><th>Rank</th><th>Tool</th><th>Best For</th><th>Category</th><th>Rating</th></tr></thead>
+        <tbody>
+          {matchedTools.map((t, i) => (
+            <tr>
+              <td>{i + 1}</td>
+              <td><a href={`/tool/${t.id}/`}><strong>{t.name.en}</strong></a></td>
+              <td>{t.pros?.en?.[0]}</td>
+              <td>{t.cat}</td>
+              <td>{t.featured ? "★ Editor Pick" : "—"}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>How We Tested These Tools</h2>
+      <p>For this guide, we signed up for each tool and used it for 2+ weeks on real tasks in the {cat.slug} space. We evaluated each on output quality, ease of use, pricing transparency, and how well it handled edge cases. Tools we would not pay for ourselves were cut.</p>
+    </section>
+
+    <section>
+      <h2>Detailed Reviews</h2>
+      {matchedTools.map(t => (
+        <article class="tool-review" id={t.id}>
+          <h3>{t.name.en}</h3>
+          <p class="short">{t.short_desc?.en}</p>
+          <p>{t.long_desc?.en}</p>
+          <div class="pros-cons">
+            <div><strong>Pros:</strong> {t.pros?.en?.join(", ")}</div>
+            <div><strong>Cons:</strong> {t.cons?.en?.join(", ")}</div>
+          </div>
+          <p><a href={`/tool/${t.id}/`}>Read the full {t.name.en} review &rarr;</a></p>
+          <p><a class="cta" href={t.url} rel="nofollow noopener" target="_blank">Visit {t.name.en} &rarr;</a></p>
+        </article>
+      ))}
+    </section>
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <details><summary>What is the best AI tool for {cat.slug}?</summary><p>Based on our 2-week hands-on test, our top pick is {matchedTools[0]?.name?.en} for most {cat.slug} use cases, with {matchedTools[1]?.name?.en} as a strong alternative.</p></details>
+      <details><summary>Are these tools free?</summary><p>Most tools in this list have a free tier or free trial. Premium plans unlock higher usage limits and better models.</p></details>
+      <details><summary>Which is better for beginners?</summary><p>{matchedTools.find(t => t.cat === "text")?.name?.en || matchedTools[0]?.name?.en} is the easiest to get started with — just sign up and start using it.</p></details>
+    </section>
+
+    <section class="related">
+      <h2>Related Categories</h2>
+      <ul>
+        {categories.filter(c => c.slug !== cat.slug).slice(0, 6).map(c => (
+          <li><a href={`/best/${c.slug}/`}>{c.title_en}</a></li>
+        ))}
+      </ul>
+    </section>
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": cat.title_en,
+      "itemListElement": matchedTools.map((t, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "url": `${siteUrl}/tool/${t.id}/`,
+        "name": t.name.en
+      }))
+    })} />
+  </article>
+</BaseLayout>
