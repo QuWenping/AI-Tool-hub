@@ -9,72 +9,83 @@ export async function getStaticPaths() {
 const { m } = Astro.props;
 const a = toolsJson[m.a];
 const b = toolsJson[m.b];
+const aName = (a && a.name && a.name.en) || "Tool A";
+const bName = (b && b.name && b.name.en) || "Tool B";
+const aUse = (a && a.use_cases && a.use_cases.en && a.use_cases.en[0]) || "general use";
+const bUse = (b && b.use_cases && b.use_cases.en && b.use_cases.en[0]) || "general use";
+const aPros = (a && a.pros && a.pros.en) || [];
+const aCons = (a && a.cons && a.cons.en) || [];
+const bPros = (b && b.pros && b.pros.en) || [];
+const bCons = (b && b.cons && b.cons.en) || [];
+const aCat = (a && a.cat) || "ai";
+const aFirstPro = aPros[0] || "versatile";
+const bFirstPro = bPros[0] || "versatile";
 const siteUrl = "https://ai-tool-hub-self.vercel.app";
 const url = siteUrl + "/vs/" + m.slug + "/";
 ---
 <BaseLayout
   title={m.title_en}
-  description={"Side-by-side comparison of " + (a?.name?.en || "") + " vs " + (b?.name?.en || "") + ": features, pricing, pros and cons, and our hands-on verdict for 2026."}
-  keywords={(a?.name?.en || "") + " vs " + (b?.name?.en || "") + ", " + (a?.name?.en || "") + " " + (b?.name?.en || "") + " comparison, " + (a?.name?.en || "") + " alternative"}
+  description={"Side-by-side comparison of " + aName + " vs " + bName + ": features, pricing, pros and cons, and our hands-on verdict for 2026."}
+  keywords={aName + " vs " + bName + ", " + aName + " " + bName + " comparison, " + aName + " alternative"}
   canonical={url}
   lang="en"
 >
   <article class="vs-page">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={"/best/" + a?.cat + "/"}>{a?.cat} tools</a> &rsaquo; {m.title_en}</nav>
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={"/best/" + aCat + "/"}>{aCat} tools</a> &rsaquo; {m.title_en}</nav>
     <h1>{m.title_en}</h1>
-    <p class="lede">We tested both <strong>{a?.name?.en}</strong> and <strong>{b?.name?.en}</strong> side by side for two weeks. Here is our honest take on which one wins for which use case.</p>
+    <p class="lede">We tested both <strong>{aName}</strong> and <strong>{bName}</strong> side by side for two weeks. Here is our honest take on which one wins for which use case.</p>
 
     <section>
       <h2>At-a-glance comparison</h2>
       <table class="ranking">
-        <thead><tr><th></th><th>{a?.name?.en}</th><th>{b?.name?.en}</th></tr></thead>
+        <thead><tr><th></th><th>{aName}</th><th>{bName}</th></tr></thead>
         <tbody>
-          <tr><th>Best for</th><td>{a?.use_cases?.en?.[0]}</td><td>{b?.use_cases?.en?.[0]}</td></tr>
-          <tr><th>Category</th><td>{a?.cat}</td><td>{b?.cat}</td></tr>
+          <tr><th>Best for</th><td>{aUse}</td><td>{bUse}</td></tr>
+          <tr><th>Category</th><td>{aCat}</td><td>{(b && b.cat) || "ai"}</td></tr>
           <tr><th>Free tier</th><td>Yes</td><td>Yes</td></tr>
-          <tr><th>Ease of use</th><td>{a?.pros?.en?.[0]}</td><td>{b?.pros?.en?.[0]}</td></tr>
+          <tr><th>Ease of use</th><td>{aFirstPro}</td><td>{bFirstPro}</td></tr>
         </tbody>
       </table>
     </section>
 
     <section>
-      <h2>{a?.name?.en}: what we liked</h2>
-      <ul>{a?.pros?.en?.map((p) => (<li>{p}</li>))}</ul>
+      <h2>{aName}: what we liked</h2>
+      <ul>{aPros.map((p) => (<li>{p}</li>))}</ul>
     </section>
     <section>
-      <h2>{a?.name?.en}: what we did not like</h2>
-      <ul>{a?.cons?.en?.map((c) => (<li>{c}</li>))}</ul>
+      <h2>{aName}: what we did not like</h2>
+      <ul>{aCons.map((c) => (<li>{c}</li>))}</ul>
     </section>
 
     <section>
-      <h2>{b?.name?.en}: what we liked</h2>
-      <ul>{b?.pros?.en?.map((p) => (<li>{p}</li>))}</ul>
+      <h2>{bName}: what we liked</h2>
+      <ul>{bPros.map((p) => (<li>{p}</li>))}</ul>
     </section>
     <section>
-      <h2>{b?.name?.en}: what we did not like</h2>
-      <ul>{b?.cons?.en?.map((c) => (<li>{c}</li>))}</ul>
+      <h2>{bName}: what we did not like</h2>
+      <ul>{bCons.map((c) => (<li>{c}</li>))}</ul>
     </section>
 
     <section>
       <h2>Our verdict: which one should you pick?</h2>
-      <p><strong>Pick {a?.name?.en}</strong> if your main need is {(a?.use_cases?.en?.[0] || '').toLowerCase()} or you care about {(a?.pros?.en?.[0] || '').toLowerCase()}.</p>
-      <p><strong>Pick {b?.name?.en}</strong> if you want {(b?.use_cases?.en?.[0] || '').toLowerCase()} or you need {(b?.pros?.en?.[0] || '').toLowerCase()}.</p>
+      <p><strong>Pick {aName}</strong> if your main need is {aUse.toLowerCase()} or you care about {aFirstPro.toLowerCase()}.</p>
+      <p><strong>Pick {bName}</strong> if you want {bUse.toLowerCase()} or you need {bFirstPro.toLowerCase()}.</p>
       <p>If you are not sure, both have free tiers — try both for a week before deciding.</p>
     </section>
 
     <section class="faq">
       <h2>FAQ</h2>
-      <details><summary>{"Is " + (a?.name?.en || "") + " better than " + (b?.name?.en || "") + "?"}</summary><p>It depends. For {(a?.use_cases?.en?.[0] || '').toLowerCase()}, {a?.name?.en} is stronger. For {(b?.use_cases?.en?.[0] || '').toLowerCase()}, {b?.name?.en} wins.</p></details>
-      <details><summary>{"Can I use " + (a?.name?.en || "") + " and " + (b?.name?.en || "") + " together?"}</summary><p>Yes — many of our readers use both. They are not mutually exclusive and cover slightly different angles.</p></details>
+      <details><summary>{"Is " + aName + " better than " + bName + "?"}</summary><p>It depends. For {aUse.toLowerCase()}, {aName} is stronger. For {bUse.toLowerCase()}, {bName} wins.</p></details>
+      <details><summary>{"Can I use " + aName + " and " + bName + " together?"}</summary><p>Yes — many of our readers use both. They are not mutually exclusive and cover slightly different angles.</p></details>
     </section>
 
     <section class="related">
       <h2>Related pages</h2>
       <ul>
-        <li><a href={"/tool/" + m.a + "/"}>Full {a?.name?.en} review</a></li>
-        <li><a href={"/tool/" + m.b + "/"}>Full {b?.name?.en} review</a></li>
-        <li><a href={"/alternatives/" + m.a + "/"}>{a?.name?.en} alternatives</a></li>
-        <li><a href={"/best/" + a?.cat + "/"}>Best {a?.cat} AI tools</a></li>
+        <li><a href={"/tool/" + m.a + "/"}>Full {aName} review</a></li>
+        <li><a href={"/tool/" + m.b + "/"}>Full {bName} review</a></li>
+        <li><a href={"/alternatives/" + m.a + "/"}>{aName} alternatives</a></li>
+        <li><a href={"/best/" + aCat + "/"}>Best {aCat} AI tools</a></li>
       </ul>
     </section>
   </article>
