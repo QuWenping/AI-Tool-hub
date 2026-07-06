@@ -1,83 +1,19 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { readFileSync } from "node:fs";
-const toolsJson = JSON.parse(readFileSync(new URL("../../../public/js/main.js", import.meta.url).pathname, "utf-8").replace(/^const tools = /, "").replace(/;[\s\n]*$/, ""));
+import toolsData from "../../data/tools.json";
 export async function getStaticPaths() {
-  return Object.entries(toolsJson).map(([id, t]) => ({ params: { slug: id }, props: { id, tool: t } })).filter(p => p.id !== "codewords");
+  return Object.entries(toolsData).filter(function(e){return e[0]!=="codewords"}).map(function(e){return {params:{slug:e[0]},props:{id:e[0],tool:e[1]}}});
 }
 const { id, tool } = Astro.props;
-const alternatives = Object.entries(toolsJson).filter(([k, t]) => k !== id && t.cat === tool.cat).slice(0, 8);
-const siteUrl = "https://ai-tool-hub-self.vercel.app";
-const url = `${siteUrl}/alternatives/${id}/`;
+const alternatives = Object.entries(toolsData).filter(function(e){return e[0]!==id && e[1].cat===tool.cat}).slice(0,8);
+const aName = (tool && tool.name && tool.name.en) || "Tool";
 ---
-<BaseLayout
-  title={`Best ${tool.name.en} Alternatives in 2026 (Free & Paid)`}
-  description={`Looking for ${tool.name.en} alternatives? Here are the top ${alternatives.length} options ranked by use case, pricing, and our hands-on testing.`}
-  keywords={`${tool.name.en} alternatives, alternatives to ${tool.name.en}, ${tool.name.en} vs, best ${tool.cat} tools`}
-  canonical={url}
-  lang="en"
->
-  <article class="alternatives-page">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={`/tool/${id}/`}>{tool.name.en}</a> &rsaquo; Alternatives</nav>
-    <h1>Best {tool.name.en} Alternatives in 2026</h1>
-    <p class="lede">{tool.name.en} is great, but here are {alternatives.length} alternatives worth comparing — including free options. We tested each one for 2+ weeks.</p>
-
-    <section>
-      <h2>Quick comparison</h2>
-      <table class="ranking">
-        <thead><tr><th>Tool</th><th>Best for</th><th>Category</th><th>Our take</th></tr></thead>
-        <tbody>
-          <tr class="current">
-            <td><strong>{tool.name.en}</strong> (current)</td>
-            <td>{tool.use_cases?.en?.[0]}</td>
-            <td>{tool.cat}</td>
-            <td>What you already use</td>
-          </tr>
-          {alternatives.map(([k, t]) => (
-            <tr>
-              <td><a href={`/tool/${k}/`}><strong>{t.name.en}</strong></a></td>
-              <td>{t.use_cases?.en?.[0]}</td>
-              <td>{t.cat}</td>
-              <td>{t.pros?.en?.[0]}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </section>
-
-    {alternatives.length > 0 && (
-      <section>
-        <h2>Top 3 alternatives (quick picks)</h2>
-        {alternatives.slice(0, 3).map(([k, t]) => (
-          <article class="alt-review">
-            <h3><a href={`/tool/${k}/`}>{t.name.en}</a></h3>
-            <p>{t.long_desc?.en}</p>
-            <p><strong>Pros:</strong> {t.pros?.en?.join(", ")}</p>
-            <p><strong>Cons:</strong> {t.cons?.en?.join(", ")}</p>
-            <p><a class="cta" href={t.url} rel="nofollow noopener" target="_blank">Try {t.name.en} &rarr;</a></p>
-          </article>
-        ))}
-      </section>
-    )}
-
-    <section>
-      <h2>How we picked these alternatives</h2>
-      <p>We only include tools we have personally tested for at least two weeks. The criteria: same category ({tool.cat}) but different angle — better pricing, better UX, stronger community, or specific feature wins. If a tool is not on this list, we either have not tested it or it did not clear our bar.</p>
-    </section>
-
-    <section class="faq">
-      <h2>FAQ</h2>
-      <details><summary>What is the best free alternative to {tool.name.en}?</summary><p>Most {tool.cat} tools on this list have a usable free tier. Our pick for the strongest free experience is {alternatives[0]?.[1]?.name?.en}.</p></details>
-      <details><summary>Is there a paid alternative worth switching to?</summary><p>If you are paying for {tool.name.en} already, switching is rarely free. We recommend testing {alternatives[1]?.[1]?.name?.en || alternatives[0]?.[1]?.name?.en} for a month before deciding.</p></details>
-    </section>
-
-    <section class="related">
-      <h2>Related pages</h2>
-      <ul>
-        <li><a href={`/tool/${id}/`}>Full {tool.name.en} review</a></li>
-        <li><a href={`/best/${tool.cat}/`}>Best {tool.cat} AI tools</a></li>
-        {alternatives.slice(0, 3).map(([k, t]) => <li><a href={`/tool/${k}/`}>{t.name.en} review</a></li>)}
-      </ul>
-    </section>
-  </article>
+<BaseLayout title={"Best " + aName + " Alternatives in 2026"} lang="en">
+<article>
+<h1>{"Best " + aName + " Alternatives in 2026"}</h1>
+<p>{aName} is great. Here are alternatives.</p>
+<ul>
+{alternatives.map(function(e){var k=e[0];var t=e[1];return (<li><a href={"/tool/" + k + "/"}><strong>{t.name.en}</strong></a> - {t.short_desc.en}</li>)})}
+</ul>
+</article>
 </BaseLayout>

@@ -1,97 +1,33 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { readFileSync } from "node:fs";
-const toolsJson = JSON.parse(readFileSync(new URL("../../../public/js/main.js", import.meta.url).pathname, "utf-8").replace(/^const tools = /, "").replace(/;[\s\n]*$/, ""));
+import toolsData from "../../data/tools.json";
 export async function getStaticPaths() {
-  return Object.entries(toolsJson).map(([id, t]) => ({ params: { slug: id }, props: { id, tool: t } })).filter(p => p.id !== "codewords");
+  return Object.entries(toolsData).filter(function(e){return e[0]!=="codewords"}).map(function(e){return {params:{slug:e[0]},props:{id:e[0],tool:e[1]}}});
 }
 const { id, tool } = Astro.props;
-const siteUrl = "https://ai-tool-hub-self.vercel.app";
-const url = `${siteUrl}/tool/${id}/`;
-const related = Object.entries(toolsJson).filter(([k, t]) => k !== id && t.cat === tool.cat).slice(0, 4);
+const tName = (tool && tool.name && tool.name.en) || "Tool";
+const tShort = (tool && tool.short_desc && tool.short_desc.en) || "";
+const tLong = (tool && tool.long_desc && tool.long_desc.en) || "";
+const tPros = (tool && tool.pros && tool.pros.en) || [];
+const tCons = (tool && tool.cons && tool.cons.en) || [];
+const tUse = (tool && tool.use_cases && tool.use_cases.en) || [];
+const tFeatures = (tool && tool.features && tool.features.en) || [];
 ---
-<BaseLayout
-  title={`${tool.name.en} Review (2026): Features, Pricing, Pros & Cons`}
-  description={`${tool.short_desc?.en} Read our in-depth review of ${tool.name.en} with pricing, pros and cons, and our hands-on verdict.`}
-  keywords={`${tool.name.en}, ${tool.name.en} review, ${tool.name.en} pricing, ${tool.cat} AI tools`}
-  canonical={url}
-  lang="en"
->
-  <article class="tool-page">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={`/best/${tool.cat}/`}>Best {tool.cat} AI Tools</a> &rsaquo; {tool.name.en}</nav>
-    <h1>{tool.name.en} Review (2026)</h1>
-    <p class="lede">{tool.short_desc?.en}</p>
-
-    <aside class="quick-facts">
-      <table>
-        <tr><td><strong>Category</strong></td><td>{tool.cat}</td></tr>
-        <tr><td><strong>Best for</strong></td><td>{tool.use_cases?.en?.[0]}</td></tr>
-        <tr><td><strong>Free tier</strong></td><td>Yes (see pricing)</td></tr>
-        <tr><td><strong>Website</strong></td><td><a href={tool.url} rel="nofollow noopener" target="_blank">Visit {tool.name.en} &rarr;</a></td></tr>
-      </table>
-    </aside>
-
-    <section>
-      <h2>What is {tool.name.en}?</h2>
-      <p>{tool.long_desc?.en}</p>
-    </section>
-
-    <section>
-      <h2>Who is {tool.name.en} for?</h2>
-      <ul>{tool.target_audience?.en?.map(a => <li>{a}</li>)}</ul>
-    </section>
-
-    <section>
-      <h2>Key features</h2>
-      <ul>{tool.features?.en?.map(f => <li>{f}</li>)}</ul>
-    </section>
-
-    <section>
-      <h2>Pros and cons</h2>
-      <div class="pros-cons">
-        <div><strong>What we liked</strong><ul>{tool.pros?.en?.map(p => <li>{p}</li>)}</ul></div>
-        <div><strong>What we did not like</strong><ul>{tool.cons?.en?.map(c => <li>{c}</li>)}</ul></div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Use cases that actually work</h2>
-      <ul>{tool.use_cases?.en?.map(u => <li>{u}</li>)}</ul>
-    </section>
-
-    <section>
-      <h2>Our hands-on verdict</h2>
-      <p>We tested {tool.name.en} for two weeks on real {tool.cat} tasks. In short: it is one of the stronger {tool.cat} tools we have used in 2026, especially for the {tool.use_cases?.en?.[0]?.toLowerCase()} use case. If you already pay for a competitor, switching is worth trying during the free trial.</p>
-      <p><a class="cta" href={tool.url} rel="nofollow noopener" target="_blank">Try {tool.name.en} free &rarr;</a></p>
-    </section>
-
-    {related.length > 0 && (
-      <section class="related">
-        <h2>Alternatives to {tool.name.en}</h2>
-        <ul>
-          <li><a href={`/alternatives/${id}/`}>All {tool.name.en} alternatives &rarr;</a></li>
-          {related.map(([k, t]) => <li><a href={`/tool/${k}/`}>{t.name.en}</a> &mdash; {t.short_desc?.en}</li>)}
-        </ul>
-      </section>
-    )}
-
-    <section class="related">
-      <h2>Popular comparisons</h2>
-      <ul>
-        <li><a href="/vs/chatgpt-vs-claude/">ChatGPT vs Claude</a></li>
-        <li><a href="/vs/cursor-vs-github-copilot/">Cursor vs GitHub Copilot</a></li>
-        <li><a href="/vs/midjourney-vs-stable-diffusion/">Midjourney vs Stable Diffusion</a></li>
-      </ul>
-    </section>
-
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": tool.name.en,
-      "url": tool.url,
-      "applicationCategory": tool.cat,
-      "operatingSystem": "Web",
-      "description": tool.short_desc?.en
-    })} />
-  </article>
+<BaseLayout title={tName + " Review (2026)"} description={tShort} lang="en">
+<article>
+<h1>{tName + " Review (2026)"}</h1>
+<p>{tShort}</p>
+<h2>What is {tName}?</h2>
+<p>{tLong}</p>
+<h2>Pros</h2>
+<ul>{tPros.map(function(p){return (<li>{p}</li>)})}</ul>
+<h2>Cons</h2>
+<ul>{tCons.map(function(c){return (<li>{c}</li>)})}</ul>
+<h2>Use cases</h2>
+<ul>{tUse.map(function(u){return (<li>{u}</li>)})}</ul>
+<h2>Features</h2>
+<ul>{tFeatures.map(function(f){return (<li>{f}</li>)})}</ul>
+<h2>Alternatives</h2>
+<p><a href={"/alternatives/" + id + "/"}>{tName} alternatives</a></p>
+</article>
 </BaseLayout>
