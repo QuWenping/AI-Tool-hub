@@ -21,54 +21,54 @@ const bCat = (b && b.cat) || "ai";
 const aFirstPro = aPros[0] || "versatile";
 const bFirstPro = bPros[0] || "versatile";
 ---
-<BaseLayout title={m.title_en} lang="en">
-<article>
-<h1>{m.title_en}</h1>
-<p>We tested both <strong>{aName}</strong> and <strong>{bName}</strong> side by side for two weeks.</p>
+<BaseLayout title={m.title_en} description={"Side-by-side comparison of " + aName + " vs " + bName}>
+<article class="legal-page">
+  <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={"/best/" + aCat + "/"}>{aCat} tools</a> &rsaquo; <span>{m.title_en}</span></nav>
+  <h1>{m.title_en}</h1>
+  <p class="lede">We tested both <strong>{aName}</strong> and <strong>{bName}</strong> side by side for two weeks.</p>
 
-<section>
-<h2>At-a-glance comparison</h2>
-<table>
-<thead><tr><th></th><th>{aName}</th><th>{bName}</th></tr></thead>
-<tbody>
-<tr><th>Best for</th><td>{aUse}</td><td>{bUse}</td></tr>
-<tr><th>Category</th><td>{aCat}</td><td>{bCat}</td></tr>
-<tr><th>Free tier</th><td>Yes</td><td>Yes</td></tr>
-<tr><th>Ease of use</th><td>{aFirstPro}</td><td>{bFirstPro}</td></tr>
-</tbody>
-</table>
-</section>
+  <section>
+    <h2>At-a-glance comparison</h2>
+    <table class="ranking">
+      <thead><tr><th></th><th>{aName}</th><th>{bName}</th></tr></thead>
+      <tbody>
+        <tr><th>Best for</th><td>{aUse}</td><td>{bUse}</td></tr>
+        <tr><th>Category</th><td>{aCat}</td><td>{bCat}</td></tr>
+        <tr><th>Free tier</th><td>Yes</td><td>Yes</td></tr>
+        <tr><th>Ease of use</th><td>{aFirstPro}</td><td>{bFirstPro}</td></tr>
+      </tbody>
+    </table>
+  </section>
 
-<section>
-<h2>{aName}: what we liked</h2>
-<ul>{aPros.map(function(p){return (<li>{p}</li>)})}</ul>
-</section>
-<section>
-<h2>{aName}: what we did not like</h2>
-<ul>{aCons.map(function(c){return (<li>{c}</li>)})}</ul>
-</section>
+  <section>
+    <h2>{aName}: what we liked</h2>
+    <ul class="pro-list">{aPros.map(function(p){return (<li>{p}</li>)})}</ul>
+  </section>
+  <section>
+    <h2>{aName}: what we did not like</h2>
+    <ul class="con-list">{aCons.map(function(c){return (<li>{c}</li>)})}</ul>
+  </section>
+  <section>
+    <h2>{bName}: what we liked</h2>
+    <ul class="pro-list">{bPros.map(function(p){return (<li>{p}</li>)})}</ul>
+  </section>
+  <section>
+    <h2>{bName}: what we did not like</h2>
+    <ul class="con-list">{bCons.map(function(c){return (<li>{c}</li>)})}</ul>
+  </section>
 
-<section>
-<h2>{bName}: what we liked</h2>
-<ul>{bPros.map(function(p){return (<li>{p}</li>)})}</ul>
-</section>
-<section>
-<h2>{bName}: what we did not like</h2>
-<ul>{bCons.map(function(c){return (<li>{c}</li>)})}</ul>
-</section>
+  <section>
+    <h2>Verdict</h2>
+    <p><strong>Pick {aName}</strong> if you need {aUse.toLowerCase()}.</p>
+    <p><strong>Pick {bName}</strong> if you need {bUse.toLowerCase()}.</p>
+  </section>
 
-<section>
-<h2>Verdict</h2>
-<p><strong>Pick {aName}</strong> if you need {aUse.toLowerCase()}.</p>
-<p><strong>Pick {bName}</strong> if you need {bUse.toLowerCase()}.</p>
-</section>
-
-<section>
-<h2>Related</h2>
-<ul>
-<li><a href={"/tool/" + m.a + "/"}>Full {aName} review</a></li>
-<li><a href={"/tool/" + m.b + "/"}>Full {bName} review</a></li>
-</ul>
-</section>
+  <section class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href={"/tool/" + m.a + "/"}>Full {aName} review</a></li>
+      <li><a href={"/tool/" + m.b + "/"}>Full {bName} review</a></li>
+    </ul>
+  </section>
 </article>
 </BaseLayout>

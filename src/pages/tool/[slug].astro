@@ -12,22 +12,53 @@ const tPros = (tool && tool.pros && tool.pros.en) || [];
 const tCons = (tool && tool.cons && tool.cons.en) || [];
 const tUse = (tool && tool.use_cases && tool.use_cases.en) || [];
 const tFeatures = (tool && tool.features && tool.features.en) || [];
+const tCat = (tool && tool.cat) || "ai";
 ---
-<BaseLayout title={tName + " Review (2026)"} description={tShort} lang="en">
-<article>
-<h1>{tName + " Review (2026)"}</h1>
-<p>{tShort}</p>
-<h2>What is {tName}?</h2>
-<p>{tLong}</p>
-<h2>Pros</h2>
-<ul>{tPros.map(function(p){return (<li>{p}</li>)})}</ul>
-<h2>Cons</h2>
-<ul>{tCons.map(function(c){return (<li>{c}</li>)})}</ul>
-<h2>Use cases</h2>
-<ul>{tUse.map(function(u){return (<li>{u}</li>)})}</ul>
-<h2>Features</h2>
-<ul>{tFeatures.map(function(f){return (<li>{f}</li>)})}</ul>
-<h2>Alternatives</h2>
-<p><a href={"/alternatives/" + id + "/"}>{tName} alternatives</a></p>
+<BaseLayout title={tName + " Review (2026) | AI Tool Hub"} description={tShort} keywords={tName + ", " + tName + " review, " + tName + " pricing, " + tCat + " AI tools"}>
+<article class="tool-detail-container">
+  <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={"/best/" + tCat + "/"}>Best {tCat} AI tools</a> &rsaquo; <span>{tName}</span></nav>
+  <h1>{tName} Review (2026)</h1>
+  <p class="lede">{tShort}</p>
+
+  <section>
+    <h2>What is {tName}?</h2>
+    <p>{tLong}</p>
+  </section>
+
+  <section>
+    <h2>Pros</h2>
+    <ul class="pro-list">{tPros.map(function(p){return (<li>{p}</li>)})}</ul>
+  </section>
+
+  <section>
+    <h2>Cons</h2>
+    <ul class="con-list">{tCons.map(function(c){return (<li>{c}</li>)})}</ul>
+  </section>
+
+  <section>
+    <h2>Use cases that actually work</h2>
+    <ul>{tUse.map(function(u){return (<li>{u}</li>)})}</ul>
+  </section>
+
+  <section>
+    <h2>Features</h2>
+    <ul>{tFeatures.map(function(f){return (<li>{f}</li>)})}</ul>
+  </section>
+
+  <section class="related">
+    <h2>Alternatives</h2>
+    <ul>
+      <li><a class="cta-primary" href={"/alternatives/" + id + "/"}>All {tName} alternatives</a></li>
+    </ul>
+  </section>
+
+  <section class="related">
+    <h2>Popular comparisons</h2>
+    <ul>
+      <li><a href="/vs/chatgpt-vs-claude/">ChatGPT vs Claude</a></li>
+      <li><a href="/vs/cursor-vs-github-copilot/">Cursor vs GitHub Copilot</a></li>
+      <li><a href="/vs/midjourney-vs-stable-diffusion/">Midjourney vs Stable Diffusion</a></li>
+    </ul>
+  </section>
 </article>
 </BaseLayout>

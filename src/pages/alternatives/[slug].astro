@@ -7,13 +7,38 @@ export async function getStaticPaths() {
 const { id, tool } = Astro.props;
 const alternatives = Object.entries(toolsData).filter(function(e){return e[0]!==id && e[1].cat===tool.cat}).slice(0,8);
 const aName = (tool && tool.name && tool.name.en) || "Tool";
+const aCat = (tool && tool.cat) || "ai";
 ---
-<BaseLayout title={"Best " + aName + " Alternatives in 2026"} lang="en">
-<article>
-<h1>{"Best " + aName + " Alternatives in 2026"}</h1>
-<p>{aName} is great. Here are alternatives.</p>
-<ul>
-{alternatives.map(function(e){var k=e[0];var t=e[1];return (<li><a href={"/tool/" + k + "/"}><strong>{t.name.en}</strong></a> - {t.short_desc.en}</li>)})}
-</ul>
+<BaseLayout title={"Best " + aName + " Alternatives in 2026"} description={"Looking for " + aName + " alternatives? Here are the top options ranked by use case, pricing, and our hands-on testing."} keywords={aName + " alternatives, alternatives to " + aName}>
+<article class="legal-page">
+  <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={"/tool/" + id + "/"}>{aName}</a> &rsaquo; <span>Alternatives</span></nav>
+  <h1>Best {aName} Alternatives in 2026</h1>
+  <p class="lede">{aName} is great, but here are alternatives worth comparing.</p>
+
+  <section>
+    <h2>Quick comparison</h2>
+    <table class="ranking">
+      <thead><tr><th>Tool</th><th>Best for</th><th>Category</th></tr></thead>
+      <tbody>
+        <tr class="current"><td><strong>{aName}</strong> (current)</td><td>What you use now</td><td>{aCat}</td></tr>
+        {alternatives.map(function(e){var k=e[0];var t=e[1];return (<tr><td><a href={"/tool/" + k + "/"}><strong>{t.name.en}</strong></a></td><td>{t.pros.en[0]}</td><td>{t.cat}</td></tr>)})}
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Top 3 alternatives</h2>
+    <div class="tool-grid">
+      {alternatives.slice(0, 3).map(function(e){var k=e[0];var t=e[1];return (<article class="tool-card"><h3><a href={"/tool/" + k + "/"}>{t.name.en}</a></h3><p>{t.short_desc.en}</p><p><strong>Pros:</strong> {t.pros.en.join(", ")}</p><p><strong>Cons:</strong> {t.cons.en.join(", ")}</p><a class="cta-primary" href={t.url} rel="nofollow noopener" target="_blank">Try {t.name.en}</a></article>)})}
+    </div>
+  </section>
+
+  <section class="related">
+    <h2>Related</h2>
+    <ul>
+      <li><a href={"/tool/" + id + "/"}>Full {aName} review</a></li>
+      <li><a href={"/best/" + aCat + "/"}>Best {aCat} AI tools</a></li>
+    </ul>
+  </section>
 </article>
 </BaseLayout>

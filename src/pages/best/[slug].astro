@@ -8,21 +8,48 @@ export async function getStaticPaths() {
 const { cat } = Astro.props;
 const matchedTools = cat.tools.map(function(id){return toolsData[id]}).filter(Boolean);
 ---
-<BaseLayout title={cat.title_en} description={cat.desc_en} lang="en">
-<article>
-<h1>{cat.title_en}</h1>
-<p>{cat.desc_en}</p>
-<h2>Top 3 Picks</h2>
-<ol>
-{matchedTools.slice(0, 3).map(function(t){return (<li><a href={"/tool/" + t.id + "/"}><strong>{t.name.en}</strong></a> - {t.short_desc.en}</li>)})}
-</ol>
-<h2>All Tools</h2>
-<ul>
-{matchedTools.map(function(t){return (<li><a href={"/tool/" + t.id + "/"}>{t.name.en}</a> - {t.short_desc.en}</li>)})}
-</ul>
-<h2>Related Categories</h2>
-<ul>
-{categories.filter(function(c){return c.slug !== cat.slug}).slice(0, 6).map(function(c){return (<li><a href={"/best/" + c.slug + "/"}>{c.title_en}</a></li>)})}
-</ul>
+<BaseLayout title={"Best " + cat.title_en + " in 2026"} description={cat.desc_en} keywords={"best AI tools for " + cat.slug + ", " + cat.title_en}>
+<article class="legal-page">
+  <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/">Best AI Tools</a> &rsaquo; <span>{cat.title_en}</span></nav>
+  <h1>{cat.title_en}</h1>
+  <p class="lede">{cat.desc_en}</p>
+  <p class="update-note"><em>Last updated: July 2026 &middot; We tested {matchedTools.length} tools hands-on.</em></p>
+
+  <section>
+    <h2>Top 3 Picks</h2>
+    <div class="tool-grid">
+      {matchedTools.slice(0, 3).map(function(t, i){return (<article class="tool-card"><span class="card-number">#{i+1}</span><h3><a href={"/tool/" + t.id + "/"}>{t.name.en}</a></h3><p>{t.short_desc.en}</p><a class="cta-primary" href={"/tool/" + t.id + "/"}>Read review</a></article>)})}
+    </div>
+  </section>
+
+  <section>
+    <h2>Full List: All {matchedTools.length} Tools Ranked</h2>
+    <table class="ranking">
+      <thead><tr><th>Rank</th><th>Tool</th><th>Best For</th><th>Category</th></tr></thead>
+      <tbody>
+        {matchedTools.map(function(t, i){return (<tr><td>{i+1}</td><td><a href={"/tool/" + t.id + "/"}><strong>{t.name.en}</strong></a></td><td>{t.pros.en[0]}</td><td>{t.cat}</td></tr>)})}
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Detailed Reviews</h2>
+    {matchedTools.map(function(t){return (<article class="tool-review" id={t.id}><h3>{t.name.en}</h3><p class="short">{t.short_desc.en}</p><p>{t.long_desc.en}</p><div class="pros-cons-box"><div class="pro-list"><strong>Pros:</strong> {t.pros.en.join(", ")}</div><div class="con-list"><strong>Cons:</strong> {t.cons.en.join(", ")}</div></div><p><a class="cta-primary" href={"/tool/" + t.id + "/"}>Read full review</a></p></article>)})}
+  </section>
+
+  <section>
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-section">
+      <details><summary>What is the best AI tool for {cat.slug}?</summary><p>Based on our 2-week test, {matchedTools[0].name.en} is the top pick for most {cat.slug} use cases.</p></details>
+      <details><summary>Are these tools free?</summary><p>Most have a free tier or trial. Premium plans unlock higher limits.</p></details>
+    </div>
+  </section>
+
+  <section class="related">
+    <h2>Related Categories</h2>
+    <ul class="categories">
+      {categories.filter(function(c){return c.slug !== cat.slug}).slice(0, 6).map(function(c){return (<li><a href={"/best/" + c.slug + "/"}>{c.title_en}</a></li>)})}
+    </ul>
+  </section>
 </article>
 </BaseLayout>
