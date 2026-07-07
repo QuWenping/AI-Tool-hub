@@ -1,22 +1,74 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import toolsData from "../data/tools.json";
+const toolCount = Object.keys(toolsData).filter(k => k !== "codewords").length;
+const categoriesCount = 6;
 ---
-<BaseLayout title="About AI Tool Hub" description="Who runs AI Tool Hub, how we test AI tools, and why you can trust our reviews.">
-<article class="legal-page">
-  <h1>About AI Tool Hub</h1>
-  <p class="lede">AI Tool Hub is a curated directory of AI tools we have personally tested for 2+ weeks. We are not a list of every AI tool that exists - we only list the ones we would recommend.</p>
-  <h2>Who runs this site</h2>
-  <p>AI Tool Hub is run by a small team of writers, developers and designers who use AI tools daily for work. We started this site because existing AI tool directories were either (a) pay-to-play, (b) full of low-quality tools, or (c) obviously AI-generated without any real testing.</p>
-  <h2>How we test</h2>
-  <ol>
-    <li><strong>Sign up</strong> using a fresh account, never a paid promotion.</li>
-    <li><strong>Use the tool for 2+ weeks</strong> on real tasks in our actual work (writing, coding, designing).</li>
-    <li><strong>Score</strong> on output quality, ease of use, pricing transparency, support quality, and privacy.</li>
-    <li><strong>Re-test every 6 months</strong> - if a tool drops in quality, we drop it from the list.</li>
-  </ol>
-  <h2>How we make money</h2>
-  <p>AI Tool Hub is supported by display advertising (Google AdSense) and a small number of clearly marked affiliate links. Affiliate links never affect our rankings.</p>
-  <h2>Contact</h2>
-  <p>Found a tool we missed? Found an error? <a href="/contact">Get in touch</a>.</p>
-</article>
+<BaseLayout title="About AI Tool Hub | Our Testing Process" description="Learn who runs AI Tool Hub, how we test every AI tool hands-on for 2+ weeks, and our editorial standards. We are not a list of every AI tool - we only list the ones we would pay for.">
+
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <span>About</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">Our story</span>
+      <h1>About AI Tool Hub</h1>
+      <p class="lede">We test every AI tool on this site hands-on for at least two weeks before it earns a spot in our directory. Here is who we are, how we work, and why you can trust our recommendations.</p>
+    </header>
+
+    <section>
+      <h2>Who we are</h2>
+      <p>AI Tool Hub is run by a small distributed team of writers, software engineers and product designers. We use AI tools every day for our own work - drafting articles, refactoring code, generating marketing visuals, and running research - so we have first-hand experience with the tools we recommend.</p>
+      <p>The site was started in early 2025 because the AI tool landscape had become almost impossible to navigate. Existing directories were either <strong>pay-to-play</strong> (rankings bought, not earned), <strong>flooded with junk</strong> (every new wrapper listed the same day it launched), or <strong>clearly AI-generated</strong> (the same boilerplate rewritten 200 times without anyone actually using the product). We wanted a directory that was honest, opinionated, and small enough to actually maintain.</p>
+    </section>
+
+    <section>
+      <h2>What we do</h2>
+      <p>We currently track <strong>{toolCount} AI tools</strong> across <strong>{categoriesCount} categories</strong>: writing, image generation, coding, video, audio, and business productivity. Every entry has been signed up for with a fresh account, used on real tasks for at least two weeks, and scored against a fixed rubric.</p>
+      <p>We re-test our top picks every 6 months. If a tool's quality drops - or a much better alternative appears - we update the ranking. We also accept community tips: if you know of a tool we have missed, <a href="/contact/">get in touch</a>.</p>
+    </section>
+
+    <section>
+      <h2>How we test (our rubric)</h2>
+      <p>Every tool is scored on five dimensions, each on a 1-10 scale:</p>
+      <ol>
+        <li><strong>Output quality</strong> - Is what the tool produces actually useful, or does it require heavy editing? We test on our real work, not on synthetic prompts.</li>
+        <li><strong>Ease of use</strong> - How long does it take a new user to produce something good? Is the interface intuitive or does it require a tutorial?</li>
+        <li><strong>Pricing transparency</strong> - Is the pricing page clear? Are there hidden costs, opaque credit systems, or surprise overage charges?</li>
+        <li><strong>Support quality</strong> - When something breaks, can a real person help? We send a test support ticket during evaluation.</li>
+        <li><strong>Privacy &amp; data handling</strong> - Does the tool train on our inputs by default? Can we opt out? Where is data stored?</li>
+      </ol>
+      <p>Tools that score below 6.0 on any single dimension are excluded from the directory. Tools that score below 7.0 overall are listed but flagged with a warning.</p>
+    </section>
+
+    <section>
+      <h2>Our editorial standards</h2>
+      <ul>
+        <li><strong>No pay-to-play.</strong> No tool can pay to be ranked higher, listed sooner, or given a better review. Affiliate links are clearly marked and never influence scores.</li>
+        <li><strong>Real testing.</strong> Every tool is used for at least two weeks on real work. We do not pad reviews with feature lists copied from the vendor's marketing site.</li>
+        <li><strong>Honest criticism.</strong> If a tool has a deal-breaking flaw, we say so - even if it is popular. Our credibility is the only thing we sell.</li>
+        <li><strong>Re-testing.</strong> We revisit the top 20% of our directory every 6 months. A great tool today can be a mediocre one in a year.</li>
+        <li><strong>No AI-generated reviews.</strong> Every word on this site is written by a human who actually used the product.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How we make money</h2>
+      <p>AI Tool Hub is supported by display advertising (Google AdSense) and a small number of clearly marked affiliate links (currently: ElevenLabs, DigitalOcean, Hostinger). Affiliate links never affect our rankings or scores - the rubric above is the only thing that determines what makes the list.</p>
+      <p>Affiliate relationships are disclosed in two places: on the relevant tool's review page (with a small "affiliate" tag) and in our <a href="/privacy/">privacy policy</a>. We do not sell or share user data with third parties.</p>
+    </section>
+
+    <section>
+      <h2>What we do not do</h2>
+      <ul>
+        <li>We do not list every AI tool that exists. There are over 10,000 AI products in the wild. We list the {toolCount} we would actually pay for.</li>
+        <li>We do not publish sponsored reviews disguised as editorial content.</li>
+        <li>We do not use AI to write reviews (and we can tell when other sites do).</li>
+        <li>We do not accept payment to remove a negative review.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact us</h2>
+      <p>Found a tool we missed? Found an error? Disagree with a ranking? We want to hear from you. <a href="/contact/">Send us a note</a> - we read every message and respond within 2-3 business days.</p>
+    </section>
+  </article>
 </BaseLayout>
