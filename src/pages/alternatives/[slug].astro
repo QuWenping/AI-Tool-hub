@@ -8,14 +8,13 @@ export async function getStaticPaths() {
 }
 const { id, tool } = Astro.props;
 const alternatives = Object.entries(toolsData)
-  .filter(function(e){return e[0] !== id && e[1].cat === tool.cat})
+  .filter(function(e){return e[0] !== id && e[0] !== "codewords" && e[1].cat === tool.cat})
   .slice(0, 8)
   .map(function(e){return Object.assign({id:e[0]}, e[1])});
 const aName = (tool && tool.name && tool.name.en) || "Tool";
 const aCat = (tool && tool.cat) || "ai";
 const aIcon = (tool && tool.icon) || "fa-robot";
 const aShort = (tool && tool.short_desc && tool.short_desc.en) || "";
-const aUrl = (tool && tool.url) || "#";
 const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
 ---
 <BaseLayout title={"Best " + aName + " Alternatives in 2026"} description={"Looking for " + aName + " alternatives? Here are the top options ranked by use case, pricing, and our hands-on testing."} keywords={aName + " alternatives, alternatives to " + aName}>
@@ -27,39 +26,26 @@ const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "
       <p class="lede">{aName} is great, but here are alternatives worth comparing.</p>
     </header>
 
-    <section>
-      <h2>Quick comparison</h2>
-      <table class="ranking">
-        <thead><tr><th>Tool</th><th>Best for</th><th>Category</th></tr></thead>
-        <tbody>
-          <tr class="current"><td><strong>{aName}</strong> (current)</td><td>{aShort}</td><td>{categoryLabels[aCat] || aCat}</td></tr>
-          {alternatives.map(function(t){return (
-            <tr>
-              <td><a href={"/tool/" + t.id + "/"}><strong>{t.name.en}</strong></a></td>
-              <td>{(t.pros?.en || [])[0] || ""}</td>
-              <td>{categoryLabels[t.cat] || t.cat}</td>
-            </tr>
+    {alternatives.length > 0 ? (
+      <section>
+        <h2 data-i18n="top_3_alternatives">Top 3 alternatives</h2>
+        <div class="tool-grid">
+          {alternatives.slice(0, 3).map(function(t){return (
+            <article class="tool-card">
+              <div class="tool-icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
+              <h3><a href={"/tool/" + t.id + "/"}>{t.name.en}</a></h3>
+              <p>{t.short_desc.en}</p>
+              <p class="rec-desc"><strong>Pros:</strong> {(t.pros?.en || []).join(", ")}</p>
+              <p class="rec-desc"><strong>Cons:</strong> {(t.cons?.en || []).join(", ")}</p>
+              <a class="cta-primary" href={t.url} rel="nofollow noopener" target="_blank">Try {t.name.en}</a>
+              <span class="tool-tag">{categoryLabels[t.cat] || t.cat}</span>
+            </article>
           )})}
-        </tbody>
-      </table>
-    </section>
-
-    <section>
-      <h2 data-i18n="top_3_alternatives">Top 3 alternatives</h2>
-      <div class="tool-grid">
-        {alternatives.slice(0, 3).map(function(t){return (
-          <article class="tool-card">
-            <div class="tool-icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
-            <h3><a href={"/tool/" + t.id + "/"}>{t.name.en}</a></h3>
-            <p>{t.short_desc.en}</p>
-            <p class="rec-desc"><strong>Pros:</strong> {(t.pros?.en || []).join(", ")}</p>
-            <p class="rec-desc"><strong>Cons:</strong> {(t.cons?.en || []).join(", ")}</p>
-            <a class="cta-primary" href={t.url} rel="nofollow noopener" target="_blank">Try {t.name.en}</a>
-            <span class="tool-tag">{categoryLabels[t.cat] || t.cat}</span>
-          </article>
-        )})}
-      </div>
-    </section>
+        </div>
+      </section>
+    ) : (
+      <p style="color: var(--text-mute);">No direct alternatives in the same category yet. Check the <a href={"/best/" + aCat + "/"}>best {aCat} AI tools</a> list.</p>
+    )}
 
     <section class="related">
       <h2 data-i18n="related">Related</h2>
