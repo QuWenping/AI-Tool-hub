@@ -9,6 +9,29 @@
     "date": "2026-07-07",
     "read_time": "8 min",
     "author": "AI Tool Hub Editorial",
-    "tags": ["free", "students", "writing", "research"]
+    "tags": [
+      "free",
+      "students",
+      "writing",
+      "research"
+    ]
+  },
+  {
+    "slug": "chatgpt-vs-claude-which-should-you-pick-2026",
+    "title_en": "ChatGPT vs Claude (2026): Which Should You Actually Pick?",
+    "title_zh": "ChatGPT vs Claude (2026)：你到底该选哪个？",
+    "desc_en": "We used both ChatGPT and Claude side by side for two weeks on real work. Here is the honest comparison - pricing, writing quality, coding, long documents, and which is worth paying for.",
+    "desc_zh": "我们把 ChatGPT 和 Claude 并排用两周实测，从写作、代码、长文档、价格全面对比，告诉你谁值得订阅。",
+    "category": "comparison",
+    "date": "2026-07-07",
+    "read_time": "10 min",
+    "author": "AI Tool Hub Editorial",
+    "tags": [
+      "chatgpt",
+      "claude",
+      "comparison",
+      "writing",
+      "coding"
+    ]
   }
 ]
