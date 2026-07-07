@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import posts from "../../data/posts.json";
+export async function getStaticPaths() {
+  return posts.map(p => ({ params: { slug: p.slug }, props: { post: p } }));
+}
+const { post } = Astro.props;
+---
+<BaseLayout title={post.title_en} description={post.desc_en} keywords={post.tags?.join(", ") || post.title_en}>
+  <article class="legal-page blog-post">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>{post.title_en}</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">{post.category}</span>
+      <h1>{post.title_en}</h1>
+      <p class="lede">{post.desc_en}</p>
+      <p style="color: var(--text-mute); font-size: 14px; margin-top: 16px;">
+        <i class="far fa-calendar"></i> {post.date} &middot; <i class="far fa-clock"></i> {post.read_time} &middot; <i class="far fa-user"></i> {post.author}
+      </p>
+    </header>
+
+    <section class="blog-content">
+      <slot />
+    </section>
+
+    {post.tags && post.tags.length > 0 && (
+      <section style="margin-top: 40px;">
+        <h3>Tags</h3>
+        <div class="audience-tags">
+          {post.tags.map(t => <span class="audience-tag">#{t}</span>)}
+        </div>
+      </section>
+    )}
+
+    <section style="margin-top: 40px; text-align: center;">
+      <p style="color: var(--text-mute);">Want us to review a specific tool? <a href="/contact/">Suggest a topic</a>.</p>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+.blog-content { max-width: 800px; margin: 0 auto; }
+.blog-content :global(h2) { font-size: 26px; margin: 36px 0 16px; color: var(--text-main); }
+.blog-content :global(h3) { font-size: 20px; margin: 28px 0 12px; color: var(--text-main); }
+.blog-content :global(p) { font-size: 16px; line-height: 1.8; margin-bottom: 16px; color: var(--text-main); }
+.blog-content :global(ul), .blog-content :global(ol) { margin: 16px 0 16px 24px; }
+.blog-content :global(li) { margin-bottom: 8px; line-height: 1.7; }
+.blog-content :global(a) { color: var(--accent-color); }
+.blog-content :global(strong) { color: var(--text-main); }
+.blog-content :global(.callout) { background: var(--card-bg); border-left: 4px solid var(--accent-color); padding: 16px 20px; border-radius: 8px; margin: 24px 0; }
+</style>
