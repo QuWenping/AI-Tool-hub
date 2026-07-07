@@ -33,5 +33,24 @@
       "writing",
       "coding"
     ]
+  },
+  {
+    "slug": "best-ai-image-generators-compared-2026",
+    "title_en": "Best AI Image Generators Compared (2026): Midjourney vs Stable Diffusion vs DALL-E vs Flux",
+    "title_zh": "2026 年最佳 AI 图像生成器横评：Midjourney vs Stable Diffusion vs DALL-E vs Flux",
+    "desc_en": "We paid for every major AI image generator in 2026 and generated 100+ images side by side. Here is the honest comparison of Midjourney, Stable Diffusion, DALL-E, Flux, and Ideogram.",
+    "desc_zh": "我们订阅了 2026 年所有主流 AI 图像生成器，同一 prompt 对比 100+ 张图，给出真实横评。",
+    "category": "image-generation",
+    "date": "2026-07-08",
+    "read_time": "12 min",
+    "author": "AI Tool Hub Editorial",
+    "tags": [
+      "midjourney",
+      "stable-diffusion",
+      "dall-e",
+      "flux",
+      "ideogram",
+      "image-generation"
+    ]
   }
 ]
