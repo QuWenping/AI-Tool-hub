@@ -5,6 +5,16 @@ const fullTitle = title ? title + " | AI Tool Hub" : "AI Tool Hub | Best AI Tool
 const desc = description || "Explore curated AI tools for writing, coding, image generation, video, audio and productivity.";
 const kw = keywords || "AI tools, best AI tools, AI writing, AI coding, AI image generators";
 const url = canonical || siteUrl + Astro.url.pathname;
+// Embed the dataset only on the homepage so main.js can render cards client-side
+const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "/index.html";
+let toolsJson = "[]";
+let categoriesJson = "[]";
+if (isHome) {
+  const toolsMod = await import("../data/tools.json");
+  const catsMod = await import("../data/categories.json");
+  toolsJson = JSON.stringify(toolsMod.default || toolsMod);
+  categoriesJson = JSON.stringify(catsMod.default || catsMod);
+}
 ---
 <!DOCTYPE html>
 <html lang={lang === "zh" ? "zh-CN" : "en-US"}>
@@ -23,10 +33,13 @@ const url = canonical || siteUrl + Astro.url.pathname;
   <meta name="twitter:title" content={fullTitle}>
   <meta name="twitter:description" content={desc}>
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
   <link rel="alternate" hreflang="en" href={siteUrl + Astro.url.pathname.replace(/^\/zh/, "")}>
   <link rel="alternate" hreflang="zh" href={siteUrl + Astro.url.pathname}>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AI Tool Hub","url":"https://ai-tool-hub-self.vercel.app"}</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3930397953691472" crossorigin="anonymous"></script>
+  {isHome && <script type="application/json" id="tools-data" set:html={toolsJson}></script>}
+  {isHome && <script type="application/json" id="categories-data" set:html={categoriesJson}></script>}
 </head>
 <body>
   <header>
@@ -34,10 +47,19 @@ const url = canonical || siteUrl + Astro.url.pathname;
       <div class="logo"><a href="/" class="logo-link">AI Tool <span>Hub</span></a></div>
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
-        <li><a href="/best/students">Categories</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/best/students/">Categories</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
       </ul>
+      <div class="header-actions">
+        <div class="action-group">
+          <select id="lang-select" class="style-select" aria-label="Language">
+            <option value="zh">中文</option>
+            <option value="en">English</option>
+          </select>
+          <button id="theme-toggle" aria-label="Toggle theme"><i id="theme-icon" class="fas fa-moon"></i></button>
+        </div>
+      </div>
     </div>
   </header>
   <main class="container">
@@ -47,10 +69,11 @@ const url = canonical || siteUrl + Astro.url.pathname;
     <div class="container">
       <p>(c) 2026 AI Tool Hub. An ultra-minimal, curated directory of useful AI tools.</p>
       <ul class="nav-links">
-        <li><a href="/privacy">Privacy</a></li>
-        <li><a href="/terms">Terms</a></li>
+        <li><a href="/privacy/">Privacy</a></li>
+        <li><a href="/terms/">Terms</a></li>
       </ul>
     </div>
   </footer>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>

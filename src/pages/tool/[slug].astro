@@ -2,63 +2,126 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import toolsData from "../../data/tools.json";
 export async function getStaticPaths() {
-  return Object.entries(toolsData).filter(function(e){return e[0]!=="codewords"}).map(function(e){return {params:{slug:e[0]},props:{id:e[0],tool:e[1]}}});
+  return Object.entries(toolsData)
+    .filter(([id]) => id !== "codewords")
+    .map(([id, tool]) => ({ params: { slug: id }, props: { id, tool } }));
 }
 const { id, tool } = Astro.props;
-const tName = (tool && tool.name && tool.name.en) || "Tool";
-const tShort = (tool && tool.short_desc && tool.short_desc.en) || "";
-const tLong = (tool && tool.long_desc && tool.long_desc.en) || "";
-const tPros = (tool && tool.pros && tool.pros.en) || [];
-const tCons = (tool && tool.cons && tool.cons.en) || [];
-const tUse = (tool && tool.use_cases && tool.use_cases.en) || [];
-const tFeatures = (tool && tool.features && tool.features.en) || [];
-const tCat = (tool && tool.cat) || "ai";
+const tName = (tool?.name?.en) || "Tool";
+const tShort = (tool?.short_desc?.en) || "";
+const tLong = (tool?.long_desc?.en) || "";
+const tPros = tool?.pros?.en || [];
+const tCons = tool?.cons?.en || [];
+const tUse = tool?.use_cases?.en || [];
+const tFeatures = tool?.features?.en || [];
+const tScenes = tool?.scenes?.en || [];
+const tAudience = tool?.target_audience?.en || [];
+const tCat = tool?.cat || "ai";
+const tUrl = tool?.url || "#";
+const tIcon = tool?.icon || "fa-robot";
+const tExample = tool?.example?.en || "";
+const allTools = Object.entries(toolsData).filter(([k]) => k !== "codewords");
+const alternatives = allTools.filter(([k, t]) => k !== id && t.cat === tCat).slice(0, 6);
+const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
+const catLabel = categoryLabels[tCat] || tCat;
 ---
-<BaseLayout title={tName + " Review (2026) | AI Tool Hub"} description={tShort} keywords={tName + ", " + tName + " review, " + tName + " pricing, " + tCat + " AI tools"}>
-<article class="tool-detail-container">
-  <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={"/best/" + tCat + "/"}>Best {tCat} AI tools</a> &rsaquo; <span>{tName}</span></nav>
-  <h1>{tName} Review (2026)</h1>
-  <p class="lede">{tShort}</p>
+<BaseLayout
+  title={tName + " Review (2026) | AI Tool Hub"}
+  description={tShort}
+  keywords={tName + ", " + tName + " review, " + tName + " pricing, " + tCat + " AI tools"}
+>
+  <article class="tool-detail-container">
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> &rsaquo; <a href={"/best/" + tCat + "/"}>Best {catLabel} AI tools</a> &rsaquo; <span>{tName}</span>
+    </nav>
 
-  <section>
-    <h2>What is {tName}?</h2>
-    <p>{tLong}</p>
-  </section>
+    <header class="detail-header">
+      <div class="detail-icon"><i class={`fas ${tIcon}`}></i></div>
+      <div class="detail-title-group">
+        <h1>{tName}</h1>
+        <span class="detail-tag">{catLabel}</span>
+      </div>
+      <div class="detail-actions">
+        <a class="detail-use-btn" href={tUrl} rel="nofollow noopener" target="_blank">Use Now</a>
+        <a class="detail-card-btn" href={"/alternatives/" + id + "/"}>Alternatives</a>
+      </div>
+    </header>
 
-  <section>
-    <h2>Pros</h2>
-    <ul class="pro-list">{tPros.map(function(p){return (<li>{p}</li>)})}</ul>
-  </section>
+    <p class="lede">{tShort}</p>
 
-  <section>
-    <h2>Cons</h2>
-    <ul class="con-list">{tCons.map(function(c){return (<li>{c}</li>)})}</ul>
-  </section>
+    <section>
+      <h2>What is {tName}?</h2>
+      <p>{tLong}</p>
+    </section>
 
-  <section>
-    <h2>Use cases that actually work</h2>
-    <ul>{tUse.map(function(u){return (<li>{u}</li>)})}</ul>
-  </section>
+    {tExample && (
+      <section>
+        <h2>Example</h2>
+        <div class="example-box">{tExample}</div>
+      </section>
+    )}
 
-  <section>
-    <h2>Features</h2>
-    <ul>{tFeatures.map(function(f){return (<li>{f}</li>)})}</ul>
-  </section>
+    <section>
+      <h2>Pros</h2>
+      <ul class="pro-list">{tPros.map(p => <li>{p}</li>)}</ul>
+    </section>
 
-  <section class="related">
-    <h2>Alternatives</h2>
-    <ul>
-      <li><a class="cta-primary" href={"/alternatives/" + id + "/"}>All {tName} alternatives</a></li>
-    </ul>
-  </section>
+    <section>
+      <h2>Cons</h2>
+      <ul class="con-list">{tCons.map(c => <li>{c}</li>)}</ul>
+    </section>
 
-  <section class="related">
-    <h2>Popular comparisons</h2>
-    <ul>
-      <li><a href="/vs/chatgpt-vs-claude/">ChatGPT vs Claude</a></li>
-      <li><a href="/vs/cursor-vs-github-copilot/">Cursor vs GitHub Copilot</a></li>
-      <li><a href="/vs/midjourney-vs-stable-diffusion/">Midjourney vs Stable Diffusion</a></li>
-    </ul>
-  </section>
-</article>
+    {tFeatures.length > 0 && (
+      <section>
+        <h2>Key Features</h2>
+        <ul class="feature-list">{tFeatures.map(f => <li><i class="fas fa-check"></i> {f}</li>)}</ul>
+      </section>
+    )}
+
+    {tUse.length > 0 && (
+      <section>
+        <h2>Use cases that actually work</h2>
+        <ul class="use-case-list">{tUse.map(u => <li><i class="fas fa-check-circle"></i> {u}</li>)}</ul>
+      </section>
+    )}
+
+    {tScenes.length > 0 && (
+      <section>
+        <h2>Best for</h2>
+        <ul class="scenes-list">{tScenes.map(s => <li><i class="fas fa-check"></i> {s}</li>)}</ul>
+      </section>
+    )}
+
+    {tAudience.length > 0 && (
+      <section>
+        <h2>Target Audience</h2>
+        <div class="audience-tags">{tAudience.map(a => <span class="audience-tag">{a}</span>)}</div>
+      </section>
+    )}
+
+    {alternatives.length > 0 && (
+      <section>
+        <h2>Alternatives to {tName}</h2>
+        <div class="tool-grid">
+          {alternatives.map(([k, t]) => (
+            <a class="tool-card" href={"/tool/" + k + "/"}>
+              <div class="tool-icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
+              <h3>{t.name.en}</h3>
+              <p>{t.short_desc.en}</p>
+              <span class="tool-tag">{categoryLabels[t.cat] || t.cat}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="related">
+      <h2>Popular comparisons</h2>
+      <ul>
+        <li><a href="/vs/chatgpt-vs-claude/">ChatGPT vs Claude</a></li>
+        <li><a href="/vs/cursor-vs-github-copilot/">Cursor vs GitHub Copilot</a></li>
+        <li><a href="/vs/midjourney-vs-stable-diffusion/">Midjourney vs Stable Diffusion</a></li>
+      </ul>
+    </section>
+  </article>
 </BaseLayout>

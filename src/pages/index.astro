@@ -1,49 +1,119 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import categories from "../data/categories.json";
+import categoriesData from "../data/categories.json";
 import toolsData from "../data/tools.json";
-const tools = Object.entries(toolsData).filter(function(e){return e[0]!=="codewords"}).map(function(e){return {id:e[0],data:e[1]}});
-const featured = tools.filter(function(t){return t.data.featured}).slice(0, 3);
-const categoriesGrouped = {};
-tools.forEach(function(t){
-  if(!categoriesGrouped[t.data.cat]) categoriesGrouped[t.data.cat] = [];
-  categoriesGrouped[t.data.cat].push(t);
-});
+const tools = Object.entries(toolsData).filter(([id]) => id !== "codewords").map(([id, data]) => ({ id, data }));
+const featured = tools.filter(t => t.data.featured).slice(0, 3);
+const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
+const catHero = [
+  { cat: "text", icon: "fa-feather-alt", title_en: "Writing", title_zh: "文本创作", desc_en: "ChatGPT, Claude & more", desc_zh: "ChatGPT、Claude 等" },
+  { cat: "image", icon: "fa-palette", title_en: "Images", title_zh: "图像生成", desc_en: "Midjourney, SD & more", desc_zh: "Midjourney、Stable Diffusion 等" },
+  { cat: "code", icon: "fa-code", title_en: "Coding", title_zh: "编程助手", desc_en: "Cursor, Copilot & more", desc_zh: "Cursor、Copilot 等" },
+  { cat: "video", icon: "fa-film", title_en: "Video", title_zh: "视频制作", desc_en: "Sora, Runway & more", desc_zh: "Sora、Runway 等" },
+  { cat: "audio", icon: "fa-microphone-alt", title_en: "Audio", title_zh: "音频处理", desc_en: "ElevenLabs & more", desc_zh: "ElevenLabs 等" },
+  { cat: "productivity", icon: "fa-bolt", title_en: "Business", title_zh: "商业效率", desc_en: "Perplexity, Notion & more", desc_zh: "Perplexity、Notion 等" }
+];
 ---
 <BaseLayout title="AI Tool Hub | Best AI Tools Directory" description="Explore curated AI tools for writing, coding, image generation, video, audio and productivity. Find ChatGPT alternatives, AI coding assistants and practical AI services.">
-<section class="hero-section">
-  <h1>Find the Best AI Tools for Any Task</h1>
-  <p class="hero-subtitle">We tested {tools.length} popular AI tools hands-on. Here are the ones we would actually pay for.</p>
-</section>
 
-<section>
-  <h2>Editors picks (2026)</h2>
-  <div class="tool-grid">
-    {featured.map(function(t){return (<article class="tool-card"><h3><a href={"/tool/" + t.id + "/"}>{t.data.name.en}</a></h3><p>{t.data.short_desc.en}</p><a class="cta-primary" href={"/tool/" + t.id + "/"}>Read review</a></article>)})}
+  <section class="hero">
+    <h1>Find the <span>Best AI Tools</span> for Any Task</h1>
+    <p data-i18n="hero_subtitle">Curated AI tools for writing, coding, design and business - hand-tested by our team.</p>
+    <div class="hero-cta">
+      <a href="#tool-grid" id="cta-browse" class="cta-btn cta-primary" data-i18n="cta_browse">Browse Tools</a>
+      <a href="/best/students/" class="cta-btn cta-secondary" data-i18n="cta_start_free">Start Free</a>
+    </div>
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input id="search-input" type="text" placeholder="Search AI tools..." data-i18n-placeholder="search_placeholder">
+    </div>
+  </section>
+
+  <section class="categories">
+    <div class="category-list">
+      <button class="cat-btn active" data-category="all" data-i18n="cat_all">All</button>
+      <button class="cat-btn" data-category="text" data-i18n="cat_text">Writing</button>
+      <button class="cat-btn" data-category="image" data-i18n="cat_image">Images</button>
+      <button class="cat-btn" data-category="code" data-i18n="cat_code">Coding</button>
+      <button class="cat-btn" data-category="video" data-i18n="cat_video">Video</button>
+      <button class="cat-btn" data-category="audio" data-i18n="cat_audio">Audio</button>
+      <button class="cat-btn" data-category="productivity" data-i18n="cat_prod">Business</button>
+    </div>
+  </section>
+
+  <section class="value-proposition">
+    <h2 class="section-main-title" data-i18n="value_title">Why AI Tool Hub?</h2>
+    <div class="value-grid">
+      <article class="value-card">
+        <div class="value-icon"><i class="fas fa-gem"></i></div>
+        <h3 data-i18n="value_item1">Curated</h3>
+        <p data-i18n="value_item1_desc">No spam. Each tool is manually tested for quality.</p>
+      </article>
+      <article class="value-card">
+        <div class="value-icon"><i class="fas fa-search-plus"></i></div>
+        <h3 data-i18n="value_item2">Deep Reviews</h3>
+        <p data-i18n="value_item2_desc">More than links; providing real-world analysis and pros/cons.</p>
+      </article>
+      <article class="value-card">
+        <div class="value-icon"><i class="fas fa-bolt"></i></div>
+        <h3 data-i18n="value_item3">Real-time</h3>
+        <p data-i18n="value_item3_desc">Catch the latest dynamics in AI and keep updated instantly.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="category-hero">
+    <div class="cat-hero-grid">
+      {catHero.map(c => (
+        <article class="cat-hero-card" data-category={c.cat}>
+          <div class="cat-hero-icon"><i class={`fas ${c.icon}`}></i></div>
+          <h3>{c.title_en}</h3>
+          <p>{c.desc_en}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="recommended-section">
+    <div class="section-header">
+      <h2 data-i18n="rec_title">Recommended this Week</h2>
+      <p data-i18n="rec_desc">Top AI tools selected by community heat and utility.</p>
+    </div>
+    <div id="rec-grid" class="rec-grid"></div>
+  </section>
+
+  <div class="ad-banner">
+    <div class="ad-content">
+      <span class="ad-tag" data-i18n="ad_sponsored">Sponsored</span>
+      <p data-i18n="ad_top_text">Ad space available | Contact us for premium AI brand partnerships.</p>
+      <a class="ad-button" href="/contact/" data-i18n="ad_learn_more">Contact Us</a>
+    </div>
   </div>
-</section>
 
-<section>
-  <h2>Browse by use case</h2>
-  <ul class="categories">
-    {categories.map(function(c){return (<li><a href={"/best/" + c.slug + "/"}>{c.title_en}</a></li>)})}
-  </ul>
-</section>
+  <section class="recommended-section" id="all-tools">
+    <div class="section-header">
+      <h2 data-i18n="all_title">All tools</h2>
+      <p data-i18n="all_desc">Filter by category or search by name to find the right AI tool.</p>
+    </div>
+    <div id="tool-grid" class="tool-grid"></div>
+  </section>
 
-<section>
-  <h2>All tools</h2>
-  {Object.entries(categoriesGrouped).map(function(entry){
-    var cat = entry[0]; var list = entry[1];
-    return (<article><h3>{cat.charAt(0).toUpperCase() + cat.slice(1)} AI tools</h3><ul>{list.map(function(t){return (<li><a href={"/tool/" + t.id + "/"}>{t.data.name.en}</a> - {t.data.short_desc.en}</li>)})}</ul></article>);
-  })}
-</section>
+  <section class="value-proposition" style="padding-top: 20px;">
+    <h2 class="section-main-title" style="font-size:24px;" data-i18n="popular_comparisons_title">Popular comparisons</h2>
+    <ul class="categories" style="padding:0;">
+      <li><a href="/vs/chatgpt-vs-claude/">ChatGPT vs Claude (2026)</a></li>
+      <li><a href="/vs/cursor-vs-github-copilot/">Cursor vs GitHub Copilot</a></li>
+      <li><a href="/vs/midjourney-vs-stable-diffusion/">Midjourney vs Stable Diffusion</a></li>
+    </ul>
+  </section>
 
-<section>
-  <h2>Popular comparisons</h2>
-  <ul>
-    <li><a href="/vs/chatgpt-vs-claude/">ChatGPT vs Claude (2026)</a></li>
-    <li><a href="/vs/cursor-vs-github-copilot/">Cursor vs GitHub Copilot</a></li>
-    <li><a href="/vs/midjourney-vs-stable-diffusion/">Midjourney vs Stable Diffusion</a></li>
-  </ul>
-</section>
+  <section class="value-proposition">
+    <h2 class="section-main-title" style="font-size:24px;" data-i18n="popular_categories_title">Popular categories</h2>
+    <ul class="categories" style="padding:0;">
+      {categoriesData.slice(0, 8).map(c => (
+        <li><a href={`/best/${c.slug}/`}>{c.title_en}</a></li>
+      ))}
+    </ul>
+  </section>
+
 </BaseLayout>
