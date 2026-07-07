@@ -2,43 +2,83 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import toolsData from "../../data/tools.json";
 export async function getStaticPaths() {
-  return Object.entries(toolsData).filter(function(e){return e[0]!=="codewords"}).map(function(e){return {params:{slug:e[0]},props:{id:e[0],tool:e[1]}}});
+  return Object.entries(toolsData)
+    .filter(function(e){return e[0] !== "codewords"})
+    .map(function(e){return {params:{slug:e[0]},props:{id:e[0],tool:e[1]}}});
 }
 const { id, tool } = Astro.props;
-const alternatives = Object.entries(toolsData).filter(function(e){return e[0]!==id && e[1].cat===tool.cat}).slice(0,8);
+const alternatives = Object.entries(toolsData)
+  .filter(function(e){return e[0] !== id && e[1].cat === tool.cat})
+  .slice(0, 8)
+  .map(function(e){return Object.assign({id:e[0]}, e[1])});
 const aName = (tool && tool.name && tool.name.en) || "Tool";
 const aCat = (tool && tool.cat) || "ai";
+const aIcon = (tool && tool.icon) || "fa-robot";
+const aShort = (tool && tool.short_desc && tool.short_desc.en) || "";
+const aUrl = (tool && tool.url) || "#";
+const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
 ---
 <BaseLayout title={"Best " + aName + " Alternatives in 2026"} description={"Looking for " + aName + " alternatives? Here are the top options ranked by use case, pricing, and our hands-on testing."} keywords={aName + " alternatives, alternatives to " + aName}>
-<article class="legal-page">
-  <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={"/tool/" + id + "/"}>{aName}</a> &rsaquo; <span>Alternatives</span></nav>
-  <h1>Best {aName} Alternatives in 2026</h1>
-  <p class="lede">{aName} is great, but here are alternatives worth comparing.</p>
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={"/tool/" + id + "/"}>{aName}</a> &rsaquo; <span>Alternatives</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow" data-i18n="eyebrow_alt">Alternatives</span>
+      <h1>Best {aName} Alternatives in 2026</h1>
+      <p class="lede">{aName} is great, but here are alternatives worth comparing.</p>
+    </header>
 
-  <section>
-    <h2>Quick comparison</h2>
-    <table class="ranking">
-      <thead><tr><th>Tool</th><th>Best for</th><th>Category</th></tr></thead>
-      <tbody>
-        <tr class="current"><td><strong>{aName}</strong> (current)</td><td>What you use now</td><td>{aCat}</td></tr>
-        {alternatives.map(function(e){var k=e[0];var t=e[1];return (<tr><td><a href={"/tool/" + k + "/"}><strong>{t.name.en}</strong></a></td><td>{t.pros.en[0]}</td><td>{t.cat}</td></tr>)})}
-      </tbody>
-    </table>
-  </section>
+    <section>
+      <h2>Quick comparison</h2>
+      <table class="ranking">
+        <thead><tr><th>Tool</th><th>Best for</th><th>Category</th></tr></thead>
+        <tbody>
+          <tr class="current"><td><strong>{aName}</strong> (current)</td><td>{aShort}</td><td>{categoryLabels[aCat] || aCat}</td></tr>
+          {alternatives.map(function(t){return (
+            <tr>
+              <td><a href={"/tool/" + t.id + "/"}><strong>{t.name.en}</strong></a></td>
+              <td>{(t.pros?.en || [])[0] || ""}</td>
+              <td>{categoryLabels[t.cat] || t.cat}</td>
+            </tr>
+          )})}
+        </tbody>
+      </table>
+    </section>
 
-  <section>
-    <h2>Top 3 alternatives</h2>
-    <div class="tool-grid">
-      {alternatives.slice(0, 3).map(function(e){var k=e[0];var t=e[1];return (<article class="tool-card"><h3><a href={"/tool/" + k + "/"}>{t.name.en}</a></h3><p>{t.short_desc.en}</p><p><strong>Pros:</strong> {t.pros.en.join(", ")}</p><p><strong>Cons:</strong> {t.cons.en.join(", ")}</p><a class="cta-primary" href={t.url} rel="nofollow noopener" target="_blank">Try {t.name.en}</a></article>)})}
-    </div>
-  </section>
+    <section>
+      <h2 data-i18n="top_3_alternatives">Top 3 alternatives</h2>
+      <div class="tool-grid">
+        {alternatives.slice(0, 3).map(function(t){return (
+          <article class="tool-card">
+            <div class="tool-icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
+            <h3><a href={"/tool/" + t.id + "/"}>{t.name.en}</a></h3>
+            <p>{t.short_desc.en}</p>
+            <p class="rec-desc"><strong>Pros:</strong> {(t.pros?.en || []).join(", ")}</p>
+            <p class="rec-desc"><strong>Cons:</strong> {(t.cons?.en || []).join(", ")}</p>
+            <a class="cta-primary" href={t.url} rel="nofollow noopener" target="_blank">Try {t.name.en}</a>
+            <span class="tool-tag">{categoryLabels[t.cat] || t.cat}</span>
+          </article>
+        )})}
+      </div>
+    </section>
 
-  <section class="related">
-    <h2>Related</h2>
-    <ul>
-      <li><a href={"/tool/" + id + "/"}>Full {aName} review</a></li>
-      <li><a href={"/best/" + aCat + "/"}>Best {aCat} AI tools</a></li>
-    </ul>
-  </section>
-</article>
+    <section class="related">
+      <h2 data-i18n="related">Related</h2>
+      <div class="related-grid">
+        <a class="related-card" href={"/tool/" + id + "/"}>
+          <div class="related-icon"><i class={`fas ${aIcon}`}></i></div>
+          <div>
+            <h3>{aName}</h3>
+            <p>Full {aName} review</p>
+          </div>
+        </a>
+        <a class="related-card" href={"/best/" + aCat + "/"}>
+          <div class="related-icon"><i class="fas fa-folder-open"></i></div>
+          <div>
+            <h3>Best {categoryLabels[aCat] || aCat} AI tools</h3>
+            <p>Browse the full {aCat} directory</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </article>
 </BaseLayout>

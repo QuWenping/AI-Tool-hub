@@ -2,9 +2,10 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import categoriesData from "../data/categories.json";
 import toolsData from "../data/tools.json";
+import matchupsData from "../data/matchups.json";
 const tools = Object.entries(toolsData).filter(([id]) => id !== "codewords").map(([id, data]) => ({ id, data }));
-const featured = tools.filter(t => t.data.featured).slice(0, 3);
 const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
+const categoryLabelsZh = { text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商业" };
 const catHero = [
   { cat: "text", icon: "fa-feather-alt", title_en: "Writing", title_zh: "文本创作", desc_en: "ChatGPT, Claude & more", desc_zh: "ChatGPT、Claude 等" },
   { cat: "image", icon: "fa-palette", title_en: "Images", title_zh: "图像生成", desc_en: "Midjourney, SD & more", desc_zh: "Midjourney、Stable Diffusion 等" },
@@ -13,51 +14,52 @@ const catHero = [
   { cat: "audio", icon: "fa-microphone-alt", title_en: "Audio", title_zh: "音频处理", desc_en: "ElevenLabs & more", desc_zh: "ElevenLabs 等" },
   { cat: "productivity", icon: "fa-bolt", title_en: "Business", title_zh: "商业效率", desc_en: "Perplexity, Notion & more", desc_zh: "Perplexity、Notion 等" }
 ];
+const featuredMatchups = matchupsData.slice(0, 3);
 ---
 <BaseLayout title="AI Tool Hub | Best AI Tools Directory" description="Explore curated AI tools for writing, coding, image generation, video, audio and productivity. Find ChatGPT alternatives, AI coding assistants and practical AI services.">
 
   <section class="hero">
     <h1>Find the <span>Best AI Tools</span> for Any Task</h1>
-    <p data-i18n="hero_subtitle">Curated AI tools for writing, coding, design and business - hand-tested by our team.</p>
+    <p data-i18n-en="Curated AI tools for writing, coding, design and business - hand-tested by our team." data-i18n-zh="为写作、编程、图像与商业精选的 AI 工具集">Curated AI tools for writing, coding, design and business - hand-tested by our team.</p>
     <div class="hero-cta">
-      <a href="#tool-grid" id="cta-browse" class="cta-btn cta-primary" data-i18n="cta_browse">Browse Tools</a>
-      <a href="/best/students/" class="cta-btn cta-secondary" data-i18n="cta_start_free">Start Free</a>
+      <a href="#tool-grid" id="cta-browse" class="cta-btn cta-primary" data-i18n-en="Browse Tools" data-i18n-zh="浏览工具">Browse Tools</a>
+      <a href="/best/students/" class="cta-btn cta-secondary" data-i18n-en="Start Free" data-i18n-zh="免费开始">Start Free</a>
     </div>
     <div class="search-box">
       <i class="fas fa-search"></i>
-      <input id="search-input" type="text" placeholder="Search AI tools..." data-i18n-placeholder="search_placeholder">
+      <input id="search-input" type="text" placeholder="Search AI tools..." data-i18n-placeholder-en="Search AI tools..." data-i18n-placeholder-zh="搜索 AI 工具...">
     </div>
   </section>
 
   <section class="categories">
     <div class="category-list">
-      <button class="cat-btn active" data-category="all" data-i18n="cat_all">All</button>
-      <button class="cat-btn" data-category="text" data-i18n="cat_text">Writing</button>
-      <button class="cat-btn" data-category="image" data-i18n="cat_image">Images</button>
-      <button class="cat-btn" data-category="code" data-i18n="cat_code">Coding</button>
-      <button class="cat-btn" data-category="video" data-i18n="cat_video">Video</button>
-      <button class="cat-btn" data-category="audio" data-i18n="cat_audio">Audio</button>
-      <button class="cat-btn" data-category="productivity" data-i18n="cat_prod">Business</button>
+      <button class="cat-btn active" data-category="all" data-i18n-en="All" data-i18n-zh="全部">All</button>
+      <button class="cat-btn" data-category="text" data-i18n-en="Writing" data-i18n-zh="文本创作">Writing</button>
+      <button class="cat-btn" data-category="image" data-i18n-en="Images" data-i18n-zh="图像生成">Images</button>
+      <button class="cat-btn" data-category="code" data-i18n-en="Coding" data-i18n-zh="编程助手">Coding</button>
+      <button class="cat-btn" data-category="video" data-i18n-en="Video" data-i18n-zh="视频制作">Video</button>
+      <button class="cat-btn" data-category="audio" data-i18n-en="Audio" data-i18n-zh="音频处理">Audio</button>
+      <button class="cat-btn" data-category="productivity" data-i18n-en="Business" data-i18n-zh="商业效率">Business</button>
     </div>
   </section>
 
   <section class="value-proposition">
-    <h2 class="section-main-title" data-i18n="value_title">Why AI Tool Hub?</h2>
+    <h2 class="section-main-title" data-i18n-en="Why AI Tool Hub?" data-i18n-zh="为什么选择 AI Tool Hub?">Why AI Tool Hub?</h2>
     <div class="value-grid">
       <article class="value-card">
         <div class="value-icon"><i class="fas fa-gem"></i></div>
-        <h3 data-i18n="value_item1">Curated</h3>
-        <p data-i18n="value_item1_desc">No spam. Each tool is manually tested for quality.</p>
+        <h3 data-i18n-en="Curated" data-i18n-zh="精挑细选">Curated</h3>
+        <p data-i18n-en="No spam. Each tool is manually tested for quality." data-i18n-zh="拒绝垃圾信息，每款工具均经过人工实测。">No spam. Each tool is manually tested for quality.</p>
       </article>
       <article class="value-card">
         <div class="value-icon"><i class="fas fa-search-plus"></i></div>
-        <h3 data-i18n="value_item2">Deep Reviews</h3>
-        <p data-i18n="value_item2_desc">More than links; providing real-world analysis and pros/cons.</p>
+        <h3 data-i18n-en="Deep Reviews" data-i18n-zh="深度评测">Deep Reviews</h3>
+        <p data-i18n-en="More than links; providing real-world analysis and pros/cons." data-i18n-zh="不只是链接，提供真实的场景分析与优缺点对比。">More than links; providing real-world analysis and pros/cons.</p>
       </article>
       <article class="value-card">
         <div class="value-icon"><i class="fas fa-bolt"></i></div>
-        <h3 data-i18n="value_item3">Real-time</h3>
-        <p data-i18n="value_item3_desc">Catch the latest dynamics in AI and keep updated instantly.</p>
+        <h3 data-i18n-en="Real-time" data-i18n-zh="实时更新">Real-time</h3>
+        <p data-i18n-en="Catch the latest dynamics in AI and keep updated instantly." data-i18n-zh="捕捉 AI 领域最前沿的动态，第一时间同步更新。">Catch the latest dynamics in AI and keep updated instantly.</p>
       </article>
     </div>
   </section>
@@ -67,8 +69,8 @@ const catHero = [
       {catHero.map(c => (
         <article class="cat-hero-card" data-category={c.cat}>
           <div class="cat-hero-icon"><i class={`fas ${c.icon}`}></i></div>
-          <h3>{c.title_en}</h3>
-          <p>{c.desc_en}</p>
+          <h3 data-i18n-en={c.title_en} data-i18n-zh={c.title_zh}>{c.title_en}</h3>
+          <p data-i18n-en={c.desc_en} data-i18n-zh={c.desc_zh}>{c.desc_en}</p>
         </article>
       ))}
     </div>
@@ -76,44 +78,68 @@ const catHero = [
 
   <section class="recommended-section">
     <div class="section-header">
-      <h2 data-i18n="rec_title">Recommended this Week</h2>
-      <p data-i18n="rec_desc">Top AI tools selected by community heat and utility.</p>
+      <h2 data-i18n-en="Recommended this Week" data-i18n-zh="本周推荐工具">Recommended this Week</h2>
+      <p data-i18n-en="Top AI tools selected by community heat and utility." data-i18n-zh="根据社区热度和实用度筛选出的顶尖AI神器">Top AI tools selected by community heat and utility.</p>
     </div>
     <div id="rec-grid" class="rec-grid"></div>
   </section>
 
   <div class="ad-banner">
     <div class="ad-content">
-      <span class="ad-tag" data-i18n="ad_sponsored">Sponsored</span>
-      <p data-i18n="ad_top_text">Ad space available | Contact us for premium AI brand partnerships.</p>
-      <a class="ad-button" href="/contact/" data-i18n="ad_learn_more">Contact Us</a>
+      <span class="ad-tag" data-i18n-en="Sponsored" data-i18n-zh="赞助">Sponsored</span>
+      <p data-i18n-en="Ad space available | Contact us for premium AI brand partnerships." data-i18n-zh="广告位招租 | 欢迎顶级 AI 工具品牌合作，请联系洽谈。">Ad space available | Contact us for premium AI brand partnerships.</p>
+      <a class="ad-button" href="/contact/" data-i18n-en="Contact Us" data-i18n-zh="联系我们">Contact Us</a>
     </div>
   </div>
 
   <section class="recommended-section" id="all-tools">
     <div class="section-header">
-      <h2 data-i18n="all_title">All tools</h2>
-      <p data-i18n="all_desc">Filter by category or search by name to find the right AI tool.</p>
+      <h2 data-i18n-en="All tools" data-i18n-zh="全部 AI 工具">All tools</h2>
+      <p data-i18n-en="Filter by category or search by name to find the right AI tool." data-i18n-zh="按分类筛选或按名称搜索，找到最适合的 AI 工具。">Filter by category or search by name to find the right AI tool.</p>
     </div>
     <div id="tool-grid" class="tool-grid"></div>
   </section>
 
-  <section class="value-proposition" style="padding-top: 20px;">
-    <h2 class="section-main-title" style="font-size:24px;" data-i18n="popular_comparisons_title">Popular comparisons</h2>
-    <ul class="categories" style="padding:0;">
-      <li><a href="/vs/chatgpt-vs-claude/">ChatGPT vs Claude (2026)</a></li>
-      <li><a href="/vs/cursor-vs-github-copilot/">Cursor vs GitHub Copilot</a></li>
-      <li><a href="/vs/midjourney-vs-stable-diffusion/">Midjourney vs Stable Diffusion</a></li>
-    </ul>
+  <section class="related-section">
+    <h2 class="section-main-title" data-i18n-en="Popular comparisons" data-i18n-zh="热门对比">Popular comparisons</h2>
+    <div class="related-grid">
+      {featuredMatchups.map(m => {
+        const a = toolsData[m.a];
+        const b = toolsData[m.b];
+        return (
+          <a class="related-card" href={"/vs/" + m.slug + "/"}>
+            <div class="vs-pair">
+              <div class="related-icon"><i class={`fas ${a?.icon || "fa-robot"}`}></i></div>
+              <span class="vs-divider">VS</span>
+              <div class="related-icon"><i class={`fas ${b?.icon || "fa-robot"}`}></i></div>
+            </div>
+            <div>
+              <h3>{a?.name?.en || m.a} vs {b?.name?.en || m.b}</h3>
+              <p>{m.title_en}</p>
+            </div>
+          </a>
+        );
+      })}
+    </div>
   </section>
 
-  <section class="value-proposition">
-    <h2 class="section-main-title" style="font-size:24px;" data-i18n="popular_categories_title">Popular categories</h2>
-    <ul class="categories" style="padding:0;">
-      {categoriesData.slice(0, 8).map(c => (
-        <li><a href={`/best/${c.slug}/`}>{c.title_en}</a></li>
-      ))}
-    </ul>
+  <section class="related-section">
+    <h2 class="section-main-title" data-i18n-en="Popular categories" data-i18n-zh="热门分类">Popular categories</h2>
+    <div class="related-grid">
+      {categoriesData.slice(0, 8).map(c => {
+        const firstTool = toolsData[c.tools[0]];
+        const catIcon = firstTool ? firstTool.icon : "fa-folder-open";
+        return (
+          <a class="related-card" href={"/best/" + c.slug + "/"}>
+            <div class="related-icon"><i class={`fas ${catIcon}`}></i></div>
+            <div>
+              <h3>{c.title_en}</h3>
+              <p>{c.desc_en}</p>
+            </div>
+          </a>
+        );
+      })}
+    </div>
   </section>
 
 </BaseLayout>

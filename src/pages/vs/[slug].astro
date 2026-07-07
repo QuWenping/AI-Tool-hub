@@ -20,55 +20,91 @@ const aCat = (a && a.cat) || "ai";
 const bCat = (b && b.cat) || "ai";
 const aFirstPro = aPros[0] || "versatile";
 const bFirstPro = bPros[0] || "versatile";
+const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
 ---
 <BaseLayout title={m.title_en} description={"Side-by-side comparison of " + aName + " vs " + bName}>
-<article class="legal-page">
-  <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={"/best/" + aCat + "/"}>{aCat} tools</a> &rsaquo; <span>{m.title_en}</span></nav>
-  <h1>{m.title_en}</h1>
-  <p class="lede">We tested both <strong>{aName}</strong> and <strong>{bName}</strong> side by side for two weeks.</p>
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={"/best/" + aCat + "/"}>{(categoryLabels[aCat] || aCat) + " tools"}</a> &rsaquo; <span>{m.title_en}</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow" data-i18n="eyebrow_compare">Tool comparison</span>
+      <h1>{m.title_en}</h1>
+      <p class="lede">We tested both <strong>{aName}</strong> and <strong>{bName}</strong> side by side for two weeks.</p>
+    </header>
 
-  <section>
-    <h2>At-a-glance comparison</h2>
-    <table class="ranking">
-      <thead><tr><th></th><th>{aName}</th><th>{bName}</th></tr></thead>
-      <tbody>
-        <tr><th>Best for</th><td>{aUse}</td><td>{bUse}</td></tr>
-        <tr><th>Category</th><td>{aCat}</td><td>{bCat}</td></tr>
-        <tr><th>Free tier</th><td>Yes</td><td>Yes</td></tr>
-        <tr><th>Ease of use</th><td>{aFirstPro}</td><td>{bFirstPro}</td></tr>
-      </tbody>
-    </table>
-  </section>
+    <div class="compare-grid">
+      <a class="compare-card" href={"/tool/" + m.a + "/"}>
+        <div class="compare-icon"><i class={`fas ${a.icon || "fa-robot"}`}></i></div>
+        <span class="compare-tag">{categoryLabels[aCat] || aCat}</span>
+        <h2>{aName}</h2>
+        <p>{aUse}</p>
+        <span class="tool-tag">View full review →</span>
+      </a>
+      <div class="compare-vs">VS</div>
+      <a class="compare-card" href={"/tool/" + m.b + "/"}>
+        <div class="compare-icon"><i class={`fas ${b.icon || "fa-robot"}`}></i></div>
+        <span class="compare-tag">{categoryLabels[bCat] || bCat}</span>
+        <h2>{bName}</h2>
+        <p>{bUse}</p>
+        <span class="tool-tag">View full review →</span>
+      </a>
+    </div>
 
-  <section>
-    <h2>{aName}: what we liked</h2>
-    <ul class="pro-list">{aPros.map(function(p){return (<li>{p}</li>)})}</ul>
-  </section>
-  <section>
-    <h2>{aName}: what we did not like</h2>
-    <ul class="con-list">{aCons.map(function(c){return (<li>{c}</li>)})}</ul>
-  </section>
-  <section>
-    <h2>{bName}: what we liked</h2>
-    <ul class="pro-list">{bPros.map(function(p){return (<li>{p}</li>)})}</ul>
-  </section>
-  <section>
-    <h2>{bName}: what we did not like</h2>
-    <ul class="con-list">{bCons.map(function(c){return (<li>{c}</li>)})}</ul>
-  </section>
+    <section>
+      <h2>At-a-glance comparison</h2>
+      <table class="ranking">
+        <thead><tr><th></th><th>{aName}</th><th>{bName}</th></tr></thead>
+        <tbody>
+          <tr><th>Best for</th><td>{aUse}</td><td>{bUse}</td></tr>
+          <tr><th>Category</th><td>{categoryLabels[aCat] || aCat}</td><td>{categoryLabels[bCat] || bCat}</td></tr>
+          <tr><th>Free tier</th><td>Yes</td><td>Yes</td></tr>
+          <tr><th>Ease of use</th><td>{aFirstPro}</td><td>{bFirstPro}</td></tr>
+        </tbody>
+      </table>
+    </section>
 
-  <section>
-    <h2>Verdict</h2>
-    <p><strong>Pick {aName}</strong> if you need {aUse.toLowerCase()}.</p>
-    <p><strong>Pick {bName}</strong> if you need {bUse.toLowerCase()}.</p>
-  </section>
+    <div class="compare-pros-cons">
+      <section>
+        <h2>{aName}: what we liked</h2>
+        <ul class="pro-list">{aPros.map(function(p){return (<li>{p}</li>)})}</ul>
+      </section>
+      <section>
+        <h2>{aName}: what we did not like</h2>
+        <ul class="con-list">{aCons.map(function(c){return (<li>{c}</li>)})}</ul>
+      </section>
+      <section>
+        <h2>{bName}: what we liked</h2>
+        <ul class="pro-list">{bPros.map(function(p){return (<li>{p}</li>)})}</ul>
+      </section>
+      <section>
+        <h2>{bName}: what we did not like</h2>
+        <ul class="con-list">{bCons.map(function(c){return (<li>{c}</li>)})}</ul>
+      </section>
+    </div>
 
-  <section class="related">
-    <h2>Related</h2>
-    <ul>
-      <li><a href={"/tool/" + m.a + "/"}>Full {aName} review</a></li>
-      <li><a href={"/tool/" + m.b + "/"}>Full {bName} review</a></li>
-    </ul>
-  </section>
-</article>
+    <section class="verdict-box">
+      <h2 data-i18n="verdict">Verdict</h2>
+      <p><strong>Pick {aName}</strong> if you need {aUse.toLowerCase()}.</p>
+      <p><strong>Pick {bName}</strong> if you need {bUse.toLowerCase()}.</p>
+    </section>
+
+    <section class="related">
+      <h2 data-i18n="related">Related</h2>
+      <div class="related-grid">
+        <a class="related-card" href={"/tool/" + m.a + "/"}>
+          <div class="related-icon"><i class={`fas ${a.icon || "fa-robot"}`}></i></div>
+          <div>
+            <h3>{aName}</h3>
+            <p>Full review of {aName}</p>
+          </div>
+        </a>
+        <a class="related-card" href={"/tool/" + m.b + "/"}>
+          <div class="related-icon"><i class={`fas ${b.icon || "fa-robot"}`}></i></div>
+          <div>
+            <h3>{bName}</h3>
+            <p>Full review of {bName}</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </article>
 </BaseLayout>

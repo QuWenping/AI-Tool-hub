@@ -1,127 +1,165 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import toolsData from "../../data/tools.json";
+import categories from "../../data/categories.json";
 export async function getStaticPaths() {
   return Object.entries(toolsData)
     .filter(([id]) => id !== "codewords")
     .map(([id, tool]) => ({ params: { slug: id }, props: { id, tool } }));
 }
 const { id, tool } = Astro.props;
-const tName = (tool?.name?.en) || "Tool";
-const tShort = (tool?.short_desc?.en) || "";
-const tLong = (tool?.long_desc?.en) || "";
-const tPros = tool?.pros?.en || [];
-const tCons = tool?.cons?.en || [];
-const tUse = tool?.use_cases?.en || [];
-const tFeatures = tool?.features?.en || [];
-const tScenes = tool?.scenes?.en || [];
-const tAudience = tool?.target_audience?.en || [];
+const tNameEn = tool?.name?.en || "Tool";
+const tNameZh = tool?.name?.zh || tNameEn;
+const tShortEn = tool?.short_desc?.en || "";
+const tShortZh = tool?.short_desc?.zh || tShortEn;
+const tLongEn = tool?.long_desc?.en || "";
+const tLongZh = tool?.long_desc?.zh || tLongEn;
+const tProsEn = tool?.pros?.en || [];
+const tProsZh = tool?.pros?.zh || [];
+const tConsEn = tool?.cons?.en || [];
+const tConsZh = tool?.cons?.zh || [];
+const tUseEn = tool?.use_cases?.en || [];
+const tUseZh = tool?.use_cases?.zh || [];
+const tFeaturesEn = tool?.features?.en || [];
+const tFeaturesZh = tool?.features?.zh || [];
+const tScenesEn = tool?.scenes?.en || [];
+const tScenesZh = tool?.scenes?.zh || [];
+const tAudienceEn = tool?.target_audience?.en || [];
+const tAudienceZh = tool?.target_audience?.zh || [];
+const tExampleEn = tool?.example?.en || "";
+const tExampleZh = tool?.example?.zh || "";
 const tCat = tool?.cat || "ai";
 const tUrl = tool?.url || "#";
 const tIcon = tool?.icon || "fa-robot";
-const tExample = tool?.example?.en || "";
+const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
+const categoryLabelsZh = { text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商业" };
+const catLabelEn = categoryLabels[tCat] || tCat;
+const catLabelZh = categoryLabelsZh[tCat] || tCat;
+const relatedCategories = categories.filter(c => c.tools.includes(id)).slice(0, 4);
 const allTools = Object.entries(toolsData).filter(([k]) => k !== "codewords");
 const alternatives = allTools.filter(([k, t]) => k !== id && t.cat === tCat).slice(0, 6);
-const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
-const catLabel = categoryLabels[tCat] || tCat;
 ---
 <BaseLayout
-  title={tName + " Review (2026) | AI Tool Hub"}
-  description={tShort}
-  keywords={tName + ", " + tName + " review, " + tName + " pricing, " + tCat + " AI tools"}
+  title={tNameEn + " Review (2026) | AI Tool Hub"}
+  description={tShortEn}
+  keywords={tNameEn + ", " + tNameEn + " review, " + tNameEn + " pricing, " + tCat + " AI tools"}
 >
   <article class="tool-detail-container">
     <nav class="breadcrumbs">
-      <a href="/">Home</a> &rsaquo; <a href={"/best/" + tCat + "/"}>Best {catLabel} AI tools</a> &rsaquo; <span>{tName}</span>
+      <a href="/">Home</a> &rsaquo; <a href={"/best/" + tCat + "/"}><span data-i18n-en="Best " + catLabelEn data-i18n-zh="最佳 " + catLabelZh + " AI 工具">Best {catLabelEn} AI tools</span></a> &rsaquo; <span data-i18n-en={tNameEn} data-i18n-zh={tNameZh}>{tNameEn}</span>
     </nav>
 
     <header class="detail-header">
       <div class="detail-icon"><i class={`fas ${tIcon}`}></i></div>
       <div class="detail-title-group">
-        <h1>{tName}</h1>
-        <span class="detail-tag">{catLabel}</span>
+        <h1 data-i18n-en={tNameEn} data-i18n-zh={tNameZh}>{tNameEn}</h1>
+        <span class="detail-tag" data-i18n-en={catLabelEn} data-i18n-zh={catLabelZh}>{catLabelEn}</span>
       </div>
       <div class="detail-actions">
-        <a class="detail-use-btn" href={tUrl} rel="nofollow noopener" target="_blank">Use Now</a>
-        <a class="detail-card-btn" href={"/alternatives/" + id + "/"}>Alternatives</a>
+        <a class="detail-use-btn" href={tUrl} rel="nofollow noopener" target="_blank">
+          <i class="fas fa-external-link-alt"></i>
+          <span data-i18n-en="Use Now" data-i18n-zh="立即使用">Use Now</span>
+        </a>
+        <a class="detail-card-btn" href={"/alternatives/" + id + "/"} data-i18n-en="Alternatives" data-i18n-zh="替代品">Alternatives</a>
       </div>
     </header>
 
-    <p class="lede">{tShort}</p>
+    <p class="lede" data-i18n-en={tShortEn} data-i18n-zh={tShortZh}>{tShortEn}</p>
 
-    <section>
-      <h2>What is {tName}?</h2>
-      <p>{tLong}</p>
+    <section class="detail-section">
+      <h2><i class="fas fa-info-circle"></i> <span data-i18n-en="What is " + tNameEn + "?" data-i18n-zh={tNameZh + " 是什么?"}>What is {tNameEn}?</span></h2>
+      <p data-i18n-en={tLongEn} data-i18n-zh={tLongZh}>{tLongEn}</p>
     </section>
 
-    {tExample && (
-      <section>
-        <h2>Example</h2>
-        <div class="example-box">{tExample}</div>
+    {tExampleEn && (
+      <section class="detail-section">
+        <h2><i class="fas fa-terminal"></i> <span data-i18n-en="Example" data-i18n-zh="示例">Example</span></h2>
+        <div class="example-box" data-i18n-en={tExampleEn} data-i18n-zh={tExampleZh}>{tExampleEn}</div>
       </section>
     )}
 
-    <section>
-      <h2>Pros</h2>
-      <ul class="pro-list">{tPros.map(p => <li>{p}</li>)}</ul>
-    </section>
+    <div class="detail-grid-2">
+      <section class="detail-section">
+        <h2><i class="fas fa-thumbs-up" style="color:#10b981;"></i> <span data-i18n-en="Pros" data-i18n-zh="优点">Pros</span></h2>
+        <ul class="pro-list" data-i18n-en-rich={JSON.stringify(tProsEn)} data-i18n-zh-rich={JSON.stringify(tProsZh)}>
+          {tProsEn.map(p => <li>{p}</li>)}
+        </ul>
+      </section>
+      <section class="detail-section">
+        <h2><i class="fas fa-thumbs-down" style="color:#ef4444;"></i> <span data-i18n-en="Cons" data-i18n-zh="缺点">Cons</span></h2>
+        <ul class="con-list" data-i18n-en-rich={JSON.stringify(tConsEn)} data-i18n-zh-rich={JSON.stringify(tConsZh)}>
+          {tConsEn.map(c => <li>{c}</li>)}
+        </ul>
+      </section>
+    </div>
 
-    <section>
-      <h2>Cons</h2>
-      <ul class="con-list">{tCons.map(c => <li>{c}</li>)}</ul>
-    </section>
-
-    {tFeatures.length > 0 && (
-      <section>
-        <h2>Key Features</h2>
-        <ul class="feature-list">{tFeatures.map(f => <li><i class="fas fa-check"></i> {f}</li>)}</ul>
+    {tFeaturesEn.length > 0 && (
+      <section class="detail-section">
+        <h2><i class="fas fa-star"></i> <span data-i18n-en="Key Features" data-i18n-zh="功能亮点">Key Features</span></h2>
+        <ul class="feature-list" data-i18n-en-rich={JSON.stringify(tFeaturesEn)} data-i18n-zh-rich={JSON.stringify(tFeaturesZh)}>
+          {tFeaturesEn.map(f => <li><i class="fas fa-check"></i> {f}</li>)}
+        </ul>
       </section>
     )}
 
-    {tUse.length > 0 && (
-      <section>
-        <h2>Use cases that actually work</h2>
-        <ul class="use-case-list">{tUse.map(u => <li><i class="fas fa-check-circle"></i> {u}</li>)}</ul>
+    {tUseEn.length > 0 && (
+      <section class="detail-section">
+        <h2><i class="fas fa-rocket"></i> <span data-i18n-en="Use cases that actually work" data-i18n-zh="真实有效的使用案例">Use cases that actually work</span></h2>
+        <ul class="use-case-list" data-i18n-en-rich={JSON.stringify(tUseEn)} data-i18n-zh-rich={JSON.stringify(tUseZh)}>
+          {tUseEn.map(u => <li><i class="fas fa-check-circle"></i> {u}</li>)}
+        </ul>
       </section>
     )}
 
-    {tScenes.length > 0 && (
-      <section>
-        <h2>Best for</h2>
-        <ul class="scenes-list">{tScenes.map(s => <li><i class="fas fa-check"></i> {s}</li>)}</ul>
+    {tScenesEn.length > 0 && (
+      <section class="detail-section">
+        <h2><i class="fas fa-bullseye"></i> <span data-i18n-en="Best for" data-i18n-zh="适用场景">Best for</span></h2>
+        <ul class="scenes-list" data-i18n-en-rich={JSON.stringify(tScenesEn)} data-i18n-zh-rich={JSON.stringify(tScenesZh)}>
+          {tScenesEn.map(s => <li><i class="fas fa-check"></i> {s}</li>)}
+        </ul>
       </section>
     )}
 
-    {tAudience.length > 0 && (
-      <section>
-        <h2>Target Audience</h2>
-        <div class="audience-tags">{tAudience.map(a => <span class="audience-tag">{a}</span>)}</div>
+    {tAudienceEn.length > 0 && (
+      <section class="detail-section">
+        <h2><i class="fas fa-users"></i> <span data-i18n-en="Target Audience" data-i18n-zh="适用人群">Target Audience</span></h2>
+        <div class="audience-tags" data-i18n-en-rich={JSON.stringify(tAudienceEn)} data-i18n-zh-rich={JSON.stringify(tAudienceZh)}>
+          {tAudienceEn.map(a => <span class="audience-tag">{a}</span>)}
+        </div>
       </section>
     )}
 
     {alternatives.length > 0 && (
-      <section>
-        <h2>Alternatives to {tName}</h2>
+      <section class="detail-section">
+        <h2><i class="fas fa-exchange-alt"></i> <span data-i18n-en={"Alternatives to " + tNameEn} data-i18n-zh={tNameZh + " 的替代品"}>Alternatives to {tNameEn}</span></h2>
         <div class="tool-grid">
           {alternatives.map(([k, t]) => (
             <a class="tool-card" href={"/tool/" + k + "/"}>
               <div class="tool-icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
-              <h3>{t.name.en}</h3>
-              <p>{t.short_desc.en}</p>
-              <span class="tool-tag">{categoryLabels[t.cat] || t.cat}</span>
+              <h3 data-i18n-en={t.name.en} data-i18n-zh={t.name.zh || t.name.en}>{t.name.en}</h3>
+              <p data-i18n-en={t.short_desc.en} data-i18n-zh={t.short_desc.zh || t.short_desc.en}>{t.short_desc.en}</p>
+              <span class="tool-tag" data-i18n-en={categoryLabels[t.cat] || t.cat} data-i18n-zh={categoryLabelsZh[t.cat] || t.cat}>{categoryLabels[t.cat] || t.cat}</span>
             </a>
           ))}
         </div>
       </section>
     )}
 
-    <section class="related">
-      <h2>Popular comparisons</h2>
-      <ul>
-        <li><a href="/vs/chatgpt-vs-claude/">ChatGPT vs Claude</a></li>
-        <li><a href="/vs/cursor-vs-github-copilot/">Cursor vs GitHub Copilot</a></li>
-        <li><a href="/vs/midjourney-vs-stable-diffusion/">Midjourney vs Stable Diffusion</a></li>
-      </ul>
-    </section>
+    {relatedCategories.length > 0 && (
+      <section class="related">
+        <h2 data-i18n-en="Related categories" data-i18n-zh="相关分类">Related categories</h2>
+        <div class="related-grid">
+          {relatedCategories.map(c => (
+            <a class="related-card" href={"/best/" + c.slug + "/"}>
+              <div class="related-icon"><i class="fas fa-folder-open"></i></div>
+              <div>
+                <h3>{c.title_en}</h3>
+                <p>{c.desc_en}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
   </article>
 </BaseLayout>
