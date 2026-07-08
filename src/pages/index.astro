@@ -3,7 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import categoriesData from "../data/categories.json";
 import toolsData from "../data/tools.json";
 import matchupsData from "../data/matchups.json";
-const tools = Object.entries(toolsData).filter(([id]) => id !== "codewords").map(([id, data]) => ({ id, data }));
+const tools = Object.entries(toolsData).map(([id, data]) => ({ id, data }));
 const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
 const categoryLabelsZh = { text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商业" };
 const catHero = [
@@ -143,3 +143,4 @@ const featuredMatchups = matchupsData.slice(0, 3);
   </section>
 
 </BaseLayout>
+

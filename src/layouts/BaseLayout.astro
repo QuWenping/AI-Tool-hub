@@ -7,14 +7,7 @@ const kw = keywords || "AI tools, best AI tools, AI writing, AI coding, AI image
 const url = canonical || siteUrl + Astro.url.pathname;
 // Embed the dataset only on the homepage so main.js can render cards client-side
 const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "/index.html";
-let toolsJson = "[]";
-let categoriesJson = "[]";
-if (isHome) {
-  const toolsMod = await import("../data/tools.json");
-  const catsMod = await import("../data/categories.json");
-  toolsJson = JSON.stringify(toolsMod.default || toolsMod);
-  categoriesJson = JSON.stringify(catsMod.default || catsMod);
-}
+
 ---
 <!DOCTYPE html>
 <html lang={lang === "zh" ? "zh-CN" : "en-US"}>
@@ -38,8 +31,7 @@ if (isHome) {
   <link rel="alternate" hreflang="zh" href={siteUrl + Astro.url.pathname}>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AI Tool Hub","url":"https://ai-tool-hub-self.vercel.app"}</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3930397953691472" crossorigin="anonymous"></script>
-  {isHome && <script type="application/json" id="tools-data" set:html={toolsJson}></script>}
-  {isHome && <script type="application/json" id="categories-data" set:html={categoriesJson}></script>}
+
 </head>
 <body>
   <header>
@@ -79,4 +71,5 @@ if (isHome) {
   <script src="/js/main.js" defer></script>
 </body>
 </html>
+
 

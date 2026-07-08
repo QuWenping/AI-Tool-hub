@@ -1,207 +1,4 @@
 {
-  "codewords": {
-    "name": {
-      "zh": "CodeWords",
-      "en": "CodeWords"
-    },
-    "cat": "code",
-    "url": "https://codewords.agemo.ai/r/CMOMWBZK?utm_source=copy_link&utm_medium=referral&utm_campaign=user_invite&utm_content=CMOMWBZK&ref=cmomwbzkh0000c6dtjz0fcu8e",
-    "icon": "fa-terminal",
-    "featured": true,
-    "short_desc": {
-      "zh": "AI 编程协作与智能代码生成平台",
-      "en": "AI-powered collaborative coding and code generation platform"
-    },
-    "long_desc": {
-      "zh": "CodeWords 是一个基于 AI 的编程协作平台，支持智能代码补全、自然语言生成代码、代码审查与优化。它深度融合了大型语言模型，能够理解项目上下文并提供精准的编程建议，显著提升开发效率。",
-      "en": "CodeWords is an AI-powered collaborative coding platform featuring intelligent code completion, natural language to code generation, and code review & optimization. It deeply integrates large language models to understand project context and provide precise programming suggestions."
-    },
-    "scenes": {
-      "zh": [
-        "快速生成样板代码",
-        "代码重构与优化",
-        "自然语言转代码",
-        "团队协作编程"
-      ],
-      "en": [
-        "Rapid boilerplate generation",
-        "Code refactoring & optimization",
-        "Natural language to code",
-        "Team collaborative coding"
-      ]
-    },
-    "pros": {
-      "zh": [
-        "上下文感知的智能补全",
-        "支持多种编程语言",
-        "邀请好友获得额外额度"
-      ],
-      "en": [
-        "Context-aware intelligent completion",
-        "Supports multiple programming languages",
-        "Earn extra credits by inviting friends"
-      ]
-    },
-    "cons": {
-      "zh": [
-        "新平台生态尚在建设中",
-        "部分高级功能需订阅",
-        "复杂项目理解有限"
-      ],
-      "en": [
-        "New platform with building ecosystem",
-        "Some advanced features require subscription",
-        "Limited understanding of complex projects"
-      ]
-    },
-    "example": {
-      "zh": "示例：'请帮我写一个 Python 函数，使用 asyncio 并发下载多个图片，并添加错误重试机制。'",
-      "en": "Example: 'Write a Python function using asyncio to concurrently download multiple images with error retry logic.'"
-    },
-    "target_audience": {
-      "zh": [
-        "开发者",
-        "编程初学者",
-        "技术团队",
-        "全栈工程师"
-      ],
-      "en": [
-        "Developers",
-        "Programming beginners",
-        "Tech teams",
-        "Full-stack engineers"
-      ]
-    },
-    "features": {
-      "zh": [
-        "AI 代码补全",
-        "自然语言生成代码",
-        "代码审查建议",
-        "多语言支持"
-      ],
-      "en": [
-        "AI code completion",
-        "Natural language code generation",
-        "Code review suggestions",
-        "Multi-language support"
-      ]
-    },
-    "use_cases": {
-      "zh": [
-        "用一句话生成完整函数实现",
-        "自动审查代码潜在 Bug",
-        "将旧代码重构为现代语法",
-        "快速理解陌生代码库"
-      ],
-      "en": [
-        "Generate full function from a sentence",
-        "Auto-detect potential bugs in code",
-        "Refactor legacy code to modern syntax",
-        "Quickly understand unfamiliar codebases"
-      ]
-    }
-  },
-  "chatgpt": {
-    "name": {
-      "zh": "ChatGPT",
-      "en": "ChatGPT"
-    },
-    "cat": "text",
-    "url": "https://chatgpt.com",
-    "icon": "fa-comment-dots",
-    "short_desc": {
-      "zh": "由 OpenAI 开发的通用 AI 助手",
-      "en": "General AI assistant by OpenAI"
-    },
-    "long_desc": {
-      "zh": "ChatGPT 是一个基于大语言模型 (LLM) 的对话式 AI。它不仅能进行自然流畅的对话，还能处理复杂的逻辑推理、编写代码以及创作各类文学作品。通过不断的 RLHF (人类反馈强化学习)，它在理解人类意图方面达到了行业领先水平。",
-      "en": "ChatGPT is a conversational AI based on Large Language Models (LLM). It can not only engage in natural conversations but also handle complex logical reasoning, write code, and create various literary works. Through continuous RLHF, it has reached industry-leading levels in understanding human intent."
-    },
-    "scenes": {
-      "zh": [
-        "快速草拟邮件/报告",
-        "编程 Bug 调试",
-        "语言翻译与润色",
-        "头脑风暴创意"
-      ],
-      "en": [
-        "Drafting emails/reports",
-        "Coding bug debugging",
-        "Language translation",
-        "Creative brainstorming"
-      ]
-    },
-    "pros": {
-      "zh": [
-        "几乎所有任务都能胜任",
-        "支持文本、图像和语音输入",
-        "插件和集成生态庞大"
-      ],
-      "en": [
-        "Extremely versatile for almost any task",
-        "Supports text, image, and voice input",
-        "Huge ecosystem of plugins and integrations"
-      ]
-    },
-    "cons": {
-      "zh": [
-        "小众话题偶尔出现幻觉",
-        "大部分功能需要联网",
-        "回答有时会过于冗长"
-      ],
-      "en": [
-        "Occasional hallucinations on niche topics",
-        "Requires internet for most features",
-        "Can be verbose in responses"
-      ]
-    },
-    "example": {
-      "zh": "示例：'请帮我将这段复杂的 Python 代码重构为更具可读性的版本，并解释每一步的选择。'",
-      "en": "Example: 'Please help me refactor this complex Python code into a more readable version and explain the choices for each step.'"
-    },
-    "target_audience": {
-      "zh": [
-        "营销人员",
-        "学生",
-        "开发者",
-        "写作者"
-      ],
-      "en": [
-        "Marketers",
-        "Students",
-        "Developers",
-        "Writers"
-      ]
-    },
-    "features": {
-      "zh": [
-        "自然语言对话",
-        "多模态输入",
-        "代码生成",
-        "联网搜索"
-      ],
-      "en": [
-        "Natural language conversation",
-        "Multi-modal input",
-        "Code generation",
-        "Web browsing"
-      ]
-    },
-    "use_cases": {
-      "zh": [
-        "30秒内写一封营销邮件",
-        "调试 Python 脚本并给出解释",
-        "翻译文档并保持语气一致",
-        "头脑风暴 10 个博客选题"
-      ],
-      "en": [
-        "Write a marketing email in 30 seconds",
-        "Debug a Python script with explanations",
-        "Translate a document while preserving tone",
-        "Brainstorm 10 blog post ideas"
-      ]
-    }
-  },
   "claude": {
     "name": {
       "zh": "Claude",
@@ -300,6 +97,411 @@
         "Summarize a full book into key takeaways",
         "Write a technical whitepaper from scratch",
         "Compare two long research papers side by side"
+      ]
+    }
+  },
+  "github-copilot": {
+    "name": {
+      "zh": "GitHub Copilot",
+      "en": "GitHub Copilot"
+    },
+    "cat": "code",
+    "url": "https://github.com/features/copilot",
+    "icon": "fa-code",
+    "short_desc": {
+      "zh": "AI 结对编程助手，无缝嵌入 IDE",
+      "en": "AI pair programmer embedded in your IDE"
+    },
+    "long_desc": {
+      "zh": "GitHub Copilot 由 GitHub 与 OpenAI 联合开发，深度集成于 VS Code、JetBrains 等主流 IDE。它能在你编写代码时实时提供整行或整段的智能补全建议，大幅提升开发效率，支持数十种编程语言。",
+      "en": "Developed by GitHub and OpenAI, Copilot is deeply integrated into VS Code, JetBrains, and other major IDEs. It provides real-time whole-line or whole-function suggestions as you code, dramatically improving productivity across dozens of languages."
+    },
+    "scenes": {
+      "zh": [
+        "重复样板代码快速生成",
+        "单元测试自动编写",
+        "不熟悉的 API 调用示例",
+        "代码注释自动生成"
+      ],
+      "en": [
+        "Boilerplate code generation",
+        "Unit test auto-writing",
+        "Unfamiliar API usage examples",
+        "Auto-generating code comments"
+      ]
+    },
+    "pros": {
+      "zh": [
+        "与 IDE 深度集成",
+        "支持 30 多种编程语言",
+        "极大加速重复性编码任务"
+      ],
+      "en": [
+        "Deep IDE integration",
+        "Supports 30+ programming languages",
+        "Speeds up repetitive coding tasks dramatically"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "按月订阅费用",
+        "可能建议不安全的代码模式",
+        "偶尔给出不相关的建议"
+      ],
+      "en": [
+        "Monthly subscription cost",
+        "Can suggest insecure code patterns",
+        "Occasionally produces irrelevant suggestions"
+      ]
+    },
+    "example": {
+      "zh": "示例：输入注释 '// 写一个递归函数计算斐波那契数列'，Copilot 会自动生成完整函数实现。",
+      "en": "Example: Type the comment '// Write a recursive function to calculate Fibonacci' and Copilot auto-generates the full implementation."
+    },
+    "target_audience": {
+      "zh": [
+        "软件开发人员",
+        "数据科学家",
+        "DevOps 工程师",
+        "学生"
+      ],
+      "en": [
+        "Software developers",
+        "Data scientists",
+        "DevOps engineers",
+        "Students"
+      ]
+    },
+    "features": {
+      "zh": [
+        "实时代码建议",
+        "整函数生成",
+        "IDE 内聊天界面",
+        "多语言支持"
+      ],
+      "en": [
+        "Real-time code suggestions",
+        "Whole-function generation",
+        "Chat interface in IDE",
+        "Multi-language support"
+      ]
+    },
+    "use_cases": {
+      "zh": [
+        "自动补全 REST API 端点",
+        "为现有函数生成单元测试",
+        "用通俗英语解释遗留代码",
+        "将 Python 代码转为 JavaScript"
+      ],
+      "en": [
+        "Auto-complete a REST API endpoint",
+        "Generate unit tests for existing functions",
+        "Explain legacy code in plain English",
+        "Convert Python code to JavaScript"
+      ]
+    }
+  },
+  "notion-ai": {
+    "name": {
+      "zh": "Notion AI",
+      "en": "Notion AI"
+    },
+    "cat": "productivity",
+    "url": "https://notion.so/product/ai",
+    "icon": "fa-sticky-note",
+    "short_desc": {
+      "zh": "嵌入工作流的智能写作与知识管理助手",
+      "en": "Smart writing and knowledge management inside your workflow"
+    },
+    "long_desc": {
+      "zh": "Notion AI 直接集成在知识管理工具 Notion 中，能够帮你续写笔记、总结会议记录、提取行动项、翻译文档，甚至基于数据库自动生成报告。它将 AI 能力无缝嵌入到日常协作与知识沉淀的每一个环节。",
+      "en": "Notion AI is built directly into Notion, helping you continue writing notes, summarize meetings, extract action items, translate documents, and even auto-generate reports from databases. It seamlessly embeds AI into every step of daily collaboration and knowledge building."
+    },
+    "scenes": {
+      "zh": [
+        "会议记录自动提炼待办",
+        "零散笔记整理成结构化文章",
+        "多语言文档即时翻译",
+        "数据库内容批量分析总结"
+      ],
+      "en": [
+        "Auto-extract to-dos from meeting notes",
+        "Turn scattered notes into structured articles",
+        "Instant multilingual document translation",
+        "Batch analysis and summarization of database content"
+      ]
+    },
+    "pros": {
+      "zh": [
+        "与笔记工作流深度融合",
+        "无需切换应用",
+        "团队协作极其便利"
+      ],
+      "en": [
+        "Deeply integrated with note-taking workflow",
+        "No app switching required",
+        "Excellent for team collaboration"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "AI 功能需额外付费",
+        "超长文档生成速度较慢",
+        "锁定在 Notion 生态内"
+      ],
+      "en": [
+        "AI features require extra payment",
+        "Slower generation for very long documents",
+        "Locked into the Notion ecosystem"
+      ]
+    },
+    "example": {
+      "zh": "示例：选中一段凌乱的会议速记，输入 '整理成条理清晰的会议纪要，并提取所有 Action Items'。",
+      "en": "Example: Select messy meeting notes and type 'Organize into a clear summary and extract all Action Items'."
+    },
+    "target_audience": {
+      "zh": [
+        "项目经理",
+        "团队",
+        "写作者",
+        "知识工作者"
+      ],
+      "en": [
+        "Project managers",
+        "Teams",
+        "Writers",
+        "Knowledge workers"
+      ]
+    },
+    "features": {
+      "zh": [
+        "行内 AI 写作助手",
+        "会议记录自动总结",
+        "数据库自动填充",
+        "多语言翻译"
+      ],
+      "en": [
+        "Inline AI writing assistant",
+        "Meeting notes summarization",
+        "Database auto-fill",
+        "Multi-language translation"
+      ]
+    },
+    "use_cases": {
+      "zh": [
+        "将凌乱的会议记录转为行动项",
+        "根据 bullet list 撰写项目提案",
+        "即时将文档翻译成日语",
+        "从任务数据库生成周报"
+      ],
+      "en": [
+        "Turn messy meeting notes into action items",
+        "Write a project proposal from a bullet list",
+        "Translate a document into Japanese instantly",
+        "Generate a weekly report from a task database"
+      ]
+    }
+  },
+  "sora": {
+    "name": {
+      "zh": "Sora",
+      "en": "Sora"
+    },
+    "cat": "video",
+    "url": "https://openai.com/sora",
+    "icon": "fa-video",
+    "short_desc": {
+      "zh": "OpenAI 推出的文本生成视频模型",
+      "en": "OpenAI's text-to-video generation model"
+    },
+    "long_desc": {
+      "zh": "Sora 是 OpenAI 发布的革命性视频生成模型，能够根据文本描述直接生成长达 60 秒的高质量视频。它在物理世界模拟、镜头运动和角色一致性方面展现了惊人的能力，被誉为视频领域的 'ChatGPT 时刻'。",
+      "en": "Sora is OpenAI's revolutionary video generation model that creates up to 60 seconds of high-quality video from text prompts. Its ability to simulate physics, camera motion, and character consistency is groundbreaking, hailed as the 'ChatGPT moment' for video."
+    },
+    "scenes": {
+      "zh": [
+        "广告创意视频预演",
+        "电影分镜快速原型",
+        "社交媒体短视频生成",
+        "产品演示动态展示"
+      ],
+      "en": [
+        "Ad creative pre-visualization",
+        "Movie storyboard prototyping",
+        "Social media short video generation",
+        "Product demo motion showcase"
+      ]
+    },
+    "pros": {
+      "zh": [
+        "视频时长和一致性前所未有",
+        "对物理规律理解逼真",
+        "画面电影感强"
+      ],
+      "en": [
+        "Unprecedented video length and consistency",
+        "Realistic physics understanding",
+        "Cinematic output quality"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "尚未全面开放",
+        "生成速度较慢",
+        "复杂物理交互可能出错"
+      ],
+      "en": [
+        "Not widely available yet",
+        "Slow generation speed",
+        "Complex physics interactions can glitch"
+      ]
+    },
+    "example": {
+      "zh": "示例：'一位时尚的女士走在东京的霓虹灯街道上，地面潮湿反光，画面充满电影感，35mm 胶片风格'",
+      "en": "Example: 'A stylish woman walks down a neon-lit Tokyo street, wet reflective pavement, cinematic, 35mm film style'"
+    },
+    "target_audience": {
+      "zh": [
+        "电影制作人",
+        "广告创意人员",
+        "社交媒体运营",
+        "游戏开发者"
+      ],
+      "en": [
+        "Filmmakers",
+        "Advertisers",
+        "Social media managers",
+        "Game developers"
+      ]
+    },
+    "features": {
+      "zh": [
+        "文本生成视频最长 60 秒",
+        "物理世界模拟",
+        "镜头运动控制",
+        "角色一致性"
+      ],
+      "en": [
+        "Text-to-video up to 60s",
+        "Physics simulation",
+        "Camera motion control",
+        "Character consistency"
+      ]
+    },
+    "use_cases": {
+      "zh": [
+        "根据剧本创作电影预告片",
+        "生成带产品植入的社交媒体广告",
+        "拍摄前快速原型化电影场景",
+        "构建沉浸式游戏过场动画"
+      ],
+      "en": [
+        "Create a movie trailer from a script",
+        "Generate social media ads with product placement",
+        "Prototype a cinematic scene before filming",
+        "Build immersive game cutscenes"
+      ]
+    }
+  },
+  "elevenlabs": {
+    "name": {
+      "zh": "ElevenLabs",
+      "en": "ElevenLabs"
+    },
+    "cat": "audio",
+    "url": "https://try.elevenlabs.io/j50wgji2obha",
+    "icon": "fa-microphone-alt",
+    "featured": true,
+    "short_desc": {
+      "zh": "业界最逼真的 AI 语音合成与克隆",
+      "en": "The most realistic AI voice synthesis and cloning"
+    },
+    "long_desc": {
+      "zh": "ElevenLabs 提供近乎以假乱真的文本转语音 (TTS) 服务。它支持 29 种语言，能够克隆任意人的声音仅需几秒样本，并提供精细的情感、语调和停顿控制，是播客、有声书和游戏配音的首选。",
+      "en": "ElevenLabs offers near-indistinguishable text-to-speech (TTS). It supports 29 languages, clones any voice with just seconds of sample audio, and provides fine control over emotion, intonation, and pauses — the top choice for podcasts, audiobooks, and game dubbing."
+    },
+    "scenes": {
+      "zh": [
+        "有声书批量制作",
+        "视频多语言自动配音",
+        "游戏角色语音生成",
+        "虚拟主播实时语音"
+      ],
+      "en": [
+        "Audiobook batch production",
+        "Video multilingual auto-dubbing",
+        "Game character voice generation",
+        "VTuber real-time voice"
+      ]
+    },
+    "pros": {
+      "zh": [
+        "市场上最逼真的 TTS",
+        "声音克隆效果惊人",
+        "多语言覆盖优秀"
+      ],
+      "en": [
+        "Most realistic TTS on the market",
+        "Voice cloning quality is astonishing",
+        "Excellent multilingual coverage"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "按字符计费较贵",
+        "中文韵律偶尔不够自然",
+        "深度伪造声音存在伦理争议"
+      ],
+      "en": [
+        "Expensive character-based pricing",
+        "Chinese prosody occasionally less natural",
+        "Ethical concerns around deepfake voices"
+      ]
+    },
+    "example": {
+      "zh": "示例：输入一段小说台词，选择 '温柔而略带忧伤' 的风格，生成如真人演播般的语音。",
+      "en": "Example: Input a novel line, choose 'gentle with a touch of melancholy' style, and generate narration indistinguishable from a human actor."
+    },
+    "target_audience": {
+      "zh": [
+        "播客主",
+        "有声书制作人",
+        "游戏开发者",
+        "YouTube 创作者"
+      ],
+      "en": [
+        "Podcasters",
+        "Audiobook producers",
+        "Game developers",
+        "YouTubers"
+      ]
+    },
+    "features": {
+      "zh": [
+        "仅需几秒音频即可克隆声音",
+        "支持 29 种语言",
+        "情感与语调精细控制",
+        "实时流式 API"
+      ],
+      "en": [
+        "Voice cloning from seconds of audio",
+        "29-language support",
+        "Emotion and intonation control",
+        "Real-time streaming API"
+      ]
+    },
+    "use_cases": {
+      "zh": [
+        "克隆自己的声音朗读 10 小时有声书",
+        "用同一声音将视频配音成 5 种语言",
+        "为游戏创建独特角色声音",
+        "用名人风格生成播客片头"
+      ],
+      "en": [
+        "Clone your voice to narrate a 10-hour audiobook",
+        "Dub a video into 5 languages with the same voice",
+        "Create unique character voices for a game",
+        "Generate a podcast intro with a celebrity voice style"
       ]
     }
   },
@@ -505,107 +707,6 @@
       ]
     }
   },
-  "github-copilot": {
-    "name": {
-      "zh": "GitHub Copilot",
-      "en": "GitHub Copilot"
-    },
-    "cat": "code",
-    "url": "https://github.com/features/copilot",
-    "icon": "fa-code",
-    "short_desc": {
-      "zh": "AI 结对编程助手，无缝嵌入 IDE",
-      "en": "AI pair programmer embedded in your IDE"
-    },
-    "long_desc": {
-      "zh": "GitHub Copilot 由 GitHub 与 OpenAI 联合开发，深度集成于 VS Code、JetBrains 等主流 IDE。它能在你编写代码时实时提供整行或整段的智能补全建议，大幅提升开发效率，支持数十种编程语言。",
-      "en": "Developed by GitHub and OpenAI, Copilot is deeply integrated into VS Code, JetBrains, and other major IDEs. It provides real-time whole-line or whole-function suggestions as you code, dramatically improving productivity across dozens of languages."
-    },
-    "scenes": {
-      "zh": [
-        "重复样板代码快速生成",
-        "单元测试自动编写",
-        "不熟悉的 API 调用示例",
-        "代码注释自动生成"
-      ],
-      "en": [
-        "Boilerplate code generation",
-        "Unit test auto-writing",
-        "Unfamiliar API usage examples",
-        "Auto-generating code comments"
-      ]
-    },
-    "pros": {
-      "zh": [
-        "与 IDE 深度集成",
-        "支持 30 多种编程语言",
-        "极大加速重复性编码任务"
-      ],
-      "en": [
-        "Deep IDE integration",
-        "Supports 30+ programming languages",
-        "Speeds up repetitive coding tasks dramatically"
-      ]
-    },
-    "cons": {
-      "zh": [
-        "按月订阅费用",
-        "可能建议不安全的代码模式",
-        "偶尔给出不相关的建议"
-      ],
-      "en": [
-        "Monthly subscription cost",
-        "Can suggest insecure code patterns",
-        "Occasionally produces irrelevant suggestions"
-      ]
-    },
-    "example": {
-      "zh": "示例：输入注释 '// 写一个递归函数计算斐波那契数列'，Copilot 会自动生成完整函数实现。",
-      "en": "Example: Type the comment '// Write a recursive function to calculate Fibonacci' and Copilot auto-generates the full implementation."
-    },
-    "target_audience": {
-      "zh": [
-        "软件开发人员",
-        "数据科学家",
-        "DevOps 工程师",
-        "学生"
-      ],
-      "en": [
-        "Software developers",
-        "Data scientists",
-        "DevOps engineers",
-        "Students"
-      ]
-    },
-    "features": {
-      "zh": [
-        "实时代码建议",
-        "整函数生成",
-        "IDE 内聊天界面",
-        "多语言支持"
-      ],
-      "en": [
-        "Real-time code suggestions",
-        "Whole-function generation",
-        "Chat interface in IDE",
-        "Multi-language support"
-      ]
-    },
-    "use_cases": {
-      "zh": [
-        "自动补全 REST API 端点",
-        "为现有函数生成单元测试",
-        "用通俗英语解释遗留代码",
-        "将 Python 代码转为 JavaScript"
-      ],
-      "en": [
-        "Auto-complete a REST API endpoint",
-        "Generate unit tests for existing functions",
-        "Explain legacy code in plain English",
-        "Convert Python code to JavaScript"
-      ]
-    }
-  },
   "cursor": {
     "name": {
       "zh": "Cursor",
@@ -704,107 +805,6 @@
         "Find all usages of a deprecated API across the project",
         "Fix a bug by describing the symptoms",
         "Generate a README from the project structure"
-      ]
-    }
-  },
-  "sora": {
-    "name": {
-      "zh": "Sora",
-      "en": "Sora"
-    },
-    "cat": "video",
-    "url": "https://openai.com/sora",
-    "icon": "fa-video",
-    "short_desc": {
-      "zh": "OpenAI 推出的文本生成视频模型",
-      "en": "OpenAI's text-to-video generation model"
-    },
-    "long_desc": {
-      "zh": "Sora 是 OpenAI 发布的革命性视频生成模型，能够根据文本描述直接生成长达 60 秒的高质量视频。它在物理世界模拟、镜头运动和角色一致性方面展现了惊人的能力，被誉为视频领域的 'ChatGPT 时刻'。",
-      "en": "Sora is OpenAI's revolutionary video generation model that creates up to 60 seconds of high-quality video from text prompts. Its ability to simulate physics, camera motion, and character consistency is groundbreaking, hailed as the 'ChatGPT moment' for video."
-    },
-    "scenes": {
-      "zh": [
-        "广告创意视频预演",
-        "电影分镜快速原型",
-        "社交媒体短视频生成",
-        "产品演示动态展示"
-      ],
-      "en": [
-        "Ad creative pre-visualization",
-        "Movie storyboard prototyping",
-        "Social media short video generation",
-        "Product demo motion showcase"
-      ]
-    },
-    "pros": {
-      "zh": [
-        "视频时长和一致性前所未有",
-        "对物理规律理解逼真",
-        "画面电影感强"
-      ],
-      "en": [
-        "Unprecedented video length and consistency",
-        "Realistic physics understanding",
-        "Cinematic output quality"
-      ]
-    },
-    "cons": {
-      "zh": [
-        "尚未全面开放",
-        "生成速度较慢",
-        "复杂物理交互可能出错"
-      ],
-      "en": [
-        "Not widely available yet",
-        "Slow generation speed",
-        "Complex physics interactions can glitch"
-      ]
-    },
-    "example": {
-      "zh": "示例：'一位时尚的女士走在东京的霓虹灯街道上，地面潮湿反光，画面充满电影感，35mm 胶片风格'",
-      "en": "Example: 'A stylish woman walks down a neon-lit Tokyo street, wet reflective pavement, cinematic, 35mm film style'"
-    },
-    "target_audience": {
-      "zh": [
-        "电影制作人",
-        "广告创意人员",
-        "社交媒体运营",
-        "游戏开发者"
-      ],
-      "en": [
-        "Filmmakers",
-        "Advertisers",
-        "Social media managers",
-        "Game developers"
-      ]
-    },
-    "features": {
-      "zh": [
-        "文本生成视频最长 60 秒",
-        "物理世界模拟",
-        "镜头运动控制",
-        "角色一致性"
-      ],
-      "en": [
-        "Text-to-video up to 60s",
-        "Physics simulation",
-        "Camera motion control",
-        "Character consistency"
-      ]
-    },
-    "use_cases": {
-      "zh": [
-        "根据剧本创作电影预告片",
-        "生成带产品植入的社交媒体广告",
-        "拍摄前快速原型化电影场景",
-        "构建沉浸式游戏过场动画"
-      ],
-      "en": [
-        "Create a movie trailer from a script",
-        "Generate social media ads with product placement",
-        "Prototype a cinematic scene before filming",
-        "Build immersive game cutscenes"
       ]
     }
   },
@@ -909,105 +909,104 @@
       ]
     }
   },
-  "elevenlabs": {
+  "chatgpt": {
     "name": {
-      "zh": "ElevenLabs",
-      "en": "ElevenLabs"
+      "zh": "ChatGPT",
+      "en": "ChatGPT"
     },
-    "cat": "audio",
-    "url": "https://try.elevenlabs.io/j50wgji2obha",
-    "icon": "fa-microphone-alt",
-    "featured": true,
+    "cat": "text",
+    "url": "https://chatgpt.com",
+    "icon": "fa-comment-dots",
     "short_desc": {
-      "zh": "业界最逼真的 AI 语音合成与克隆",
-      "en": "The most realistic AI voice synthesis and cloning"
+      "zh": "由 OpenAI 开发的通用 AI 助手",
+      "en": "General AI assistant by OpenAI"
     },
     "long_desc": {
-      "zh": "ElevenLabs 提供近乎以假乱真的文本转语音 (TTS) 服务。它支持 29 种语言，能够克隆任意人的声音仅需几秒样本，并提供精细的情感、语调和停顿控制，是播客、有声书和游戏配音的首选。",
-      "en": "ElevenLabs offers near-indistinguishable text-to-speech (TTS). It supports 29 languages, clones any voice with just seconds of sample audio, and provides fine control over emotion, intonation, and pauses — the top choice for podcasts, audiobooks, and game dubbing."
+      "zh": "ChatGPT 是一个基于大语言模型 (LLM) 的对话式 AI。它不仅能进行自然流畅的对话，还能处理复杂的逻辑推理、编写代码以及创作各类文学作品。通过不断的 RLHF (人类反馈强化学习)，它在理解人类意图方面达到了行业领先水平。",
+      "en": "ChatGPT is a conversational AI based on Large Language Models (LLM). It can not only engage in natural conversations but also handle complex logical reasoning, write code, and create various literary works. Through continuous RLHF, it has reached industry-leading levels in understanding human intent."
     },
     "scenes": {
       "zh": [
-        "有声书批量制作",
-        "视频多语言自动配音",
-        "游戏角色语音生成",
-        "虚拟主播实时语音"
+        "快速草拟邮件/报告",
+        "编程 Bug 调试",
+        "语言翻译与润色",
+        "头脑风暴创意"
       ],
       "en": [
-        "Audiobook batch production",
-        "Video multilingual auto-dubbing",
-        "Game character voice generation",
-        "VTuber real-time voice"
+        "Drafting emails/reports",
+        "Coding bug debugging",
+        "Language translation",
+        "Creative brainstorming"
       ]
     },
     "pros": {
       "zh": [
-        "市场上最逼真的 TTS",
-        "声音克隆效果惊人",
-        "多语言覆盖优秀"
+        "几乎所有任务都能胜任",
+        "支持文本、图像和语音输入",
+        "插件和集成生态庞大"
       ],
       "en": [
-        "Most realistic TTS on the market",
-        "Voice cloning quality is astonishing",
-        "Excellent multilingual coverage"
+        "Extremely versatile for almost any task",
+        "Supports text, image, and voice input",
+        "Huge ecosystem of plugins and integrations"
       ]
     },
     "cons": {
       "zh": [
-        "按字符计费较贵",
-        "中文韵律偶尔不够自然",
-        "深度伪造声音存在伦理争议"
+        "小众话题偶尔出现幻觉",
+        "大部分功能需要联网",
+        "回答有时会过于冗长"
       ],
       "en": [
-        "Expensive character-based pricing",
-        "Chinese prosody occasionally less natural",
-        "Ethical concerns around deepfake voices"
+        "Occasional hallucinations on niche topics",
+        "Requires internet for most features",
+        "Can be verbose in responses"
       ]
     },
     "example": {
-      "zh": "示例：输入一段小说台词，选择 '温柔而略带忧伤' 的风格，生成如真人演播般的语音。",
-      "en": "Example: Input a novel line, choose 'gentle with a touch of melancholy' style, and generate narration indistinguishable from a human actor."
+      "zh": "示例：'请帮我将这段复杂的 Python 代码重构为更具可读性的版本，并解释每一步的选择。'",
+      "en": "Example: 'Please help me refactor this complex Python code into a more readable version and explain the choices for each step.'"
     },
     "target_audience": {
       "zh": [
-        "播客主",
-        "有声书制作人",
-        "游戏开发者",
-        "YouTube 创作者"
+        "营销人员",
+        "学生",
+        "开发者",
+        "写作者"
       ],
       "en": [
-        "Podcasters",
-        "Audiobook producers",
-        "Game developers",
-        "YouTubers"
+        "Marketers",
+        "Students",
+        "Developers",
+        "Writers"
       ]
     },
     "features": {
       "zh": [
-        "仅需几秒音频即可克隆声音",
-        "支持 29 种语言",
-        "情感与语调精细控制",
-        "实时流式 API"
+        "自然语言对话",
+        "多模态输入",
+        "代码生成",
+        "联网搜索"
       ],
       "en": [
-        "Voice cloning from seconds of audio",
-        "29-language support",
-        "Emotion and intonation control",
-        "Real-time streaming API"
+        "Natural language conversation",
+        "Multi-modal input",
+        "Code generation",
+        "Web browsing"
       ]
     },
     "use_cases": {
       "zh": [
-        "克隆自己的声音朗读 10 小时有声书",
-        "用同一声音将视频配音成 5 种语言",
-        "为游戏创建独特角色声音",
-        "用名人风格生成播客片头"
+        "30秒内写一封营销邮件",
+        "调试 Python 脚本并给出解释",
+        "翻译文档并保持语气一致",
+        "头脑风暴 10 个博客选题"
       ],
       "en": [
-        "Clone your voice to narrate a 10-hour audiobook",
-        "Dub a video into 5 languages with the same voice",
-        "Create unique character voices for a game",
-        "Generate a podcast intro with a celebrity voice style"
+        "Write a marketing email in 30 seconds",
+        "Debug a Python script with explanations",
+        "Translate a document while preserving tone",
+        "Brainstorm 10 blog post ideas"
       ]
     }
   },
@@ -1109,107 +1108,6 @@
         "Compare two smartphone models with up-to-date prices",
         "Summarize a breaking news story with verified sources",
         "Find academic papers on a niche scientific topic"
-      ]
-    }
-  },
-  "notion-ai": {
-    "name": {
-      "zh": "Notion AI",
-      "en": "Notion AI"
-    },
-    "cat": "productivity",
-    "url": "https://notion.so/product/ai",
-    "icon": "fa-sticky-note",
-    "short_desc": {
-      "zh": "嵌入工作流的智能写作与知识管理助手",
-      "en": "Smart writing and knowledge management inside your workflow"
-    },
-    "long_desc": {
-      "zh": "Notion AI 直接集成在知识管理工具 Notion 中，能够帮你续写笔记、总结会议记录、提取行动项、翻译文档，甚至基于数据库自动生成报告。它将 AI 能力无缝嵌入到日常协作与知识沉淀的每一个环节。",
-      "en": "Notion AI is built directly into Notion, helping you continue writing notes, summarize meetings, extract action items, translate documents, and even auto-generate reports from databases. It seamlessly embeds AI into every step of daily collaboration and knowledge building."
-    },
-    "scenes": {
-      "zh": [
-        "会议记录自动提炼待办",
-        "零散笔记整理成结构化文章",
-        "多语言文档即时翻译",
-        "数据库内容批量分析总结"
-      ],
-      "en": [
-        "Auto-extract to-dos from meeting notes",
-        "Turn scattered notes into structured articles",
-        "Instant multilingual document translation",
-        "Batch analysis and summarization of database content"
-      ]
-    },
-    "pros": {
-      "zh": [
-        "与笔记工作流深度融合",
-        "无需切换应用",
-        "团队协作极其便利"
-      ],
-      "en": [
-        "Deeply integrated with note-taking workflow",
-        "No app switching required",
-        "Excellent for team collaboration"
-      ]
-    },
-    "cons": {
-      "zh": [
-        "AI 功能需额外付费",
-        "超长文档生成速度较慢",
-        "锁定在 Notion 生态内"
-      ],
-      "en": [
-        "AI features require extra payment",
-        "Slower generation for very long documents",
-        "Locked into the Notion ecosystem"
-      ]
-    },
-    "example": {
-      "zh": "示例：选中一段凌乱的会议速记，输入 '整理成条理清晰的会议纪要，并提取所有 Action Items'。",
-      "en": "Example: Select messy meeting notes and type 'Organize into a clear summary and extract all Action Items'."
-    },
-    "target_audience": {
-      "zh": [
-        "项目经理",
-        "团队",
-        "写作者",
-        "知识工作者"
-      ],
-      "en": [
-        "Project managers",
-        "Teams",
-        "Writers",
-        "Knowledge workers"
-      ]
-    },
-    "features": {
-      "zh": [
-        "行内 AI 写作助手",
-        "会议记录自动总结",
-        "数据库自动填充",
-        "多语言翻译"
-      ],
-      "en": [
-        "Inline AI writing assistant",
-        "Meeting notes summarization",
-        "Database auto-fill",
-        "Multi-language translation"
-      ]
-    },
-    "use_cases": {
-      "zh": [
-        "将凌乱的会议记录转为行动项",
-        "根据 bullet list 撰写项目提案",
-        "即时将文档翻译成日语",
-        "从任务数据库生成周报"
-      ],
-      "en": [
-        "Turn messy meeting notes into action items",
-        "Write a project proposal from a bullet list",
-        "Translate a document into Japanese instantly",
-        "Generate a weekly report from a task database"
       ]
     }
   },
