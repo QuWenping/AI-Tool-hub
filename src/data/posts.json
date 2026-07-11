@@ -358,5 +358,149 @@
       "how-to",
       "automation"
     ]
+  },
+  {
+    "slug": "how-to-use-ai-for-customer-support-2026",
+    "title_en": "How to Use AI for Customer Support in 2026 (Real Examples)",
+    "title_zh": "2026 年如何用 AI 做客服支持（真实案例）",
+    "desc_en": "A practical guide to using AI for customer support in 2026. The 4 best tools, the 5 workflows, the 4 things to avoid, and 3 real case studies from SaaS companies.",
+    "desc_zh": "2026 年用 AI 做客服支持的实操指南：4 个最佳工具、5 个工作流、4 个要避免的坑、3 个 SaaS 公司真实案例。",
+    "category": "tutorial",
+    "date": "2026-08-01",
+    "read_time": "14 min",
+    "author": "Daniel Park",
+    "tags": [
+      "support",
+      "automation",
+      "tutorial",
+      "how-to",
+      "saas"
+    ]
+  },
+  {
+    "slug": "how-to-build-an-ai-agent-2026",
+    "title_en": "How to Build an AI Agent in 2026 (No Code Required)",
+    "title_zh": "2026 年如何零代码构建 AI Agent",
+    "desc_en": "A practical guide to building an AI agent in 2026 without code. The 5 platforms, the 7-step build process, the 4 use cases, and the 3 things to avoid.",
+    "desc_zh": "2026 年零代码构建 AI Agent 的实操指南：5 个平台、7 步构建流程、4 个使用场景、3 个要避免的坑。",
+    "category": "tutorial",
+    "date": "2026-08-02",
+    "read_time": "15 min",
+    "author": "Marcus Webb",
+    "tags": [
+      "agent",
+      "automation",
+      "no-code",
+      "tutorial",
+      "how-to"
+    ]
+  },
+  {
+    "slug": "how-to-use-ai-for-data-analysis-2026",
+    "title_en": "How to Use AI for Data Analysis in 2026 (Practical Guide)",
+    "title_zh": "2026 年如何用 AI 做数据分析（实操指南）",
+    "desc_en": "A practical guide to using AI for data analysis in 2026. The 5 best tools, the 6 workflows, the 4 use cases, and the 3 things to avoid.",
+    "desc_zh": "2026 年用 AI 做数据分析的实操指南：5 个最佳工具、6 个工作流、4 个使用场景、3 个要避免的坑。",
+    "category": "tutorial",
+    "date": "2026-08-03",
+    "read_time": "14 min",
+    "author": "Aisha Patel",
+    "tags": [
+      "data",
+      "analysis",
+      "tutorial",
+      "how-to",
+      "sql"
+    ]
+  },
+  {
+    "slug": "how-to-use-ai-for-sales-2026",
+    "title_en": "How to Use AI for Sales in 2026 (Real Examples)",
+    "title_zh": "2026 年如何用 AI 做销售（真实案例）",
+    "desc_en": "A practical guide to using AI for sales in 2026. The 5 best tools, the 6 workflows, the 4 use cases, and the 3 things to avoid. Real examples for SDRs, AEs, and sales leaders.",
+    "desc_zh": "2026 年用 AI 做销售的实操指南：5 个最佳工具、6 个工作流、4 个使用场景、3 个要避免的坑。SDR、AE、销售 leader 的真实案例。",
+    "category": "tutorial",
+    "date": "2026-08-04",
+    "read_time": "14 min",
+    "author": "Daniel Park",
+    "tags": [
+      "sales",
+      "automation",
+      "tutorial",
+      "how-to",
+      "sdr"
+    ]
+  },
+  {
+    "slug": "how-to-use-ai-for-education-2026",
+    "title_en": "How to Use AI for Education in 2026 (Students and Teachers)",
+    "title_zh": "2026 年如何用 AI 做教育（学生与教师）",
+    "desc_en": "A practical guide to using AI for education in 2026. The 6 best tools for students, the 6 best tools for teachers, the 8 workflows, and the 5 things to avoid.",
+    "desc_zh": "2026 年用 AI 做教育的实操指南：6 个学生工具、6 个教师工具、8 个工作流、5 个要避免的坑。",
+    "category": "tutorial",
+    "date": "2026-08-05",
+    "read_time": "15 min",
+    "author": "Lin Chen",
+    "tags": [
+      "education",
+      "students",
+      "teachers",
+      "tutorial",
+      "how-to"
+    ]
+  },
+  {
+    "slug": "how-to-use-ai-for-personal-finance-2026",
+    "title_en": "How to Use AI for Personal Finance in 2026 (Practical Guide)",
+    "title_zh": "2026 年如何用 AI 管理个人财务（实操指南）",
+    "desc_en": "A practical guide to using AI for personal finance in 2026. The 5 best tools, the 6 workflows, the 4 use cases, and the 3 things to avoid.",
+    "desc_zh": "2026 年用 AI 管理个人财务的实操指南：5 个最佳工具、6 个工作流、4 个使用场景、3 个要避免的坑。",
+    "category": "tutorial",
+    "date": "2026-08-06",
+    "read_time": "13 min",
+    "author": "Aisha Patel",
+    "tags": [
+      "finance",
+      "budgeting",
+      "tutorial",
+      "how-to",
+      "personal"
+    ]
+  },
+  {
+    "slug": "how-to-use-ai-for-job-search-2026",
+    "title_en": "How to Use AI for Job Search in 2026 (Resume, Interview, Negotiation)",
+    "title_zh": "2026 年如何用 AI 找工作（简历、面试、谈薪）",
+    "desc_en": "A practical guide to using AI for job search in 2026. The 5 best tools, the 6 workflows, and the 3 things to avoid.",
+    "desc_zh": "2026 年用 AI 找工作的实操指南：5 个最佳工具、6 个工作流、3 个要避免的坑。",
+    "category": "tutorial",
+    "date": "2026-08-07",
+    "read_time": "13 min",
+    "author": "Lin Chen",
+    "tags": [
+      "job-search",
+      "resume",
+      "interview",
+      "tutorial",
+      "how-to"
+    ]
+  },
+  {
+    "slug": "how-to-use-ai-for-small-business-2026",
+    "title_en": "How to Use AI for Small Business in 2026 (Practical Guide)",
+    "title_zh": "2026 年小企业如何用 AI（实操指南）",
+    "desc_en": "A practical guide to using AI for small business in 2026. The 8 best tools, the 10 workflows, the 5 use cases, and the 5 things to avoid.",
+    "desc_zh": "2026 年小企业用 AI 的实操指南：8 个最佳工具、10 个工作流、5 个使用场景、5 个要避免的坑。",
+    "category": "tutorial",
+    "date": "2026-08-08",
+    "read_time": "15 min",
+    "author": "Daniel Park",
+    "tags": [
+      "small-business",
+      "productivity",
+      "tutorial",
+      "how-to",
+      "automation"
+    ]
   }
 ]

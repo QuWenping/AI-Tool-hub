@@ -1,0 +1,173 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout title="How to Build an AI Agent in 2026 (No Code Required)" description="A practical guide to building an AI agent in 2026 without code. The 5 platforms, the 7-step build process, the 4 use cases, and the 3 things to avoid." keywords="AI agent, no code AI, build AI agent, AI agent builder, AI automation">
+  <article class="legal-page blog-post">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>How to Build an AI Agent</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">Tutorial</span>
+      <h1>How to Build an AI Agent in 2026 (No Code Required)</h1>
+      <p class="lede">A practical guide to building an AI agent in 2026 without code. The 5 platforms, the 7-step build process, the 4 use cases, and the 3 things to avoid. By the end of this guide, you will have built your first working AI agent.</p>
+      <p style="color: var(--text-mute); font-size: 14px; margin-top: 16px;">
+        <i class="far fa-calendar"></i> 2026-08-02 &middot; <i class="far fa-clock"></i> 15 min read &middot; <i class="far fa-user"></i> Marcus Webb, Senior Engineer
+      </p>
+    </header>
+
+    <section class="blog-content">
+      <p>AI agents are the most important development in 2026. The no-code tools have finally caught up - you can build a useful AI agent in an afternoon, no engineering background required. This guide walks you through the entire process: choosing a platform, designing the agent, building it, testing it, and deploying it. By the end, you will have a working AI agent you built yourself.</p>
+
+      <h2>The 5 best no-code AI agent platforms</h2>
+
+      <h3>Platform 1: n8n (free + $20/month)</h3>
+      <p>The most flexible. Open-source, self-hostable, 400+ integrations. The right pick if: you want full control, you are comfortable with light technical setup, you want to self-host.</p>
+
+      <h3>Platform 2: Make ($9-29/month)</h3>
+      <p>The most visual. Drag-and-drop interface, 1,000+ integrations. The right pick if: you want a no-code visual builder, you need many integrations, you are a non-technical user.</p>
+
+      <h3>Platform 3: Zapier ($19-49/month)</h3>
+      <p>The most popular. 6,000+ app integrations, mature AI features. The right pick if: you are already a Zapier user, you need the broadest integration set, you value reliability.</p>
+
+      <h3>Platform 4: Lindy ($49/month)</h3>
+      <p>The most AI-native. Built specifically for AI agents, the easiest to use. The right pick if: you are building AI agents specifically, you want the best AI-first UX, you do not need many integrations.</p>
+
+      <h3>Platform 5: Voiceflow ($40/month)</h3>
+      <p>The best for voice agents. Specialized for voice AI agents (phone, smart speakers). The right pick if: you are building a voice agent, you need telephony integration, you want a visual conversation builder.</p>
+
+      <h2>The 7-step build process</h2>
+      <p>Follow these 7 steps to build your first AI agent. We will use n8n as the example, but the process is similar on all platforms.</p>
+
+      <h3>Step 1: Define the goal (30 min)</h3>
+      <p>What is the agent supposed to do? Write it down in one sentence. Example: "The agent reads incoming customer support tickets, classifies them, and routes them to the right team."</p>
+      <p>The clearer the goal, the better the agent. Avoid vague goals like "help with support." Specific goals like "classify and route tickets" are 10x easier to build.</p>
+
+      <h3>Step 2: Map the workflow (1-2 hours)</h3>
+      <p>Draw the workflow on paper. What are the steps? What data does the agent need? What tools does it call? What are the decision points?</p>
+      <p>Example workflow for a ticket classifier:</p>
+      <ol>
+        <li>Trigger: new ticket arrives in Zendesk</li>
+        <li>Read ticket content (subject + body)</li>
+        <li>Classify using AI (billing / technical / feature request / bug)</li>
+        <li>Set priority based on customer tier + sentiment</li>
+        <li>Route to the right team (assignee + tag)</li>
+        <li>Send confirmation to customer</li>
+      </ol>
+
+      <h3>Step 3: Choose the platform and sign up (15 min)</h3>
+      <p>Pick the platform that matches your goal. For our ticket classifier, n8n or Zapier is the right pick (both have Zendesk integration). Sign up for an account, connect your tools (Zendesk, OpenAI, etc.).</p>
+
+      <h3>Step 4: Build the trigger (30 min)</h3>
+      <p>Set up the trigger - the event that starts the agent. For our ticket classifier, the trigger is "new ticket in Zendesk." In n8n, you drag the "Zendesk" trigger onto the canvas and configure it.</p>
+
+      <h3>Step 5: Build the AI step (1-2 hours)</h3>
+      <p>This is the core. Connect OpenAI (or Claude, or your preferred model), write the prompt, configure the output format.</p>
+      <p>Example prompt for our ticket classifier:</p>
+      <pre><code>You are a customer support ticket classifier. Given a ticket's subject and body, classify it into one of these categories:
+- billing (questions about invoices, payments, subscriptions)
+- technical (questions about bugs, errors, how-to)
+- feature_request (suggestions for new features)
+- other (anything that does not fit)
+
+Return your answer as a JSON object with two fields:
+- category: one of the four categories above
+- confidence: a number from 0 to 1 indicating your confidence
+
+Subject: <span class="text-mute">&#123;&#123; $json.subject &#125;&#125;</span>
+Body: <span class="text-mute">&#123;&#123; $json.body &#125;&#125;</span>
+</code></pre>
+      <p>Configure the AI step to use the "JSON mode" output format. This ensures the output is valid JSON that the next steps can parse.</p>
+
+      <h3>Step 6: Build the action steps (1-2 hours)</h3>
+      <p>Add the actions the agent takes after the AI classification. For our classifier:</p>
+      <ul>
+        <li>Set the ticket's tag to the category</li>
+        <li>Set the ticket's priority based on confidence + customer tier</li>
+        <li>Assign the ticket to the right team</li>
+        <li>Send a confirmation email to the customer</li>
+      </ul>
+
+      <h3>Step 7: Test and deploy (2-4 hours)</h3>
+      <p>Test the agent with 20+ real tickets. Verify: the classifications are correct, the routing is right, the emails are sent. Once you are confident, deploy to production.</p>
+      <p>The right way to deploy: start with a small subset (e.g. 10% of tickets), monitor for 1 week, expand to 50%, then 100%. This staged rollout catches issues before they affect all customers.</p>
+
+      <h2>The 4 use cases (with example builds)</h2>
+
+      <h3>Use case 1: Customer support ticket classifier (above)</h3>
+      <p><strong>Tools needed:</strong> Zendesk, OpenAI, email.</p>
+      <p><strong>Build time:</strong> 4-6 hours.</p>
+      <p><strong>Monthly cost:</strong> $20-50 (mostly OpenAI API).</p>
+      <p><strong>Value:</strong> 50% reduction in misrouted tickets, 20% faster first response.</p>
+
+      <h3>Use case 2: Lead enrichment and scoring</h3>
+      <p><strong>Goal:</strong> When a new lead signs up, enrich the lead with company data and score them.</p>
+      <p><strong>Workflow:</strong></p>
+      <ol>
+        <li>Trigger: new lead in HubSpot</li>
+        <li>Enrich with Clearbit (company size, industry, revenue)</li>
+        <li>Score with AI (fit + intent, 0-100)</li>
+        <li>Update HubSpot with enrichment + score</li>
+        <li>Notify sales if score > 80</li>
+      </ol>
+      <p><strong>Build time:</strong> 6-8 hours.</p>
+      <p><strong>Monthly cost:</strong> $50-200 (Clearbit + OpenAI).</p>
+      <p><strong>Value:</strong> 2x sales productivity, 30% higher lead-to-close rate.</p>
+
+      <h3>Use case 3: Content repurposing agent</h3>
+      <p><strong>Goal:</strong> When a new blog post is published, repurpose it into 5 tweets, 3 LinkedIn posts, and 2 newsletter intros.</p>
+      <p><strong>Workflow:</strong></p>
+      <ol>
+        <li>Trigger: new post in Notion or WordPress</li>
+        <li>Read the post content</li>
+        <li>Generate 5 tweets (Claude)</li>
+        <li>Generate 3 LinkedIn posts (Claude)</li>
+        <li>Generate 2 newsletter intros (Claude)</li>
+        <li>Save to Buffer for scheduling</li>
+      </ol>
+      <p><strong>Build time:</strong> 4-6 hours.</p>
+      <p><strong>Monthly cost:</strong> $30-50 (Claude API + Buffer).</p>
+      <p><strong>Value:</strong> 3x content output, 10 hours/week saved.</p>
+
+      <h3>Use case 4: Meeting notes and action items</h3>
+      <p><strong>Goal:</strong> After every meeting, generate notes, action items, and follow-up emails.</p>
+      <p><strong>Workflow:</strong></p>
+      <ol>
+        <li>Trigger: meeting ends in Zoom / Google Meet</li>
+        <li>Get transcript (Otter or similar)</li>
+        <li>Generate meeting notes (Claude)</li>
+        <li>Extract action items (Claude)</li>
+        <li>Generate follow-up email (Claude)</li>
+        <li>Save notes to Notion, send email to attendees, create tasks in Linear</li>
+      </ol>
+      <p><strong>Build time:</strong> 6-8 hours.</p>
+      <p><strong>Monthly cost:</strong> $30-50 (Claude API + Otter + tools).</p>
+      <p><strong>Value:</strong> 30 min/day saved per person, better follow-through.</p>
+
+      <h2>The 3 things to avoid</h2>
+
+      <h3>Avoid 1: Vague goals</h3>
+      <p>"Build an AI agent" is not a goal. "Build an AI agent that classifies Zendesk tickets and routes them to the right team" is a goal. The more specific the goal, the easier the build. Vague goals lead to vague agents that do nothing useful.</p>
+
+      <h3>Avoid 2: Skipping the testing phase</h3>
+      <p>AI agents need testing. Test with 20+ real inputs before deploying. Test edge cases (empty inputs, hostile inputs, ambiguous inputs). The cost of a bad agent is higher than the cost of a good testing process.</p>
+
+      <h3>Avoid 3: Over-engineering</h3>
+      <p>Start simple. Build the smallest useful agent first. Add features only after the simple version is working. The teams that over-engineer (10-step agents with 20 integrations) spend weeks building and ship nothing. The teams that start simple ship in days.</p>
+
+      <h2>What to build next</h2>
+      <p>Once you have built your first agent, the second and third are easier. The compounding effect is real: each agent saves time, frees you to build the next, and the team starts to feel the leverage. The most successful AI-native teams in 2026 have 10-20 agents, each handling a specific workflow, integrated into a coherent system.</p>
+
+      <p>The future of work is not "AI replaces humans" or "humans use AI tools." It is "humans build AI agents, AI agents do the work." The teams that get this right will outperform the teams that do not. This guide is the first step.</p>
+    </section>
+
+    <footer style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border);">
+      <p style="color: var(--text-mute); font-size: 14px;">Published by Marcus Webb, Senior Engineer. Last updated: 2026-08-02.</p>
+      <p><a href="/case-studies/">Case studies</a> &middot; <a href="/use-case-for-developers/">AI for developers</a> &middot; <a href="/methodology/">Methodology</a></p>
+    </footer>
+  </article>
+</BaseLayout>
+
+
+
+
+
+
+

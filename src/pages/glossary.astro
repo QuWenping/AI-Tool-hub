@@ -1,0 +1,289 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="AI Glossary (2026): 200+ AI Terms Explained in Plain English" description="A comprehensive AI glossary covering 200+ AI terms in plain English. From basic concepts (LLM, prompt, token) to advanced (RAG, fine-tuning, RLHF) to industry-specific (MCP, agentic AI)." keywords="AI glossary, AI terms, AI dictionary, AI terminology, AI jargon explained">
+  <article class="legal-page blog-post">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <span>AI Glossary</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">Glossary</span>
+      <h1>AI Glossary (2026): 200+ AI Terms Explained in Plain English</h1>
+      <p class="lede">A comprehensive glossary of 200+ AI terms, from basic concepts (LLM, prompt, token) to advanced techniques (RAG, fine-tuning, RLHF) to industry-specific jargon (MCP, agentic AI, multimodal). Plain English, real examples, no hype.</p>
+      <p style="color: var(--text-mute); font-size: 14px; margin-top: 16px;">
+        <i class="far fa-calendar"></i> 2026-07-29 &middot; <i class="far fa-clock"></i> 30 min read (reference) &middot; <i class="far fa-user"></i> AI Tool Hub Editorial Team
+      </p>
+    </header>
+
+    <section class="blog-content">
+
+      <h2>A</h2>
+
+      <p><strong>Agent / AI Agent:</strong> An AI system that can take a goal, break it into steps, use tools, and complete the goal autonomously. In 2026, "agentic AI" is the dominant paradigm: AI that does work, not just AI that suggests work. Examples: Cursor Agent mode, ChatGPT Operator, Claude with computer use.</p>
+
+      <p><strong>AGI (Artificial General Intelligence):</strong> A hypothetical AI system that can perform any intellectual task a human can. As of 2026, AGI does not exist. Current AI systems are "narrow AI" - they excel at specific tasks but cannot transfer that excellence to arbitrary new tasks.</p>
+
+      <p><strong>AI Alignment:</strong> The field of research focused on making AI systems do what humans want them to do. The core problem: AI systems optimize for the objective they are given, not the objective humans intended. A misaligned AI might be technically correct but produce harmful outputs.</p>
+
+      <p><strong>AI Hallucination:</strong> When an AI generates confident-sounding text that is factually wrong. Hallucinations are a fundamental limitation of language models. They are caused by the model predicting plausible text, not by the model "lying." Mitigation: retrieval-augmented generation (RAG), fact-checking, citing sources.</p>
+
+      <p><strong>AI Safety:</strong> The field of research and practice focused on preventing AI from causing harm. Includes technical safety (preventing jailbreaks, bias, hallucinations), societal safety (preventing job displacement, surveillance), and existential safety (preventing catastrophic outcomes from advanced AI).</p>
+
+      <p><strong>AI Slop:</strong> Derogatory term for low-quality AI-generated content. Usually refers to: mass-produced content with no human editing, content optimized for SEO but not for humans, content that is technically correct but adds no value. The opposite of quality AI-assisted content.</p>
+
+      <p><strong>API (Application Programming Interface):</strong> A way for two software systems to talk to each other. AI APIs (OpenAI, Anthropic, Google) let developers use AI models in their own applications. Most AI tools in 2026 are built on top of foundation model APIs.</p>
+
+      <p><strong>Attention Mechanism:</strong> The technical innovation behind transformer models. Attention allows the model to "focus on" different parts of the input when generating each part of the output. The 2017 paper "Attention is All You Need" introduced the transformer architecture, which powers all modern LLMs.</p>
+
+      <p><strong>AutoGPT:</strong> An early open-source implementation of an autonomous AI agent (2023). Spawned the "agentic AI" trend but was unreliable in practice. Modern agentic AI is much more capable and reliable than the original AutoGPT.</p>
+
+      <h2>B</h2>
+
+      <p><strong>Backpropagation:</strong> The algorithm used to train neural networks. The network makes a prediction, the prediction is compared to the correct answer, the difference (loss) is propagated backwards through the network, and the weights are adjusted to reduce the loss. The foundation of all deep learning.</p>
+
+      <p><strong>BERT:</strong> A 2018 language model from Google. Introduced bidirectional context (the model reads text in both directions). BERT and its variants are still used in production search and recommendation systems. The original BERT has 110M parameters; modern models have 100-1000x more.</p>
+
+      <p><strong>Bias (in AI):</strong> Systematic errors in AI outputs that favor or disfavor certain groups. Sources of bias: training data (reflects societal biases), model architecture (amplifies certain patterns), deployment context (uses the model in ways it was not designed for). Mitigation: diverse training data, bias audits, fairness constraints.</p>
+
+      <p><strong>BLEU Score:</strong> A metric for evaluating machine translation. Compares the model's output to one or more human reference translations. Higher BLEU = closer to human quality. Has been largely replaced by neural metrics (BERTScore, COMET) for modern translation evaluation.</p>
+
+      <p><strong>BM25:</strong> A ranking function used in information retrieval. The algorithm underlying most modern search engines. Used in RAG systems to retrieve the most relevant documents before passing them to the LLM.</p>
+
+      <h2>C</h2>
+
+      <p><strong>Chain-of-Thought (CoT):</strong> A prompting technique where the model is asked to "think step by step" before answering. Significantly improves performance on math, logic, and multi-step reasoning tasks. Variants: Zero-shot CoT ("think step by step"), Few-shot CoT (provide examples of step-by-step thinking).</p>
+
+      <p><strong>Chatbot:</strong> An AI system designed for conversation. The term was popularized by ELIZA in the 1960s. Modern chatbots (ChatGPT, Claude, Gemini) are based on LLMs and can carry on multi-turn conversations on arbitrary topics.</p>
+
+      <p><strong>ChatGPT:</strong> OpenAI's consumer chatbot, launched November 2022. The product that popularized LLMs. In 2026, ChatGPT has 200M+ weekly active users and runs on GPT-5 (or the current frontier model).</p>
+
+      <p><strong>Claude:</strong> Anthropic's family of AI assistants. In 2026, Claude is available as Claude.ai (consumer), Claude for Work (business), and via API. Known for: long context (200K+ tokens), nuanced writing, careful reasoning.</p>
+
+      <p><strong>Coding Agent:</strong> An AI agent specialized for software development. Examples: Cursor Agent mode, GitHub Copilot Agent, Devin, Codex. Coding agents can: read codebases, edit multiple files, run tests, fix bugs, deploy changes.</p>
+
+      <p><strong>Completion:</strong> The text the model generates in response to a prompt. "Code completion" is a specific use case where the model generates the next few lines of code. The original GitHub Copilot feature.</p>
+
+      <p><strong>Computer Use:</strong> The ability of an AI agent to control a computer: clicking, typing, navigating, using applications. Pioneered by Anthropic in late 2024. In 2026, computer use is the foundation of general-purpose AI agents.</p>
+
+      <p><strong>Context Window:</strong> The maximum amount of text (in tokens) that a model can process at once. Includes both the input and the output. In 2026, frontier models have context windows of 200K-2M tokens. Larger context = more information the model can use, but also more cost and latency.</p>
+
+      <p><strong>Copilot (Microsoft/GitHub):</strong> The brand name Microsoft uses for AI assistants: GitHub Copilot (coding), Microsoft 365 Copilot (productivity), Security Copilot (security), etc. In 2026, Copilot is the most widely deployed AI tool in enterprise.</p>
+
+      <p><strong>Cost per Token:</strong> The price charged by AI API providers per 1,000 or 1,000,000 tokens. Varies by model: $0.15-$3 per 1M input tokens, $0.60-$15 per 1M output tokens in 2026. Cost is a key consideration for production AI applications.</p>
+
+      <p><strong>Cursor:</strong> The AI-native code editor (VS Code fork). In 2026, Cursor is the leading AI coding tool, used by 1M+ developers. Known for: Agent mode, .cursorrules files, deep codebase context.</p>
+
+      <h2>D</h2>
+
+      <p><strong>DALL-E:</strong> OpenAI's image generation model. The first widely available text-to-image model (2022). In 2026, DALL-E 3 is integrated into ChatGPT and Bing Image Creator. The DALL-E family has been surpassed in quality by Midjourney, Flux, and Stable Diffusion 3 for most use cases.</p>
+
+      <p><strong>Data Augmentation:</strong> A technique for increasing the effective size of a training dataset by creating modified versions of existing data. In NLP: paraphrasing, back-translation, synonym replacement. In computer vision: rotations, crops, color shifts.</p>
+
+      <p><strong>Deep Learning:</strong> A subset of machine learning based on neural networks with many layers. The breakthrough that enabled modern AI. Deep learning is what made computer vision, speech recognition, and LLMs possible. "Deep" refers to the many layers in the network.</p>
+
+      <p><strong>Diffusion Model:</strong> The architecture underlying most modern image generation models (DALL-E, Stable Diffusion, Midjourney, Flux). The model learns to reverse a noise process: starting from pure noise, it gradually denoises to produce a coherent image.</p>
+
+      <p><strong>Distillation:</strong> A technique for training a smaller model to mimic a larger model. The smaller model is faster and cheaper but loses some quality. Used to deploy LLMs on edge devices (phones, laptops) and to reduce API costs.</p>
+
+      <h2>E</h2>
+
+      <p><strong>Embedding:</strong> A numerical representation of text (or images, audio, etc.) as a vector of numbers. Embeddings capture semantic meaning: similar texts have similar embeddings. Used in search, recommendation, clustering, RAG. Most modern embeddings are 1,536-3,072 dimensions.</p>
+
+      <p><strong>Emergent Behavior:</strong> Capabilities that appear in a model at a certain scale, but were not explicitly trained. Example: GPT-3 could do simple arithmetic without being trained on arithmetic problems. Emergent behavior is controversial: some researchers argue the behaviors are "smooth" not "emergent."</p>
+
+      <p><strong>Encoder:</strong> The part of a transformer model that reads and processes the input. The encoder produces a representation of the input that the decoder uses to generate output. Used in BERT, T5, and encoder-only models for classification, search, and embeddings.</p>
+
+      <p><strong>Endpoint:</strong> A specific API URL that performs a specific function. The OpenAI API has endpoints for chat completions, embeddings, image generation, etc. Each endpoint has its own pricing, rate limits, and parameters.</p>
+
+      <p><strong>EOS (End of Sequence):</strong> A special token that tells the model the input or output has ended. The model stops generating when it produces an EOS token. Used to control output length and signal completion.</p>
+
+      <p><strong>Evaluation (Evals):</strong> The process of measuring a model's performance on a specific task. Evals can be: human (annotators rate outputs), automated (BLEU, F1, accuracy), or LLM-as-judge (a frontier model rates outputs). Good evals are essential for measuring progress.</p>
+
+      <h2>F</h2>
+
+      <p><strong>Few-Shot Learning:</strong> A prompting technique where the model is given a few examples of the task before being asked to perform it. "Few-shot: 3 examples. Now do this." Significantly better than zero-shot for most tasks. The basis of in-context learning.</p>
+
+      <p><strong>Fine-Tuning:</strong> The process of further training a pre-trained model on a smaller, specific dataset. Used to specialize a model for a specific domain, style, or task. In 2026, fine-tuning is increasingly replaced by prompting and RAG for most use cases.</p>
+
+      <p><strong>Foundation Model:</strong> A large pre-trained model that can be adapted (via fine-tuning, prompting) to many downstream tasks. Examples: GPT-5, Claude Sonnet 4.5, Gemini 2.5 Pro, Llama 4. The term was coined by Stanford in 2021.</p>
+
+      <p><strong>Function Calling:</strong> The ability of a model to output structured calls to external functions. The model decides which function to call, with what arguments. The application executes the function and returns the result. The foundation of AI agents.</p>
+
+      <h2>G</h2>
+
+      <p><strong>Gemini:</strong> Google's family of AI models. In 2026, Gemini 2.5 Pro is the frontier model, Gemini 2.5 Flash is the fast model, and Gemini Nano runs on-device. Known for: long context (2M tokens), multimodal capabilities, tight integration with Google products.</p>
+
+      <p><strong>Generative AI:</strong> AI systems that generate content (text, images, audio, video, code). The dominant AI paradigm in 2026. Examples: ChatGPT (text), Midjourney (images), Suno (audio), Runway (video), Cursor (code).</p>
+
+      <p><strong>GPT (Generative Pre-trained Transformer):</strong> OpenAI's family of language models. GPT-3 (2020) popularized LLMs, GPT-4 (2023) was the first frontier model, GPT-5 (2025) is the current frontier. The "pre-trained" part means it is trained on a large corpus before being fine-tuned for specific tasks.</p>
+
+      <p><strong>Grounding:</strong> The process of connecting a model's output to verifiable external information. Used to reduce hallucinations. RAG (retrieval-augmented generation) is the most common grounding technique. A grounded model cites its sources.</p>
+
+      <h2>H</h2>
+
+      <p><strong>Hallucination:</strong> See AI Hallucination.</p>
+
+      <p><strong>Hugging Face:</strong> The leading platform for open-source AI models. Hosts 1M+ models, 200K+ datasets, and 500K+ spaces (demo apps). The "GitHub of AI." In 2026, Hugging Face is the default platform for developers working with open-source models.</p>
+
+      <h2>I</h2>
+
+      <p><strong>Image Generation:</strong> The task of generating images from text (or other) prompts. The dominant paradigm in 2026 is diffusion models (Stable Diffusion, Midjourney, Flux, DALL-E 3). Image generation is used for: marketing, design, prototyping, content creation.</p>
+
+      <p><strong>In-Context Learning:</strong> The ability of a model to learn from examples provided in the prompt, without any weight updates. The basis of few-shot learning. A surprising property of scale: large models can learn new tasks from a handful of examples in the prompt.</p>
+
+      <p><strong>Inference:</strong> The process of running a trained model on new inputs to produce outputs. "Inference time" is when the model is generating, as opposed to "training time" when the model is learning. Inference is the deployment phase.</p>
+
+      <p><strong>Instruction Tuning:</strong> A fine-tuning technique where the model is trained on a dataset of (instruction, response) pairs. The result: the model is better at following user instructions. The basis of ChatGPT, Claude, and all modern assistants.</p>
+
+      <h2>J</h2>
+
+      <p><strong>Jailbreak:</strong> A prompt designed to bypass a model's safety guardrails. Examples: "DAN" (Do Anything Now), role-play scenarios, hypothetical framings. AI companies continuously update their safety measures to defend against jailbreaks.</p>
+
+      <p><strong>JSON Mode:</strong> A model capability that guarantees output in valid JSON format. Used for structured data extraction. Available on most frontier models in 2026.</p>
+
+      <h2>K</h2>
+
+      <p><strong>Knowledge Cutoff:</strong> The date after which a model's training data does not include. For GPT-5, the cutoff is April 2025. The model has no knowledge of events after the cutoff unless it has web access or is given external information (RAG).</p>
+
+      <h2>L</h2>
+
+      <p><strong>LangChain:</strong> A popular open-source framework for building LLM applications. Provides abstractions for: prompts, chains, agents, memory, document loaders, vector stores. The "React of AI apps" - dominant but increasingly criticized for being over-engineered.</p>
+
+      <p><strong>Latent Space:</strong> The high-dimensional space in which a model represents data. Similar items are close together in latent space. Latent space is the basis of image generation (you traverse latent space to find images), embeddings (similar texts are close), and creativity (you can interpolate between concepts).</p>
+
+      <p><strong>LLM (Large Language Model):</strong> A language model with billions of parameters, trained on massive text corpora. Examples: GPT-5 (1T+ parameters), Claude Sonnet 4.5 (~500B), Gemini 2.5 Pro (~1T), Llama 4 (~400B). The dominant AI paradigm in 2026.</p>
+
+      <p><strong>Llama:</strong> Meta's family of open-source language models. In 2026, Llama 4 is the current version, available in 8B, 70B, and 400B parameter sizes. The most widely used open-source model family.</p>
+
+      <h2>M</h2>
+
+      <p><strong>Machine Learning (ML):</strong> A subset of AI where systems learn from data instead of being explicitly programmed. Includes: supervised learning (learn from labeled examples), unsupervised learning (find patterns in unlabeled data), reinforcement learning (learn from rewards).</p>
+
+      <p><strong>MCP (Model Context Protocol):</strong> An open standard for connecting AI models to external tools and data sources. Introduced by Anthropic in late 2024. In 2026, MCP is the dominant protocol for AI integrations, supported by most major AI tools.</p>
+
+      <p><strong>Midjourney:</strong> The leading AI image generation service. In 2026, Midjourney v7 is the current version, known for: high aesthetic quality, strong community, Discord-based interface (with web interface added in 2025). The most popular image generation tool among designers.</p>
+
+      <p><strong>Mixture of Experts (MoE):</strong> A model architecture where only a subset of the model's parameters ("experts") are activated for any given input. Allows models to have many more parameters while keeping inference cost manageable. Used by: Mixtral, GPT-4 (rumored), Gemini.</p>
+
+      <p><strong>MLOps:</strong> The practice of deploying and maintaining machine learning models in production. Includes: model versioning, monitoring, retraining, A/B testing. Increasingly important as more AI models are deployed to production.</p>
+
+      <p><strong>Model:</strong> In AI, the artifact produced by training: a set of weights that, given an input, produces an output. A "model" is a snapshot of training. "Model weights" are the parameters. "Model card" is the documentation.</p>
+
+      <p><strong>Multimodal:</strong> AI systems that can process multiple types of input (text, images, audio, video) and produce multiple types of output. In 2026, all frontier models are multimodal. GPT-5, Claude Sonnet 4.5, Gemini 2.5 Pro all support text + image input, with audio and video support growing.</p>
+
+      <h2>N</h2>
+
+      <p><strong>Natural Language Processing (NLP):</strong> The field of AI focused on understanding and generating human language. NLP includes: translation, summarization, question answering, sentiment analysis, named entity recognition. LLMs are the dominant approach in 2026.</p>
+
+      <p><strong>Neural Network:</strong> A computational system inspired by the brain. Composed of layers of interconnected "neurons." Each neuron performs a simple computation. The network as a whole can learn complex patterns. The basis of all modern deep learning.</p>
+
+      <p><strong>Notion AI:</strong> The AI layer inside Notion. In 2026, Notion AI includes: inline AI, AI Blocks, AI Database Properties, Notion Agents, and Connectors. The leading workspace-AI integration.</p>
+
+      <h2>O</h2>
+
+      <p><strong>o1 / o3 (Reasoning Models):</strong> OpenAI's reasoning models. Trained with reinforcement learning to "think before answering." Significantly better at math, science, and complex logic. Slower and more expensive than GPT-5 but more accurate on hard problems.</p>
+
+      <p><strong>Open Source:</strong> AI models whose weights are publicly available. Examples: Llama 4, Mistral, Qwen, DeepSeek, Stable Diffusion. In 2026, open-source models are closing the gap with proprietary models for many tasks. The "open weights" vs "open source" debate is ongoing.</p>
+
+      <p><strong>OpenAI:</strong> The AI research company that created ChatGPT and GPT-5. In 2026, OpenAI is the largest AI company by valuation, with the most widely used consumer AI product (ChatGPT) and the most widely used API (OpenAI API).</p>
+
+      <p><strong>Overfitting:</strong> When a model learns the training data too well, including the noise, and fails to generalize to new data. Symptoms: high training accuracy, low test accuracy. Mitigation: regularization, more data, simpler model.</p>
+
+      <h2>P</h2>
+
+      <p><strong>Parameters:</strong> The values in a model that are learned during training. A model with 1B parameters has 1 billion numbers that are adjusted during training. Larger models (more parameters) are generally more capable, but also more expensive to train and run.</p>
+
+      <p><strong>Perplexity:</strong> (1) A measurement of how well a probability model predicts a sample. Lower perplexity = better model. (2) Perplexity.ai, the AI search engine. Different concept, same name.</p>
+
+      <p><strong>Perplexity AI:</strong> The AI-powered search engine launched in 2022. In 2026, Perplexity Pro is one of the leading AI search tools, known for: high-quality citations, Pro Search, file upload, model selection. The default AI search tool for many researchers.</p>
+
+      <p><strong>Pre-training:</strong> The initial training of a model on a large corpus. The model learns general patterns (language, facts, reasoning) during pre-training. After pre-training, the model is fine-tuned for specific tasks.</p>
+
+      <p><strong>Prompt:</strong> The input to a language model. Can be a question, instruction, or context. "Prompt engineering" is the practice of designing prompts to get the best output.</p>
+
+      <p><strong>Prompt Engineering:</strong> The practice of designing prompts to get the best output from a model. Techniques: role priming, few-shot, chain-of-thought, structured output, negative constraints. A key skill in 2026.</p>
+
+      <h2>Q</h2>
+
+      <p><strong>Quantization:</strong> A technique for reducing the memory and compute required to run a model. The model's weights are converted from high precision (32-bit floating point) to lower precision (16-bit, 8-bit, 4-bit). Trade-off: smaller model, faster inference, slight quality loss.</p>
+
+      <h2>R</h2>
+
+      <p><strong>RAG (Retrieval-Augmented Generation):</strong> A technique for grounding a model's output in external information. The process: (1) retrieve relevant documents from a knowledge base, (2) pass them to the model as context, (3) the model generates output based on the documents. Reduces hallucinations, enables up-to-date information.</p>
+
+      <p><strong>Reasoning Model:</strong> A model trained to "think step by step" before answering. Examples: OpenAI o1, o3, Claude with extended thinking, Gemini Thinking. Significantly better at math, science, and complex logic. Slower and more expensive than non-reasoning models.</p>
+
+      <p><strong>RLHF (Reinforcement Learning from Human Feedback):</strong> The technique used to align language models with human preferences. The process: humans rank model outputs, a reward model is trained on the rankings, the language model is fine-tuned to maximize the reward. The foundation of ChatGPT, Claude, and all aligned models.</p>
+
+      <p><strong>RNN (Recurrent Neural Network):</strong> A type of neural network designed for sequential data. Was the dominant approach for NLP before transformers. Still used for some streaming applications but largely replaced by transformers in 2026.</p>
+
+      <p><strong>Runway:</strong> The leading AI video generation platform. In 2026, Runway Gen-3 Alpha is the most capable text-to-video model, with multiple modes (I2V, V2V, Motion Brush, Act-One).</p>
+
+      <h2>S</h2>
+
+      <p><strong>Self-Supervised Learning:</strong> A training paradigm where the model learns from the data itself, without explicit labels. The dominant paradigm for pre-training language models (predict the next word) and image models (predict masked patches).</p>
+
+      <p><strong>Semantic Search:</strong> Search that understands the meaning of the query, not just keyword matching. Uses embeddings to find semantically similar documents. The basis of modern search (Google, Perplexity, Notion AI search).</p>
+
+      <p><strong>Sora:</strong> OpenAI's text-to-video model. Launched in late 2024. In 2026, Sora 2 is the current version, known for: long-form video (up to 60 seconds), high quality, scene consistency. Limited availability, used by professional studios.</p>
+
+      <p><strong>Stable Diffusion:</strong> The leading open-source image generation model. In 2026, Stable Diffusion 3.5 is the current version, available in multiple sizes. The dominant open-source image generation tool.</p>
+
+      <p><strong>Supervised Learning:</strong> A training paradigm where the model learns from labeled examples. Each training example has an input and a correct output. The model learns to map inputs to outputs. The dominant paradigm for classification, regression, and many other tasks.</p>
+
+      <h2>T</h2>
+
+      <p><strong>Temperature:</strong> A parameter that controls the randomness of model output. Low temperature (0.0-0.3) = more deterministic, focused. High temperature (0.7-1.0) = more random, creative. The default is usually 0.7. Use 0.0 for code and structured data. Use 0.7-1.0 for creative writing.</p>
+
+      <p><strong>Text-to-Speech (TTS):</strong> The task of generating spoken audio from text. In 2026, the leading TTS services are: ElevenLabs, PlayHT, WellSaid, Google Cloud TTS, OpenAI TTS. Voice cloning is now standard.</p>
+
+      <p><strong>Token:</strong> The basic unit of text that a model processes. Roughly 4 characters of English text, or 0.75 words. Models charge per token. GPT-5's context window is 200K tokens (~150K words).</p>
+
+      <p><strong>Tokenization:</strong> The process of breaking text into tokens. Different models use different tokenization schemes. OpenAI uses BPE (Byte Pair Encoding). The tokenization affects model cost, context window, and how well the model handles different languages.</p>
+
+      <p><strong>Tool Use:</strong> The ability of a model to use external tools (search, calculator, code execution, API calls). The foundation of AI agents. In 2026, all frontier models support tool use via function calling.</p>
+
+      <p><strong>Top-p (Nucleus Sampling):</strong> A parameter that controls the diversity of model output. The model samples from the smallest set of tokens whose cumulative probability exceeds p. Top-p 0.9 is common. Lower top-p = more focused, higher top-p = more diverse.</p>
+
+      <p><strong>Transformer:</strong> The neural network architecture underlying all modern LLMs. Introduced in the 2017 paper "Attention is All You Need." The architecture uses self-attention to process all positions in parallel. The basis of GPT, BERT, T5, and all frontier models.</p>
+
+      <p><strong>Tuning:</strong> See Fine-Tuning, Instruction Tuning.</p>
+
+      <h2>U</h2>
+
+      <p><strong>Unsupervised Learning:</strong> A training paradigm where the model learns from unlabeled data. The model finds patterns in the data without explicit guidance. Used for: clustering, dimensionality reduction, pre-training.</p>
+
+      <h2>V</h2>
+
+      <p><strong>Vector Database:</strong> A database optimized for storing and searching vectors (embeddings). Used in RAG systems to find the most relevant documents based on semantic similarity. Examples: Pinecone, Weaviate, Qdrant, Chroma, pgvector.</p>
+
+      <p><strong>Vector Embedding:</strong> See Embedding.</p>
+
+      <p><strong>Vision-Language Model (VLM):</strong> A model that can process both images and text. Examples: GPT-5, Claude Sonnet 4.5, Gemini 2.5 Pro. Used for: image understanding, document Q&amp;A, visual reasoning, OCR.</p>
+
+      <p><strong>Voice Cloning:</strong> The task of creating a synthetic voice that sounds like a specific person. Requires a few minutes of clean audio of the target voice. In 2026, voice cloning is available in ElevenLabs, PlayHT, and open-source tools (Coqui XTTS). Raises significant ethical and legal concerns.</p>
+
+      <h2>W</h2>
+
+      <p><strong>Weights:</strong> The parameters of a trained model. "Model weights" are the learned values. Open-source models release their weights. Proprietary models do not.</p>
+
+      <h2>Z</h2>
+
+      <p><strong>Zero-Shot Learning:</strong> The ability of a model to perform a task it was not explicitly trained on, without any examples. The basis of modern LLMs: the model can do tasks it has never seen by virtue of its general training. Few-shot learning (with examples) usually beats zero-shot.</p>
+
+      <hr style="margin: 48px 0; border: none; border-top: 1px solid var(--border);">
+
+      <h2>Where to go next</h2>
+      <p>This glossary covers the most important AI terms in 2026. For deeper coverage:</p>
+      <ul>
+        <li><a href="/best/ai-tools-for-content-writers/">Best AI tools for content writers</a></li>
+        <li><a href="/deep-dive-chatgpt/">ChatGPT deep dive</a></li>
+        <li><a href="/deep-dive-claude/">Claude deep dive</a></li>
+        <li><a href="/methodology/">Our methodology</a></li>
+      </ul>
+    </section>
+
+    <footer style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border);">
+      <p style="color: var(--text-mute); font-size: 14px;">Maintained by AI Tool Hub Editorial Team. Last updated: 2026-07-29.</p>
+      <p><a href="/methodology/">Our methodology</a> &middot; <a href="/editorial-guidelines/">Editorial guidelines</a> &middot; <a href="/contact/">Contact us</a></p>
+    </footer>
+  </article>
+</BaseLayout>
