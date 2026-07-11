@@ -1,6 +1,7 @@
 ---
 import toolsData from "../data/tools.json";
 import categoriesData from "../data/categories.json";
+import Newsletter from "../components/Newsletter.astro";
 const { title, description, keywords, canonical, lang = "en" } = Astro.props;
 const siteUrl = "https://thebestaitoolsreview.com";
 const fullTitle = title ? title + " | AI Tool Hub" : "AI Tool Hub | Best AI Tools Directory";
@@ -150,6 +151,11 @@ const ogImage = siteUrl + "/og-image.svg";
   <main class="container">
     <slot />
   </main>
+  <section style="padding: 40px 0; background: var(--bg-color);">
+    <div class="container">
+      <Newsletter lang={lang} />
+    </div>
+  </section>
   <footer>
     <div class="container">
       <p>(c) 2026 AI Tool Hub. An ultra-minimal, curated directory of useful AI tools.</p>

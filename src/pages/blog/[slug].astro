@@ -1,6 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import posts from "../../data/posts.json";
+import Comments from "../../components/Comments.astro";
+import RelatedPosts from "../../components/RelatedPosts.astro";
+import Feedback from "../../components/Feedback.astro";
 export async function getStaticPaths() {
   return posts.map(p => ({ params: { slug: p.slug }, props: { post: p } }));
 }
@@ -34,6 +37,10 @@ const { post } = Astro.props;
     <section style="margin-top: 40px; text-align: center;">
       <p style="color: var(--text-mute);">Want us to review a specific tool? <a href="/contact/">Suggest a topic</a>.</p>
     </section>
+
+    <Feedback slug={post.slug} lang="en" />
+    <RelatedPosts currentSlug={post.slug} currentCategory={post.category} currentTags={post.tags || []} limit={3} />
+    <Comments lang="en" />
   </article>
 </BaseLayout>
 

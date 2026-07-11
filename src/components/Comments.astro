@@ -1,0 +1,70 @@
+---
+/**
+ * Comments.astro - Giscus 评论系统组件
+ * 基于 GitHub Discussions，零成本、自动同步、无需服务器
+ *
+ * 配置步骤：
+ * 1. 在 https://github.com/settings/apps 中安装 Giscus app
+ * 2. 在 https://giscus.app/zh-CN 配置获取 data-* 属性
+ * 3. 替换下方的 repo / repoId / category / categoryId
+ */
+const { lang = "en" } = Astro.props;
+
+// 主题根据当前主题自动切换
+const lightTheme = "light";
+const darkTheme = "dark_dimmed";
+const giscusTheme = "no";  // 占位，JS 会动态切换
+
+// Giscus 配置（生产环境需要替换为真实值）
+// 在 Giscus 官网配置：https://giscus.app/zh-CN
+// 1. 输入仓库：QuWenping/AI-Tool-hub
+// 2. Discussion 分类：Comments
+// 3. 复制 data-repo-id 和 data-category-id
+const giscusConfig = {
+  "data-repo": "QuWenping/AI-Tool-hub",
+  "data-repo-id": "R_kgDOQREPLACE",
+  "data-category": "Comments",
+  "data-category-id": "DIC_kgDOQREPLACE",
+  "data-mapping": "pathname",
+  "data-strict": "0",
+  "data-reactions-enabled": "1",
+  "data-emit-metadata": "0",
+  "data-input-position": "top",
+  "data-theme": giscusTheme,
+  "data-lang": lang,
+  "data-loading": "lazy",
+  crossorigin: "anonymous",
+  async: ""
+};
+---
+<section class="comments-section" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-color);">
+  <h2 style="font-size: 22px; margin-bottom: 16px;" data-i18n-en="Comments" data-i18n-zh="评论">Comments</h2>
+  <p style="color: var(--text-mute); font-size: 14px; margin-bottom: 24px;" data-i18n-en="Discuss this article. Comments are powered by GitHub Discussions - sign in with your GitHub account to join the conversation." data-i18n-zh="讨论这篇文章。评论由 GitHub Discussions 提供支持 - 使用你的 GitHub 账号登录即可参与。">Discuss this article. Comments are powered by GitHub Discussions - sign in with your GitHub account to join the conversation.</p>
+  <script
+    src="https://giscus.app/client.js"
+    data-repo={giscusConfig["data-repo"]}
+    data-repo-id={giscusConfig["data-repo-id"]}
+    data-category={giscusConfig["data-category"]}
+    data-category-id={giscusConfig["data-category-id"]}
+    data-mapping={giscusConfig["data-mapping"]}
+    data-strict={giscusConfig["data-strict"]}
+    data-reactions-enabled={giscusConfig["data-reactions-enabled"]}
+    data-emit-metadata={giscusConfig["data-emit-metadata"]}
+    data-input-position={giscusConfig["data-input-position"]}
+    data-theme={giscusConfig["data-theme"]}
+    data-lang={giscusConfig["data-lang"]}
+    data-loading={giscusConfig["data-loading"]}
+    crossorigin={giscusConfig.crossorigin}
+    async={giscusConfig.async}
+  ></script>
+  <noscript>
+    <p style="text-align: center; color: var(--text-mute); padding: 20px; background: var(--card-bg); border-radius: 8px;" data-i18n-en="Please enable JavaScript to view comments." data-i18n-zh="请启用 JavaScript 查看评论。">Please enable JavaScript to view comments.</p>
+  </noscript>
+</section>
+
+<style>
+.comments-section :global(.giscus-frame) {
+  width: 100% !important;
+  border: none !important;
+}
+</style>

@@ -1,0 +1,80 @@
+---
+/**
+ * Feedback.astro - "这篇文章有帮助吗？"反馈按钮
+ * 数据存到 localStorage（简单版）
+ * 生产环境建议接入后端 API
+ */
+const { slug, lang = "en" } = Astro.props;
+---
+<section class="feedback-section" style="margin-top: 40px; padding: 24px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; text-align: center;">
+  <p style="margin: 0 0 16px; color: var(--text-main); font-weight: 500;" data-i18n-en="Was this article helpful?" data-i18n-zh="这篇文章对你有帮助吗？">Was this article helpful?</p>
+  <div style="display: flex; gap: 12px; justify-content: center; align-items: center;" id={`feedback-${slug}`}>
+    <button
+      class="feedback-btn"
+      data-vote="up"
+      data-slug={slug}
+      style="padding: 10px 20px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-color); color: var(--text-main); cursor: pointer; font-size: 16px; transition: all 0.2s;"
+      aria-label="Helpful"
+    >
+      <i class="far fa-thumbs-up"></i>
+      <span data-i18n-en="Yes" data-i18n-zh="有用">Yes</span>
+      <span class="feedback-count" data-type="up" style="margin-left: 6px; color: var(--text-mute); font-size: 13px;"></span>
+    </button>
+    <button
+      class="feedback-btn"
+      data-vote="down"
+      data-slug={slug}
+      style="padding: 10px 20px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-color); color: var(--text-main); cursor: pointer; font-size: 16px; transition: all 0.2s;"
+      aria-label="Not helpful"
+    >
+      <i class="far fa-thumbs-down"></i>
+      <span data-i18n-en="No" data-i18n-zh="没用">No</span>
+      <span class="feedback-count" data-type="down" style="margin-left: 6px; color: var(--text-mute); font-size: 13px;"></span>
+    </button>
+  </div>
+  <p class="feedback-thanks" style="display: none; margin-top: 16px; color: var(--accent-color); font-size: 14px;" data-i18n-en="Thanks for your feedback!" data-i18n-zh="感谢你的反馈！">Thanks for your feedback!</p>
+</section>
+
+<script is:inline define:vars={{ slug }}>
+(function() {
+  const storageKey = `feedback-${slug}`;
+  const stored = localStorage.getItem(storageKey);
+
+  // Load stored vote
+  if (stored) {
+    const vote = JSON.parse(stored);
+    document.querySelectorAll(`#feedback-${slug} .feedback-btn`).forEach(btn => {
+      if (btn.dataset.vote === vote.choice) {
+        btn.style.background = 'var(--accent-color)';
+        btn.style.color = 'white';
+        btn.style.borderColor = 'var(--accent-color)';
+      }
+    });
+    document.querySelector(`#feedback-${slug} .feedback-thanks`).style.display = 'block';
+  }
+
+  // Handle clicks
+  document.querySelectorAll(`#feedback-${slug} .feedback-btn`).forEach(btn => {
+    btn.addEventListener('click', function() {
+      const choice = this.dataset.vote;
+      localStorage.setItem(storageKey, JSON.stringify({ choice, ts: Date.now() }));
+
+      // Visual feedback
+      document.querySelectorAll(`#feedback-${slug} .feedback-btn`).forEach(b => {
+        b.style.background = 'var(--bg-color)';
+        b.style.color = 'var(--text-main)';
+        b.style.borderColor = 'var(--border-color)';
+      });
+      this.style.background = 'var(--accent-color)';
+      this.style.color = 'white';
+      this.style.borderColor = 'var(--accent-color)';
+      document.querySelector(`#feedback-${slug} .feedback-thanks`).style.display = 'block';
+
+      // Track in analytics (if GA4 is set up)
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'article_feedback', { article_slug: slug, vote: choice });
+      }
+    });
+  });
+})();
+</script>
