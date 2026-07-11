@@ -2,15 +2,32 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
 <BaseLayout title="Best AI Image Generators Compared (2026): Midjourney vs Stable Diffusion vs DALL-E vs Flux" description="We paid for every major AI image generator in 2026 and generated 100+ images side by side. Here is the honest comparison of Midjourney, Stable Diffusion, DALL-E, Flux, and Ideogram - which is best for art, photorealism, design work, and tight budgets." keywords="best AI image generator, Midjourney, Stable Diffusion, DALL-E, Flux, Ideogram, AI art, text to image">
-  <article class="legal-page blog-post">
+  <article class="blog-post">
     <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>Best AI Image Generators (2026)</span></nav>
-    <header class="page-hero">
+
+    <header class="article-header">
       <span class="eyebrow">Image generation</span>
       <h1>Best AI Image Generators Compared (2026): Midjourney vs Stable Diffusion vs DALL-E vs Flux</h1>
       <p class="lede">We paid for every major AI image generator in 2026 - Midjourney, Stable Diffusion (local and hosted), DALL-E 3, Flux, Ideogram - and generated 100+ test images side by side. Here is the honest comparison.</p>
-      <p style="color: var(--text-mute); font-size: 14px; margin-top: 16px;">
-        <i class="far fa-calendar"></i> 2026-07-08 &middot; <i class="far fa-clock"></i> 12 min read &middot; <i class="far fa-user"></i> AI Tool Hub Editorial &middot; Reviewed by <strong>Lin Chen</strong>, Lead Reviewer (5+ years testing AI tools)
-      </p>
+
+      <div class="article-meta">
+        <div class="meta-item">
+          <i class="far fa-calendar"></i>
+          <span>2026-07-08</span>
+        </div>
+        <div class="meta-item">
+          <i class="far fa-clock"></i>
+          <span>12 min read</span>
+        </div>
+        <div class="meta-item">
+          <i class="far fa-user"></i>
+          <span>AI Tool Hub Editorial</span>
+        </div>
+        <div class="meta-item reviewer">
+          <i class="fas fa-user-check"></i>
+          <span>Reviewed by <strong>Lin Chen</strong>, Lead Reviewer (5+ years testing AI tools)</span>
+        </div>
+      </div>
     </header>
 
     <section class="blog-content">
@@ -148,5 +165,81 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 .blog-content strong { color: var(--text-main); }
 .blog-content table { color: var(--text-main); }
 .blog-content .callout { background: var(--card-bg); border-left: 4px solid var(--accent-color); padding: 16px 20px; border-radius: 8px; margin: 24px 0; }
-</style>
 
+/* New: Article header (cleaner than page-hero for blog posts) */
+.article-header {
+  text-align: left;
+  padding: 48px 0 32px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.article-header .eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent-color);
+  margin-bottom: 16px;
+  padding: 4px 12px;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 999px;
+}
+.article-header h1 {
+  font-size: 42px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin: 0 0 16px;
+  color: var(--text-main);
+  font-weight: 700;
+}
+.article-header .lede {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--text-mute);
+  margin: 0 0 24px;
+  font-weight: 400;
+}
+
+/* New: Article meta (icon + label cards) */
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 24px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  margin-bottom: 40px;
+}
+.article-meta .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-mute);
+  font-size: 14px;
+}
+.article-meta .meta-item i {
+  color: var(--accent-color);
+  font-size: 14px;
+  width: 16px;
+  text-align: center;
+}
+.article-meta .meta-item.reviewer {
+  flex-basis: 100%;
+  padding-top: 12px;
+  margin-top: 4px;
+  border-top: 1px solid var(--border-color);
+  font-size: 14px;
+}
+.article-meta .meta-item.reviewer strong {
+  color: var(--text-main);
+}
+
+@media (max-width: 768px) {
+  .article-header h1 { font-size: 28px; }
+  .article-header .lede { font-size: 16px; }
+  .article-meta { gap: 12px; padding: 16px; }
+  .article-meta .meta-item { font-size: 13px; }
+}
+</style>
