@@ -2,7 +2,7 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://ai-tool-hub-self.vercel.app",
+  site: "https://thebestaitoolsreview.com",
   trailingSlash: "always",
   build: { format: "directory" },
   i18n: { defaultLocale: "en", locales: ["en", "zh"] },

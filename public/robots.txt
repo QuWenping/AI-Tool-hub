@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /ads.txt
 
-Sitemap: https://ai-tool-hub-self.vercel.app/sitemap-index.xml
+Sitemap: https://thebestaitoolsreview.com/sitemap-index.xml
