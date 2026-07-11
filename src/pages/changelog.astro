@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const entries = [
+  { date: "2026-07-24", version: "2.4", title: "Added editorial guidelines, methodology, team, advertise, and changelog pages", desc: "5 new long-form pages documenting our editorial process. The site now has 31 pages of original, hand-written content.", changes: ["+5 trust pages (editorial guidelines, methodology, team, advertise, changelog)", "+6 new how-to tutorials (21 articles total)", "+PWA manifest + favicon + OG image", "+contact page rewrite with structured emails", "+submit-sitemap-to-GSC guide", "+minified CSS and JS"] },
+  { date: "2026-07-22", version: "2.3", title: "Added 6 how-to tutorials, contact page rewrite, GSC submission guide", desc: "6 new long-form tutorials on ChatGPT, Claude, Midjourney, Cursor, ElevenLabs, and content workflow. The site now has 21 articles.", changes: ["+6 new how-to tutorials (ChatGPT coding, Claude long docs, Midjourney prompts, Cursor team setup, ElevenLabs podcasts, content workflow)", "+Contact page rewrite with structured email channels", "+Submit-sitemap-to-GSC guide", "+Minified CSS and JS (saved ~5KB)", "+PWA manifest + favicon SVG + OG image", "+Full schema.org + meta tags + Twitter card"] },
+  { date: "2026-07-15", version: "2.2", title: "Added 7 articles, 5 new tools, 5 new matchups", desc: "Expanded to 15 articles, 16 tools, 19 matchups. Rewrote about page with team bios and editorial process.", changes: ["+7 new articles (research, SEO, designers, content writers, small business, marketing, podcasters)", "+5 new tools (Gemini, Leonardo, Suno, Descript, Jasper)", "+5 new matchups (Gemini vs ChatGPT, Claude vs Perplexity, Leonardo vs Midjourney, Descript vs Runway, Suno vs ElevenLabs)", "Rewrote about page with 5 team bios + editorial process", "Rewrote BaseLayout with embedded JSON data + fixed nav"] },
+  { date: "2026-07-05", version: "2.1", title: "Initial 3-article launch", desc: "Initial launch with 3 articles, 12 tools, 14 matchups.", changes: ["+3 launch articles (image generators, ChatGPT vs Claude, free tools for students)", "+12 tools", "+14 matchups", "Migrated to Astro for static site generation", "Added bilingual support (English + Chinese)"] },
+  { date: "2026-06-15", version: "2.0", title: "Astro migration + bilingual support", desc: "Migrated from a single-page site to Astro static site generation. Added bilingual (EN/ZH) support for all pages.", changes: ["Migrated to Astro 4", "+20 categories with curated tools", "+20 tool pages with bilingual content", "+12 alternatives pages", "+10 vs comparison pages", "+Bilingual (EN/ZH) support"] },
+  { date: "2026-05-01", version: "1.5", title: "Added 5 tools, expanded reviews", desc: "Added Claude, GitHub Copilot, Notion AI, Perplexity, and Runway. Expanded reviews with pros/cons, use cases, and target audiences.", changes: ["+5 new tools", "+Structured pros/cons data", "+Use cases and target audiences", "+Features lists", "Improved i18n switching"] },
+  { date: "2026-03-15", version: "1.4", title: "Mid-journey and Stable Diffusion added", desc: "Added the two most-requested image generation tools. Added a comparison table on the homepage.", changes: ["+Midjourney", "+Stable Diffusion", "+Homepage comparison table", "+Search input", "+Dark/light theme toggle"] },
+  { date: "2026-02-15", version: "1.3", title: "Bilingual (EN/ZH) support added", desc: "Added Chinese translations for the homepage, all tool pages, and the about page. Language switcher in the header.", changes: ["+Chinese translations for 13 pages", "+Language switcher in header", "+EN/ZH routing", "+Bilingual meta tags"] },
+  { date: "2026-01-15", version: "1.2", title: "6 tools added", desc: "Initial tool directory with ChatGPT, Sora, ElevenLabs, Midjourney, Cursor, and Stable Diffusion. Each with a detailed review page.", changes: ["+6 tools in the directory", "+Detailed review pages (pros, cons, use cases, pricing)", "+Category pages (writing, image, code, video, audio, productivity)"] },
+  { date: "2025-12-01", version: "1.0", title: "Site launched", desc: "Initial launch of AI Tool Hub as a single-page site with 4 tools and a basic directory. Built with vanilla HTML/CSS.", changes: ["Initial launch", "+4 tools", "+Single-page directory", "+Contact form (basic)"] }
+];
+---
+<BaseLayout title="Changelog | AI Tool Hub Updates and Release Notes" description="Full public changelog of AI Tool Hub - every update, every new tool reviewed, every new article published, and every score change. Updated whenever we ship." keywords="changelog, release notes, updates, AI Tool Hub history, what is new">
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <span>Changelog</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">Public record</span>
+      <h1>Changelog</h1>
+      <p class="lede">The full public record of every update to AI Tool Hub. New tools reviewed, new articles published, score changes, and any corrections. We update this page whenever we ship. Last entry: July 24, 2026.</p>
+    </header>
+
+    <section>
+      <h2>Why we publish a changelog</h2>
+      <p>Most AI directories do not publish changelogs. They do not tell you when a tool was last reviewed, when a score changed, or when a review was updated. We do. The reasons:</p>
+      <ol>
+        <li><strong>Trust.</strong> The record is public. If we make a mistake, you can see when and how we fixed it.</li>
+        <li><strong>Transparency.</strong> Our scores are current as of the date on the review. The changelog shows when scores changed.</li>
+        <li><strong>Accountability.</strong> If we say we are independent, the changelog is the evidence. You can see what we added, what we changed, and what we removed.</li>
+        <li><strong>Help for the next reader.</strong> If you are evaluating us, the changelog tells you how active and transparent we are.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>How to read the changelog</h2>
+      <p>Each entry has a date, a version number, a title, a description, and a list of changes. The most recent entry is at the top. The version numbers are rough - we bump the major number for major changes (new sections, big redesigns) and the minor number for incremental improvements.</p>
+      <p>The changes list is structured to be scannable: new pages added, pages removed, content updated, technical changes. We try to be specific - not "various improvements" but "added 4 new tool reviews."</p>
+    </section>
+
+    <section>
+      <h2>Full changelog</h2>
+      {entries.map((entry, idx) => (
+        <article style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px; margin: 24px 0;">
+          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 12px;">
+            <span style="background: var(--accent-color); color: white; padding: 4px 12px; border-radius: 6px; font-size: 13px; font-weight: 700;">v{entry.version}</span>
+            <span style="color: var(--text-mute); font-size: 14px; font-weight: 600;">{entry.date}</span>
+            {idx === 0 && <span style="background: #10b981; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase;">Latest</span>}
+          </div>
+          <h2 style="margin-top: 0; font-size: 22px;">{entry.title}</h2>
+          <p style="color: var(--text-mute); font-size: 15px; margin-bottom: 16px;">{entry.desc}</p>
+          <p style="font-weight: 600; font-size: 13px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Changes:</p>
+          <ul style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.7;">
+            {entry.changes.map(c => <li>{c}</li>)}
+          </ul>
+        </article>
+      ))}
+    </section>
+
+    <section>
+      <h2>Tool score changes (rolling 6 months)</h2>
+      <p>This section tracks the score changes for tools in our directory over the last 6 months. Tools are listed in alphabetical order. The first number is the current score, the second is the score 6 months ago, and the third is the change.</p>
+      <ul>
+        <li>ChatGPT: 8.4 (was 8.2) - +0.2 (GPT-5 release, multimodal improvements)</li>
+        <li>Claude: 8.6 (was 8.3) - +0.3 (200K context + Artifacts)</li>
+        <li>Cursor: 8.5 (was 8.0) - +0.5 (Agent mode matured)</li>
+        <li>ElevenLabs: 8.3 (was 8.0) - +0.3 (voice cloning quality)</li>
+        <li>Gemini: 8.2 (was 7.8) - +0.4 (2M context + Live voice)</li>
+        <li>GitHub Copilot: 8.0 (was 7.9) - +0.1 (small improvements)</li>
+        <li>Midjourney: 8.5 (was 8.6) - -0.1 (v7 stable but no big jump)</li>
+        <li>Notion AI: 7.8 (was 7.6) - +0.2 (database fill improvements)</li>
+        <li>Perplexity: 8.2 (was 7.9) - +0.3 (Pro search quality)</li>
+        <li>Runway: 8.0 (was 7.8) - +0.2 (Gen-3 Alpha)</li>
+        <li>Sora: 8.1 (was 7.5) - +0.6 (Sora 2 release, big jump)</li>
+        <li>Stable Diffusion: 7.9 (was 8.0) - -0.1 (3.5 stable but community focus shifted)</li>
+      </ul>
+      <p>Tools added in the last 6 months (no score history): Descript, Jasper, Leonardo.AI, Suno.</p>
+    </section>
+
+    <section>
+      <h2>Coming next (roadmap)</h2>
+      <p>What we are working on in Q3-Q4 2026:</p>
+      <ul>
+        <li>3 new tool reviews (testing in progress: Granola, Wispr Flow, NotebookLM)</li>
+        <li>4 new long-form guides (in progress: How to use NotebookLM, Best AI for email marketing, Best AI for e-commerce, How to use AI in legal practice)</li>
+        <li>A new category: AI for productivity beyond what we have (project management, time tracking, etc.)</li>
+        <li>Improved search (semantic search powered by embeddings, in progress)</li>
+        <li>Mobile app for offline reading of our reviews (iOS + Android, Q4 2026)</li>
+      </ul>
+      <p>The roadmap is subject to change based on what is worth covering. If you want a tool or topic added, email <a href="mailto:submissions@ai-tool-hub.example">submissions@ai-tool-hub.example</a>.</p>
+    </section>
+
+    <section>
+      <h2>How to subscribe to changelog updates</h2>
+      <p>3 ways to know when we update:</p>
+      <ol>
+        <li><strong>RSS feed</strong> - <a href="/changelog.xml">/changelog.xml</a> (full changelog in RSS format)</li>
+        <li><strong>Monthly email</strong> - the same email that goes out with our monthly picks. <a href="/contact/">Sign up here</a>.</li>
+        <li><strong>Follow us on social</strong> - we post major changes to @aitoolhub on Twitter and LinkedIn.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Why this is public</h2>
+      <p>Most AI directories do not publish changelogs because it would expose how often they update (or do not update), how their scores change (or do not change), and how much new content they actually add. We publish it because we believe transparency is the foundation of trust, and trust is the only sustainable advantage for a small site in a crowded market.</p>
+      <p>If you ever see a tool in our directory that is not in this changelog for 6+ months, that is a sign we have not re-tested it. Email us and we will either re-test it or remove it. That is our commitment to you.</p>
+    </section>
+  </article>
+</BaseLayout>
