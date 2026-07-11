@@ -1,4 +1,6 @@
 ---
+import toolsData from "../data/tools.json";
+import categoriesData from "../data/categories.json";
 const { title, description, keywords, canonical, lang = "en" } = Astro.props;
 const siteUrl = "https://ai-tool-hub-self.vercel.app";
 const fullTitle = title ? title + " | AI Tool Hub" : "AI Tool Hub | Best AI Tools Directory";
@@ -7,7 +9,6 @@ const kw = keywords || "AI tools, best AI tools, AI writing, AI coding, AI image
 const url = canonical || siteUrl + Astro.url.pathname;
 // Embed the dataset only on the homepage so main.js can render cards client-side
 const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "/index.html";
-
 ---
 <!DOCTYPE html>
 <html lang={lang === "zh" ? "zh-CN" : "en-US"}>
@@ -31,7 +32,8 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "/index.html
   <link rel="alternate" hreflang="zh" href={siteUrl + Astro.url.pathname}>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AI Tool Hub","url":"https://ai-tool-hub-self.vercel.app"}</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3930397953691472" crossorigin="anonymous"></script>
-
+  {isHome && <script type="application/json" id="tools-data" set:html={JSON.stringify(toolsData)}></script>}
+  {isHome && <script type="application/json" id="categories-data" set:html={JSON.stringify(categoriesData)}></script>}
 </head>
 <body>
   <header>
@@ -40,9 +42,8 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "/index.html
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
         <li><a href="/best/students/">Categories</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/best/students/">Categories</a></li>
         <li><a href="/blog/">Blog</a></li>
+        <li><a href="/about/">About</a></li>
         <li><a href="/contact/">Contact</a></li>
       </ul>
       <div class="header-actions">
@@ -71,5 +72,3 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "/index.html
   <script src="/js/main.js" defer></script>
 </body>
 </html>
-
-

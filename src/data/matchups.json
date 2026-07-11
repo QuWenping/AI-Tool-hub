@@ -1,100 +1,21 @@
 [
-  {
-    "slug": "chatgpt-vs-claude",
-    "a": "chatgpt",
-    "b": "claude",
-    "title_en": "ChatGPT vs Claude (2026): Which is Better?",
-    "title_zh": "ChatGPT vs Claude (2026): 哪个更好?"
-  },
-  {
-    "slug": "midjourney-vs-stable-diffusion",
-    "a": "midjourney",
-    "b": "stable-diffusion",
-    "title_en": "Midjourney vs Stable Diffusion (2026)",
-    "title_zh": "Midjourney vs Stable Diffusion (2026)"
-  },
-  {
-    "slug": "cursor-vs-github-copilot",
-    "a": "cursor",
-    "b": "github-copilot",
-    "title_en": "Cursor vs GitHub Copilot (2026)",
-    "title_zh": "Cursor vs GitHub Copilot (2026)"
-  },
-  {
-    "slug": "sora-vs-runway",
-    "a": "sora",
-    "b": "runway",
-    "title_en": "Sora vs Runway (2026): Best AI Video Generator?",
-    "title_zh": "Sora vs Runway (2026): 最佳 AI 视频生成器?"
-  },
-  {
-    "slug": "perplexity-vs-chatgpt",
-    "a": "perplexity",
-    "b": "chatgpt",
-    "title_en": "Perplexity vs ChatGPT (2026): Search vs Chat",
-    "title_zh": "Perplexity vs ChatGPT (2026): 搜索 vs 对话"
-  },
-  {
-    "slug": "notion-ai-vs-chatgpt",
-    "a": "notion-ai",
-    "b": "chatgpt",
-    "title_en": "Notion AI vs ChatGPT (2026)",
-    "title_zh": "Notion AI vs ChatGPT (2026)"
-  },
-  {
-    "slug": "elevenlabs-vs-runway",
-    "a": "elevenlabs",
-    "b": "runway",
-    "title_en": "ElevenLabs vs Runway: Voice vs Video AI",
-    "title_zh": "ElevenLabs vs Runway: 语音 vs 视频 AI"
-  },
-  {
-    "slug": "chatgpt-vs-midjourney",
-    "a": "chatgpt",
-    "b": "midjourney",
-    "title_en": "ChatGPT vs Midjourney: Text vs Image AI",
-    "title_zh": "ChatGPT vs Midjourney: 文本 vs 图像 AI"
-  },
-  {
-    "slug": "claude-vs-gemini",
-    "a": "claude",
-    "b": "chatgpt",
-    "title_en": "Claude vs Gemini vs ChatGPT (2026)",
-    "title_zh": "Claude vs Gemini vs ChatGPT (2026)"
-  },
-  {
-    "slug": "hostinger-vs-chatgpt",
-    "a": "hostinger",
-    "b": "chatgpt",
-    "title_en": "Hostinger AI vs ChatGPT for Websites",
-    "title_zh": "Hostinger AI vs ChatGPT 建站对比"
-  },
-  {
-    "slug": "stable-diffusion-vs-midjourney",
-    "a": "stable-diffusion",
-    "b": "midjourney",
-    "title_en": "Stable Diffusion vs Midjourney (2026)",
-    "title_zh": "Stable Diffusion vs Midjourney (2026)"
-  },
-  {
-    "slug": "github-copilot-vs-chatgpt",
-    "a": "github-copilot",
-    "b": "chatgpt",
-    "title_en": "GitHub Copilot vs ChatGPT for Coding",
-    "title_zh": "GitHub Copilot vs ChatGPT 编程对比"
-  },
-  {
-    "slug": "sora-vs-midjourney",
-    "a": "sora",
-    "b": "midjourney",
-    "title_en": "Sora vs Midjourney: Video vs Image AI",
-    "title_zh": "Sora vs Midjourney: 视频 vs 图像 AI"
-  },
-  {
-    "slug": "elevenlabs-vs-chatgpt",
-    "a": "elevenlabs",
-    "b": "chatgpt",
-    "title_en": "ElevenLabs vs ChatGPT Voice Mode",
-    "title_zh": "ElevenLabs vs ChatGPT 语音模式对比"
-  }
+  { "slug": "chatgpt-vs-claude", "a": "chatgpt", "b": "claude", "title_en": "ChatGPT vs Claude (2026): Which is Better?", "title_zh": "ChatGPT vs Claude (2026): 哪个更好?" },
+  { "slug": "midjourney-vs-stable-diffusion", "a": "midjourney", "b": "stable-diffusion", "title_en": "Midjourney vs Stable Diffusion (2026)", "title_zh": "Midjourney vs Stable Diffusion (2026)" },
+  { "slug": "cursor-vs-github-copilot", "a": "cursor", "b": "github-copilot", "title_en": "Cursor vs GitHub Copilot (2026)", "title_zh": "Cursor vs GitHub Copilot (2026)" },
+  { "slug": "sora-vs-runway", "a": "sora", "b": "runway", "title_en": "Sora vs Runway (2026): Best AI Video Generator?", "title_zh": "Sora vs Runway (2026): 最佳 AI 视频生成器?" },
+  { "slug": "perplexity-vs-chatgpt", "a": "perplexity", "b": "chatgpt", "title_en": "Perplexity vs ChatGPT (2026): Search vs Chat", "title_zh": "Perplexity vs ChatGPT (2026): 搜索 vs 对话" },
+  { "slug": "notion-ai-vs-chatgpt", "a": "notion-ai", "b": "chatgpt", "title_en": "Notion AI vs ChatGPT (2026)", "title_zh": "Notion AI vs ChatGPT (2026)" },
+  { "slug": "elevenlabs-vs-runway", "a": "elevenlabs", "b": "runway", "title_en": "ElevenLabs vs Runway: Voice vs Video AI", "title_zh": "ElevenLabs vs Runway: 语音 vs 视频 AI" },
+  { "slug": "chatgpt-vs-midjourney", "a": "chatgpt", "b": "midjourney", "title_en": "ChatGPT vs Midjourney: Text vs Image AI", "title_zh": "ChatGPT vs Midjourney: 文本 vs 图像 AI" },
+  { "slug": "claude-vs-gemini", "a": "claude", "b": "gemini", "title_en": "Claude vs Gemini (2026): Which Assistant Wins?", "title_zh": "Claude vs Gemini (2026): 哪个助手更强?" },
+  { "slug": "hostinger-vs-chatgpt", "a": "hostinger", "b": "chatgpt", "title_en": "Hostinger AI vs ChatGPT for Websites", "title_zh": "Hostinger AI vs ChatGPT 建站对比" },
+  { "slug": "stable-diffusion-vs-midjourney", "a": "stable-diffusion", "b": "midjourney", "title_en": "Stable Diffusion vs Midjourney (2026)", "title_zh": "Stable Diffusion vs Midjourney (2026)" },
+  { "slug": "github-copilot-vs-chatgpt", "a": "github-copilot", "b": "chatgpt", "title_en": "GitHub Copilot vs ChatGPT for Coding", "title_zh": "GitHub Copilot vs ChatGPT 编程对比" },
+  { "slug": "sora-vs-midjourney", "a": "sora", "b": "midjourney", "title_en": "Sora vs Midjourney: Video vs Image AI", "title_zh": "Sora vs Midjourney: 视频 vs 图像 AI" },
+  { "slug": "elevenlabs-vs-chatgpt", "a": "elevenlabs", "b": "chatgpt", "title_en": "ElevenLabs vs ChatGPT Voice Mode", "title_zh": "ElevenLabs vs ChatGPT 语音模式对比" },
+  { "slug": "gemini-vs-chatgpt", "a": "gemini", "b": "chatgpt", "title_en": "Gemini vs ChatGPT (2026): The AI Assistant Showdown", "title_zh": "Gemini vs ChatGPT (2026): AI 助手对决" },
+  { "slug": "claude-vs-perplexity", "a": "claude", "b": "perplexity", "title_en": "Claude vs Perplexity: Deep Research Compared", "title_zh": "Claude vs Perplexity: 深度研究对比" },
+  { "slug": "leonardo-vs-midjourney", "a": "leonardo", "b": "midjourney", "title_en": "Leonardo.AI vs Midjourney (2026): Game Art vs Aesthetics", "title_zh": "Leonardo.AI vs Midjourney (2026): 游戏美术 vs 艺术审美" },
+  { "slug": "descript-vs-runway", "a": "descript", "b": "runway", "title_en": "Descript vs Runway: Edit vs Generate Video", "title_zh": "Descript vs Runway: 视频编辑 vs 视频生成" },
+  { "slug": "suno-vs-elevenlabs", "a": "suno", "b": "elevenlabs", "title_en": "Suno vs ElevenLabs: Music vs Voice AI", "title_zh": "Suno vs ElevenLabs: 音乐 vs 语音 AI" }
 ]

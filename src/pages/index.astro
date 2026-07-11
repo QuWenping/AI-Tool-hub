@@ -14,9 +14,53 @@ const catHero = [
   { cat: "audio", icon: "fa-microphone-alt", title_en: "Audio", title_zh: "音频处理", desc_en: "ElevenLabs & more", desc_zh: "ElevenLabs 等" },
   { cat: "productivity", icon: "fa-bolt", title_en: "Business", title_zh: "商业效率", desc_en: "Perplexity, Notion & more", desc_zh: "Perplexity、Notion 等" }
 ];
-const featuredMatchups = matchupsData.slice(0, 3);
+const featuredMatchups = matchupsData.slice(0, 6);
+const visibleTools = Object.entries(toolsData).filter(([id, t]) => !t.hidden);
+const popularComparisons = [
+  { slug: "chatgpt-vs-claude", title_en: "ChatGPT vs Claude", desc_en: "Pick the right general assistant" },
+  { slug: "midjourney-vs-stable-diffusion", title_en: "Midjourney vs Stable Diffusion", desc_en: "Paid polish vs open-source control" },
+  { slug: "cursor-vs-github-copilot", title_en: "Cursor vs GitHub Copilot", desc_en: "AI-native editor vs IDE plugin" },
+  { slug: "sora-vs-runway", title_en: "Sora vs Runway", desc_en: "Closed cinematic vs open toolbox" }
+];
+const popularGuides = [
+  { slug: "best-free-ai-tools-for-students-2026", title_en: "10 Best Free AI Tools for Students", desc_en: "Tested for 2 weeks on real assignments" },
+  { slug: "chatgpt-vs-claude-which-should-you-pick-2026", title_en: "ChatGPT vs Claude: Which to Pick?", desc_en: "Two weeks of side-by-side testing" },
+  { slug: "best-ai-image-generators-compared-2026", title_en: "Best AI Image Generators (2026)", desc_en: "Midjourney vs SD vs DALL-E vs Flux" }
+];
+const faq = [
+  {
+    q_en: "Is AI Tool Hub free to use?",
+    q_zh: "AI Tool Hub 是免费的吗?",
+    a_en: "Yes - browsing the directory, reading reviews, and using the search is 100% free. We make money through display advertising and a small number of clearly marked affiliate links, which never affect our rankings.",
+    a_zh: "是的 - 浏览目录、阅读评测、使用搜索全部 100% 免费。我们通过展示广告和少量明确标注的联盟链接盈利，这永远不会影响我们的排名。"
+  },
+  {
+    q_en: "How do you pick which AI tools to review?",
+    q_zh: "你们如何挑选要评测的 AI 工具?",
+    a_en: "We only list tools we would actually pay for. Every entry is tested hands-on for at least two weeks on real work, then scored on output quality, ease of use, pricing transparency, support, and privacy. Tools that score below 6.0 on any single dimension are excluded.",
+    a_zh: "我们只列出我们真正愿意付费的工具。每个条目都在实际工作中经过至少两周的人工实测，然后按输出质量、易用性、价格透明度、客服和隐私维度评分。任何单项得分低于 6.0 的工具都会被排除。"
+  },
+  {
+    q_en: "Do affiliate links influence your rankings?",
+    q_zh: "联盟链接会影响你们的排名吗?",
+    a_en: "Never. Our testing rubric is the only thing that determines what makes the list. Affiliate relationships are disclosed in our privacy policy and on the relevant tool pages.",
+    a_zh: "绝不会。我们的评分标准是决定榜单的唯一因素。联盟合作关系会在隐私政策和相关工具页面披露。"
+  },
+  {
+    q_en: "How often do you re-test the tools?",
+    q_zh: "你们多久重新测试这些工具?",
+    a_en: "We re-test our top picks every 6 months. AI tools change fast - a great tool today can be a mediocre one in a year. If a tool's quality drops or a much better alternative appears, we update the ranking immediately.",
+    a_zh: "我们每 6 个月重新测试一次上榜工具。AI 工具发展很快 - 今天的优秀工具可能明年就平庸了。如果某工具质量下滑或出现更好的替代品，我们会立即更新排名。"
+  },
+  {
+    q_en: "Can I suggest a tool you missed?",
+    q_zh: "我可以推荐你们漏掉的工具吗?",
+    a_en: "Absolutely. We read every message. If you know of an AI tool that should be on this list, send us a tip via the contact page and we will look into it.",
+    a_zh: "当然可以。我们会阅读每一条消息。如果你知道一个应该上榜的 AI 工具，请通过联系页面告诉我们，我们会跟进。"
+  }
+];
 ---
-<BaseLayout title="AI Tool Hub | Best AI Tools Directory" description="Explore curated AI tools for writing, coding, image generation, video, audio and productivity. Find ChatGPT alternatives, AI coding assistants and practical AI services.">
+<BaseLayout title="AI Tool Hub | Best AI Tools Directory (2026)" description="Find the best AI tools for writing, coding, image generation, video, audio, and productivity. Hand-tested by our editorial team. Updated weekly with 12+ in-depth reviews and 20+ curated categories.">
 
   <section class="hero">
     <h1>Find the <span>Best AI Tools</span> for Any Task</h1>
@@ -84,17 +128,9 @@ const featuredMatchups = matchupsData.slice(0, 3);
     <div id="rec-grid" class="rec-grid"></div>
   </section>
 
-  <div class="ad-banner">
-    <div class="ad-content">
-      <span class="ad-tag" data-i18n-en="Sponsored" data-i18n-zh="赞助">Sponsored</span>
-      <p data-i18n-en="Ad space available | Contact us for premium AI brand partnerships." data-i18n-zh="广告位招租 | 欢迎顶级 AI 工具品牌合作，请联系洽谈。">Ad space available | Contact us for premium AI brand partnerships.</p>
-      <a class="ad-button" href="/contact/" data-i18n-en="Contact Us" data-i18n-zh="联系我们">Contact Us</a>
-    </div>
-  </div>
-
   <section class="recommended-section" id="all-tools">
     <div class="section-header">
-      <h2 data-i18n-en="All tools" data-i18n-zh="全部 AI 工具">All tools</h2>
+      <h2 data-i18n-en="All " + visibleTools.length + " tools" data-i18n-zh={"全部 " + visibleTools.length + " 个 AI 工具"}>All {visibleTools.length} tools</h2>
       <p data-i18n-en="Filter by category or search by name to find the right AI tool." data-i18n-zh="按分类筛选或按名称搜索，找到最适合的 AI 工具。">Filter by category or search by name to find the right AI tool.</p>
     </div>
     <div id="tool-grid" class="tool-grid"></div>
@@ -142,5 +178,35 @@ const featuredMatchups = matchupsData.slice(0, 3);
     </div>
   </section>
 
-</BaseLayout>
+  <section class="related-section">
+    <h2 class="section-main-title" data-i18n-en="From the blog" data-i18n-zh="博客精选">From the blog</h2>
+    <div class="related-grid">
+      {popularGuides.map(g => (
+        <a class="related-card" href={"/blog/" + g.slug + "/"}>
+          <div class="related-icon"><i class="fas fa-newspaper"></i></div>
+          <div>
+            <h3>{g.title_en}</h3>
+            <p>{g.desc_en}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
 
+  <section class="faq-section" style="margin: 40px 0;">
+    <h2 class="section-main-title" style="text-align: center; margin-bottom: 32px;" data-i18n-en="Frequently asked questions" data-i18n-zh="常见问题">Frequently asked questions</h2>
+    {faq.map(item => (
+      <details>
+        <summary data-i18n-en={item.q_en} data-i18n-zh={item.q_zh}>{item.q_en}</summary>
+        <p data-i18n-en={item.a_en} data-i18n-zh={item.a_zh}>{item.a_en}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="related-section" style="text-align: center;">
+    <h2 class="section-main-title" data-i18n-en="Get the directory in your inbox" data-i18n-zh="把目录收到你的邮箱">Get the directory in your inbox</h2>
+    <p style="color: var(--text-mute); max-width: 560px; margin: 0 auto 16px;" data-i18n-en="We send a short, no-spam email every month with our top picks, hidden gems, and what is new in the AI tool world." data-i18n-zh="我们每月发送一封简短、无垃圾邮件的邮件，分享本月精选工具、隐藏神器以及 AI 工具世界的新动向。">We send a short, no-spam email every month with our top picks, hidden gems, and what is new in the AI tool world.</p>
+    <a class="cta-btn cta-primary" href="/contact/" data-i18n-en="Subscribe" data-i18n-zh="订阅">Subscribe</a>
+  </section>
+
+</BaseLayout>

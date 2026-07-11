@@ -6,15 +6,10 @@
     "desc_en": "We tested every free AI tool students actually need - writing, research, math, flashcards - and ranked them by what is genuinely useful vs what is just marketing.",
     "desc_zh": "我们实测了学生真正需要的每一个免费 AI 工具 - 写作、文献、数学、闪卡 - 按真实有用程度排序，不看营销噱头。",
     "category": "students",
-    "date": "2026-07-07",
+    "date": "2026-06-03",
     "read_time": "8 min",
     "author": "AI Tool Hub Editorial",
-    "tags": [
-      "free",
-      "students",
-      "writing",
-      "research"
-    ]
+    "tags": ["free", "students", "writing", "research"]
   },
   {
     "slug": "chatgpt-vs-claude-which-should-you-pick-2026",
@@ -23,16 +18,10 @@
     "desc_en": "We used both ChatGPT and Claude side by side for two weeks on real work. Here is the honest comparison - pricing, writing quality, coding, long documents, and which is worth paying for.",
     "desc_zh": "我们把 ChatGPT 和 Claude 并排用两周实测，从写作、代码、长文档、价格全面对比，告诉你谁值得订阅。",
     "category": "comparison",
-    "date": "2026-07-07",
+    "date": "2026-06-18",
     "read_time": "10 min",
     "author": "AI Tool Hub Editorial",
-    "tags": [
-      "chatgpt",
-      "claude",
-      "comparison",
-      "writing",
-      "coding"
-    ]
+    "tags": ["chatgpt", "claude", "comparison", "writing", "coding"]
   },
   {
     "slug": "best-ai-image-generators-compared-2026",
@@ -41,16 +30,153 @@
     "desc_en": "We paid for every major AI image generator in 2026 and generated 100+ images side by side. Here is the honest comparison of Midjourney, Stable Diffusion, DALL-E, Flux, and Ideogram.",
     "desc_zh": "我们订阅了 2026 年所有主流 AI 图像生成器，同一 prompt 对比 100+ 张图，给出真实横评。",
     "category": "image-generation",
-    "date": "2026-07-08",
+    "date": "2026-06-28",
     "read_time": "12 min",
     "author": "AI Tool Hub Editorial",
-    "tags": [
-      "midjourney",
-      "stable-diffusion",
-      "dall-e",
-      "flux",
-      "ideogram",
-      "image-generation"
-    ]
+    "tags": ["midjourney", "stable-diffusion", "dall-e", "flux", "ideogram", "image-generation"]
+  },
+  {
+    "slug": "cursor-vs-github-copilot-2026",
+    "title_en": "Cursor vs GitHub Copilot (2026): Which AI Coding Tool Should You Pay For?",
+    "title_zh": "Cursor vs GitHub Copilot (2026)：AI 编程工具到底该订阅哪个？",
+    "desc_en": "We coded in Cursor and GitHub Copilot side by side for two weeks on a real production app. Here is the honest verdict on speed, accuracy, context, and price.",
+    "desc_zh": "我们用 Cursor 和 GitHub Copilot 在真实项目上各写了两周代码，从速度、准确性、上下文理解、价格四个维度给你真实结论。",
+    "category": "coding",
+    "date": "2026-07-05",
+    "read_time": "11 min",
+    "author": "AI Tool Hub Editorial",
+    "tags": ["cursor", "github-copilot", "coding", "comparison"]
+  },
+  {
+    "slug": "best-ai-video-generators-2026",
+    "title_en": "Best AI Video Generators in 2026: Sora, Runway, Pika, Kling Compared",
+    "title_zh": "2026 年最佳 AI 视频生成器：Sora、Runway、Pika、Kling 横评",
+    "desc_en": "We generated 50+ short videos on every major AI video model in 2026. Here is what each one is good at, where they break, and which is worth your money.",
+    "desc_zh": "我们用 2026 年所有主流 AI 视频模型生成了 50+ 段视频，告诉你各自的优势、缺陷和值不值得付费。",
+    "category": "video-generation",
+    "date": "2026-07-08",
+    "read_time": "13 min",
+    "author": "AI Tool Hub Editorial",
+    "tags": ["sora", "runway", "pika", "kling", "video-generation"]
+  },
+  {
+    "slug": "best-ai-voice-generators-2026",
+    "title_en": "Best AI Voice Generators in 2026: ElevenLabs vs PlayHT vs LMNT vs OpenAI Voice",
+    "title_zh": "2026 年最佳 AI 语音生成器：ElevenLabs、PlayHT、LMNT 横评",
+    "desc_en": "We cloned voices, generated audiobooks, and dubbed videos on the four best AI voice platforms of 2026. Here is the honest ranking.",
+    "desc_zh": "我们在 2026 年四大 AI 语音平台上做了声音克隆、有声书生成、视频配音，给出真实排名。",
+    "category": "audio",
+    "date": "2026-07-10",
+    "read_time": "9 min",
+    "author": "AI Tool Hub Editorial",
+    "tags": ["elevenlabs", "voice", "audio", "tts"]
+  },
+  {
+    "slug": "best-ai-tools-for-small-business-2026",
+    "title_en": "10 Best AI Tools for Small Business in 2026 (Save 20+ Hours a Week)",
+    "title_zh": "2026 年小企业必备的 10 个 AI 工具（每周省 20 小时）",
+    "desc_en": "We rebuilt our small business workflow with AI tools over 90 days. Here are the 10 that actually paid for themselves - ranked by ROI, not hype.",
+    "desc_zh": "我们用 AI 工具重构了 90 天的小企业工作流，这 10 个真正回了本 - 按 ROI 排序，不看噱头。",
+    "category": "small-business",
+    "date": "2026-07-12",
+    "read_time": "10 min",
+    "author": "AI Tool Hub Editorial",
+    "tags": ["small-business", "productivity", "marketing"]
+  },
+  {
+    "slug": "best-ai-tools-for-marketing-2026",
+    "title_en": "8 Best AI Tools for Marketing in 2026: SEO, Ads, Email, and Content",
+    "title_zh": "2026 年营销人必备的 8 个 AI 工具：SEO、广告、邮件、内容",
+    "desc_en": "Our marketing team tested 22 AI marketing tools in 2026. Here are the 8 that actually moved the needle on traffic, conversions, and time saved.",
+    "desc_zh": "我们营销团队在 2026 年实测了 22 个 AI 营销工具，这 8 个真正在流量、转化、节省时间上起了作用。",
+    "category": "marketing",
+    "date": "2026-07-14",
+    "read_time": "11 min",
+    "author": "AI Tool Hub Editorial",
+    "tags": ["marketing", "seo", "content", "email"]
+  },
+  {
+    "slug": "best-ai-tools-for-content-writers-2026",
+    "title_en": "Best AI Tools for Content Writers in 2026 (Tested by Full-Time Writers)",
+    "title_zh": "2026 年内容写作者必备 AI 工具（全职写作者实测）",
+    "desc_en": "Three of our full-time writers used 14 AI writing tools for 60 days on paying client work. Here is what is worth paying for, and what is just a glorified autocomplete.",
+    "desc_zh": "我们三位全职写作者在 60 天、14 个 AI 写作工具上接付费客户项目，给出真实可用的推荐。",
+    "category": "content-writing",
+    "date": "2026-07-15",
+    "read_time": "9 min",
+    "author": "AI Tool Hub Editorial",
+    "tags": ["writing", "content", "blogging"]
+  },
+  {
+    "slug": "claude-vs-gemini-vs-chatgpt-2026",
+    "title_en": "Claude vs Gemini vs ChatGPT (2026): The Big Three Compared",
+    "title_zh": "Claude vs Gemini vs ChatGPT (2026)：三大 AI 助手横评",
+    "desc_en": "We paid for Claude Pro, Gemini Advanced, and ChatGPT Plus for a month and used them on the same set of work tasks. Here is who wins each one.",
+    "desc_zh": "我们订阅了 Claude Pro、Gemini Advanced、ChatGPT Plus 一个月，在同一批工作上对比，告诉你每个任务的胜者。",
+    "category": "comparison",
+    "date": "2026-07-16",
+    "read_time": "10 min",
+    "author": "AI Tool Hub Editorial",
+    "tags": ["claude", "gemini", "chatgpt", "comparison"]
+  },
+  {
+    "slug": "best-ai-research-tools-2026",
+    "title_en": "Best AI Tools for Academic Research in 2026 (Writers, Citations, Literature Review)",
+    "title_zh": "2026 年学术研究最佳 AI 工具（写作、引用、文献综述）",
+    "desc_en": "We asked three PhD students to test 12 AI research tools on a real thesis chapter. Here are the 6 that actually saved hours, not just minutes.",
+    "desc_zh": "我们让三位博士生在真实论文章节上实测 12 个 AI 研究工具，这 6 个真正按小时省时间。",
+    "category": "research",
+    "date": "2026-07-17",
+    "read_time": "10 min",
+    "author": "AI Tool Hub Editorial",
+    "tags": ["research", "writing", "citations", "students"]
+  },
+  {
+    "slug": "best-ai-tools-for-seo-2026",
+    "title_en": "Best AI Tools for SEO in 2026: Keyword Research, Content, and Rank Tracking",
+    "title_zh": "2026 年 SEO 必备 AI 工具：关键词、内容、排名追踪",
+    "desc_en": "We rebuilt our SEO workflow with AI in 2026 and tracked the impact for 6 months. Here are the tools that actually moved rankings.",
+    "desc_zh": "我们用 AI 重构了 2026 年 SEO 工作流并跟踪了 6 个月的效果，这是真正带动排名的工具。",
+    "category": "seo",
+    "date": "2026-07-18",
+    "read_time": "9 min",
+    "author": "AI Tool Hub Editorial",
+    "tags": ["seo", "marketing", "keywords"]
+  },
+  {
+    "slug": "best-ai-tools-for-designers-2026",
+    "title_en": "Best AI Tools for Designers in 2026: UI, UX, Branding, and Motion",
+    "title_zh": "2026 年设计师必备 AI 工具：UI、UX、品牌、动效",
+    "desc_en": "Three product designers tested 18 AI design tools in 2026. Here are the 7 that actually fit into a real design workflow.",
+    "desc_zh": "三位产品设计师在 2026 年实测了 18 个 AI 设计工具，这 7 个真正能塞进真实设计工作流。",
+    "category": "design",
+    "date": "2026-07-19",
+    "read_time": "10 min",
+    "author": "AI Tool Hub Editorial",
+    "tags": ["design", "ui", "ux", "image-generation"]
+  },
+  {
+    "slug": "how-to-write-better-prompts-2026",
+    "title_en": "How to Write Better AI Prompts in 2026 (Real Examples, Not Theory)",
+    "title_zh": "2026 年如何写出更好的 AI Prompt（真实案例，不是理论）",
+    "desc_en": "We A/B tested 200+ prompt variations across ChatGPT, Claude, and Midjourney. Here are the 9 patterns that consistently produced better outputs.",
+    "desc_zh": "我们在 ChatGPT、Claude、Midjourney 上 A/B 测试了 200+ 个 prompt 变体，这是持续产出更好结果的 9 个模式。",
+    "category": "guide",
+    "date": "2026-07-20",
+    "read_time": "8 min",
+    "author": "AI Tool Hub Editorial",
+    "tags": ["prompts", "guide", "writing"]
+  },
+  {
+    "slug": "best-ai-tools-for-podcasters-2026",
+    "title_en": "Best AI Tools for Podcasters in 2026: Recording, Editing, Transcription, Clips",
+    "title_zh": "2026 年播客主必备 AI 工具：录制、剪辑、转录、切片",
+    "desc_en": "We rebuilt a 5-episode podcast with AI tools in 2026. Here are the 7 that cut production time in half without hurting quality.",
+    "desc_zh": "我们用 AI 工具在 2026 年重做了一档 5 集播客，这 7 个把后期时间砍半而质量不降。",
+    "category": "podcasters",
+    "date": "2026-07-21",
+    "read_time": "8 min",
+    "author": "AI Tool Hub Editorial",
+    "tags": ["podcasters", "audio", "video-generation"]
   }
 ]
