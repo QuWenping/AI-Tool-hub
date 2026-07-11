@@ -1,0 +1,173 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Submit Your Sitemap to Google Search Console (2026 Guide)" description="Step-by-step guide to submitting your sitemap to Google Search Console. Includes verification methods, common errors, and how to track indexing progress." keywords="submit sitemap, Google Search Console, GSC, sitemap submission, indexing">
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <span>Submit Sitemap to GSC</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">SEO Guide</span>
+      <h1>How to Submit Your Sitemap to Google Search Console (2026 Guide)</h1>
+      <p class="lede">A practical step-by-step guide to submitting your sitemap to Google Search Console. Includes all 4 verification methods, the 5 most common errors and how to fix them, and how to track your indexing progress over 30 days.</p>
+    </header>
+
+    <section>
+      <h2>Why submit a sitemap at all?</h2>
+      <p>Submitting a sitemap to Google Search Console (GSC) does not guarantee indexing, but it does 3 important things:</p>
+      <ol>
+        <li><strong>Speeds up discovery.</strong> Google can find your pages through links, but a sitemap gives Google a direct map. New pages get crawled 3-5x faster with a sitemap.</li>
+        <li><strong>Provides metadata.</strong> Your sitemap can include lastmod dates, which tells Google which pages changed and which to re-crawl.</li>
+        <li><strong>Helps you monitor.</strong> GSC shows you which pages Google has indexed, which have errors, and which it has never seen.</li>
+      </ol>
+      <p>For a new site, submitting a sitemap is essential. For an established site, it is a best practice.</p>
+    </section>
+
+    <section>
+      <h2>Before you start: what you need</h2>
+      <ul>
+        <li>A Google account (Gmail or Google Workspace)</li>
+        <li>Access to your site DNS records (for domain verification)</li>
+        <li>Access to your site server or hosting (for HTML file upload verification)</li>
+        <li>The URL of your sitemap (usually /sitemap.xml or /sitemap-index.xml)</li>
+        <li>15 minutes</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Step 1: Create a Google Search Console property (2 minutes)</h2>
+      <ol>
+        <li>Go to <a href="https://search.google.com/search-console/" target="_blank" rel="nofollow noopener">search.google.com/search-console</a></li>
+        <li>Sign in with your Google account</li>
+        <li>Click "Add Property" in the top left</li>
+        <li>Choose "URL Prefix" (not "Domain" - URL Prefix is easier for most sites)</li>
+        <li>Enter your full site URL (e.g. https://ai-tool-hub-self.vercel.app)</li>
+        <li>Click "Continue"</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Step 2: Verify ownership (5 minutes)</h2>
+      <p>Google offers 4 verification methods. Pick the one that works for your setup:</p>
+      <h3>Method 1: HTML file upload (easiest for static sites)</h3>
+      <ol>
+        <li>Download the HTML verification file Google provides (something like google1234567890abcdef.html)</li>
+        <li>Upload it to the root of your website (so it is accessible at https://yoursite.com/google1234567890abcdef.html)</li>
+        <li>Click "Verify" in GSC</li>
+        <li>For Astro sites: put the file in /public/ and rebuild</li>
+      </ol>
+      <h3>Method 2: DNS TXT record (best for custom domains)</h3>
+      <ol>
+        <li>Copy the TXT record Google provides (something like google-site-verification=abc123...)</li>
+        <li>Go to your DNS provider (Cloudflare, Namecheap, GoDaddy, etc.)</li>
+        <li>Add a new TXT record for your root domain (@) with the value</li>
+        <li>Wait 5-30 minutes for DNS propagation</li>
+        <li>Click "Verify" in GSC</li>
+      </ol>
+      <h3>Method 3: HTML meta tag (good for CMS sites)</h3>
+      <ol>
+        <li>Copy the meta tag Google provides</li>
+        <li>Add it to the &lt;head&gt; section of your homepage</li>
+        <li>Click "Verify" in GSC</li>
+      </ol>
+      <h3>Method 4: Google Analytics (if you already have it)</h3>
+      <ol>
+        <li>Use the same Google account that owns the GA property for the site</li>
+        <li>Click "Verify" - GSC will pull verification from the GA tracking code</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Step 3: Submit your sitemap (2 minutes)</h2>
+      <ol>
+        <li>In GSC, go to "Sitemaps" in the left sidebar (under "Indexing")</li>
+        <li>In the "Add a new sitemap" box, enter your sitemap URL</li>
+        <li>For Astro sites with @astrojs/sitemap: enter sitemap-index.xml</li>
+        <li>For most CMS sites: enter sitemap.xml</li>
+        <li>Click "Submit"</li>
+      </ol>
+      <p>Google will start fetching your sitemap immediately. Within 24 hours, you should see the status change from "Pending" to "Success" (or an error message - see below).</p>
+    </section>
+
+    <section>
+      <h2>Step 4: Verify it worked (5 minutes)</h2>
+      <ol>
+        <li>Go to "Pages" in the left sidebar (under "Indexing")</li>
+        <li>You should see your pages listed with "Indexed" or "Discovered, currently not indexed" status</li>
+        <li>Click on a specific page to see the indexing details</li>
+        <li>Use the "Inspect any URL" search bar at the top of GSC to check a specific page</li>
+      </ol>
+      <p><strong>Note:</strong> "Indexed" status means Google knows about the page. It does not mean the page ranks for any query. Ranking depends on content quality, backlinks, and many other factors.</p>
+    </section>
+
+    <section>
+      <h2>The 5 most common errors and how to fix them</h2>
+      <h3>Error 1: "Sitemap could not be fetched"</h3>
+      <p><strong>Cause:</strong> The sitemap URL is wrong, returns 404, or has a robots.txt disallow rule.</p>
+      <p><strong>Fix:</strong> Visit the sitemap URL in a browser. It should return valid XML. Check your robots.txt does not disallow /sitemap.xml.</p>
+      <h3>Error 2: "Sitemap contains URLs which are blocked by robots.txt"</h3>
+      <p><strong>Cause:</strong> Your robots.txt disallows some URLs that are in your sitemap.</p>
+      <p><strong>Fix:</strong> Either remove the disallow rule for those URLs, or remove the URLs from the sitemap.</p>
+      <h3>Error 3: "Sitemap is HTML, not XML"</h3>
+      <p><strong>Cause:</strong> Your CMS or framework is serving the sitemap as HTML instead of XML.</p>
+      <p><strong>Fix:</strong> Check the Content-Type header at the sitemap URL. It should be application/xml or text/xml. If it is text/html, your server config is wrong.</p>
+      <h3>Error 4: "Sitemap has too many URLs"</h3>
+      <p><strong>Cause:</strong> Google has a 50,000 URL limit per sitemap. If you have more, you need multiple sitemaps or a sitemap index.</p>
+      <p><strong>Fix:</strong> For Astro: this is handled automatically by @astrojs/sitemap. For WordPress: use the Yoast or RankMath plugin which generates a sitemap index.</p>
+      <h3>Error 5: "Sitemap URLs not accessible"</h3>
+      <p><strong>Cause:</strong> The URLs in the sitemap return 404, 500, or have noindex tags.</p>
+      <p><strong>Fix:</strong> Visit each URL in the sitemap. They should all return 200 and not have noindex meta tags.</p>
+    </section>
+
+    <section>
+      <h2>How to track indexing progress (30-90 days)</h2>
+      <p>Submitting the sitemap is the start, not the end. The 30/60/90 day tracking plan:</p>
+      <h3>Day 1-7: Discovery</h3>
+      <p>Google discovers your pages. Most new sites see 20-40% of pages discovered in week 1.</p>
+      <h3>Day 7-30: Initial indexing</h3>
+      <p>Google starts indexing. You should see 30-60% of pages indexed by day 30.</p>
+      <h3>Day 30-90: Stabilization</h3>
+      <p>Indexing stabilizes. Most well-built sites hit 80-95% indexed by day 90.</p>
+      <p>To track: go to GSC > Pages, sort by "Discovered, currently not indexed" and look for patterns. If specific sections of your site are not getting indexed, that is where the bug is.</p>
+    </section>
+
+    <section>
+      <h2>What to do after the sitemap is submitted</h2>
+      <p>The sitemap is one piece. The other 5 things to do in the first 30 days:</p>
+      <ol>
+        <li><strong>Submit to Bing Webmaster Tools</strong> (similar process, different dashboard)</li>
+        <li><strong>Submit to Yandex Webmaster</strong> (if you have Russian or international traffic)</li>
+        <li><strong>Set up the URL Inspection tool</strong> for your top 20 pages</li>
+        <li><strong>Set up the Performance report</strong> to track clicks and impressions</li>
+        <li><strong>Set up email alerts</strong> for critical issues (manual action, security, indexing errors)</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Frequently asked questions</h2>
+      <h3>How long does it take for Google to index my pages after submitting a sitemap?</h3>
+      <p>Discovery: 1-7 days. Indexing: 7-30 days. Stable: 30-90 days. For a brand new site with no backlinks, expect 60-90 days for full indexing.</p>
+      <h3>Should I submit multiple sitemaps?</h3>
+      <p>Yes, if you have more than 50,000 URLs. Google supports sitemap indexes, which are sitemaps of sitemaps. For sites under 50,000 URLs, a single sitemap is enough.</p>
+      <h3>Do I need to resubmit the sitemap when I add new pages?</h3>
+      <p>No. Google re-fetches your sitemap automatically. Most CMS frameworks ping Google when the sitemap changes, but you do not need to manually resubmit.</p>
+      <h3>What is the difference between a sitemap and robots.txt?</h3>
+      <p>A sitemap is a list of URLs you WANT Google to crawl. robots.txt is a list of URLs you do NOT want Google to crawl. Both are useful, both serve different purposes.</p>
+      <h3>What if Google ignores my sitemap?</h3>
+      <p>Google can choose to ignore URLs in your sitemap (if they are low quality, duplicate, or have noindex tags). The sitemap is a hint, not a directive. For guaranteed indexing, focus on internal linking, backlinks, and content quality.</p>
+    </section>
+
+    <section>
+      <h2>Tools we use for sitemap management</h2>
+      <ul>
+        <li><strong>Astro:</strong> @astrojs/sitemap (generates sitemap automatically on build)</li>
+        <li><strong>Google Search Console:</strong> sitemap submission and monitoring</li>
+        <li><strong>Screaming Frog:</strong> for auditing large sites and generating custom sitemaps</li>
+        <li><strong>Ahrefs:</strong> for sitemap health monitoring and broken link detection</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Get more SEO guides like this</h2>
+      <p>For our full SEO workflow, see <a href="/blog/best-ai-tools-for-seo-2026/">Best AI Tools for SEO in 2026</a>. For our content workflow that produces SEO-friendly posts, see <a href="/blog/how-to-build-a-content-workflow-with-ai-2026/">How to Build a Content Workflow with AI</a>.</p>
+    </section>
+  </article>
+</BaseLayout>

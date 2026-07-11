@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout title="How to Use Claude for Long Documents in 2026 (200K Context Window Tutorial)" description="A practical guide to using Claude 4.5's 200K context window for real work - book analysis, legal contracts, research papers, and code review. With 6 worked examples." keywords="Claude long documents, 200K context window, Claude tutorial, Claude for PDFs, Claude document analysis">
+  <article class="legal-page blog-post">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>How to Use Claude for Long Documents</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">Tutorial</span>
+      <h1>How to Use Claude for Long Documents in 2026 (200K Context Window Tutorial)</h1>
+      <p class="lede">A practical guide to using Claude 4.5's 200K context window for real work. Book analysis, legal contracts, research papers, and code review - with 6 worked examples you can adapt today.</p>
+      <p style="color: var(--text-mute); font-size: 14px; margin-top: 16px;">
+        <i class="far fa-calendar"></i> 2026-07-22 &middot; <i class="far fa-clock"></i> 12 min read &middot; <i class="far fa-user"></i> Aisha Patel, Academic Reviewer
+      </p>
+    </header>
+
+    <section class="blog-content">
+      <p>Claude 4.5's 200K token context window (about 500 pages of text) is the killer feature in 2026. It is the difference between "summarize this article for me" and "read this 300-page book and tell me which chapters support my thesis." This tutorial covers the 6 real-world use cases that justify the Pro subscription on its own.</p>
+
+      <h2>What 200K tokens actually means</h2>
+      <p>200K tokens is roughly 150,000 words, or about 500 pages of single-spaced text. To put that in perspective:</p>
+      <ul>
+        <li>Most novels: 80,000-100,000 words (fits easily)</li>
+        <li>Average PhD thesis: 80,000 words (fits with room to spare)</li>
+        <li>Standard business contracts: 5-30 pages (trivial)</li>
+        <li>Large codebases: a typical Node.js app with 200 source files</li>
+        <li>Research literature reviews: 50-100 papers</li>
+      </ul>
+      <p>The "fits" part is what matters: you can paste an entire book and ask Claude to do something with it, in one shot. No chunking, no embeddings, no RAG setup. Just paste and ask.</p>
+
+      <h2>Use case 1: Read a 300-page book in 10 minutes</h2>
+      <p><strong>Scenario:</strong> You are writing a blog post or a paper and need to engage with a 300-page book you do not have time to read in full.</p>
+      <p><strong>The prompt that works:</strong> "I have pasted [Book Title] by [Author] below. Do three things: (1) Summarize the book in 500 words, focusing on the main argument and the evidence. (2) Identify the 5 most important ideas with page references if possible. (3) List 3 criticisms of the argument that the author does not fully address. After your summary, I will ask you specific questions about chapters."</p>
+      <p><strong>What you get:</strong> A real summary in 30 seconds, the 5 key ideas with chapter references, and 3 critical points you can engage with. Then you can ask follow-ups like "On page 142, what did the author mean by '...'?" and Claude will answer with the surrounding context.</p>
+      <p><strong>Pro tip:</strong> Paste the book in the first message, then use follow-up questions in the same chat. Do not start a new chat for each question - the model needs the book context loaded.</p>
+
+      <h2>Use case 2: Analyze a legal contract before signing</h2>
+      <p><strong>Scenario:</strong> You received a 20-page contract (employment, NDA, vendor agreement) and want to understand the obligations and risks before signing.</p>
+      <p><strong>The prompt that works:</strong> "I have pasted a legal contract below. I am not a lawyer - this is for my own understanding before I sign. Do the following: (1) Summarize the contract in plain English. (2) List all my obligations and the deadlines for each. (3) List all their obligations and the deadlines. (4) Identify any unusual clauses (non-compete, non-solicitation, IP assignment, termination penalties). (5) List 3 things I should ask a lawyer about before signing."</p>
+      <p><strong>What you get:</strong> A 5-section summary in 1 minute. The "unusual clauses" section is the highest-value part - Claude is good at flagging things like "this auto-renews unless you cancel 60 days before" or "this assigns all your pre-existing IP to them."</p>
+      <p><strong>Important:</strong> Claude is not a lawyer. The output is a starting point for your own review, not a replacement for legal advice. Use it to know what to ask a lawyer, not to skip the lawyer.</p>
+
+      <h2>Use case 3: Synthesize a literature review for a thesis</h2>
+      <p><strong>Scenario:</strong> You are writing the literature review for a PhD chapter and have 30-50 papers to engage with. Reading them all would take weeks.</p>
+      <p><strong>The prompt that works:</strong> "I have pasted 30 papers below on [topic]. Help me write a literature review. Do this: (1) Group the papers into 4-5 themes based on their main argument. (2) For each theme, write a 150-word summary that synthesizes the papers in that group. (3) Identify the gaps in the literature - what is missing or under-explored. (4) List the 5 most cited papers and explain why they are foundational."</p>
+      <p><strong>What you get:</strong> A draft literature review structure with thematic groupings, gap analysis, and the key papers highlighted. The output is not the final review (you still need to read each paper carefully and write the synthesis yourself), but the structure saves you 1-2 weeks of organizational work.</p>
+      <p><strong>Pro tip:</strong> Paste 5-10 papers at a time, not 50. The model performs better with smaller batches. Ask for the grouping, then ask for the synthesis of each group.</p>
+
+      <h2>Use case 4: Code review of a 5,000-line PR</h2>
+      <p><strong>Scenario:</strong> You are reviewing a teammate's large PR and want a second opinion before approving.</p>
+      <p><strong>The prompt that works:</strong> "I have pasted a large code change below (a refactor of [system]). Review it for: (1) Bugs that would not be caught by the type system. (2) Performance issues. (3) Security issues. (4) Style consistency with the rest of the codebase. (5) Test coverage gaps. Order findings by severity. Be specific with line numbers."</p>
+      <p><strong>What you get:</strong> A real review in 60 seconds. The model will catch things like "this loop is O(n^2) on the hot path", "this SQL query is missing an index on user_id", or "this is not handling the case where the API returns 500."</p>
+      <p><strong>Pro tip:</strong> For very large PRs, split the review into 2-3 sessions. Do the overall architecture review first, then the per-file review. The model is better at both with focus.</p>
+
+      <h2>Use case 5: Read a 100-page research paper in 15 minutes</h2>
+      <p><strong>Scenario:</strong> A research paper was published in your field and you need to understand it for an upcoming meeting or to cite it in your work.</p>
+      <p><strong>The prompt that works:</strong> "I have pasted a research paper below. Do the following: (1) Summarize it in 300 words, in language a smart non-specialist could follow. (2) State the main contribution in one sentence. (3) Describe the methodology in 3 bullet points. (4) List the 3 most important results with numbers. (5) List the 3 main limitations the authors do not address. (6) In what situations would I cite this paper?"</p>
+      <p><strong>What you get:</strong> A 6-section summary in 45 seconds. The "limitations" section is the highest-value part for academic work - it tells you whether the paper is suitable to cite, and what its weaknesses are.</p>
+
+      <h2>Use case 6: Long-form content drafting with reference material</h2>
+      <p><strong>Scenario:</strong> You need to write a long document (a white paper, a detailed report, a thought leadership piece) and you have reference material you want it to engage with.</p>
+      <p><strong>The prompt that works:</strong> "I have pasted 5 reference articles below on [topic]. Write a 2,000-word white paper that: (1) Synthesizes the key arguments from all 5 sources. (2) Adds an original thesis that goes beyond what any single source argues. (3) Cites specific sources with [Author, Year] format. (4) Has a clear structure (intro, 3 main sections, conclusion). (5) Includes concrete examples, not just abstract claims."</p>
+      <p><strong>What you get:</strong> A real first draft in 90 seconds. The output will be 60-70% of what you would write yourself. You still need to edit for voice, fact-check the citations, and add your perspective. But the structural work and the synthesis are done.</p>
+
+      <h2>The 5 rules for using long context well</h2>
+      <p>From 18 months of daily use with 200K context, the rules that matter:</p>
+      <ol>
+        <li><strong>Always specify the task first.</strong> Do not just paste a document and ask "what do you think". Tell Claude exactly what you want: summary, analysis, critique, comparison, extraction. The more specific the task, the better the output.</li>
+        <li><strong>Use follow-up questions, not new chats.</strong> The model needs the document context. A new chat is empty. Stay in the same conversation and ask follow-ups.</li>
+        <li><strong>Verify facts and quotes.</strong> Claude can hallucinate page numbers and quotes in long documents. If you need to cite a specific page, verify it yourself.</li>
+        <li><strong>Chunk large tasks.</strong> For a 500-page book, do the summary first, then the per-chapter analysis, then the synthesis. Sequential is better than one massive prompt.</li>
+        <li><strong>Use the chat memory.</strong> Claude remembers the document throughout the chat. Reference back to it ("the section about X" or "the example on page 142") to test the model's understanding.</li>
+      </ol>
+
+      <h2>What 200K context is NOT good for</h2>
+      <p>Honest list of where 200K context does not help:</p>
+      <ul>
+        <li><strong>Real-time information.</strong> The context window is for the documents you paste, not for "what is the weather today". Use Perplexity or ChatGPT for that.</li>
+        <li><strong>Long conversations where you do not need the full history.</strong> The model does use the full history, which can be slow. For long-running projects, summarize the conversation and start a new chat periodically.</li>
+        <li><strong>Highly structured data like spreadsheets.</strong> For a 10,000-row CSV, use the Advanced Data Analysis mode in ChatGPT, not the long context.</li>
+        <li><strong>Code generation at scale.</strong> For a 100K token codebase, you want Cursor or Copilot with proper code indexing, not Claude's long context.</li>
+      </ul>
+
+      <h2>What to do next</h2>
+      <p>For the broader Claude vs other assistants comparison, see our <a href="/blog/chatgpt-vs-claude-which-should-you-pick-2026/">ChatGPT vs Claude guide</a> and the <a href="/best/text/">full writing tools directory</a>. For research-specific workflows, see <a href="/blog/best-ai-research-tools-2026/">our research tools guide</a>.</p>
+
+      <p>Have a long-document workflow that works for you? <a href="/contact/">Send it to us</a> and we will feature the best ones.</p>
+    </section>
+
+    <section style="margin-top: 40px;">
+      <h3>Tags</h3>
+      <div class="audience-tags">
+        <span class="audience-tag">#claude</span>
+        <span class="audience-tag">#long-documents</span>
+        <span class="audience-tag">#tutorial</span>
+        <span class="audience-tag">#how-to</span>
+        <span class="audience-tag">#200k</span>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

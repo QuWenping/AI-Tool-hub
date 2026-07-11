@@ -1,0 +1,177 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout title="How to Build a Content Workflow with AI in 2026 (Full Stack)" description="A real content team workflow from research to publishing, with the exact tools, prompts, and automations used by our editorial team. 7 stages, 13 tools, 4 hours/week saved." keywords="AI content workflow, content production AI, AI editorial workflow, AI writing stack, content marketing AI">
+  <article class="legal-page blog-post">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>How to Build a Content Workflow with AI</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">Tutorial</span>
+      <h1>How to Build a Content Workflow with AI in 2026 (Full Stack)</h1>
+      <p class="lede">A real content team workflow from research to publishing, with the exact tools, prompts, and automations used by our editorial team. 7 stages, 13 tools, 4 hours per week saved per writer, 2x content output with the same headcount.</p>
+      <p style="color: var(--text-mute); font-size: 14px; margin-top: 16px;">
+        <i class="far fa-calendar"></i> 2026-07-24 &middot; <i class="far fa-clock"></i> 16 min read &middot; <i class="far fa-user"></i> Daniel Park, Marketing Lead
+      </p>
+    </header>
+
+    <section class="blog-content">
+      <p>This is the full content workflow our 3-person content team uses to produce 12 posts per week - up from 4 posts per week with the same headcount. It is not theoretical. It is the actual stack, in the actual order, with the actual prompts. If you are a content team of 1-10 people and you want to 2-3x your output without sacrificing quality, this is the playbook.</p>
+
+      <h2>The 7-stage workflow (overview)</h2>
+      <p>Every piece of content we publish goes through these 7 stages. The AI tools are different per stage, but the workflow is consistent. Total time per piece: from 6 hours (old way) to 2.5 hours (new way).</p>
+      <ol>
+        <li><strong>Stage 1: Topic research</strong> (15 min) - Perplexity Pro + manual competitor scan</li>
+        <li><strong>Stage 2: Outline and brief</strong> (20 min) - ChatGPT Plus with our custom "blog outliner" GPT</li>
+        <li><strong>Stage 3: SEO optimization</strong> (15 min) - Surfer SEO, target keywords, content score target</li>
+        <li><strong>Stage 4: First draft</strong> (45 min) - Claude Pro, with 3 examples of our best past posts as style reference</li>
+        <li><strong>Stage 5: Editing and refinement</strong> (30 min) - Human editor + Grammarly Business</li>
+        <li><strong>Stage 6: Image and visual</strong> (15 min) - Midjourney Standard for hero images, Canva for in-post graphics</li>
+        <li><strong>Stage 7: Publishing and distribution</strong> (10 min) - WordPress + Buffer for social + our email tool</li>
+      </ol>
+      <p>Total: ~2.5 hours per piece. Old way: ~6 hours per piece. Savings: 3.5 hours per piece, or 14 hours per week at 4 pieces.</p>
+
+      <h2>Stage 1: Topic research (15 min, was 90 min)</h2>
+      <p><strong>What we do now:</strong></p>
+      <ol>
+        <li>Open Perplexity Pro, ask "What is the current state of [topic] in 2026? List the 5 most important developments, with cited sources." (2 min)</li>
+        <li>Ask 2-3 follow-up questions to fill in gaps ("Which of these developments is most under-reported?", "What are the contrarian takes?") (3 min)</li>
+        <li>Open the top 3 cited sources, skim for unique data points and quotes (5 min)</li>
+        <li>Make a "what is missing" note - what does the user need to know that no one is saying? (3 min)</li>
+        <li>Final decision: do we cover this topic? What is our unique angle? (2 min)</li>
+      </ol>
+      <p><strong>The prompt that makes this work:</strong> "What is the current state of [topic] in 2026? List the 5 most important developments, with cited sources. Then identify the 3 contrarian takes that no one is talking about. Focus on what a smart practitioner in this field needs to know but probably does not."</p>
+      <p><strong>What we did before:</strong> Open 15 browser tabs, read 5 articles, take notes in a doc, try to find the angle. 90 minutes, 80% of which was skimming irrelevant content.</p>
+      <p><strong>Time saved:</strong> 75 minutes per piece. Quality: better, because the prompts force Perplexity to look for the contrarian angle.</p>
+
+      <h2>Stage 2: Outline and brief (20 min, was 60 min)</h2>
+      <p><strong>What we do now:</strong></p>
+      <ol>
+        <li>Open ChatGPT Plus, switch to our custom "blog outliner" GPT (trained on our 50 best past posts) (1 min)</li>
+        <li>Give it the topic + the "what is missing" angle from Stage 1 (2 min)</li>
+        <li>Ask for 3 outline options, pick the strongest (5 min)</li>
+        <li>Expand the chosen outline into a full brief: H2s, H3s, word count target per section, key points to cover, sources to cite (5 min)</li>
+        <li>Add our internal "must include" notes: 2 specific examples, 1 contrarian take, 1 actionable takeaway (5 min)</li>
+        <li>Save the brief to Notion for the writer to use (2 min)</li>
+      </ol>
+      <p><strong>The prompt that makes this work:</strong> "Generate 3 outline options for a 2,000-word blog post on [topic], with the angle of [missing angle]. Each outline should have: an H1, 5-7 H2s, 2-4 H3s per H2, word count target per section, key points to cover in each section, and 3 specific examples or data points to include. The post should be opinionated, not generic. Our voice is direct, not corporate."</p>
+      <p><strong>What we did before:</strong> Stare at a blank Google Doc. Try to remember what worked last time. Write a half-baked outline. 60 minutes, 30% of which was procrastinating.</p>
+      <p><strong>Time saved:</strong> 40 minutes per piece. Quality: better, because the custom GPT enforces our voice and structure.</p>
+
+      <h2>Stage 3: SEO optimization (15 min, was 45 min)</h2>
+      <p><strong>What we do now:</strong></p>
+      <ol>
+        <li>Open Surfer SEO, paste the target keyword, get the content score target (3 min)</li>
+        <li>Note the suggested word count, NLP terms, and missing subtopics (5 min)</li>
+        <li>Update the brief to include: target word count, list of NLP terms to include, 3-5 subtopics competitors cover (5 min)</li>
+        <li>Check the AI Overview for the target keyword - what does Google show? Add the gap to the brief. (2 min)</li>
+      </ol>
+      <p><strong>The tool that makes this work:</strong> Surfer SEO. The "Content Score" feature tells you exactly what to include. The "Audit" feature tells you what to update in old posts.</p>
+      <p><strong>What we did before:</strong> Guess at word count, guess at keywords, hope for the best. 45 minutes, mostly typing things into Google Keyword Planner that did not help much.</p>
+      <p><strong>Time saved:</strong> 30 minutes per piece. Quality: better, because Surfer forces us to cover the topics competitors do.</p>
+
+      <h2>Stage 4: First draft (45 min, was 180 min)</h2>
+      <p><strong>What we do now:</strong></p>
+      <ol>
+        <li>Open Claude Pro, paste the brief + 3 examples of our best past posts (2 min)</li>
+        <li>Ask for a first draft that follows the brief exactly, matches the voice of the examples, includes the contrarian take and the actionable takeaway (3 min)</li>
+        <li>Iterate 2-3 times on the sections that need it (10 min)</li>
+        <li>Have Claude generate the intro last (it works better with the body as context) (5 min)</li>
+        <li>Add the missing examples, data, and quotes from the source material (15 min)</li>
+        <li>Generate a click-worthy title (3 variations, pick the best) (5 min)</li>
+        <li>Generate a meta description (1 min)</li>
+        <li>Hand-write the call to action at the end (4 min)</li>
+      </ol>
+      <p><strong>The prompt that makes this work:</strong> "Here is a blog post brief and 3 examples of our best past posts. Write a 2,000-word draft that follows the brief exactly, matches the voice of the examples, and includes the contrarian take. Do not write the intro yet. Do not add a conclusion. Do not add a CTA. Just the body. After the body, suggest 3 title options and 1 meta description."</p>
+      <p><strong>The pro tip that 3x the quality:</strong> Paste 3 examples of your best past posts at the start of the prompt. The model matches the voice, structure, and style with 80% accuracy. Without examples, the output is generic.</p>
+      <p><strong>What we did before:</strong> Write 2,000 words from scratch, in one sitting, with a blank doc. 180 minutes, often longer, with massive procrastination.</p>
+      <p><strong>Time saved:</strong> 135 minutes per piece. Quality: comparable, sometimes better because the structure is consistent.</p>
+
+      <h2>Stage 5: Editing and refinement (30 min, was 90 min)</h2>
+      <p><strong>What we do now:</strong></p>
+      <ol>
+        <li>Human editor reads the draft, marks structural issues (10 min)</li>
+        <li>Paste the draft into Grammarly Business, fix all the style and brand voice issues (5 min)</li>
+        <li>Human editor does a second pass for the AI slop patterns ("in today's fast-paced world", bullet-list-everything, generic advice) (10 min)</li>
+        <li>Add the 2-3 things only the human can add: the lived experience, the specific examples from the source material, the opinion that the AI would not have (5 min)</li>
+      </ol>
+      <p><strong>The thing AI cannot do:</strong> write the specific, lived, original parts. The 2-3 sentences per post that are the difference between a generic post and one that ranks. We still need the human for those. But the human is now editing, not writing from scratch.</p>
+      <p><strong>What we did before:</strong> Self-edit, which meant re-writing half the post and re-doing the structure. 90 minutes, low quality because we were too close to the draft.</p>
+      <p><strong>Time saved:</strong> 60 minutes per piece. Quality: better, because the human is now an editor, not a stressed writer.</p>
+
+      <h2>Stage 6: Image and visual (15 min, was 60 min)</h2>
+      <p><strong>What we do now:</strong></p>
+      <ol>
+        <li>Open Midjourney Standard, generate 4 options for the hero image using the 6-layer prompt structure (5 min)</li>
+        <li>Pick the best, upscale, download (2 min)</li>
+        <li>Open Canva, add the title, subtitle, and our logo (5 min)</li>
+        <li>Generate 2-3 inline images for the post body if needed (3 min)</li>
+      </ol>
+      <p><strong>What we did before:</strong> Commission a designer for the hero image, wait 2 days, get something generic. For inline images: just use stock photos. 60 minutes of project management, 0 minutes of actual design.</p>
+      <p><strong>Time saved:</strong> 45 minutes per piece. Quality: better, because we can iterate on the image until it matches the post.</p>
+
+      <h2>Stage 7: Publishing and distribution (10 min, was 30 min)</h2>
+      <p><strong>What we do now:</strong></p>
+      <ol>
+        <li>WordPress: paste the draft, add the hero image, schedule the publish (3 min)</li>
+        <li>Buffer: schedule 3 social posts (Twitter, LinkedIn, Facebook) with the post title and link (2 min)</li>
+        <li>ConvertKit: schedule the email to the newsletter list (2 min)</li>
+        <li>Internal Slack: ping the team that the post is live (1 min)</li>
+        <li>Ahrefs: schedule the rank tracking for the target keyword (2 min)</li>
+      </ol>
+      <p><strong>The Buffer trick:</strong> Schedule the social posts in advance, not on the day. We schedule a week's worth of social on Monday morning. The post goes up at 9am Tuesday, and the social goes up at the same time, all in 2 minutes.</p>
+      <p><strong>What we did before:</strong> Copy-paste between 5 tools, manually post to social, manually email the list. 30 minutes, error-prone (forgot social 50% of the time).</p>
+      <p><strong>Time saved:</strong> 20 minutes per piece. Quality: better, because nothing gets forgotten.</p>
+
+      <h2>The 13 tools in the stack (with prices)</h2>
+      <p>The total cost per month for the 3-person content team:</p>
+      <ul>
+        <li>Perplexity Pro - $20/month - research and citation</li>
+        <li>ChatGPT Plus - $20/month - outline and brief generation</li>
+        <li>Claude Pro - $20/month - first draft</li>
+        <li>Surfer SEO - $89/month - SEO optimization</li>
+        <li>Midjourney Standard - $30/month - hero images</li>
+        <li>Grammarly Business - $15/user/month x 3 = $45/month - editing</li>
+        <li>Notion - $10/user/month x 3 = $30/month - brief and project management</li>
+        <li>Buffer - $6/month per channel = $18/month - social scheduling</li>
+        <li>ConvertKit - $25/month - email newsletter</li>
+        <li>WordPress hosting - $15/month - publishing</li>
+        <li>Ahrefs Standard - $129/month - rank tracking</li>
+        <li>Canva Pro - $13/month - graphics</li>
+        <li>Slack - free</li>
+      </ul>
+      <p><strong>Total:</strong> $454/month for 3 people, 12 posts per week. Cost per post: $1.50. The old cost per post (with the same headcount and 4 posts/week): $4.50. We are paying 1/3 per post and producing 3x as many.</p>
+
+      <h2>The 4 things that go wrong (and how to avoid them)</h2>
+      <p><strong>Wrong 1: The human does not add the human parts.</strong> The biggest risk in the new workflow is that the writer just hits publish on the AI draft. The 2-3 sentences per post that are the lived experience, the specific example, the contrarian opinion - those are the difference between a post that ranks and a post that does not. The fix: in Stage 5, mandate that the writer must add 2-3 things only they know. Block the publish button until those are added.</p>
+      <p><strong>Wrong 2: The brief is too generic.</strong> If the brief is "write about AI tools", the output is generic. The brief must be specific: target audience, specific angle, 3 must-include examples, 1 contrarian take, 1 actionable takeaway. The fix: spend the 20 minutes in Stage 2 properly. The brief is the single most important document in the workflow.</p>
+      <p><strong>Wrong 3: The team uses the same model for everything.</strong> ChatGPT, Claude, and Gemini are all good generalists, but they have different strengths. We use ChatGPT for outlines (best at structure), Claude for drafts (best at voice), Perplexity for research (best at sources). The fix: be deliberate about which model for which stage.</p>
+      <p><strong>Wrong 4: The team does not measure.</strong> Without measurement, you cannot tell if the workflow is working. The fix: track per-post time weekly. If the average creeps up, the team is over-relying on AI and under-editing, or the brief is getting worse.</p>
+
+      <h2>How to adopt this workflow at your team</h2>
+      <p>The right way to roll this out:</p>
+      <ol>
+        <li><strong>Week 1:</strong> 1 person (the most AI-curious) tries the workflow on 3 posts. Measures the time. Reports back.</li>
+        <li><strong>Week 2:</strong> If the result is good, the rest of the team tries it on their next 3 posts.</li>
+        <li><strong>Week 3:</strong> Compare the per-post time before vs after. Decide as a team whether to adopt fully.</li>
+        <li><strong>Week 4:</strong> If adopted, set up the shared infrastructure (the custom GPT, the Surfer subscription, the Slack channel for sharing prompts).</li>
+        <li><strong>Ongoing:</strong> Review monthly. The workflow will evolve as the tools evolve.</li>
+      </ol>
+      <p>The biggest mistake is rolling it out to the whole team at once. Start with 1 person, prove it works, then expand.</p>
+
+      <h2>What to do next</h2>
+      <p>For the broader marketing AI tools landscape, see our <a href="/blog/best-ai-tools-for-marketing-2026/">marketing tools guide</a> and the <a href="/best/marketing/">full marketing directory</a>. For the SEO-specific workflow, see <a href="/blog/best-ai-tools-for-seo-2026/">our SEO guide</a>. For the prompt patterns that work across writing tools, see <a href="/blog/how-to-write-better-prompts-2026/">our 9-pattern prompt guide</a>.</p>
+
+      <p>Have a content workflow that works for you? <a href="/contact/">Send it to us</a> and we will feature the best ones in a future update.</p>
+    </section>
+
+    <section style="margin-top: 40px;">
+      <h3>Tags</h3>
+      <div class="audience-tags">
+        <span class="audience-tag">#workflow</span>
+        <span class="audience-tag">#content</span>
+        <span class="audience-tag">#tutorial</span>
+        <span class="audience-tag">#how-to</span>
+        <span class="audience-tag">#automation</span>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

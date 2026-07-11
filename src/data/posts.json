@@ -8,8 +8,13 @@
     "category": "students",
     "date": "2026-06-03",
     "read_time": "8 min",
-    "author": "AI Tool Hub Editorial",
-    "tags": ["free", "students", "writing", "research"]
+    "author": "Lin Chen",
+    "tags": [
+      "free",
+      "students",
+      "writing",
+      "research"
+    ]
   },
   {
     "slug": "chatgpt-vs-claude-which-should-you-pick-2026",
@@ -20,8 +25,14 @@
     "category": "comparison",
     "date": "2026-06-18",
     "read_time": "10 min",
-    "author": "AI Tool Hub Editorial",
-    "tags": ["chatgpt", "claude", "comparison", "writing", "coding"]
+    "author": "Lin Chen",
+    "tags": [
+      "chatgpt",
+      "claude",
+      "comparison",
+      "writing",
+      "coding"
+    ]
   },
   {
     "slug": "best-ai-image-generators-compared-2026",
@@ -32,8 +43,15 @@
     "category": "image-generation",
     "date": "2026-06-28",
     "read_time": "12 min",
-    "author": "AI Tool Hub Editorial",
-    "tags": ["midjourney", "stable-diffusion", "dall-e", "flux", "ideogram", "image-generation"]
+    "author": "Sofia Reyes",
+    "tags": [
+      "midjourney",
+      "stable-diffusion",
+      "dall-e",
+      "flux",
+      "ideogram",
+      "image-generation"
+    ]
   },
   {
     "slug": "cursor-vs-github-copilot-2026",
@@ -44,8 +62,13 @@
     "category": "coding",
     "date": "2026-07-05",
     "read_time": "11 min",
-    "author": "AI Tool Hub Editorial",
-    "tags": ["cursor", "github-copilot", "coding", "comparison"]
+    "author": "Marcus Webb",
+    "tags": [
+      "cursor",
+      "github-copilot",
+      "coding",
+      "comparison"
+    ]
   },
   {
     "slug": "best-ai-video-generators-2026",
@@ -56,8 +79,14 @@
     "category": "video-generation",
     "date": "2026-07-08",
     "read_time": "13 min",
-    "author": "AI Tool Hub Editorial",
-    "tags": ["sora", "runway", "pika", "kling", "video-generation"]
+    "author": "Sofia Reyes",
+    "tags": [
+      "sora",
+      "runway",
+      "pika",
+      "kling",
+      "video-generation"
+    ]
   },
   {
     "slug": "best-ai-voice-generators-2026",
@@ -68,8 +97,13 @@
     "category": "audio",
     "date": "2026-07-10",
     "read_time": "9 min",
-    "author": "AI Tool Hub Editorial",
-    "tags": ["elevenlabs", "voice", "audio", "tts"]
+    "author": "Lin Chen",
+    "tags": [
+      "elevenlabs",
+      "voice",
+      "audio",
+      "tts"
+    ]
   },
   {
     "slug": "best-ai-tools-for-small-business-2026",
@@ -80,20 +114,29 @@
     "category": "small-business",
     "date": "2026-07-12",
     "read_time": "10 min",
-    "author": "AI Tool Hub Editorial",
-    "tags": ["small-business", "productivity", "marketing"]
+    "author": "Daniel Park",
+    "tags": [
+      "small-business",
+      "productivity",
+      "marketing"
+    ]
   },
   {
     "slug": "best-ai-tools-for-marketing-2026",
-    "title_en": "8 Best AI Tools for Marketing in 2026: SEO, Ads, Email, and Content",
+    "title_en": "Best AI Tools for Marketing in 2026: SEO, Ads, Email, and Content",
     "title_zh": "2026 年营销人必备的 8 个 AI 工具：SEO、广告、邮件、内容",
     "desc_en": "Our marketing team tested 22 AI marketing tools in 2026. Here are the 8 that actually moved the needle on traffic, conversions, and time saved.",
     "desc_zh": "我们营销团队在 2026 年实测了 22 个 AI 营销工具，这 8 个真正在流量、转化、节省时间上起了作用。",
     "category": "marketing",
     "date": "2026-07-14",
     "read_time": "11 min",
-    "author": "AI Tool Hub Editorial",
-    "tags": ["marketing", "seo", "content", "email"]
+    "author": "Daniel Park",
+    "tags": [
+      "marketing",
+      "seo",
+      "content",
+      "email"
+    ]
   },
   {
     "slug": "best-ai-tools-for-content-writers-2026",
@@ -104,8 +147,12 @@
     "category": "content-writing",
     "date": "2026-07-15",
     "read_time": "9 min",
-    "author": "AI Tool Hub Editorial",
-    "tags": ["writing", "content", "blogging"]
+    "author": "Lin Chen",
+    "tags": [
+      "writing",
+      "content",
+      "blogging"
+    ]
   },
   {
     "slug": "claude-vs-gemini-vs-chatgpt-2026",
@@ -116,8 +163,13 @@
     "category": "comparison",
     "date": "2026-07-16",
     "read_time": "10 min",
-    "author": "AI Tool Hub Editorial",
-    "tags": ["claude", "gemini", "chatgpt", "comparison"]
+    "author": "Lin Chen",
+    "tags": [
+      "claude",
+      "gemini",
+      "chatgpt",
+      "comparison"
+    ]
   },
   {
     "slug": "best-ai-research-tools-2026",
@@ -128,20 +180,29 @@
     "category": "research",
     "date": "2026-07-17",
     "read_time": "10 min",
-    "author": "AI Tool Hub Editorial",
-    "tags": ["research", "writing", "citations", "students"]
+    "author": "Aisha Patel",
+    "tags": [
+      "research",
+      "writing",
+      "citations",
+      "students"
+    ]
   },
   {
     "slug": "best-ai-tools-for-seo-2026",
     "title_en": "Best AI Tools for SEO in 2026: Keyword Research, Content, and Rank Tracking",
     "title_zh": "2026 年 SEO 必备 AI 工具：关键词、内容、排名追踪",
-    "desc_en": "We rebuilt our SEO workflow with AI in 2026 and tracked the impact for 6 months. Here are the tools that actually moved rankings.",
+    "desc_en": "We rebuilt our SEO workflow with AI in 2026 and tracked the impact for 6 months. Here are the tools that actually moved rankings, with real before/after data.",
     "desc_zh": "我们用 AI 重构了 2026 年 SEO 工作流并跟踪了 6 个月的效果，这是真正带动排名的工具。",
     "category": "seo",
     "date": "2026-07-18",
     "read_time": "9 min",
-    "author": "AI Tool Hub Editorial",
-    "tags": ["seo", "marketing", "keywords"]
+    "author": "Daniel Park",
+    "tags": [
+      "seo",
+      "marketing",
+      "keywords"
+    ]
   },
   {
     "slug": "best-ai-tools-for-designers-2026",
@@ -152,8 +213,13 @@
     "category": "design",
     "date": "2026-07-19",
     "read_time": "10 min",
-    "author": "AI Tool Hub Editorial",
-    "tags": ["design", "ui", "ux", "image-generation"]
+    "author": "Sofia Reyes",
+    "tags": [
+      "design",
+      "ui",
+      "ux",
+      "image-generation"
+    ]
   },
   {
     "slug": "how-to-write-better-prompts-2026",
@@ -164,8 +230,12 @@
     "category": "guide",
     "date": "2026-07-20",
     "read_time": "8 min",
-    "author": "AI Tool Hub Editorial",
-    "tags": ["prompts", "guide", "writing"]
+    "author": "Lin Chen",
+    "tags": [
+      "prompts",
+      "guide",
+      "writing"
+    ]
   },
   {
     "slug": "best-ai-tools-for-podcasters-2026",
@@ -176,7 +246,117 @@
     "category": "podcasters",
     "date": "2026-07-21",
     "read_time": "8 min",
-    "author": "AI Tool Hub Editorial",
-    "tags": ["podcasters", "audio", "video-generation"]
+    "author": "Marcus Webb",
+    "tags": [
+      "podcasters",
+      "audio",
+      "video-generation"
+    ]
+  },
+  {
+    "slug": "how-to-use-chatgpt-for-coding-2026",
+    "title_en": "How to Use ChatGPT for Coding in 2026 (Step-by-Step Tutorial)",
+    "title_zh": "2026 年如何用 ChatGPT 写代码（分步教程）",
+    "desc_en": "A practical 15-minute walkthrough of how to use ChatGPT for real coding work - from setup to debugging to code review. With 8 real examples.",
+    "desc_zh": "15 分钟实操教程：如何用 ChatGPT 写代码 - 从配置到调试到 code review。8 个真实案例。",
+    "category": "tutorial",
+    "date": "2026-07-22",
+    "read_time": "15 min",
+    "author": "Marcus Webb",
+    "tags": [
+      "chatgpt",
+      "coding",
+      "tutorial",
+      "how-to"
+    ]
+  },
+  {
+    "slug": "how-to-use-claude-for-long-documents-2026",
+    "title_en": "How to Use Claude for Long Documents in 2026 (200K Context Window Tutorial)",
+    "title_zh": "2026 年如何用 Claude 处理长文档（200K 上下文教程）",
+    "desc_en": "A practical guide to using Claude 4.5s 200K context window for real work - book analysis, legal contracts, research papers, and code review. With 6 worked examples.",
+    "desc_zh": "实操指南：如何用 Claude 4.5 的 200K 上下文做真实工作 - 书籍分析、法律合同、学术论文、code review。6 个真实案例。",
+    "category": "tutorial",
+    "date": "2026-07-22",
+    "read_time": "12 min",
+    "author": "Aisha Patel",
+    "tags": [
+      "claude",
+      "long-documents",
+      "tutorial",
+      "how-to"
+    ]
+  },
+  {
+    "slug": "how-to-write-prompts-for-midjourney-2026",
+    "title_en": "How to Write Midjourney Prompts in 2026 (The 7-Pattern Framework)",
+    "title_zh": "2026 年如何写 Midjourney Prompt（7 模式框架）",
+    "desc_en": "Stop guessing. The 7 Midjourney prompt patterns that consistently produce publishable images, with 20 real before/after examples and the exact prompts to copy.",
+    "desc_zh": "别再猜了。7 个能稳定产出可发布图像的 Midjourney prompt 模式，20 个真实前后对比和可直接复制的 prompt。",
+    "category": "tutorial",
+    "date": "2026-07-23",
+    "read_time": "14 min",
+    "author": "Sofia Reyes",
+    "tags": [
+      "midjourney",
+      "prompts",
+      "image-generation",
+      "tutorial",
+      "how-to"
+    ]
+  },
+  {
+    "slug": "how-to-set-up-cursor-for-your-team-2026",
+    "title_en": "How to Set Up Cursor for Your Development Team in 2026 (5-Step Guide)",
+    "title_zh": "2026 年如何为开发团队部署 Cursor（5 步指南）",
+    "desc_en": "A 5-step guide to rolling out Cursor across an engineering team - license management, code indexing, custom rules, and how to measure productivity gains. Includes a real team rollout case study.",
+    "desc_zh": "5 步指南：在工程团队中推广 Cursor - 许可证管理、代码索引、自定义规则、如何衡量生产力提升。包含一个真实团队推广案例研究。",
+    "category": "tutorial",
+    "date": "2026-07-23",
+    "read_time": "13 min",
+    "author": "Marcus Webb",
+    "tags": [
+      "cursor",
+      "coding",
+      "tutorial",
+      "how-to",
+      "team"
+    ]
+  },
+  {
+    "slug": "how-to-use-elevenlabs-for-podcasts-2026",
+    "title_en": "How to Use ElevenLabs for Podcasts in 2026 (Voice Cloning Tutorial)",
+    "title_zh": "2026 年如何用 ElevenLabs 做播客（声音克隆教程）",
+    "desc_en": "A 6-step guide to using ElevenLabs voice cloning for real podcast production - from recording your voice sample to deploying the cloned voice across episodes. With audio examples.",
+    "desc_zh": "6 步指南：如何用 ElevenLabs 声音克隆做真实播客制作 - 从录制声音样本到在多集节目中部署克隆声音。包含音频示例。",
+    "category": "tutorial",
+    "date": "2026-07-24",
+    "read_time": "11 min",
+    "author": "Marcus Webb",
+    "tags": [
+      "elevenlabs",
+      "voice-cloning",
+      "podcast",
+      "tutorial",
+      "how-to"
+    ]
+  },
+  {
+    "slug": "how-to-build-a-content-workflow-with-ai-2026",
+    "title_en": "How to Build a Content Workflow with AI in 2026 (Full Stack)",
+    "title_zh": "2026 年如何用 AI 搭建内容生产工作流（完整技术栈）",
+    "desc_en": "A real content team workflow from research to publishing, with the exact tools, prompts, and automations used by our editorial team. 7 stages, 13 tools, 4 hours/week saved.",
+    "desc_zh": "一个真实内容团队的工作流：从研究到发布，包含我们编辑团队使用的所有工具、prompt 和自动化。7 个阶段、13 个工具、每周省 4 小时。",
+    "category": "tutorial",
+    "date": "2026-07-24",
+    "read_time": "16 min",
+    "author": "Daniel Park",
+    "tags": [
+      "workflow",
+      "content",
+      "tutorial",
+      "how-to",
+      "automation"
+    ]
   }
 ]

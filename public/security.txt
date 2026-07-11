@@ -1,0 +1,3 @@
+Contact: mailto:security@ai-tool-hub.example
+Expires: 20271231T235959Z
+Preferred-Languages: en, zh

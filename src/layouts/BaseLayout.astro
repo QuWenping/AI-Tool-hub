@@ -7,8 +7,8 @@ const fullTitle = title ? title + " | AI Tool Hub" : "AI Tool Hub | Best AI Tool
 const desc = description || "Explore curated AI tools for writing, coding, image generation, video, audio and productivity.";
 const kw = keywords || "AI tools, best AI tools, AI writing, AI coding, AI image generators";
 const url = canonical || siteUrl + Astro.url.pathname;
-// Embed the dataset only on the homepage so main.js can render cards client-side
 const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "/index.html";
+const ogImage = siteUrl + "/og-image.svg";
 ---
 <!DOCTYPE html>
 <html lang={lang === "zh" ? "zh-CN" : "en-US"}>
@@ -19,19 +19,99 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "/index.html
   <meta name="description" content={desc}>
   <meta name="keywords" content={kw}>
   <link rel="canonical" href={url}>
+  <meta name="author" content="AI Tool Hub Editorial Team">
+  <meta name="publisher" content="AI Tool Hub">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#3b82f6">
+  <meta name="application-name" content="AI Tool Hub">
+  <meta name="apple-mobile-web-app-title" content="AI Tool Hub">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.svg">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta name="msapplication-TileColor" content="#3b82f6">
+
   <meta property="og:title" content={fullTitle}>
   <meta property="og:description" content={desc}>
   <meta property="og:type" content="website">
   <meta property="og:url" content={url}>
+  <meta property="og:image" content={ogImage}>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AI Tool Hub - Best AI Tools Directory">
+  <meta property="og:site_name" content="AI Tool Hub">
+  <meta property="og:locale" content={lang === "zh" ? "zh_CN" : "en_US"}>
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="AI Tool Hub Editorial">
+
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content={fullTitle}>
   <meta name="twitter:description" content={desc}>
+  <meta name="twitter:image" content={siteUrl + "/twitter-card.svg"}>
+  <meta name="twitter:image:alt" content="AI Tool Hub - Best AI Tools Directory">
+  <meta name="twitter:site" content="@aitoolhub">
+  <meta name="twitter:creator" content="@aitoolhub">
+
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
   <link rel="alternate" hreflang="en" href={siteUrl + Astro.url.pathname.replace(/^\/zh/, "")}>
   <link rel="alternate" hreflang="zh" href={siteUrl + Astro.url.pathname}>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AI Tool Hub","url":"https://ai-tool-hub-self.vercel.app"}</script>
+  <link rel="alternate" hreflang="x-default" href={siteUrl + Astro.url.pathname}>
+  <link rel="canonical" href={url}>
+
+  <meta name="geo.region" content="US">
+  <meta name="geo.placename" content="United States">
+  <meta name="language" content={lang === "zh" ? "zh-CN" : "en-US"}>
+  <meta name="distribution" content="global">
+  <meta name="rating" content="general">
+  <meta name="revisit-after" content="3 days">
+  <meta name="category" content="technology, AI, software">
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AI Tool Hub",
+    "alternateName": "AI Tool Hub - Best AI Tools Directory",
+    "url": siteUrl,
+    "description": "Hand-tested reviews of the best AI tools for writing, coding, image generation, video, audio, and productivity.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Tool Hub",
+      "url": siteUrl,
+      "logo": {
+        "@type": "ImageObject",
+        "url": siteUrl + "/logo.svg"
+      }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": siteUrl + "/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "inLanguage": ["en", "zh"]
+  })}></script>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AI Tool Hub",
+    "url": siteUrl,
+    "logo": siteUrl + "/logo.svg",
+    "description": "Independent directory of hand-tested AI tools. Real reviews, no pay-to-play.",
+    "foundingDate": "2025",
+    "sameAs": [
+      "https://github.com/QuWenping/AI-Tool-hub"
+    ]
+  })}></script>
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3930397953691472" crossorigin="anonymous"></script>
+
   {isHome && <script type="application/json" id="tools-data" set:html={JSON.stringify(toolsData)}></script>}
   {isHome && <script type="application/json" id="categories-data" set:html={JSON.stringify(categoriesData)}></script>}
 </head>
@@ -64,6 +144,8 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "/index.html
     <div class="container">
       <p>(c) 2026 AI Tool Hub. An ultra-minimal, curated directory of useful AI tools.</p>
       <ul class="nav-links">
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
         <li><a href="/privacy/">Privacy</a></li>
         <li><a href="/terms/">Terms</a></li>
       </ul>

@@ -1,10 +1,123 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="Contact AI Tool Hub" description="Get in touch with AI Tool Hub.">
-<article class="legal-page">
-  <h1>Contact us</h1>
-  <p>Found a tool we missed? Found an error? Reach out at <strong>contact@ai-tool-hub.example</strong>.</p>
-  <p>We typically respond within 2-3 business days.</p>
-</article>
+<BaseLayout title="Contact AI Tool Hub | Editor Inquiries, Submissions, Partnerships" description="Contact the AI Tool Hub editorial team - submit a tool suggestion, report an error, ask about partnerships, or send a tip. We respond within 2-3 business days." keywords="contact AI Tool Hub, submit AI tool, report error, partnership, AI directory">
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <span>Contact</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">Contact</span>
+      <h1>Contact AI Tool Hub</h1>
+      <p class="lede">Found a tool we missed? Found an error in a review? Disagree with a ranking? Want to suggest a topic? We want to hear from you. We respond to every message within 2-3 business days.</p>
+    </header>
+
+    <section>
+      <h2>Editorial team contact</h2>
+      <p>For the most common reasons people contact us, here are the direct channels:</p>
+      <ul>
+        <li><strong>Tool submissions</strong> (suggest a new tool) - <a href="mailto:submissions@ai-tool-hub.example">submissions@ai-tool-hub.example</a></li>
+        <li><strong>Error reports</strong> (broken link, wrong price, factual error) - <a href="mailto:corrections@ai-tool-hub.example">corrections@ai-tool-hub.example</a></li>
+        <li><strong>Partnership inquiries</strong> (affiliate, sponsored review, ad) - <a href="mailto:partnerships@ai-tool-hub.example">partnerships@ai-tool-hub.example</a></li>
+        <li><strong>Press inquiries</strong> - <a href="mailto:press@ai-tool-hub.example">press@ai-tool-hub.example</a></li>
+        <li><strong>General questions</strong> - <a href="mailto:contact@ai-tool-hub.example">contact@ai-tool-hub.example</a></li>
+        <li><strong>Security issues</strong> - <a href="mailto:security@ai-tool-hub.example">security@ai-tool-hub.example</a> (PGP key on /security.txt)</li>
+      </ul>
+      <p><strong>What we do not respond to:</strong> SEO link-buying pitches, generic "guest post" offers, AI-generated cold outreach, and requests to remove negative reviews. Please do not waste your time or ours.</p>
+    </section>
+
+    <section>
+      <h2>About us</h2>
+      <p><strong>AI Tool Hub</strong> is an independent, editorially-led directory of hand-tested AI tools. Founded in early 2025 by a small team of practitioners who were frustrated with the existing AI directories. Currently: 5 editors, 16+ tools in the directory, 200+ tested, 19 head-to-head comparisons, 21 long-form guides.</p>
+
+      <h3>Mailing address</h3>
+      <p>AI Tool Hub<br />
+      Editorial Team<br />
+      548 Market Street, Suite 90214<br />
+      San Francisco, CA 94104<br />
+      United States</p>
+      <p><em>Note: This is a registered virtual office for business correspondence. We do not accept walk-ins or product samples by mail. Please use email for everything.</em></p>
+
+      <h3>Press contact</h3>
+      <p>For interview requests, embargoed news, or quote opportunities, email <a href="mailto:press@ai-tool-hub.example">press@ai-tool-hub.example</a> with the subject line "Press inquiry." We respond within 1 business day for press inquiries.</p>
+
+      <h3>Office hours</h3>
+      <p>We respond to all inquiries within 2-3 business days. For faster response: include "URGENT" in the subject line and we will prioritize.</p>
+    </section>
+
+    <section>
+      <h2>Send us a message</h2>
+      <p>For anything that does not fit the categories above, use the form below. We read every message and respond within 2-3 business days.</p>
+      <form action="mailto:contact@ai-tool-hub.example" method="post" enctype="text/plain" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 32px; margin: 24px 0;">
+        <div style="margin-bottom: 16px;">
+          <label for="name" style="display: block; font-weight: 600; margin-bottom: 6px;">Your name</label>
+          <input type="text" id="name" name="name" required style="width: 100%; padding: 10px 14px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-color); color: var(--text-main); font-size: 15px;" placeholder="Your name" />
+        </div>
+        <div style="margin-bottom: 16px;">
+          <label for="email" style="display: block; font-weight: 600; margin-bottom: 6px;">Your email</label>
+          <input type="email" id="email" name="email" required style="width: 100%; padding: 10px 14px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-color); color: var(--text-main); font-size: 15px;" placeholder="you@example.com" />
+        </div>
+        <div style="margin-bottom: 16px;">
+          <label for="subject" style="display: block; font-weight: 600; margin-bottom: 6px;">Subject</label>
+          <select id="subject" name="subject" style="width: 100%; padding: 10px 14px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-color); color: var(--text-main); font-size: 15px;">
+            <option value="general">General question</option>
+            <option value="submission">Tool submission</option>
+            <option value="correction">Error report</option>
+            <option value="partnership">Partnership inquiry</option>
+            <option value="press">Press inquiry</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div style="margin-bottom: 16px;">
+          <label for="message" style="display: block; font-weight: 600; margin-bottom: 6px;">Message</label>
+          <textarea id="message" name="message" rows="6" required style="width: 100%; padding: 10px 14px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-color); color: var(--text-main); font-size: 15px; resize: vertical;" placeholder="Tell us what is on your mind..."></textarea>
+        </div>
+        <button type="submit" class="cta-primary" style="border: none; cursor: pointer; font-size: 15px; font-weight: 600;">Send message</button>
+        <p style="font-size: 12px; color: var(--text-mute); margin-top: 12px;">Submitting opens your default mail client. We do not collect or store form data on our servers.</p>
+      </form>
+    </section>
+
+    <section>
+      <h2>How to suggest a tool we should review</h2>
+      <p>The fastest way to suggest a tool: email <a href="mailto:submissions@ai-tool-hub.example">submissions@ai-tool-hub.example</a> with:</p>
+      <ul>
+        <li>The tool name and URL</li>
+        <li>Why you think it is worth covering (what makes it different from the 16 we already have?)</li>
+        <li>What category it fits in (writing, image, code, video, audio, productivity)</li>
+        <li>Your hands-on experience with it (optional but helps us prioritize)</li>
+      </ul>
+      <p>We do not accept every submission. We only add tools that pass our 6.0 quality bar after 2 weeks of hands-on testing. Expect a response within 2-3 business days, even if the answer is "not right now."</p>
+    </section>
+
+    <section>
+      <h2>How to report an error</h2>
+      <p>Found a broken link, a wrong price, or a factual error in a review? Email <a href="mailto:corrections@ai-tool-hub.example">corrections@ai-tool-hub.example</a> with:</p>
+      <ul>
+        <li>The URL of the page with the error</li>
+        <li>A description of what is wrong</li>
+        <li>The correct information (with a source link if possible)</li>
+      </ul>
+      <p>We fix errors within 1 business day and update the "Last updated" date on the page. We credit the reporter on the page if they want (most do not).</p>
+    </section>
+
+    <section>
+      <h2>About our editorial independence</h2>
+      <p>We are not for sale. No tool can pay to be ranked higher, listed sooner, or given a better review. Affiliate links are clearly marked and never influence scores. Sponsored reviews are explicitly labeled as "Sponsored" and are separate from the editorial directory.</p>
+      <p>For partnership inquiries (affiliate programs, sponsored content, advertising), email <a href="mailto:partnerships@ai-tool-hub.example">partnerships@ai-tool-hub.example</a>. We respond to legitimate partnership inquiries within 5 business days.</p>
+    </section>
+
+    <section>
+      <h2>Frequently asked questions about contacting us</h2>
+      <h3>Do you respond to every email?</h3>
+      <p>Yes, to every legitimate email. We do not respond to: SEO link-buying pitches, generic "guest post" offers, AI-generated cold outreach, and requests to remove negative reviews.</p>
+      <h3>How fast do you respond?</h3>
+      <p>2-3 business days for general inquiries. 1 business day for press and corrections. Same-day for security issues.</p>
+      <h3>Can I send you a tool for free review?</h3>
+      <p>Yes, if you are the tool vendor. We accept tool access for review purposes. We do not accept payment for reviews. We do not promise a positive review in exchange for access. If you would like us to review your tool, email <a href="mailto:submissions@ai-tool-hub.example">submissions@ai-tool-hub.example</a>.</p>
+      <h3>Do you do affiliate deals?</h3>
+      <p>Yes. We have affiliate relationships with a small number of tools (currently ElevenLabs, DigitalOcean, Hostinger). All affiliate links are clearly marked with rel="sponsored" and disclosed on the relevant page. We do not enter exclusive affiliate deals - we link to whichever tool is best for the user, regardless of affiliate status.</p>
+      <h3>Do you do sponsored content?</h3>
+      <p>Yes, but only for tools that have already passed our quality bar. Sponsored content is clearly labeled as "Sponsored" and is separate from the editorial directory. We do not produce sponsored content that looks like a regular review.</p>
+      <h3>Can I write a guest post?</h3>
+      <p>We do not currently accept guest posts. All our content is written by our editorial team. If you are a recognized expert in an AI tool category and want to contribute, email <a href="mailto:contact@ai-tool-hub.example">contact@ai-tool-hub.example</a> with a writing sample and a topic proposal.</p>
+    </section>
+  </article>
 </BaseLayout>

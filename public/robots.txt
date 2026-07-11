@@ -1,14 +1,5 @@
-# AI Tool Hub robots.txt
-# https://ai-tool-hub-self.vercel.app
-
 User-agent: *
 Allow: /
-Disallow: /dist/
-Disallow: /.astro/
-Disallow: /api/
+Disallow: /ads.txt
 
-# Sitemap
 Sitemap: https://ai-tool-hub-self.vercel.app/sitemap-index.xml
-
-# Crawl-delay (optional, polite)
-Crawl-delay: 1

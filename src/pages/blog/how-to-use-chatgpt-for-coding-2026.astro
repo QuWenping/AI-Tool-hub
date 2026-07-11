@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout title="How to Use ChatGPT for Coding in 2026 (Step-by-Step Tutorial)" description="A practical 15-minute walkthrough of how to use ChatGPT for real coding work - from setup to debugging to code review. With 8 real examples." keywords="ChatGPT coding, AI programming tutorial, ChatGPT for developers, AI code review, ChatGPT debugging">
+  <article class="legal-page blog-post">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>How to Use ChatGPT for Coding</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">Tutorial</span>
+      <h1>How to Use ChatGPT for Coding in 2026 (Step-by-Step Tutorial)</h1>
+      <p class="lede">A practical 15-minute walkthrough of how to use ChatGPT for real coding work. From setup to debugging to code review, with 8 real examples you can copy and paste.</p>
+      <p style="color: var(--text-mute); font-size: 14px; margin-top: 16px;">
+        <i class="far fa-calendar"></i> 2026-07-22 &middot; <i class="far fa-clock"></i> 15 min read &middot; <i class="far fa-user"></i> Marcus Webb, Senior Engineer
+      </p>
+    </header>
+
+    <section class="blog-content">
+      <p>ChatGPT in 2026 is not the autocomplete toy of 2023. It is now a full coding partner that can scaffold a feature, debug a race condition, write tests, review a PR, and explain a 200-line function in plain English. The catch: most developers use 20% of what it can do. This tutorial covers the 80% that matters, in the order you should learn it.</p>
+
+      <h2>Step 1: Set up ChatGPT for coding (2 minutes)</h2>
+      <p>Go to chatgpt.com and sign up. For coding, the Plus plan at $20/month is the right pick - it gives you GPT-5 with advanced data analysis, image input for screenshots, and the custom GPTs feature. If you are a student, verify your student email and get 2 months free.</p>
+      <p><strong>Pro tip:</strong> Go to Settings > Custom Instructions and set two things: who you are (a developer working in [your language/framework]) and how you want responses formatted (concise, with code blocks). This alone improves output quality 20%.</p>
+
+      <h2>Step 2: Use Custom GPTs for your stack (5 minutes)</h2>
+      <p>Custom GPTs are pre-configured ChatGPTs tuned for specific tasks. For coding, the most useful ones are:</p>
+      <ul>
+        <li><strong>Code Reviewer GPT</strong> - paste a PR diff, get line-by-line feedback</li>
+        <li><strong>Bug Finder GPT</strong> - paste error output, get ranked hypotheses</li>
+        <li><strong>Test Writer GPT</strong> - paste a function, get pytest/jest coverage</li>
+        <li><strong>Refactor GPT</strong> - paste a function, get a cleaner version with explanation</li>
+      </ul>
+      <p>To find them, click "Explore GPTs" in the left sidebar. The official OpenAI ones are best, but there are also great community ones (search for your specific language).</p>
+
+      <h2>Step 3: The 3 prompt patterns that actually work (5 minutes)</h2>
+      <p>Most ChatGPT coding failures are bad prompt failures, not model failures. The 3 patterns that consistently produce usable code:</p>
+      <p><strong>Pattern A: The complete-spec prompt.</strong> Instead of "write a function to validate email", say "Write a Python function `is_valid_email(email: str) -> bool` that handles the standard pattern (local@domain.tld), rejects spaces, returns False for empty/None, raises TypeError for non-string input. Include 5 pytest tests." The complete spec is 80% of the work.</p>
+      <p><strong>Pattern B: The example-first prompt.</strong> Paste 1-2 examples of code you like, then ask for a new one. "Here is how I wrote a JWT validator. Write a similar one for OAuth state tokens." The model matches your style and conventions much better with examples than with instructions.</p>
+      <p><strong>Pattern C: The test-driven prompt.</strong> Write the tests first in the chat, then ask for the implementation. "Here are 5 tests for a URL shortener. Write the function that passes all of them." This forces the model to think about edge cases and produces much more robust code.</p>
+
+      <h2>Step 4: The 8 real examples (5 minutes to scan, 30 min to apply)</h2>
+      <p>Here are 8 real use cases with copy-paste prompts. Use these as templates for your own work.</p>
+      <p><strong>Example 1: Scaffold a new feature.</strong> Prompt: "I am building a Next.js 14 app with TypeScript and Prisma. Scaffold a comments feature: API route at /api/comments, Prisma model, and a React component that lists comments for a post. Use server actions for posting. Include error handling." Output: 200 lines of production-ready code.</p>
+      <p><strong>Example 2: Debug a flaky test.</strong> Prompt: "This pytest test fails 30% of the time with 'race condition in fixtures'. Here is the test, here is the conftest, here is the function under test. Diagnose and suggest a fix." Output: 3 ranked hypotheses + recommended fix + a rewritten test that does not have the race.</p>
+      <p><strong>Example 3: Explain legacy code.</strong> Prompt: "Walk me through this 200-line function line by line. Tell me what it does, what the weird parts are, and what would break if I changed X." Output: a 500-word explanation that saves you 2 hours of reading.</p>
+      <p><strong>Example 4: Write tests for an existing function.</strong> Prompt: "Here is a function. Write a pytest test class that covers the happy path, edge cases, and error conditions. Aim for 80% line coverage. Include a parameterized test for the edge cases." Output: 8-10 tests in 30 seconds.</p>
+      <p><strong>Example 5: Convert between languages.</strong> Prompt: "Convert this Python function to TypeScript. Preserve the behavior exactly. Use modern TS (strict mode, no any). Add JSDoc comments." Output: production-ready TS in 20 seconds.</p>
+      <p><strong>Example 6: Write a regex.</strong> Prompt: "Write a regex that matches US phone numbers in the formats (555) 123-4567, 555-123-4567, and 555.123.4567. Test it on these 10 examples. Explain what each part does." Output: the regex + 10 test results + a 200-word explanation.</p>
+      <p><strong>Example 7: SQL optimization.</strong> Prompt: "This query takes 12 seconds on a 10M row table. Here is the EXPLAIN ANALYZE. Suggest indexes and a rewrite. Test the rewrite on this sample data." Output: a faster query + the new indexes + benchmark numbers.</p>
+      <p><strong>Example 8: PR review.</strong> Prompt: "Review this PR diff for bugs, performance issues, security problems, and style. Be specific (line numbers). Order findings by severity." Output: a real PR review that catches things you missed.</p>
+
+      <h2>Step 5: The iteration loop that works (2 minutes)</h2>
+      <p>The first output is rarely the final output. The right iteration loop is:</p>
+      <ol>
+        <li><strong>First prompt</strong> - the complete-spec prompt from above</li>
+        <li><strong>Read the output critically</strong> - assume there are 2-3 issues</li>
+        <li><strong>Specific feedback</strong> - "The error handling on line 23 is wrong because it swallows the exception. Fix that, and also the function signature should accept a callback for progress reporting."</li>
+        <li><strong>Iterate 2-3 times</strong> - after 3 rounds, the output is usually 90% production-ready</li>
+        <li><strong>Hand-edit the last 10%</strong> - your style, your edge cases, your tests</li>
+      </ol>
+      <p>The trap is to start over with a new prompt after a bad first response. Iterate instead. The model already has the context.</p>
+
+      <h2>Step 6: When NOT to use ChatGPT (1 minute)</h2>
+      <p>Honest list of things ChatGPT is bad at for coding in 2026:</p>
+      <ul>
+        <li><strong>Security-sensitive code</strong> - auth, crypto, payments. ChatGPT will produce code that works but has subtle vulnerabilities. Always code review.</li>
+        <li><strong>Performance-critical hot paths</strong> - low-level optimization, kernel code, real-time systems. ChatGPT is trained on common code, not the deep performance tricks.</li>
+        <li><strong>Code that depends on undocumented library internals</strong> - if the API is private or changed recently, ChatGPT will hallucinate.</li>
+        <li><strong>Your company specific patterns</strong> - unless you give it examples, it will write generic code that does not match your codebase.</li>
+        <li><strong>Anything where you do not understand the output.</strong> If you cannot explain the code to a teammate, you should not ship it.</li>
+      </ul>
+
+      <h2>The full setup in 15 minutes</h2>
+      <p>To recap the whole tutorial in 15 minutes:</p>
+      <ol>
+        <li>Sign up for ChatGPT Plus ($20/month, free for students)</li>
+        <li>Set Custom Instructions (2 minutes)</li>
+        <li>Install the 4 useful Custom GPTs (3 minutes)</li>
+        <li>Learn the 3 prompt patterns (5 minutes)</li>
+        <li>Save the 8 example prompts as templates (3 minutes)</li>
+        <li>Use it on real work today, not tomorrow (2 minutes)</li>
+      </ol>
+      <p>The real ROI shows up after about 2 weeks of daily use. By week 3, you will not be able to imagine coding without it.</p>
+
+      <h2>What to do next</h2>
+      <p>For a deeper look at the coding AI tools landscape, see our <a href="/blog/cursor-vs-github-copilot-2026/">Cursor vs GitHub Copilot comparison</a> and our <a href="/best/code/">full list of AI coding tools</a>. If you want to learn the team setup, see <a href="/blog/how-to-set-up-cursor-for-your-team-2026/">how to deploy Cursor across your team</a>.</p>
+
+      <p>Have a workflow that works for you? <a href="/contact/">Send it to us</a> and we will feature the best ones in a future update.</p>
+    </section>
+
+    <section style="margin-top: 40px;">
+      <h3>Tags</h3>
+      <div class="audience-tags">
+        <span class="audience-tag">#chatgpt</span>
+        <span class="audience-tag">#coding</span>
+        <span class="audience-tag">#tutorial</span>
+        <span class="audience-tag">#how-to</span>
+        <span class="audience-tag">#prompts</span>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
