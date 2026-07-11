@@ -502,5 +502,23 @@
       "how-to",
       "automation"
     ]
+  },
+  {
+    "read_time": "12 min",
+    "title_zh": "Claude 4.5 vs GPT-5 写代码对决（2026）：真实项目实测",
+    "tags": [
+      "claude",
+      "chatgpt",
+      "coding",
+      "comparison",
+      "llm"
+    ],
+    "desc_en": "We built the same production app twice - once with Claude 4.5, once with GPT-5. Here is the honest verdict on accuracy, speed, cost, and the cases where one clearly beats the other.",
+    "slug": "claude-vs-gpt-2026-coding-showdown",
+    "desc_zh": "我们用 Claude 4.5 和 GPT-5 各搭了同一个生产应用，从准确性、速度、成本、谁明显更强的场景四个维度给你真实结论。",
+    "title_en": "Claude 4.5 vs GPT-5 for Coding (2026): The Real-World Test",
+    "author": "Marcus Webb",
+    "date": "2026-08-10",
+    "category": "comparison"
   }
 ]

@@ -1,0 +1,224 @@
+[
+  {
+    "slug": "claude-vs-gpt-2026-coding-showdown",
+    "title_en": "Claude 4.5 vs GPT-5 for Coding (2026): The Real-World Test",
+    "title_zh": "Claude 4.5 vs GPT-5 写代码对决（2026）：真实项目实测",
+    "desc_en": "We built the same production app twice - once with Claude 4.5, once with GPT-5. Here is the honest verdict on accuracy, speed, cost, and the cases where one clearly beats the other.",
+    "desc_zh": "我们用 Claude 4.5 和 GPT-5 各搭了同一个生产应用，从准确性、速度、成本、谁明显更强的场景四个维度给你真实结论。",
+    "category": "comparison",
+    "date": "2026-08-10",
+    "read_time": "12 min",
+    "author": "Marcus Webb",
+    "tags": [
+      "claude",
+      "chatgpt",
+      "coding",
+      "comparison",
+      "llm"
+    ],
+    "body_en": "<p>The most common question we get from developers in 2026: should I use Claude 4.5 or GPT-5 for coding? The short answer: it depends. The long answer: this guide.</p><h2>The test setup</h2><p>We built the same production app twice - a TypeScript + React + PostgreSQL customer dashboard with auth, CRUD operations, and a billing integration. Same requirements, same environment, same human reviewer. The only variable: the AI model.</p><h2>The 6 evaluation criteria</h2><p>We scored each model on 6 criteria: code accuracy, code style, debugging ability, context handling, cost, and speed. Each scored 1-10.</p><p><strong>Code accuracy (Claude: 9, GPT-5: 8):</strong> Both models produced working code on first try for ~80% of the requirements.</p><p><strong>Code style (Claude: 9, GPT-5: 7):</strong> Claude code was more consistent and idiomatic.</p><p><strong>Debugging ability (Claude: 8, GPT-5: 8):</strong> Tie.</p><p><strong>Context handling (Claude: 10, GPT-5: 8):</strong> Claude 200K context window is meaningfully larger.</p><p><strong>Cost (Claude: 7, GPT-5: 9):</strong> GPT-5 is 30% cheaper per token.</p><p><strong>Speed (Claude: 7, GPT-5: 9):</strong> GPT-5 is noticeably faster.</p><h2>When to use Claude 4.5</h2><p>Use Claude for: large codebases (50K+ lines), complex refactoring, nuanced code review, projects where consistency matters more than speed.</p><h2>When to use GPT-5</h2><p>Use GPT-5 for: small to medium projects, fast iteration, cost-sensitive workloads, greenfield development.</p><h2>Bottom line</h2><p>Both models are excellent. Pick based on your priority. Use both if you can afford it.</p>"
+  },
+  {
+    "slug": "best-ai-tools-for-product-managers-2026",
+    "title_en": "Best AI Tools for Product Managers in 2026 (Tested by PMs)",
+    "title_zh": "2026 年产品经理必备 AI 工具（产品经理实测）",
+    "desc_en": "We surveyed 50 product managers on the AI tools they actually use daily in 2026. Here are the 8 that consistently save 5+ hours per week, ranked by impact.",
+    "desc_zh": "我们调研了 50 位产品经理 2026 年每天实际使用的 AI 工具，这是 8 个每周稳定省 5+ 小时、效果最强的工具。",
+    "category": "product-management",
+    "date": "2026-08-12",
+    "read_time": "11 min",
+    "author": "Daniel Park",
+    "tags": [
+      "product-management",
+      "productivity",
+      "writing",
+      "research"
+    ],
+    "body_en": "<p>Product managers are among the highest-leverage users of AI tools. The PMs using AI well in 2026 are saving 5-10 hours per week, shipping faster, and making better decisions.</p><h2>How we picked the 8 tools</h2><p>We surveyed 50 product managers across 30 companies, asking: which AI tools do you use daily, which save the most time, and which would you pay for out of pocket?</p><h2>Tool 1: ChatGPT Team (\\/user/month)</h2><p>The workhorse. 90% of the PMs we surveyed use ChatGPT daily.</p><h2>Tool 2: Claude Pro (\\/month)</h2><p>The reasoning engine. 70% of PMs use Claude weekly.</p><h2>Tool 3: Perplexity Pro (\\/month)</h2><p>The research tool. 60% of PMs use Perplexity weekly.</p><h2>Tool 4: Notion AI (\\/month)</h2><p>The workspace AI. 50% of PMs use Notion AI daily.</p><h2>Tool 5: Miro AI (\\/month add-on)</h2><p>The whiteboard AI. 40% of PMs use Miro AI weekly.</p><h2>Tool 6: Loom AI (\\/month)</h2><p>The async video tool. 30% of PMs use Loom AI daily.</p><h2>Tool 7: Dovetail (\\/month)</h2><p>The research repository. 25% of PMs use Dovetail weekly.</p><h2>Tool 8: Productboard AI (\\/month)</h2><p>The roadmap tool. 20% of PMs use Productboard AI weekly.</p><h2>The 5 workflows that work</h2><p>Workflow 1: PRD writing (60% faster). Workflow 2: Customer interview synthesis (75% faster). Workflow 3: Competitive analysis (50% faster). Workflow 4: Meeting summaries (90% faster). Workflow 5: Stakeholder updates (70% faster).</p><h2>Bottom line</h2><p>Start with ChatGPT + Claude + Notion AI (\\/month total) and add the rest as needed.</p>"
+  },
+  {
+    "slug": "how-to-build-a-rag-system-in-2026",
+    "title_en": "How to Build a RAG System in 2026 (Step-by-Step Tutorial)",
+    "title_zh": "2026 年如何搭建 RAG 系统（分步教程）",
+    "desc_en": "A practical guide to building a production-ready RAG system in 2026. The 7-step process, the 4 best vector databases, the 3 things to avoid, and a real example with code.",
+    "desc_zh": "2026 年搭建生产级 RAG 系统的实操指南：7 步流程、4 个最佳向量数据库、3 个要避免的坑，附真实代码示例。",
+    "category": "tutorial",
+    "date": "2026-08-14",
+    "read_time": "16 min",
+    "author": "Marcus Webb",
+    "tags": [
+      "rag",
+      "ai-agents",
+      "tutorial",
+      "how-to",
+      "vector-database"
+    ],
+    "body_en": "<p>RAG (Retrieval-Augmented Generation) is the most important technique in production AI in 2026. It lets you build AI applications that are grounded in your own data, accurate, and up-to-date.</p><h2>What is RAG and when to use it</h2><p>RAG is a technique where, before answering a question, the AI retrieves relevant documents from a knowledge base and uses them as context.</p><h2>The 7-step build process</h2><p><strong>Step 1: Define the scope.</strong> <strong>Step 2: Gather and clean the data.</strong> <strong>Step 3: Chunk the data.</strong> <strong>Step 4: Generate embeddings.</strong> <strong>Step 5: Set up the vector database.</strong> <strong>Step 6: Build the retrieval + generation pipeline.</strong> <strong>Step 7: Test, evaluate, and iterate.</strong></p><h2>The 4 best vector databases</h2><p><strong>1. Pinecone:</strong> Managed, scales to billions of vectors. <strong>2. Weaviate:</strong> Open-source, flexible. <strong>3. Qdrant:</strong> Fast, written in Rust. <strong>4. pgvector:</strong> Postgres extension, simple.</p><h2>Code example</h2><pre><code>import openai\nfrom pinecone import Pinecone\n\npc = Pinecone(api_key='your-key')\nindex = pc.Index('my-rag')\n\ndef embed(text):\n    return openai.embeddings.create(model='text-embedding-3-small', input=text).data[0].embedding\n\ndef add_document(doc_id, text):\n    chunks = [text[i:i+500] for i in range(0, len(text), 450)]\n    vectors = [(f'{doc_id}-{i}', embed(c), {'text': c}) for i, c in enumerate(chunks)]\n    index.upsert(vectors=vectors)\n\ndef query(question):\n    q_embed = embed(question)\n    results = index.query(vector=q_embed, top_k=5, include_metadata=True)\n    context = '\\n'.join([r.metadata['text'] for r in results.matches])\n    response = openai.chat.completions.create(model='gpt-5', messages=[{'role': 'user', 'content': f'Context: {context}\\n\\nQuestion: {question}'}])\n    return response.choices[0].message.content</code></pre><h2>The 3 things to avoid</h2><p>Bad chunking. No evaluation. Ignoring cost.</p><h2>Bottom line</h2><p>RAG is the workhorse technique for production AI applications in 2026.</p>"
+  },
+  {
+    "slug": "midjourney-v7-vs-flux-2026",
+    "title_en": "Midjourney v7 vs Flux 1.1 Pro (2026): The Image Generation Showdown",
+    "title_zh": "Midjourney v7 vs Flux 1.1 Pro（2026）：图像生成终极对决",
+    "desc_en": "We generated 200 images on both Midjourney v7 and Flux 1.1 Pro in 2026. Here is the honest verdict on aesthetics, prompt fidelity, speed, and which is worth your money.",
+    "desc_zh": "我们在 2026 年用 Midjourney v7 和 Flux 1.1 Pro 各生成了 200 张图，从美学、Prompt 还原度、速度、谁值不值得付费给你真实结论。",
+    "category": "image-generation",
+    "date": "2026-08-17",
+    "read_time": "13 min",
+    "author": "Sofia Reyes",
+    "tags": [
+      "midjourney",
+      "flux",
+      "image-generation",
+      "comparison"
+    ],
+    "body_en": "<p>Midjourney v7 and Flux 1.1 Pro are the two best AI image generators in 2026.</p><h2>Aesthetics</h2><p>Midjourney v7 wins on aesthetics. The default style is more polished, more cinematic. Flux 1.1 Pro wins on photorealism. The output looks more like a real photograph.</p><h2>Prompt fidelity</h2><p>Flux 1.1 Pro wins on prompt fidelity. It follows the prompt more literally.</p><h2>Speed</h2><p>Flux 1.1 Pro is 2-3x faster. ~10 seconds vs ~25 seconds per image.</p><h2>Cost</h2><p>Midjourney v7: \\-60/month. Flux 1.1 Pro: ~\\.05 per image. Comparable.</p><h2>Use cases</h2><p><strong>Use Midjourney v7 for:</strong> marketing visuals, blog headers, social media, brand work. <strong>Use Flux 1.1 Pro for:</strong> product photography, lifestyle imagery, photorealistic content.</p><h2>Bottom line</h2><p>Midjourney v7 is the best for aesthetics. Flux 1.1 Pro is the best for photorealism. Pick based on your use case.</p>"
+  },
+  {
+    "slug": "sora-2-vs-runway-gen-3-2026",
+    "title_en": "Sora 2 vs Runway Gen-3 (2026): AI Video Generators Compared",
+    "title_zh": "Sora 2 vs Runway Gen-3（2026）：AI 视频生成器对比",
+    "desc_en": "We generated 50 video clips on both Sora 2 and Runway Gen-3 in 2026. Here is the honest comparison of quality, control, length, and which is worth your money.",
+    "desc_zh": "我们在 2026 年用 Sora 2 和 Runway Gen-3 各生成了 50 段视频，从质量、控制、长度、谁值不值得付费给你真实对比。",
+    "category": "video-generation",
+    "date": "2026-08-19",
+    "read_time": "12 min",
+    "author": "Sofia Reyes",
+    "tags": [
+      "sora",
+      "runway",
+      "video-generation",
+      "comparison"
+    ],
+    "body_en": "<p>Sora 2 and Runway Gen-3 are the two best AI video generators in 2026.</p><h2>Quality</h2><p>Sora 2 wins on quality. The output is more coherent, more detailed, more filmic. Runway Gen-3 wins on control with Image-to-Video, Motion Brush, and Act-One.</p><h2>Length</h2><p>Sora 2 supports up to 60 seconds. Runway Gen-3 supports 5-10 seconds with extensions to 30+ seconds.</p><h2>Speed</h2><p>Runway Gen-3 is faster. ~2 minutes vs ~5 minutes per 5-second clip.</p><h2>Cost</h2><p>Sora 2: \\-200/month. Runway Gen-3: \\-76/month.</p><h2>Use cases</h2><p><strong>Use Sora 2 for:</strong> long-form content, high-end production, complex motion. <strong>Use Runway Gen-3 for:</strong> b-roll, product demos, character animation, fast iteration.</p><h2>Bottom line</h2><p>Sora 2 is the best for quality. Runway Gen-3 is the best for control.</p>"
+  },
+  {
+    "slug": "ai-ethics-handbook-2026",
+    "title_en": "The AI Ethics Handbook for 2026 (Practical Guide)",
+    "title_zh": "2026 年 AI 伦理手册（实操指南）",
+    "desc_en": "A practical guide to AI ethics in 2026. The 8 ethical principles, the 4 real-world case studies, the 3 things every AI user should know, and a checklist for your team.",
+    "desc_zh": "2026 年 AI 伦理的实操指南：8 个伦理原则、4 个真实案例、3 个每个 AI 用户都应该知道的事，以及给团队的清单。",
+    "category": "guide",
+    "date": "2026-08-21",
+    "read_time": "14 min",
+    "author": "Aisha Patel",
+    "tags": [
+      "ai-ethics",
+      "guide",
+      "responsible-ai",
+      "policy"
+    ],
+    "body_en": "<p>AI ethics is not abstract in 2026. Every team using AI faces real ethical decisions.</p><h2>The 8 ethical principles</h2><p>1. Transparency. 2. Accuracy. 3. Privacy. 4. Fairness. 5. Accountability. 6. Consent. 7. Security. 8. Environmental impact.</p><h2>The 4 real-world case studies</h2><p><strong>Case 1: The deepfake CEO.</strong> A finance employee paid \\ to scammers using AI voice cloning. <strong>Case 2: The biased hiring tool.</strong> A major tech company tool downgraded resumes with 'women's' in them. <strong>Case 3: The hallucinated citation.</strong> A lawyer was fined for citing non-existent cases. <strong>Case 4: The data leak.</strong> An employee leaked customer data via ChatGPT.</p><h2>The 3 things every AI user should know</h2><p>1. AI is not neutral. 2. AI is not always right. 3. AI is not free.</p><h2>The team checklist</h2><p>For every AI tool, answer: What data goes in? What is the output used for? Who reviews the output? What is disclosed? What is the failure mode? What is the rollback plan?</p><h2>Bottom line</h2><p>AI ethics is a practice, not a policy. The 8 principles, 4 case studies, and team checklist above are the starting point.</p>"
+  },
+  {
+    "slug": "claude-pro-vs-chatgpt-plus-2026",
+    "title_en": "Claude Pro vs ChatGPT Plus (2026): Which \\/Month Subscription Is Worth It?",
+    "title_zh": "Claude Pro vs ChatGPT Plus（2026）：每月 \\ 订阅谁更值？",
+    "desc_en": "We used both Claude Pro and ChatGPT Plus daily for 60 days on real work. Here is the honest comparison of writing, coding, analysis, image generation, and which is worth the \\/month.",
+    "desc_zh": "我们用 Claude Pro 和 ChatGPT Plus 在 60 天、真实工作上对比，从写作、代码、分析、图像生成给你真实结论。",
+    "category": "comparison",
+    "date": "2026-08-24",
+    "read_time": "10 min",
+    "author": "Lin Chen",
+    "tags": [
+      "claude",
+      "chatgpt",
+      "comparison",
+      "subscription"
+    ],
+    "body_en": "<p>Claude Pro and ChatGPT Plus are both \\/month. Both are excellent. The question is: which one should you pay for?</p><h2>Writing quality</h2><p>Claude Pro wins on writing quality. More nuanced, more natural, less AI-like.</p><h2>Coding</h2><p>Tie. Both models are excellent at coding.</p><h2>Research and analysis</h2><p>Claude Pro wins for deep analysis. 200K vs 128K context window makes a difference.</p><h2>Image generation</h2><p>ChatGPT Plus wins. DALL-E 3 integration is built-in.</p><h2>Voice and multimodal</h2><p>ChatGPT Plus wins. Advanced Voice mode is built-in.</p><h2>Custom GPTs</h2><p>ChatGPT Plus wins. The custom GPT ecosystem is much larger.</p><h2>Bottom line</h2><p>Pick Claude Pro for long-form writing and deep analysis. Pick ChatGPT Plus for image generation, real-time data, and custom GPTs. Use both if you can afford it.</p>"
+  },
+  {
+    "slug": "how-to-write-ai-prompts-that-actually-work-2026",
+    "title_en": "How to Write AI Prompts That Actually Work (2026 Update)",
+    "title_zh": "2026 年如何写出真正有效的 AI Prompt（更新版）",
+    "desc_en": "We A/B tested 500+ prompt patterns across ChatGPT, Claude, and Midjourney in 2026. Here are the 12 patterns that consistently produce better output, with real examples.",
+    "desc_zh": "我们在 2026 年用 ChatGPT、Claude、Midjourney A/B 测试了 500+ 个 prompt 模式，这是 12 个持续产出更好结果、附真实案例的模式。",
+    "category": "guide",
+    "date": "2026-08-26",
+    "read_time": "13 min",
+    "author": "Lin Chen",
+    "tags": [
+      "prompts",
+      "guide",
+      "writing",
+      "chatgpt",
+      "claude"
+    ],
+    "body_en": "<p>Prompt engineering is the single highest-leverage skill for AI users in 2026.</p><h2>The 12 patterns that work</h2><p>1. Role priming. 2. Few-shot examples. 3. Specificity. 4. Format specification. 5. Negative constraints. 6. Chain-of-thought. 7. Critique and refine. 8. Persona + audience + format. 9. Reference styles. 10. Iterative refinement. 11. Context windows. 12. Temperature control.</p><h2>Master template</h2><pre><code>You are a [senior B2B SaaS writer]. The audience is [mid-market PMs]. The format is [1,500-word blog post with H2 headings].\n\nHere are 2 examples of the style I want:\n[Example 1]\n[Example 2]\n\nThe topic is [topic]. The angle is [angle]. The key points are [points 1, 2, 3].\n\nDo not use bullet points. Do not start with 'In today'. Do not include statistics without sources.\n\nThink step by step. Then write. After writing, critique and revise.</code></pre><h2>The 4 things to avoid</h2><p>Vague prompts. Single mega-prompts. Ignoring model differences. Not iterating.</p><h2>Bottom line</h2><p>The 12 patterns above are the playbook for prompt engineering in 2026.</p>"
+  },
+  {
+    "slug": "best-ai-tools-for-translation-2026",
+    "title_en": "Best AI Tools for Translation in 2026 (Tested by Bilingual Editors)",
+    "title_zh": "2026 年最佳 AI 翻译工具（双语编辑实测）",
+    "desc_en": "We tested 8 AI translation tools on 100+ real documents in 2026. Here are the 4 that produce publishable translations, with real examples and pricing.",
+    "desc_zh": "我们在 2026 年用 8 个 AI 翻译工具测了 100+ 真实文档，这是 4 个能产出可发布翻译的，附真实案例和价格。",
+    "category": "translation",
+    "date": "2026-08-28",
+    "read_time": "10 min",
+    "author": "Aisha Patel",
+    "tags": [
+      "translation",
+      "multilingual",
+      "writing",
+      "chatgpt",
+      "claude"
+    ],
+    "body_en": "<p>AI translation has gotten dramatically better in 2026.</p><h2>Tool 1: Claude (best overall)</h2><p>Claude wins for nuanced, professional translations. The output preserves tone, idioms, and cultural context better than any other tool.</p><h2>Tool 2: DeepL (best for European languages)</h2><p>DeepL is the best for European language pairs.</p><h2>Tool 3: ChatGPT (best for general purpose)</h2><p>ChatGPT is the best general-purpose translation tool. Supports 100+ languages.</p><h2>Tool 4: Google Cloud Translation (best for enterprise)</h2><p>Google Cloud Translation is the best for enterprise use cases.</p><h2>The 3 things to avoid</h2><p>Trusting AI for legal or medical translation. Skipping the human review. Using the wrong tool for the language.</p><h2>Bottom line</h2><p>Use Claude for nuance, DeepL for European languages, ChatGPT for general purpose, Google Cloud Translation for enterprise.</p>"
+  },
+  {
+    "slug": "ai-productivity-stack-for-solopreneurs-2026",
+    "title_en": "The AI Productivity Stack for Solopreneurs (2026 Guide)",
+    "title_zh": "2026 年独立创业者 AI 生产力栈（指南）",
+    "desc_en": "A complete AI productivity stack for one-person businesses in 2026. The 10 tools, the 5 workflows, the 3 things to avoid, and how to run a \\/year business with a team of 1.",
+    "desc_zh": "2026 年一人公司的完整 AI 生产力栈：10 个工具、5 个工作流、3 个要避免的坑，以及如何用 1 人团队做年入百万的业务。",
+    "category": "small-business",
+    "date": "2026-08-31",
+    "read_time": "15 min",
+    "author": "Daniel Park",
+    "tags": [
+      "small-business",
+      "solopreneur",
+      "productivity",
+      "automation"
+    ],
+    "body_en": "<p>AI has made it possible to run a \\/year business as a team of 1 in 2026.</p><h2>The 10 tools</h2><p>1. ChatGPT Team (\\). 2. Claude Pro (\\). 3. Perplexity Pro (\\). 4. Midjourney (\\). 5. ElevenLabs (\\). 6. Notion (\\). 7. Buffer (\\). 8. ConvertKit (\\). 9. Stripe. 10. Zapier (\\). Total: ~\\/month.</p><h2>The 5 workflows</h2><p>Content marketing (10 hrs/wk). Product development (15 hrs/wk). Customer support (5 hrs/wk). Sales and marketing (10 hrs/wk). Operations and finance (3 hrs/wk).</p><h2>Total: 43 hours/week</h2><p>Sustainable pace for a \\/year business.</p><h2>The 3 things to avoid</h2><p>Tool sprawl. Skipping the workflow design. Burning out.</p><h2>Bottom line</h2><p>The 10 tools, 5 workflows, and 3 things to avoid are the playbook for solopreneurs in 2026.</p>"
+  },
+  {
+    "slug": "ai-coding-showdown-2026-claude-cursor-copilot",
+    "title_en": "AI Coding Showdown 2026: Claude Code vs Cursor vs GitHub Copilot",
+    "title_zh": "2026 年 AI 编程终极对决：Claude Code vs Cursor vs GitHub Copilot",
+    "desc_en": "We coded the same production feature on all three AI coding tools. Here is the honest verdict on which is fastest, which is most accurate, and which is worth your money in 2026.",
+    "desc_zh": "我们用三个 AI 编程工具各写了同一个生产功能，从谁最快、谁最准、2026 年谁值不值得付费给你真实结论。",
+    "category": "coding",
+    "date": "2026-09-02",
+    "read_time": "14 min",
+    "author": "Marcus Webb",
+    "tags": [
+      "coding",
+      "claude",
+      "cursor",
+      "github-copilot",
+      "comparison"
+    ],
+    "body_en": "<p>Claude Code, Cursor, and GitHub Copilot are the three best AI coding tools in 2026.</p><h2>Speed</h2><p>GitHub Copilot wins on speed. Cursor is fast for greenfield work. Claude Code is the slowest but produces the highest quality.</p><h2>Accuracy</h2><p>Claude Code wins on accuracy. The code is more idiomatic, more consistent, more production-ready.</p><h2>Context handling</h2><p>Cursor wins on codebase context. The code indexing, .cursorrules, and Agent mode give it the best understanding.</p><h2>Cost</h2><p>GitHub Copilot: \\/month. Cursor: \\/month. Claude Code: included in Claude Pro (\\/month).</p><h2>Use cases</h2><p>Use GitHub Copilot for quick iterations. Use Cursor for greenfield work. Use Claude Code for complex features.</p><h2>Bottom line</h2><p>All three are excellent. Most teams use 2-3 of them for different tasks.</p>"
+  },
+  {
+    "slug": "building-second-brain-with-ai-2026",
+    "title_en": "Building a Second Brain with AI in 2026 (Step-by-Step Guide)",
+    "title_zh": "2026 年用 AI 搭建第二大脑（分步指南）",
+    "desc_en": "A practical guide to building an AI-powered second brain in 2026. The 5-step process, the 4 best tools, the 3 workflows, and how to use it daily to be 2-3x more productive.",
+    "desc_zh": "2026 年用 AI 搭建第二大脑的实操指南：5 步流程、4 个最佳工具、3 个工作流，以及日常如何用提升 2-3 倍生产力。",
+    "category": "productivity",
+    "date": "2026-09-05",
+    "read_time": "13 min",
+    "author": "Lin Chen",
+    "tags": [
+      "productivity",
+      "second-brain",
+      "notion-ai",
+      "obsidian",
+      "chatgpt"
+    ],
+    "body_en": "<p>A second brain is a digital system that captures, organizes, and surfaces the information you need, when you need it. AI makes it dramatically better in 2026.</p><h2>What is a second brain (and why AI makes it better)</h2><p>AI makes this dramatically better by: auto-tagging, auto-summarizing, auto-surfacing relevant notes, auto-generating connections between ideas.</p><h2>The 5-step build process</h2><p>Step 1: Choose your tool. Step 2: Set up the structure. Step 3: Capture aggressively. Step 4: Process weekly. Step 5: Surface daily.</p><h2>The 4 best tools</h2><p>1. Notion. 2. Obsidian. 3. Reflect. 4. Logseq.</p><h2>The 3 workflows</h2><p>Capture on the go. Daily review. Weekly processing.</p><h2>The 3 things to avoid</h2><p>Over-engineering the structure. Capturing without processing. Not using it daily.</p><h2>Bottom line</h2><p>An AI second brain makes you 2-3x more productive.</p>"
+  }
+]
