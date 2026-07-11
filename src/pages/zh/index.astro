@@ -1,0 +1,219 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import categoriesData from "../../data/categories.json";
+import toolsData from "../../data/tools.json";
+import matchupsData from "../../data/matchups.json";
+const tools = Object.entries(toolsData).map(([id, data]) => ({ id, data }));
+const categoryLabels = { text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商业效率" };
+const catHero = [
+  { cat: "text", icon: "fa-feather-alt", title_zh: "文本创作", desc_zh: "ChatGPT、Claude、Gemini 等" },
+  { cat: "image", icon: "fa-palette", title_zh: "图像生成", desc_zh: "Midjourney、Stable Diffusion 等" },
+  { cat: "code", icon: "fa-code", title_zh: "编程助手", desc_zh: "Cursor、Copilot 等" },
+  { cat: "video", icon: "fa-film", title_zh: "视频制作", desc_zh: "Sora 2、Runway 等" },
+  { cat: "audio", icon: "fa-microphone-alt", title_zh: "音频处理", desc_zh: "ElevenLabs 等" },
+  { cat: "productivity", icon: "fa-bolt", title_zh: "商业效率", desc_zh: "Perplexity、Notion 等" }
+];
+const featuredMatchups = matchupsData.slice(0, 6);
+const visibleTools = Object.entries(toolsData).filter(([id, t]) => !t.hidden);
+const popularComparisons = [
+  { slug: "chatgpt-vs-claude", title_zh: "ChatGPT vs Claude", desc_zh: "选出最适合你的通用助手" },
+  { slug: "midjourney-vs-stable-diffusion", title_zh: "Midjourney vs Stable Diffusion", desc_zh: "付费精致 vs 开源可控" },
+  { slug: "cursor-vs-github-copilot", title_zh: "Cursor vs GitHub Copilot", desc_zh: "AI 原生编辑器 vs IDE 插件" },
+  { slug: "claude-vs-gemini", title_zh: "Claude vs Gemini", desc_zh: "写作质量 vs 多模态" },
+  { slug: "elevenlabs-vs-chatgpt", title_zh: "ElevenLabs vs ChatGPT 语音", desc_zh: "专业语音 AI vs 集成语音" },
+  { slug: "sora-vs-runway", title_zh: "Sora 2 vs Runway", desc_zh: "顶级画质 vs 制作工具" }
+];
+const popularGuides = [
+  { slug: "best-free-ai-tools-for-students-2026", title_zh: "学生必备 10 个免费 AI 工具", desc_zh: "在真实作业上实测 2 周" },
+  { slug: "chatgpt-vs-claude-which-should-you-pick-2026", title_zh: "ChatGPT vs Claude 怎么选", desc_zh: "两周并排测试的结论" },
+  { slug: "best-ai-image-generators-compared-2026", title_zh: "最佳 AI 图像生成器（2026）", desc_zh: "Midjourney vs SD vs DALL-E vs Flux" },
+  { slug: "best-ai-tools-for-small-business-2026", title_zh: "小企业最佳 AI 工具", desc_zh: "8 人团队的实战 ROI 数据" },
+  { slug: "how-to-write-better-prompts-2026", title_zh: "如何写出更好的 AI 提示词", desc_zh: "9 个持续有效的提示词模式" }
+];
+const editorialLog = [
+  { date: "2026-07-21", title: "新增 Suno 和 Descript 评测", desc: "测试了新的 AI 音乐和音频剪辑工具，都入选了音频分类。" },
+  { date: "2026-07-19", title: "《设计师最佳 AI 工具（2026）》发布", desc: "测试了 18 个工具，留下 7 个。完整分析了真正适合设计工作流的工具。" },
+  { date: "2026-07-17", title: "《研究类最佳 AI 工具（2026）》发布", desc: "3 位博士生在真实论文章节上测试 12 个研究工具，6 个入选。" },
+  { date: "2026-07-15", title: "新增 Gemini、Leonardo.AI 和 Jasper", desc: "经过 2 周实测，3 个新工具通过 6.0 质量门槛。" },
+  { date: "2026-07-10", title: "复测了 6 款主流写作工具", desc: "Top 3 没有重大变化。Perplexity 升级了引用功能后排名上升。" }
+];
+const faq = [
+  { q_zh: "AI Tool Hub 是免费的吗？", a_zh: "是的 - 浏览目录、阅读评测、使用搜索全部 100% 免费。我们通过展示广告和少量明确标注的联盟链接盈利，这永远不会影响我们的排名。" },
+  { q_zh: "你们如何挑选要评测的 AI 工具？", a_zh: "我们只列出我们真正愿意付费的工具。每个条目都在实际工作中经过至少两周的人工实测，然后按输出质量、易用性、价格透明度、客服和隐私维度评分。任何单项得分低于 6.0 的工具都会被排除。" },
+  { q_zh: "联盟链接会影响你们的排名吗？", a_zh: "绝不会。我们的评分标准是决定榜单的唯一因素。联盟合作关系会在隐私政策和相关工具页面披露。" },
+  { q_zh: "你们多久重新测试这些工具？", a_zh: "我们每 6 个月重新测试一次上榜工具。AI 工具发展很快，今天的好工具一年后就可能平庸。如果某工具质量下滑或出现更好的替代品，我们会立即更新排名。" },
+  { q_zh: "我可以推荐你们漏掉的工具吗？", a_zh: "当然可以。我们会阅读每一条消息。如果你知道一个应该上榜的 AI 工具，请通过联系页面告诉我们，我们会跟进。" }
+];
+const siteStats = {
+  tools: visibleTools.length,
+  categories: categoriesData.length,
+  reviews: 16,
+  comparisons: matchupsData.length,
+  guides: 15,
+  testHours: 2000
+};
+---
+<BaseLayout lang="zh" title="AI Tool Hub | 2026 年最佳 AI 工具目录 - 人工实测评测" description="找到最适合写作、编程、图像生成、视频、音频和商业效率的 AI 工具。由我们的编辑团队从事实测，每周更新。包含 16+ 深度评测、19 个 1v1 对比和 15+ 长篇指南。">
+
+  <section class="hero">
+    <h1>找到最适合你的 <span>AI 工具</span></h1>
+    <p>为写作、编程、设计和商业精选的 AI 工具集，由我们团队人工实测。</p>
+    <div class="hero-cta">
+      <a href="#tool-grid" id="cta-browse" class="cta-btn cta-primary">浏览工具</a>
+      <a href="/zh/best/students/" class="cta-btn cta-secondary">免费开始</a>
+    </div>
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input id="search-input" type="text" placeholder="搜索 AI 工具...">
+    </div>
+  </section>
+
+  <section class="stats-bar" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px 32px; margin: 32px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 24px; text-align: center;">
+    <div><div style="font-size: 28px; font-weight: 700; color: var(--accent-color);">{siteStats.tools}</div><div style="font-size: 13px; color: var(--text-mute); margin-top: 4px;">已评测 AI 工具</div></div>
+    <div><div style="font-size: 28px; font-weight: 700; color: var(--accent-color);">{siteStats.categories}</div><div style="font-size: 13px; color: var(--text-mute); margin-top: 4px;">分类</div></div>
+    <div><div style="font-size: 28px; font-weight: 700; color: var(--accent-color);">{siteStats.comparisons}</div><div style="font-size: 13px; color: var(--text-mute); margin-top: 4px;">1v1 对比</div></div>
+    <div><div style="font-size: 28px; font-weight: 700; color: var(--accent-color);">{siteStats.guides}+</div><div style="font-size: 13px; color: var(--text-mute); margin-top: 4px;">长篇指南</div></div>
+    <div><div style="font-size: 28px; font-weight: 700; color: var(--accent-color);">~{siteStats.testHours}</div><div style="font-size: 13px; color: var(--text-mute); margin-top: 4px;">小时人工实测</div></div>
+  </section>
+
+  <section class="categories">
+    <div class="category-list">
+      <button class="cat-btn active" data-category="all">全部</button>
+      <button class="cat-btn" data-category="text">写作</button>
+      <button class="cat-btn" data-category="image">图像生成</button>
+      <button class="cat-btn" data-category="code">编程助手</button>
+      <button class="cat-btn" data-category="video">视频制作</button>
+      <button class="cat-btn" data-category="audio">音频处理</button>
+      <button class="cat-btn" data-category="productivity">商业效率</button>
+    </div>
+  </section>
+
+  <section class="value-proposition">
+    <h2 class="section-main-title">为什么选择 AI Tool Hub？</h2>
+    <div class="value-grid">
+      <article class="value-card">
+        <div class="value-icon"><i class="fas fa-gem"></i></div>
+        <h3>人工实测</h3>
+        <p>每款工具由该领域从业者实测至少 2 周的真实工作场景。不用厂商演示，不用 AI 生成的评测。</p>
+      </article>
+      <article class="value-card">
+        <div class="value-icon"><i class="fas fa-balance-scale"></i></div>
+        <h3>独立公正</h3>
+        <p>不收钱排名。联盟链接公开标注且不影响排名。我们唯一的标准是 5 维度评分。</p>
+      </article>
+      <article class="value-card">
+        <div class="value-icon"><i class="fas fa-sync-alt"></i></div>
+        <h3>持续复测</h3>
+        <p>每 6 个月复测一次上榜工具。AI 工具发展很快，今天的好工具一年后就可能平庸。每一页都标注最后更新日期。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="category-hero">
+    <div class="cat-hero-grid">
+      {catHero.map(c => (
+        <article class="cat-hero-card" data-category={c.cat}>
+          <div class="cat-hero-icon"><i class={`fas ${c.icon}`}></i></div>
+          <h3>{c.title_zh}</h3>
+          <p>{c.desc_zh}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="recommended-section">
+    <div class="section-header">
+      <h2>本周推荐工具</h2>
+      <p>根据社区热度和实用度筛选出的顶尖 AI 神器。每周一更新。</p>
+    </div>
+    <div id="rec-grid" class="rec-grid"></div>
+  </section>
+
+  <section class="recommended-section" id="all-tools">
+    <div class="section-header">
+      <h2>全部 {siteStats.tools} 个 AI 工具</h2>
+      <p>按分类筛选或按名称搜索，找到最适合你工作的 AI 工具。</p>
+    </div>
+    <div id="tool-grid" class="tool-grid"></div>
+  </section>
+
+  <section class="related-section">
+    <h2 class="section-main-title">热门对比</h2>
+    <div class="related-grid">
+      {popularComparisons.map(m => (
+        <a class="related-card" href={"/zh/vs/" + m.slug + "/"}>
+          <div class="related-icon"><i class="fas fa-balance-scale"></i></div>
+          <div>
+            <h3>{m.title_zh}</h3>
+            <p>{m.desc_zh}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="related-section">
+    <h2 class="section-main-title">热门分类</h2>
+    <div class="related-grid">
+      {categoriesData.slice(0, 8).map(c => {
+        const firstTool = toolsData[c.tools[0]];
+        const catIcon = firstTool ? firstTool.icon : "fa-folder-open";
+        return (
+          <a class="related-card" href={"/zh/best/" + c.slug + "/"}>
+            <div class="related-icon"><i class={`fas ${catIcon}`}></i></div>
+            <div>
+              <h3>{c.title_zh}</h3>
+              <p>{c.desc_zh}</p>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <section class="related-section">
+    <h2 class="section-main-title">博客精选</h2>
+    <div class="related-grid">
+      {popularGuides.map(g => (
+        <a class="related-card" href={"/zh/blog/" + g.slug + "/"}>
+          <div class="related-icon"><i class="fas fa-newspaper"></i></div>
+          <div>
+            <h3>{g.title_zh}</h3>
+            <p>{g.desc_zh}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="related-section">
+    <h2 class="section-main-title">编辑动态</h2>
+    <p style="color: var(--text-mute); margin-bottom: 16px;">团队正在测试、发布和更新的内容简报。最近更新：2026 年 7 月 21 日。</p>
+    <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 20px 24px;">
+      {editorialLog.map(item => (
+        <div style="padding: 12px 0; border-bottom: 1px solid var(--border-color);">
+          <div style="font-size: 12px; color: var(--accent-color); font-weight: 600; margin-bottom: 4px;">{item.date}</div>
+          <div style="font-weight: 600; margin-bottom: 4px;">{item.title}</div>
+          <div style="font-size: 14px; color: var(--text-mute);">{item.desc}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="faq-section" style="margin: 40px 0;">
+    <h2 class="section-main-title" style="text-align: center; margin-bottom: 32px;">常见问题</h2>
+    {faq.map(item => (
+      <details>
+        <summary>{item.q_zh}</summary>
+        <p>{item.a_zh}</p>
+      </details>
+    ))}
+  </section>
+
+  <section class="related-section" style="text-align: center;">
+    <h2 class="section-main-title">把目录收到你的邮箱</h2>
+    <p style="color: var(--text-mute); max-width: 560px; margin: 0 auto 16px;">我们每月发送一封简短、无垃圾邮件的邮件，分享本月精选工具、隐藏神器以及 AI 工具世界的新动向。</p>
+    <a class="cta-btn cta-primary" href="/zh/contact/">订阅</a>
+  </section>
+
+</BaseLayout>

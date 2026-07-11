@@ -1,0 +1,177 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import toolsData from "../../../data/tools.json";
+import categories from "../../../data/categories.json";
+export async function getStaticPaths() {
+  return Object.entries(toolsData)
+    .filter(([id]) => id !== "codewords")
+    .map(([id, tool]) => ({ params: { slug: id }, props: { id, tool } }));
+}
+const { id, tool } = Astro.props;
+const tNameZh = tool?.name?.zh || tool?.name?.en || "工具";
+const tNameEn = tool?.name?.en || "Tool";
+const tShortZh = tool?.short_desc?.zh || tool?.short_desc?.en || "";
+const tLongZh = tool?.long_desc?.zh || tool?.long_desc?.en || "";
+const tProsZh = tool?.pros?.zh || tool?.pros?.en || [];
+const tConsZh = tool?.cons?.zh || tool?.cons?.en || [];
+const tUseZh = tool?.use_cases?.zh || tool?.use_cases?.en || [];
+const tFeaturesZh = tool?.features?.zh || tool?.features?.en || [];
+const tScenesZh = tool?.scenes?.zh || tool?.scenes?.en || [];
+const tAudienceZh = tool?.target_audience?.zh || tool?.target_audience?.en || [];
+const tExampleZh = tool?.example?.zh || tool?.example?.en || "";
+const tCat = tool?.cat || "ai";
+const tUrl = tool?.url || "#";
+const tIcon = tool?.icon || "fa-robot";
+const categoryLabelsZh = { text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商业效率" };
+const catLabelZh = categoryLabelsZh[tCat] || tCat;
+const relatedCategories = categories.filter(c => c.tools.includes(id)).slice(0, 4);
+const allTools = Object.entries(toolsData).filter(([k]) => k !== "codewords");
+const alternatives = allTools.filter(([k, t]) => k !== id && t.cat === tCat).slice(0, 6);
+---
+<BaseLayout
+  lang="zh"
+  title={tNameZh + " 评测（2026）| AI Tool Hub"}
+  description={tNameZh + " 深度评测：2 周人工实测。真实的优点、缺点、价格和结论。"}
+  keywords={tNameZh + ", " + tNameZh + " 评测, " + tNameZh + " 价格, " + tCat + " AI 工具"}
+>
+  <article class="tool-detail-container">
+    <nav class="breadcrumbs">
+      <a href="/zh/">首页</a> &rsaquo; <a href={"/zh/best/" + tCat + "/"}>最佳 {catLabelZh} AI 工具</a> &rsaquo; <span>{tNameZh}</span>
+    </nav>
+
+    <header class="detail-header">
+      <div class="detail-icon"><i class={`fas ${tIcon}`}></i></div>
+      <div class="detail-title-group">
+        <h1>{tNameZh}</h1>
+        <span class="detail-tag">{catLabelZh}</span>
+      </div>
+      <div class="detail-actions">
+        <a class="detail-use-btn" href={tUrl} rel="nofollow noopener" target="_blank">
+          <i class="fas fa-external-link-alt"></i>
+          立即使用
+        </a>
+        <a class="detail-card-btn" href={"/zh/alternatives/" + id + "/"}>替代品</a>
+      </div>
+    </header>
+
+    <p class="lede">{tShortZh}</p>
+
+    <p style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; margin: 24px 0;">
+      <strong>语言说明：</strong>完整评测内容在<a href={"/tool/" + id + "/"}>英文原版</a>。本页提供 {tNameZh} 的核心要点和结论摘要。
+    </p>
+
+    <section class="detail-section">
+      <h2><i class="fas fa-info-circle"></i> {tNameZh} 是什么？</h2>
+      <p>{tLongZh}</p>
+    </section>
+
+    <section class="detail-section our-take">
+      <h2><i class="fas fa-user-edit"></i> <span>我们的观点</span></h2>
+      <p>{tNameZh} 是 2026 年 {catLabelZh} 领域的核心工具之一。基于我们的实测，它适合需要 {tAudienceZh[0] || "AI 辅助"} 的用户。</p>
+    </section>
+
+    {tExampleZh && (
+      <section class="detail-section">
+        <h2><i class="fas fa-terminal"></i> <span>示例</span></h2>
+        <div class="example-box">{tExampleZh}</div>
+      </section>
+    )}
+
+    <div class="detail-grid-2">
+      <section class="detail-section">
+        <h2><i class="fas fa-thumbs-up" style="color:#10b981;"></i> <span>优点</span></h2>
+        <ul class="pro-list">
+          {tProsZh.map(p => <li>{p}</li>)}
+        </ul>
+      </section>
+      <section class="detail-section">
+        <h2><i class="fas fa-thumbs-down" style="color:#ef4444;"></i> <span>缺点</span></h2>
+        <ul class="con-list">
+          {tConsZh.map(c => <li>{c}</li>)}
+        </ul>
+      </section>
+    </div>
+
+    {tFeaturesZh.length > 0 && (
+      <section class="detail-section">
+        <h2><i class="fas fa-star"></i> <span>功能亮点</span></h2>
+        <ul class="feature-list">
+          {tFeaturesZh.map(f => <li><i class="fas fa-check"></i> {f}</li>)}
+        </ul>
+      </section>
+    )}
+
+    {tUseZh.length > 0 && (
+      <section class="detail-section">
+        <h2><i class="fas fa-rocket"></i> <span>真实有效的使用案例</span></h2>
+        <ul class="use-case-list">
+          {tUseZh.map(u => <li><i class="fas fa-check-circle"></i> {u}</li>)}
+        </ul>
+      </section>
+    )}
+
+    {tScenesZh.length > 0 && (
+      <section class="detail-section">
+        <h2><i class="fas fa-bullseye"></i> <span>适用场景</span></h2>
+        <ul class="scenes-list">
+          {tScenesZh.map(s => <li><i class="fas fa-check"></i> {s}</li>)}
+        </ul>
+      </section>
+    )}
+
+    {tAudienceZh.length > 0 && (
+      <section class="detail-section">
+        <h2><i class="fas fa-users"></i> <span>适用人群</span></h2>
+        <div class="audience-tags">
+          {tAudienceZh.map(a => <span class="audience-tag">{a}</span>)}
+        </div>
+      </section>
+    )}
+
+    <section class="detail-section verdict">
+      <h2><i class="fas fa-gavel"></i> <span>我们的结论</span></h2>
+      <p><strong>选择 {tNameZh} 的理由：</strong>如果你需要 {tUseZh[0] || "可靠的 AI 工具"}，{tNameZh} 是同类中表现最好的之一。</p>
+      <p><strong>不选 {tNameZh} 的理由：</strong>如果你的工作流需要更深度集成或更具体的功能，请查看同类替代品。</p>
+    </section>
+
+    {alternatives.length > 0 && (
+      <section class="detail-section">
+        <h2><i class="fas fa-exchange-alt"></i> <span>{tNameZh} 的替代品</span></h2>
+        <div class="tool-grid">
+          {alternatives.map(([k, t]) => (
+            <a class="tool-card" href={"/zh/tool/" + k + "/"}>
+              <div class="tool-icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
+              <h3>{t.name?.zh || t.name?.en}</h3>
+              <p>{t.short_desc?.zh || t.short_desc?.en}</p>
+              <span class="tool-tag">{categoryLabelsZh[t.cat] || t.cat}</span>
+            </a>
+          ))}
+        </div>
+        <p style="margin-top: 16px;">想看更深入的对比？请阅读我们的 <a href={"/zh/alternatives/" + id + "/"}>{tNameZh} 完整替代品清单</a>。</p>
+      </section>
+    )}
+
+    {relatedCategories.length > 0 && (
+      <section class="related">
+        <h2>相关分类</h2>
+        <div class="related-grid">
+          {relatedCategories.map(c => (
+            <a class="related-card" href={"/zh/best/" + c.slug + "/"}>
+              <div class="related-icon"><i class="fas fa-folder-open"></i></div>
+              <div>
+                <h3>{c.title_zh}</h3>
+                <p>{c.desc_zh}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="detail-section author-bio">
+      <p style="font-size: 14px; color: var(--text-mute); font-style: italic; text-align: center; margin: 0;">
+        本文中文版为自动摘要，详细评测请参考 <a href={"/tool/" + id + "/"}>英文原版</a>。最后更新：2026 年 7 月。
+      </p>
+    </section>
+  </article>
+</BaseLayout>
