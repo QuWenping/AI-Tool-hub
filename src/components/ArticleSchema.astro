@@ -1,0 +1,73 @@
+---
+/**
+ * Article Schema 组件 - 完整的 Article JSON-LD
+ * 包含 author, datePublished, dateModified, image, publisher
+ * 用于博客文章、深度评测、案例研究
+ */
+interface Props {
+  title: string;
+  description: string;
+  url: string;
+  image?: string;
+  datePublished: string;
+  dateModified?: string;
+  authorName: string;
+  authorUrl?: string;
+  category?: string;
+  keywords?: string[];
+  inLanguage?: string;
+}
+const {
+  title,
+  description,
+  url,
+  image = "https://thebestaitoolsreview.com/og-image.svg",
+  datePublished,
+  dateModified = datePublished,
+  authorName,
+  authorUrl,
+  category,
+  keywords = [],
+  inLanguage = "en"
+} = Astro.props as Props;
+
+const authorSchema: any = {
+  "@type": "Person",
+  "name": authorName
+};
+if (authorUrl) authorSchema.url = authorUrl;
+
+const schema: any = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "url": url,
+  "mainEntityOfPage": { "@type": "WebPage", "@id": url },
+  "image": {
+    "@type": "ImageObject",
+    "url": image,
+    "width": 1200,
+    "height": 630
+  },
+  "datePublished": datePublished,
+  "dateModified": dateModified,
+  "author": authorSchema,
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI Tool Hub",
+    "url": "https://thebestaitoolsreview.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://thebestaitoolsreview.com/logo.svg",
+      "width": 300,
+      "height": 60
+    }
+  },
+  "inLanguage": inLanguage
+};
+if (category) schema.articleSection = category;
+if (keywords.length > 0) schema.keywords = keywords.join(", ");
+const json = JSON.stringify(schema);
+---
+<script type="application/ld+json" set:html={json}></script>

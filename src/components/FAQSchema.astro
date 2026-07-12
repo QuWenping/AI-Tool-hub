@@ -1,0 +1,34 @@
+---
+/**
+ * FAQ Schema 组件 - JSON-LD FAQPage 结构化数据
+ * 用于在搜索结果中显示常见问题富文本片段
+ *
+ * 用法：<FAQSchema faqs={[{q:"问题", a:"答案"}, ...]} />
+ */
+interface FAQ {
+  q: string;
+  a: string;
+}
+interface Props {
+  faqs: FAQ[];
+}
+const { faqs } = Astro.props as Props;
+const siteUrl = "https://thebestaitoolsreview.com";
+const url = siteUrl + Astro.url.pathname;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": url,
+  "mainEntity": faqs.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.a
+    }
+  }))
+};
+const json = JSON.stringify(schema);
+---
+<script type="application/ld+json" set:html={json}></script>

@@ -14,6 +14,32 @@ const firstTool = matchedTools[0];
 const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
 const catLabel = categoryLabels[firstTool?.cat] || (firstTool?.cat || "AI");
 const relatedCategories = categories.filter(function(c){return c.slug !== cat.slug}).slice(0, 6);
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/best/" + cat.slug + "/";
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Best " + cat.title_en + " in 2026 (Hands-On Tested)",
+  "description": cat.desc_en + " Tested hands-on for 2+ weeks. Real reviews, real pros and cons, no pay-to-play rankings.",
+  "url": pageUrl,
+  "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
+  "image": { "@type": "ImageObject", "url": siteUrl + "/og-image.svg", "width": 1200, "height": 630 },
+  "datePublished": "2026-07-08",
+  "dateModified": "2026-07-11",
+  "author": { "@type": "Person", "name": "Lin Chen" },
+  "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl, "logo": { "@type": "ImageObject", "url": siteUrl + "/logo.svg", "width": 300, "height": 60 } },
+  "articleSection": "AI Tools",
+  "inLanguage": "en"
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl + "/" },
+    { "@type": "ListItem", "position": 2, "name": "Best AI Tools", "item": siteUrl + "/best/" },
+    { "@type": "ListItem", "position": 3, "name": cat.title_en, "item": pageUrl }
+  ]
+};
 const intros = {
   text: "If you have ever pasted a paragraph into ChatGPT and gotten back something that sounds like a corporate brochure, you already know the difference between a generic AI writing tool and a good one. The good ones do not just write faster - they preserve your voice, follow your instructions, and produce something you would actually publish without rewriting 80% of it. After testing 22 writing-focused AI tools over 60 days on real client work, here is the short list that survived.",
   image: "We paid for every major AI image generator in 2026 and generated 100+ test images on each. The gap between technically can make an image and actually produces something I would use is enormous - and it is not always correlated with price. Here is the honest ranking, based on what each tool is genuinely good at rather than what their marketing says.",
@@ -95,8 +121,23 @@ const faqs = {
   ]
 };
 const faqList = faqs[catKey] || faqs.text;
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": pageUrl,
+  "mainEntity": faqList.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
 ---
 <BaseLayout title={"Best " + cat.title_en + " in 2026 (Hands-On Tested)"} description={cat.desc_en + " Tested hands-on for 2+ weeks. Real reviews, real pros and cons, no pay-to-play rankings."} keywords={"best " + cat.title_en + ", " + cat.slug + " AI tools, " + cat.title_en.toLowerCase()}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
   <article class="legal-page">
     <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/">Best AI Tools</a> &rsaquo; <span>{cat.title_en}</span></nav>
     <header class="page-hero">

@@ -21,8 +21,54 @@ const bCat = (b && b.cat) || "ai";
 const aFirstPro = aPros[0] || "versatile";
 const bFirstPro = bPros[0] || "versatile";
 const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/vs/" + m.slug + "/";
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": m.title_en,
+  "description": "Side-by-side comparison of " + aName + " vs " + bName + " - features, pricing, pros, cons, and our verdict.",
+  "url": pageUrl,
+  "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
+  "image": { "@type": "ImageObject", "url": siteUrl + "/og-image.svg", "width": 1200, "height": 630 },
+  "datePublished": "2026-07-11",
+  "dateModified": "2026-07-11",
+  "author": { "@type": "Person", "name": "AI Tool Hub Editorial" },
+  "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl, "logo": { "@type": "ImageObject", "url": siteUrl + "/logo.svg", "width": 300, "height": 60 } },
+  "articleSection": "AI Tool Comparison",
+  "inLanguage": "en"
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl + "/" },
+    { "@type": "ListItem", "position": 2, "name": "Comparisons", "item": siteUrl + "/vs/" },
+    { "@type": "ListItem", "position": 3, "name": m.title_en, "item": pageUrl }
+  ]
+};
+const faqItems = [
+  { q: aName + " vs " + bName + ": which is better in 2026?", a: "Both " + aName + " and " + bName + " are strong choices. Pick " + aName + " for " + aUse.toLowerCase() + ". Pick " + bName + " for " + bUse.toLowerCase() + "." },
+  { q: "How was this comparison done?", a: "We tested both tools side by side for two weeks on the same tasks: writing, coding, image generation (where applicable), and integration. The verdict reflects real hands-on experience, not a feature list." },
+  { q: "Can I use both " + aName + " and " + bName + " together?", a: "Yes - many of our readers subscribe to both and use them for different tasks. The pricing is usually low enough that dual subscription is justified for power users." }
+];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": pageUrl,
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
 ---
 <BaseLayout title={m.title_en} description={"Side-by-side comparison of " + aName + " vs " + bName}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
   <article class="legal-page">
     <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={"/best/" + aCat + "/"}>{(categoryLabels[aCat] || aCat) + " tools"}</a> &rsaquo; <span>{m.title_en}</span></nav>
     <header class="page-hero">

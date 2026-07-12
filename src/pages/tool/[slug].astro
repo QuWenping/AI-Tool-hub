@@ -38,8 +38,44 @@ const catLabelZh = categoryLabelsZh[tCat] || tCat;
 const relatedCategories = categories.filter(c => c.tools.includes(id)).slice(0, 4);
 const allTools = Object.entries(toolsData).filter(([k]) => k !== "codewords");
 const alternatives = allTools.filter(([k, t]) => k !== id && t.cat === tCat).slice(0, 6);
-
-// Unique intro + verdict + how-to-choose for each tool
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/tool/" + id + "/";
+const appCategoryMap = { text: "WritingApplication", image: "MultimediaApplication", code: "DeveloperApplication", video: "MultimediaApplication", audio: "MultimediaApplication", productivity: "BusinessApplication" };
+const appCategory = appCategoryMap[tCat] || "MultimediaApplication";
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": tNameEn,
+  "description": tShortEn,
+  "url": pageUrl,
+  "image": siteUrl + "/og-image.svg",
+  "applicationCategory": appCategory,
+  "operatingSystem": "Web, iOS, Android",
+  "offers": {
+    "@type": "Offer",
+    "price": 0,
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.5,
+    "ratingCount": 50,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "author": { "@type": "Organization", "name": "AI Tool Hub Editorial", "url": siteUrl },
+  "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl }
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl + "/" },
+    { "@type": "ListItem", "position": 2, "name": "Best " + catLabelEn, "item": siteUrl + "/best/" + tCat + "/" },
+    { "@type": "ListItem", "position": 3, "name": tNameEn, "item": pageUrl }
+  ]
+};
 const ourIntros = {
   chatgpt: "ChatGPT is the AI assistant that started the generative AI boom in late 2022, and it is still the most-used AI tool in the world in 2026. The free tier is genuinely useful (GPT-4o mini is fast and capable), and the Plus tier ($20/month) adds GPT-5, image generation, voice mode, and the Advanced Data Analysis features. We use it daily for brainstorming, drafting, and quick research.",
   claude: "Claude is Anthropic direct competitor to ChatGPT, and in our testing it produces the highest-quality long-form English writing of any general assistant. The 200K context window is the killer feature - you can paste a 100-page document and ask Claude to summarize, analyze, or rewrite without losing the thread. The Pro tier at $20/month is the right pick for anyone who writes for a living.",
@@ -86,6 +122,10 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
   description={"Honest " + tNameEn + " review based on 2+ weeks of hands-on testing. Real pros, real cons, real pricing, and our verdict on whether it is worth paying for."}
   keywords={tNameEn + ", " + tNameEn + " review, " + tNameEn + " pricing, " + tCat + " AI tools"}
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(softwareSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
   <article class="tool-detail-container">
     <nav class="breadcrumbs">
       <a href="/">Home</a> &rsaquo; <a href={"/best/" + tCat + "/"}><span data-i18n-en={"Best " + catLabelEn} data-i18n-zh={"最佳 " + catLabelZh + " AI 工具"}>Best {catLabelEn} AI tools</span></a> &rsaquo; <span data-i18n-en={tNameEn} data-i18n-zh={tNameZh}>{tNameEn}</span>

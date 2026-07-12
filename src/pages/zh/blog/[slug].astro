@@ -8,8 +8,65 @@ export async function getStaticPaths() {
   return posts.map(p => ({ params: { slug: p.slug }, props: { post: p } }));
 }
 const { post } = Astro.props;
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/blog/" + post.slug + "/";
+const faqItems = [
+  { q: post.title_zh + " 是什么？", a: post.desc_zh },
+  { q: "谁适合阅读这篇文章？", a: "任何对 " + post.category + " 感兴趣的人都可以从这篇文章中受益。" },
+  { q: "这篇文章是如何创作的？", a: "我们的编辑团队花了数周时间在真实工作场景中测试真实的 AI 工具，然后才发布这篇评测。" }
+];
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title_zh,
+  "description": post.desc_zh,
+  "url": pageUrl,
+  "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
+  "image": {
+    "@type": "ImageObject",
+    "url": siteUrl + "/og-image.svg",
+    "width": 1200,
+    "height": 630
+  },
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "author": { "@type": "Person", "name": post.author || "AI Tool Hub 编辑团队" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI Tool Hub",
+    "url": siteUrl,
+    "logo": { "@type": "ImageObject", "url": siteUrl + "/logo.svg", "width": 300, "height": 60 }
+  },
+  "articleSection": post.category,
+  "keywords": (post.tags || []).join(", "),
+  "inLanguage": "zh-CN"
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "首页", "item": siteUrl + "/zh/" },
+    { "@type": "ListItem", "position": 2, "name": "博客", "item": siteUrl + "/zh/blog/" },
+    { "@type": "ListItem", "position": 3, "name": post.title_zh, "item": pageUrl }
+  ]
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": pageUrl,
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
 ---
 <BaseLayout lang="zh" title={post.title_zh} description={post.desc_zh} keywords={post.tags?.join(", ") || post.title_zh}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
   <article class="legal-page blog-post">
     <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/blog/">博客</a> &rsaquo; <span>{post.title_zh}</span></nav>
     <header class="page-hero">

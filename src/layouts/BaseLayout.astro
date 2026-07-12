@@ -121,6 +121,8 @@ const ogImage = siteUrl + "/og-image.svg";
     ]
   })}></script>
 
+  <slot name="head" />
+
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3930397953691472" crossorigin="anonymous"></script>
 
   {isHome && <script type="application/json" id="tools-data" set:html={JSON.stringify(toolsData)}></script>}

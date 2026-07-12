@@ -1,0 +1,68 @@
+---
+/**
+ * SoftwareApplication Schema 组件 - AI工具评测结构化数据
+ * 包含评分、价格、特性等
+ */
+interface Props {
+  name: string;
+  description: string;
+  url: string;
+  image?: string;
+  applicationCategory: string;
+  operatingSystem?: string;
+  price?: number;
+  priceCurrency?: string;
+  ratingValue?: number;
+  ratingCount?: number;
+  authorName?: string;
+}
+const {
+  name,
+  description,
+  url,
+  image = "https://thebestaitoolsreview.com/og-image.svg",
+  applicationCategory,
+  operatingSystem = "Web, iOS, Android",
+  price = 0,
+  priceCurrency = "USD",
+  ratingValue = 4.5,
+  ratingCount = 1,
+  authorName = "AI Tool Hub Editorial"
+} = Astro.props as Props;
+
+const schema: any = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": name,
+  "description": description,
+  "url": url,
+  "image": image,
+  "applicationCategory": applicationCategory,
+  "operatingSystem": operatingSystem,
+  "offers": {
+    "@type": "Offer",
+    "price": price,
+    "priceCurrency": priceCurrency,
+    "availability": "https://schema.org/InStock"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": ratingValue,
+    "ratingCount": ratingCount,
+    "bestRating": 5,
+    "worstRating": 1
+  },
+  "author": {
+    "@type": "Organization",
+    "name": authorName,
+    "url": "https://thebestaitoolsreview.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI Tool Hub",
+    "url": "https://thebestaitoolsreview.com"
+  }
+};
+const json = JSON.stringify(schema);
+---
+<script type="application/ld+json" set:html={json}></script>
