@@ -10,7 +10,7 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/zh/blog/" + post.slug + "/";
-const faqItems = [
+const faqItems = post.faq && post.faq.length > 0 ? post.faq : [
   { q: post.title_zh + " 是什么？", a: post.desc_zh },
   { q: "谁适合阅读这篇文章？", a: "任何对 " + post.category + " 感兴趣的人都可以从这篇文章中受益。" },
   { q: "这篇文章是如何创作的？", a: "我们的编辑团队花了数周时间在真实工作场景中测试真实的 AI 工具，然后才发布这篇评测。" }
@@ -67,18 +67,29 @@ const faqSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
   </Fragment>
-  <article class="legal-page blog-post">
-    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/blog/">博客</a> &rsaquo; <span>{post.title_zh}</span></nav>
-    <header class="page-hero">
+  <div class="article">
+    <nav class="breadcrumbs">
+      <a href="/zh/">首页</a> &rsaquo;
+      <a href="/zh/blog/">博客</a> &rsaquo;
+      <span>{post.title_zh}</span>
+    </nav>
+
+    <header class="article-header">
       <span class="eyebrow">{post.category}</span>
       <h1>{post.title_zh}</h1>
       <p class="lede">{post.desc_zh}</p>
-      <p style="color: var(--text-mute); font-size: 14px; margin-top: 16px;">
-        <i class="far fa-calendar"></i> {post.date} &middot; <i class="far fa-clock"></i> {post.read_time} &middot; <i class="far fa-user"></i> {post.author}
-      </p>
+      <div class="article-meta">
+        <span class="meta-item"><i class="far fa-calendar"></i> {post.date}</span>
+        <span class="meta-item"><i class="far fa-clock"></i> {post.read_time} 阅读</span>
+        <span class="meta-item"><i class="far fa-user"></i> {post.author}</span>
+        <span class="meta-item reviewer">
+          <i class="fas fa-user-check"></i>
+          审核：<strong>Lin Chen</strong>（5+ 年 AI 工具测试经验）
+        </span>
+      </div>
     </header>
 
-    <section class="blog-content">
+    <section class="article-body">
       <p style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; margin-bottom: 24px;">
         <strong>语言说明：</strong>这是英文原文 <em>{post.title_en}</em> 的中文摘要页面。完整内容请参考 <a href={"/blog/" + post.slug + "/"}>英文原版</a>。
       </p>
@@ -122,12 +133,12 @@ const faqSchema = {
       </p>
 
       <p style="background: var(--card-bg); border-left: 4px solid var(--accent-color); padding: 16px; border-radius: 8px; margin-top: 24px;">
-        <strong>关于翻译：</strong>由于内容深度和篇幅，我们优先发布英文完整版。中文页面提供核心要点和建议，帮助你快速判断该文章是否值得深入阅读。所有数据、测试结果和结论都基于英文原版，中文摘要只是快速导航。
+        <strong>关于翻译：</strong>由于内容深度和篇幅，我们优先发布英文完整版。中文页面提供核心要点和建议，帮助你快速判断该文章是否值得深入阅读。
       </p>
     </section>
 
     {post.tags && post.tags.length > 0 && (
-      <section style="margin-top: 40px;">
+      <section style="margin-top: 32px;">
         <h3>标签</h3>
         <div class="audience-tags">
           {post.tags.map(t => <span class="audience-tag">#{t}</span>)}
@@ -135,23 +146,12 @@ const faqSchema = {
       </section>
     )}
 
-    <section style="margin-top: 40px; text-align: center;">
-      <p style="color: var(--text-mute);">想让我们评测某个工具？<a href="/zh/contact/">推荐选题</a>。</p>
+    <section style="margin-top: 32px; text-align: center;">
+      <p style="color: var(--text-mute); font-size: 14px;">想让我们评测某个工具？<a href="/zh/contact/">推荐选题</a>。</p>
     </section>
 
     <Feedback slug={post.slug} lang="zh" />
     <RelatedPosts currentSlug={post.slug} currentCategory={post.category} currentTags={post.tags || []} limit={3} />
     <Comments lang="zh" />
-  </article>
+  </div>
 </BaseLayout>
-
-<style>
-.blog-content { max-width: 800px; margin: 0 auto; }
-.blog-content :global(h2) { font-size: 26px; margin: 36px 0 16px; color: var(--text-main); }
-.blog-content :global(h3) { font-size: 20px; margin: 28px 0 12px; color: var(--text-main); }
-.blog-content :global(p) { font-size: 16px; line-height: 1.8; margin-bottom: 16px; color: var(--text-main); }
-.blog-content :global(ul), .blog-content :global(ol) { margin: 16px 0 16px 24px; }
-.blog-content :global(li) { margin-bottom: 8px; line-height: 1.7; }
-.blog-content :global(a) { color: var(--accent-color); }
-.blog-content :global(strong) { color: var(--text-main); }
-</style>

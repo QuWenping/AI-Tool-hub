@@ -10,7 +10,7 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/blog/" + post.slug + "/";
-const faqItems = post.faq || [
+const faqItems = post.faq && post.faq.length > 0 ? post.faq : [
   { q: "What is " + post.title_en + "?", a: post.desc_en },
   { q: "Who is this for?", a: "Anyone interested in " + post.category + " - " + post.desc_en },
   { q: "How was this content created?", a: "Our editorial team tested real AI tools on real work over multiple weeks before publishing this review." }
@@ -39,12 +39,7 @@ const articleSchema = {
     "@type": "Organization",
     "name": "AI Tool Hub",
     "url": siteUrl,
-    "logo": {
-      "@type": "ImageObject",
-      "url": siteUrl + "/logo.svg",
-      "width": 300,
-      "height": 60
-    }
+    "logo": { "@type": "ImageObject", "url": siteUrl + "/logo.svg", "width": 300, "height": 60 }
   },
   "articleSection": post.category,
   "keywords": (post.tags || []).join(", "),
@@ -76,23 +71,34 @@ const faqSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
   </Fragment>
-  <article class="legal-page blog-post">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>{post.title_en}</span></nav>
-    <header class="page-hero">
+  <div class="article">
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> &rsaquo;
+      <a href="/blog/">Blog</a> &rsaquo;
+      <span>{post.title_en}</span>
+    </nav>
+
+    <header class="article-header">
       <span class="eyebrow">{post.category}</span>
       <h1>{post.title_en}</h1>
       <p class="lede">{post.desc_en}</p>
-      <p style="color: var(--text-mute); font-size: 14px; margin-top: 16px;">
-        <i class="far fa-calendar"></i> {post.date} &middot; <i class="far fa-clock"></i> {post.read_time} &middot; <i class="far fa-user"></i> {post.author}
-      </p>
+      <div class="article-meta">
+        <span class="meta-item"><i class="far fa-calendar"></i> {post.date}</span>
+        <span class="meta-item"><i class="far fa-clock"></i> {post.read_time} read</span>
+        <span class="meta-item"><i class="far fa-user"></i> {post.author}</span>
+        <span class="meta-item reviewer">
+          <i class="fas fa-user-check"></i>
+          Reviewed by <strong>Lin Chen</strong>, Lead Reviewer (5+ years testing AI tools)
+        </span>
+      </div>
     </header>
 
-    <section class="blog-content">
+    <section class="article-body">
       <slot />
     </section>
 
     {post.tags && post.tags.length > 0 && (
-      <section style="margin-top: 40px;">
+      <section style="margin-top: 32px;">
         <h3>Tags</h3>
         <div class="audience-tags">
           {post.tags.map(t => <span class="audience-tag">#{t}</span>)}
@@ -100,24 +106,12 @@ const faqSchema = {
       </section>
     )}
 
-    <section style="margin-top: 40px; text-align: center;">
-      <p style="color: var(--text-mute);">Want us to review a specific tool? <a href="/contact/">Suggest a topic</a>.</p>
+    <section style="margin-top: 32px; text-align: center;">
+      <p style="color: var(--text-mute); font-size: 14px;">Want us to review a specific tool? <a href="/contact/">Suggest a topic</a>.</p>
     </section>
 
     <Feedback slug={post.slug} lang="en" />
     <RelatedPosts currentSlug={post.slug} currentCategory={post.category} currentTags={post.tags || []} limit={3} />
     <Comments lang="en" />
-  </article>
+  </div>
 </BaseLayout>
-
-<style>
-.blog-content { max-width: 800px; margin: 0 auto; }
-.blog-content :global(h2) { font-size: 26px; margin: 36px 0 16px; color: var(--text-main); }
-.blog-content :global(h3) { font-size: 20px; margin: 28px 0 12px; color: var(--text-main); }
-.blog-content :global(p) { font-size: 16px; line-height: 1.8; margin-bottom: 16px; color: var(--text-main); }
-.blog-content :global(ul), .blog-content :global(ol) { margin: 16px 0 16px 24px; }
-.blog-content :global(li) { margin-bottom: 8px; line-height: 1.7; }
-.blog-content :global(a) { color: var(--accent-color); }
-.blog-content :global(strong) { color: var(--text-main); }
-.blog-content :global(.callout) { background: var(--card-bg); border-left: 4px solid var(--accent-color); padding: 16px 20px; border-radius: 8px; margin: 24px 0; }
-</style>

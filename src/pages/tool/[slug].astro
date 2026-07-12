@@ -126,55 +126,56 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
     <script type="application/ld+json" set:html={JSON.stringify(softwareSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
   </Fragment>
-  <article class="tool-detail-container">
+  <div class="tool-detail">
     <nav class="breadcrumbs">
-      <a href="/">Home</a> &rsaquo; <a href={"/best/" + tCat + "/"}><span data-i18n-en={"Best " + catLabelEn} data-i18n-zh={"最佳 " + catLabelZh + " AI 工具"}>Best {catLabelEn} AI tools</span></a> &rsaquo; <span data-i18n-en={tNameEn} data-i18n-zh={tNameZh}>{tNameEn}</span>
+      <a href="/">Home</a> &rsaquo;
+      <a href={"/best/" + tCat + "/"}>Best {catLabelEn}</a> &rsaquo;
+      <span>{tNameEn}</span>
     </nav>
 
-    <header class="detail-header">
-      <div class="detail-icon"><i class={`fas ${tIcon}`}></i></div>
-      <div class="detail-title-group">
-        <h1 data-i18n-en={tNameEn} data-i18n-zh={tNameZh}>{tNameEn}</h1>
-        <span class="detail-tag" data-i18n-en={catLabelEn} data-i18n-zh={catLabelZh}>{catLabelEn}</span>
+    <header class="tool-detail-header">
+      <div class="icon"><i class={`fas ${tIcon}`}></i></div>
+      <div class="title-group">
+        <h1>{tNameEn}</h1>
+        <span class="tag">{catLabelEn}</span>
       </div>
-      <div class="detail-actions">
-        <a class="detail-use-btn" href={tUrl} rel="nofollow noopener" target="_blank">
-          <i class="fas fa-external-link-alt"></i>
-          <span data-i18n-en="Use Now" data-i18n-zh="立即使用">Use Now</span>
+      <div class="actions">
+        <a class="use" href={tUrl} rel="nofollow noopener" target="_blank">
+          <i class="fas fa-external-link-alt"></i> Use Now
         </a>
-        <a class="detail-card-btn" href={"/alternatives/" + id + "/"} data-i18n-en="Alternatives" data-i18n-zh="替代品">Alternatives</a>
+        <a class="alt" href={"/alternatives/" + id + "/"}>Alternatives</a>
       </div>
     </header>
 
-    <p class="lede" data-i18n-en={tShortEn} data-i18n-zh={tShortZh}>{tShortEn}</p>
+    <p class="lede">{tShortEn}</p>
 
     <section class="detail-section">
-      <h2><i class="fas fa-info-circle"></i> <span data-i18n-en={"What is " + tNameEn + "?"} data-i18n-zh={tNameZh + " 是什么?"}>What is {tNameEn}?</span></h2>
+      <h2><i class="fas fa-info-circle"></i> What is {tNameEn}?</h2>
       <p data-i18n-en={tLongEn} data-i18n-zh={tLongZh}>{tLongEn}</p>
     </section>
 
-    <section class="detail-section our-take">
-      <h2><i class="fas fa-user-edit"></i> <span>Our take</span></h2>
+    <section class="detail-section">
+      <h2><i class="fas fa-user-edit"></i> Our take</h2>
       <p>{ourIntro}</p>
     </section>
 
     {tExampleEn && (
       <section class="detail-section">
-        <h2><i class="fas fa-terminal"></i> <span data-i18n-en="Example" data-i18n-zh="示例">Example</span></h2>
+        <h2><i class="fas fa-terminal"></i> Example</h2>
         <div class="example-box" data-i18n-en={tExampleEn} data-i18n-zh={tExampleZh}>{tExampleEn}</div>
       </section>
     )}
 
-    <div class="detail-grid-2">
+    <div class="grid-2">
       <section class="detail-section">
-        <h2><i class="fas fa-thumbs-up" style="color:#10b981;"></i> <span data-i18n-en="Pros" data-i18n-zh="优点">Pros</span></h2>
-        <ul class="pro-list" data-i18n-en-rich={JSON.stringify(tProsEn)} data-i18n-zh-rich={JSON.stringify(tProsZh)}>
+        <h2><i class="fas fa-thumbs-up" style="color:#10b981;"></i> Pros</h2>
+        <ul class="pros-list" data-i18n-en-rich={JSON.stringify(tProsEn)} data-i18n-zh-rich={JSON.stringify(tProsZh)}>
           {tProsEn.map(p => <li>{p}</li>)}
         </ul>
       </section>
       <section class="detail-section">
-        <h2><i class="fas fa-thumbs-down" style="color:#ef4444;"></i> <span data-i18n-en="Cons" data-i18n-zh="缺点">Cons</span></h2>
-        <ul class="con-list" data-i18n-en-rich={JSON.stringify(tConsEn)} data-i18n-zh-rich={JSON.stringify(tConsZh)}>
+        <h2><i class="fas fa-thumbs-down" style="color:#ef4444;"></i> Cons</h2>
+        <ul class="cons-list" data-i18n-en-rich={JSON.stringify(tConsEn)} data-i18n-zh-rich={JSON.stringify(tConsZh)}>
           {tConsEn.map(c => <li>{c}</li>)}
         </ul>
       </section>
@@ -182,56 +183,56 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
 
     {tFeaturesEn.length > 0 && (
       <section class="detail-section">
-        <h2><i class="fas fa-star"></i> <span data-i18n-en="Key Features" data-i18n-zh="功能亮点">Key Features</span></h2>
-        <ul class="feature-list" data-i18n-en-rich={JSON.stringify(tFeaturesEn)} data-i18n-zh-rich={JSON.stringify(tFeaturesZh)}>
-          {tFeaturesEn.map(f => <li><i class="fas fa-check"></i> {f}</li>)}
+        <h2><i class="fas fa-star"></i> Key Features</h2>
+        <ul class="pros-list" data-i18n-en-rich={JSON.stringify(tFeaturesEn)} data-i18n-zh-rich={JSON.stringify(tFeaturesZh)}>
+          {tFeaturesEn.map(f => <li>{f}</li>)}
         </ul>
       </section>
     )}
 
     {tUseEn.length > 0 && (
       <section class="detail-section">
-        <h2><i class="fas fa-rocket"></i> <span data-i18n-en="Use cases that actually work" data-i18n-zh="真实有效的使用案例">Use cases that actually work</span></h2>
-        <ul class="use-case-list" data-i18n-en-rich={JSON.stringify(tUseEn)} data-i18n-zh-rich={JSON.stringify(tUseZh)}>
-          {tUseEn.map(u => <li><i class="fas fa-check-circle"></i> {u}</li>)}
+        <h2><i class="fas fa-rocket"></i> Use cases that actually work</h2>
+        <ul class="pros-list" data-i18n-en-rich={JSON.stringify(tUseEn)} data-i18n-zh-rich={JSON.stringify(tUseZh)}>
+          {tUseEn.map(u => <li>{u}</li>)}
         </ul>
       </section>
     )}
 
     {tScenesEn.length > 0 && (
       <section class="detail-section">
-        <h2><i class="fas fa-bullseye"></i> <span data-i18n-en="Best for" data-i18n-zh="适用场景">Best for</span></h2>
-        <ul class="scenes-list" data-i18n-en-rich={JSON.stringify(tScenesEn)} data-i18n-zh-rich={JSON.stringify(tScenesZh)}>
-          {tScenesEn.map(s => <li><i class="fas fa-check"></i> {s}</li>)}
+        <h2><i class="fas fa-bullseye"></i> Best for</h2>
+        <ul class="pros-list" data-i18n-en-rich={JSON.stringify(tScenesEn)} data-i18n-zh-rich={JSON.stringify(tScenesZh)}>
+          {tScenesEn.map(s => <li>{s}</li>)}
         </ul>
       </section>
     )}
 
     {tAudienceEn.length > 0 && (
       <section class="detail-section">
-        <h2><i class="fas fa-users"></i> <span data-i18n-en="Target Audience" data-i18n-zh="适用人群">Target Audience</span></h2>
+        <h2><i class="fas fa-users"></i> Target Audience</h2>
         <div class="audience-tags" data-i18n-en-rich={JSON.stringify(tAudienceEn)} data-i18n-zh-rich={JSON.stringify(tAudienceZh)}>
           {tAudienceEn.map(a => <span class="audience-tag">{a}</span>)}
         </div>
       </section>
     )}
 
-    <section class="detail-section verdict">
-      <h2><i class="fas fa-gavel"></i> <span>Our verdict</span></h2>
+    <section class="detail-section">
+      <h2><i class="fas fa-gavel"></i> Our verdict</h2>
       <p><strong>Pick {tNameEn} if:</strong> {ourVerdict.best}</p>
       <p><strong>Skip {tNameEn} if:</strong> {ourVerdict.avoid}</p>
     </section>
 
     {alternatives.length > 0 && (
       <section class="detail-section">
-        <h2><i class="fas fa-exchange-alt"></i> <span data-i18n-en={"Alternatives to " + tNameEn} data-i18n-zh={tNameZh + " 的替代品"}>Alternatives to {tNameEn}</span></h2>
+        <h2><i class="fas fa-exchange-alt"></i> Alternatives to {tNameEn}</h2>
         <div class="tool-grid">
           {alternatives.map(([k, t]) => (
             <a class="tool-card" href={"/tool/" + k + "/"}>
-              <div class="tool-icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
+              <div class="icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
               <h3 data-i18n-en={t.name.en} data-i18n-zh={t.name.zh || t.name.en}>{t.name.en}</h3>
               <p data-i18n-en={t.short_desc.en} data-i18n-zh={t.short_desc.zh || t.short_desc.en}>{t.short_desc.en}</p>
-              <span class="tool-tag" data-i18n-en={categoryLabels[t.cat] || t.cat} data-i18n-zh={categoryLabelsZh[t.cat] || t.cat}>{categoryLabels[t.cat] || t.cat}</span>
+              <span class="tag">{categoryLabels[t.cat] || t.cat}</span>
             </a>
           ))}
         </div>
@@ -241,7 +242,7 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
 
     {relatedCategories.length > 0 && (
       <section class="related">
-        <h2 data-i18n-en="Related categories" data-i18n-zh="相关分类">Related categories</h2>
+        <div class="section-title">Related categories</div>
         <div class="related-grid">
           {relatedCategories.map(c => (
             <a class="related-card" href={"/best/" + c.slug + "/"}>
@@ -256,10 +257,10 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
       </section>
     )}
 
-    <section class="detail-section author-bio">
-      <p style="font-size: 14px; color: var(--text-mute); font-style: italic; text-align: center; margin: 0;">
+    <section class="detail-section" style="text-align: center;">
+      <p style="font-size: 13px; color: var(--text-mute); font-style: italic; margin: 0;">
         Reviewed by <strong>Lin Chen</strong>, Lead Reviewer at AI Tool Hub. Lin has been testing AI tools hands-on for 5+ years and has personally used {tNameEn} on real client work for at least 2 weeks before this review was published. Last updated: July 2026.
       </p>
     </section>
-  </article>
+  </div>
 </BaseLayout>

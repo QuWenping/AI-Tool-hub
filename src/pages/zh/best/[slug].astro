@@ -18,7 +18,7 @@ const relatedCategories = categories.filter(function(c){return c.slug !== cat.sl
 <BaseLayout lang="zh" title={"2026 年最佳" + cat.title_zh + "（人工实测）"} description={cat.desc_zh + " 经过 2 周以上人工实测。真实评测、真实优缺点、不收钱排名。"} keywords={"最佳" + cat.title_zh + ", " + cat.slug + " AI 工具, " + cat.title_zh}>
   <article class="legal-page">
     <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/">最佳 AI 工具</a> &rsaquo; <span>{cat.title_zh}</span></nav>
-    <header class="page-hero">
+    <header class="cat-hero">
       <span class="eyebrow">2026 年最佳</span>
       <h1>{cat.title_zh}</h1>
       <p class="lede">{cat.desc_zh}</p>
@@ -97,3 +97,4 @@ const relatedCategories = categories.filter(function(c){return c.slug !== cat.sl
     </section>
   </article>
 </BaseLayout>
+
