@@ -1,7 +1,9 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogJsonLd from "../../components/BlogJsonLd.astro";
 ---
 <BaseLayout title="Best AI Tools for Product Managers in 2026 (Tested by PMs)" description="We surveyed 50 product managers on the AI tools they actually use daily in 2026. Here are the 8 that consistently save 5+ hours per week, ranked by impact." keywords="product-management, productivity, writing, research">
+  <BlogJsonLd slot="head" title="Best AI Tools for Product Managers in 2026 (Tested by PMs)" description="We surveyed 50 product managers on the AI tools they actually use daily in 2026. Here are the 8 that consistently save 5+ hours per week, ranked by impact." slug="best-ai-tools-for-product-managers-2026" date="2026-08-12" author="Daniel Park" category="product-management" tags={["product-management","productivity","writing","research"]} />
   <article class="legal-page blog-post">
     <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>Best AI Tools for Product Managers in 2026 (Tested by PMs)</span></nav>
     <header class="article-header">
