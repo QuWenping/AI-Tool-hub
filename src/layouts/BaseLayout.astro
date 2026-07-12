@@ -137,7 +137,10 @@ const ogImage = siteUrl + "/og-image.svg";
 
   <slot name="head" />
 
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3930397953691472" crossorigin="anonymous"></script>
+  <meta name="google-adsense-account" content="ca-pub-3930397953691472">
+  {import.meta.env.PROD && (
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3930397953691472" crossorigin="anonymous"></script>
+  )}
 
   {isHome && <script type="application/json" id="tools-data" set:html={JSON.stringify(toolsData)}></script>}
   {isHome && <script type="application/json" id="categories-data" set:html={JSON.stringify(categoriesData)}></script>}
