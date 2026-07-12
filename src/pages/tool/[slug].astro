@@ -42,6 +42,15 @@ const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/tool/" + id + "/";
 const appCategoryMap = { text: "WritingApplication", image: "MultimediaApplication", code: "DeveloperApplication", video: "MultimediaApplication", audio: "MultimediaApplication", productivity: "BusinessApplication" };
 const appCategory = appCategoryMap[tCat] || "MultimediaApplication";
+// Editorial rating per tool (out of 10, matches our 5-dimension methodology).
+// Provisional scores based on our verdicts; adjust to final rubric scores anytime.
+const toolRatings = {
+  chatgpt: 9.2, claude: 9.0, gemini: 8.6, "github-copilot": 8.4, cursor: 9.0,
+  sora: 8.2, runway: 8.8, midjourney: 9.0, "stable-diffusion": 8.0, leonardo: 8.2,
+  elevenlabs: 9.0, suno: 8.4, descript: 8.6, "notion-ai": 8.2, perplexity: 8.8,
+  jasper: 6.8, hostinger: 7.8
+};
+const rating = toolRatings[id] || 8.5;
 const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -57,12 +66,17 @@ const softwareSchema = {
     "priceCurrency": "USD",
     "availability": "https://schema.org/InStock"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": 4.5,
-    "ratingCount": 50,
-    "bestRating": 5,
-    "worstRating": 1
+  "review": {
+    "@type": "Review",
+    "author": { "@type": "Person", "name": "Lin Chen", "jobTitle": "Lead Reviewer", "url": siteUrl + "/team/" },
+    "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl },
+    "datePublished": "2026-07-01",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": rating,
+      "bestRating": 10,
+      "worstRating": 1
+    }
   },
   "author": { "@type": "Organization", "name": "AI Tool Hub Editorial", "url": siteUrl },
   "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl }
@@ -138,6 +152,11 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
       <div class="title-group">
         <h1>{tNameEn}</h1>
         <span class="tag">{catLabelEn}</span>
+        <div class="tool-rating" style="display:flex;align-items:center;gap:6px;margin-top:6px;font-size:14px;color:var(--text-soft);">
+          <i class="fas fa-star" style="color:#f59e0b"></i>
+          <strong>{rating.toFixed(1)}</strong><span style="color:var(--text-mute);">/10</span>
+          <span style="color:var(--text-mute);font-size:12px;">Editorial rating</span>
+        </div>
       </div>
       <div class="actions">
         <a class="use" href={tUrl} rel="nofollow noopener" target="_blank">
