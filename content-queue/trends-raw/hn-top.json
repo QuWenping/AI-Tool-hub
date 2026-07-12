@@ -1,0 +1,183 @@
+[
+  {
+    "rank": 1,
+    "id": 48876505,
+    "title": "Mesh LLM: distributed AI computing on iroh",
+    "score": 63,
+    "author": "tionis",
+    "comments": 17,
+    "url": "https://www.iroh.computer/blog/mesh-llm"
+  },
+  {
+    "rank": 2,
+    "id": 48875377,
+    "title": "Show HN: Ant – A JavaScript runtime and ecosystem",
+    "score": 170,
+    "author": "theMackabu",
+    "comments": 74,
+    "url": "https://antjs.org"
+  },
+  {
+    "rank": 3,
+    "id": 48876245,
+    "title": "RISCBoy is an open-source portable games console, designed from scratch",
+    "score": 50,
+    "author": "mariuz",
+    "comments": 11,
+    "url": "https://github.com/Wren6991/RISCBoy"
+  },
+  {
+    "rank": 4,
+    "id": 48876578,
+    "title": "The fine print that follows you out the door: non-compete clauses are spreading",
+    "score": 20,
+    "author": "hhs",
+    "comments": 16,
+    "url": "https://oecdecoscope.blog/2026/07/07/the-fine-print-that-follows-you-out-the-door-non-compete-clauses-are-spreading-and-holding-back-growth/"
+  },
+  {
+    "rank": 5,
+    "id": 48873836,
+    "title": "Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom",
+    "score": 151,
+    "author": "adletbalzhanov",
+    "comments": 55,
+    "url": "https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom"
+  },
+  {
+    "rank": 6,
+    "id": 48877269,
+    "title": "A dock that wakes up reliably",
+    "score": 3,
+    "author": "ingve",
+    "comments": 1,
+    "url": "https://fabiensanglard.net/tb4/index.html"
+  },
+  {
+    "rank": 7,
+    "id": 48849744,
+    "title": "Billions of Sketches Reveal Hidden Cultural Variation in Human Concepts",
+    "score": 45,
+    "author": "Anon84",
+    "comments": 4,
+    "url": "https://arxiv.org/abs/2607.07267"
+  },
+  {
+    "rank": 8,
+    "id": 48872874,
+    "title": "We scaled PgBouncer to 4x throughput",
+    "score": 174,
+    "author": "saisrirampur",
+    "comments": 34,
+    "url": "https://clickhouse.com/blog/pgbouncer-clickhouse-managed-postgres"
+  },
+  {
+    "rank": 9,
+    "id": 48876970,
+    "title": "Odyssey Linux",
+    "score": 12,
+    "author": "Gualdrapo",
+    "comments": 12,
+    "url": "https://odysseylinux.org"
+  },
+  {
+    "rank": 10,
+    "id": 48873457,
+    "title": "UPI: Anatomy of a Payment Transaction",
+    "score": 92,
+    "author": "prtk25",
+    "comments": 30,
+    "url": "https://timeseriesofindia.com/economy/reads/upi-architecture/"
+  },
+  {
+    "rank": 11,
+    "id": 48873940,
+    "title": "Prefer strict tables in SQLite",
+    "score": 215,
+    "author": "ingve",
+    "comments": 103,
+    "url": "https://evanhahn.com/prefer-strict-tables-in-sqlite/"
+  },
+  {
+    "rank": 12,
+    "id": 48872858,
+    "title": "The early History of the Singular Value Decomposition (1993) [pdf]",
+    "score": 88,
+    "author": "wolfi1",
+    "comments": 51,
+    "url": "https://www.math.ucdavis.edu/~saito/courses/229A/stewart-svd.pdf"
+  },
+  {
+    "rank": 13,
+    "id": 48876741,
+    "title": "Doctors die. It's not like the rest of us, but it should be (2016)",
+    "score": 44,
+    "author": "downbad_",
+    "comments": 21,
+    "url": "https://archive.cancerworld.net/featured/how-doctors-die/"
+  },
+  {
+    "rank": 14,
+    "id": 48820361,
+    "title": "Biff.graph: structure your Clojure codebase as a queryable graph",
+    "score": 81,
+    "author": "jacobobryant",
+    "comments": 2,
+    "url": "https://github.com/jacobobryant/biff/tree/v2.x/libs/graph"
+  },
+  {
+    "rank": 15,
+    "id": 48871973,
+    "title": "Show HN: Learn by rebuilding Redis, Git, a database from scratch",
+    "score": 119,
+    "author": "acley",
+    "comments": 35,
+    "url": "https://shipthatcode.com"
+  },
+  {
+    "rank": 16,
+    "id": 48830664,
+    "title": "Optimization Solver as a Service",
+    "score": 12,
+    "author": "paddi91",
+    "comments": 9,
+    "url": "https://www.quicopt.com/developer/getting-started/"
+  },
+  {
+    "rank": 17,
+    "id": 48844476,
+    "title": "How to Achieve Pruning When Querying by Non-Partitioned Columns in PostgreSQL",
+    "score": 3,
+    "author": "theanonymousone",
+    "comments": 0,
+    "url": "https://hakibenita.com/postgresql-partition-pruning"
+  },
+  {
+    "rank": 18,
+    "id": 48876593,
+    "title": "Weightlifting beats running for blood sugar control, researchers find",
+    "score": 96,
+    "author": "sublinear",
+    "comments": 47,
+    "url": "https://news.vt.edu/articles/2025/11/research_fralinbiomed_yanweightlifting.html"
+  },
+  {
+    "rank": 19,
+    "id": 48873501,
+    "title": "Show HN: Orbit – AR satellite tracker, watch 15k+ objects",
+    "score": 57,
+    "author": "lukas9",
+    "comments": 17,
+    "url": "https://nagylukas.github.io/orbit.html"
+  },
+  {
+    "rank": 20,
+    "id": 48874297,
+    "title": "ZeroFS vs. Amazon S3 Files",
+    "score": 51,
+    "author": "cbrewster",
+    "comments": 14,
+    "url": "https://www.zerofs.net/blog/zerofs-vs-aws-s3-files/"
+  }
+]
+

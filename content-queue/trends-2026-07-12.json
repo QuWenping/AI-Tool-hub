@@ -1,0 +1,8 @@
+{
+  "date": "2026-07-12",
+  "exa_queries": [],
+  "hn_top_file": "trends-raw\\hn-top.json",
+  "hn_show_file": "trends-raw\\hn-show.json",
+  "github_trending_file": "trends-raw\\github-trending.json",
+  "producthunt_file": "trends-raw\\producthunt.json"
+}

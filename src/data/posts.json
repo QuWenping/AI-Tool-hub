@@ -537,5 +537,24 @@
       "writing",
       "research"
     ]
+  },
+  {
+    "slug": "meetily-review-best-local-ai-meeting-assistant-2026",
+    "title_en": "Meetily Review: The Best Local AI Meeting Assistant in 2026?",
+    "title_zh": "Meetily 评测：2026年最佳本地AI会议助手？",
+    "desc_en": "Meetily is a Rust-based, privacy-first AI meeting assistant that runs 100% locally. We tested its live transcription, summarization, and how it stacks up against Otter and Fireflies.",
+    "desc_zh": "Meetily 是一款基于 Rust、100% 本地运行的隐私优先 AI 会议助手。我们实测了它的实时转录、总结能力，并对比 Otter、Fireflies 等主流工具。",
+    "category": "productivity",
+    "date": "2026-07-12",
+    "read_time": "9 min read",
+    "author": "AI Tool Hub Editorial",
+    "tags": [
+      "ai-meeting-assistant",
+      "open-source",
+      "local-first",
+      "self-hosted",
+      "productivity",
+      "rust"
+    ]
   }
 ]
