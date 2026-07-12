@@ -1,7 +1,10 @@
 ---
-const { title, description, slug, date, author, category, tags = [] } = Astro.props;
+const { title, description, slug, date, author, category, tags = [], keywords = "" } = Astro.props;
 const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/blog/" + slug + "/";
+const kw = (keywords && keywords.trim())
+  ? keywords.trim()
+  : ((tags && tags.length) ? tags.join(", ") : [category, title].filter(Boolean).join(", "));
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -15,7 +18,7 @@ const articleSchema = {
   "author": { "@type": "Person", "name": author },
   "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl, "logo": { "@type": "ImageObject", "url": siteUrl + "/logo.svg", "width": 300, "height": 60 } },
   "articleSection": category,
-  "keywords": (tags || []).join(", "),
+  "keywords": kw,
   "inLanguage": "en"
 };
 const breadcrumbSchema = {
