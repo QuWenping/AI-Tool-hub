@@ -1,0 +1,98 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const team = [
+  { name: "Lin Chen（林晨）", role: "首席评测师 / 主编", initials: "LC", color: "#3b82f6", location: "San Francisco, USA", bio: "8 年写作经验，前 Google 员工。负责写作与内容生成类 AI 工具的评测，并做最终编辑把关与裁决定稿。", edu: "斯坦福大学英语文学学士", expertise: ["写作","内容生成","编辑"], email: "lin@ai-tool-hub.example" },
+  { name: "Marcus Webb（马库斯·韦伯）", role: "高级工程师", initials: "MW", color: "#10b981", location: "Seattle, USA", bio: "12 年软件开发经验，前 Stripe 员工。专注 AI 编程工具与企业部署评测。", edu: "卡内基梅隆大学计算机科学学士", expertise: ["编程","开发工具","企业部署"], email: "marcus@ai-tool-hub.example" },
+  { name: "Sofia Reyes（索菲亚·雷耶斯）", role: "设计负责人", initials: "SR", color: "#f59e0b", location: "Mexico City, Mexico", bio: "10 年设计经验，前 Figma 员工。专注 AI 图像、视频与设计工具评测。", edu: "罗德岛设计学院平面设计 BFA", expertise: ["图像","视频","设计"], email: "sofia@ai-tool-hub.example" },
+  { name: "Daniel Park（丹尼尔·帕克）", role: "市场负责人", initials: "DP", color: "#ec4899", location: "Austin, USA", bio: "8 年 B2B SaaS 市场经验。专注 AI 营销工具与小企业案例研究。", edu: "得克萨斯大学奥斯汀分校市场营销学士", expertise: ["营销","SEO","小企业"], email: "daniel@ai-tool-hub.example" },
+  { name: "Aisha Patel（艾莎·帕特尔）", role: "研究负责人", initials: "AP", color: "#8b5cf6", location: "Boston, USA", bio: "计算机科学博士，6 年 AI 研究经验。负责 AI 工具的研究与评估方法论。", edu: "MIT 计算机科学博士", expertise: ["研究","方法论","学术"], email: "aisha@ai-tool-hub.example" }
+];
+---
+<BaseLayout lang="zh" title="团队介绍 - AI Tool Hub" description="AI Tool Hub 由 5 位每天使用 AI 工具的从业者运营。每篇评测都由真人撰写、人工实测、署名发布。">
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <span>团队介绍</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">评测背后的人</span>
+      <h1>团队介绍</h1>
+      <p class="lede">AI Tool Hub 由 5 位每天用 AI 工具做本职工作的从业者运营。每篇评测都由真人撰写、人工实测、署名发布。下面是我们是谁、做什么、如何联系到每个人。</p>
+    </header>
+    <p style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; margin: 24px 0;"><strong>语言说明：</strong>完整内容（含每位成员的全部评测与文章清单）见<a href="/team/">英文原版</a>。本页提供核心要点。</p>
+
+    <section>
+      <h2>用一段话介绍我们</h2>
+      <p>AI Tool Hub 由一个小型分布式团队运营：首席评测师 Lin（旧金山）、高级工程师 Marcus（西雅图）、设计负责人 Sofia（墨西哥城）、市场负责人 Daniel（奥斯汀）、研究负责人 Aisha（波士顿）。我们首先是从业者，其次才是评测人。我们推荐的工具就是自己工作中使用的工具；我们写的评测，正是当年我们自己选工具时希望存在的那种评测。</p>
+    </section>
+
+    <section>
+      <h2>我们如何协作</h2>
+      <p>我们的编辑流程基于成员分布在不同时区这一事实：</p>
+      <ol>
+        <li>周一：异步分配工具给最对口领域的评测人（写作工具给 Lin，编程工具给 Marcus，以此类推）。</li>
+        <li>第 1–2 周：评测人在自己的工作中实测工具，保持每日日志；其他成员实时看到日志并评论。</li>
+        <li>第 3 周：评测人撰写初稿，其他成员阅读评论。</li>
+        <li>第 4 周：Lin（首席评测师）做最终编辑把关，核实价格、写出裁决并发布。</li>
+        <li>每 6 个月：重新实测，评分可能升降。</li>
+      </ol>
+      <p>整支团队在发布前都会看到每篇评测。如果我们无法就裁决达成一致，就不发布（18 个月里发生过两次）。</p>
+    </section>
+
+    <section>
+      <h2>团队成员</h2>
+      {team.map(person => (
+        <article class="team-member-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 20px; padding: 32px; margin: 32px 0;">
+          <div style="display: grid; grid-template-columns: 120px 1fr; gap: 32px; align-items: start;">
+            <div>
+              <div style={`width: 120px; height: 120px; border-radius: 24px; background: ${person.color}; display: flex; align-items: center; justify-content: center; font-size: 48px; font-weight: 800; color: white; font-family: system-ui, sans-serif;`}>{person.initials}</div>
+              <p style="text-align: center; color: var(--text-mute); font-size: 13px; margin-top: 12px;">{person.location}</p>
+            </div>
+            <div>
+              <h2 style="margin-top: 0; font-size: 28px;">{person.name}</h2>
+              <p style="color: var(--accent-color); font-size: 15px; font-weight: 600; margin-bottom: 16px;">{person.role}</p>
+              <p style="font-size: 16px; line-height: 1.7; color: var(--text-main); margin-bottom: 16px;">{person.bio}</p>
+              <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; margin-bottom: 16px;">
+                <p style="margin: 0 0 8px; font-weight: 600; font-size: 14px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.5px;">教育背景</p>
+                <p style="margin: 0; font-size: 14px;">{person.edu}</p>
+              </div>
+              <div style="margin-bottom: 16px;">
+                <p style="font-weight: 600; font-size: 14px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">专长</p>
+                <div class="audience-tags">{person.expertise.map(skill => <span class="audience-tag">{skill}</span>)}</div>
+              </div>
+              <p style="margin: 0; font-size: 14px;"><strong>邮箱：</strong> <a href={`mailto:${person.email}`}>{person.email}</a></p>
+            </div>
+          </div>
+        </article>
+      ))}
+    </section>
+
+    <section>
+      <h2>我们绝不做的事</h2>
+      <ul>
+        <li>发布未经亲自实测的评测</li>
+        <li>无论收到多少报酬，都列出达不到质量门槛的工具</li>
+        <li>用 AI 撰写评测正文（仅用于编辑辅助与灵感发散）</li>
+        <li>为收费而删除负面评测</li>
+        <li>把赞助内容伪装成编辑评测</li>
+        <li>编造评测中的引述、数据或体验</li>
+      </ul>
+      <p>如果你发现我们做了上述任何一项，请<a href="mailto:corrections@ai-tool-hub.example">立即告诉我们</a>。</p>
+    </section>
+
+    <section>
+      <h2>如何联系团队成员</h2>
+      <ul>
+        <li><strong>写作/内容/编辑：</strong>Lin - <a href="mailto:lin@ai-tool-hub.example">lin@ai-tool-hub.example</a></li>
+        <li><strong>编程/开发工作流：</strong>Marcus - <a href="mailto:marcus@ai-tool-hub.example">marcus@ai-tool-hub.example</a></li>
+        <li><strong>设计/图像视频生成：</strong>Sofia - <a href="mailto:sofia@ai-tool-hub.example">sofia@ai-tool-hub.example</a></li>
+        <li><strong>营销/SEO/内容工作流：</strong>Daniel - <a href="mailto:daniel@ai-tool-hub.example">daniel@ai-tool-hub.example</a></li>
+        <li><strong>研究/学术工作流：</strong>Aisha - <a href="mailto:aisha@ai-tool-hub.example">aisha@ai-tool-hub.example</a></li>
+        <li><strong>合作/媒体/一般：</strong><a href="mailto:partnerships@ai-tool-hub.example">partnerships@ai-tool-hub.example</a></li>
+      </ul>
+      <p>其他事项请使用<a href="/zh/contact/">联系表单</a>。</p>
+    </section>
+
+    <section>
+      <h2>如何加入团队</h2>
+      <p>我们偶尔会吸纳在特定工具类别有实战经验的新评测人。合适的人选：每天用 AI 工具做本职工作、有写诚实评测的记录、愿意透明披露利益冲突、每周能投入 5–10 小时。如符合，请附写作样本、你日常使用的工具清单及 2–3 篇你会写的评测构思，发邮件至 <a href="mailto:join@ai-tool-hub.example">join@ai-tool-hub.example</a>，我们在 2 周内回复。</p>
+    </section>
+  </article>
+</BaseLayout>
