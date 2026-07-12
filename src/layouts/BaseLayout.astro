@@ -61,6 +61,20 @@ const ogImage = siteUrl + "/og-image.svg";
   <link rel="stylesheet" href="/css/style.css">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
+
+  <!-- Google Analytics 4 (production only; respects privacy policy IP anonymization) -->
+  {import.meta.env.PROD && (
+    <Fragment>
+      <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+      <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-BRKGD43DFT"></script>
+      <script is:inline>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-BRKGD43DFT', { anonymize_ip: true });
+      </script>
+    </Fragment>
+  )}
   {lang === "zh" ? (
     <Fragment>
       <link rel="alternate" hreflang="zh" href={siteUrl + "/zh" + Astro.url.pathname.replace(/^\/zh/, "")} />
