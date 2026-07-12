@@ -1,0 +1,55 @@
+---
+// Lightweight cookie consent + Google Consent Mode v2 update (production only)
+---
+{import.meta.env.PROD && (
+  <div id="cookie-consent" hidden>
+    <div class="cc-box">
+      <p>We use cookies for analytics and ads (Google Analytics &amp; AdSense). See our <a href="/privacy/">privacy policy</a>.</p>
+      <div class="cc-btns">
+        <button id="cc-reject" type="button">Necessary only</button>
+        <button id="cc-accept" type="button">Accept all</button>
+      </div>
+    </div>
+  </div>
+)}
+<style is:global>
+  #cookie-consent{position:fixed;bottom:0;left:0;right:0;z-index:9999;background:var(--card-bg);border-top:1px solid var(--border-color);padding:14px 20px;display:flex;justify-content:center;}
+  #cookie-consent[hidden]{display:none;}
+  .cc-box{max-width:960px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--text-mute);}
+  .cc-box p{margin:0;flex:1;min-width:220px;}
+  .cc-box a{color:var(--accent-color);}
+  .cc-btns{display:flex;gap:8px;}
+  #cc-reject,#cc-accept{border:none;border-radius:8px;padding:8px 16px;font-size:13px;font-weight:600;cursor:pointer;}
+  #cc-accept{background:var(--accent-color);color:#fff;}
+  #cc-reject{background:var(--bg-color);color:var(--text-main);border:1px solid var(--border-color);}
+</style>
+<script is:inline>
+  (function () {
+    var KEY = "cookieConsent";
+    var choice = localStorage.getItem(KEY);
+    var el = document.getElementById("cookie-consent");
+    if (!choice && el) { el.hidden = false; }
+    function update(granted) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag("consent", "update", {
+        ad_storage: granted ? "granted" : "denied",
+        ad_user_data: granted ? "granted" : "denied",
+        ad_personalization: granted ? "granted" : "denied",
+        analytics_storage: granted ? "granted" : "denied"
+      });
+    }
+    // On every load, re-assert the stored choice so consent mode stays in sync
+    if (choice === "accepted") { update(true); }
+    else if (choice === "rejected") { update(false); }
+    function decide(v) {
+      localStorage.setItem(KEY, v);
+      if (el) { el.hidden = true; }
+      update(v === "accepted");
+    }
+    var a = document.getElementById("cc-accept");
+    var r = document.getElementById("cc-reject");
+    if (a) { a.addEventListener("click", function () { decide("accepted"); }); }
+    if (r) { r.addEventListener("click", function () { decide("rejected"); }); }
+  })();
+</script>

@@ -2,6 +2,7 @@
 import toolsData from "../data/tools.json";
 import categoriesData from "../data/categories.json";
 import Newsletter from "../components/Newsletter.astro";
+import CookieConsent from "../components/CookieConsent.astro";
 const { title, description, keywords, canonical, lang = "en" } = Astro.props;
 const siteUrl = "https://thebestaitoolsreview.com";
 const fullTitle = title ? title + " | AI Tool Hub" : "AI Tool Hub | Best AI Tools Directory";
@@ -9,6 +10,10 @@ const desc = description || "Explore curated AI tools for writing, coding, image
 const kw = keywords || "AI tools, best AI tools, AI writing, AI coding, AI image generators";
 const url = canonical || siteUrl + Astro.url.pathname;
 const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "/index.html";
+// AdSense policy: no ads on non-content / legal / meta pages
+const noAdsSlugs = ["privacy","terms","contact","about","sponsor","advertise","press-kit","changelog","submit-sitemap","accessibility","editorial-guidelines","methodology","team"];
+const _cleanPath = Astro.url.pathname.replace(/\/+$/, "");
+const noAdsPage = noAdsSlugs.some(s => _cleanPath === "/" + s || _cleanPath === "/zh/" + s);
 const ogImage = siteUrl + "/og-image.svg";
 ---
 <!DOCTYPE html>
@@ -62,6 +67,20 @@ const ogImage = siteUrl + "/og-image.svg";
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
 
+  <!-- Google Consent Mode v2: default denied, updated on user consent -->
+  {import.meta.env.PROD && (
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+  )}
   <!-- Google Analytics 4 (production only; respects privacy policy IP anonymization) -->
   {import.meta.env.PROD && (
     <Fragment>
@@ -138,7 +157,7 @@ const ogImage = siteUrl + "/og-image.svg";
   <slot name="head" />
 
   <meta name="google-adsense-account" content="ca-pub-3930397953691472">
-  {import.meta.env.PROD && (
+  {import.meta.env.PROD && !noAdsPage && (
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3930397953691472" crossorigin="anonymous"></script>
   )}
 
@@ -187,5 +206,6 @@ const ogImage = siteUrl + "/og-image.svg";
     </div>
   </footer>
   <script src="/js/main.js" defer></script>
+<CookieConsent />
 </body>
 </html>
