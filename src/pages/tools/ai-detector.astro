@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout title="AI Text Detector | Free Online Tool" description="Free AI text detector. Check if text was likely written by AI using statistical analysis. No signup required." keywords="ai detector, ai text detector, chatgpt detector, ai content detector">
+  <div class="container" style="max-width:800px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumbs" style="margin-bottom:24px;"><a href="/">Home</a> &rsaquo; <a href="/tools/">Free Tools</a> &rsaquo; <span>AI Detector</span></nav>
+    <h1 style="font-size:32px;font-weight:700;margin-bottom:8px;">AI Text Detector</h1>
+    <p style="color:var(--text-mute);font-size:16px;margin-bottom:20px;">Estimate whether text was AI-generated using statistical analysis. Free, no signup.</p>
+    <div style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);border-radius:10px;padding:12px 16px;margin-bottom:24px;font-size:13px;color:var(--text-soft);"><strong>Disclaimer:</strong> Uses simple statistical heuristics. Not 100% accurate. Do not use as sole evidence.</div>
+    <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:14px;padding:24px;margin-bottom:24px;">
+      <textarea id="det-input" rows="8" placeholder="Paste text here (min 20 words)..." style="width:100%;background:var(--bg-color);border:1px solid var(--border-color);border-radius:10px;padding:12px;color:var(--text-main);font-size:14px;resize:vertical;"></textarea>
+      <button id="det-analyze" style="background:var(--accent-color);color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:600;cursor:pointer;margin-top:12px;">Analyze</button>
+    </div>
+    <div id="det-results" style="display:none;background:var(--card-bg);border:1px solid var(--border-color);border-radius:14px;padding:24px;">
+      <div id="det-score" style="text-align:center;margin-bottom:20px;"></div>
+      <div id="det-details" style="font-size:14px;line-height:1.8;"></div>
+    </div>
+  </div>
+</BaseLayout>
+<script is:inline>
+  var aiP=["delve into","in conclusion","it's important to note","furthermore","moreover","additionally","in today's world","navigating the","ever-evolving","landscape of","realm of","when it comes to","plays a crucial","cannot be overstated","let's explore","in the realm"];
+  document.getElementById("det-analyze").addEventListener("click",function(){
+    var t=document.getElementById("det-input").value.trim();
+    if(t.split(/\s+/).length<20){alert("Please enter at least 20 words.");return;}
+    var s=t.split(/[.!?]+/).filter(function(x){return x.trim().length>0});
+    var w=t.split(/\s+/).filter(function(x){return x.length>0});var wc=w.length;
+    var avg=wc/s.length;var lens=s.map(function(x){return x.trim().split(/\s+/).length});
+    var v=lens.reduce(function(a,b){return a+Math.pow(b-avg,2)},0)/lens.length;var sd=Math.sqrt(v);
+    var lt=t.toLowerCase();var pc=aiP.reduce(function(c,p){return c+(lt.indexOf(p)>=0?1:0)},0);
+    var awl=w.reduce(function(a,b){return a+b.length},0)/wc;
+    var lwr=w.filter(function(x){return x.length>10}).length/wc;
+    var score=0;
+    if(sd<3)score+=25;else if(sd<5)score+=15;else if(sd<8)score+=5;
+    if(avg>20)score+=20;else if(avg>15)score+=10;
+    if(pc>=3)score+=25;else if(pc>=2)score+=15;else if(pc>=1)score+=8;
+    if(awl>5.5)score+=15;if(lwr>0.15)score+=15;
+    score=Math.min(score,100);
+    var lbl,col,emo;
+    if(score>=70){lbl="Very likely AI-generated";col="#ef4444";emo="🤖";}
+    else if(score>=50){lbl="Probably AI-assisted";col="#f59e0b";emo="⚠️";}
+    else if(score>=30){lbl="Mixed / uncertain";col="#eab308";emo="🔄";}
+    else{lbl="Likely human-written";col="#10b981";emo="✍️";}
+    document.getElementById("det-score").innerHTML='<div style="font-size:48px;">'+emo+'</div><div style="font-size:28px;font-weight:700;color:'+col+';margin:8px 0;">'+score+'% AI</div><div style="font-size:16px;color:var(--text-mute);">'+lbl+'</div>';
+    document.getElementById("det-details").innerHTML='<strong>Analysis:</strong><br>Words: '+wc+'<br>Sentences: '+s.length+'<br>Avg sentence: '+avg.toFixed(1)+' words<br>Std dev: '+sd.toFixed(1)+' (lower=more AI)<br>AI phrases: '+pc+'<br>Avg word length: '+awl.toFixed(1)+'<br>Long word ratio: '+(lwr*100).toFixed(1)+'%';
+    document.getElementById("det-results").style.display="block";
+  });
+</script>

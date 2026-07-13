@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Regex Generator & Tester | Free Online Tool" description="Free online regex generator and tester. Build, test, and share regular expressions with live matching. No signup." keywords="regex generator, regex tester, regular expression tool">
+  <div class="container" style="max-width:800px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumbs" style="margin-bottom:24px;"><a href="/">Home</a> &rsaquo; <a href="/tools/">Free Tools</a> &rsaquo; <span>Regex Generator</span></nav>
+    <h1 style="font-size:32px;font-weight:700;margin-bottom:8px;">Regex Generator & Tester</h1>
+    <p style="color:var(--text-mute);font-size:16px;margin-bottom:32px;">Build, test, and debug regular expressions with live matching. Free, no signup.</p>
+    <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:14px;padding:24px;margin-bottom:24px;">
+      <label style="font-size:14px;font-weight:600;display:block;margin-bottom:8px;">Pattern:</label>
+      <div style="display:flex;gap:8px;margin-bottom:16px;">
+        <span style="color:var(--text-mute);line-height:36px;">/</span>
+        <input id="rg-pattern" type="text" value="[A-Z][a-z]+" style="flex:1;background:var(--bg-color);border:1px solid var(--border-color);border-radius:8px;padding:8px 12px;color:var(--text-main);font-family:monospace;font-size:14px;" />
+        <span style="color:var(--text-mute);line-height:36px;">/</span>
+        <input id="rg-flags" type="text" value="g" size="3" style="background:var(--bg-color);border:1px solid var(--border-color);border-radius:8px;padding:8px 12px;color:var(--text-main);font-family:monospace;font-size:14px;width:50px;" />
+      </div>
+      <textarea id="rg-input" rows="5" style="width:100%;background:var(--bg-color);border:1px solid var(--border-color);border-radius:8px;padding:12px;color:var(--text-main);font-family:monospace;font-size:14px;resize:vertical;">Hello World 123 Test Foo Bar</textarea>
+      <div style="display:flex;gap:8px;margin-top:12px;">
+        <button id="rg-test" style="background:var(--accent-color);color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:600;cursor:pointer;">Test</button>
+        <button id="rg-clear" style="background:var(--bg-color);color:var(--text-main);border:1px solid var(--border-color);border-radius:8px;padding:10px 24px;font-size:14px;font-weight:600;cursor:pointer;">Clear</button>
+      </div>
+    </div>
+    <div id="rg-output" style="display:none;background:var(--card-bg);border:1px solid var(--border-color);border-radius:14px;padding:24px;">
+      <h2 style="font-size:18px;margin-bottom:12px;">Results</h2>
+      <div id="rg-matches" style="font-size:14px;"></div>
+      <div id="rg-error" style="color:#ef4444;font-size:14px;margin-top:8px;"></div>
+    </div>
+  </div>
+</BaseLayout>
+<script is:inline>
+  document.getElementById("rg-test").addEventListener("click",function(){
+    var p=document.getElementById("rg-pattern").value,f=document.getElementById("rg-flags").value,i=document.getElementById("rg-input").value;
+    var o=document.getElementById("rg-output"),m=document.getElementById("rg-matches"),e=document.getElementById("rg-error");
+    m.innerHTML="";e.textContent="";
+    try{var re=new RegExp(p,f),ms=[],r;
+      if(f.includes("g")){while((r=re.exec(i))!==null){ms.push(r[0]);if(r.index===re.lastIndex)re.lastIndex++;}}
+      else{r=re.exec(i);if(r)ms.push(r[0]);}
+      m.innerHTML=ms.length===0?'<p style="color:var(--text-mute);">No matches found.</p>':'<p style="margin-bottom:8px;"><strong>'+ms.length+'</strong> matches:</p><div style="display:flex;flex-wrap:wrap;gap:6px;">'+ms.map(function(x){return '<span style="background:rgba(59,130,246,0.15);color:var(--accent-color);padding:4px 10px;border-radius:6px;font-family:monospace;font-size:13px;">'+x+'</span>'}).join("")+'</div>';
+      o.style.display="block";
+    }catch(err){e.textContent="Invalid regex: "+err.message;o.style.display="block";m.innerHTML="";}
+  });
+  document.getElementById("rg-clear").addEventListener("click",function(){document.getElementById("rg-pattern").value="";document.getElementById("rg-input").value="";document.getElementById("rg-output").style.display="none";});
+  document.getElementById("rg-test").click();
+</script>
