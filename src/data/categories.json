@@ -449,5 +449,28 @@
       "claude",
       "perplexity"
     ]
+  },
+  {
+    "slug": "ai-agents",
+    "title_en": "Best AI Agent Platforms in 2026",
+    "title_zh": "2026 年最佳 AI Agent 平台",
+    "desc_en": "AI agent frameworks and platforms for building autonomous agents, multi-agent systems, and workflow automation. Compare n8n, Dify, CrewAI, LangGraph, AutoGen, and more.",
+    "desc_zh": "用于构建自主 Agent、多 Agent 系统和工作流自动化的 AI Agent 框架和平台。对比 n8n、Dify、CrewAI、LangGraph、AutoGen 等。",
+    "tools": [
+      "n8n",
+      "dify",
+      "crewai",
+      "langgraph",
+      "autogen",
+      "autogpt",
+      "agentgpt",
+      "llamaindex",
+      "browser-use",
+      "multion",
+      "lindy",
+      "bardeen",
+      "claude-computer-use",
+      "make-com"
+    ]
   }
 ]
