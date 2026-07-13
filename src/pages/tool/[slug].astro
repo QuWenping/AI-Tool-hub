@@ -1,4 +1,4 @@
----
+﻿---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import toolsData from "../../data/tools.json";
 import categories from "../../data/categories.json";
@@ -346,6 +346,18 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
         </div>
       </section>
     )}
+
+    <section class="<section class="detail-section" style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:20px;">
+      <h2 style="font-size:18px;font-weight:700;margin-bottom:12px;">This Page Answers</h2>
+      <ul style="margin:0;padding-left:20px;font-size:14px;color:var(--text-soft);line-height:1.8;">
+        <li>What is {tNameEn} and what does it do?</li>
+        <li>How much does {tNameEn} cost (pricing tiers)?</li>
+        <li>What are {tNameEn}'s key features and capabilities?</li>
+        <li>What are the pros and cons of using {tNameEn}?</li>
+        <li>What are the best alternatives to {tNameEn}?</li>
+        <li>Is {tNameEn} worth it for your use case?</li>
+      </ul>
+    </section>
 
     <section class="detail-section" style="text-align: center;">
       {isHandReviewed ? (
