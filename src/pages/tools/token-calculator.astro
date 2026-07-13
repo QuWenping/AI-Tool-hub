@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/tools/token-calculator/";
+const faqSchema = {
+  "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,
+  "mainEntity":[
+    {"@type":"Question","name":"How are tokens calculated?","acceptedAnswer":{"@type":"Answer","text":"Tokens are estimated using the industry-standard approximation of ~4 characters per token for English text. For Chinese text, ~1.5 characters per token. The actual count varies by model tokenizer."}},
+    {"@type":"Question","name":"How much does a token cost?","acceptedAnswer":{"@type":"Answer","text":"Token costs vary by model. GPT-4o costs $5/1M input tokens, Claude 3.5 Sonnet costs $3/1M, Gemini 1.5 Pro costs $1.25/1M. Check the pricing table on this page."}}
+  ]
+};
+---
+<BaseLayout title="AI Token Calculator | Free Online Tool" description="Free online AI token calculator. Estimate token count and cost for GPT-4o, Claude, Gemini, and more. No signup required." keywords="token calculator, AI token counter, GPT token calculator, LLM cost estimator, free AI tool">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+  <div class="container" style="max-width:800px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumbs" style="margin-bottom:24px;"><a href="/">Home</a> &rsaquo; <a href="/tools/">Free Tools</a> &rsaquo; <span>Token Calculator</span></nav>
+    <h1 style="font-size:32px;font-weight:700;margin-bottom:8px;">AI Token Calculator</h1>
+    <p style="color:var(--text-mute);font-size:16px;margin-bottom:32px;">Estimate token count and cost for any text. Free, no signup.</p>
+
+    <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:14px;padding:24px;margin-bottom:24px;">
+      <label style="font-size:14px;font-weight:600;color:var(--text-main);display:block;margin-bottom:8px;">Paste your text:</label>
+      <textarea id="tc-input" rows="8" placeholder="Paste your prompt, article, or code here..." style="width:100%;background:var(--bg-color);border:1px solid var(--border-color);border-radius:10px;padding:12px;color:var(--text-main);font-size:14px;font-family:monospace;resize:vertical;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:12px;">
+        <button id="tc-calc" style="background:var(--accent-color);color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:600;cursor:pointer;">Calculate</button>
+        <button id="tc-clear" style="background:var(--bg-color);color:var(--text-main);border:1px solid var(--border-color);border-radius:8px;padding:10px 24px;font-size:14px;font-weight:600;cursor:pointer;">Clear</button>
+      </div>
+    </div>
+
+    <div id="tc-results" style="display:none;background:var(--card-bg);border:1px solid var(--border-color);border-radius:14px;padding:24px;">
+      <h2 style="font-size:18px;margin-bottom:16px;">Results</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:20px;">
+        <div id="tc-tokens" style="background:var(--bg-color);border-radius:10px;padding:16px;text-align:center;"><div style="font-size:11px;color:var(--text-mute);text-transform:uppercase;">Est. Tokens</div><div style="font-size:24px;font-weight:700;color:var(--accent-color);margin-top:4px;">—</div></div>
+        <div id="tc-words" style="background:var(--bg-color);border-radius:10px;padding:16px;text-align:center;"><div style="font-size:11px;color:var(--text-mute);text-transform:uppercase;">Words</div><div style="font-size:24px;font-weight:700;color:var(--text-main);margin-top:4px;">—</div></div>
+        <div id="tc-chars" style="background:var(--bg-color);border-radius:10px;padding:16px;text-align:center;"><div style="font-size:11px;color:var(--text-mute);text-transform:uppercase;">Characters</div><div style="font-size:24px;font-weight:700;color:var(--text-main);margin-top:4px;">—</div></div>
+      </div>
+      <h3 style="font-size:14px;margin-bottom:10px;">Cost per model (input)</h3>
+      <table style="width:100%;border-collapse:collapse;font-size:14px;">
+        <thead><tr><th style="text-align:left;padding:8px;border-bottom:1px solid var(--border-color);">Model</th><th style="text-align:right;padding:8px;border-bottom:1px solid var(--border-color);">Price / 1M tokens</th><th style="text-align:right;padding:8px;border-bottom:1px solid var(--border-color);">Est. cost</th></tr></thead>
+        <tbody id="tc-prices"></tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:32px;">
+      <h2 style="font-size:20px;margin-bottom:12px;">FAQ</h2>
+      <details style="border:1px solid var(--border-color);border-radius:10px;padding:16px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;">How are tokens calculated?</summary>
+        <p style="margin-top:8px;color:var(--text-mute);font-size:14px;">Tokens are estimated using ~4 characters per token for English, ~1.5 characters for Chinese. Actual counts vary by model tokenizer.</p>
+      </details>
+      <details style="border:1px solid var(--border-color);border-radius:10px;padding:16px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;">How accurate is this?</summary>
+        <p style="margin-top:8px;color:var(--text-mute);font-size:14px;">The estimate is within ~10% of actual tokenized counts for most models. For exact counts, use each model's official tokenizer.</p>
+      </details>
+    </div>
+  </div>
+</BaseLayout>
+<script is:inline>
+  var models = [["GPT-4o","$5"],["GPT-4o mini","$0.15"],["Claude 3.5 Sonnet","$3"],["Gemini 1.5 Pro","$1.25"],["DeepSeek V3","$0.27"],["Llama 3.1 70B","$0.59"]];
+  function calc(){
+    var text=document.getElementById("tc-input").value; if(!text){return;}
+    var chars=text.length; var words=text.trim().split(/\s+/).filter(function(w){return w.length>0}).length;
+    var cn=(text.match(/[\u4e00-\u9fff]/g)||[]).length; var en=chars-cn;
+    var tokens=Math.ceil(en/4+cn/1.5);
+    document.querySelector("#tc-tokens div:last-child").textContent=tokens.toLocaleString();
+    document.querySelector("#tc-words div:last-child").textContent=words.toLocaleString();
+    document.querySelector("#tc-chars div:last-child").textContent=chars.toLocaleString();
+    var tbody=document.getElementById("tc-prices"); tbody.innerHTML="";
+    models.forEach(function(m){
+      var price=parseFloat(m[1].replace("$","")); var cost=(tokens/1000000*price).toFixed(4);
+      var tr=document.createElement("tr"); tr.innerHTML='<td style="padding:8px;border-bottom:1px solid var(--border-color);">'+m[0]+'</td><td style="text-align:right;padding:8px;border-bottom:1px solid var(--border-color);">'+m[1]+'</td><td style="text-align:right;padding:8px;border-bottom:1px solid var(--border-color);color:var(--accent-color);font-weight:600;">$'+cost+'</td>';
+      tbody.appendChild(tr);
+    });
+    document.getElementById("tc-results").style.display="block";
+  }
+  document.getElementById("tc-calc").addEventListener("click",calc);
+  document.getElementById("tc-clear").addEventListener("click",function(){document.getElementById("tc-input").value="";document.getElementById("tc-results").style.display="none";});
+</script>

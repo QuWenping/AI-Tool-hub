@@ -161,4 +161,29 @@ const faqSchema = {
       </div>
     </section>
   </div>
+<style>
+  .sortable-table th { cursor: pointer; user-select: none; }
+  .sortable-table th:hover { color: var(--accent-color); }
+  .sortable-table th::after { content: " ↕"; font-size: 10px; opacity: 0.5; }
+  .sortable-table th.sorted-asc::after { content: " ↑"; opacity: 1; color: var(--accent-color); }
+  .sortable-table th.sorted-desc::after { content: " ↓"; opacity: 1; color: var(--accent-color); }
+</style>
+<script is:inline>
+  document.querySelectorAll('.sortable-table th').forEach(function(th){
+    th.addEventListener('click', function(){
+      var table = th.closest('table'); var tbody = table.querySelector('tbody');
+      var rows = Array.from(tbody.querySelectorAll('tr'));
+      var idx = Array.from(th.parentNode.children).indexOf(th);
+      var asc = th.classList.toggle('sorted-asc');
+      th.classList.toggle('sorted-desc', !asc);
+      rows.sort(function(a,b){
+        var va = a.children[idx].textContent.trim(); var vb = b.children[idx].textContent.trim();
+        var na = parseFloat(va); var nb = parseFloat(vb);
+        if(!isNaN(na)&&!isNaN(nb)){ return asc?na-nb:nb-na; }
+        return asc?va.localeCompare(vb):vb.localeCompare(va);
+      });
+      rows.forEach(function(r){ tbody.appendChild(r); });
+    });
+  });
+</script>
 </BaseLayout>
