@@ -52,41 +52,11 @@ const toolRatings = {
 };
 const rating = toolRatings[id] || 8.5;
 // Real test data per tool (same prompt benchmark across all tools)
-const realTestData = {
-  chatgpt: { prompt: "Write a Python function to reverse a linked list", timeSec: 3.2, tokens: 850, cost: "$0.012", accuracy: "94%", notes: "Clean code, correct on first try, included type hints" },
-  claude: { prompt: "Write a Python function to reverse a linked list", timeSec: 4.1, tokens: 920, cost: "$0.014", accuracy: "96%", notes: "Most thorough, added edge cases + tests" },
-  gemini: { prompt: "Write a Python function to reverse a linked list", timeSec: 2.8, tokens: 780, cost: "$0.008", accuracy: "92%", notes: "Fast, correct, less explanation" },
-  cursor: { prompt: "Refactor a 50-line function into 3 clean functions", timeSec: 8.5, tokens: 2400, cost: "$0.040", accuracy: "90%", notes: "Multi-file edit, needed 1 correction" },
-  midjourney: { prompt: "A serene Japanese garden at sunset, cinematic --ar 16:9", timeSec: 28, tokens: 0, cost: "$0.08/img", accuracy: "N/A", notes: "Stunning aesthetics, minor prompt deviation" },
-  "github-copilot": { prompt: "Complete a React useEffect fetch hook", timeSec: 1.2, tokens: 320, cost: "$0.004", accuracy: "88%", notes: "Instant autocomplete, 1 small fix needed" },
-  elevenlabs: { prompt: "Generate 30s narration of a product intro in natural male voice", timeSec: 5, tokens: 0, cost: "$0.06", accuracy: "N/A", notes: "Most realistic TTS, natural intonation" },
-  runway: { prompt: "Generate 4s video of a drone shot over mountains", timeSec: 45, tokens: 0, cost: "$0.15/clip", accuracy: "N/A", notes: "Good motion, slight artifact at edges" },
-  perplexity: { prompt: "What are the latest AI coding tools in 2026?", timeSec: 6, tokens: 1500, cost: "$0.02", accuracy: "95%", notes: "Cited 8 sources, most up-to-date" },
-  sora: { prompt: "A woman walking through a neon-lit Tokyo street, 10s", timeSec: 120, tokens: 0, cost: "$0.50/clip", accuracy: "N/A", notes: "Best quality, long wait, physics accurate" },
-  "stable-diffusion": { prompt: "Photorealistic portrait of an elderly craftsman, 50mm", timeSec: 4, tokens: 0, cost: "$0 (local)", accuracy: "N/A", notes: "Free on GPU, needed 3 rerolls for good result" },
-  leonardo: { prompt: "Fantasy game character, warrior class, concept art", timeSec: 8, tokens: 0, cost: "$0.05/img", accuracy: "N/A", notes: "Best for game art, style consistency strong" },
-  suno: { prompt: "An upbeat indie folk song about morning coffee", timeSec: 12, tokens: 0, cost: "$0.10/song", accuracy: "N/A", notes: "Full song with vocals, publishable quality" },
-  descript: { prompt: "Remove all filler words from a 30-min interview", timeSec: 15, tokens: 0, cost: "$0.05/min", accuracy: "97%", notes: "Saved 40 min of manual editing" },
-  "notion-ai": { prompt: "Summarize a 20-page product spec into 5 key points", timeSec: 8, tokens: 1200, cost: "$0.008", accuracy: "93%", notes: "Clean summary, stayed in Notion workflow" },
-  jasper: { prompt: "Write a 500-word blog intro about AI marketing trends", timeSec: 5, tokens: 600, cost: "$0.02", accuracy: "85%", notes: "Generic output, needed heavy editing" },
-  hostinger: { prompt: "Set up a WordPress site with SSL in under 10 min", timeSec: 480, tokens: 0, cost: "$3.99/mo", accuracy: "N/A", notes: "One-click install, SSL auto-provisioned" },
-  ideogram: { prompt: "A poster that says 'AI Tool Awards 2026' in bold typography", timeSec: 10, tokens: 0, cost: "$0.04/img", accuracy: "N/A", notes: "Text rendered perfectly, best-in-class" },
-  krea: { prompt: "Real-time sketch to HD render of a mountain landscape", timeSec: 2, tokens: 0, cost: "$0.03/img", accuracy: "N/A", notes: "Instant feedback loop, great for iteration" },
-  flux: { prompt: "Photorealistic product shot of a coffee cup on marble", timeSec: 3, tokens: 0, cost: "$0.04/img", accuracy: "N/A", notes: "Best photorealism, skin/fabric/textures realistic" },
-  pika: { prompt: "Animate a product photo into a 3s motion clip", timeSec: 20, tokens: 0, cost: "$0.05/clip", accuracy: "N/A", notes: "Easiest video tool, social-ready output" },
-  luma: { prompt: "Animate a still photo with subtle camera push-in, 5s", timeSec: 30, tokens: 0, cost: "$0.08/clip", accuracy: "N/A", notes: "Natural motion, good quality for price" },
-  kling: { prompt: "用中文描述生成 10 秒短片：女孩在樱花树下奔跑", timeSec: 60, tokens: 0, cost: "$0.10/clip", accuracy: "N/A", notes: "中文提示友好，动作自然连贯" },
-  hailuo: { prompt: "A chef cooking in a kitchen, cinematic, 6s", timeSec: 40, tokens: 0, cost: "$0.08/clip", accuracy: "N/A", notes: "Lively character motion, coherent scene" },
-  synthesia: { prompt: "Create a 60s product demo video with AI presenter in 5 languages", timeSec: 90, tokens: 0, cost: "$0.50/video", accuracy: "N/A", notes: "Professional avatars, multilingual output" },
-  heygen: { prompt: "Translate a 2-min English demo into lip-synced Chinese", timeSec: 120, tokens: 0, cost: "$0.30/video", accuracy: "N/A", notes: "Lip-sync impressive, best video localization" },
-  "play-ht": { prompt: "Generate 5-min audiobook chapter in expressive female voice", timeSec: 8, tokens: 0, cost: "$0.04", accuracy: "N/A", notes: "Natural delivery, slightly less realistic than ElevenLabs" },
-  murf: { prompt: "Add professional narration to a 3-min product explainer", timeSec: 10, tokens: 0, cost: "$0.06", accuracy: "N/A", notes: "Good team collaboration, timeline editor" },
-  otter: { prompt: "Transcribe a 45-min Zoom meeting and extract action items", timeSec: 5, tokens: 0, cost: "$0.10/meeting", accuracy: "91%", notes: "Live transcription, action items mostly correct" },
-  fireflies: { prompt: "Auto-join and transcribe a sales call, then analyze objections", timeSec: 5, tokens: 0, cost: "$0.10/meeting", accuracy: "89%", notes: "Auto-join works, CRM integration useful" },
-  gamma: { prompt: "Turn a 1-page outline into a 10-slide product proposal", timeSec: 15, tokens: 800, cost: "$0.01", accuracy: "N/A", notes: "Fast, nice templates, needed minor layout fixes" },
-  cline: { prompt: "Implement a REST API endpoint from a GitHub issue, open PR", timeSec: 180, tokens: 5000, cost: "$0.08", accuracy: "85%", notes: "Autonomous multi-step, needed 1 review correction" }
-};
+const realTestData = {};
 const realTest = realTestData[id] || null;
+// Only original 17 tools have hand-written intros/verdicts
+const handReviewedTools = ["chatgpt","claude","gemini","github-copilot","cursor","sora","runway","midjourney","stable-diffusion","leonardo","elevenlabs","suno","descript","notion-ai","perplexity","jasper","hostinger"];
+const isHandReviewed = handReviewedTools.includes(id);
 // Pre-compute radar chart data (avoid complex inline JSX math)
 const radarR = rating * 8;
 const radarAngles = [0,1,2,3,4].map(i => -Math.PI/2 + i*2*Math.PI/5);
@@ -126,6 +96,7 @@ const softwareSchema = {
   "author": { "@type": "Organization", "name": "AI Tool Hub Editorial", "url": siteUrl },
   "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl }
 };
+if (!isHandReviewed) { softwareSchema.review = undefined; }
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -197,11 +168,18 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
       <div class="title-group">
         <h1>{tNameEn}</h1>
         <span class="tag">{catLabelEn}</span>
-        <div class="tool-rating" style="display:flex;align-items:center;gap:6px;margin-top:6px;font-size:14px;color:var(--text-soft);">
-          <i class="fas fa-star" style="color:#f59e0b"></i>
-          <strong>{rating.toFixed(1)}</strong><span style="color:var(--text-mute);">/10</span>
-          <span style="color:var(--text-mute);font-size:12px;">Editorial rating</span>
-        </div>
+        {isHandReviewed && (
+          <div class="tool-rating" style="display:flex;align-items:center;gap:6px;margin-top:6px;font-size:14px;color:var(--text-soft);">
+            <i class="fas fa-star" style="color:#f59e0b"></i>
+            <strong>{rating.toFixed(1)}</strong><span style="color:var(--text-mute);">/10</span>
+            <span style="color:var(--text-mute);font-size:12px;">Editorial rating</span>
+          </div>
+        )}
+        {!isHandReviewed && (
+          <div class="tool-rating" style="margin-top:6px;font-size:12px;color:var(--text-mute);">
+            <i class="fas fa-info-circle"></i> AI-sourced summary — pending hands-on review
+          </div>
+        )}
       </div>
       <div class="actions">
         <a class="use" href={tUrl} rel="nofollow noopener" target="_blank">
@@ -370,9 +348,15 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
     )}
 
     <section class="detail-section" style="text-align: center;">
-      <p style="font-size: 13px; color: var(--text-mute); font-style: italic; margin: 0;">
-        Reviewed by <strong>Lin Chen</strong>, Lead Reviewer at AI Tool Hub. Lin has been testing AI tools hands-on for 5+ years and has personally used {tNameEn} on real client work for at least 2 weeks before this review was published. Last updated: July 2026.
-      </p>
+      {isHandReviewed ? (
+        <p style="font-size: 13px; color: var(--text-mute); font-style: italic; margin: 0;">
+          Reviewed by <strong>Lin Chen</strong>, Lead Reviewer at AI Tool Hub. Lin has been testing AI tools hands-on for 5+ years and has personally used {tNameEn} on real client work for at least 2 weeks before this review was published. Last updated: July 2026.
+        </p>
+      ) : (
+        <p style="font-size: 13px; color: var(--text-mute); font-style: italic; margin: 0;">
+          This is an AI-sourced summary based on publicly available information. It has not yet been hands-on tested by our editorial team. We will update this page with real test data and a verified score after hands-on testing.
+        </p>
+      )}
     </section>
   </div>
 </BaseLayout>

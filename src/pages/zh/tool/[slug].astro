@@ -38,6 +38,9 @@ const toolRatings = {
   jasper: 6.8, hostinger: 7.8
 };
 const rating = toolRatings[id] || 8.5;
+// Only original 17 tools have hand-written reviews
+const handReviewedTools = ["chatgpt","claude","gemini","github-copilot","cursor","sora","runway","midjourney","stable-diffusion","leonardo","elevenlabs","suno","descript","notion-ai","perplexity","jasper","hostinger"];
+const isHandReviewed = handReviewedTools.includes(id);
 const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -59,6 +62,7 @@ const softwareSchema = {
   "author": { "@type": "Organization", "name": "AI Tool Hub Editorial", "url": siteUrl },
   "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl }
 };
+if (!isHandReviewed) { softwareSchema.review = undefined; }
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -89,11 +93,18 @@ const breadcrumbSchema = {
       <div class="detail-title-group">
         <h1>{tNameZh}</h1>
         <span class="detail-tag">{catLabelZh}</span>
-        <div class="tool-rating" style="display:flex;align-items:center;gap:6px;margin-top:6px;font-size:14px;color:var(--text-soft);">
-          <i class="fas fa-star" style="color:#f59e0b"></i>
-          <strong>{rating.toFixed(1)}</strong><span style="color:var(--text-mute);">/10</span>
-          <span style="color:var(--text-mute);font-size:12px;">编辑评分</span>
-        </div>
+        {isHandReviewed && (
+          <div class="tool-rating" style="display:flex;align-items:center;gap:6px;margin-top:6px;font-size:14px;color:var(--text-soft);">
+            <i class="fas fa-star" style="color:#f59e0b"></i>
+            <strong>{rating.toFixed(1)}</strong><span style="color:var(--text-mute);">/10</span>
+            <span style="color:var(--text-mute);font-size:12px;">编辑评分</span>
+          </div>
+        )}
+        {!isHandReviewed && (
+          <div class="tool-rating" style="margin-top:6px;font-size:12px;color:var(--text-mute);">
+            <i class="fas fa-info-circle"></i> AI 汇总信息 — 待人工实测
+          </div>
+        )}
       </div>
       <div class="detail-actions">
         <a class="detail-use-btn" href={tUrl} rel="nofollow noopener" target="_blank">
