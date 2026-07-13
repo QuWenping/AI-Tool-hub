@@ -1,0 +1,182 @@
+[
+  {
+    "slug": "ai-for-developers",
+    "industry": "Software Development",
+    "title": "AI Tools for Developers: Code, Test, and Ship Faster",
+    "description": "A complete guide to using AI for code generation, review, testing, documentation, and deployment automation in software development teams.",
+    "icon": "code",
+    "tools": ["Cursor", "GitHub Copilot", "Claude", "Codeium", "Tabnine", "Amazon Q"],
+    "workflows": ["mcp-github-code-review", "cursor-architect-patterns", "cursor-test-generation"],
+    "sections": [
+      {
+        "heading": "Code Generation & Completion",
+        "content": "AI coding assistants like Cursor and GitHub Copilot have become essential for modern development. Cursor integrates AI directly into your IDE with context-aware completions, multi-file edits, and natural language code generation. GitHub Copilot provides inline suggestions based on your codebase patterns. For complex refactoring, Claude excels at understanding entire codebases and suggesting architectural improvements. Setup tip: Configure your AI assistant with project-specific context files (.cursorrules or copilot-instructions.md) to align suggestions with your team conventions.",
+        "recommendedTools": "Cursor (best overall IDE), GitHub Copilot (best for VS Code), Claude (best for complex reasoning)"
+      },
+      {
+        "heading": "Automated Code Review",
+        "content": "AI-powered code review catches issues that human reviewers might miss, especially in large PRs. Using MCP (Model Context Protocol), you can connect Claude directly to your GitHub repository to automatically review pull requests. The agent checks for SOLID violations, security vulnerabilities (OWASP Top 10), performance bottlenecks, and test coverage gaps. It posts inline comments on specific lines and provides a summary review. This reduces manual review time by 50-70% for routine PRs while maintaining quality standards.",
+        "recommendedTools": "Claude + MCP GitHub Server, Cursor (built-in review), Codeium"
+      },
+      {
+        "heading": "Test Generation & Quality Assurance",
+        "content": "Generating comprehensive test suites is one of the highest-ROI uses of AI in development. Cursor and Claude can generate unit tests covering happy paths, edge cases, error conditions, and performance scenarios. The key is providing clear test descriptions that explain the 'why' not just the 'what'. For existing code, AI can analyze coverage reports and suggest tests for uncovered branches. Best practice: Always run AI-generated tests and verify they actually pass before merging - AI can produce tests with subtle logical errors.",
+        "recommendedTools": "Cursor (test generation), Claude (test strategy), Codeium (coverage analysis)"
+      },
+      {
+        "heading": "Documentation & API Specs",
+        "content": "AI dramatically reduces documentation overhead. Claude can generate OpenAPI 3.0 specifications from endpoint descriptions, write developer-friendly API docs with curl examples, and create architecture decision records (ADRs) from code analysis. For inline documentation, Cursor can add JSDoc/docstrings to undocumented functions. For codebase onboarding, use MCP to let Claude read your entire project and generate a comprehensive README with setup instructions, architecture overview, and contribution guidelines.",
+        "recommendedTools": "Claude (API docs, technical specs), Cursor (inline docs), MCP (codebase analysis)"
+      }
+    ],
+    "faq": [
+      { "q": "Will AI replace developers?", "a": "No. AI tools augment developers by handling repetitive tasks (boilerplate code, tests, docs) so developers can focus on architecture, design, and complex problem-solving. Developers who use AI tools effectively are 30-50% more productive." },
+      { "q": "Which AI coding tool should I start with?", "a": "Cursor is the best all-in-one choice for most developers. It combines IDE functionality with AI, supports multi-file edits, and has excellent context awareness. If you already use VS Code, GitHub Copilot is a seamless addition." },
+      { "q": "Is AI-generated code safe for production?", "a": "AI-generated code should always be reviewed and tested before production use. AI tools can produce code with subtle bugs, security issues, or licensing concerns. Use AI as a pair programmer, not an autonomous developer." }
+    ]
+  },
+  {
+    "slug": "ai-for-marketing",
+    "industry": "Marketing & Content",
+    "title": "AI Tools for Marketing: Content, SEO, and Campaigns at Scale",
+    "description": "How marketing teams use AI for content creation, SEO optimization, social media management, ad copy, and campaign analysis.",
+    "icon": "bullhorn",
+    "tools": ["ChatGPT", "Claude", "Surfer SEO", "Frase", "Copy.ai", "Writesonic", "Gamma", "Jasper"],
+    "workflows": ["n8n-social-media-scheduler", "n8n-email-triage-agent", "chatgpt-email-sequence"],
+    "sections": [
+      {
+        "heading": "Content Creation at Scale",
+        "content": "AI has transformed content marketing from a bottleneck to a pipeline. ChatGPT and Claude can draft blog posts, landing pages, and email sequences in minutes. The key is providing detailed prompts with your brand voice, target audience, and SEO keywords. For SEO content, Surfer SEO and Frase analyze top-ranking pages and suggest content gaps to fill. Best practice: Use AI for first drafts (70% done) and human editors for final polish. Never publish AI content without review - it can contain factual errors and generic phrasing that hurts credibility.",
+        "recommendedTools": "ChatGPT (drafts), Claude (long-form), Surfer SEO (optimization), Copy.ai (variations)"
+      },
+      {
+        "heading": "SEO and Keyword Research",
+        "content": "AI-powered SEO tools analyze search intent, identify content gaps, and optimize on-page elements. Surfer SEO provides real-time content scores based on top-ranking competitors. Frase helps with research and outline generation based on SERP analysis. For keyword research, use ChatGPT to brainstorm long-tail keywords and content cluster ideas. For technical SEO, AI can generate schema markup, meta descriptions, and alt text at scale. Workflow: Research keywords with AI -> Create content brief -> Draft with AI -> Optimize with Surfer SEO -> Publish.",
+        "recommendedTools": "Surfer SEO (on-page), Frase (research), ChatGPT (keyword ideation), Claude (schema generation)"
+      },
+      {
+        "heading": "Social Media Automation",
+        "content": "Managing multiple social platforms is time-consuming. Using n8n, you can create a workflow that takes one piece of content and automatically adapts it for Twitter/X (280 chars, punchy), LinkedIn (professional, 300 words), and other platforms. AI generates platform-specific versions, schedules posts at optimal times, and tracks engagement. For visual content, Midjourney and Ideogram create eye-catching graphics. For video, Kling and Invideo AI produce short-form clips. This automation lets one person manage a full social media presence.",
+        "recommendedTools": "n8n (automation), ChatGPT (copy adaptation), Midjourney (visuals), Kling (video)"
+      },
+      {
+        "heading": "Campaign Analysis & Reporting",
+        "content": "AI excels at analyzing campaign data and extracting insights. Use ChatGPT or Claude to process campaign metrics (CTR, conversion rate, CPA) and generate actionable recommendations. For A/B testing, AI can suggest test variants and predict which copy will perform better based on historical data. For reporting, Gamma creates presentation-ready reports from your data in minutes. Set up a weekly workflow: export campaign data -> AI analysis -> generate report -> distribute to stakeholders.",
+        "recommendedTools": "ChatGPT (analysis), Claude (insights), Gamma (reporting), Gemini (data insights)"
+      }
+    ],
+    "faq": [
+      { "q": "Can AI write content that ranks on Google?", "a": "AI can help with content creation, but Google prioritizes helpful, original content regardless of how it's created. The key is adding unique value: original research, expert insights, and real experience. Use AI for efficiency, not as a replacement for expertise." },
+      { "q": "How do I avoid AI-sounding content?", "a": "Provide detailed brand voice guidelines in your prompts, edit for specificity (replace generic phrases with concrete examples), add personal experience and opinions, and always read aloud to catch awkward phrasing. Tools like Surfer SEO can also help ensure content matches the depth of top-ranking pages." },
+      { "q": "What is the best AI tool for marketing?", "a": "There is no single best tool. For content: ChatGPT + Claude. For SEO: Surfer SEO. For social: n8n + ChatGPT. For visuals: Midjourney. For presentations: Gamma. The best approach is combining 3-4 tools into an integrated workflow." }
+    ]
+  },
+  {
+    "slug": "ai-for-education",
+    "industry": "Education & Training",
+    "title": "AI Tools for Education: Teaching, Learning, and Administration",
+    "description": "How educators and institutions use AI for lesson planning, personalized learning paths, grading, content creation, and student engagement.",
+    "icon": "graduation-cap",
+    "tools": ["ChatGPT", "Claude", "Gamma", "ElevenLabs", "Suno", "Kling"],
+    "workflows": ["gamma-course-lesson", "dify-rag-document-qna", "n8n-rss-to-blog-post"],
+    "sections": [
+      {
+        "heading": "Lesson Planning & Content Creation",
+        "content": "AI dramatically reduces lesson planning time. ChatGPT and Claude can generate lesson plans aligned to curriculum standards, create differentiated materials for various learning levels, and produce practice problems with answer keys. Gamma transforms lesson plans into interactive slide presentations with speaker notes. For multimedia, ElevenLabs generates narration for educational videos, Suno creates background music, and Kling produces animated explanations. Workflow: Define learning objective -> AI generates lesson plan -> Create slides with Gamma -> Add narration with ElevenLabs -> Publish to LMS.",
+        "recommendedTools": "ChatGPT (lesson plans), Claude (curriculum design), Gamma (presentations), ElevenLabs (narration)"
+      },
+      {
+        "heading": "Personalized Learning Paths",
+        "content": "AI enables truly personalized education at scale. Using Dify's RAG (Retrieval Augmented Generation), you can build a Q&A system where students ask questions and get answers grounded in your course materials with citations. Claude can analyze student performance data and recommend personalized study paths. For adaptive assessments, AI generates questions at appropriate difficulty levels based on student responses. This approach helps each student learn at their own pace while reducing teacher workload for one-on-one support.",
+        "recommendedTools": "Dify (RAG Q&A system), Claude (learning path analysis), ChatGPT (adaptive questions)"
+      },
+      {
+        "heading": "Grading & Assessment",
+        "content": "AI assists with grading by evaluating written responses, checking for understanding, and providing feedback. ChatGPT can grade short-answer questions against rubrics and generate personalized feedback for each student. For code-based courses, AI can run and evaluate student submissions, providing detailed error explanations. Important: AI grading should supplement, not replace, teacher review. Use AI for initial grading and flagging areas where the teacher should focus attention. Always review AI-generated grades for fairness and accuracy.",
+        "recommendedTools": "ChatGPT (essay grading), Claude (code evaluation), Cursor (programming assignments)"
+      },
+      {
+        "heading": "Student Engagement & Support",
+        "content": "AI chatbots provide 24/7 student support, answering questions about assignments, deadlines, and course content. Using Dify, you can build a support bot trained on your syllabus, FAQ, and course materials. The bot answers common questions, escalates complex ones to teachers, and logs all interactions for follow-up. For engagement, AI can generate quiz games, flashcards, and interactive scenarios. For accessibility, ElevenLabs provides text-to-speech for visually impaired students, and ChatGPT can simplify complex text for different reading levels.",
+        "recommendedTools": "Dify (support bot), ChatGPT (engagement content), ElevenLabs (accessibility)"
+      }
+    ],
+    "faq": [
+      { "q": "Is using AI in education ethical?", "a": "AI is a tool that amplifies both good and bad practices. Ethical use means: being transparent with students about AI use, protecting student data privacy, using AI to augment (not replace) teacher judgment, and ensuring AI doesn't introduce bias. Many universities have published AI use guidelines - follow your institution's policy." },
+      { "q": "How do I prevent students from using AI to cheat?", "a": "Focus assessments on process over output: oral presentations, in-class problem solving, project-based learning with checkpoints. Use AI detection tools as a signal, not proof. Design questions that require personal reflection, class-specific context, or real-time problem solving that AI cannot easily replicate." },
+      { "q": "What AI skills should students learn?", "a": "Students should learn: prompt engineering, AI output evaluation (fact-checking, bias detection), ethical AI use, and when NOT to use AI. These are increasingly essential workplace skills regardless of field." }
+    ]
+  },
+  {
+    "slug": "ai-for-business",
+    "industry": "Business & Operations",
+    "title": "AI Tools for Business: Automation, Analytics, and Growth",
+    "description": "How businesses use AI for process automation, data analysis, customer support, lead management, and strategic decision-making.",
+    "icon": "briefcase",
+    "tools": ["n8n", "Dify", "ChatGPT", "Claude", "Gemini", "Make"],
+    "workflows": ["n8n-lead-enrichment", "dify-customer-support-bot", "n8n-email-triage-agent", "dify-data-analysis-agent"],
+    "sections": [
+      {
+        "heading": "Process Automation",
+        "content": "n8n and Make are powerful automation platforms that connect your business tools and eliminate repetitive tasks. Common automations: new lead -> CRM update + Slack alert + welcome email; customer support ticket -> AI classification -> route to right team; daily report -> collect data from 5 sources -> AI summary -> email to stakeholders. The key is identifying repetitive workflows that follow predictable patterns. Start with one process, build it in n8n, test for 2 weeks, then expand. Most businesses can automate 30-50% of routine operations.",
+        "recommendedTools": "n8n (best overall, self-hostable), Make (visual builder), Dify (AI agent workflows)"
+      },
+      {
+        "heading": "AI Customer Support",
+        "content": "Dify enables businesses to build knowledge-base chatbots that handle 40-60% of support tickets automatically. Upload your FAQs, product docs, and past tickets as a knowledge base. The bot retrieves relevant answers with citations and escalates complex issues to humans with full conversation context. Setup: upload documents -> create knowledge base -> build chatbot -> deploy on website/API -> monitor and refine. Key metric to track: deflection rate (percentage of tickets resolved without human intervention). Target 40%+ deflection within 3 months.",
+        "recommendedTools": "Dify (best for AI support), n8n (routing + escalation), Intercom/Zendesk (human fallback)"
+      },
+      {
+        "heading": "Data Analysis & Insights",
+        "content": "AI transforms how businesses analyze data. Using Dify's agent mode, you can build an autonomous data analyst that accepts natural language questions, writes SQL, executes queries, generates charts, and produces reports. For business intelligence, Gemini and ChatGPT can analyze spreadsheets, identify trends, and recommend actions. For competitive analysis, AI can scrape competitor websites, compare features and pricing, and generate SWOT analyses. Key insight: AI doesn't replace analysts - it handles routine queries so analysts focus on strategic work.",
+        "recommendedTools": "Dify (autonomous analysis), Gemini (spreadsheet insights), ChatGPT (competitive analysis)"
+      },
+      {
+        "heading": "Lead Management & Sales",
+        "content": "AI-powered lead enrichment automatically adds company data, social profiles, and qualification scores to new leads. Using n8n, the workflow triggers on new lead capture, calls enrichment APIs (Clearbit, Apollo), uses AI to score the lead against your ICP, and pushes enriched data to your CRM with recommended next actions. High-score leads trigger Slack alerts with one-click meeting booking. Low-score leads enter nurture campaigns automatically. This ensures sales teams focus on the right prospects and respond faster to qualified leads.",
+        "recommendedTools": "n8n (automation pipeline), ChatGPT (lead scoring), HubSpot/Salesforce (CRM)"
+      }
+    ],
+    "faq": [
+      { "q": "How much does it cost to implement AI automation?", "a": "Costs vary: n8n self-hosted is free (cloud from $20/mo), Dify cloud starts free, AI API calls typically $50-200/mo for small teams. The real cost is setup time: 10-20 hours per workflow. ROI is usually positive within 2-3 months for businesses processing 100+ transactions/week." },
+      { "q": "Do I need technical skills to set up AI automation?", "a": "n8n and Make are designed for non-technical users with visual builders. Dify's interface is user-friendly for chatbot creation. However, complex workflows may need some technical assistance for initial setup. Consider hiring a consultant for the first workflow, then maintain it yourself." },
+      { "q": "What is the biggest mistake businesses make with AI?", "a": "Trying to automate everything at once. Start with one high-volume, repetitive process. Build, test, measure results for 2 weeks, then expand. Another common mistake: removing human oversight entirely. Always keep a human-in-the-loop for critical decisions." }
+    ]
+  },
+  {
+    "slug": "ai-for-creatives",
+    "industry": "Creative & Design",
+    "title": "AI Tools for Creatives: Image, Video, Audio, and Music Production",
+    "description": "How designers, filmmakers, musicians, and content creators use AI for image generation, video editing, voice synthesis, and music production.",
+    "icon": "palette",
+    "tools": ["Midjourney", "Flux", "ComfyUI", "Kling", "ElevenLabs", "Suno", "Ideogram", "Runway"],
+    "workflows": ["comfyui-batch-product-photos", "comfyui-style-transfer-pipeline", "comfyui-video-frame-interpolation"],
+    "sections": [
+      {
+        "heading": "Image Generation & Editing",
+        "content": "AI image generation has matured from novelty to production tool. Midjourney v6 produces photorealistic images with excellent composition and lighting. Flux offers more control over specific details and photorealistic product shots. ComfyUI provides a node-based pipeline for batch processing, style transfer, and compositing. For text-heavy graphics, Ideogram excels at typography. Professional workflow: Generate base image with Midjourney -> Refine in ComfyUI (upscale, inpaint, style transfer) -> Final touch-ups in Photoshop. This produces commercial-quality visuals at a fraction of traditional costs.",
+        "recommendedTools": "Midjourney (concept and creative), Flux (photorealistic), ComfyUI (pipeline and batch), Ideogram (typography)"
+      },
+      {
+        "heading": "Video Production",
+        "content": "AI video tools have made professional video production accessible to everyone. Kling and Runway generate short video clips from text or image prompts - ideal for social media, ads, and explainers. ComfyUI with RIFE models handles frame interpolation for smooth slow-motion. For editing, AI tools in CapCut and Kapwing automate subtitle generation, scene detection, and color correction. For full production: script with ChatGPT -> storyboard with Midjourney -> generate clips with Kling -> interpolate frames with ComfyUI -> edit in CapCut -> add narration with ElevenLabs.",
+        "recommendedTools": "Kling (generation), Runway (editing AI), ComfyUI (frame interpolation), CapCut (editing)"
+      },
+      {
+        "heading": "Audio & Voice Production",
+        "content": "ElevenLabs is the industry leader in AI voice synthesis, offering natural-sounding voices in 30+ languages with emotion control. For narration, ElevenLabs eliminates the need for voice actors for routine content. For music, Suno generates complete songs from text descriptions - useful for background tracks, jingles, and sound design. For podcasts, AI handles noise removal, level normalization, and transcription. Professional audio workflow: Write script -> Generate voiceover with ElevenLabs -> Create background music with Suno -> Mix and master -> Publish.",
+        "recommendedTools": "ElevenLabs (voice synthesis), Suno (music generation), Murf (alternative voice), Speechify (text-to-speech)"
+      },
+      {
+        "heading": "Creative Pipeline Integration",
+        "content": "The real power of AI for creatives is integrating multiple tools into a pipeline. ComfyUI serves as the hub: it can receive text prompts, generate images, apply style transfers, upscale, and batch process. For a brand campaign: 1) Define visual style with Midjourney, 2) Set up ComfyUI pipeline with the style reference, 3) Batch generate variations for different platforms, 4) Add video elements with Kling, 5) Create voiceover with ElevenLabs, 6) Assemble in your editor. This pipeline produces consistent branded content across all channels.",
+        "recommendedTools": "ComfyUI (pipeline hub), Midjourney (style definition), Kling (video), ElevenLabs (audio)"
+      }
+    ],
+    "faq": [
+      { "q": "Can AI-generated images be copyrighted?", "a": "Copyright law for AI-generated content is evolving. In the US, purely AI-generated images may not be copyrightable, but images where humans significantly modify or arrange AI output may be. Always check your jurisdiction and platform terms of service. When in doubt, add significant human creative input." },
+      { "q": "Will AI replace designers and artists?", "a": "AI is a tool that enhances creative workflows, not replaces creators. Designers who use AI effectively produce more work, explore more ideas, and focus on high-level creative direction. The skills that remain valuable: art direction, brand strategy, client communication, and taste/judgment." },
+      { "q": "Which AI image tool produces the most realistic results?", "a": "For photorealism: Flux and Midjourney v6 lead the field. For product photography specifically, Flux with proper prompting produces commercial-quality results. For artistic work, Midjourney excels at mood and composition. For maximum control, ComfyUI with Stable Diffusion models offers the most customization." }
+    ]
+  }
+]
