@@ -46,5 +46,19 @@
   { "slug": "elicit-vs-consensus", "a": "elicit", "b": "consensus", "title_en": "Elicit vs Consensus (2026): Research Tools", "title_zh": "Elicit vs Consensus (2026): 研究工具" },
   { "slug": "read-ai-vs-otter", "a": "read-ai", "b": "otter", "title_en": "Read AI vs Otter (2026): Meeting AI", "title_zh": "Read AI vs Otter (2026): 会议 AI" },
   { "slug": "replit-vs-cursor", "a": "replit", "b": "cursor", "title_en": "Replit vs Cursor (2026): Cloud vs Desktop", "title_zh": "Replit vs Cursor (2026): 云端 vs 桌面" },
-  { "slug": "aider-vs-cline", "a": "aider", "b": "cline", "title_en": "Aider vs Cline (2026): CLI vs IDE Agent", "title_zh": "Aider vs Cline (2026): 命令行 vs IDE Agent" }
+  { "slug": "aider-vs-cline", "a": "aider", "b": "cline", "title_en": "Aider vs Cline (2026): CLI vs IDE Agent", "title_zh": "Aider vs Cline (2026): 命令行 vs IDE Agent" },
+  { "slug": "dalle3-vs-midjourney", "a": "dalle3", "b": "midjourney", "title_en": "DALL-E 3 vs Midjourney (2026)", "title_zh": "DALL-E 3 vs Midjourney (2026)" },
+  { "slug": "udio-vs-suno", "a": "udio", "b": "suno", "title_en": "Udio vs Suno (2026): AI Music Compared", "title_zh": "Udio vs Suno (2026): AI 音乐对比" },
+  { "slug": "tabnine-vs-copilot", "a": "tabnine", "b": "github-copilot", "title_en": "Tabnine vs GitHub Copilot (2026)", "title_zh": "Tabnine vs GitHub Copilot (2026)" },
+  { "slug": "n8n-vs-make", "a": "n8n", "b": "make-com", "title_en": "n8n vs Make (2026): Automation Compared", "title_zh": "n8n vs Make (2026): 自动化对比" },
+  { "slug": "dify-vs-n8n", "a": "dify", "b": "n8n", "title_en": "Dify vs n8n (2026): AI App Builder", "title_zh": "Dify vs n8n (2026): AI 应用搭建" },
+  { "slug": "tome-vs-gamma", "a": "tome", "b": "gamma", "title_en": "Tome vs Gamma (2026): AI Decks", "title_zh": "Tome vs Gamma (2026): AI 演示" },
+  { "slug": "photoroom-vs-removebg", "a": "photoroom", "b": "removebg", "title_en": "PhotoRoom vs Remove.bg (2026)", "title_zh": "PhotoRoom vs Remove.bg (2026)" },
+  { "slug": "amazon-q-vs-copilot", "a": "amazon-q", "b": "github-copilot", "title_en": "Amazon Q vs GitHub Copilot (2026)", "title_zh": "Amazon Q vs GitHub Copilot (2026)" },
+  { "slug": "cody-vs-cursor", "a": "cody", "b": "cursor", "title_en": "Cody vs Cursor (2026): Code Intelligence", "title_zh": "Cody vs Cursor (2026): 代码智能" },
+  { "slug": "invideo-ai-vs-fliki", "a": "invideo-ai", "b": "fliki", "title_en": "Invideo AI vs Fliki (2026): Text to Video", "title_zh": "Invideo AI vs Fliki (2026): 文字转视频" },
+  { "slug": "surfer-seo-vs-frase", "a": "surfer-seo", "b": "frase", "title_en": "Surfer SEO vs Frase (2026)", "title_zh": "Surfer SEO vs Frase (2026)" },
+  { "slug": "comfyui-vs-stable-diffusion", "a": "comfyui", "b": "stable-diffusion", "title_en": "ComfyUI vs Stable Diffusion WebUI (2026)", "title_zh": "ComfyUI vs Stable Diffusion WebUI (2026)" },
+  { "slug": "autogpt-vs-agentgpt", "a": "autogpt", "b": "agentgpt", "title_en": "AutoGPT vs AgentGPT (2026): AI Agents", "title_zh": "AutoGPT vs AgentGPT (2026): AI Agent" },
+  { "slug": "beautiful-ai-vs-tome", "a": "beautiful-ai", "b": "tome", "title_en": "Beautiful.ai vs Tome (2026): AI Presentations", "title_zh": "Beautiful.ai vs Tome (2026): AI 演示" }
 ]
