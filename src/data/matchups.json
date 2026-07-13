@@ -60,5 +60,13 @@
   { "slug": "surfer-seo-vs-frase", "a": "surfer-seo", "b": "frase", "title_en": "Surfer SEO vs Frase (2026)", "title_zh": "Surfer SEO vs Frase (2026)" },
   { "slug": "comfyui-vs-stable-diffusion", "a": "comfyui", "b": "stable-diffusion", "title_en": "ComfyUI vs Stable Diffusion WebUI (2026)", "title_zh": "ComfyUI vs Stable Diffusion WebUI (2026)" },
   { "slug": "autogpt-vs-agentgpt", "a": "autogpt", "b": "agentgpt", "title_en": "AutoGPT vs AgentGPT (2026): AI Agents", "title_zh": "AutoGPT vs AgentGPT (2026): AI Agent" },
-  { "slug": "beautiful-ai-vs-tome", "a": "beautiful-ai", "b": "tome", "title_en": "Beautiful.ai vs Tome (2026): AI Presentations", "title_zh": "Beautiful.ai vs Tome (2026): AI 演示" }
+  { "slug": "beautiful-ai-vs-tome", "a": "beautiful-ai", "b": "tome", "title_en": "Beautiful.ai vs Tome (2026): AI Presentations", "title_zh": "Beautiful.ai vs Tome (2026): AI 演示" },
+  { "slug": "grok-vs-chatgpt", "a": "grok", "b": "chatgpt", "title_en": "Grok vs ChatGPT (2026): xAI vs OpenAI", "title_zh": "Grok vs ChatGPT (2026): xAI vs OpenAI" },
+  { "slug": "you-com-vs-perplexity", "a": "you-com", "b": "perplexity", "title_en": "You.com vs Perplexity (2026): AI Search", "title_zh": "You.com vs Perplexity (2026): AI 搜索" },
+  { "slug": "ollama-vs-deepseek", "a": "ollama", "b": "deepseek", "title_en": "Ollama vs DeepSeek (2026): Local vs API", "title_zh": "Ollama vs DeepSeek (2026): 本地 vs API" },
+  { "slug": "crewai-vs-autogpt", "a": "crewai", "b": "autogpt", "title_en": "CrewAI vs AutoGPT (2026): Agent Frameworks", "title_zh": "CrewAI vs AutoGPT (2026): Agent 框架" },
+  { "slug": "mistral-vs-claude", "a": "mistral", "b": "claude", "title_en": "Mistral vs Claude (2026): EU vs US AI", "title_zh": "Mistral vs Claude (2026): 欧洲 vs 美国 AI" },
+  { "slug": "adobe-firefly-vs-midjourney", "a": "adobe-firefly", "b": "midjourney", "title_en": "Adobe Firefly vs Midjourney (2026)", "title_zh": "Adobe Firefly vs Midjourney (2026)" },
+  { "slug": "capcut-vs-kapwing", "a": "capcut", "b": "kapwing", "title_en": "CapCut vs Kapwing (2026): Video Editors", "title_zh": "CapCut vs Kapwing (2026): 视频编辑器" },
+  { "slug": "riverside-vs-descript", "a": "riverside", "b": "descript", "title_en": "Riverside vs Descript (2026): Podcast Tools", "title_zh": "Riverside vs Descript (2026): 播客工具" }
 ]

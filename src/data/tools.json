@@ -1249,5 +1249,113 @@
     "target_audience": { "zh": ["网购用户","效率追求者"], "en": ["Online shoppers","Efficiency seekers"] },
     "features": { "zh": ["浏览器代理","自动操作","插件","AI"], "en": ["Browser agent","Auto actions","Extension","AI"] },
     "use_cases": { "zh": ["网购","比价","填表","自动化"], "en": ["Shopping","Compare","Forms","Automation"] }
+  },
+  "grok": {
+    "name": { "zh": "Grok", "en": "Grok" }, "cat": "text", "url": "https://grok.com", "icon": "fa-comment-dots",
+    "short_desc": { "zh": "xAI 出品的 AI 助手，集成在 X 平台", "en": "AI assistant by xAI, integrated with X" },
+    "long_desc": { "zh": "Grok 由 xAI 开发，提供 AI 对话和搜索，集成在 X（Twitter）平台，有 iOS/Android 应用和 API。", "en": "Grok by xAI offers AI chat and search, integrated with X (Twitter), with iOS/Android apps and API access." },
+    "scenes": { "zh": ["AI 对话","实时搜索","X 平台","API"], "en": ["AI chat","Real-time search","X platform","API"] },
+    "pros": { "zh": ["实时信息","X 平台集成","API 可用"], "en": ["Real-time info","X integration","API available"] },
+    "cons": { "zh": ["新工具","生态小"], "en": ["New tool","Small ecosystem"] },
+    "example": { "zh": "示例：在 X 上用 Grok 搜索最新 AI 新闻。", "en": "Example: Search latest AI news with Grok on X." },
+    "target_audience": { "zh": ["X 用户","开发者","早期用户"], "en": ["X users","Devs","Early adopters"] },
+    "features": { "zh": ["AI 对话","实时搜索","X 集成","API"], "en": ["AI chat","Real-time search","X integration","API"] },
+    "use_cases": { "zh": ["对话","搜索","API","社交"], "en": ["Chat","Search","API","Social"] }
+  },
+  "you-com": {
+    "name": { "zh": "You.com", "en": "You.com" }, "cat": "text", "url": "https://you.com", "icon": "fa-search",
+    "short_desc": { "zh": "面向 AI 应用的网页搜索 API", "en": "Web search APIs for AI applications" },
+    "long_desc": { "zh": "You.com 为 AI 应用和 LLM 提供网页搜索、内容提取和基于来源的回答 API，服务 OpenAI/Amazon 等企业。", "en": "You.com provides web search, content extraction, and grounded answer APIs for AI agents and LLMs, serving enterprises like OpenAI and Amazon." },
+    "scenes": { "zh": ["AI 搜索 API","内容提取","RAG","企业"], "en": ["AI search API","Content extraction","RAG","Enterprise"] },
+    "pros": { "zh": ["企业级 API","干净内容提取","大客户背书"], "en": ["Enterprise API","Clean content extraction","Big client backing"] },
+    "cons": { "zh": ["主要面向开发者","非消费级"], "en": ["Developer-focused","Not consumer-facing"] },
+    "example": { "zh": "示例：用 You.com API 给你的 AI Agent 加网页搜索能力。", "en": "Example: Add web search to your AI Agent via You.com API." },
+    "target_audience": { "zh": ["开发者","AI 团队","企业"], "en": ["Devs","AI teams","Enterprise"] },
+    "features": { "zh": ["搜索 API","内容提取","RAG","企业级"], "en": ["Search API","Content extraction","RAG","Enterprise"] },
+    "use_cases": { "zh": ["RAG","Agent 搜索","内容提取","API"], "en": ["RAG","Agent search","Content extraction","API"] }
+  },
+  "ollama": {
+    "name": { "zh": "Ollama", "en": "Ollama" }, "cat": "code", "url": "https://ollama.com", "icon": "fa-terminal",
+    "short_desc": { "zh": "本地运行开源大模型的最简方式", "en": "The easiest way to run open models locally" },
+    "long_desc": { "zh": "Ollama 让你一行命令在本地运行 Llama、DeepSeek、Mistral 等开源模型，无需 GPU 集群。", "en": "Ollama lets you run Llama, DeepSeek, Mistral and other open models locally with one command, no GPU cluster needed." },
+    "scenes": { "zh": ["本地 LLM","隐私敏感","离线推理","开发测试"], "en": ["Local LLM","Privacy-sensitive","Offline inference","Dev testing"] },
+    "pros": { "zh": ["一行安装","完全开源","隐私保护","免费"], "en": ["One-line install","Fully open source","Privacy","Free"] },
+    "cons": { "zh": ["需本地硬件","不如 API 模型强"], "en": ["Needs local hardware","Less capable than API models"] },
+    "example": { "zh": "示例：ollama run llama3.2 → 本地运行 Llama。", "en": "Example: ollama run llama3.2 → run Llama locally." },
+    "target_audience": { "zh": ["开发者","隐私敏感用户","研究者"], "en": ["Devs","Privacy-conscious","Researchers"] },
+    "features": { "zh": ["一行安装","多模型","开源","API"], "en": ["One-line install","Multi-model","Open source","API"] },
+    "use_cases": { "zh": ["本地推理","开发","隐私","测试"], "en": ["Local inference","Dev","Privacy","Testing"] }
+  },
+  "crewai": {
+    "name": { "zh": "CrewAI", "en": "CrewAI" }, "cat": "productivity", "url": "https://www.crewai.com", "icon": "fa-users-cog",
+    "short_desc": { "zh": "多 Agent 协作框架，开源+企业版", "en": "Multi-agent collaboration framework, open source + enterprise" },
+    "long_desc": { "zh": "CrewAI 让你编排多个 AI Agent 协作完成复杂任务，有开源框架和企业管理平台。", "en": "CrewAI lets you orchestrate multiple AI agents to collaborate on complex tasks, with open source framework and enterprise management platform." },
+    "scenes": { "zh": ["多 Agent","自动化","企业","工作流"], "en": ["Multi-agent","Automation","Enterprise","Workflows"] },
+    "pros": { "zh": ["开源框架","多 Agent 协作","企业版"], "en": ["Open source framework","Multi-agent collab","Enterprise"] },
+    "cons": { "zh": ["需编程","复杂场景难调"], "en": ["Needs coding","Complex setups hard"] },
+    "example": { "zh": "示例：编排一个研究+写作+审核的 3-Agent 团队。", "en": "Example: Orchestrate a 3-agent team: research+write+review." },
+    "target_audience": { "zh": ["开发者","企业","自动化"], "en": ["Devs","Enterprise","Automation"] },
+    "features": { "zh": ["多 Agent","开源","企业版","Discovery"], "en": ["Multi-agent","Open source","Enterprise","Discovery"] },
+    "use_cases": { "zh": ["自动化","研究","内容","工作流"], "en": ["Automation","Research","Content","Workflows"] }
+  },
+  "huggingface": {
+    "name": { "zh": "Hugging Face", "en": "Hugging Face" }, "cat": "productivity", "url": "https://huggingface.co", "icon": "fa-face-smile",
+    "short_desc": { "zh": "AI 模型中心，开源模型的 GitHub", "en": "AI model hub, the GitHub of open models" },
+    "long_desc": { "zh": "Hugging Face 是最大的 AI 模型/数据集/应用托管平台，开源社区核心，Transformers 库的维护者。", "en": "Hugging Face is the largest AI model/dataset/app hosting platform, the core of open source AI community, maintainer of Transformers library." },
+    "scenes": { "zh": ["模型托管","数据集","Spaces 演示","Transformers"], "en": ["Model hosting","Datasets","Spaces demos","Transformers"] },
+    "pros": { "zh": ["最大模型库","开源社区","免费托管","Transformers"], "en": ["Largest model library","Open community","Free hosting","Transformers"] },
+    "cons": { "zh": ["需技术背景","资源有限"], "en": ["Needs tech skills","Resource limits"] },
+    "example": { "zh": "示例：在 Hugging Face 上部署一个 Llama 模型演示。", "en": "Example: Deploy a Llama model demo on Hugging Face." },
+    "target_audience": { "zh": ["AI 研究者","开发者","开源社区"], "en": ["AI researchers","Devs","OSS community"] },
+    "features": { "zh": ["模型库","数据集","Spaces","Transformers"], "en": ["Model hub","Datasets","Spaces","Transformers"] },
+    "use_cases": { "zh": ["模型托管","研究","演示","开源"], "en": ["Model hosting","Research","Demos","Open source"] }
+  },
+  "adobe-firefly": {
+    "name": { "zh": "Adobe Firefly", "en": "Adobe Firefly" }, "cat": "image", "url": "https://www.adobe.com/products/firefly.html", "icon": "fa-fire",
+    "short_desc": { "zh": "Adobe 的 AI 创意工具，支持图像/视频/音频", "en": "Adobe AI creative tool for images, video, and audio" },
+    "long_desc": { "zh": "Adobe Firefly 是 AI 驱动的创意空间，用文字生成和编辑图像、视频、音频和矢量图，支持完整创作流程。", "en": "Adobe Firefly is an AI-powered creative space to create and edit images, videos, audio, and vector graphics from text prompts, supporting the entire creative process." },
+    "scenes": { "zh": ["图像生成","视频生成","创意编辑","矢量图"], "en": ["Image gen","Video gen","Creative editing","Vector"] },
+    "pros": { "zh": ["Adobe 生态集成","多模态","商用安全"], "en": ["Adobe ecosystem","Multimodal","Commercial-safe"] },
+    "cons": { "zh": ["需 Adobe 订阅","中文一般"], "en": ["Needs Adobe subscription","Weak Chinese"] },
+    "example": { "zh": "示例：用 Firefly 生成产品概念图并编辑。", "en": "Example: Generate and edit product concept images with Firefly." },
+    "target_audience": { "zh": ["设计师","营销","创意团队"], "en": ["Designers","Marketing","Creative teams"] },
+    "features": { "zh": ["图像生成","视频生成","音频","矢量图"], "en": ["Image gen","Video gen","Audio","Vector"] },
+    "use_cases": { "zh": ["图像","视频","创意","编辑"], "en": ["Images","Video","Creative","Editing"] }
+  },
+  "capcut": {
+    "name": { "zh": "CapCut", "en": "CapCut" }, "cat": "video", "url": "https://www.capcut.com", "icon": "fa-scissors",
+    "short_desc": { "zh": "AI 驱动的视频编辑器，社交媒体创作利器", "en": "AI-powered video editor for social media creation" },
+    "long_desc": { "zh": "CapCut 是 AI 驱动的照片和视频编辑器，内置 AI 工具，适合 YouTube/Instagram/TikTok 内容创作。", "en": "CapCut is an AI-powered photo and video editor with built-in AI tools, designed for YouTube, Instagram, and TikTok content creation." },
+    "scenes": { "zh": ["社交视频","YouTube","TikTok","编辑"], "en": ["Social video","YouTube","TikTok","Editing"] },
+    "pros": { "zh": ["免费可用","AI 工具多","手机端"], "en": ["Usable free","Many AI tools","Mobile app"] },
+    "cons": { "zh": ["高级功能付费","导出水印（免费版）"], "en": ["Advanced paid","Export watermark (free)"] },
+    "example": { "zh": "示例：用 CapCut AI 自动生成字幕+剪辑短视频。", "en": "Example: Auto-generate subtitles and edit short video with CapCut AI." },
+    "target_audience": { "zh": ["自媒体","TikTok 创作者","营销"], "en": ["Creators","TikTokers","Marketing"] },
+    "features": { "zh": ["AI 编辑","自动字幕","模板","手机端"], "en": ["AI editing","Auto subtitles","Templates","Mobile"] },
+    "use_cases": { "zh": ["社交视频","编辑","字幕","TikTok"], "en": ["Social video","Editing","Subtitles","TikTok"] }
+  },
+  "mistral": {
+    "name": { "zh": "Mistral", "en": "Mistral" }, "cat": "text", "url": "https://chat.mistral.ai", "icon": "fa-wind",
+    "short_desc": { "zh": "欧洲领先的开源 AI 模型公司", "en": "Leading European open-source AI model company" },
+    "long_desc": { "zh": "Mistral AI 是欧洲领先的 AI 公司，提供高性能开源模型（Mistral/Large）和 Le Chat 对话界面。", "en": "Mistral AI is a leading European AI company offering high-performance open models (Mistral/Large) and the Le Chat interface." },
+    "scenes": { "zh": ["AI 对话","开源模型","API","欧洲合规"], "en": ["AI chat","Open models","API","EU compliance"] },
+    "pros": { "zh": ["开源模型","速度快","欧洲合规","API 低价"], "en": ["Open models","Fast","EU compliant","Cheap API"] },
+    "cons": { "zh": ["知名度低于 GPT/Claude","多模态弱"], "en": ["Less known than GPT/Claude","Weak multimodal"] },
+    "example": { "zh": "示例：用 Le Chat 快速生成一段法文邮件。", "en": "Example: Generate a French email quickly with Le Chat." },
+    "target_audience": { "zh": ["欧洲用户","开发者","开源爱好者"], "en": ["European users","Devs","OSS fans"] },
+    "features": { "zh": ["开源模型","Le Chat","API","快速"], "en": ["Open models","Le Chat","API","Fast"] },
+    "use_cases": { "zh": ["对话","API","欧洲合规","开源"], "en": ["Chat","API","EU compliance","Open source"] }
+  },
+  "riverside": {
+    "name": { "zh": "Riverside", "en": "Riverside" }, "cat": "audio", "url": "https://riverside.fm", "icon": "fa-microphone-lines",
+    "short_desc": { "zh": "AI 驱动的播客/视频录制+编辑平台", "en": "AI-powered podcast and video recording + editing platform" },
+    "long_desc": { "zh": "Riverside 是 AI 驱动的内容创作平台，提供高清录制、AI 编辑、内容再利用和分发，像有一个团队在身后。", "en": "Riverside is an AI-powered platform to record, edit, repurpose, and distribute studio-quality content as easily as if you had a crew behind you." },
+    "scenes": { "zh": ["播客录制","视频录制","AI 编辑","分发"], "en": ["Podcast recording","Video recording","AI editing","Distribution"] },
+    "pros": { "zh": ["高清录制","AI 编辑","一站式","免费可用"], "en": ["HD recording","AI editing","All-in-one","Usable free"] },
+    "cons": { "zh": ["高级功能付费","中文支持有限"], "en": ["Advanced paid","Limited Chinese"] },
+    "example": { "zh": "示例：录制播客 → AI 自动转录+剪辑+生成短视频片段。", "en": "Example: Record podcast → AI auto-transcribe+edit+generate short clips." },
+    "target_audience": { "zh": ["播客","YouTuber","营销"], "en": ["Podcasters","YouTubers","Marketing"] },
+    "features": { "zh": ["高清录制","AI 转录","AI 编辑","分发"], "en": ["HD recording","AI transcription","AI editing","Distribution"] },
+    "use_cases": { "zh": ["播客","视频","转录","剪辑"], "en": ["Podcasts","Video","Transcription","Editing"] }
   }
 }

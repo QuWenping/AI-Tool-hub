@@ -22,7 +22,10 @@
       "sudowrite",
       "wordtune",
       "jenni-ai",
-      "anyword"
+      "anyword",
+      "grok",
+      "you-com",
+      "mistral"
     ]
   },
   {
@@ -46,7 +49,8 @@
       "photoroom",
       "removebg",
       "letsenhance",
-      "galileo-ai"
+      "galileo-ai",
+      "adobe-firefly"
     ]
   },
   {
@@ -68,7 +72,8 @@
       "bolt",
       "tabnine",
       "amazon-q",
-      "cody"
+      "cody",
+      "ollama"
     ]
   },
   {
@@ -92,7 +97,8 @@
       "invideo-ai",
       "fliki",
       "kapwing",
-      "d-id"
+      "d-id",
+      "capcut"
     ]
   },
   {
@@ -111,7 +117,8 @@
       "udio",
       "speechify",
       "voicemod",
-      "stable-audio"
+      "stable-audio",
+      "riverside"
     ]
   },
   {
@@ -139,7 +146,9 @@
       "bardeen",
       "agentgpt",
       "beautiful-ai",
-      "multion"
+      "multion",
+      "crewai",
+      "huggingface"
     ]
   },
   {
@@ -195,7 +204,9 @@
       "tabnine",
       "cody",
       "comfyui",
-      "n8n"
+      "n8n",
+      "ollama",
+      "huggingface"
     ]
   },
   {
@@ -214,7 +225,10 @@
       "agentgpt",
       "n8n",
       "rytr",
-      "bardeen"
+      "bardeen",
+      "ollama",
+      "huggingface",
+      "capcut"
     ]
   },
   {
@@ -302,7 +316,8 @@
       "claude",
       "figma-ai",
       "galileo-ai",
-      "comfyui"
+      "comfyui",
+      "adobe-firefly"
     ]
   },
   {
@@ -333,7 +348,8 @@
       "chatgpt",
       "elicit",
       "consensus",
-      "phind"
+      "phind",
+      "huggingface"
     ]
   },
   {
@@ -363,7 +379,8 @@
       "claude",
       "invideo-ai",
       "fliki",
-      "viggle"
+      "viggle",
+      "capcut"
     ]
   },
   {
@@ -391,7 +408,8 @@
       "elevenlabs",
       "runway",
       "speechify",
-      "stable-audio"
+      "stable-audio",
+      "riverside"
     ]
   },
   {
@@ -405,7 +423,8 @@
       "stable-diffusion",
       "claude",
       "figma-ai",
-      "galileo-ai"
+      "galileo-ai",
+      "adobe-firefly"
     ]
   },
   {
