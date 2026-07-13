@@ -31,5 +31,20 @@
   { "slug": "otter-vs-fireflies", "a": "otter", "b": "fireflies", "title_en": "Otter vs Fireflies (2026): Meeting AI Compared", "title_zh": "Otter vs Fireflies (2026): 会议 AI 对比" },
   { "slug": "gamma-vs-notion-ai", "a": "gamma", "b": "notion-ai", "title_en": "Gamma vs Notion AI (2026): Decks vs Docs", "title_zh": "Gamma vs Notion AI (2026): 演示 vs 文档" },
   { "slug": "cline-vs-cursor", "a": "cline", "b": "cursor", "title_en": "Cline vs Cursor (2026): Agent vs AI Editor", "title_zh": "Cline vs Cursor (2026): Agent vs AI 编辑器" },
-  { "slug": "pika-vs-kling", "a": "pika", "b": "kling", "title_en": "Pika vs Kling (2026): Short Video Compared", "title_zh": "Pika vs Kling (2026): 短视频对比" }
+  { "slug": "pika-vs-kling", "a": "pika", "b": "kling", "title_en": "Pika vs Kling (2026): Short Video Compared", "title_zh": "Pika vs Kling (2026): 短视频对比" },
+  { "slug": "windsurf-vs-cursor", "a": "windsurf", "b": "cursor", "title_en": "Windsurf vs Cursor (2026): AI IDE Showdown", "title_zh": "Windsurf vs Cursor (2026): AI IDE 对决" },
+  { "slug": "windsurf-vs-copilot", "a": "windsurf", "b": "github-copilot", "title_en": "Windsurf vs GitHub Copilot (2026)", "title_zh": "Windsurf vs GitHub Copilot (2026)" },
+  { "slug": "codeium-vs-copilot", "a": "codeium", "b": "github-copilot", "title_en": "Codeium vs GitHub Copilot: Free vs Paid", "title_zh": "Codeium vs GitHub Copilot: 免费 vs 付费" },
+  { "slug": "v0-vs-bolt", "a": "v0", "b": "bolt", "title_en": "v0 vs Bolt (2026): UI Gen vs Full-Stack", "title_zh": "v0 vs Bolt (2026): UI 生成 vs 全栈" },
+  { "slug": "lovable-vs-bolt", "a": "lovable", "b": "bolt", "title_en": "Lovable vs Bolt (2026): App Builder Compared", "title_zh": "Lovable vs Bolt (2026): 应用生成器对比" },
+  { "slug": "deepseek-vs-chatgpt", "a": "deepseek", "b": "chatgpt", "title_en": "DeepSeek vs ChatGPT (2026): Cheap vs Popular", "title_zh": "DeepSeek vs ChatGPT (2026): 低价 vs 主流" },
+  { "slug": "deepseek-vs-claude", "a": "deepseek", "b": "claude", "title_en": "DeepSeek vs Claude (2026): Value vs Quality", "title_zh": "DeepSeek vs Claude (2026): 性价比 vs 质量" },
+  { "slug": "copy-ai-vs-jasper", "a": "copy-ai", "b": "jasper", "title_en": "Copy.ai vs Jasper (2026): Marketing AI", "title_zh": "Copy.ai vs Jasper (2026): 营销 AI" },
+  { "slug": "quillbot-vs-grammarly", "a": "quillbot", "b": "grammarly-ai", "title_en": "QuillBot vs Grammarly (2026): Writing Tools", "title_zh": "QuillBot vs Grammarly (2026): 写作工具" },
+  { "slug": "canva-ai-vs-gamma", "a": "canva-ai", "b": "gamma", "title_en": "Canva AI vs Gamma (2026): Design vs Decks", "title_zh": "Canva AI vs Gamma (2026): 设计 vs 演示" },
+  { "slug": "phind-vs-perplexity", "a": "phind", "b": "perplexity", "title_en": "Phind vs Perplexity (2026): Dev vs General Search", "title_zh": "Phind vs Perplexity (2026): 开发者 vs 通用搜索" },
+  { "slug": "elicit-vs-consensus", "a": "elicit", "b": "consensus", "title_en": "Elicit vs Consensus (2026): Research Tools", "title_zh": "Elicit vs Consensus (2026): 研究工具" },
+  { "slug": "read-ai-vs-otter", "a": "read-ai", "b": "otter", "title_en": "Read AI vs Otter (2026): Meeting AI", "title_zh": "Read AI vs Otter (2026): 会议 AI" },
+  { "slug": "replit-vs-cursor", "a": "replit", "b": "cursor", "title_en": "Replit vs Cursor (2026): Cloud vs Desktop", "title_zh": "Replit vs Cursor (2026): 云端 vs 桌面" },
+  { "slug": "aider-vs-cline", "a": "aider", "b": "cline", "title_en": "Aider vs Cline (2026): CLI vs IDE Agent", "title_zh": "Aider vs Cline (2026): 命令行 vs IDE Agent" }
 ]

@@ -9,7 +9,13 @@
       "chatgpt",
       "claude",
       "perplexity",
-      "notion-ai"
+      "notion-ai",
+      "deepseek",
+      "copy-ai",
+      "quillbot",
+      "writesonic",
+      "phind",
+      "grammarly-ai"
     ]
   },
   {
@@ -24,7 +30,9 @@
       "ideogram",
       "krea",
       "flux",
-      "leonardo"
+      "leonardo",
+      "canva-ai",
+      "uizard"
     ]
   },
   {
@@ -36,7 +44,14 @@
     "tools": [
       "github-copilot",
       "cursor",
-      "cline"
+      "cline",
+      "windsurf",
+      "aider",
+      "codeium",
+      "replit",
+      "v0",
+      "lovable",
+      "bolt"
     ]
   },
   {
@@ -81,7 +96,12 @@
       "notion-ai",
       "perplexity",
       "hostinger",
-      "gamma"
+      "gamma",
+      "elicit",
+      "taskade",
+      "read-ai",
+      "consensus",
+      "coda-ai"
     ]
   },
   {
@@ -94,7 +114,9 @@
       "chatgpt",
       "claude",
       "perplexity",
-      "notion-ai"
+      "notion-ai",
+      "quillbot",
+      "grammarly-ai"
     ]
   },
   {
@@ -105,7 +127,10 @@
     "desc_zh": "面向博主、文案和内容营销人员的 AI 写作助手。",
     "tools": [
       "chatgpt",
-      "claude"
+      "claude",
+      "copy-ai",
+      "writesonic",
+      "quillbot"
     ]
   },
   {
@@ -118,7 +143,10 @@
       "github-copilot",
       "cursor",
       "chatgpt",
-      "claude"
+      "claude",
+      "windsurf",
+      "codeium",
+      "replit"
     ]
   },
   {
@@ -130,7 +158,9 @@
     "tools": [
       "chatgpt",
       "perplexity",
-      "claude"
+      "claude",
+      "codeium",
+      "deepseek"
     ]
   },
   {
@@ -174,7 +204,9 @@
     "tools": [
       "chatgpt",
       "perplexity",
-      "notion-ai"
+      "notion-ai",
+      "copy-ai",
+      "writesonic"
     ]
   },
   {
@@ -210,7 +242,9 @@
     "tools": [
       "github-copilot",
       "cursor",
-      "cline"
+      "cline",
+      "windsurf",
+      "codeium"
     ]
   },
   {
@@ -222,7 +256,10 @@
     "tools": [
       "perplexity",
       "claude",
-      "chatgpt"
+      "chatgpt",
+      "elicit",
+      "consensus",
+      "phind"
     ]
   },
   {
@@ -234,7 +271,8 @@
     "tools": [
       "perplexity",
       "chatgpt",
-      "claude"
+      "claude",
+      "writesonic"
     ]
   },
   {

@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout title="JSON Formatter & Validator | Free Online Tool" description="Free online JSON formatter, validator, and minifier. Paste JSON to format, validate, or minify. No signup required." keywords="json formatter, json validator, json minify, free online tool, json beautifier">
+  <div class="container" style="max-width:800px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumbs" style="margin-bottom:24px;"><a href="/">Home</a> &rsaquo; <a href="/tools/">Free Tools</a> &rsaquo; <span>JSON Formatter</span></nav>
+    <h1 style="font-size:32px;font-weight:700;margin-bottom:8px;">JSON Formatter & Validator</h1>
+    <p style="color:var(--text-mute);font-size:16px;margin-bottom:32px;">Format, validate, or minify JSON. Free, no signup.</p>
+    <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:14px;padding:24px;margin-bottom:24px;">
+      <textarea id="jf-input" rows="10" placeholder='{"key":"value"}' style="width:100%;background:var(--bg-color);border:1px solid var(--border-color);border-radius:10px;padding:12px;color:var(--text-main);font-size:14px;font-family:monospace;resize:vertical;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:12px;">
+        <button id="jf-format" style="background:var(--accent-color);color:#fff;border:none;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:600;cursor:pointer;">Format</button>
+        <button id="jf-minify" style="background:var(--bg-color);color:var(--text-main);border:1px solid var(--border-color);border-radius:8px;padding:10px 20px;font-size:14px;font-weight:600;cursor:pointer;">Minify</button>
+        <button id="jf-validate" style="background:var(--bg-color);color:var(--text-main);border:1px solid var(--border-color);border-radius:8px;padding:10px 20px;font-size:14px;font-weight:600;cursor:pointer;">Validate</button>
+        <button id="jf-clear" style="background:var(--bg-color);color:var(--text-main);border:1px solid var(--border-color);border-radius:8px;padding:10px 20px;font-size:14px;font-weight:600;cursor:pointer;">Clear</button>
+      </div>
+    </div>
+    <div id="jf-output" style="display:none;background:var(--card-bg);border:1px solid var(--border-color);border-radius:14px;padding:24px;">
+      <pre id="jf-result" style="background:var(--bg-color);border-radius:8px;padding:16px;font-size:14px;color:var(--text-soft);white-space:pre-wrap;word-break:break-word;max-height:400px;overflow:auto;"></pre>
+    </div>
+    <div id="jf-status" style="display:none;margin-top:12px;padding:12px;border-radius:8px;font-size:14px;"></div>
+  </div>
+</BaseLayout>
+<script is:inline>
+  function show(msg,isOk){
+    var s=document.getElementById("jf-status");
+    s.textContent=msg; s.style.display="block";
+    s.style.background=isOk?"rgba(16,185,129,0.1)":"rgba(239,68,68,0.1)";
+    s.style.color=isOk?"#10b981":"#ef4444";
+  }
+  function doFormat(minify){
+    var input=document.getElementById("jf-input").value.trim(); if(!input){return;}
+    try{
+      var parsed=JSON.parse(input);
+      var result=minify?JSON.stringify(parsed):JSON.stringify(parsed,null,2);
+      document.getElementById("jf-result").textContent=result;
+      document.getElementById("jf-output").style.display="block";
+      show(minify?"Minified successfully!":"Formatted successfully!",true);
+    }catch(e){ show("Invalid JSON: "+e.message,false); }
+  }
+  document.getElementById("jf-format").addEventListener("click",function(){doFormat(false)});
+  document.getElementById("jf-minify").addEventListener("click",function(){doFormat(true)});
+  document.getElementById("jf-validate").addEventListener("click",function(){
+    var input=document.getElementById("jf-input").value.trim(); if(!input){return;}
+    try{JSON.parse(input);show("Valid JSON!",true);}catch(e){show("Invalid JSON: "+e.message,false);}
+  });
+  document.getElementById("jf-clear").addEventListener("click",function(){
+    document.getElementById("jf-input").value="";
+    document.getElementById("jf-output").style.display="none";
+    document.getElementById("jf-status").style.display="none";
+  });
+</script>
