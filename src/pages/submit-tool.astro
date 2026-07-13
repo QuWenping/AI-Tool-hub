@@ -1,0 +1,124 @@
+﻿---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/submit-tool/";
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity":[
+  {"@type":"Question","name":"How long does it take for a submitted tool to be reviewed?","acceptedAnswer":{"@type":"Answer","text":"We review submissions within 3-5 business days. If your tool meets our criteria, we will add it to our database with a full review page. You will receive an email notification when your tool is published."}},
+  {"@type":"Question","name":"What criteria must a tool meet to be listed?","acceptedAnswer":{"@type":"Answer","text":"The tool must: 1) Be an AI-powered tool or have significant AI features, 2) Have a live website with clear pricing, 3) Be usable by individuals or businesses (not enterprise-only), 4) Not be a scam or misleading product. We prioritize tools with active development and positive user feedback."}},
+  {"@type":"Question","name":"Can I submit my own tool?","acceptedAnswer":{"@type":"Answer","text":"Yes! Tool creators and founders are welcome to submit their products. Please disclose your affiliation in the submission form. We review all submissions with the same criteria regardless of who submits them."}},
+  {"@type":"Question","name":"Is there a fee for listing a tool?","acceptedAnswer":{"@type":"Answer","text":"No. Listing on AI Tool Hub is completely free. We do not accept payment for reviews or ranking placement. Our rankings are based on hands-on testing and editorial judgment."}}
+]};
+---
+<BaseLayout title="Submit an AI Tool | AI Tool Hub" description="Submit a new AI tool to be reviewed and listed on AI Tool Hub. Free, no pay-to-play. We review all submissions within 3-5 business days." keywords="submit AI tool, list AI tool, AI tool directory submission, tool review request">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+  <div class="article" style="max-width:680px;margin:0 auto;padding:48px 0;">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <span>Submit Tool</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Contribute</span>
+      <h1>Submit an AI Tool</h1>
+    </header>
+    <section class="article-body">
+      <p style="font-size:16px;color:var(--text-soft);line-height:1.7;">Know an AI tool we should review? Submit it below. We review all submissions within <strong>3-5 business days</strong>. Listing is free — we never accept payment for reviews or ranking.</p>
+
+      <div style="background:rgba(34,197,94,0.05);border:1px solid rgba(34,197,94,0.2);border-radius:10px;padding:16px;margin:20px 0;">
+        <h3 style="font-size:14px;font-weight:600;color:#22c55e;margin-bottom:6px;">Listing Criteria</h3>
+        <ul style="margin:0;padding-left:18px;font-size:13px;color:var(--text-soft);line-height:1.7;">
+          <li>AI-powered tool or significant AI features</li>
+          <li>Live website with clear pricing</li>
+          <li>Available to individuals or businesses (not enterprise-only)</li>
+          <li>Active development and positive user feedback</li>
+        </ul>
+      </div>
+
+      <form id="submit-form" style="display:grid;gap:16px;margin-top:24px;">
+        <div>
+          <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Tool Name *</label>
+          <input type="text" id="tool-name" required placeholder="e.g. Cursor" style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;" />
+        </div>
+        <div>
+          <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Website URL *</label>
+          <input type="url" id="tool-url" required placeholder="https://..." style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;" />
+        </div>
+        <div>
+          <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Category *</label>
+          <select id="tool-category" required style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;">
+            <option value="">Select category...</option>
+            <option value="code">Coding / Development</option>
+            <option value="image">Image Generation / Design</option>
+            <option value="video">Video Generation / Editing</option>
+            <option value="audio">Audio / Music / Voice</option>
+            <option value="text">Writing / Chat / Text</option>
+            <option value="productivity">Productivity / Automation</option>
+            <option value="research">Research / Analysis</option>
+            <option value="agent">AI Agent / Automation</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Short Description *</label>
+          <textarea id="tool-desc" required rows="3" placeholder="What does this tool do? (1-2 sentences)" style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;resize:vertical;"></textarea>
+        </div>
+        <div>
+          <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Pricing Model</label>
+          <select id="tool-pricing" style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;">
+            <option value="">Select pricing...</option>
+            <option value="free">Free</option>
+            <option value="freemium">Freemium (free tier + paid)</option>
+            <option value="paid">Paid only</option>
+            <option value="opensource">Open source</option>
+            <option value="enterprise">Enterprise / Contact sales</option>
+          </select>
+        </div>
+        <div>
+          <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Your Email (for confirmation) *</label>
+          <input type="email" id="submitter-email" required placeholder="your@email.com" style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;" />
+        </div>
+        <div>
+          <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Are you affiliated with this tool?</label>
+          <select id="affiliation" style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;">
+            <option value="no">No, just a user/fan</option>
+            <option value="founder">Yes, I am the founder/creator</option>
+            <option value="team">Yes, I am on the team</option>
+            <option value="marketer">Yes, I do marketing for them</option>
+          </select>
+        </div>
+        <div>
+          <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Anything else we should know?</label>
+          <textarea id="tool-notes" rows="3" placeholder="Optional: standout features, use cases, why you recommend it" style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;resize:vertical;"></textarea>
+        </div>
+        <button type="submit" style="padding:14px 32px;background:var(--accent-color);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;justify-self:start;">Submit for Review</button>
+      </form>
+      <div id="submit-msg" style="display:none;margin-top:16px;padding:16px;background:rgba(34,197,94,0.05);border:1px solid rgba(34,197,94,0.2);border-radius:10px;">
+        <p style="font-size:14px;color:#22c55e;margin:0;font-weight:600;">Thank you! Your submission has been received.</p>
+        <p style="font-size:13px;color:var(--text-mute);margin:8px 0 0 0;">We will review this tool within 3-5 business days and notify you by email if it is added to our database.</p>
+      </div>
+
+      <h2 style="margin-top:32px;">FAQ</h2>
+      <div style="display:grid;gap:16px;">
+        <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;">
+          <h3 style="font-size:15px;font-weight:600;margin-bottom:8px;">How long does review take?</h3>
+          <p style="font-size:14px;color:var(--text-soft);margin:0;">3-5 business days. You will be notified by email when your tool is published.</p>
+        </div>
+        <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;">
+          <h3 style="font-size:15px;font-weight:600;margin-bottom:8px;">Is there a listing fee?</h3>
+          <p style="font-size:14px;color:var(--text-soft);margin:0;">No. Listing is completely free. We do not accept payment for reviews or rankings.</p>
+        </div>
+        <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;">
+          <h3 style="font-size:15px;font-weight:600;margin-bottom:8px;">Can I submit my own tool?</h3>
+          <p style="font-size:14px;color:var(--text-soft);margin:0;">Yes! Please disclose your affiliation. All submissions are reviewed with the same criteria.</p>
+        </div>
+      </div>
+
+      <p style="text-align:center;margin-top:32px;"><a href="/submit-prompt/" style="color:var(--accent-color);font-weight:600;">Submit a Prompt</a> &nbsp;|&nbsp; <a href="/" style="color:var(--accent-color);font-weight:600;">Browse Tools</a></p>
+    </section>
+  </div>
+</BaseLayout>
+<script is:inline>
+document.getElementById("submit-form").addEventListener("submit",function(e){
+  e.preventDefault();
+  document.getElementById("submit-msg").style.display="block";
+  document.getElementById("submit-form").style.display="none";
+});
+</script>

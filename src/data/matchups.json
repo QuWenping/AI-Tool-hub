@@ -1,72 +1,541 @@
 [
-  { "slug": "chatgpt-vs-claude", "a": "chatgpt", "b": "claude", "title_en": "ChatGPT vs Claude (2026): Which is Better?", "title_zh": "ChatGPT vs Claude (2026): 哪个更好?" },
-  { "slug": "midjourney-vs-stable-diffusion", "a": "midjourney", "b": "stable-diffusion", "title_en": "Midjourney vs Stable Diffusion (2026)", "title_zh": "Midjourney vs Stable Diffusion (2026)" },
-  { "slug": "cursor-vs-github-copilot", "a": "cursor", "b": "github-copilot", "title_en": "Cursor vs GitHub Copilot (2026)", "title_zh": "Cursor vs GitHub Copilot (2026)" },
-  { "slug": "sora-vs-runway", "a": "sora", "b": "runway", "title_en": "Sora vs Runway (2026): Best AI Video Generator?", "title_zh": "Sora vs Runway (2026): 最佳 AI 视频生成器?" },
-  { "slug": "perplexity-vs-chatgpt", "a": "perplexity", "b": "chatgpt", "title_en": "Perplexity vs ChatGPT (2026): Search vs Chat", "title_zh": "Perplexity vs ChatGPT (2026): 搜索 vs 对话" },
-  { "slug": "notion-ai-vs-chatgpt", "a": "notion-ai", "b": "chatgpt", "title_en": "Notion AI vs ChatGPT (2026)", "title_zh": "Notion AI vs ChatGPT (2026)" },
-  { "slug": "elevenlabs-vs-runway", "a": "elevenlabs", "b": "runway", "title_en": "ElevenLabs vs Runway: Voice vs Video AI", "title_zh": "ElevenLabs vs Runway: 语音 vs 视频 AI" },
-  { "slug": "chatgpt-vs-midjourney", "a": "chatgpt", "b": "midjourney", "title_en": "ChatGPT vs Midjourney: Text vs Image AI", "title_zh": "ChatGPT vs Midjourney: 文本 vs 图像 AI" },
-  { "slug": "claude-vs-gemini", "a": "claude", "b": "gemini", "title_en": "Claude vs Gemini (2026): Which Assistant Wins?", "title_zh": "Claude vs Gemini (2026): 哪个助手更强?" },
-  { "slug": "hostinger-vs-chatgpt", "a": "hostinger", "b": "chatgpt", "title_en": "Hostinger AI vs ChatGPT for Websites", "title_zh": "Hostinger AI vs ChatGPT 建站对比" },
-  { "slug": "stable-diffusion-vs-midjourney", "a": "stable-diffusion", "b": "midjourney", "title_en": "Stable Diffusion vs Midjourney (2026)", "title_zh": "Stable Diffusion vs Midjourney (2026)" },
-  { "slug": "github-copilot-vs-chatgpt", "a": "github-copilot", "b": "chatgpt", "title_en": "GitHub Copilot vs ChatGPT for Coding", "title_zh": "GitHub Copilot vs ChatGPT 编程对比" },
-  { "slug": "sora-vs-midjourney", "a": "sora", "b": "midjourney", "title_en": "Sora vs Midjourney: Video vs Image AI", "title_zh": "Sora vs Midjourney: 视频 vs 图像 AI" },
-  { "slug": "elevenlabs-vs-chatgpt", "a": "elevenlabs", "b": "chatgpt", "title_en": "ElevenLabs vs ChatGPT Voice Mode", "title_zh": "ElevenLabs vs ChatGPT 语音模式对比" },
-  { "slug": "gemini-vs-chatgpt", "a": "gemini", "b": "chatgpt", "title_en": "Gemini vs ChatGPT (2026): The AI Assistant Showdown", "title_zh": "Gemini vs ChatGPT (2026): AI 助手对决" },
-  { "slug": "claude-vs-perplexity", "a": "claude", "b": "perplexity", "title_en": "Claude vs Perplexity: Deep Research Compared", "title_zh": "Claude vs Perplexity: 深度研究对比" },
-  { "slug": "leonardo-vs-midjourney", "a": "leonardo", "b": "midjourney", "title_en": "Leonardo.AI vs Midjourney (2026): Game Art vs Aesthetics", "title_zh": "Leonardo.AI vs Midjourney (2026): 游戏美术 vs 艺术审美" },
-  { "slug": "descript-vs-runway", "a": "descript", "b": "runway", "title_en": "Descript vs Runway: Edit vs Generate Video", "title_zh": "Descript vs Runway: 视频编辑 vs 视频生成" },
-  { "slug": "suno-vs-elevenlabs", "a": "suno", "b": "elevenlabs", "title_en": "Suno vs ElevenLabs: Music vs Voice AI", "title_zh": "Suno vs ElevenLabs: 音乐 vs 语音 AI" },
-  { "slug": "ideogram-vs-midjourney", "a": "ideogram", "b": "midjourney", "title_en": "Ideogram vs Midjourney (2026): Text vs Aesthetics", "title_zh": "Ideogram vs Midjourney (2026): 文字 vs 艺术审美" },
-  { "slug": "flux-vs-midjourney", "a": "flux", "b": "midjourney", "title_en": "Flux vs Midjourney (2026): Photorealism vs Art", "title_zh": "Flux vs Midjourney (2026): 写实 vs 艺术" },
-  { "slug": "krea-vs-midjourney", "a": "krea", "b": "midjourney", "title_en": "Krea vs Midjourney (2026): Real-time vs Aesthetics", "title_zh": "Krea vs Midjourney (2026): 实时 vs 艺术审美" },
-  { "slug": "pika-vs-runway", "a": "pika", "b": "runway", "title_en": "Pika vs Runway (2026): Easy Shorts vs Pro Video", "title_zh": "Pika vs Runway (2026): 简易短片 vs 专业视频" },
-  { "slug": "luma-vs-runway", "a": "luma", "b": "runway", "title_en": "Luma vs Runway (2026): Dream Machine vs Gen-3", "title_zh": "Luma vs Runway (2026): Dream Machine vs Gen-3" },
-  { "slug": "kling-vs-sora", "a": "kling", "b": "sora", "title_en": "Kling vs Sora (2026): China vs OpenAI Video", "title_zh": "Kling vs Sora (2026): 可灵 vs OpenAI 视频" },
-  { "slug": "hailuo-vs-runway", "a": "hailuo", "b": "runway", "title_en": "Hailuo vs Runway (2026): MiniMax vs Gen-3", "title_zh": "Hailuo vs Runway (2026): 海螺 vs Gen-3" },
-  { "slug": "synthesia-vs-heygen", "a": "synthesia", "b": "heygen", "title_en": "Synthesia vs HeyGen (2026): Avatar Video Compared", "title_zh": "Synthesia vs HeyGen (2026): 数字人视频对比" },
-  { "slug": "play-ht-vs-elevenlabs", "a": "play-ht", "b": "elevenlabs", "title_en": "PlayHT vs ElevenLabs (2026): TTS Compared", "title_zh": "PlayHT vs ElevenLabs (2026): 语音合成对比" },
-  { "slug": "murf-vs-elevenlabs", "a": "murf", "b": "elevenlabs", "title_en": "Murf vs ElevenLabs (2026): Voiceover Compared", "title_zh": "Murf vs ElevenLabs (2026): 配音对比" },
-  { "slug": "otter-vs-fireflies", "a": "otter", "b": "fireflies", "title_en": "Otter vs Fireflies (2026): Meeting AI Compared", "title_zh": "Otter vs Fireflies (2026): 会议 AI 对比" },
-  { "slug": "gamma-vs-notion-ai", "a": "gamma", "b": "notion-ai", "title_en": "Gamma vs Notion AI (2026): Decks vs Docs", "title_zh": "Gamma vs Notion AI (2026): 演示 vs 文档" },
-  { "slug": "cline-vs-cursor", "a": "cline", "b": "cursor", "title_en": "Cline vs Cursor (2026): Agent vs AI Editor", "title_zh": "Cline vs Cursor (2026): Agent vs AI 编辑器" },
-  { "slug": "pika-vs-kling", "a": "pika", "b": "kling", "title_en": "Pika vs Kling (2026): Short Video Compared", "title_zh": "Pika vs Kling (2026): 短视频对比" },
-  { "slug": "windsurf-vs-cursor", "a": "windsurf", "b": "cursor", "title_en": "Windsurf vs Cursor (2026): AI IDE Showdown", "title_zh": "Windsurf vs Cursor (2026): AI IDE 对决" },
-  { "slug": "windsurf-vs-copilot", "a": "windsurf", "b": "github-copilot", "title_en": "Windsurf vs GitHub Copilot (2026)", "title_zh": "Windsurf vs GitHub Copilot (2026)" },
-  { "slug": "codeium-vs-copilot", "a": "codeium", "b": "github-copilot", "title_en": "Codeium vs GitHub Copilot: Free vs Paid", "title_zh": "Codeium vs GitHub Copilot: 免费 vs 付费" },
-  { "slug": "v0-vs-bolt", "a": "v0", "b": "bolt", "title_en": "v0 vs Bolt (2026): UI Gen vs Full-Stack", "title_zh": "v0 vs Bolt (2026): UI 生成 vs 全栈" },
-  { "slug": "lovable-vs-bolt", "a": "lovable", "b": "bolt", "title_en": "Lovable vs Bolt (2026): App Builder Compared", "title_zh": "Lovable vs Bolt (2026): 应用生成器对比" },
-  { "slug": "deepseek-vs-chatgpt", "a": "deepseek", "b": "chatgpt", "title_en": "DeepSeek vs ChatGPT (2026): Cheap vs Popular", "title_zh": "DeepSeek vs ChatGPT (2026): 低价 vs 主流" },
-  { "slug": "deepseek-vs-claude", "a": "deepseek", "b": "claude", "title_en": "DeepSeek vs Claude (2026): Value vs Quality", "title_zh": "DeepSeek vs Claude (2026): 性价比 vs 质量" },
-  { "slug": "copy-ai-vs-jasper", "a": "copy-ai", "b": "jasper", "title_en": "Copy.ai vs Jasper (2026): Marketing AI", "title_zh": "Copy.ai vs Jasper (2026): 营销 AI" },
-  { "slug": "quillbot-vs-grammarly", "a": "quillbot", "b": "grammarly-ai", "title_en": "QuillBot vs Grammarly (2026): Writing Tools", "title_zh": "QuillBot vs Grammarly (2026): 写作工具" },
-  { "slug": "canva-ai-vs-gamma", "a": "canva-ai", "b": "gamma", "title_en": "Canva AI vs Gamma (2026): Design vs Decks", "title_zh": "Canva AI vs Gamma (2026): 设计 vs 演示" },
-  { "slug": "phind-vs-perplexity", "a": "phind", "b": "perplexity", "title_en": "Phind vs Perplexity (2026): Dev vs General Search", "title_zh": "Phind vs Perplexity (2026): 开发者 vs 通用搜索" },
-  { "slug": "elicit-vs-consensus", "a": "elicit", "b": "consensus", "title_en": "Elicit vs Consensus (2026): Research Tools", "title_zh": "Elicit vs Consensus (2026): 研究工具" },
-  { "slug": "read-ai-vs-otter", "a": "read-ai", "b": "otter", "title_en": "Read AI vs Otter (2026): Meeting AI", "title_zh": "Read AI vs Otter (2026): 会议 AI" },
-  { "slug": "replit-vs-cursor", "a": "replit", "b": "cursor", "title_en": "Replit vs Cursor (2026): Cloud vs Desktop", "title_zh": "Replit vs Cursor (2026): 云端 vs 桌面" },
-  { "slug": "aider-vs-cline", "a": "aider", "b": "cline", "title_en": "Aider vs Cline (2026): CLI vs IDE Agent", "title_zh": "Aider vs Cline (2026): 命令行 vs IDE Agent" },
-  { "slug": "dalle3-vs-midjourney", "a": "dalle3", "b": "midjourney", "title_en": "DALL-E 3 vs Midjourney (2026)", "title_zh": "DALL-E 3 vs Midjourney (2026)" },
-  { "slug": "udio-vs-suno", "a": "udio", "b": "suno", "title_en": "Udio vs Suno (2026): AI Music Compared", "title_zh": "Udio vs Suno (2026): AI 音乐对比" },
-  { "slug": "tabnine-vs-copilot", "a": "tabnine", "b": "github-copilot", "title_en": "Tabnine vs GitHub Copilot (2026)", "title_zh": "Tabnine vs GitHub Copilot (2026)" },
-  { "slug": "n8n-vs-make", "a": "n8n", "b": "make-com", "title_en": "n8n vs Make (2026): Automation Compared", "title_zh": "n8n vs Make (2026): 自动化对比" },
-  { "slug": "dify-vs-n8n", "a": "dify", "b": "n8n", "title_en": "Dify vs n8n (2026): AI App Builder", "title_zh": "Dify vs n8n (2026): AI 应用搭建" },
-  { "slug": "tome-vs-gamma", "a": "tome", "b": "gamma", "title_en": "Tome vs Gamma (2026): AI Decks", "title_zh": "Tome vs Gamma (2026): AI 演示" },
-  { "slug": "photoroom-vs-removebg", "a": "photoroom", "b": "removebg", "title_en": "PhotoRoom vs Remove.bg (2026)", "title_zh": "PhotoRoom vs Remove.bg (2026)" },
-  { "slug": "amazon-q-vs-copilot", "a": "amazon-q", "b": "github-copilot", "title_en": "Amazon Q vs GitHub Copilot (2026)", "title_zh": "Amazon Q vs GitHub Copilot (2026)" },
-  { "slug": "cody-vs-cursor", "a": "cody", "b": "cursor", "title_en": "Cody vs Cursor (2026): Code Intelligence", "title_zh": "Cody vs Cursor (2026): 代码智能" },
-  { "slug": "invideo-ai-vs-fliki", "a": "invideo-ai", "b": "fliki", "title_en": "Invideo AI vs Fliki (2026): Text to Video", "title_zh": "Invideo AI vs Fliki (2026): 文字转视频" },
-  { "slug": "surfer-seo-vs-frase", "a": "surfer-seo", "b": "frase", "title_en": "Surfer SEO vs Frase (2026)", "title_zh": "Surfer SEO vs Frase (2026)" },
-  { "slug": "comfyui-vs-stable-diffusion", "a": "comfyui", "b": "stable-diffusion", "title_en": "ComfyUI vs Stable Diffusion WebUI (2026)", "title_zh": "ComfyUI vs Stable Diffusion WebUI (2026)" },
-  { "slug": "autogpt-vs-agentgpt", "a": "autogpt", "b": "agentgpt", "title_en": "AutoGPT vs AgentGPT (2026): AI Agents", "title_zh": "AutoGPT vs AgentGPT (2026): AI Agent" },
-  { "slug": "beautiful-ai-vs-tome", "a": "beautiful-ai", "b": "tome", "title_en": "Beautiful.ai vs Tome (2026): AI Presentations", "title_zh": "Beautiful.ai vs Tome (2026): AI 演示" },
-  { "slug": "grok-vs-chatgpt", "a": "grok", "b": "chatgpt", "title_en": "Grok vs ChatGPT (2026): xAI vs OpenAI", "title_zh": "Grok vs ChatGPT (2026): xAI vs OpenAI" },
-  { "slug": "you-com-vs-perplexity", "a": "you-com", "b": "perplexity", "title_en": "You.com vs Perplexity (2026): AI Search", "title_zh": "You.com vs Perplexity (2026): AI 搜索" },
-  { "slug": "ollama-vs-deepseek", "a": "ollama", "b": "deepseek", "title_en": "Ollama vs DeepSeek (2026): Local vs API", "title_zh": "Ollama vs DeepSeek (2026): 本地 vs API" },
-  { "slug": "crewai-vs-autogpt", "a": "crewai", "b": "autogpt", "title_en": "CrewAI vs AutoGPT (2026): Agent Frameworks", "title_zh": "CrewAI vs AutoGPT (2026): Agent 框架" },
-  { "slug": "mistral-vs-claude", "a": "mistral", "b": "claude", "title_en": "Mistral vs Claude (2026): EU vs US AI", "title_zh": "Mistral vs Claude (2026): 欧洲 vs 美国 AI" },
-  { "slug": "adobe-firefly-vs-midjourney", "a": "adobe-firefly", "b": "midjourney", "title_en": "Adobe Firefly vs Midjourney (2026)", "title_zh": "Adobe Firefly vs Midjourney (2026)" },
-  { "slug": "capcut-vs-kapwing", "a": "capcut", "b": "kapwing", "title_en": "CapCut vs Kapwing (2026): Video Editors", "title_zh": "CapCut vs Kapwing (2026): 视频编辑器" },
-  { "slug": "riverside-vs-descript", "a": "riverside", "b": "descript", "title_en": "Riverside vs Descript (2026): Podcast Tools", "title_zh": "Riverside vs Descript (2026): 播客工具" }
+  {
+    "slug": "chatgpt-vs-claude",
+    "a": "chatgpt",
+    "b": "claude",
+    "title_en": "ChatGPT vs Claude (2026): Which is Better?",
+    "title_zh": "ChatGPT vs Claude (2026): 哪个更好?"
+  },
+  {
+    "slug": "midjourney-vs-stable-diffusion",
+    "a": "midjourney",
+    "b": "stable-diffusion",
+    "title_en": "Midjourney vs Stable Diffusion (2026)",
+    "title_zh": "Midjourney vs Stable Diffusion (2026)"
+  },
+  {
+    "slug": "cursor-vs-github-copilot",
+    "a": "cursor",
+    "b": "github-copilot",
+    "title_en": "Cursor vs GitHub Copilot (2026)",
+    "title_zh": "Cursor vs GitHub Copilot (2026)"
+  },
+  {
+    "slug": "sora-vs-runway",
+    "a": "sora",
+    "b": "runway",
+    "title_en": "Sora vs Runway (2026): Best AI Video Generator?",
+    "title_zh": "Sora vs Runway (2026): 最佳 AI 视频生成器?"
+  },
+  {
+    "slug": "perplexity-vs-chatgpt",
+    "a": "perplexity",
+    "b": "chatgpt",
+    "title_en": "Perplexity vs ChatGPT (2026): Search vs Chat",
+    "title_zh": "Perplexity vs ChatGPT (2026): 搜索 vs 对话"
+  },
+  {
+    "slug": "notion-ai-vs-chatgpt",
+    "a": "notion-ai",
+    "b": "chatgpt",
+    "title_en": "Notion AI vs ChatGPT (2026)",
+    "title_zh": "Notion AI vs ChatGPT (2026)"
+  },
+  {
+    "slug": "elevenlabs-vs-runway",
+    "a": "elevenlabs",
+    "b": "runway",
+    "title_en": "ElevenLabs vs Runway: Voice vs Video AI",
+    "title_zh": "ElevenLabs vs Runway: 语音 vs 视频 AI"
+  },
+  {
+    "slug": "chatgpt-vs-midjourney",
+    "a": "chatgpt",
+    "b": "midjourney",
+    "title_en": "ChatGPT vs Midjourney: Text vs Image AI",
+    "title_zh": "ChatGPT vs Midjourney: 文本 vs 图像 AI"
+  },
+  {
+    "slug": "claude-vs-gemini",
+    "a": "claude",
+    "b": "gemini",
+    "title_en": "Claude vs Gemini (2026): Which Assistant Wins?",
+    "title_zh": "Claude vs Gemini (2026): 哪个助手更强?"
+  },
+  {
+    "slug": "hostinger-vs-chatgpt",
+    "a": "hostinger",
+    "b": "chatgpt",
+    "title_en": "Hostinger AI vs ChatGPT for Websites",
+    "title_zh": "Hostinger AI vs ChatGPT 建站对比"
+  },
+  {
+    "slug": "stable-diffusion-vs-midjourney",
+    "a": "stable-diffusion",
+    "b": "midjourney",
+    "title_en": "Stable Diffusion vs Midjourney (2026)",
+    "title_zh": "Stable Diffusion vs Midjourney (2026)"
+  },
+  {
+    "slug": "github-copilot-vs-chatgpt",
+    "a": "github-copilot",
+    "b": "chatgpt",
+    "title_en": "GitHub Copilot vs ChatGPT for Coding",
+    "title_zh": "GitHub Copilot vs ChatGPT 编程对比"
+  },
+  {
+    "slug": "sora-vs-midjourney",
+    "a": "sora",
+    "b": "midjourney",
+    "title_en": "Sora vs Midjourney: Video vs Image AI",
+    "title_zh": "Sora vs Midjourney: 视频 vs 图像 AI"
+  },
+  {
+    "slug": "elevenlabs-vs-chatgpt",
+    "a": "elevenlabs",
+    "b": "chatgpt",
+    "title_en": "ElevenLabs vs ChatGPT Voice Mode",
+    "title_zh": "ElevenLabs vs ChatGPT 语音模式对比"
+  },
+  {
+    "slug": "gemini-vs-chatgpt",
+    "a": "gemini",
+    "b": "chatgpt",
+    "title_en": "Gemini vs ChatGPT (2026): The AI Assistant Showdown",
+    "title_zh": "Gemini vs ChatGPT (2026): AI 助手对决"
+  },
+  {
+    "slug": "claude-vs-perplexity",
+    "a": "claude",
+    "b": "perplexity",
+    "title_en": "Claude vs Perplexity: Deep Research Compared",
+    "title_zh": "Claude vs Perplexity: 深度研究对比"
+  },
+  {
+    "slug": "leonardo-vs-midjourney",
+    "a": "leonardo",
+    "b": "midjourney",
+    "title_en": "Leonardo.AI vs Midjourney (2026): Game Art vs Aesthetics",
+    "title_zh": "Leonardo.AI vs Midjourney (2026): 游戏美术 vs 艺术审美"
+  },
+  {
+    "slug": "descript-vs-runway",
+    "a": "descript",
+    "b": "runway",
+    "title_en": "Descript vs Runway: Edit vs Generate Video",
+    "title_zh": "Descript vs Runway: 视频编辑 vs 视频生成"
+  },
+  {
+    "slug": "suno-vs-elevenlabs",
+    "a": "suno",
+    "b": "elevenlabs",
+    "title_en": "Suno vs ElevenLabs: Music vs Voice AI",
+    "title_zh": "Suno vs ElevenLabs: 音乐 vs 语音 AI"
+  },
+  {
+    "slug": "ideogram-vs-midjourney",
+    "a": "ideogram",
+    "b": "midjourney",
+    "title_en": "Ideogram vs Midjourney (2026): Text vs Aesthetics",
+    "title_zh": "Ideogram vs Midjourney (2026): 文字 vs 艺术审美"
+  },
+  {
+    "slug": "flux-vs-midjourney",
+    "a": "flux",
+    "b": "midjourney",
+    "title_en": "Flux vs Midjourney (2026): Photorealism vs Art",
+    "title_zh": "Flux vs Midjourney (2026): 写实 vs 艺术"
+  },
+  {
+    "slug": "krea-vs-midjourney",
+    "a": "krea",
+    "b": "midjourney",
+    "title_en": "Krea vs Midjourney (2026): Real-time vs Aesthetics",
+    "title_zh": "Krea vs Midjourney (2026): 实时 vs 艺术审美"
+  },
+  {
+    "slug": "pika-vs-runway",
+    "a": "pika",
+    "b": "runway",
+    "title_en": "Pika vs Runway (2026): Easy Shorts vs Pro Video",
+    "title_zh": "Pika vs Runway (2026): 简易短片 vs 专业视频"
+  },
+  {
+    "slug": "luma-vs-runway",
+    "a": "luma",
+    "b": "runway",
+    "title_en": "Luma vs Runway (2026): Dream Machine vs Gen-3",
+    "title_zh": "Luma vs Runway (2026): Dream Machine vs Gen-3"
+  },
+  {
+    "slug": "kling-vs-sora",
+    "a": "kling",
+    "b": "sora",
+    "title_en": "Kling vs Sora (2026): China vs OpenAI Video",
+    "title_zh": "Kling vs Sora (2026): 可灵 vs OpenAI 视频"
+  },
+  {
+    "slug": "hailuo-vs-runway",
+    "a": "hailuo",
+    "b": "runway",
+    "title_en": "Hailuo vs Runway (2026): MiniMax vs Gen-3",
+    "title_zh": "Hailuo vs Runway (2026): 海螺 vs Gen-3"
+  },
+  {
+    "slug": "synthesia-vs-heygen",
+    "a": "synthesia",
+    "b": "heygen",
+    "title_en": "Synthesia vs HeyGen (2026): Avatar Video Compared",
+    "title_zh": "Synthesia vs HeyGen (2026): 数字人视频对比"
+  },
+  {
+    "slug": "play-ht-vs-elevenlabs",
+    "a": "play-ht",
+    "b": "elevenlabs",
+    "title_en": "PlayHT vs ElevenLabs (2026): TTS Compared",
+    "title_zh": "PlayHT vs ElevenLabs (2026): 语音合成对比"
+  },
+  {
+    "slug": "murf-vs-elevenlabs",
+    "a": "murf",
+    "b": "elevenlabs",
+    "title_en": "Murf vs ElevenLabs (2026): Voiceover Compared",
+    "title_zh": "Murf vs ElevenLabs (2026): 配音对比"
+  },
+  {
+    "slug": "otter-vs-fireflies",
+    "a": "otter",
+    "b": "fireflies",
+    "title_en": "Otter vs Fireflies (2026): Meeting AI Compared",
+    "title_zh": "Otter vs Fireflies (2026): 会议 AI 对比"
+  },
+  {
+    "slug": "gamma-vs-notion-ai",
+    "a": "gamma",
+    "b": "notion-ai",
+    "title_en": "Gamma vs Notion AI (2026): Decks vs Docs",
+    "title_zh": "Gamma vs Notion AI (2026): 演示 vs 文档"
+  },
+  {
+    "slug": "cline-vs-cursor",
+    "a": "cline",
+    "b": "cursor",
+    "title_en": "Cline vs Cursor (2026): Agent vs AI Editor",
+    "title_zh": "Cline vs Cursor (2026): Agent vs AI 编辑器"
+  },
+  {
+    "slug": "pika-vs-kling",
+    "a": "pika",
+    "b": "kling",
+    "title_en": "Pika vs Kling (2026): Short Video Compared",
+    "title_zh": "Pika vs Kling (2026): 短视频对比"
+  },
+  {
+    "slug": "windsurf-vs-cursor",
+    "a": "windsurf",
+    "b": "cursor",
+    "title_en": "Windsurf vs Cursor (2026): AI IDE Showdown",
+    "title_zh": "Windsurf vs Cursor (2026): AI IDE 对决"
+  },
+  {
+    "slug": "windsurf-vs-copilot",
+    "a": "windsurf",
+    "b": "github-copilot",
+    "title_en": "Windsurf vs GitHub Copilot (2026)",
+    "title_zh": "Windsurf vs GitHub Copilot (2026)"
+  },
+  {
+    "slug": "codeium-vs-copilot",
+    "a": "codeium",
+    "b": "github-copilot",
+    "title_en": "Codeium vs GitHub Copilot: Free vs Paid",
+    "title_zh": "Codeium vs GitHub Copilot: 免费 vs 付费"
+  },
+  {
+    "slug": "v0-vs-bolt",
+    "a": "v0",
+    "b": "bolt",
+    "title_en": "v0 vs Bolt (2026): UI Gen vs Full-Stack",
+    "title_zh": "v0 vs Bolt (2026): UI 生成 vs 全栈"
+  },
+  {
+    "slug": "lovable-vs-bolt",
+    "a": "lovable",
+    "b": "bolt",
+    "title_en": "Lovable vs Bolt (2026): App Builder Compared",
+    "title_zh": "Lovable vs Bolt (2026): 应用生成器对比"
+  },
+  {
+    "slug": "deepseek-vs-chatgpt",
+    "a": "deepseek",
+    "b": "chatgpt",
+    "title_en": "DeepSeek vs ChatGPT (2026): Cheap vs Popular",
+    "title_zh": "DeepSeek vs ChatGPT (2026): 低价 vs 主流"
+  },
+  {
+    "slug": "deepseek-vs-claude",
+    "a": "deepseek",
+    "b": "claude",
+    "title_en": "DeepSeek vs Claude (2026): Value vs Quality",
+    "title_zh": "DeepSeek vs Claude (2026): 性价比 vs 质量"
+  },
+  {
+    "slug": "copy-ai-vs-jasper",
+    "a": "copy-ai",
+    "b": "jasper",
+    "title_en": "Copy.ai vs Jasper (2026): Marketing AI",
+    "title_zh": "Copy.ai vs Jasper (2026): 营销 AI"
+  },
+  {
+    "slug": "quillbot-vs-grammarly",
+    "a": "quillbot",
+    "b": "grammarly-ai",
+    "title_en": "QuillBot vs Grammarly (2026): Writing Tools",
+    "title_zh": "QuillBot vs Grammarly (2026): 写作工具"
+  },
+  {
+    "slug": "canva-ai-vs-gamma",
+    "a": "canva-ai",
+    "b": "gamma",
+    "title_en": "Canva AI vs Gamma (2026): Design vs Decks",
+    "title_zh": "Canva AI vs Gamma (2026): 设计 vs 演示"
+  },
+  {
+    "slug": "phind-vs-perplexity",
+    "a": "phind",
+    "b": "perplexity",
+    "title_en": "Phind vs Perplexity (2026): Dev vs General Search",
+    "title_zh": "Phind vs Perplexity (2026): 开发者 vs 通用搜索"
+  },
+  {
+    "slug": "elicit-vs-consensus",
+    "a": "elicit",
+    "b": "consensus",
+    "title_en": "Elicit vs Consensus (2026): Research Tools",
+    "title_zh": "Elicit vs Consensus (2026): 研究工具"
+  },
+  {
+    "slug": "read-ai-vs-otter",
+    "a": "read-ai",
+    "b": "otter",
+    "title_en": "Read AI vs Otter (2026): Meeting AI",
+    "title_zh": "Read AI vs Otter (2026): 会议 AI"
+  },
+  {
+    "slug": "replit-vs-cursor",
+    "a": "replit",
+    "b": "cursor",
+    "title_en": "Replit vs Cursor (2026): Cloud vs Desktop",
+    "title_zh": "Replit vs Cursor (2026): 云端 vs 桌面"
+  },
+  {
+    "slug": "aider-vs-cline",
+    "a": "aider",
+    "b": "cline",
+    "title_en": "Aider vs Cline (2026): CLI vs IDE Agent",
+    "title_zh": "Aider vs Cline (2026): 命令行 vs IDE Agent"
+  },
+  {
+    "slug": "dalle3-vs-midjourney",
+    "a": "dalle3",
+    "b": "midjourney",
+    "title_en": "DALL-E 3 vs Midjourney (2026)",
+    "title_zh": "DALL-E 3 vs Midjourney (2026)"
+  },
+  {
+    "slug": "udio-vs-suno",
+    "a": "udio",
+    "b": "suno",
+    "title_en": "Udio vs Suno (2026): AI Music Compared",
+    "title_zh": "Udio vs Suno (2026): AI 音乐对比"
+  },
+  {
+    "slug": "tabnine-vs-copilot",
+    "a": "tabnine",
+    "b": "github-copilot",
+    "title_en": "Tabnine vs GitHub Copilot (2026)",
+    "title_zh": "Tabnine vs GitHub Copilot (2026)"
+  },
+  {
+    "slug": "n8n-vs-make",
+    "a": "n8n",
+    "b": "make-com",
+    "title_en": "n8n vs Make (2026): Automation Compared",
+    "title_zh": "n8n vs Make (2026): 自动化对比"
+  },
+  {
+    "slug": "dify-vs-n8n",
+    "a": "dify",
+    "b": "n8n",
+    "title_en": "Dify vs n8n (2026): AI App Builder",
+    "title_zh": "Dify vs n8n (2026): AI 应用搭建"
+  },
+  {
+    "slug": "tome-vs-gamma",
+    "a": "tome",
+    "b": "gamma",
+    "title_en": "Tome vs Gamma (2026): AI Decks",
+    "title_zh": "Tome vs Gamma (2026): AI 演示"
+  },
+  {
+    "slug": "photoroom-vs-removebg",
+    "a": "photoroom",
+    "b": "removebg",
+    "title_en": "PhotoRoom vs Remove.bg (2026)",
+    "title_zh": "PhotoRoom vs Remove.bg (2026)"
+  },
+  {
+    "slug": "amazon-q-vs-copilot",
+    "a": "amazon-q",
+    "b": "github-copilot",
+    "title_en": "Amazon Q vs GitHub Copilot (2026)",
+    "title_zh": "Amazon Q vs GitHub Copilot (2026)"
+  },
+  {
+    "slug": "cody-vs-cursor",
+    "a": "cody",
+    "b": "cursor",
+    "title_en": "Cody vs Cursor (2026): Code Intelligence",
+    "title_zh": "Cody vs Cursor (2026): 代码智能"
+  },
+  {
+    "slug": "invideo-ai-vs-fliki",
+    "a": "invideo-ai",
+    "b": "fliki",
+    "title_en": "Invideo AI vs Fliki (2026): Text to Video",
+    "title_zh": "Invideo AI vs Fliki (2026): 文字转视频"
+  },
+  {
+    "slug": "surfer-seo-vs-frase",
+    "a": "surfer-seo",
+    "b": "frase",
+    "title_en": "Surfer SEO vs Frase (2026)",
+    "title_zh": "Surfer SEO vs Frase (2026)"
+  },
+  {
+    "slug": "comfyui-vs-stable-diffusion",
+    "a": "comfyui",
+    "b": "stable-diffusion",
+    "title_en": "ComfyUI vs Stable Diffusion WebUI (2026)",
+    "title_zh": "ComfyUI vs Stable Diffusion WebUI (2026)"
+  },
+  {
+    "slug": "autogpt-vs-agentgpt",
+    "a": "autogpt",
+    "b": "agentgpt",
+    "title_en": "AutoGPT vs AgentGPT (2026): AI Agents",
+    "title_zh": "AutoGPT vs AgentGPT (2026): AI Agent"
+  },
+  {
+    "slug": "beautiful-ai-vs-tome",
+    "a": "beautiful-ai",
+    "b": "tome",
+    "title_en": "Beautiful.ai vs Tome (2026): AI Presentations",
+    "title_zh": "Beautiful.ai vs Tome (2026): AI 演示"
+  },
+  {
+    "slug": "grok-vs-chatgpt",
+    "a": "grok",
+    "b": "chatgpt",
+    "title_en": "Grok vs ChatGPT (2026): xAI vs OpenAI",
+    "title_zh": "Grok vs ChatGPT (2026): xAI vs OpenAI"
+  },
+  {
+    "slug": "you-com-vs-perplexity",
+    "a": "you-com",
+    "b": "perplexity",
+    "title_en": "You.com vs Perplexity (2026): AI Search",
+    "title_zh": "You.com vs Perplexity (2026): AI 搜索"
+  },
+  {
+    "slug": "ollama-vs-deepseek",
+    "a": "ollama",
+    "b": "deepseek",
+    "title_en": "Ollama vs DeepSeek (2026): Local vs API",
+    "title_zh": "Ollama vs DeepSeek (2026): 本地 vs API"
+  },
+  {
+    "slug": "crewai-vs-autogpt",
+    "a": "crewai",
+    "b": "autogpt",
+    "title_en": "CrewAI vs AutoGPT (2026): Agent Frameworks",
+    "title_zh": "CrewAI vs AutoGPT (2026): Agent 框架"
+  },
+  {
+    "slug": "mistral-vs-claude",
+    "a": "mistral",
+    "b": "claude",
+    "title_en": "Mistral vs Claude (2026): EU vs US AI",
+    "title_zh": "Mistral vs Claude (2026): 欧洲 vs 美国 AI"
+  },
+  {
+    "slug": "adobe-firefly-vs-midjourney",
+    "a": "adobe-firefly",
+    "b": "midjourney",
+    "title_en": "Adobe Firefly vs Midjourney (2026)",
+    "title_zh": "Adobe Firefly vs Midjourney (2026)"
+  },
+  {
+    "slug": "capcut-vs-kapwing",
+    "a": "capcut",
+    "b": "kapwing",
+    "title_en": "CapCut vs Kapwing (2026): Video Editors",
+    "title_zh": "CapCut vs Kapwing (2026): 视频编辑器"
+  },
+  {
+    "slug": "riverside-vs-descript",
+    "a": "riverside",
+    "b": "descript",
+    "title_en": "Riverside vs Descript (2026): Podcast Tools",
+    "title_zh": "Riverside vs Descript (2026): 播客工具"
+  },
+  {
+    "slug": "langgraph-vs-crewai",
+    "a": "langgraph",
+    "b": "crewai",
+    "title_en": "LangGraph vs CrewAI (2026): Which Agent Framework?",
+    "title_zh": "LangGraph vs CrewAI (2026): 哪个 Agent 框架更好?"
+  },
+  {
+    "slug": "langgraph-vs-autogen",
+    "a": "langgraph",
+    "b": "autogen",
+    "title_en": "LangGraph vs AutoGen (2026): Microsoft vs LangChain",
+    "title_zh": "LangGraph vs AutoGen (2026): 微软 vs LangChain"
+  },
+  {
+    "slug": "browser-use-vs-multion",
+    "a": "browser-use",
+    "b": "multion",
+    "title_en": "Browser Use vs MultiOn (2026): Browser Automation",
+    "title_zh": "Browser Use vs MultiOn (2026): 浏览器自动化对比"
+  },
+  {
+    "slug": "dify-vs-langgraph",
+    "a": "dify",
+    "b": "langgraph",
+    "title_en": "Dify vs LangGraph (2026): Visual vs Code Agent Building",
+    "title_zh": "Dify vs LangGraph (2026): 可视化 vs 代码 Agent"
+  },
+  {
+    "slug": "n8n-vs-dify-agents",
+    "a": "n8n",
+    "b": "dify",
+    "title_en": "n8n vs Dify (2026): Automation Platform Showdown",
+    "title_zh": "n8n vs Dify (2026): 自动化平台对比"
+  },
+  {
+    "slug": "llamaindex-vs-langgraph",
+    "a": "llamaindex",
+    "b": "langgraph",
+    "title_en": "LlamaIndex vs LangGraph (2026): RAG vs Agent Framework",
+    "title_zh": "LlamaIndex vs LangGraph (2026): RAG vs Agent 框架"
+  },
+  {
+    "slug": "autogen-vs-crewai",
+    "a": "autogen",
+    "b": "crewai",
+    "title_en": "AutoGen vs CrewAI (2026): Microsoft vs Open Source",
+    "title_zh": "AutoGen vs CrewAI (2026): 微软 vs 开源"
+  }
 ]

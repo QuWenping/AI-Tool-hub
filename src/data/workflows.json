@@ -8,13 +8,33 @@
     "description": "Automatically fetch RSS feeds from tech news sources, summarize with AI, and draft blog posts for review before publishing.",
     "summary": "This n8n workflow monitors RSS feeds for new articles, sends them to an LLM for summarization and rewriting, then saves the draft to your CMS. It eliminates manual content curation while keeping a human-in-the-loop approval step.",
     "steps": [
-      { "title": "RSS Reader Node", "detail": "Add an RSS Feed Read node pointing to your target feed URL (e.g., https://techcrunch.com/feed/). Set polling interval to every 30 minutes." },
-      { "title": "Filter Node", "detail": "Add an IF node to filter out articles older than 24 hours or duplicates based on article GUID." },
-      { "title": "AI Summarize Node", "detail": "Use the HTTP Request node to call OpenAI API with a prompt: 'Summarize this article in 200 words and suggest 3 blog post angles based on it.' Pass the article content as input." },
-      { "title": "Markdown Conversion", "detail": "Use a Code node (JavaScript) to format the AI output into Markdown with proper headings, meta description, and tags." },
-      { "title": "CMS Publish Node", "detail": "Connect to your CMS via API (WordPress, Ghost, Strapi). Save as draft status, not published. Add a Slack notification node to alert the team for review." }
+      {
+        "title": "RSS Reader Node",
+        "detail": "Add an RSS Feed Read node pointing to your target feed URL (e.g., https://techcrunch.com/feed/). Set polling interval to every 30 minutes."
+      },
+      {
+        "title": "Filter Node",
+        "detail": "Add an IF node to filter out articles older than 24 hours or duplicates based on article GUID."
+      },
+      {
+        "title": "AI Summarize Node",
+        "detail": "Use the HTTP Request node to call OpenAI API with a prompt: 'Summarize this article in 200 words and suggest 3 blog post angles based on it.' Pass the article content as input."
+      },
+      {
+        "title": "Markdown Conversion",
+        "detail": "Use a Code node (JavaScript) to format the AI output into Markdown with proper headings, meta description, and tags."
+      },
+      {
+        "title": "CMS Publish Node",
+        "detail": "Connect to your CMS via API (WordPress, Ghost, Strapi). Save as draft status, not published. Add a Slack notification node to alert the team for review."
+      }
     ],
-    "tags": ["rss", "automation", "blog", "content-generation"],
+    "tags": [
+      "rss",
+      "automation",
+      "blog",
+      "content-generation"
+    ],
     "useCase": "Content teams monitoring 5-10 news sources who want to produce daily round-up articles.",
     "prerequisites": "n8n self-hosted or n8n Cloud, OpenAI API key, CMS API credentials"
   },
@@ -27,13 +47,33 @@
     "description": "Create a customer support chatbot that answers questions from your knowledge base, escalates unknown queries to humans, and logs all interactions.",
     "summary": "This Dify workflow uploads your support docs into a vector knowledge base, creates a chatbot that retrieves relevant answers, and routes complex questions to a human agent queue with full conversation context.",
     "steps": [
-      { "title": "Upload Knowledge Base", "detail": "In Dify, create a new Knowledge Base. Upload PDF, Markdown, or text files of your FAQ, product docs, and support tickets. Configure chunking strategy: 500 tokens per chunk, 10% overlap." },
-      { "title": "Create Chatbot App", "detail": "Create a new Chat App in Dify. Select your knowledge base as the context. Set the system prompt: 'You are a support agent for [COMPANY]. Answer questions using only the provided knowledge base. If you cannot find an answer, say you will connect them to a human agent.'" },
-      { "title": "Configure Model Parameters", "detail": "Set temperature to 0.3 for factual responses. Set max tokens to 500. Enable citation display so the bot can show which doc section the answer came from." },
-      { "title": "Add Escalation Logic", "detail": "Use Dify's workflow mode to add a conditional node: if the bot confidence score is below threshold (or user asks for human), trigger a webhook to your ticketing system (Zendesk/Intercom) with the full conversation." },
-      { "title": "Deploy and Test", "detail": "Embed the chatbot widget on your website or connect via API. Run 20 test conversations covering common, edge, and unknown questions. Adjust the knowledge base based on gaps found." }
+      {
+        "title": "Upload Knowledge Base",
+        "detail": "In Dify, create a new Knowledge Base. Upload PDF, Markdown, or text files of your FAQ, product docs, and support tickets. Configure chunking strategy: 500 tokens per chunk, 10% overlap."
+      },
+      {
+        "title": "Create Chatbot App",
+        "detail": "Create a new Chat App in Dify. Select your knowledge base as the context. Set the system prompt: 'You are a support agent for [COMPANY]. Answer questions using only the provided knowledge base. If you cannot find an answer, say you will connect them to a human agent.'"
+      },
+      {
+        "title": "Configure Model Parameters",
+        "detail": "Set temperature to 0.3 for factual responses. Set max tokens to 500. Enable citation display so the bot can show which doc section the answer came from."
+      },
+      {
+        "title": "Add Escalation Logic",
+        "detail": "Use Dify's workflow mode to add a conditional node: if the bot confidence score is below threshold (or user asks for human), trigger a webhook to your ticketing system (Zendesk/Intercom) with the full conversation."
+      },
+      {
+        "title": "Deploy and Test",
+        "detail": "Embed the chatbot widget on your website or connect via API. Run 20 test conversations covering common, edge, and unknown questions. Adjust the knowledge base based on gaps found."
+      }
     ],
-    "tags": ["customer-support", "chatbot", "knowledge-base", "dify"],
+    "tags": [
+      "customer-support",
+      "chatbot",
+      "knowledge-base",
+      "dify"
+    ],
     "useCase": "SaaS companies with 1000+ support tickets per month looking to deflect 40-60% of repetitive questions.",
     "prerequisites": "Dify account (cloud or self-hosted), knowledge base documents, OpenAI/Anthropic API key"
   },
@@ -46,13 +86,33 @@
     "description": "Process a folder of product photos through an AI pipeline: background removal, relighting, and consistent brand styling for e-commerce.",
     "summary": "This ComfyUI workflow takes raw product photos, removes backgrounds, applies consistent studio lighting, and outputs standardized e-commerce images at 1024x1024 resolution. Batch processing handles 50+ images automatically.",
     "steps": [
-      { "title": "Input Batch Node", "detail": "Use the Load Image Batch node to point at a directory of product photos. Set the batch size to match your folder. Enable auto-resize to 1024x1024." },
-      { "title": "Background Removal", "detail": "Add a Segment Anything (SAM) node with the ViT-H model. Use the 'auto' mode to detect and mask the product. Add an alpha channel output node to save the cutout." },
-      { "title": "Relighting Pipeline", "detail": "Connect to an IC-Light node for AI relighting. Set lighting direction to upper-left at 45 degrees. Choose a soft studio lighting preset. This creates consistent shadows and highlights across all products." },
-      { "title": "Background Compositing", "detail": "Add an Image Composite node to place the product on a clean white/gradient background. Match your brand guidelines by adjusting the background color value." },
-      { "title": "Output and Naming", "detail": "Use the Save Image node with a filename template: {original_name}_enhanced_{timestamp}.png. Save to an output directory. Enable metadata embedding for tracking which model/prompt was used." }
+      {
+        "title": "Input Batch Node",
+        "detail": "Use the Load Image Batch node to point at a directory of product photos. Set the batch size to match your folder. Enable auto-resize to 1024x1024."
+      },
+      {
+        "title": "Background Removal",
+        "detail": "Add a Segment Anything (SAM) node with the ViT-H model. Use the 'auto' mode to detect and mask the product. Add an alpha channel output node to save the cutout."
+      },
+      {
+        "title": "Relighting Pipeline",
+        "detail": "Connect to an IC-Light node for AI relighting. Set lighting direction to upper-left at 45 degrees. Choose a soft studio lighting preset. This creates consistent shadows and highlights across all products."
+      },
+      {
+        "title": "Background Compositing",
+        "detail": "Add an Image Composite node to place the product on a clean white/gradient background. Match your brand guidelines by adjusting the background color value."
+      },
+      {
+        "title": "Output and Naming",
+        "detail": "Use the Save Image node with a filename template: {original_name}_enhanced_{timestamp}.png. Save to an output directory. Enable metadata embedding for tracking which model/prompt was used."
+      }
     ],
-    "tags": ["comfyui", "product-photography", "batch-processing", "e-commerce"],
+    "tags": [
+      "comfyui",
+      "product-photography",
+      "batch-processing",
+      "e-commerce"
+    ],
     "useCase": "E-commerce stores with 50-500 product SKUs needing consistent, professional product photos without a photographer.",
     "prerequisites": "ComfyUI installed, SAM model (ViT-H), IC-Light model, GPU with 8GB+ VRAM"
   },
@@ -65,13 +125,33 @@
     "description": "Set up a Model Context Protocol server that lets Claude read and write files on your local machine for code analysis, document editing, and data processing.",
     "summary": "The MCP file system server enables Claude Desktop or API-based Claude to directly access local files. This workflow walks through installation, configuration, security boundaries, and practical use cases like codebase analysis and batch document processing.",
     "steps": [
-      { "title": "Install MCP File Server", "detail": "Run: npx @modelcontextprotocol/server-filesystem /path/to/allowed/directory. This creates an MCP server that only has access to the specified directory. Never grant access to your entire home directory." },
-      { "title": "Configure Claude Desktop", "detail": "Edit Claude Desktop config file (claude_desktop_config.json). Add a new MCP server entry with the command and allowed directories. Restart Claude Desktop to load the new server." },
-      { "title": "Test File Access", "detail": "In Claude, ask: 'List all files in the project directory.' Claude should use the MCP server to list files. Then try: 'Read the main.py file and explain its architecture.' Verify Claude can read but cannot write outside allowed paths." },
-      { "title": "Practical: Codebase Analysis", "detail": "Ask Claude to: 'Analyze the entire codebase, identify all API endpoints, and generate documentation.' Claude will read multiple files, understand the architecture, and produce comprehensive docs. This saves 2-4 hours of manual work." },
-      { "title": "Practical: Batch Document Processing", "detail": "Place 10-20 documents in the allowed directory. Ask Claude to: 'Read all documents, extract key metrics into a CSV, and identify common themes.' Claude processes all files through MCP and returns structured output." }
+      {
+        "title": "Install MCP File Server",
+        "detail": "Run: npx @modelcontextprotocol/server-filesystem /path/to/allowed/directory. This creates an MCP server that only has access to the specified directory. Never grant access to your entire home directory."
+      },
+      {
+        "title": "Configure Claude Desktop",
+        "detail": "Edit Claude Desktop config file (claude_desktop_config.json). Add a new MCP server entry with the command and allowed directories. Restart Claude Desktop to load the new server."
+      },
+      {
+        "title": "Test File Access",
+        "detail": "In Claude, ask: 'List all files in the project directory.' Claude should use the MCP server to list files. Then try: 'Read the main.py file and explain its architecture.' Verify Claude can read but cannot write outside allowed paths."
+      },
+      {
+        "title": "Practical: Codebase Analysis",
+        "detail": "Ask Claude to: 'Analyze the entire codebase, identify all API endpoints, and generate documentation.' Claude will read multiple files, understand the architecture, and produce comprehensive docs. This saves 2-4 hours of manual work."
+      },
+      {
+        "title": "Practical: Batch Document Processing",
+        "detail": "Place 10-20 documents in the allowed directory. Ask Claude to: 'Read all documents, extract key metrics into a CSV, and identify common themes.' Claude processes all files through MCP and returns structured output."
+      }
     ],
-    "tags": ["mcp", "claude", "file-system", "code-analysis"],
+    "tags": [
+      "mcp",
+      "claude",
+      "file-system",
+      "code-analysis"
+    ],
     "useCase": "Developers and analysts who want Claude to work directly with local files without copy-pasting.",
     "prerequisites": "Node.js 18+, Claude Desktop or Claude API access, MCP server package"
   },
@@ -84,13 +164,33 @@
     "description": "Write one piece of content, automatically adapt it for Twitter/X, LinkedIn, and Mastodon, then schedule posts across all platforms.",
     "summary": "This n8n workflow takes a single content input (e.g., a blog post URL or text), uses AI to adapt the message for each platform's format and audience, and schedules posts at optimal times across Twitter/X, LinkedIn, and Mastodon.",
     "steps": [
-      { "title": "Trigger Node", "detail": "Use a Webhook trigger or Manual trigger. Alternatively, connect to your CMS webhook so every new blog post automatically triggers a social media campaign." },
-      { "title": "AI Adaptation Node", "detail": "Use an HTTP Request node to call OpenAI with three separate prompts for each platform. Twitter: 280 chars max, punchy, with hashtags. LinkedIn: professional tone, 300 words max, with a question hook. Mastodon: conversational, 500 chars, community-focused." },
-      { "title": "Platform Nodes", "detail": "Add Twitter/X API node, LinkedIn API node, and Mastodon API node. Configure each with the adapted content from the previous step. Set scheduling times based on best engagement windows for each platform." },
-      { "title": "Image Attachment", "detail": "If the source content has an image, use the HTTP Request node to download it, then attach it to the social posts. For LinkedIn, generate a custom image using an AI image API with the post title as prompt." },
-      { "title": "Analytics Loop", "detail": "After 24 hours, trigger a second workflow that collects engagement metrics (likes, comments, shares) from all three platforms and saves to a Google Sheet for tracking." }
+      {
+        "title": "Trigger Node",
+        "detail": "Use a Webhook trigger or Manual trigger. Alternatively, connect to your CMS webhook so every new blog post automatically triggers a social media campaign."
+      },
+      {
+        "title": "AI Adaptation Node",
+        "detail": "Use an HTTP Request node to call OpenAI with three separate prompts for each platform. Twitter: 280 chars max, punchy, with hashtags. LinkedIn: professional tone, 300 words max, with a question hook. Mastodon: conversational, 500 chars, community-focused."
+      },
+      {
+        "title": "Platform Nodes",
+        "detail": "Add Twitter/X API node, LinkedIn API node, and Mastodon API node. Configure each with the adapted content from the previous step. Set scheduling times based on best engagement windows for each platform."
+      },
+      {
+        "title": "Image Attachment",
+        "detail": "If the source content has an image, use the HTTP Request node to download it, then attach it to the social posts. For LinkedIn, generate a custom image using an AI image API with the post title as prompt."
+      },
+      {
+        "title": "Analytics Loop",
+        "detail": "After 24 hours, trigger a second workflow that collects engagement metrics (likes, comments, shares) from all three platforms and saves to a Google Sheet for tracking."
+      }
     ],
-    "tags": ["social-media", "automation", "scheduling", "n8n"],
+    "tags": [
+      "social-media",
+      "automation",
+      "scheduling",
+      "n8n"
+    ],
     "useCase": "Solo founders and small marketing teams managing 3+ social platforms who want to post daily without manual work.",
     "prerequisites": "n8n, API keys for Twitter/X, LinkedIn, Mastodon, OpenAI API key"
   },
@@ -103,13 +203,34 @@
     "description": "Build an AI agent that can query your database, analyze results, generate charts, and produce a written report with insights.",
     "summary": "This Dify agent workflow connects to a SQL database, accepts natural language questions, writes and executes SQL queries, analyzes the results, generates visualizations, and outputs a formatted analysis report with actionable insights.",
     "steps": [
-      { "title": "Database Connection", "detail": "In Dify, add a database tool connection. Provide your PostgreSQL/MySQL connection string. Configure read-only access to prevent accidental writes. Set a row limit of 10,000 to prevent memory issues." },
-      { "title": "Agent Configuration", "detail": "Create a new Agent app with ReAct (Reasoning + Acting) mode. Add the database tool and a code execution tool. Set the system prompt: 'You are a data analyst. When given a question, write SQL, execute it, analyze the results, and provide insights. Always explain your SQL logic before running it.'" },
-      { "title": "Query Safety Layer", "detail": "Add a pre-processing Code node that validates the SQL query before execution. Block DROP, DELETE, UPDATE, INSERT statements. Add a timeout of 30 seconds per query. Log all queries for audit." },
-      { "title": "Visualization Generation", "detail": "After the agent gets query results, use a Code node to generate a chart using a JavaScript charting library (e.g., Chart.js). Convert the chart to a base64 image and embed it in the response." },
-      { "title": "Report Output", "detail": "Format the final output as a structured report: 1) Executive summary, 2) SQL query used, 3) Data table (top 20 rows), 4) Chart visualization, 5) Key insights (3-5 bullet points), 6) Recommended actions. Save to your knowledge base for future reference." }
+      {
+        "title": "Database Connection",
+        "detail": "In Dify, add a database tool connection. Provide your PostgreSQL/MySQL connection string. Configure read-only access to prevent accidental writes. Set a row limit of 10,000 to prevent memory issues."
+      },
+      {
+        "title": "Agent Configuration",
+        "detail": "Create a new Agent app with ReAct (Reasoning + Acting) mode. Add the database tool and a code execution tool. Set the system prompt: 'You are a data analyst. When given a question, write SQL, execute it, analyze the results, and provide insights. Always explain your SQL logic before running it.'"
+      },
+      {
+        "title": "Query Safety Layer",
+        "detail": "Add a pre-processing Code node that validates the SQL query before execution. Block DROP, DELETE, UPDATE, INSERT statements. Add a timeout of 30 seconds per query. Log all queries for audit."
+      },
+      {
+        "title": "Visualization Generation",
+        "detail": "After the agent gets query results, use a Code node to generate a chart using a JavaScript charting library (e.g., Chart.js). Convert the chart to a base64 image and embed it in the response."
+      },
+      {
+        "title": "Report Output",
+        "detail": "Format the final output as a structured report: 1) Executive summary, 2) SQL query used, 3) Data table (top 20 rows), 4) Chart visualization, 5) Key insights (3-5 bullet points), 6) Recommended actions. Save to your knowledge base for future reference."
+      }
     ],
-    "tags": ["data-analysis", "agent", "sql", "dify", "automation"],
+    "tags": [
+      "data-analysis",
+      "agent",
+      "sql",
+      "dify",
+      "automation"
+    ],
     "useCase": "Data teams that get ad-hoc analysis requests from non-technical stakeholders and want to automate 60-80% of routine queries.",
     "prerequisites": "Dify with code execution enabled, read-only database access, OpenAI/Claude API key"
   },
@@ -122,13 +243,34 @@
     "description": "Apply any artistic style to your photos while preserving composition and details. Great for marketing materials, social media, and creative projects.",
     "summary": "This ComfyUI workflow uses IP-Adapter for style transfer, taking a reference image's artistic style and applying it to a target photo while maintaining the original composition, facial features, and key details.",
     "steps": [
-      { "title": "Load Style Reference", "detail": "Add a Load Image node for your style reference image (e.g., a Van Gogh painting, a specific art style, or a brand visual). This image defines the artistic direction." },
-      { "title": "Load Target Image", "detail": "Add a second Load Image node for the photo you want to stylize. Ensure the image is at least 512x512 for best quality results." },
-      { "title": "IP-Adapter Style Transfer", "detail": "Connect both images to an IP-Adapter node. Set the weight to 0.6-0.8 for strong style transfer without losing too much original detail. Use the 'style' model variant for best artistic results." },
-      { "title": "ControlNet Composition Lock", "detail": "Add a ControlNet (Canny or Depth) node connected to the target image. Set weight to 0.4-0.6. This preserves the original composition and prevents the style transfer from distorting the image structure." },
-      { "title": "VAE Decode and Output", "detail": "Connect to VAE Decode node and Save Image node. Compare results with different IP-Adapter weights. For batch processing, use the Image Batch node with multiple style references." }
+      {
+        "title": "Load Style Reference",
+        "detail": "Add a Load Image node for your style reference image (e.g., a Van Gogh painting, a specific art style, or a brand visual). This image defines the artistic direction."
+      },
+      {
+        "title": "Load Target Image",
+        "detail": "Add a second Load Image node for the photo you want to stylize. Ensure the image is at least 512x512 for best quality results."
+      },
+      {
+        "title": "IP-Adapter Style Transfer",
+        "detail": "Connect both images to an IP-Adapter node. Set the weight to 0.6-0.8 for strong style transfer without losing too much original detail. Use the 'style' model variant for best artistic results."
+      },
+      {
+        "title": "ControlNet Composition Lock",
+        "detail": "Add a ControlNet (Canny or Depth) node connected to the target image. Set weight to 0.4-0.6. This preserves the original composition and prevents the style transfer from distorting the image structure."
+      },
+      {
+        "title": "VAE Decode and Output",
+        "detail": "Connect to VAE Decode node and Save Image node. Compare results with different IP-Adapter weights. For batch processing, use the Image Batch node with multiple style references."
+      }
     ],
-    "tags": ["comfyui", "style-transfer", "ip-adapter", "art", "marketing"],
+    "tags": [
+      "comfyui",
+      "style-transfer",
+      "ip-adapter",
+      "art",
+      "marketing"
+    ],
     "useCase": "Marketing teams creating branded visual content, artists experimenting with styles, social media managers producing unique graphics.",
     "prerequisites": "ComfyUI, IP-Adapter models, ControlNet models, GPU with 6GB+ VRAM"
   },
@@ -141,13 +283,34 @@
     "description": "Set up an AI agent that automatically reviews GitHub pull requests, posts inline comments, and approves or requests changes based on your team's coding standards.",
     "summary": "This workflow uses MCP's GitHub server to let an AI agent read PR diffs, analyze code quality, check against project conventions, and post review comments directly on GitHub. It reduces manual review time by 50-70% for routine PRs.",
     "steps": [
-      { "title": "Install MCP GitHub Server", "detail": "Run: npx @modelcontextprotocol/server-github. Set GITHUB_TOKEN environment variable with repo:pull_request_write scope. Configure the server in Claude Desktop config." },
-      { "title": "Create Review Prompt Template", "detail": "Write a system prompt that defines your review criteria: 1) Code style compliance, 2) Potential bugs, 3) Security issues (OWASP), 4) Performance concerns, 5) Test coverage. Be specific about your team's conventions." },
-      { "title": "Webhook Integration", "detail": "Set up a GitHub webhook for pull_request events. Point it to a simple server (can be an n8n webhook) that triggers Claude with the PR details via MCP. The agent reads the diff, analyzes it, and prepares review comments." },
-      { "title": "Post Review Comments", "detail": "The agent uses the MCP GitHub server to post inline comments on specific lines. For critical issues, it requests changes. For clean PRs, it approves. Add a summary comment with overall assessment and metrics." },
-      { "title": "Feedback Loop", "detail": "Track which AI suggestions were accepted vs rejected by developers. Use this data to refine the review prompt. Set up a weekly report of AI review accuracy to continuously improve the agent." }
+      {
+        "title": "Install MCP GitHub Server",
+        "detail": "Run: npx @modelcontextprotocol/server-github. Set GITHUB_TOKEN environment variable with repo:pull_request_write scope. Configure the server in Claude Desktop config."
+      },
+      {
+        "title": "Create Review Prompt Template",
+        "detail": "Write a system prompt that defines your review criteria: 1) Code style compliance, 2) Potential bugs, 3) Security issues (OWASP), 4) Performance concerns, 5) Test coverage. Be specific about your team's conventions."
+      },
+      {
+        "title": "Webhook Integration",
+        "detail": "Set up a GitHub webhook for pull_request events. Point it to a simple server (can be an n8n webhook) that triggers Claude with the PR details via MCP. The agent reads the diff, analyzes it, and prepares review comments."
+      },
+      {
+        "title": "Post Review Comments",
+        "detail": "The agent uses the MCP GitHub server to post inline comments on specific lines. For critical issues, it requests changes. For clean PRs, it approves. Add a summary comment with overall assessment and metrics."
+      },
+      {
+        "title": "Feedback Loop",
+        "detail": "Track which AI suggestions were accepted vs rejected by developers. Use this data to refine the review prompt. Set up a weekly report of AI review accuracy to continuously improve the agent."
+      }
     ],
-    "tags": ["mcp", "github", "code-review", "automation", "agent"],
+    "tags": [
+      "mcp",
+      "github",
+      "code-review",
+      "automation",
+      "agent"
+    ],
     "useCase": "Engineering teams of 5+ developers who want to reduce review turnaround time and catch common issues before human review.",
     "prerequisites": "Claude API access, MCP GitHub server, GitHub repo admin access, webhook hosting (n8n or server)"
   },
@@ -160,13 +323,34 @@
     "description": "Automatically enrich new leads with company data, social profiles, and AI-generated qualification scores before they reach your sales team.",
     "summary": "This n8n workflow triggers when a new lead is captured (form, CRM, or webhook), enriches it with company data from multiple APIs, uses AI to score the lead, and pushes the enriched data to your CRM with a recommended next action.",
     "steps": [
-      { "title": "Lead Capture Trigger", "detail": "Use a Webhook node connected to your lead form or CRM webhook. Map incoming fields: name, email, company, title. Add basic validation in a Code node." },
-      { "title": "Company Enrichment", "detail": "Add an HTTP Request node to call Clearbit/Apollo API with the company domain. Extract: company size, industry, revenue range, tech stack. Add a 5-second timeout and fallback to manual review if enrichment fails." },
-      { "title": "Social Profile Lookup", "detail": "Add an HTTP Request node to search LinkedIn/Apollo for the person's profile. Extract: role, tenure, mutual connections, recent activity. Store social links for the sales team." },
-      { "title": "AI Lead Scoring", "detail": "Use an HTTP Request node to call OpenAI with a structured prompt: 'Score this lead from 1-100 based on: company size, industry fit, role seniority, tech stack match. Provide a 2-sentence rationale.' Include your ICP definition in the prompt." },
-      { "title": "CRM Update and Notification", "detail": "Push the enriched lead to your CRM (HubSpot/Salesforce) with all enrichment data. If the AI score is 80+, send a Slack notification to the sales team with a one-click 'Book a meeting' link. If below 40, add to nurture campaign automatically." }
+      {
+        "title": "Lead Capture Trigger",
+        "detail": "Use a Webhook node connected to your lead form or CRM webhook. Map incoming fields: name, email, company, title. Add basic validation in a Code node."
+      },
+      {
+        "title": "Company Enrichment",
+        "detail": "Add an HTTP Request node to call Clearbit/Apollo API with the company domain. Extract: company size, industry, revenue range, tech stack. Add a 5-second timeout and fallback to manual review if enrichment fails."
+      },
+      {
+        "title": "Social Profile Lookup",
+        "detail": "Add an HTTP Request node to search LinkedIn/Apollo for the person's profile. Extract: role, tenure, mutual connections, recent activity. Store social links for the sales team."
+      },
+      {
+        "title": "AI Lead Scoring",
+        "detail": "Use an HTTP Request node to call OpenAI with a structured prompt: 'Score this lead from 1-100 based on: company size, industry fit, role seniority, tech stack match. Provide a 2-sentence rationale.' Include your ICP definition in the prompt."
+      },
+      {
+        "title": "CRM Update and Notification",
+        "detail": "Push the enriched lead to your CRM (HubSpot/Salesforce) with all enrichment data. If the AI score is 80+, send a Slack notification to the sales team with a one-click 'Book a meeting' link. If below 40, add to nurture campaign automatically."
+      }
     ],
-    "tags": ["lead-enrichment", "sales", "automation", "n8n", "ai-scoring"],
+    "tags": [
+      "lead-enrichment",
+      "sales",
+      "automation",
+      "n8n",
+      "ai-scoring"
+    ],
     "useCase": "B2B sales teams receiving 50+ leads per day who need prioritization and enrichment before first contact.",
     "prerequisites": "n8n, CRM API access (HubSpot/Salesforce), Clearbit/Apollo API key, OpenAI API key, Slack webhook"
   },
@@ -179,13 +363,34 @@
     "description": "Upload any collection of documents (PDFs, manuals, contracts) and build a Q&A system that answers questions with precise citations.",
     "summary": "This Dify workflow creates a Retrieval-Augmented Generation system: upload documents, chunk and embed them, then let users ask questions with answers grounded in the actual document content, complete with source citations.",
     "steps": [
-      { "title": "Create Knowledge Base", "detail": "In Dify, create a new Knowledge Base. Upload your documents (PDF, DOCX, TXT, MD). Set chunking to 300 tokens with 50 token overlap. Choose the embedding model (OpenAI text-embedding-3-small is cost-effective)." },
-      { "title": "Configure Retrieval", "detail": "Set retrieval mode to 'semantic search' with top-K=5. Enable reranking if available (Cohere reranker improves accuracy significantly). Set a similarity threshold of 0.7 to filter irrelevant chunks." },
-      { "title": "Create Q&A App", "detail": "Create a new Completion App. Connect your knowledge base. Set the prompt: 'Answer the user's question using ONLY the provided context. If the answer is not in the context, say I cannot find this information. Always cite the source document and page number.'" },
-      { "title": "Add Citation Display", "detail": "Enable Dify's citation feature. When the model generates an answer, it will show which chunks were used. Configure the UI to display source filenames and relevant passages." },
-      { "title": "Deploy and Monitor", "detail": "Deploy as a web app or API. Set up logging to track: query volume, answer accuracy (user feedback), and unanswered questions (to identify knowledge gaps). Add new documents based on gaps found." }
+      {
+        "title": "Create Knowledge Base",
+        "detail": "In Dify, create a new Knowledge Base. Upload your documents (PDF, DOCX, TXT, MD). Set chunking to 300 tokens with 50 token overlap. Choose the embedding model (OpenAI text-embedding-3-small is cost-effective)."
+      },
+      {
+        "title": "Configure Retrieval",
+        "detail": "Set retrieval mode to 'semantic search' with top-K=5. Enable reranking if available (Cohere reranker improves accuracy significantly). Set a similarity threshold of 0.7 to filter irrelevant chunks."
+      },
+      {
+        "title": "Create Q&A App",
+        "detail": "Create a new Completion App. Connect your knowledge base. Set the prompt: 'Answer the user's question using ONLY the provided context. If the answer is not in the context, say I cannot find this information. Always cite the source document and page number.'"
+      },
+      {
+        "title": "Add Citation Display",
+        "detail": "Enable Dify's citation feature. When the model generates an answer, it will show which chunks were used. Configure the UI to display source filenames and relevant passages."
+      },
+      {
+        "title": "Deploy and Monitor",
+        "detail": "Deploy as a web app or API. Set up logging to track: query volume, answer accuracy (user feedback), and unanswered questions (to identify knowledge gaps). Add new documents based on gaps found."
+      }
     ],
-    "tags": ["rag", "document-qa", "knowledge-base", "dify", "retrieval"],
+    "tags": [
+      "rag",
+      "document-qa",
+      "knowledge-base",
+      "dify",
+      "retrieval"
+    ],
     "useCase": "Legal teams reviewing contracts, HR departments with policy documents, technical teams with API documentation.",
     "prerequisites": "Dify account, documents to upload, OpenAI API key for embeddings"
   },
@@ -198,13 +403,34 @@
     "description": "Use AI to interpolate frames and create smooth slow-motion or frame rate conversion for video clips.",
     "summary": "This ComfyUI workflow uses RIFE/FILM models for frame interpolation to create smooth slow-motion effects from standard video, or to upscale 24fps footage to 60fps. It handles batch processing for longer clips.",
     "steps": [
-      { "title": "Load Video Frames", "detail": "Use the Video Frame Extract node to load your video and extract frames as individual images. Set the frame range and resolution. For long videos, process in 10-second segments to avoid memory issues." },
-      { "title": "Frame Interpolation Model", "detail": "Add a RIFE or FILM interpolation node. Set the interpolation factor (2x for 24->48fps, 4x for 24->96fps slow motion). The model generates intermediate frames between each pair of original frames." },
-      { "title": "Quality Enhancement", "detail": "Optionally add a Real-ESRGAN node to upscale each frame to 2x or 4x resolution. This is useful when the source video is low quality. Set denoising strength to 0.3-0.5 to avoid artifacts." },
-      { "title": "Frame Reassembly", "detail": "Use the Video Frame Combine node to reassemble frames into a video. Set the output frame rate to match your target (48fps for 2x interpolation of 24fps). Choose MP4 with H.264 encoding for compatibility." },
-      { "title": "Batch Processing Setup", "detail": "For clips longer than 10 seconds, create a loop workflow using a Code node that processes segments sequentially. Save each segment and concatenate with ffmpeg in a final post-processing step." }
+      {
+        "title": "Load Video Frames",
+        "detail": "Use the Video Frame Extract node to load your video and extract frames as individual images. Set the frame range and resolution. For long videos, process in 10-second segments to avoid memory issues."
+      },
+      {
+        "title": "Frame Interpolation Model",
+        "detail": "Add a RIFE or FILM interpolation node. Set the interpolation factor (2x for 24->48fps, 4x for 24->96fps slow motion). The model generates intermediate frames between each pair of original frames."
+      },
+      {
+        "title": "Quality Enhancement",
+        "detail": "Optionally add a Real-ESRGAN node to upscale each frame to 2x or 4x resolution. This is useful when the source video is low quality. Set denoising strength to 0.3-0.5 to avoid artifacts."
+      },
+      {
+        "title": "Frame Reassembly",
+        "detail": "Use the Video Frame Combine node to reassemble frames into a video. Set the output frame rate to match your target (48fps for 2x interpolation of 24fps). Choose MP4 with H.264 encoding for compatibility."
+      },
+      {
+        "title": "Batch Processing Setup",
+        "detail": "For clips longer than 10 seconds, create a loop workflow using a Code node that processes segments sequentially. Save each segment and concatenate with ffmpeg in a final post-processing step."
+      }
     ],
-    "tags": ["comfyui", "video", "frame-interpolation", "slow-motion", "rife"],
+    "tags": [
+      "comfyui",
+      "video",
+      "frame-interpolation",
+      "slow-motion",
+      "rife"
+    ],
     "useCase": "Video creators needing smooth slow-motion from standard footage, archivists restoring old video at higher frame rates.",
     "prerequisites": "ComfyUI, RIFE or FILM interpolation model, ffmpeg, GPU with 8GB+ VRAM"
   },
@@ -217,14 +443,348 @@
     "description": "Automatically categorize incoming emails, draft responses for common queries, and escalate urgent issues to the right person.",
     "summary": "This n8n workflow connects to your email inbox, uses AI to classify each email (urgent, billing, support, spam, personal), drafts appropriate responses for routine emails, and sends Slack alerts for urgent items that need human attention.",
     "steps": [
-      { "title": "Email Trigger Node", "detail": "Use the IMAP Email trigger node. Set polling to every 5 minutes. Configure to only process unread emails. Mark emails as read after processing to avoid duplicates." },
-      { "title": "AI Classification Node", "detail": "Use an HTTP Request node to call OpenAI with a classification prompt: 'Categorize this email into: URGENT, BILLING, SUPPORT, SALES, SPAM, OTHER. Also extract: sender intent, required action, response deadline.' Return as JSON." },
-      { "title": "Routing Logic", "detail": "Add a Switch node based on the AI classification. URGENT goes to Slack alert + draft response. BILLING goes to billing template auto-response. SUPPORT goes to knowledge base lookup. SPAM goes to trash. OTHER goes to inbox for manual review." },
-      { "title": "Auto-Response Drafting", "detail": "For SUPPORT and BILLING categories, use AI to draft a response: 'Draft a professional email response to this inquiry. Use our standard tone. Reference relevant policy if applicable.' Save draft in your email drafts folder for human review before sending." },
-      { "title": "Analytics and Logging", "detail": "Log all classifications and actions to a Google Sheet. Track: volume by category, auto-response rate, average response time, escalation rate. Generate a weekly summary report." }
+      {
+        "title": "Email Trigger Node",
+        "detail": "Use the IMAP Email trigger node. Set polling to every 5 minutes. Configure to only process unread emails. Mark emails as read after processing to avoid duplicates."
+      },
+      {
+        "title": "AI Classification Node",
+        "detail": "Use an HTTP Request node to call OpenAI with a classification prompt: 'Categorize this email into: URGENT, BILLING, SUPPORT, SALES, SPAM, OTHER. Also extract: sender intent, required action, response deadline.' Return as JSON."
+      },
+      {
+        "title": "Routing Logic",
+        "detail": "Add a Switch node based on the AI classification. URGENT goes to Slack alert + draft response. BILLING goes to billing template auto-response. SUPPORT goes to knowledge base lookup. SPAM goes to trash. OTHER goes to inbox for manual review."
+      },
+      {
+        "title": "Auto-Response Drafting",
+        "detail": "For SUPPORT and BILLING categories, use AI to draft a response: 'Draft a professional email response to this inquiry. Use our standard tone. Reference relevant policy if applicable.' Save draft in your email drafts folder for human review before sending."
+      },
+      {
+        "title": "Analytics and Logging",
+        "detail": "Log all classifications and actions to a Google Sheet. Track: volume by category, auto-response rate, average response time, escalation rate. Generate a weekly summary report."
+      }
     ],
-    "tags": ["email", "automation", "triage", "n8n", "ai-classification"],
+    "tags": [
+      "email",
+      "automation",
+      "triage",
+      "n8n",
+      "ai-classification"
+    ],
     "useCase": "Small businesses and solo founders receiving 50-200 emails per day who want to prioritize and automate routine responses.",
     "prerequisites": "n8n, IMAP email access, OpenAI API key, Slack webhook, Google Sheets API"
+  },
+  {
+    "slug": "crewai-research-team",
+    "title": "Multi-Agent Research Team with CrewAI",
+    "category": "Agent",
+    "tool": "CrewAI",
+    "difficulty": "Intermediate",
+    "description": "Build a crew of AI agents that collaboratively research a topic: one searches, one analyzes, one writes the report.",
+    "summary": "This CrewAI workflow creates a 3-agent crew: a Researcher that browses the web for information, an Analyst that synthesizes findings and identifies gaps, and a Writer that produces a polished report. The agents work in sequence with shared memory.",
+    "steps": [
+      {
+        "title": "Install CrewAI",
+        "detail": "pip install crewai. Create a new project. Define your agents in a crew.py file. CrewAI uses a simple YAML or Python config for agent definition."
+      },
+      {
+        "title": "Define the Researcher Agent",
+        "detail": "Create an agent with role: Researcher, goal: Find comprehensive information about the topic, backstory: Expert researcher with 10 years experience. Assign it a search tool (SerperDev, Google, or DuckDuckGo)."
+      },
+      {
+        "title": "Define the Analyst Agent",
+        "detail": "Role: Analyst, goal: Synthesize research findings and identify key insights and gaps, backstory: Data analyst who excels at finding patterns. This agent receives the Researcher output and processes it."
+      },
+      {
+        "title": "Define the Writer Agent",
+        "detail": "Role: Writer, goal: Produce a clear, well-structured report from the analysis, backstory: Professional writer with expertise in making complex topics accessible. This agent receives the Analyst output."
+      },
+      {
+        "title": "Run the Crew",
+        "detail": "crew.kickoff(inputs={topic: your topic}). The agents execute in order: Researcher searches, Analyst processes, Writer formats. Review the final output and iterate on agent definitions for better results."
+      }
+    ],
+    "tags": [
+      "crewai",
+      "multi-agent",
+      "research",
+      "collaboration"
+    ],
+    "useCase": "Research teams, content creators, and analysts who need comprehensive research reports on any topic.",
+    "prerequisites": "Python 3.10+, CrewAI installed, OpenAI API key, optional search API key (SerperDev)"
+  },
+  {
+    "slug": "langgraph-customer-journey",
+    "title": "Customer Journey Agent with LangGraph",
+    "category": "Agent",
+    "tool": "LangGraph",
+    "difficulty": "Advanced",
+    "description": "Build a stateful agent that guides customers through onboarding, answering questions and adapting based on their responses.",
+    "summary": "This LangGraph workflow creates a stateful agent graph that tracks customer onboarding progress, adapts responses based on customer type and stage, and escalates to human support when needed. Uses LangGraph state management for context persistence.",
+    "steps": [
+      {
+        "title": "Define the State Schema",
+        "detail": "Create a TypedDict with fields: customer_id, stage (signup/onboarding/active), messages, customer_type, satisfaction_score. This state persists across all nodes in the graph."
+      },
+      {
+        "title": "Build the Graph Nodes",
+        "detail": "Create nodes: greeting_node, assess_node, guide_node, qa_node, escalate_node. Each node receives the state, processes it, and returns updated state. Connect nodes with conditional edges."
+      },
+      {
+        "title": "Add Conditional Routing",
+        "detail": "Use conditional edges: if satisfaction_score < 3, route to escalate_node. If customer asks a question, route to qa_node. Otherwise, continue to guide_node. This makes the agent adaptive."
+      },
+      {
+        "title": "Implement Memory Checkpointing",
+        "detail": "Use LangGraph MemorySaver to persist conversation state. This allows the agent to resume conversations across sessions and maintain context. Store checkpoints in SQLite or Redis."
+      },
+      {
+        "title": "Deploy with FastAPI",
+        "detail": "Wrap the LangGraph agent in a FastAPI endpoint. Add streaming for real-time responses. Deploy to your preferred platform (Vercel, Railway, self-hosted). Test with 20 simulated customer journeys."
+      }
+    ],
+    "tags": [
+      "langgraph",
+      "customer-journey",
+      "onboarding",
+      "stateful"
+    ],
+    "useCase": "SaaS onboarding flows, customer success teams, subscription services guiding users to activation.",
+    "prerequisites": "Python 3.11+, LangGraph, LangChain, FastAPI, OpenAI API key"
+  },
+  {
+    "slug": "n8n-webhook-automation",
+    "title": "Webhook-Triggered Automation Hub with n8n",
+    "category": "Automation",
+    "tool": "n8n",
+    "difficulty": "Beginner",
+    "description": "Set up n8n as a central automation hub that responds to webhooks from your apps and routes them to the right workflow.",
+    "summary": "This n8n workflow creates a webhook endpoint that receives events from your apps (Stripe, Typeform, GitHub, etc.), classifies the event type, and routes it to the appropriate sub-workflow. Centralizes all your automations in one place.",
+    "steps": [
+      {
+        "title": "Create Webhook Trigger",
+        "detail": "Add a Webhook node. Set method to POST. Copy the webhook URL. This URL will receive all events from your external apps. Configure a response to return 200 OK immediately."
+      },
+      {
+        "title": "Parse and Classify Event",
+        "detail": "Add a Code node to parse the incoming JSON. Extract event_type from the payload. Use a Switch node to route based on event_type: payment_received, form_submitted, issue_opened, etc."
+      },
+      {
+        "title": "Build Sub-Workflows",
+        "detail": "For each event type, create a sub-workflow: payment_received updates CRM + sends receipt, form_submitted adds to spreadsheet + sends welcome email, issue_opened creates Slack alert + assigns in project tool."
+      },
+      {
+        "title": "Add Error Handling",
+        "detail": "Add an Error Trigger node that catches failures and sends a Slack/Discord notification with the error details. Set retry logic: 3 retries with exponential backoff for API failures."
+      },
+      {
+        "title": "Test and Deploy",
+        "detail": "Send test webhooks using curl or Postman for each event type. Verify routing works correctly. Configure your external apps to send webhooks to this n8n endpoint. Monitor the execution log daily for the first week."
+      }
+    ],
+    "tags": [
+      "n8n",
+      "webhook",
+      "automation-hub",
+      "routing"
+    ],
+    "useCase": "Teams using 3+ SaaS tools that want centralized automation instead of point-to-point integrations.",
+    "prerequisites": "n8n self-hosted or Cloud, external app webhook capability"
+  },
+  {
+    "slug": "dify-content-pipeline",
+    "title": "AI Content Generation Pipeline with Dify",
+    "category": "Automation",
+    "tool": "Dify",
+    "difficulty": "Intermediate",
+    "description": "Build a Dify workflow that takes a topic, researches it, generates multiple content formats, and publishes them.",
+    "summary": "This Dify workflow creates an end-to-end content pipeline: input a topic, the agent researches relevant information, generates a blog post, social media snippets, and an email newsletter, then formats everything for publishing.",
+    "steps": [
+      {
+        "title": "Create Workflow App",
+        "detail": "In Dify, create a new Workflow app. This allows you to chain multiple LLM calls and tool uses in a visual pipeline. Set the input variable as topic (string type)."
+      },
+      {
+        "title": "Research Node",
+        "detail": "Add an LLM node with a research prompt: Research the topic and provide 5 key facts, 3 statistics, and 2 expert quotes. Use a search-enabled model if available. Store output as research_data."
+      },
+      {
+        "title": "Content Generation Nodes",
+        "detail": "Add 3 parallel LLM nodes: 1) Blog post (1500 words, SEO-optimized) using research_data, 2) 3 social media posts (Twitter/LinkedIn/Mastodon), 3) Email newsletter (300 words). Each uses research_data as context."
+      },
+      {
+        "title": "Quality Check Node",
+        "detail": "Add an LLM node that reviews all generated content for factual accuracy, tone consistency, and brand alignment. Output a quality_score and suggested edits. Route back to generation if score < 7/10."
+      },
+      {
+        "title": "Output and Integration",
+        "detail": "Add an output node that formats all content into a single JSON response. Connect to your CMS via API or use Dify webhook to trigger publishing. Schedule with a cron trigger for daily content generation."
+      }
+    ],
+    "tags": [
+      "dify",
+      "content-generation",
+      "pipeline",
+      "automation"
+    ],
+    "useCase": "Content marketing teams producing daily blog posts, social media, and newsletters from a single topic input.",
+    "prerequisites": "Dify account, OpenAI/Anthropic API key, CMS API access (optional)"
+  },
+  {
+    "slug": "comfyui-lora-training",
+    "title": "Train Custom LoRA Models with ComfyUI",
+    "category": "Image",
+    "tool": "ComfyUI",
+    "difficulty": "Advanced",
+    "description": "Train a LoRA (Low-Rank Adaptation) model on your custom images to generate consistent brand-specific or style-specific visuals.",
+    "summary": "This ComfyUI workflow guides you through preparing a dataset, training a LoRA model, and using it in your generation pipeline. LoRA enables fine-tuning large models with just 10-50 images, creating consistent brand styles or character likenesses.",
+    "steps": [
+      {
+        "title": "Prepare Dataset",
+        "detail": "Collect 15-30 high-quality images of your subject/style. Crop to 512x512 or 1024x1024. Ensure variety in angles, lighting, and context. Create a text file for each image describing it. Place all in a training folder."
+      },
+      {
+        "title": "Configure Training Parameters",
+        "detail": "Use the Kohya LoRA training extension for ComfyUI. Set: base model (SDXL or SD1.5), learning rate 1e-4, batch size 1, epochs 10-20, LoRA rank 32-64. Higher rank = more style learning but more overfitting risk."
+      },
+      {
+        "title": "Start Training",
+        "detail": "Launch training. Monitor loss curves: training loss should decrease steadily, validation loss should not increase (overfitting signal). Training takes 1-4 hours depending on dataset size and GPU. Save checkpoints every 5 epochs."
+      },
+      {
+        "title": "Test the LoRA",
+        "detail": "Load the trained LoRA in ComfyUI using the LoRA Loader node. Generate images with prompts referencing your trained subject. Adjust LoRA strength (0.5-1.0) to balance style fidelity vs flexibility. Compare with base model outputs."
+      },
+      {
+        "title": "Integrate into Pipeline",
+        "detail": "Add the LoRA to your standard ComfyUI workflow. Use the LoRA Loader node before the generation node. Set strength to 0.7 as a starting point. Batch generate variations. Save successful prompts and settings for reuse."
+      }
+    ],
+    "tags": [
+      "comfyui",
+      "lora",
+      "training",
+      "custom-model",
+      "fine-tuning"
+    ],
+    "useCase": "Brands wanting consistent visual style, artists creating character series, e-commerce with consistent product styling.",
+    "prerequisites": "ComfyUI with Kohya training extension, GPU 12GB+ VRAM, 15-30 training images, SDXL or SD1.5 base model"
+  },
+  {
+    "slug": "mcp-slack-assistant",
+    "title": "Slack AI Assistant via MCP",
+    "category": "Agent",
+    "tool": "MCP",
+    "difficulty": "Intermediate",
+    "description": "Connect Claude to your Slack workspace via MCP to answer questions, search messages, and summarize channels.",
+    "summary": "This MCP workflow sets up a Slack server that lets Claude read channels, search messages, post replies, and summarize conversations. Perfect for getting AI-powered answers about your team discussions without leaving your chat.",
+    "steps": [
+      {
+        "title": "Create Slack App",
+        "detail": "Go to api.slack.com/apps and create a new app. Add bot token scopes: channels:read, channels:history, chat:write, search:read. Install the app to your workspace. Save the Bot User OAuth Token."
+      },
+      {
+        "title": "Install MCP Slack Server",
+        "detail": "Run: npx @modelcontextprotocol/server-slack. Set SLACK_BOT_TOKEN environment variable. Configure in Claude Desktop config file as a new MCP server."
+      },
+      {
+        "title": "Test Basic Operations",
+        "detail": "Ask Claude: List all channels in my workspace. Then: Search for messages about project deadline. Then: Summarize the last 50 messages in the general channel. Verify Claude can read and search Slack data."
+      },
+      {
+        "title": "Build Analysis Workflows",
+        "detail": "Ask Claude: What were the main decisions made in the engineering channel this week? or: Find all unresolved questions from the last 3 days and create a summary. Claude will search, read, and synthesize across channels."
+      },
+      {
+        "title": "Set Up Daily Digest",
+        "detail": "Use n8n or a cron job to trigger Claude each morning with: Summarize important updates from all channels since yesterday. Claude reads via MCP, generates a digest, and posts it to a summary channel or sends via email."
+      }
+    ],
+    "tags": [
+      "mcp",
+      "slack",
+      "assistant",
+      "team-collaboration"
+    ],
+    "useCase": "Teams using Slack who want AI-powered search, summarization, and Q&A over their workspace conversations.",
+    "prerequisites": "Slack workspace admin access, Claude Desktop or API, MCP Slack server, Node.js 18+"
+  },
+  {
+    "slug": "n8n-api-monitor",
+    "title": "AI-Powered API Health Monitor with n8n",
+    "category": "Automation",
+    "tool": "n8n",
+    "difficulty": "Beginner",
+    "description": "Monitor your APIs for failures, performance issues, and anomalies with AI-powered alerting and root cause analysis.",
+    "summary": "This n8n workflow periodically checks your API endpoints, uses AI to analyze error patterns, predicts potential failures, and sends intelligent alerts with root cause hypotheses. Reduces false alerts by 60% compared to simple threshold monitoring.",
+    "steps": [
+      {
+        "title": "Schedule Trigger",
+        "detail": "Add a Cron node to run every 5 minutes. Configure the schedule to match your monitoring needs. For critical APIs, use 1-minute intervals. For less critical ones, 15 minutes."
+      },
+      {
+        "title": "API Check Nodes",
+        "detail": "Add HTTP Request nodes for each API endpoint you want to monitor. Set timeout to 10 seconds. Check both status code (200) and response time. Store results with timestamp."
+      },
+      {
+        "title": "AI Analysis Node",
+        "detail": "When an error is detected, send the error details, last 10 request results, and recent changes to an LLM. Prompt: Analyze this API failure pattern. Identify likely root cause (rate limiting, timeout, dependency failure, code bug). Suggest 3 debugging steps."
+      },
+      {
+        "title": "Smart Alerting",
+        "detail": "Add a Switch node: if AI confidence > 80% and severity is high, send immediate Slack alert. If confidence < 50%, add to daily summary instead of alerting. This prevents alert fatigue from false positives."
+      },
+      {
+        "title": "Weekly Report",
+        "detail": "Add a second workflow that runs weekly: collect all API health data, generate a summary report with uptime %, average response times, failure patterns, and recommendations. Send to stakeholders via email."
+      }
+    ],
+    "tags": [
+      "n8n",
+      "api-monitoring",
+      "alerting",
+      "ai-analysis"
+    ],
+    "useCase": "DevOps teams monitoring 5+ APIs who want intelligent alerting instead of simple threshold notifications.",
+    "prerequisites": "n8n, API endpoints to monitor, OpenAI API key, Slack webhook for alerts"
+  },
+  {
+    "slug": "browser-use-data-collection",
+    "title": "Automated Web Data Collection with Browser Use",
+    "category": "Data",
+    "tool": "Browser Use",
+    "difficulty": "Intermediate",
+    "description": "Use AI browser automation to collect structured data from websites that resist traditional scraping.",
+    "summary": "This Browser Use workflow uses AI visual understanding to navigate complex websites, handle dynamic content, and extract structured data from pages that traditional scrapers cannot handle. Includes pagination, login handling, and data validation.",
+    "steps": [
+      {
+        "title": "Install Browser Use",
+        "detail": "pip install browser-use. Set up Playwright browsers: playwright install chromium. Configure your LLM (OpenAI/Claude). Test with a simple navigation task to verify setup is correct."
+      },
+      {
+        "title": "Define Collection Task",
+        "detail": "Write a natural language instruction: Go to [website], navigate to [page type], for each [item], extract [fields: name, price, description, rating]. Handle pagination by clicking next page button. Stop after 50 items."
+      },
+      {
+        "title": "Add Login Handling",
+        "detail": "If the site requires login, provide credentials in the task: First, log in with username [USER] and password [PASS]. Then navigate to the data pages. Browser Use will handle the login form automatically."
+      },
+      {
+        "title": "Data Validation",
+        "detail": "Add a post-processing step that validates extracted data: check for missing fields, validate data types (price is number, rating is 1-5), deduplicate by unique identifier. Use Python pandas for data cleaning."
+      },
+      {
+        "title": "Export and Schedule",
+        "detail": "Save extracted data to CSV/JSON. For recurring collection, wrap in a cron job or n8n workflow. Add error handling: retry failed pages, log blocked requests, send alert if collection success rate < 80%."
+      }
+    ],
+    "tags": [
+      "browser-use",
+      "web-scraping",
+      "data-collection",
+      "automation"
+    ],
+    "useCase": "Market researchers, price monitoring, lead generation from directories, competitive analysis.",
+    "prerequisites": "Python 3.10+, Browser Use, Playwright, OpenAI/Claude API key"
   }
 ]
