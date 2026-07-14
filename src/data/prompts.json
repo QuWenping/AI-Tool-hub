@@ -1790,5 +1790,1359 @@
       "analysis"
     ],
     "prompt": "Analyze skill gaps for [ROLE] targeting [GOAL]: 1) Required skills, 2) Current skills assessment, 3) Gaps (critical/moderate/nice), 4) Learning resources per gap, 5) 90-day plan, 6) Success metrics."
+  },
+  {
+    "slug": "chatgpt-rewrite-formal",
+    "title": "ChatGPT Formal Rewrite",
+    "category": "Writing",
+    "tool": "ChatGPT",
+    "tags": [
+      "rewrite",
+      "formal"
+    ],
+    "prompt": "Rewrite in formal professional tone. Fix contractions, casual phrases, sentence structure. Keep meaning.\n\n[PASTE TEXT]"
+  },
+  {
+    "slug": "chatgpt-simplify",
+    "title": "ChatGPT Simplify Text",
+    "category": "Writing",
+    "tool": "ChatGPT",
+    "tags": [
+      "simplify"
+    ],
+    "prompt": "Simplify to grade 6: short sentences (15 words max), common words, one idea per sentence, active voice.\n\n[PASTE TEXT]"
+  },
+  {
+    "slug": "chatgpt-expand",
+    "title": "ChatGPT Expand Outline",
+    "category": "Writing",
+    "tool": "ChatGPT",
+    "tags": [
+      "expand"
+    ],
+    "prompt": "Expand outline into article: 2-3 paragraphs per section, examples, data, transitions. [WORD COUNT] words.\n\n[PASTE OUTLINE]"
+  },
+  {
+    "slug": "chatgpt-grammar",
+    "title": "ChatGPT Grammar Fix",
+    "category": "Writing",
+    "tool": "ChatGPT",
+    "tags": [
+      "grammar"
+    ],
+    "prompt": "Fix grammar, spelling, punctuation: fragments, run-ons, comma splices, agreement, tense. Corrected text only.\n\n[PASTE TEXT]"
+  },
+  {
+    "slug": "chatgpt-translate",
+    "title": "ChatGPT Translate & Localize",
+    "category": "Writing",
+    "tool": "ChatGPT",
+    "tags": [
+      "translate"
+    ],
+    "prompt": "Translate [SOURCE] to [TARGET]. Localize: idioms, measurements, currency, references. Maintain tone.\n\n[PASTE TEXT]"
+  },
+  {
+    "slug": "chatgpt-podcast-s",
+    "title": "ChatGPT Podcast Script",
+    "category": "Writing",
+    "tool": "ChatGPT",
+    "tags": [
+      "podcast"
+    ],
+    "prompt": "[MINUTES]-min podcast script [TOPIC]: cold open(30s), intro(1m), 3 segments, listener Q, outro+CTA. SFX/music cues."
+  },
+  {
+    "slug": "chatgpt-youtube-s",
+    "title": "ChatGPT YouTube Script",
+    "category": "Video",
+    "tool": "ChatGPT",
+    "tags": [
+      "youtube"
+    ],
+    "prompt": "[MINUTES]-min YouTube script [TOPIC]: hook(15s), [VISUAL]+[AUDIO] pairs, B-roll suggestions, end screen CTA."
+  },
+  {
+    "slug": "chatgpt-ux-micro",
+    "title": "ChatGPT UX Microcopy",
+    "category": "Writing",
+    "tool": "ChatGPT",
+    "tags": [
+      "ux",
+      "microcopy"
+    ],
+    "prompt": "UX microcopy for [APP]: button labels (2 words), error messages (clear), empty states (encouraging), tooltips, onboarding."
+  },
+  {
+    "slug": "chatgpt-chatbot-p",
+    "title": "ChatGPT Chatbot Persona",
+    "category": "AI",
+    "tool": "ChatGPT",
+    "tags": [
+      "chatbot"
+    ],
+    "prompt": "Chatbot persona [USE CASE]: name+personality(3 traits), tone, greeting, handling (greetings/complaints/unknown), do/dont, sign-off."
+  },
+  {
+    "slug": "chatgpt-research-q",
+    "title": "ChatGPT Research Questions",
+    "category": "Research",
+    "tool": "ChatGPT",
+    "tags": [
+      "research"
+    ],
+    "prompt": "[N] research questions [TOPIC] for [AUDIENCE]: open-ended, specific, rating scale, comparative, scenario-based. Each: why + what reveals."
+  },
+  {
+    "slug": "chatgpt-positioning",
+    "title": "ChatGPT Product Positioning",
+    "category": "Business",
+    "tool": "ChatGPT",
+    "tags": [
+      "positioning"
+    ],
+    "prompt": "Positioning [PRODUCT]: target customer, category, key benefit, differentiator, reason to believe. For [target], [product] is [category] that [benefit] because [reason]."
+  },
+  {
+    "slug": "chatgpt-user-stories",
+    "title": "ChatGPT User Stories",
+    "category": "Coding",
+    "tool": "ChatGPT",
+    "tags": [
+      "user-stories"
+    ],
+    "prompt": "[N] user stories [FEATURE]: As a [user], I want [action] so that [benefit]. Each: priority (Must/Should/Could), acceptance criteria (2-3)."
+  },
+  {
+    "slug": "chatgpt-test-cases",
+    "title": "ChatGPT Test Cases",
+    "category": "Coding",
+    "tool": "ChatGPT",
+    "tags": [
+      "testing"
+    ],
+    "prompt": "Test cases [FEATURE]: name, description, preconditions, steps, expected result, type (positive/negative/edge). 3+3+3."
+  },
+  {
+    "slug": "chatgpt-error-msg",
+    "title": "ChatGPT Error Messages",
+    "category": "Writing",
+    "tool": "ChatGPT",
+    "tags": [
+      "error",
+      "ux"
+    ],
+    "prompt": "Error messages [APP]: what happened (plain English), why, what to do next, how to prevent. Cover: validation, network, permission, 404, server."
+  },
+  {
+    "slug": "chatgpt-cold-seq",
+    "title": "ChatGPT Cold Outreach Sequence",
+    "category": "Business",
+    "tool": "ChatGPT",
+    "tags": [
+      "cold-outreach"
+    ],
+    "prompt": "4-email cold sequence [PRODUCT] to [AUDIENCE]: 1)value+ask 2)social proof 3)pain+solution 4)break-up. Subject(50 chars), body(120 words), CTA."
+  },
+  {
+    "slug": "chatgpt-landing-copy",
+    "title": "ChatGPT Landing Page",
+    "category": "Business",
+    "tool": "ChatGPT",
+    "tags": [
+      "landing"
+    ],
+    "prompt": "Landing copy [PRODUCT]: hero(10 words), subheadline, 3 benefits, how it works(3 steps), social proof, pricing teaser, 3 FAQ, CTA."
+  },
+  {
+    "slug": "chatgpt-repurpose",
+    "title": "ChatGPT Content Repurpose",
+    "category": "Writing",
+    "tool": "ChatGPT",
+    "tags": [
+      "repurpose"
+    ],
+    "prompt": "Repurpose [CONTENT]: 5 Twitter posts, LinkedIn(300w), email(200w), Instagram caption, video script. Each: message, tone, CTA.\n\n[PASTE]"
+  },
+  {
+    "slug": "chatgpt-competitor-r",
+    "title": "ChatGPT Competitor Research",
+    "category": "Business",
+    "tool": "ChatGPT",
+    "tags": [
+      "competitor"
+    ],
+    "prompt": "Research [COMPETITOR]: overview, market, pricing, 5 features, 3 weaknesses, recent news, customer sentiment, differentiation opportunities."
+  },
+  {
+    "slug": "chatgpt-brand-story",
+    "title": "ChatGPT Brand Story",
+    "category": "Business",
+    "tool": "ChatGPT",
+    "tags": [
+      "brand"
+    ],
+    "prompt": "Brand story [COMPANY]: origin, problem, solution, mission, vision. Tone: [AUTHENTIC/INSPIRING]. [N] words."
+  },
+  {
+    "slug": "chatgpt-res-thread",
+    "title": "ChatGPT Research Twitter Thread",
+    "category": "Research",
+    "tool": "ChatGPT",
+    "tags": [
+      "twitter",
+      "research"
+    ],
+    "prompt": "8-tweet thread [TOPIC]: 1(hook+claim), 2-6(evidence+sources), 7(implication), 8(CTA). Under 270 chars, data, sources."
+  },
+  {
+    "slug": "chatgpt-diff-explain",
+    "title": "ChatGPT Diff Explanation",
+    "category": "Coding",
+    "tool": "ChatGPT",
+    "tags": [
+      "diff"
+    ],
+    "prompt": "Explain diff for non-technical: what changed, why, impact, risk, testing needed.\n\n[PASTE DIFF]"
+  },
+  {
+    "slug": "chatgpt-api-doc",
+    "title": "ChatGPT API Documentation",
+    "category": "Writing",
+    "tool": "ChatGPT",
+    "tags": [
+      "api",
+      "docs"
+    ],
+    "prompt": "API docs [ENDPOINT]: summary, method+path, auth, parameters table, request(curl+JSON), response(200+400+401), rate limits. OpenAPI style."
+  },
+  {
+    "slug": "chatgpt-refactor-plan",
+    "title": "ChatGPT Refactoring Plan",
+    "category": "Coding",
+    "tool": "ChatGPT",
+    "tags": [
+      "refactor"
+    ],
+    "prompt": "Refactoring plan: code smells ranked, steps by dependency, each (what/why/risk/test), effort, final state.\n\n[PASTE CODE]"
+  },
+  {
+    "slug": "chatgpt-standup-n",
+    "title": "ChatGPT Standup Notes",
+    "category": "Productivity",
+    "tool": "ChatGPT",
+    "tags": [
+      "standup"
+    ],
+    "prompt": "Format notes into standup: Yesterday(bullets), Today(bullets), Blockers(with helper), Notes. Under 100 words.\n\n[PASTE]"
+  },
+  {
+    "slug": "chatgpt-slack-sum",
+    "title": "ChatGPT Slack Summary",
+    "category": "Productivity",
+    "tool": "ChatGPT",
+    "tags": [
+      "slack"
+    ],
+    "prompt": "Summarize Slack thread: topic(1 sentence), key points, decisions, action items(owners), questions, next steps.\n\n[PASTE]"
+  },
+  {
+    "slug": "chatgpt-presentation-s",
+    "title": "ChatGPT Presentation Script",
+    "category": "Business",
+    "tool": "ChatGPT",
+    "tags": [
+      "presentation"
+    ],
+    "prompt": "[MINUTES]-min presentation [TOPIC]: per slide (title, visual, script, transition). [N] slides. Audience: [DESCRIBE]."
+  },
+  {
+    "slug": "chatgpt-feedback-resp",
+    "title": "ChatGPT Feedback Response",
+    "category": "Business",
+    "tool": "ChatGPT",
+    "tags": [
+      "feedback"
+    ],
+    "prompt": "Customer feedback response: acknowledge, apologize if needed, explain (no excuses), what we are doing, what to expect. Empathetic.\n\n[PASTE]"
+  },
+  {
+    "slug": "chatgpt-roadmap-p",
+    "title": "ChatGPT Product Roadmap",
+    "category": "Business",
+    "tool": "ChatGPT",
+    "tags": [
+      "roadmap"
+    ],
+    "prompt": "6-month roadmap [PRODUCT]: quarterly themes, 3-5 features, dependencies, metrics, risks. Now/Next/Later. Table."
+  },
+  {
+    "slug": "chatgpt-blog-end",
+    "title": "ChatGPT Blog Conclusion",
+    "category": "Writing",
+    "tool": "ChatGPT",
+    "tags": [
+      "conclusion"
+    ],
+    "prompt": "Blog conclusion [TOPIC]: summary(2-3 sentences), takeaway(1 sentence), CTA(next step), comment question. No cliches."
+  },
+  {
+    "slug": "chatgpt-okr-gen",
+    "title": "ChatGPT OKR Generator",
+    "category": "Business",
+    "tool": "ChatGPT",
+    "tags": [
+      "okr"
+    ],
+    "prompt": "OKRs [ROLE] [QUARTER]: objectives (inspiring), 3 key results each (measurable), confidence (0-1), stretch vs committed. Table."
+  },
+  {
+    "slug": "claude-arch-review",
+    "title": "Claude Architecture Review",
+    "category": "Coding",
+    "tool": "Claude",
+    "tags": [
+      "architecture"
+    ],
+    "prompt": "Review architecture: patterns, coupling, cohesion, dependencies, testability, 3 improvements, risk.\n\n[PASTE FILES]"
+  },
+  {
+    "slug": "claude-long-qa",
+    "title": "Claude Long Document Q&A",
+    "category": "Research",
+    "tool": "Claude",
+    "tags": [
+      "document",
+      "qa"
+    ],
+    "prompt": "Answer questions about document: answer(2-3 sentences), quote, reference, confidence. If not found, say so.\nQuestions:\n[PASTE]\nDocument:\n[PASTE]"
+  },
+  {
+    "slug": "claude-contract-sum",
+    "title": "Claude Contract Summary",
+    "category": "Legal",
+    "tool": "Claude",
+    "tags": [
+      "contract"
+    ],
+    "prompt": "Summarize contract: parties, agreements, payment, dates, termination, liability, unusual clauses(flag), risk.\n\n[PASTE]"
+  },
+  {
+    "slug": "claude-paper-analysis",
+    "title": "Claude Research Paper",
+    "category": "Research",
+    "tool": "Claude",
+    "tags": [
+      "paper"
+    ],
+    "prompt": "Analyze paper: thesis, methodology, findings, limitations, significance, implications, questions, follow-up reading.\n\n[PASTE]"
+  },
+  {
+    "slug": "claude-patent-a",
+    "title": "Claude Patent Analysis",
+    "category": "Legal",
+    "tool": "Claude",
+    "tags": [
+      "patent"
+    ],
+    "prompt": "Analyze patent: what it covers(plain English), claims ranked, prior art, infringements, strengths/weaknesses, implications.\n\n[PASTE]"
+  },
+  {
+    "slug": "claude-spec-review",
+    "title": "Claude Spec Deep Review",
+    "category": "Coding",
+    "tool": "Claude",
+    "tags": [
+      "spec"
+    ],
+    "prompt": "Deep spec review: ambiguities, missing reqs, contradictions, testability, feasibility, security, performance, score(1-10).\n\n[PASTE]"
+  },
+  {
+    "slug": "claude-code-tut",
+    "title": "Claude Code Tutorial",
+    "category": "Coding",
+    "tool": "Claude",
+    "tags": [
+      "tutorial"
+    ],
+    "prompt": "Tutorial [TOPIC]: prerequisites, what you build, step-by-step runnable code, explanation after each, common mistakes, next steps. Level: [DESCRIBE]."
+  },
+  {
+    "slug": "claude-prof-email",
+    "title": "Claude Professional Email",
+    "category": "Writing",
+    "tool": "Claude",
+    "tags": [
+      "email"
+    ],
+    "prompt": "Professional email [SITUATION]: subject(60 chars), greeting, context(1 sentence), body, specific ask, closing. Tone: [FORMAL/FRIENDLY]."
+  },
+  {
+    "slug": "claude-sow-doc",
+    "title": "Claude Statement of Work",
+    "category": "Business",
+    "tool": "Claude",
+    "tags": [
+      "sow"
+    ],
+    "prompt": "SOW [PROJECT]: overview, scope(deliverables), timeline, acceptance criteria, out of scope, payment schedule, assumptions, change process."
+  },
+  {
+    "slug": "claude-rfp-resp",
+    "title": "Claude RFP Response",
+    "category": "Business",
+    "tool": "Claude",
+    "tags": [
+      "rfp"
+    ],
+    "prompt": "RFP response [PROJECT]: exec summary, understanding, approach, team, timeline, pricing, risk mitigation, differentiators, references, terms. RFP:\n[PASTE]"
+  },
+  {
+    "slug": "claude-lit-review",
+    "title": "Claude Literature Review",
+    "category": "Research",
+    "tool": "Claude",
+    "tags": [
+      "literature"
+    ],
+    "prompt": "Literature review [TOPIC]: intro, methodology, thematic analysis (group by theme), each (findings/debates/gaps), synthesis, research gaps, conclusion. [N] words."
+  },
+  {
+    "slug": "claude-policy-a",
+    "title": "Claude Policy Analysis",
+    "category": "Research",
+    "tool": "Claude",
+    "tags": [
+      "policy"
+    ],
+    "prompt": "Analyze policy: what it requires(plain English), who affected, timeline, cost, implementation, mistakes, risk, comparison.\n\n[PASTE]"
+  },
+  {
+    "slug": "claude-tech-spec-w",
+    "title": "Claude Technical Spec",
+    "category": "Coding",
+    "tool": "Claude",
+    "tags": [
+      "spec"
+    ],
+    "prompt": "Tech spec [FEATURE]: overview, user stories, functional reqs, non-functional, data model, API design, UI/UX, testing, rollout, questions."
+  },
+  {
+    "slug": "claude-postmortem",
+    "title": "Claude Postmortem",
+    "category": "Productivity",
+    "tool": "Claude",
+    "tags": [
+      "incident"
+    ],
+    "prompt": "Postmortem: summary(1 paragraph), timeline, impact, root cause(5 whys), factors, well/wrong, action items(owner+deadline).\n\n[PASTE]"
+  },
+  {
+    "slug": "claude-pipeline-d",
+    "title": "Claude Data Pipeline",
+    "category": "Data",
+    "tool": "Claude",
+    "tags": [
+      "pipeline"
+    ],
+    "prompt": "Pipeline [USE CASE]: sources, ingestion, transformation, storage, quality, monitoring, failure handling, cost, scalability. ASCII diagram."
+  },
+  {
+    "slug": "claude-user-rs",
+    "title": "Claude User Research Synthesis",
+    "category": "Research",
+    "tool": "Claude",
+    "tags": [
+      "user-research"
+    ],
+    "prompt": "Synthesize user research: themes(3-5), each(evidence/frequency/severity), quotes, pain points ranked, opportunities, recommendations.\n\n[PASTE]"
+  },
+  {
+    "slug": "claude-comp-intel",
+    "title": "Claude Competitive Intel",
+    "category": "Business",
+    "tool": "Claude",
+    "tags": [
+      "competitive"
+    ],
+    "prompt": "Competitive intel [COMPANY] vs [COMPETITORS]: moves(90 days), pricing, launches, leadership, funding, wins/losses, strengths/weaknesses, recommendations."
+  },
+  {
+    "slug": "claude-board-memo",
+    "title": "Claude Board Memo",
+    "category": "Business",
+    "tool": "Claude",
+    "tags": [
+      "memo"
+    ],
+    "prompt": "Board memo [TOPIC]: exec summary(3 sentences), background, situation(data), options(2-3 pros/cons), recommendation, financial impact, risks, timeline, decision needed."
+  },
+  {
+    "slug": "claude-grant-d",
+    "title": "Claude Deep Grant Proposal",
+    "category": "Writing",
+    "tool": "Claude",
+    "tags": [
+      "grant"
+    ],
+    "prompt": "Grant [PROJECT]: cover, abstract(250w), problem(data), literature, goals(SMART), methodology, timeline(Gantt), budget, evaluation, team, sustainability. Funder: [DESCRIBE]."
+  },
+  {
+    "slug": "midjourney-3d-render",
+    "title": "Midjourney 3D Render",
+    "category": "Image",
+    "tool": "Midjourney",
+    "tags": [
+      "3d",
+      "render"
+    ],
+    "prompt": "3D render of [PRODUCT/SCENE], [COLORS], soft studio lighting, octane quality, clean bg, product photography, high detail --ar 1:1 --v 6"
+  },
+  {
+    "slug": "midjourney-isometric",
+    "title": "Midjourney Isometric",
+    "category": "Image",
+    "tool": "Midjourney",
+    "tags": [
+      "isometric"
+    ],
+    "prompt": "isometric illustration of [SCENE], [COLORS], clean lines, detailed, soft shadows, modern flat design --ar 16:9 --v 6"
+  },
+  {
+    "slug": "midjourney-watercolor",
+    "title": "Midjourney Watercolor",
+    "category": "Image",
+    "tool": "Midjourney",
+    "tags": [
+      "watercolor"
+    ],
+    "prompt": "watercolor of [SUBJECT], soft brush strokes, [MOOD], bleeding edges, paper texture, traditional media --ar 4:3 --v 6"
+  },
+  {
+    "slug": "midjourney-cinematic",
+    "title": "Midjourney Cinematic Scene",
+    "category": "Image",
+    "tool": "Midjourney",
+    "tags": [
+      "cinematic"
+    ],
+    "prompt": "cinematic scene [DESCRIPTION], dramatic lighting, [TIME], atmospheric, film still, [LENS], color grade [MOOD] --ar 21:9 --v 6"
+  },
+  {
+    "slug": "midjourney-textile",
+    "title": "Midjourney Textile Pattern",
+    "category": "Image",
+    "tool": "Midjourney",
+    "tags": [
+      "pattern"
+    ],
+    "prompt": "seamless textile pattern [MOTIF], [COLORS], [STYLE: geometric/floral], repeating, design-ready --ar 1:1 --v 6"
+  },
+  {
+    "slug": "midjourney-storyboard",
+    "title": "Midjourney Storyboard",
+    "category": "Image",
+    "tool": "Midjourney",
+    "tags": [
+      "storyboard"
+    ],
+    "prompt": "storyboard frame [SCENE], simple line art, character poses, camera angle, action notes --ar 16:9 --v 6"
+  },
+  {
+    "slug": "midjourney-food-flat",
+    "title": "Midjourney Food Flat Lay",
+    "category": "Image",
+    "tool": "Midjourney",
+    "tags": [
+      "food"
+    ],
+    "prompt": "overhead flat lay [FOOD] on [SURFACE], natural lighting, arranged, fresh, professional food photography --ar 1:1 --v 6"
+  },
+  {
+    "slug": "midjourney-arch-night",
+    "title": "Midjourney Architecture Night",
+    "category": "Image",
+    "tool": "Midjourney",
+    "tags": [
+      "architecture",
+      "night"
+    ],
+    "prompt": "architectural night shot [BUILDING], illuminated windows, [LIGHTING], dramatic sky, reflection --ar 16:9 --v 6"
+  },
+  {
+    "slug": "midjourney-fantasy",
+    "title": "Midjourney Fantasy Landscape",
+    "category": "Image",
+    "tool": "Midjourney",
+    "tags": [
+      "fantasy"
+    ],
+    "prompt": "fantasy landscape [DESCRIPTION], [LIGHTING], epic scale, [COLORS], concept art quality, detailed, matte painting --ar 21:9 --v 6"
+  },
+  {
+    "slug": "midjourney-product-360",
+    "title": "Midjourney Product 360",
+    "category": "Image",
+    "tool": "Midjourney",
+    "tags": [
+      "product"
+    ],
+    "prompt": "product photography [PRODUCT] on [SURFACE], [BACKGROUND], studio lighting, 360 showcase, ultra clean --ar 1:1 --v 6"
+  },
+  {
+    "slug": "midjourney-info-bg",
+    "title": "Midjourney Infographic Background",
+    "category": "Image",
+    "tool": "Midjourney",
+    "tags": [
+      "infographic"
+    ],
+    "prompt": "abstract infographic background, [COLORS], geometric data viz elements, clean modern, text overlay space --ar 16:9 --v 6"
+  },
+  {
+    "slug": "midjourney-bw-portrait",
+    "title": "Midjourney B&W Portrait",
+    "category": "Image",
+    "tool": "Midjourney",
+    "tags": [
+      "portrait",
+      "bw"
+    ],
+    "prompt": "B&W portrait [SUBJECT], [EXPRESSION], chiaroscuro, 85mm, deep shadows, fine art, film grain --ar 4:5 --v 6"
+  },
+  {
+    "slug": "midjourney-gradient",
+    "title": "Midjourney Abstract Gradient",
+    "category": "Image",
+    "tool": "Midjourney",
+    "tags": [
+      "abstract",
+      "gradient"
+    ],
+    "prompt": "abstract gradient [COLOR 1] to [COLOR 2], smooth, subtle texture, modern minimal, website hero suitable --ar 16:9 --v 6"
+  },
+  {
+    "slug": "midjourney-coin",
+    "title": "Midjourney Coin Design",
+    "category": "Image",
+    "tool": "Midjourney",
+    "tags": [
+      "coin"
+    ],
+    "prompt": "coin design [THEME], [METAL], embossed details, [SYMBOL], clean rim, minting style, macro --ar 1:1 --v 6"
+  },
+  {
+    "slug": "midjourney-book-cover",
+    "title": "Midjourney Book Cover",
+    "category": "Image",
+    "tool": "Midjourney",
+    "tags": [
+      "book",
+      "cover"
+    ],
+    "prompt": "book cover [GENRE] [TOPIC], [MOOD], central imagery: [DESCRIBE], typography area, professional --ar 2:3 --v 6"
+  },
+  {
+    "slug": "cursor-merge-conf",
+    "title": "Cursor Merge Conflict",
+    "category": "Coding",
+    "tool": "Cursor",
+    "tags": [
+      "merge"
+    ],
+    "prompt": "Resolve merge conflict: both sides intent, safe strategy, merged code, verify test, prevention.\n\n[PASTE CONFLICT]"
+  },
+  {
+    "slug": "cursor-perf-opt",
+    "title": "Cursor Performance Optimize",
+    "category": "Coding",
+    "tool": "Cursor",
+    "tags": [
+      "performance"
+    ],
+    "prompt": "Optimize code: profile, optimizations list, optimized code, before/after complexity, memory impact.\n\n[PASTE CODE]"
+  },
+  {
+    "slug": "cursor-security",
+    "title": "Cursor Security Audit",
+    "category": "Coding",
+    "tool": "Cursor",
+    "tags": [
+      "security"
+    ],
+    "prompt": "Audit code: OWASP Top 10, input validation, auth issues, data exposure, dependency risks, fixes for CRITICAL, risk score.\n\n[PASTE CODE]"
+  },
+  {
+    "slug": "cursor-migration",
+    "title": "Cursor Code Migration",
+    "category": "Coding",
+    "tool": "Cursor",
+    "tags": [
+      "migration"
+    ],
+    "prompt": "Migrate [OLD] to [NEW]: what changed, why, migration code, breaking changes, rollback. Full migrated file.\n\n[PASTE CODE]"
+  },
+  {
+    "slug": "cursor-tdd",
+    "title": "Cursor TDD Workflow",
+    "category": "Coding",
+    "tool": "Cursor",
+    "tags": [
+      "tdd"
+    ],
+    "prompt": "TDD for [FEATURE]: 1) Failing test (Red), 2) Min implementation (Green), 3) Refactor. Framework: [JEST/VITEST]."
+  },
+  {
+    "slug": "cursor-ci-pipe",
+    "title": "Cursor CI Pipeline",
+    "category": "Coding",
+    "tool": "Cursor",
+    "tags": [
+      "ci"
+    ],
+    "prompt": "CI pipeline [PROJECT]: build, test, lint, security scan, deploy, notification. Platform: [GITHUB ACTIONS/GITLAB]."
+  },
+  {
+    "slug": "cursor-docker",
+    "title": "Cursor Docker Setup",
+    "category": "Coding",
+    "tool": "Cursor",
+    "tags": [
+      "docker"
+    ],
+    "prompt": "Docker for [PROJECT]: Dockerfile (multi-stage), docker-compose (dev+prod), .dockerignore, health check, volumes, env vars."
+  },
+  {
+    "slug": "cursor-db-mig",
+    "title": "Cursor Database Migration",
+    "category": "Coding",
+    "tool": "Cursor",
+    "tags": [
+      "database"
+    ],
+    "prompt": "DB migration [CHANGE]: up migration, down migration, data migration, indexes, FK constraints, test data. ORM: [PRISMA/TYPEORM]."
+  },
+  {
+    "slug": "cursor-graphql-s",
+    "title": "Cursor GraphQL Schema",
+    "category": "Coding",
+    "tool": "Cursor",
+    "tags": [
+      "graphql"
+    ],
+    "prompt": "GraphQL schema [DOMAIN]: Types, Queries, Mutations, Inputs, Enums, Resolvers, N+1 prevention. Domain: [DESCRIBE]."
+  },
+  {
+    "slug": "cursor-state-mgmt",
+    "title": "Cursor State Management",
+    "category": "Coding",
+    "tool": "Cursor",
+    "tags": [
+      "state"
+    ],
+    "prompt": "State management [APP]: state shape, library (Redux/Zustand/Jotai), data flow, actions, selectors, persistence. App: [DESCRIBE]."
+  },
+  {
+    "slug": "flux-interior",
+    "title": "Flux Interior Design",
+    "category": "Image",
+    "tool": "Flux",
+    "tags": [
+      "interior"
+    ],
+    "prompt": "photorealistic interior [ROOM], [STYLE], [COLORS], natural lighting, furniture: [DESCRIBE], real estate photography"
+  },
+  {
+    "slug": "flux-mockup",
+    "title": "Flux Product Mockup",
+    "category": "Image",
+    "tool": "Flux",
+    "tags": [
+      "mockup"
+    ],
+    "prompt": "product mockup [PRODUCT] on [DEVICE], realistic lighting, [BACKGROUND], brand styling, commercial quality"
+  },
+  {
+    "slug": "flux-fashion",
+    "title": "Flux Fashion Lookbook",
+    "category": "Image",
+    "tool": "Flux",
+    "tags": [
+      "fashion"
+    ],
+    "prompt": "fashion lookbook [GARMENT], [MODEL], [POSE], [LIGHTING], [BACKGROUND], editorial fashion photography"
+  },
+  {
+    "slug": "flux-landscape",
+    "title": "Flux Landscape Photography",
+    "category": "Image",
+    "tool": "Flux",
+    "tags": [
+      "landscape"
+    ],
+    "prompt": "landscape photography [LOCATION], [TIME], [WEATHER], [SEASON], dramatic [ELEMENT], wide angle, professional"
+  },
+  {
+    "slug": "flux-abstract",
+    "title": "Flux Abstract Art",
+    "category": "Image",
+    "tool": "Flux",
+    "tags": [
+      "abstract"
+    ],
+    "prompt": "abstract art [COLORS], [STYLE: geometric/organic], [TEXTURE], gallery quality, emotional depth, high resolution"
+  },
+  {
+    "slug": "any-okr-gen",
+    "title": "AI OKR Generator",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "okr"
+    ],
+    "prompt": "OKRs [ROLE] [QUARTER]: objectives (inspiring), 3 key results each (measurable), confidence (0-1), stretch vs committed. Table."
+  },
+  {
+    "slug": "any-handoff-doc",
+    "title": "AI Handoff Document",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "handoff"
+    ],
+    "prompt": "Project handoff: overview, status, done, in-progress, next (roadmap), issues, contacts, access, ongoing tasks."
+  },
+  {
+    "slug": "any-postmortem-t",
+    "title": "AI Postmortem Template",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "postmortem"
+    ],
+    "prompt": "Blameless postmortem: summary, timeline, impact, root cause (5 whys), factors, well/wrong, action items, lessons, follow-up date."
+  },
+  {
+    "slug": "any-change-mgmt",
+    "title": "AI Change Management",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "change"
+    ],
+    "prompt": "Change mgmt [CHANGE]: what+why, who affected, comms plan, training, timeline, risks, metrics, rollback, recognition."
+  },
+  {
+    "slug": "any-hiring-rubric",
+    "title": "AI Hiring Rubric",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "hiring"
+    ],
+    "prompt": "Interview rubric [ROLE]: 5 competencies, behavioral Q+scoring(1-5), technical assessment, culture fit, red/green flags, decision matrix."
+  },
+  {
+    "slug": "any-vendor-eval",
+    "title": "AI Vendor Evaluation",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "vendor"
+    ],
+    "prompt": "Vendor eval [CATEGORY]: capability(30%), pricing(20%), support(15%), security(15%), integration(10%), references(10%). Score 1-5."
+  },
+  {
+    "slug": "any-budget-req",
+    "title": "AI Budget Request",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "budget"
+    ],
+    "prompt": "Budget request [ITEM]: what, why (business case), cost breakdown, alternatives, ROI (timeframe+metrics), risk of not approving. Amount: $[AMOUNT]."
+  },
+  {
+    "slug": "any-stakeholder-c",
+    "title": "AI Stakeholder Comms",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "stakeholder"
+    ],
+    "prompt": "Stakeholder comms [PROJECT]: map, each (frequency, format, content, channel, owner), messages by phase, escalation path."
+  },
+  {
+    "slug": "any-crisis-comms",
+    "title": "AI Crisis Communication",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "crisis"
+    ],
+    "prompt": "Crisis comms [SCENARIO]: summary, key messages(3), Q&A (anticipated+answers), notification order, channels, timeline, spokesperson, monitoring."
+  },
+  {
+    "slug": "any-30-60-90",
+    "title": "AI 30-60-90 Plan",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "onboarding"
+    ],
+    "prompt": "30-60-90 plan [ROLE]: Days 1-30(Learn: orientation, training), 31-60(Contribute: own tasks), 61-90(Lead: responsibility, goals)."
+  },
+  {
+    "slug": "any-dept-okrs",
+    "title": "AI Department OKRs",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "okr",
+      "department"
+    ],
+    "prompt": "Quarterly OKRs [DEPARTMENT]: objectives align to company goal. 3 key results each, owner, confidence. OKR tree."
+  },
+  {
+    "slug": "any-quarterly-p",
+    "title": "AI Quarterly Planning",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "quarterly"
+    ],
+    "prompt": "Quarterly plan [TEAM]: theme, top 3 goals (metrics), initiatives, capacity, risks, dependencies, metrics, weekly milestones."
+  },
+  {
+    "slug": "any-cs-plan",
+    "title": "AI Customer Success Plan",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "customer-success"
+    ],
+    "prompt": "Customer success [CUSTOMER]: profile+goals, usage, adoption gaps, milestones(30/60/90), cadence, expansion, renewal risk, advocacy."
+  },
+  {
+    "slug": "any-partner-out",
+    "title": "AI Partner Outreach",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "partner"
+    ],
+    "prompt": "Partnership outreach [TARGET]: why (mutual benefit), who to contact, cold email, follow-up(3), meeting agenda, proposal, negotiation."
+  },
+  {
+    "slug": "any-renewal-str",
+    "title": "AI Renewal Strategy",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "renewal"
+    ],
+    "prompt": "Renewal [CUSTOMER]: health(1-10), usage, value delivered, risks, upsell, stakeholders, timeline, negotiation, retention backup."
+  },
+  {
+    "slug": "any-launch-plan",
+    "title": "AI Product Launch Plan",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "launch"
+    ],
+    "prompt": "Product launch [PRODUCT]: goals, audience, messaging, channels, content, pricing, sales enablement, checklist, monitoring, rollback."
+  },
+  {
+    "slug": "any-journey-map",
+    "title": "AI Customer Journey Map",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "journey"
+    ],
+    "prompt": "Journey [PRODUCT]: Awareness/Consideration/Purchase/Onboarding/Usage/Support/Renewal. Each: goal, touchpoints, emotions, friction, metric."
+  },
+  {
+    "slug": "any-pricing-str",
+    "title": "AI Pricing Strategy",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "pricing"
+    ],
+    "prompt": "Pricing [PRODUCT]: value metrics, models, competitor pricing, sensitivity, tiers(3), free tier, discount, annual vs monthly."
+  },
+  {
+    "slug": "any-churn-a",
+    "title": "AI Churn Analysis",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "churn"
+    ],
+    "prompt": "Churn [PRODUCT]: rate+trend, segments, reasons, lifecycle timing, predictors, retention by segment, win-back, success metrics."
+  },
+  {
+    "slug": "any-expansion",
+    "title": "AI Expansion Plan",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "expansion"
+    ],
+    "prompt": "Market expansion [PRODUCT] [NEW MARKET]: opportunity, competition, entry strategy, localization, timeline, resources, risks, metrics, budget."
+  },
+  {
+    "slug": "any-meeting-fac",
+    "title": "AI Meeting Facilitation",
+    "category": "Productivity",
+    "tool": "Any",
+    "tags": [
+      "meeting"
+    ],
+    "prompt": "Facilitation [MEETING TYPE]: prep, opening (icebreaker+agenda), discussion (timeboxed), decision method, documentation, closing, follow-up."
+  },
+  {
+    "slug": "any-time-audit",
+    "title": "AI Time Audit",
+    "category": "Productivity",
+    "tool": "Any",
+    "tags": [
+      "time"
+    ],
+    "prompt": "Analyze time log: by category(%), deep vs shallow, meeting vs solo, energy alignment, top 3 wasters, recommendations, ideal week.\n\n[PASTE LOG]"
+  },
+  {
+    "slug": "any-sop-writer",
+    "title": "AI SOP Writer",
+    "category": "Productivity",
+    "tool": "Any",
+    "tags": [
+      "sop"
+    ],
+    "prompt": "SOP [PROCESS]: purpose, scope, prerequisites, step-by-step, decision points, quality checks, troubleshooting, revision history."
+  },
+  {
+    "slug": "any-workflow-auto",
+    "title": "AI Workflow Automation",
+    "category": "Productivity",
+    "tool": "Any",
+    "tags": [
+      "workflow"
+    ],
+    "prompt": "Analyze workflow for automation: steps map, time per step, automation potential, tools, savings, ROI, implementation plan. Workflow: [DESCRIBE]."
+  },
+  {
+    "slug": "any-kb-structure",
+    "title": "AI Knowledge Base",
+    "category": "Productivity",
+    "tool": "Any",
+    "tags": [
+      "knowledge-base"
+    ],
+    "prompt": "KB [TEAM]: categories(5-7), sub-categories, templates, tagging, search, access control, maintenance, contribution guidelines."
+  },
+  {
+    "slug": "any-process-imp",
+    "title": "AI Process Improvement",
+    "category": "Productivity",
+    "tool": "Any",
+    "tags": [
+      "process"
+    ],
+    "prompt": "Improve process (lean): value stream map, waste(8 types), bottlenecks, root causes, future state, actions (impact/effort), metrics, timeline."
+  },
+  {
+    "slug": "any-doc-template",
+    "title": "AI Document Template",
+    "category": "Productivity",
+    "tool": "Any",
+    "tags": [
+      "template"
+    ],
+    "prompt": "Template [DOCUMENT TYPE]: structure, each section (purpose, content, example), placeholders, formatting, required vs optional, checklist."
+  },
+  {
+    "slug": "any-checklist-c",
+    "title": "AI Checklist Creator",
+    "category": "Productivity",
+    "tool": "Any",
+    "tags": [
+      "checklist"
+    ],
+    "prompt": "Checklist [PROCESS]: pre-task checks, steps (ordered), quality checks, post-task verification, common mistakes, escalation triggers."
+  },
+  {
+    "slug": "any-email-pack",
+    "title": "AI Email Template Pack",
+    "category": "Productivity",
+    "tool": "Any",
+    "tags": [
+      "email"
+    ],
+    "prompt": "Email templates [ROLE]: introduction, follow-up, request, update, apology, celebration, resignation, welcome. Each: subject+body+[PLACEHOLDERS]."
+  },
+  {
+    "slug": "any-retro-agile",
+    "title": "AI Agile Retrospective",
+    "category": "Productivity",
+    "tool": "Any",
+    "tags": [
+      "retro"
+    ],
+    "prompt": "Retrospective [SPRINT]: what went well(3-5), improvements(3-5), action items(SMART+owner), health(1-5: trust/comm/velocity/quality), commitments."
+  },
+  {
+    "slug": "any-prioritize",
+    "title": "AI Task Prioritization",
+    "category": "Productivity",
+    "tool": "Any",
+    "tags": [
+      "prioritization"
+    ],
+    "prompt": "Prioritize tasks: impact/effort matrix, Eisenhower, dependencies, energy, recommended order, delegate, drop, schedule. Tasks:\n\n[PASTE]"
+  },
+  {
+    "slug": "any-status-rpt",
+    "title": "AI Status Report Template",
+    "category": "Productivity",
+    "tool": "Any",
+    "tags": [
+      "status"
+    ],
+    "prompt": "Status report [PROJECT]: health(green/yellow/red), progress(bullets), metrics(vs target), risks, next week, decisions, asks. 1-page."
+  },
+  {
+    "slug": "any-meeting-types",
+    "title": "AI Meeting Design",
+    "category": "Productivity",
+    "tool": "Any",
+    "tags": [
+      "meeting"
+    ],
+    "prompt": "Meeting formats [TEAM]: standup(10m), weekly(30m), sprint planning(2h), retro(1h), 1:1(30m), all-hands(30m). Each: purpose, agenda, output, async alt."
+  },
+  {
+    "slug": "any-knowledge-t",
+    "title": "AI Knowledge Transfer",
+    "category": "Productivity",
+    "tool": "Any",
+    "tags": [
+      "knowledge-transfer"
+    ],
+    "prompt": "Knowledge transfer [PERSON LEAVING]: what they know, relationships, projects, context, documentation, shadowing, handoff sessions, support, checklist."
+  },
+  {
+    "slug": "any-workspace-s",
+    "title": "AI Workspace Setup",
+    "category": "Productivity",
+    "tool": "Any",
+    "tags": [
+      "workspace"
+    ],
+    "prompt": "Workspace [ROLE]: physical (desk, monitor, chair, lighting), digital (tools, shortcuts), file org, comms, focus, ergonomics, stack, routine."
+  },
+  {
+    "slug": "any-data-clean",
+    "title": "AI Data Cleaning",
+    "category": "Data",
+    "tool": "Any",
+    "tags": [
+      "data",
+      "cleaning"
+    ],
+    "prompt": "Data cleaning [DATASET]: quality (completeness/accuracy), missing strategy, outliers, standardization, deduplication, validation, script (Python/SQL)."
+  },
+  {
+    "slug": "any-dashboard-d",
+    "title": "AI Dashboard Design",
+    "category": "Data",
+    "tool": "Any",
+    "tags": [
+      "dashboard"
+    ],
+    "prompt": "Dashboard [AUDIENCE]: metrics(top 5), layout(F-pattern), chart types, filters, drill-downs, colors(accessible), refresh, mobile. Tool: [DESCRIBE]."
+  },
+  {
+    "slug": "any-ab-test-d",
+    "title": "AI A/B Test Design",
+    "category": "Data",
+    "tool": "Any",
+    "tags": [
+      "ab-testing"
+    ],
+    "prompt": "A/B test [HYPOTHESIS]: hypothesis, primary+secondary metrics, sample size, duration, traffic split, guardrails, statistical method, decision, rollout."
+  },
+  {
+    "slug": "any-sql-opt",
+    "title": "AI SQL Optimization",
+    "category": "Data",
+    "tool": "Any",
+    "tags": [
+      "sql"
+    ],
+    "prompt": "Optimize SQL: execution analysis, indexes, joins, subquery to CTE, partitioning, materialized views, optimized query, improvement.\n\n[PASTE SQL]"
+  },
+  {
+    "slug": "any-governance-d",
+    "title": "AI Data Governance",
+    "category": "Data",
+    "tool": "Any",
+    "tags": [
+      "governance"
+    ],
+    "prompt": "Governance [ORG]: classification (public/internal/confidential), roles (owner/steward/custodian), quality, access, retention, privacy (GDPR), audit, response."
+  },
+  {
+    "slug": "any-ml-spec-d",
+    "title": "AI ML Model Spec",
+    "category": "Data",
+    "tool": "Any",
+    "tags": [
+      "ml"
+    ],
+    "prompt": "Model spec [TASK]: problem type, features, target, candidates(3), metrics, splits, hyperparameters, deployment, monitoring. Task: [DESCRIBE]."
+  },
+  {
+    "slug": "any-pipeline-arch",
+    "title": "AI Data Pipeline Architecture",
+    "category": "Data",
+    "tool": "Any",
+    "tags": [
+      "pipeline"
+    ],
+    "prompt": "Pipeline: sources, ingestion(batch/streaming), staging, transforms, warehouse, quality, orchestration(Airflow), monitoring, cost, scalability. ASCII diagram."
+  },
+  {
+    "slug": "any-metrics-fwk",
+    "title": "AI Metrics Framework",
+    "category": "Data",
+    "tool": "Any",
+    "tags": [
+      "metrics"
+    ],
+    "prompt": "Metrics [PRODUCT]: North Star(1), input(3-5 leading), output(3-5 lagging), guardrails(3). Each: definition, formula, source, frequency, target, owner. Dashboard."
+  },
+  {
+    "slug": "any-data-mig",
+    "title": "AI Data Migration",
+    "category": "Data",
+    "tool": "Any",
+    "tags": [
+      "migration"
+    ],
+    "prompt": "Migration [OLD] to [NEW]: profiling, schema mapping, transformations, strategy(big bang/phased/parallel), quality checks, rollback, cutover, validation."
+  },
+  {
+    "slug": "any-eda-guide",
+    "title": "AI Exploratory Data Analysis",
+    "category": "Data",
+    "tool": "Any",
+    "tags": [
+      "eda"
+    ],
+    "prompt": "EDA [DATASET]: overview(shape/types/missing), univariate(distributions), bivariate(correlations), outliers, feature engineering, hypotheses, 5 charts, next steps. Python snippets."
+  },
+  {
+    "slug": "any-prompt-pat",
+    "title": "AI Prompt Pattern Library",
+    "category": "AI",
+    "tool": "Any",
+    "tags": [
+      "prompt",
+      "pattern"
+    ],
+    "prompt": "Reusable prompt pattern [TASK]: name, when to use, template(with [PLACEHOLDERS]), filled example, variations, failure modes, tips, alternatives."
+  },
+  {
+    "slug": "any-agent-design",
+    "title": "AI Agent Design Doc",
+    "category": "AI",
+    "tool": "Any",
+    "tags": [
+      "agent"
+    ],
+    "prompt": "Agent [USE CASE]: goal, tools, decision logic(flowchart), memory, error handling, human-in-loop, evaluation, cost/run, failure modes. Framework: [LANGGRAPH/CREWAI]."
+  },
+  {
+    "slug": "any-rag-design-d",
+    "title": "AI RAG System Design",
+    "category": "AI",
+    "tool": "Any",
+    "tags": [
+      "rag"
+    ],
+    "prompt": "RAG [USE CASE]: sources, chunking(size+overlap), embedding, vector store, retrieval(semantic+keyword), reranking, context window, prompt, eval, cost/query."
+  },
+  {
+    "slug": "any-finetune-plan",
+    "title": "AI Fine-Tuning Plan",
+    "category": "AI",
+    "tool": "Any",
+    "tags": [
+      "fine-tuning"
+    ],
+    "prompt": "Fine-tuning [MODEL] [TASK]: base model, data(size/format/quality), preparation, method(LoRA/full), hyperparams, evaluation, inference opt, cost, rollback."
+  },
+  {
+    "slug": "any-eval-fwk-d",
+    "title": "AI Evaluation Framework",
+    "category": "AI",
+    "tool": "Any",
+    "tags": [
+      "evaluation"
+    ],
+    "prompt": "Eval [SYSTEM]: dimensions(accuracy/safety/helpfulness/latency/cost), test data, metrics(automated+human), rubric, baseline, regression, monitoring, reporting."
+  },
+  {
+    "slug": "any-safety-check",
+    "title": "AI Safety Checklist",
+    "category": "AI",
+    "tool": "Any",
+    "tags": [
+      "safety"
+    ],
+    "prompt": "Safety [SYSTEM]: input validation(injection/jailbreak), output filtering(toxicity/PII/hallucination), bias, privacy, security, transparency, oversight, response."
+  },
+  {
+    "slug": "any-mcp-design-d",
+    "title": "AI MCP Server Design",
+    "category": "AI",
+    "tool": "Any",
+    "tags": [
+      "mcp"
+    ],
+    "prompt": "MCP server [CAPABILITY]: capability, tools(schemas), resources(URIs), prompts(templates), auth, error handling, testing, deployment, documentation."
+  },
+  {
+    "slug": "any-llm-router-d",
+    "title": "AI LLM Router Strategy",
+    "category": "AI",
+    "tool": "Any",
+    "tags": [
+      "router"
+    ],
+    "prompt": "LLM routing [APP]: task categories, model per category(+fallback), routing logic, cost optimization(cheap first), quality monitoring, latency, fallback chain, A/B."
+  },
+  {
+    "slug": "any-orchestration-d",
+    "title": "AI Workflow Orchestrator",
+    "category": "AI",
+    "tool": "Any",
+    "tags": [
+      "orchestration"
+    ],
+    "prompt": "Orchestration: task decomposition, agent assignment, data flow, error handling+retry, parallelization, checkpoints+human review, timeout+budget, monitoring, output."
+  },
+  {
+    "slug": "any-conversation-d",
+    "title": "AI Conversation Design",
+    "category": "AI",
+    "tool": "Any",
+    "tags": [
+      "conversation"
+    ],
+    "prompt": "Conversation [CHATBOT]: intents(list), each(triggers 5+/slots/response/follow-up), fallback, repair, escalation, personalization, tone guide, metrics."
   }
 ]
