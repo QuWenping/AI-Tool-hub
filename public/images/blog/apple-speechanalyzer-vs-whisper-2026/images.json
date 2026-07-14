@@ -1,0 +1,34 @@
+{
+  "slug": "apple-speechanalyzer-vs-whisper-2026",
+  "title": "Apple SpeechAnalyzer vs Whisper 2026 speech to text comparison",
+  "images": [
+    {
+      "type": "hero",
+      "path": "/images/blog/apple-speechanalyzer-vs-whisper-2026/hero.jpg",
+      "alt": "Apple SpeechAnalyzer vs Whisper 2026 speech to text comparison"
+    },
+    {
+      "type": "inline",
+      "index": 1,
+      "path": "/images/blog/apple-speechanalyzer-vs-whisper-2026/inline-1.jpg",
+      "alt": "speech recognition technology"
+    },
+    {
+      "type": "inline",
+      "index": 2,
+      "path": "/images/blog/apple-speechanalyzer-vs-whisper-2026/inline-2.jpg",
+      "alt": "API comparison chart"
+    },
+    {
+      "type": "inline",
+      "index": 3,
+      "path": "/images/blog/apple-speechanalyzer-vs-whisper-2026/inline-3.jpg",
+      "alt": "voice transcription AI"
+    },
+    {
+      "type": "closing",
+      "path": "/images/blog/apple-speechanalyzer-vs-whisper-2026/closing.jpg",
+      "alt": "Apple SpeechAnalyzer vs Whisper 2026 speech to text comparison - future outlook"
+    }
+  ]
+}
