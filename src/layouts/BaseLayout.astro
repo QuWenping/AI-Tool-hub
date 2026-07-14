@@ -1,8 +1,9 @@
-﻿---
+---
 import toolsData from "../data/tools.json";
 import categoriesData from "../data/categories.json";
 import Newsletter from "../components/Newsletter.astro";
 import CookieConsent from "../components/CookieConsent.astro";
+import Analytics from "@vercel/analytics/astro";
 const { title, description, keywords, canonical, lang = "en" } = Astro.props;
 const siteUrl = "https://thebestaitoolsreview.com";
 const fullTitle = title ? title + " | AI Tool Hub" : "AI Tool Hub | Best AI Tools Directory";
@@ -175,6 +176,7 @@ const ogImage = siteUrl + "/og-image.svg";
 
   {isHome && <script type="application/json" id="tools-data" set:html={JSON.stringify(toolsData)}></script>}
   {isHome && <script type="application/json" id="categories-data" set:html={JSON.stringify(categoriesData)}></script>}
+  <Analytics />
 </head>
 <body>
   <header>
