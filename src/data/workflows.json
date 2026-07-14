@@ -826,5 +826,210 @@
     "prerequisites": "Python 3.10+, Browser Use, Playwright, OpenAI/Claude API key",
     "title_zh": "用 Browser Use 自动采集网页数据",
     "summary_zh": "AI 浏览器自动化，处理复杂动态网站，提取结构化数据。"
+  },
+  {
+    "slug": "n8n-marketing-automation",
+    "title": "AI Marketing Automation Pipeline with n8n",
+    "title_zh": "n8n AI 营销自动化流水线",
+    "category": "Automation",
+    "tool": "n8n",
+    "difficulty": "Intermediate",
+    "description": "Automate content creation, social posting, and lead nurturing with a single n8n workflow.",
+    "summary": "This n8n workflow automates the entire marketing content pipeline: from content brief generation to social media posting to lead scoring. It reduces marketing operations time by 60%.",
+    "steps": [
+      {
+        "title": "Content Brief Trigger",
+        "detail": "Webhook receives content brief (topic, audience, channel). AI generates 3 content angles using OpenAI. Route to appropriate team member for approval."
+      },
+      {
+        "title": "AI Content Generation",
+        "detail": "Approved brief sent to AI for full content generation. AI writes blog post (1500 words), 5 social posts, and email newsletter. Quality check node verifies output."
+      },
+      {
+        "title": "Multi-Channel Distribution",
+        "detail": "Auto-post to WordPress, schedule social posts via Buffer/Hootsuite API, send newsletter via email API. Each channel gets platform-optimized content."
+      },
+      {
+        "title": "Lead Scoring & Nurturing",
+        "detail": "Track engagement (opens, clicks, shares). Score leads based on interaction. High-score leads get CRM update + sales notification. Low-score enter nurture sequence."
+      },
+      {
+        "title": "Analytics & Reporting",
+        "detail": "Weekly report generated: content performance, engagement metrics, lead quality, ROI. Distributed to stakeholders automatically."
+      }
+    ],
+    "tags": [
+      "marketing",
+      "automation",
+      "n8n",
+      "content",
+      "social-media"
+    ],
+    "useCase": "Marketing teams producing daily content across multiple channels.",
+    "prerequisites": "n8n, OpenAI API, social media API keys, email service API, CRM API"
+  },
+  {
+    "slug": "claude-code-review-pipeline",
+    "title": "Claude Code Review Pipeline for Teams",
+    "title_zh": "Claude 团队代码审查流水线",
+    "category": "Automation",
+    "tool": "Claude",
+    "difficulty": "Advanced",
+    "description": "Automate code review with Claude: PR analysis, inline comments, and approval recommendations.",
+    "summary": "This pipeline uses Claude to review pull requests automatically. It checks code quality, security, style compliance, and test coverage, posting inline comments and a summary review.",
+    "steps": [
+      {
+        "title": "GitHub Webhook Setup",
+        "detail": "Configure GitHub webhook for pull_request events. Point to your server (n8n or custom). The webhook sends PR metadata and diff data."
+      },
+      {
+        "title": "Claude Analysis",
+        "detail": "Send PR diff to Claude with review criteria: 1) Code style (per team standards), 2) Security (OWASP), 3) Performance, 4) Test coverage, 5) Documentation. Claude generates structured review."
+      },
+      {
+        "title": "Inline Comment Posting",
+        "detail": "Parse Claude output and post inline comments on specific GitHub PR lines using GitHub API. Critical issues trigger changes requested. Clean PRs get approved."
+      },
+      {
+        "title": "Summary & Metrics",
+        "detail": "Post summary review comment with: issues found by category, review time, files checked. Track metrics in dashboard for continuous improvement."
+      },
+      {
+        "title": "Feedback Loop",
+        "detail": "Track which AI suggestions were accepted vs rejected by developers. Monthly analysis refines the review prompt for better accuracy."
+      }
+    ],
+    "tags": [
+      "claude",
+      "code-review",
+      "github",
+      "automation",
+      "pipeline"
+    ],
+    "useCase": "Engineering teams wanting faster PR reviews and consistent quality standards.",
+    "prerequisites": "Claude API access, GitHub repo admin, webhook hosting"
+  },
+  {
+    "slug": "dify-sales-assistant",
+    "title": "AI Sales Assistant with Dify",
+    "title_zh": "Dify AI 销售助手",
+    "category": "Agent",
+    "tool": "Dify",
+    "difficulty": "Intermediate",
+    "description": "Build an AI sales assistant that researches prospects, drafts outreach, and updates CRM.",
+    "summary": "This Dify agent workflow automates sales preparation: research prospects, draft personalized outreach emails, update CRM with findings, and schedule follow-ups.",
+    "steps": [
+      {
+        "title": "Prospect Input",
+        "detail": "Sales rep enters prospect name and company. Dify agent triggers research workflow: company website, LinkedIn, news, recent announcements."
+      },
+      {
+        "title": "AI Research",
+        "detail": "Agent uses web search tools to gather: company size, industry, recent news, tech stack, decision makers. Summarizes findings in structured format."
+      },
+      {
+        "title": "Outreach Draft",
+        "detail": "AI drafts personalized cold email based on research findings. Includes: specific reference to recent company news, relevant pain points, tailored value proposition."
+      },
+      {
+        "title": "CRM Update",
+        "detail": "Agent updates CRM (HubSpot/Salesforce) with: research notes, company intelligence, recommended next steps, lead score. Creates follow-up task."
+      },
+      {
+        "title": "Follow-up Schedule",
+        "detail": "AI suggests follow-up sequence timing based on prospect engagement data. Creates calendar reminders and draft follow-up emails for sales rep to review."
+      }
+    ],
+    "tags": [
+      "sales",
+      "dify",
+      "agent",
+      "crm",
+      "automation"
+    ],
+    "useCase": "B2B sales teams wanting personalized outreach at scale.",
+    "prerequisites": "Dify, CRM API (HubSpot/Salesforce), web search API"
+  },
+  {
+    "slug": "comfyui-design-pipeline",
+    "title": "AI Design Asset Pipeline with ComfyUI",
+    "title_zh": "ComfyUI AI 设计资产流水线",
+    "category": "Image",
+    "tool": "ComfyUI",
+    "difficulty": "Advanced",
+    "description": "Generate brand-consistent design assets at scale: social graphics, product images, banners.",
+    "summary": "This ComfyUI pipeline produces brand-consistent visual assets: trains LoRA on brand style, generates variations for multiple platforms, auto-resizes and formats.",
+    "steps": [
+      {
+        "title": "Brand Style Training",
+        "detail": "Collect 15-20 brand reference images. Train LoRA model on brand style: colors, typography, layout patterns. Save checkpoint for reuse."
+      },
+      {
+        "title": "Asset Brief Input",
+        "detail": "Input design brief: asset type (social post, banner, product image), text content, color requirements. Pipeline selects appropriate template and LoRA."
+      },
+      {
+        "title": "Multi-Platform Generation",
+        "detail": "Generate assets for each platform: Instagram (1080x1080), Twitter (1500x500), LinkedIn (1200x627), Website hero (1920x1080). Same style, different dimensions."
+      },
+      {
+        "title": "Quality Check & Export",
+        "detail": "Auto-check: brand color compliance, text readability, composition balance. Export as PNG/JPG with proper naming. Save to organized folder structure."
+      },
+      {
+        "title": "Version Management",
+        "detail": "Track generated assets with metadata: brief, settings, LoRA version, date. Enable easy regeneration with variations for A/B testing."
+      }
+    ],
+    "tags": [
+      "comfyui",
+      "design",
+      "brand",
+      "automation",
+      "pipeline"
+    ],
+    "useCase": "Design teams needing consistent brand assets across multiple platforms.",
+    "prerequisites": "ComfyUI, LoRA training capability, GPU 8GB+ VRAM, brand reference images"
+  },
+  {
+    "slug": "langgraph-customer-support",
+    "title": "Multi-Agent Customer Support with LangGraph",
+    "title_zh": "LangGraph 多 Agent 客服系统",
+    "category": "Agent",
+    "tool": "LangGraph",
+    "difficulty": "Advanced",
+    "description": "Build a stateful multi-agent customer support system with routing, knowledge base, and human escalation.",
+    "summary": "This LangGraph workflow creates a customer support system with: intent classification, knowledge base Q&A, ticket creation, and human agent escalation for complex issues.",
+    "steps": [
+      {
+        "title": "Intent Classification Node",
+        "detail": "Classify incoming customer message: 1) FAQ (answer from knowledge base), 2) Technical issue (troubleshooting flow), 3) Billing (CRM lookup), 4) Complaint (escalation), 5) Other (human)."
+      },
+      {
+        "title": "Knowledge Base Q&A Node",
+        "detail": "For FAQ intent: RAG retrieval from company knowledge base. Generate answer with citations. If confidence < 70%, route to human."
+      },
+      {
+        "title": "Troubleshooting Flow Node",
+        "detail": "For technical issues: guided diagnostic flow. Ask clarifying questions, suggest solutions step by step. Track issue resolution attempts."
+      },
+      {
+        "title": "CRM Integration Node",
+        "detail": "For billing/account issues: lookup customer data, subscription status, payment history. Generate response with specific account context."
+      },
+      {
+        "title": "Human Escalation Node",
+        "detail": "For complex issues or low-confidence responses: create support ticket with full conversation context, customer history, AI analysis summary. Notify human agent."
+      }
+    ],
+    "tags": [
+      "langgraph",
+      "customer-support",
+      "multi-agent",
+      "rag",
+      "automation"
+    ],
+    "useCase": "SaaS companies wanting to deflect 50-70% of support tickets automatically.",
+    "prerequisites": "Python 3.11+, LangGraph, LangChain, FastAPI, OpenAI API, knowledge base docs"
   }
 ]
