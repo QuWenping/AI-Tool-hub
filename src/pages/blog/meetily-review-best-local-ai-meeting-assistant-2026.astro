@@ -17,13 +17,16 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
         <div class="meta-item reviewer"><i class="fas fa-user-check"></i> <span>Reviewed by <strong>Lin Chen</strong>, Lead Reviewer (5+ years testing AI tools)</span></div>
       </div>
     </header>
+      <img src="/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/hero.jpg" alt="Meetily Review: The Best Local AI Meeting Assistant in 2026?" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
 
     <section class="blog-content">
 <p>If you have hesitated to invite Otter or Fireflies into a sensitive sales call, investor update, or therapy appointment because you do not know where the recording ends up, you are not alone. Meetily, a new Rust-based open-source AI meeting assistant that transcribes and summarizes conversations entirely on your own machine, is quickly climbing GitHub’s trending charts as the privacy-first alternative everyone has been waiting for.</p>
 <h2>What Is Meetily?</h2>
+      <img src="/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/inline-1.jpg" alt="What Is Meetily?" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
 <p>Meetily is an open-source AI meeting note-taker built in Rust that promises live transcription, speaker diarization, and summarization without sending a single byte to the cloud. It hit the top of GitHub Trending in early July 2026 with more than 8,500 stars in a few days, a signal that developers and knowledge workers are ready for a local-first option in a category long dominated by cloud-only SaaS.</p>
 <p>Unlike browser extensions or cloud bots that join your calls as a virtual attendee, Meetily runs as a native desktop application on macOS and Windows. It captures audio directly from your microphone and system output, feeds it through either Nvidia’s Parakeet or OpenAI’s Whisper ASR models (the project claims a 4x speedup over baseline Whisper), and then hands the transcript to a local large language model via Ollama for summarization and action-item extraction.</p>
 <h2>Why Local-First AI Matters in 2026</h2>
+      <img src="/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/inline-2.jpg" alt="Why Local-First AI Matters in 2026" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
 <p>Three big shifts are pushing meeting transcription off the cloud and onto your laptop.</p>
 <ul>
 <li><strong>Privacy regulation is tightening.</strong> The EU AI Act and updated state-level privacy laws in the U.S. now require explicit consent before recording conversations in many business contexts, and organizations face steep fines for leaking customer data from third-party SaaS logs.</li>
@@ -32,6 +35,7 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
 </ul>
 <p>That combination is why we are seeing a wave of “runs on your machine” AI tools, from image generators to coding assistants, and Meetily is the first meeting assistant that feels like a finished product rather than a weekend project.</p>
 <h2>Hands-On: How Meetily Performs</h2>
+      <img src="/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/inline-3.jpg" alt="Hands-On: How Meetily Performs" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
 <h3>Setup and Installation</h3>
 <p>We downloaded the latest macOS build from the official website on an M3 MacBook Pro with 16 GB of RAM. Installation was a standard drag-to-Applications affair. On first launch, Meetily prompts you to download its default ASR model (Parakeet, around 1.2 GB) and a summarization model through Ollama; the whole setup took about seven minutes on a 100 Mbps connection.</p>
 <p>Windows installation is similar, and the project publishes signed binaries for both platforms. If you want to run on Linux, you will have to build from source for now, but contributors tell us official Linux packages are on the roadmap for late 2026.</p>
