@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import toolsData from "../../../data/tools.json";
+import fs from "fs";
 import categories from "../../../data/categories.json";
 export async function getStaticPaths() {
   return Object.entries(toolsData)
@@ -10,6 +11,9 @@ export async function getStaticPaths() {
 const { id, tool } = Astro.props;
 const tNameZh = tool?.name?.zh || tool?.name?.en || "工具";
 const tNameEn = tool?.name?.en || "Tool";
+const screenshotDir = `public/images/tools/${id}`;
+const hasScreenshots = fs.existsSync(screenshotDir);
+const screenshotFiles = hasScreenshots ? fs.readdirSync(screenshotDir).filter(f => f.match(/.(jpg|jpeg|png|webp)$/i)).slice(0, 3) : [];
 const tShortZh = tool?.short_desc?.zh || tool?.short_desc?.en || "";
 const tLongZh = tool?.long_desc?.zh || tool?.long_desc?.en || "";
 const tProsZh = tool?.pros?.zh || tool?.pros?.en || [];
@@ -116,6 +120,19 @@ const breadcrumbSchema = {
     </header>
 
     <p class="lede">{tShortZh}</p>
+
+    {hasScreenshots && (
+      <section class="detail-section">
+        <h2><i class="fas fa-images"></i> 工具截图</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:16px;">
+          {screenshotFiles.map((sf, i) => (
+            <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border-color);">
+              <img src={`/images/tools/${id}/${sf}`} alt={`${tNameEn} screenshot ${i+1}`} style="width:100%;display:block;" loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
 
     <p style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; margin: 24px 0;">
       <strong>语言说明：</strong>完整评测内容在<a href={"/tool/" + id + "/"}>英文原版</a>。本页提供 {tNameZh} 的核心要点和结论摘要。
