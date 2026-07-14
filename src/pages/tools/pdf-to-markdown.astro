@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/tools/pdf-to-markdown/";
+const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity":[{"@type":"Question","name":"How does the PDF to Markdown converter work?","acceptedAnswer":{"@type":"Answer","text":"The tool uses PDF.js to parse your PDF file in the browser and converts the text content to Markdown format. All processing happens locally - no upload required."}},{"@type":"Question","name":"What PDFs work best?","acceptedAnswer":{"@type":"Answer","text":"Text-based PDFs (not scanned images) convert best. Scanned PDFs require OCR which this tool does not perform. For best results, use PDFs with selectable text."}}]};
+---
+<BaseLayout title="Free PDF to Markdown Converter | Online Tool" description="Convert PDF to Markdown online free. Upload a PDF and get clean Markdown text. No signup, runs in your browser, 100% private." keywords="pdf to markdown, pdf converter, free pdf tool, markdown converter, online pdf tool">
+  <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script></Fragment>
+  <div class="container" style="max-width:700px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumbs" style="margin-bottom:24px;"><a href="/">Home</a> &rsaquo; <a href="/tools/">Tools</a> &rsaquo; <span>PDF to Markdown</span></nav>
+    <h1 style="font-size:28px;font-weight:700;margin-bottom:8px;">PDF to Markdown Converter</h1>
+    <p style="color:var(--text-mute);font-size:15px;margin-bottom:24px;">Convert PDF text to clean Markdown. Runs in your browser - no upload, 100% private.</p>
+    <div style="margin-bottom:20px;">
+      <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Select PDF File</label>
+      <input type="file" id="pdf-input" accept=".pdf" style="width:100%;padding:12px;border:1px solid var(--border-color);border-radius:8px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;" />
+    </div>
+    <button id="convert-btn" style="width:100%;padding:14px;background:var(--accent-color);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;margin-bottom:24px;" disabled>Convert to Markdown</button>
+    <div id="status" style="display:none;text-align:center;padding:20px;color:var(--text-mute);font-size:14px;">Converting... please wait</div>
+    <div id="result" style="display:none;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <h2 style="font-size:18px;font-weight:600;margin:0;">Markdown Output</h2>
+        <div style="display:flex;gap:8px;">
+          <button id="copy-btn" style="background:var(--accent-color);color:#fff;border:none;border-radius:6px;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;">Copy</button>
+          <button id="download-btn" style="background:var(--card-bg);color:var(--text-color);border:1px solid var(--border-color);border-radius:6px;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;">Download .md</button>
+        </div>
+      </div>
+      <textarea id="output" style="width:100%;height:400px;padding:16px;border:1px solid var(--border-color);border-radius:12px;font-family:monospace;font-size:13px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;resize:vertical;" readonly></textarea>
+      <p id="page-info" style="font-size:13px;color:var(--text-mute);margin-top:8px;"></p>
+    </div>
+  </div>
+</BaseLayout>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" defer></script>
+<script is:inline>
+document.getElementById("pdf-input").addEventListener("change",function(e){
+  document.getElementById("convert-btn").disabled=!e.target.files[0];
+});
+document.getElementById("convert-btn").addEventListener("click",async function(){
+  var file=document.getElementById("pdf-input").files[0];
+  if(!file)return;
+  document.getElementById("status").style.display="block";
+  document.getElementById("result").style.display="none";
+  try{
+    var arrayBuffer=await file.arrayBuffer();
+    var pdfjsLib=window.pdfjsLib;
+    pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+    var pdf=await pdfjsLib.getDocument({data:arrayBuffer}).promise;
+    var md="";
+    for(var i=1;i<=pdf.numPages;i++){
+      var page=await pdf.getPage(i);
+      var content=await page.getTextContent();
+      var text=content.items.map(function(item){return item.str;}).join(" ");
+      if(i>1)md+="\n\n---\n\n";
+      md+="# Page "+i+"\n\n"+text+"\n";
+      document.getElementById("status").textContent="Converting... page "+i+" of "+pdf.numPages;
+    }
+    document.getElementById("output").value=md;
+    document.getElementById("page-info").textContent="Converted "+pdf.numPages+" pages | File: "+file.name;
+    document.getElementById("status").style.display="none";
+    document.getElementById("result").style.display="block";
+  }catch(e){
+    document.getElementById("status").textContent="Error: "+e.message;
+  }
+});
+document.getElementById("copy-btn").addEventListener("click",function(){
+  document.getElementById("output").select();
+  document.execCommand("copy");
+  var b=document.getElementById("copy-btn");b.textContent="Copied!";setTimeout(function(){b.textContent="Copy"},2000);
+});
+document.getElementById("download-btn").addEventListener("click",function(){
+  var blob=new Blob([document.getElementById("output").value],{type:"text/markdown"});
+  var a=document.createElement("a");a.href=URL.createObjectURL(blob);
+  a.download="converted.md";a.click();
+});
+</script>
