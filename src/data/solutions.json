@@ -293,5 +293,174 @@
     ],
     "title_zh": "创意设计 AI 工具指南：图像、视频、音频",
     "desc_zh": "设计师和创作者如何用 AI 进行图像生成、视频编辑和音乐制作。"
+  },
+  {
+    "slug": "ai-for-healthcare",
+    "industry": "Healthcare & Medical",
+    "title": "AI Tools for Healthcare: Diagnosis, Documentation, and Patient Care",
+    "title_zh": "医疗健康 AI 工具指南：诊断、文档与患者护理",
+    "description": "How healthcare professionals use AI for medical imaging, clinical documentation, patient communication, and research.",
+    "desc_zh": "医疗专业人员如何用 AI 进行医学影像、临床文档、患者沟通和研究。",
+    "icon": "heartbeat",
+    "tools": [
+      "ChatGPT",
+      "Claude",
+      "ElevenLabs",
+      "Kling",
+      "Dify"
+    ],
+    "workflows": [
+      "dify-rag-document-qna",
+      "dify-customer-support-bot"
+    ],
+    "sections": [
+      {
+        "heading": "Medical Imaging & Diagnostics",
+        "content": "AI has transformed medical imaging analysis. Tools like Google Health and Aidoc can detect anomalies in X-rays, MRIs, and CT scans with accuracy matching specialist radiologists. For clinical documentation, AI scribes like Otter.ai and Fireflies.ai transcribe patient consultations in real-time, generate structured notes, and update EHR systems automatically. This saves physicians 2-3 hours per day on paperwork. For patient communication, AI chatbots powered by Dify can answer common health questions, schedule appointments, and send medication reminders. Always ensure HIPAA compliance when using AI with patient data.",
+        "recommendedTools": "Dify (patient chatbot), Otter.ai (clinical notes), ChatGPT (research)"
+      },
+      {
+        "heading": "Clinical Documentation & EHR",
+        "content": "AI dramatically reduces the documentation burden in healthcare. Voice-to-text tools like Otter.ai and Fireflies.ai transcribe patient visits, generate SOAP notes, and integrate with EHR systems. Claude can process long medical documents, summarize research papers, and extract relevant clinical guidelines. For patient education, AI can generate personalized discharge instructions and medication guides in plain language. Best practice: Always have a physician review AI-generated clinical content before it enters the patient record.",
+        "recommendedTools": "Otter.ai (transcription), Claude (document analysis), ChatGPT (patient education)"
+      },
+      {
+        "heading": "Patient Communication & Support",
+        "content": "AI chatbots handle routine patient communications: appointment scheduling, medication reminders, FAQ answering, and triage. Using Dify, you can build a HIPAA-compliant chatbot trained on your practice guidelines and common questions. For multilingual patients, ElevenLabs provides real-time translation and voice services. For remote monitoring, AI can analyze patient-reported data and flag concerning trends for clinician review. Always maintain human oversight for clinical decisions.",
+        "recommendedTools": "Dify (patient bot), ElevenLabs (multilingual), ChatGPT (content)"
+      },
+      {
+        "heading": "Medical Research & Literature",
+        "content": "AI accelerates medical research by processing vast amounts of literature. Claude and ChatGPT can summarize research papers, identify relevant studies, and generate literature reviews. Perplexity provides real-time web search with citations for the latest medical findings. For data analysis, AI tools can process clinical trial data, identify patterns, and generate statistical summaries. For grant writing, AI assists with drafting proposals and generating preliminary research summaries.",
+        "recommendedTools": "Claude (literature review), Perplexity (research), ChatGPT (grant writing)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Is AI safe for medical diagnosis?",
+        "a": "AI should augment, not replace, physician judgment. AI tools for medical imaging are FDA-cleared as decision support tools. A physician must always review and confirm AI findings before making clinical decisions."
+      },
+      {
+        "q": "How do I ensure HIPAA compliance with AI tools?",
+        "a": "Use only HIPAA-compliant AI services (OpenAI Enterprise, Azure OpenAI). Never send PHI to consumer AI tools. Use on-premise solutions like Dify or LlamaIndex for sensitive data. Always sign BAAs with AI service providers."
+      },
+      {
+        "q": "Can AI replace medical scribes?",
+        "a": "AI can handle 60-80% of routine documentation tasks, but human oversight is still needed for complex cases and quality assurance. The best approach is AI-assisted documentation with physician review."
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-finance",
+    "industry": "Finance & Accounting",
+    "title": "AI Tools for Finance: Analysis, Forecasting, and Automation",
+    "title_zh": "金融财务 AI 工具指南：分析、预测与自动化",
+    "description": "How finance professionals use AI for data analysis, financial forecasting, report generation, and compliance monitoring.",
+    "desc_zh": "金融专业人员如何用 AI 进行数据分析、财务预测、报告生成和合规监控。",
+    "icon": "chart-line",
+    "tools": [
+      "ChatGPT",
+      "Claude",
+      "Gemini",
+      "n8n",
+      "Dify"
+    ],
+    "workflows": [
+      "dify-data-analysis-agent",
+      "n8n-webhook-automation",
+      "n8n-api-monitor"
+    ],
+    "sections": [
+      {
+        "heading": "Financial Analysis & Insights",
+        "content": "AI transforms financial analysis by processing large datasets and extracting insights. Gemini and ChatGPT can analyze spreadsheets, identify trends, and generate narrative reports. For SQL-based analysis, Dify agent mode accepts natural language questions, writes SQL, executes queries, and produces visualizations. For competitive analysis, AI can scrape competitor financial data and generate comparison reports. Best practice: Always verify AI-generated financial calculations with traditional methods.",
+        "recommendedTools": "Gemini (data insights), Dify (SQL agent), ChatGPT (analysis)"
+      },
+      {
+        "heading": "Report Generation & Automation",
+        "content": "AI automates financial reporting by generating monthly/quarterly reports from raw data. n8n can connect to your accounting software, pull data, use AI to generate narrative analysis, and distribute reports to stakeholders. For regulatory filings, Claude can process regulatory requirements and ensure report compliance. For investor communications, AI generates summaries of financial performance with key metrics and trend analysis. Workflow: Pull data from ERP → AI generates analysis → Format report → Email to stakeholders.",
+        "recommendedTools": "n8n (automation), Claude (compliance), ChatGPT (narratives)"
+      },
+      {
+        "heading": "Risk Assessment & Compliance",
+        "content": "AI enhances risk assessment by analyzing patterns in transaction data, flagging anomalies, and predicting potential fraud. For compliance, AI can monitor regulatory changes, update internal policies, and ensure documentation meets requirements. n8n can automate compliance monitoring by checking transactions against rules and alerting compliance officers. For audit preparation, AI organizes documentation and generates audit trails. Always maintain human oversight for high-stakes financial decisions.",
+        "recommendedTools": "n8n (monitoring), Claude (regulatory), ChatGPT (documentation)"
+      },
+      {
+        "heading": "Investment Research",
+        "content": "AI accelerates investment research by processing earnings calls, SEC filings, and market data. Perplexity provides real-time research with citations. Claude can analyze long financial documents and extract key metrics. For portfolio analysis, AI tools compare performance across assets and suggest rebalancing strategies. For market sentiment, AI analyzes news and social media to gauge market mood. Best practice: Use AI as a research assistant, not as the sole basis for investment decisions.",
+        "recommendedTools": "Perplexity (research), Claude (document analysis), Gemini (market data)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI replace financial analysts?",
+        "a": "AI augments analysts by handling data processing and routine analysis. Analysts who use AI are more productive but strategic judgment, client relationships, and complex scenario analysis still require human expertise."
+      },
+      {
+        "q": "Is it safe to use AI for financial analysis?",
+        "a": "Use enterprise-grade AI services with data protection guarantees. Never send sensitive financial data to consumer AI tools. Always verify AI calculations independently. Maintain audit trails of all AI-assisted decisions."
+      },
+      {
+        "q": "How much can AI automate in finance?",
+        "a": "60-80% of routine reporting, data entry, and basic analysis can be automated. Strategic planning, client advisory, and complex modeling still require human expertise."
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-legal",
+    "industry": "Legal & Compliance",
+    "title": "AI Tools for Legal: Research, Contract Review, and Document Automation",
+    "title_zh": "法律合规 AI 工具指南：研究、合同审查与文档自动化",
+    "description": "How legal professionals use AI for legal research, contract analysis, document drafting, and compliance monitoring.",
+    "desc_zh": "法律专业人员如何用 AI 进行法律研究、合同分析、文件起草和合规监控。",
+    "icon": "gavel",
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Perplexity",
+      "Dify",
+      "n8n"
+    ],
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-email-triage-agent"
+    ],
+    "sections": [
+      {
+        "heading": "Legal Research & Case Law",
+        "content": "AI dramatically speeds up legal research. Perplexity provides real-time search with citations for case law and statutes. Claude can process lengthy court opinions, identify relevant precedents, and generate research memoranda. For litigation preparation, AI analyzes opposing arguments and suggests counter-strategies. Always verify AI-cited cases independently — AI can sometimes hallucinate citations. Best practice: Use AI for initial research, then verify all citations in primary sources.",
+        "recommendedTools": "Perplexity (research), Claude (case analysis), ChatGPT (memos)"
+      },
+      {
+        "heading": "Contract Review & Analysis",
+        "content": "AI transforms contract review by identifying risks, anomalies, and non-standard clauses. Claude excels at analyzing long contracts (200K context window) and comparing them against your standard templates. For due diligence, AI can review hundreds of contracts in minutes, flagging unusual terms and potential liabilities. For contract drafting, AI generates initial drafts based on your templates and specific deal terms. Workflow: Upload contract → AI identifies risks → Compare to standards → Generate review notes → Attorney review.",
+        "recommendedTools": "Claude (long contracts), ChatGPT (drafting), Dify (contract Q&A)"
+      },
+      {
+        "heading": "Document Automation & Drafting",
+        "content": "AI accelerates document drafting for routine legal work. ChatGPT and Claude can generate initial drafts of standard documents: NDAs, employment agreements, privacy policies. For document Q&A, Dify RAG systems let attorneys search through thousands of firm documents and find relevant precedents instantly. For client communications, AI drafts engagement letters and status updates. Always have an attorney review and finalize all AI-generated legal documents.",
+        "recommendedTools": "ChatGPT (drafting), Claude (complex docs), Dify (document search)"
+      },
+      {
+        "heading": "Compliance & Risk Management",
+        "content": "AI helps legal teams monitor regulatory changes and ensure organizational compliance. n8n can automate compliance workflows: monitor regulatory websites, alert when changes occur, and track internal policy updates. For risk assessment, AI analyzes contracts and communications for compliance gaps. For audit preparation, AI organizes documentation and generates compliance reports. For multi-jurisdiction compliance, AI tracks varying requirements across states and countries.",
+        "recommendedTools": "n8n (monitoring), Claude (risk analysis), ChatGPT (compliance docs)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI replace lawyers?",
+        "a": "No. AI is a tool that makes lawyers more efficient but cannot replace legal judgment, ethical obligations, or client representation. Lawyers who use AI effectively can handle more cases and provide faster service."
+      },
+      {
+        "q": "Is AI-generated legal advice reliable?",
+        "a": "AI can assist with research and drafting but should never be the sole source of legal advice. Always have a licensed attorney review all AI output. AI can sometimes hallucinate case citations, so verify all references independently."
+      },
+      {
+        "q": "How do I ensure attorney-client privilege with AI?",
+        "a": "Use only enterprise AI services that guarantee data confidentiality (Claude Enterprise, OpenAI Enterprise). Never use consumer AI tools for privileged communications. Consider on-premise solutions for highly sensitive matters."
+      }
+    ]
   }
 ]
