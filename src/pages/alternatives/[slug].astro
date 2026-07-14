@@ -29,8 +29,19 @@ const faq = [
   { q: "Is " + aName + " worth paying for in 2026?", a: "Yes, if you use it weekly. " + aName + " is the right pick for " + (aPros[0] || "general use").toLowerCase() + ", and the " + (aCat === "code" ? "Individual" : aCat === "video" ? "Standard" : "Standard") + " plan is the right starting point for most users. If you only use it monthly, the free tier of one of the alternatives is enough." },
   { q: "Should I switch from " + aName + " to an alternative?", a: "Only if you have a specific reason. The alternatives on this page are not categorically better - they are different tools that excel in different use cases. Switching costs include relearning the interface, re-doing your prompts, and rebuilding any integrations. The right time to switch is when you have a clear use case the current tool does not handle well, not because a new tool launched." }
 ];
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/alternatives/" + id + "/";
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faq.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Best " + aName + " Alternatives in 2026","description":"Looking for " + aName + " alternatives? Top options ranked by use case, pricing, and hands-on testing.","author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"mainEntityOfPage":pageUrl,"datePublished":"2026-07-14","dateModified":"2026-07-14" };
+const breadcrumbSchema = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":aName,"item":siteUrl+"/tool/"+id+"/"},{"@type":"ListItem","position":3,"name":"Alternatives","item":pageUrl}] };
 ---
 <BaseLayout title={"Best " + aName + " Alternatives in 2026 (Tested Side-by-Side)"} description={"Looking for " + aName + " alternatives? Here are the top options ranked by use case, pricing, and our hands-on testing. " + altCount + " tools compared."} keywords={aName + " alternatives, alternatives to " + aName + ", " + aCat + " AI tools"}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
   <article class="legal-page">
     <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={"/tool/" + id + "/"}>{aName}</a> &rsaquo; <span>Alternatives</span></nav>
     <header class="page-hero">
