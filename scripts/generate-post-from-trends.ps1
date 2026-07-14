@@ -30,7 +30,7 @@ param(
   [string]$Model = "ark-code-latest"
 )
 
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Continue"
 
 $ProjectRoot = "C:\Users\QuQu\ai-tool-hub-v2"
 Set-Location $ProjectRoot
@@ -137,7 +137,8 @@ if (Test-Path $outMsg) { Remove-Item $outMsg -Force }
 
 Write-Log "Calling codex exec (model=$Model)..."
 # Use stdin to avoid command line length issues
-$prompt | & codex exec -m $Model --dangerously-bypass-approvals-and-sandbox -c "model_reasoning_effort=low" -o $outMsg - 2>&1 | Out-Null
+$ErrorActionPreference = "Continue"
+$prompt | & codex exec -m $Model --dangerously-bypass-approvals-and-sandbox -c "model_reasoning_effort=low" -o $outMsg - 2>$null
 $codexExit = $LASTEXITCODE
 Write-Log "Codex exit: $codexExit"
 
