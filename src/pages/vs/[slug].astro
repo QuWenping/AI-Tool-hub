@@ -19,6 +19,18 @@ const bCons = (b && b.cons && b.cons.en) || [];
 const aCat = (a && a.cat) || "ai";
 const bCat = (b && b.cat) || "ai";
 const aFirstPro = aPros[0] || "versatile";
+const bFirstCon = bCons[0] || "limited";
+const aPricing = (a && a.pricing && a.pricing.en) || "Various";
+const bPricing = (b && b.pricing && b.pricing.en) || "Various";
+const aScenes = (a && a.scenes && a.scenes.en) || [];
+const bScenes = (b && b.scenes && b.scenes.en) || [];
+const aUrl = (a && a.url) || "";
+const bUrl = (b && b.url) || "";
+const hasApi_a = aUrl.includes("api") || aUrl.includes("platform") || aUrl.includes("developer");
+const hasApi_b = bUrl.includes("api") || bUrl.includes("platform") || bUrl.includes("developer");
+const aFirstCon = aCons[0] || "some limitations";
+const isOpenSource_a = aPricing.toLowerCase().includes("open source") || aPricing.toLowerCase().includes("free");
+const isOpenSource_b = bPricing.toLowerCase().includes("open source") || bPricing.toLowerCase().includes("free");
 const bFirstPro = bPros[0] || "versatile";
 const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
 const siteUrl = "https://thebestaitoolsreview.com";
@@ -102,13 +114,19 @@ const faqSchema = {
 
     <section>
       <h2 style="font-size: 22px; font-weight: 700; margin: 32px 0 12px; letter-spacing: -0.3px;">At-a-glance comparison</h2>
-      <table class="ranking">
-        <thead><tr><th></th><th>{aName}</th><th>{bName}</th></tr></thead>
+      <table class="sortable-table ranking">
+        <thead><tr><th>Feature</th><th>{aName}</th><th>{bName}</th></tr></thead>
         <tbody>
           <tr><th>Best for</th><td>{aUse}</td><td>{bUse}</td></tr>
           <tr><th>Category</th><td>{categoryLabels[aCat] || aCat}</td><td>{categoryLabels[bCat] || bCat}</td></tr>
-          <tr><th>Free tier</th><td>Yes</td><td>Yes</td></tr>
-          <tr><th>Ease of use</th><td>{aFirstPro}</td><td>{bFirstPro}</td></tr>
+          <tr><th>Pricing</th><td>{aPricing}</td><td>{bPricing}</td></tr>
+          <tr><th>Free tier</th><td>{isOpenSource_a ? "Yes" : "Limited"}</td><td>{isOpenSource_b ? "Yes" : "Limited"}</td></tr>
+          <tr><th>Open source</th><td>{isOpenSource_a ? "Yes" : "No"}</td><td>{isOpenSource_b ? "Yes" : "No"}</td></tr>
+          <tr><th>API available</th><td>{hasApi_a ? "Yes" : "Check website"}</td><td>{hasApi_b ? "Yes" : "Check website"}</td></tr>
+          <tr><th>Key strength</th><td>{aFirstPro}</td><td>{bFirstPro}</td></tr>
+          <tr><th>Main drawback</th><td>{aFirstCon}</td><td>{bFirstCon}</td></tr>
+          <tr><th>Use cases</th><td>{aScenes.join(", ") || "General"}</td><td>{bScenes.join(", ") || "General"}</td></tr>
+          <tr><th>Website</th><td><a href={aUrl} target="_blank" rel="nofollow">{aName}</a></td><td><a href={bUrl} target="_blank" rel="nofollow">{bName}</a></td></tr>
         </tbody>
       </table>
     </section>
