@@ -108,7 +108,7 @@ if ($draftPath -and -not $SkipGenerate) {
   $imgDir = Join-Path $ProjectRoot "public\images\blog\$imgSlug"
   if (-not (Test-Path $imgDir)) { New-Item -ItemType Directory -Path $imgDir -Force | Out-Null }
   $nodeArgs = @("$imgSlug", "$imgTitle") + $imgKeywords
-  & node "\scripts\generate-blog-images.cjs" $nodeArgs 2>&1 | ForEach-Object { Write-Log "  $_" }
+  & node "\scripts\generate-blog-images-v3.cjs" $nodeArgs 2>&1 | ForEach-Object { Write-Log "  $_" }
   Write-Log "Blog images generated."
 }
 
@@ -129,7 +129,7 @@ if (Test-Path $astroFile) {
   $imgKeywords = @()
   if ($post.tags) { $imgKeywords = ($post.tags | Select-Object -First 3) }
   $nodeArgs = @($post.slug, $astroFile, $post.title_en) + $imgKeywords
-  & node "$ProjectRoot\scripts\insert-blog-images.cjs" $nodeArgs 2>&1 | ForEach-Object { Write-Log "  $_" }
+  & node "$ProjectRoot\scripts\generate-blog-images-v3.cjs" $nodeArgs 2>&1 | ForEach-Object { Write-Log "  $_" }
 }
 
 Write-Log "STEP 3/3: Publishing $draftPath ..."
