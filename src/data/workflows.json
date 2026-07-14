@@ -36,7 +36,9 @@
       "content-generation"
     ],
     "useCase": "Content teams monitoring 5-10 news sources who want to produce daily round-up articles.",
-    "prerequisites": "n8n self-hosted or n8n Cloud, OpenAI API key, CMS API credentials"
+    "prerequisites": "n8n self-hosted or n8n Cloud, OpenAI API key, CMS API credentials",
+    "title_zh": "用 n8n 从 RSS 自动生成博客文章",
+    "summary_zh": "自动抓取 RSS 新闻源，用 AI 总结改写，生成博客草稿供审核后发布。"
   },
   {
     "slug": "dify-customer-support-bot",
@@ -75,7 +77,9 @@
       "dify"
     ],
     "useCase": "SaaS companies with 1000+ support tickets per month looking to deflect 40-60% of repetitive questions.",
-    "prerequisites": "Dify account (cloud or self-hosted), knowledge base documents, OpenAI/Anthropic API key"
+    "prerequisites": "Dify account (cloud or self-hosted), knowledge base documents, OpenAI/Anthropic API key",
+    "title_zh": "用 Dify 搭建知识库客服机器人",
+    "summary_zh": "上传支持文档到向量知识库，创建能检索答案的客服机器人，复杂问题转人工。"
   },
   {
     "slug": "comfyui-batch-product-photos",
@@ -114,7 +118,9 @@
       "e-commerce"
     ],
     "useCase": "E-commerce stores with 50-500 product SKUs needing consistent, professional product photos without a photographer.",
-    "prerequisites": "ComfyUI installed, SAM model (ViT-H), IC-Light model, GPU with 8GB+ VRAM"
+    "prerequisites": "ComfyUI installed, SAM model (ViT-H), IC-Light model, GPU with 8GB+ VRAM",
+    "title_zh": "用 ComfyUI 批量处理产品图",
+    "summary_zh": "批量去背景、AI 重新打光、统一品牌风格，输出标准电商产品图。"
   },
   {
     "slug": "mcp-claude-file-system",
@@ -153,7 +159,9 @@
       "code-analysis"
     ],
     "useCase": "Developers and analysts who want Claude to work directly with local files without copy-pasting.",
-    "prerequisites": "Node.js 18+, Claude Desktop or Claude API access, MCP server package"
+    "prerequisites": "Node.js 18+, Claude Desktop or Claude API access, MCP server package",
+    "title_zh": "用 MCP 连接 Claude 到本地文件系统",
+    "summary_zh": "让 Claude 直接读写本地文件，用于代码分析、文档编辑和数据处理。"
   },
   {
     "slug": "n8n-social-media-scheduler",
@@ -192,7 +200,9 @@
       "n8n"
     ],
     "useCase": "Solo founders and small marketing teams managing 3+ social platforms who want to post daily without manual work.",
-    "prerequisites": "n8n, API keys for Twitter/X, LinkedIn, Mastodon, OpenAI API key"
+    "prerequisites": "n8n, API keys for Twitter/X, LinkedIn, Mastodon, OpenAI API key",
+    "title_zh": "用 n8n 跨平台社媒自动调度",
+    "summary_zh": "一条内容自动适配 Twitter/LinkedIn/Mastodon，定时发布。"
   },
   {
     "slug": "dify-data-analysis-agent",
@@ -232,7 +242,9 @@
       "automation"
     ],
     "useCase": "Data teams that get ad-hoc analysis requests from non-technical stakeholders and want to automate 60-80% of routine queries.",
-    "prerequisites": "Dify with code execution enabled, read-only database access, OpenAI/Claude API key"
+    "prerequisites": "Dify with code execution enabled, read-only database access, OpenAI/Claude API key",
+    "title_zh": "用 Dify 搭建自主数据分析 Agent",
+    "summary_zh": "AI Agent 接受自然语言提问，自动写 SQL、执行查询、生成图表和报告。"
   },
   {
     "slug": "comfyui-style-transfer-pipeline",
@@ -272,7 +284,9 @@
       "marketing"
     ],
     "useCase": "Marketing teams creating branded visual content, artists experimenting with styles, social media managers producing unique graphics.",
-    "prerequisites": "ComfyUI, IP-Adapter models, ControlNet models, GPU with 6GB+ VRAM"
+    "prerequisites": "ComfyUI, IP-Adapter models, ControlNet models, GPU with 6GB+ VRAM",
+    "title_zh": "用 ComfyUI 做艺术风格迁移",
+    "summary_zh": "将参考图的艺术风格应用到目标照片，保留构图和关键细节。"
   },
   {
     "slug": "mcp-github-code-review",
@@ -312,7 +326,9 @@
       "agent"
     ],
     "useCase": "Engineering teams of 5+ developers who want to reduce review turnaround time and catch common issues before human review.",
-    "prerequisites": "Claude API access, MCP GitHub server, GitHub repo admin access, webhook hosting (n8n or server)"
+    "prerequisites": "Claude API access, MCP GitHub server, GitHub repo admin access, webhook hosting (n8n or server)",
+    "title_zh": "用 MCP + GitHub 自动代码审查",
+    "summary_zh": "AI Agent 自动审查 PR，发布行内评论，根据团队规范批准或请求修改。"
   },
   {
     "slug": "n8n-lead-enrichment",
@@ -352,7 +368,9 @@
       "ai-scoring"
     ],
     "useCase": "B2B sales teams receiving 50+ leads per day who need prioritization and enrichment before first contact.",
-    "prerequisites": "n8n, CRM API access (HubSpot/Salesforce), Clearbit/Apollo API key, OpenAI API key, Slack webhook"
+    "prerequisites": "n8n, CRM API access (HubSpot/Salesforce), Clearbit/Apollo API key, OpenAI API key, Slack webhook",
+    "title_zh": "用 n8n 搭建 AI 线索富集流水线",
+    "summary_zh": "自动为新线索补充公司数据、社交档案和 AI 评分，推送到 CRM。"
   },
   {
     "slug": "dify-rag-document-qna",
@@ -392,7 +410,9 @@
       "retrieval"
     ],
     "useCase": "Legal teams reviewing contracts, HR departments with policy documents, technical teams with API documentation.",
-    "prerequisites": "Dify account, documents to upload, OpenAI API key for embeddings"
+    "prerequisites": "Dify account, documents to upload, OpenAI API key for embeddings",
+    "title_zh": "用 Dify 搭建 RAG 文档问答系统",
+    "summary_zh": "上传文档，构建向量知识库，用户提问时检索精确答案并附引用来源。"
   },
   {
     "slug": "comfyui-video-frame-interpolation",
@@ -432,7 +452,9 @@
       "rife"
     ],
     "useCase": "Video creators needing smooth slow-motion from standard footage, archivists restoring old video at higher frame rates.",
-    "prerequisites": "ComfyUI, RIFE or FILM interpolation model, ffmpeg, GPU with 8GB+ VRAM"
+    "prerequisites": "ComfyUI, RIFE or FILM interpolation model, ffmpeg, GPU with 8GB+ VRAM",
+    "title_zh": "用 ComfyUI 做 AI 视频帧插值",
+    "summary_zh": "用 RIFE/FILM 模型生成中间帧，实现流畅慢动作或帧率转换。"
   },
   {
     "slug": "n8n-email-triage-agent",
@@ -472,7 +494,9 @@
       "ai-classification"
     ],
     "useCase": "Small businesses and solo founders receiving 50-200 emails per day who want to prioritize and automate routine responses.",
-    "prerequisites": "n8n, IMAP email access, OpenAI API key, Slack webhook, Google Sheets API"
+    "prerequisites": "n8n, IMAP email access, OpenAI API key, Slack webhook, Google Sheets API",
+    "title_zh": "用 n8n 搭建 AI 邮件分类助手",
+    "summary_zh": "自动分类收件箱，为常见问题起草回复，紧急邮件转人工。"
   },
   {
     "slug": "crewai-research-team",
@@ -511,7 +535,9 @@
       "collaboration"
     ],
     "useCase": "Research teams, content creators, and analysts who need comprehensive research reports on any topic.",
-    "prerequisites": "Python 3.10+, CrewAI installed, OpenAI API key, optional search API key (SerperDev)"
+    "prerequisites": "Python 3.10+, CrewAI installed, OpenAI API key, optional search API key (SerperDev)",
+    "title_zh": "用 CrewAI 搭建多 Agent 研究团队",
+    "summary_zh": "3 个 AI Agent 协作研究：搜索员抓信息、分析员综合、撰稿人写报告。"
   },
   {
     "slug": "langgraph-customer-journey",
@@ -550,7 +576,9 @@
       "stateful"
     ],
     "useCase": "SaaS onboarding flows, customer success teams, subscription services guiding users to activation.",
-    "prerequisites": "Python 3.11+, LangGraph, LangChain, FastAPI, OpenAI API key"
+    "prerequisites": "Python 3.11+, LangGraph, LangChain, FastAPI, OpenAI API key",
+    "title_zh": "用 LangGraph 构建客户旅程 Agent",
+    "summary_zh": "有状态 Agent 图，跟踪客户阶段，自适应响应，需要时转人工。"
   },
   {
     "slug": "n8n-webhook-automation",
@@ -589,7 +617,9 @@
       "routing"
     ],
     "useCase": "Teams using 3+ SaaS tools that want centralized automation instead of point-to-point integrations.",
-    "prerequisites": "n8n self-hosted or Cloud, external app webhook capability"
+    "prerequisites": "n8n self-hosted or Cloud, external app webhook capability",
+    "title_zh": "用 n8n 搭建 Webhook 自动化中心",
+    "summary_zh": "一个 Webhook 接收所有外部事件，分类路由到对应子工作流。"
   },
   {
     "slug": "dify-content-pipeline",
@@ -628,7 +658,9 @@
       "automation"
     ],
     "useCase": "Content marketing teams producing daily blog posts, social media, and newsletters from a single topic input.",
-    "prerequisites": "Dify account, OpenAI/Anthropic API key, CMS API access (optional)"
+    "prerequisites": "Dify account, OpenAI/Anthropic API key, CMS API access (optional)",
+    "title_zh": "用 Dify 搭建 AI 内容生成流水线",
+    "summary_zh": "输入主题，自动研究、生成博客/社媒/邮件内容，质检后发布。"
   },
   {
     "slug": "comfyui-lora-training",
@@ -668,7 +700,9 @@
       "fine-tuning"
     ],
     "useCase": "Brands wanting consistent visual style, artists creating character series, e-commerce with consistent product styling.",
-    "prerequisites": "ComfyUI with Kohya training extension, GPU 12GB+ VRAM, 15-30 training images, SDXL or SD1.5 base model"
+    "prerequisites": "ComfyUI with Kohya training extension, GPU 12GB+ VRAM, 15-30 training images, SDXL or SD1.5 base model",
+    "title_zh": "用 ComfyUI 训练自定义 LoRA 模型",
+    "summary_zh": "用 15-30 张图片微调模型，生成品牌风格或角色一致性的图片。"
   },
   {
     "slug": "mcp-slack-assistant",
@@ -707,7 +741,9 @@
       "team-collaboration"
     ],
     "useCase": "Teams using Slack who want AI-powered search, summarization, and Q&A over their workspace conversations.",
-    "prerequisites": "Slack workspace admin access, Claude Desktop or API, MCP Slack server, Node.js 18+"
+    "prerequisites": "Slack workspace admin access, Claude Desktop or API, MCP Slack server, Node.js 18+",
+    "title_zh": "用 MCP 连接 Claude 到 Slack",
+    "summary_zh": "让 AI 搜索消息、总结频道、回答团队讨论相关的问题。"
   },
   {
     "slug": "n8n-api-monitor",
@@ -746,7 +782,9 @@
       "ai-analysis"
     ],
     "useCase": "DevOps teams monitoring 5+ APIs who want intelligent alerting instead of simple threshold notifications.",
-    "prerequisites": "n8n, API endpoints to monitor, OpenAI API key, Slack webhook for alerts"
+    "prerequisites": "n8n, API endpoints to monitor, OpenAI API key, Slack webhook for alerts",
+    "title_zh": "用 n8n 搭建 AI API 健康监控",
+    "summary_zh": "定期检查 API，用 AI 分析错误模式，智能告警减少误报。"
   },
   {
     "slug": "browser-use-data-collection",
@@ -785,6 +823,8 @@
       "automation"
     ],
     "useCase": "Market researchers, price monitoring, lead generation from directories, competitive analysis.",
-    "prerequisites": "Python 3.10+, Browser Use, Playwright, OpenAI/Claude API key"
+    "prerequisites": "Python 3.10+, Browser Use, Playwright, OpenAI/Claude API key",
+    "title_zh": "用 Browser Use 自动采集网页数据",
+    "summary_zh": "AI 浏览器自动化，处理复杂动态网站，提取结构化数据。"
   }
 ]
