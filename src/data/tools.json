@@ -10149,5 +10149,4944 @@
       "browser-use",
       "multion"
     ]
+  },
+  "leonardo-ai": {
+    "name": {
+      "zh": "Leonardo AI",
+      "en": "Leonardo AI"
+    },
+    "cat": "image",
+    "url": "https://leonardo.ai",
+    "icon": "fa-paint-brush",
+    "short_desc": {
+      "zh": "AI art and image generation",
+      "en": "AI art and image generation"
+    },
+    "long_desc": {
+      "zh": "AI art platform with multiple models and custom training",
+      "en": "AI art platform with multiple models and custom training"
+    },
+    "scenes": {
+      "zh": [
+        "art",
+        "game-assets",
+        "design"
+      ],
+      "en": [
+        "art",
+        "game-assets",
+        "design"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "playground-ai": {
+    "name": {
+      "zh": "Playground AI",
+      "en": "Playground AI"
+    },
+    "cat": "image",
+    "url": "https://playground.com",
+    "icon": "fa-image",
+    "short_desc": {
+      "zh": "Online AI image creation",
+      "en": "Online AI image creation"
+    },
+    "long_desc": {
+      "zh": "Online AI image creation and editing with multiple styles",
+      "en": "Online AI image creation and editing with multiple styles"
+    },
+    "scenes": {
+      "zh": [
+        "image",
+        "editing",
+        "creative"
+      ],
+      "en": [
+        "image",
+        "editing",
+        "creative"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "getimg-ai": {
+    "name": {
+      "zh": "GetImg AI",
+      "en": "GetImg AI"
+    },
+    "cat": "image",
+    "url": "https://getimg.ai",
+    "icon": "fa-image",
+    "short_desc": {
+      "zh": "AI image generation toolkit",
+      "en": "AI image generation toolkit"
+    },
+    "long_desc": {
+      "zh": "AI image generation and editing toolkit with inpainting",
+      "en": "AI image generation and editing toolkit with inpainting"
+    },
+    "scenes": {
+      "zh": [
+        "image",
+        "editing",
+        "inpainting"
+      ],
+      "en": [
+        "image",
+        "editing",
+        "inpainting"
+      ]
+    },
+    "pricing": {
+      "zh": "Paid",
+      "en": "Paid"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "dreamstudio": {
+    "name": {
+      "zh": "DreamStudio",
+      "en": "DreamStudio"
+    },
+    "cat": "image",
+    "url": "https://dreamstudio.ai",
+    "icon": "fa-image",
+    "short_desc": {
+      "zh": "Stability AI official platform",
+      "en": "Stability AI official platform"
+    },
+    "long_desc": {
+      "zh": "Official Stable Diffusion web interface by Stability AI",
+      "en": "Official Stable Diffusion web interface by Stability AI"
+    },
+    "scenes": {
+      "zh": [
+        "image",
+        "stable-diffusion"
+      ],
+      "en": [
+        "image",
+        "stable-diffusion"
+      ]
+    },
+    "pricing": {
+      "zh": "Pay per use",
+      "en": "Pay per use"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "pixlr-ai": {
+    "name": {
+      "zh": "Pixlr AI",
+      "en": "Pixlr AI"
+    },
+    "cat": "image",
+    "url": "https://pixlr.com",
+    "icon": "fa-image",
+    "short_desc": {
+      "zh": "Online AI image editor",
+      "en": "Online AI image editor"
+    },
+    "long_desc": {
+      "zh": "Online image editor with AI background removal and enhancement",
+      "en": "Online image editor with AI background removal and enhancement"
+    },
+    "scenes": {
+      "zh": [
+        "editing",
+        "bg-removal",
+        "enhance"
+      ],
+      "en": [
+        "editing",
+        "bg-removal",
+        "enhance"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "artbreeder": {
+    "name": {
+      "zh": "Artbreeder",
+      "en": "Artbreeder"
+    },
+    "cat": "image",
+    "url": "https://artbreeder.com",
+    "icon": "fa-paint-brush",
+    "short_desc": {
+      "zh": "Collaborative AI image blending",
+      "en": "Collaborative AI image blending"
+    },
+    "long_desc": {
+      "zh": "Create unique images by blending and adjusting gene parameters",
+      "en": "Create unique images by blending and adjusting gene parameters"
+    },
+    "scenes": {
+      "zh": [
+        "character",
+        "landscape",
+        "art"
+      ],
+      "en": [
+        "character",
+        "landscape",
+        "art"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "nightcafe": {
+    "name": {
+      "zh": "NightCafe",
+      "en": "NightCafe"
+    },
+    "cat": "image",
+    "url": "https://nightcafe.studio",
+    "icon": "fa-moon",
+    "short_desc": {
+      "zh": "AI art generation community",
+      "en": "AI art generation community"
+    },
+    "long_desc": {
+      "zh": "AI art generation with multiple styles and active community",
+      "en": "AI art generation with multiple styles and active community"
+    },
+    "scenes": {
+      "zh": [
+        "art",
+        "community",
+        "creative"
+      ],
+      "en": [
+        "art",
+        "community",
+        "creative"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "stability-api": {
+    "name": {
+      "zh": "Stability API",
+      "en": "Stability API"
+    },
+    "cat": "image",
+    "url": "https://stability.ai",
+    "icon": "fa-image",
+    "short_desc": {
+      "zh": "Stable Diffusion API service",
+      "en": "Stable Diffusion API service"
+    },
+    "long_desc": {
+      "zh": "Official Stability AI API for SD models",
+      "en": "Official Stability AI API for SD models"
+    },
+    "scenes": {
+      "zh": [
+        "api",
+        "image",
+        "generation"
+      ],
+      "en": [
+        "api",
+        "image",
+        "generation"
+      ]
+    },
+    "pricing": {
+      "zh": "Pay per use",
+      "en": "Pay per use"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "krea-ai": {
+    "name": {
+      "zh": "Krea AI",
+      "en": "Krea AI"
+    },
+    "cat": "image",
+    "url": "https://krea.ai",
+    "icon": "fa-paint-brush",
+    "short_desc": {
+      "zh": "Real-time AI image generation",
+      "en": "Real-time AI image generation"
+    },
+    "long_desc": {
+      "zh": "Real-time AI image generation and enhancement",
+      "en": "Real-time AI image generation and enhancement"
+    },
+    "scenes": {
+      "zh": [
+        "real-time",
+        "image",
+        "enhance"
+      ],
+      "en": [
+        "real-time",
+        "image",
+        "enhance"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "topaz-video": {
+    "name": {
+      "zh": "Topaz Video AI",
+      "en": "Topaz Video AI"
+    },
+    "cat": "video",
+    "url": "https://topazlabs.com/video-ai",
+    "icon": "fa-video",
+    "short_desc": {
+      "zh": "AI video upscaling",
+      "en": "AI video upscaling"
+    },
+    "long_desc": {
+      "zh": "AI video upscaling and enhancement tool",
+      "en": "AI video upscaling and enhancement tool"
+    },
+    "scenes": {
+      "zh": [
+        "upscale",
+        "restore",
+        "enhance"
+      ],
+      "en": [
+        "upscale",
+        "restore",
+        "enhance"
+      ]
+    },
+    "pricing": {
+      "zh": "Paid",
+      "en": "Paid"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "descript-edit": {
+    "name": {
+      "zh": "Descript",
+      "en": "Descript"
+    },
+    "cat": "video",
+    "url": "https://descript.com",
+    "icon": "fa-film",
+    "short_desc": {
+      "zh": "AI video/audio editing",
+      "en": "AI video/audio editing"
+    },
+    "long_desc": {
+      "zh": "Edit video by editing text with AI voice cloning",
+      "en": "Edit video by editing text with AI voice cloning"
+    },
+    "scenes": {
+      "zh": [
+        "editing",
+        "podcast",
+        "transcription"
+      ],
+      "en": [
+        "editing",
+        "podcast",
+        "transcription"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "tencent-zhiying": {
+    "name": {
+      "zh": "Tencent Zhiying",
+      "en": "Tencent Zhiying"
+    },
+    "cat": "video",
+    "url": "https://zenvideo.qq.com",
+    "icon": "fa-video",
+    "short_desc": {
+      "zh": "Tencent AI video platform",
+      "en": "Tencent AI video platform"
+    },
+    "long_desc": {
+      "zh": "Tencent AI digital human and video generation",
+      "en": "Tencent AI digital human and video generation"
+    },
+    "scenes": {
+      "zh": [
+        "digital-human",
+        "video",
+        "chinese"
+      ],
+      "en": [
+        "digital-human",
+        "video",
+        "chinese"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "wisecut": {
+    "name": {
+      "zh": "Wisecut",
+      "en": "Wisecut"
+    },
+    "cat": "video",
+    "url": "https://wisecut.video",
+    "icon": "fa-scissors",
+    "short_desc": {
+      "zh": "AI auto video editing",
+      "en": "AI auto video editing"
+    },
+    "long_desc": {
+      "zh": "Auto-remove pauses and silences from video",
+      "en": "Auto-remove pauses and silences from video"
+    },
+    "scenes": {
+      "zh": [
+        "auto-edit",
+        "content-creation"
+      ],
+      "en": [
+        "auto-edit",
+        "content-creation"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "flexclip": {
+    "name": {
+      "zh": "FlexClip",
+      "en": "FlexClip"
+    },
+    "cat": "video",
+    "url": "https://flexclip.com",
+    "icon": "fa-video",
+    "short_desc": {
+      "zh": "Online video editor",
+      "en": "Online video editor"
+    },
+    "long_desc": {
+      "zh": "Online video editing with templates and AI text-to-video",
+      "en": "Online video editing with templates and AI text-to-video"
+    },
+    "scenes": {
+      "zh": [
+        "editing",
+        "marketing",
+        "templates"
+      ],
+      "en": [
+        "editing",
+        "marketing",
+        "templates"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "clipchamp": {
+    "name": {
+      "zh": "Clipchamp",
+      "en": "Clipchamp"
+    },
+    "cat": "video",
+    "url": "https://clipchamp.com",
+    "icon": "fa-video",
+    "short_desc": {
+      "zh": "Microsoft video editor",
+      "en": "Microsoft video editor"
+    },
+    "long_desc": {
+      "zh": "Microsoft online video editor with AI features",
+      "en": "Microsoft online video editor with AI features"
+    },
+    "scenes": {
+      "zh": [
+        "editing",
+        "microsoft",
+        "templates"
+      ],
+      "en": [
+        "editing",
+        "microsoft",
+        "templates"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "pictory": {
+    "name": {
+      "zh": "Pictory",
+      "en": "Pictory"
+    },
+    "cat": "video",
+    "url": "https://pictory.ai",
+    "icon": "fa-film",
+    "short_desc": {
+      "zh": "AI article to video",
+      "en": "AI article to video"
+    },
+    "long_desc": {
+      "zh": "Auto-convert long text to short video content",
+      "en": "Auto-convert long text to short video content"
+    },
+    "scenes": {
+      "zh": [
+        "text-to-video",
+        "short-video",
+        "repurposing"
+      ],
+      "en": [
+        "text-to-video",
+        "short-video",
+        "repurposing"
+      ]
+    },
+    "pricing": {
+      "zh": "Paid",
+      "en": "Paid"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "munch-ai": {
+    "name": {
+      "zh": "Munch",
+      "en": "Munch"
+    },
+    "cat": "video",
+    "url": "https://getmunch.com",
+    "icon": "fa-scissors",
+    "short_desc": {
+      "zh": "AI long to short video",
+      "en": "AI long to short video"
+    },
+    "long_desc": {
+      "zh": "AI clips most shareable segments from long videos",
+      "en": "AI clips most shareable segments from long videos"
+    },
+    "scenes": {
+      "zh": [
+        "short-video",
+        "social",
+        "repurposing"
+      ],
+      "en": [
+        "short-video",
+        "social",
+        "repurposing"
+      ]
+    },
+    "pricing": {
+      "zh": "Paid",
+      "en": "Paid"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "bhuman": {
+    "name": {
+      "zh": "BHuman",
+      "en": "BHuman"
+    },
+    "cat": "video",
+    "url": "https://bhuman.ai",
+    "icon": "fa-user",
+    "short_desc": {
+      "zh": "AI personalized video",
+      "en": "AI personalized video"
+    },
+    "long_desc": {
+      "zh": "Generate personalized videos for each customer",
+      "en": "Generate personalized videos for each customer"
+    },
+    "scenes": {
+      "zh": [
+        "personalized",
+        "marketing",
+        "video"
+      ],
+      "en": [
+        "personalized",
+        "marketing",
+        "video"
+      ]
+    },
+    "pricing": {
+      "zh": "Paid",
+      "en": "Paid"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "shuffll": {
+    "name": {
+      "zh": "Shuffll",
+      "en": "Shuffll"
+    },
+    "cat": "video",
+    "url": "https://shuffll.com",
+    "icon": "fa-video",
+    "short_desc": {
+      "zh": "AI enterprise video",
+      "en": "AI enterprise video"
+    },
+    "long_desc": {
+      "zh": "Enterprise AI video production platform",
+      "en": "Enterprise AI video production platform"
+    },
+    "scenes": {
+      "zh": [
+        "enterprise",
+        "marketing",
+        "video"
+      ],
+      "en": [
+        "enterprise",
+        "marketing",
+        "video"
+      ]
+    },
+    "pricing": {
+      "zh": "Paid",
+      "en": "Paid"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "vercel-sdk": {
+    "name": {
+      "zh": "Vercel AI SDK",
+      "en": "Vercel AI SDK"
+    },
+    "cat": "code",
+    "url": "https://sdk.vercel.ai",
+    "icon": "fa-code",
+    "short_desc": {
+      "zh": "AI app development SDK",
+      "en": "AI app development SDK"
+    },
+    "long_desc": {
+      "zh": "SDK for building AI apps with streaming and edge",
+      "en": "SDK for building AI apps with streaming and edge"
+    },
+    "scenes": {
+      "zh": [
+        "ai-dev",
+        "streaming",
+        "edge"
+      ],
+      "en": [
+        "ai-dev",
+        "streaming",
+        "edge"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "supabase-ai": {
+    "name": {
+      "zh": "Supabase AI",
+      "en": "Supabase AI"
+    },
+    "cat": "code",
+    "url": "https://supabase.com",
+    "icon": "fa-database",
+    "short_desc": {
+      "zh": "AI-enhanced database",
+      "en": "AI-enhanced database"
+    },
+    "long_desc": {
+      "zh": "Open-source Firebase alternative with AI vector search",
+      "en": "Open-source Firebase alternative with AI vector search"
+    },
+    "scenes": {
+      "zh": [
+        "backend",
+        "vector-search",
+        "database"
+      ],
+      "en": [
+        "backend",
+        "vector-search",
+        "database"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "pinecone": {
+    "name": {
+      "zh": "Pinecone",
+      "en": "Pinecone"
+    },
+    "cat": "code",
+    "url": "https://pinecone.io",
+    "icon": "fa-tree",
+    "short_desc": {
+      "zh": "Vector database for AI",
+      "en": "Vector database for AI"
+    },
+    "long_desc": {
+      "zh": "Vector database designed for AI semantic search and RAG",
+      "en": "Vector database designed for AI semantic search and RAG"
+    },
+    "scenes": {
+      "zh": [
+        "vector",
+        "rag",
+        "ai-apps"
+      ],
+      "en": [
+        "vector",
+        "rag",
+        "ai-apps"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "anthropic-api": {
+    "name": {
+      "zh": "Anthropic API",
+      "en": "Anthropic API"
+    },
+    "cat": "code",
+    "url": "https://anthropic.com",
+    "icon": "fa-code",
+    "short_desc": {
+      "zh": "Claude API service",
+      "en": "Claude API service"
+    },
+    "long_desc": {
+      "zh": "Official Claude API with 200K context",
+      "en": "Official Claude API with 200K context"
+    },
+    "scenes": {
+      "zh": [
+        "api",
+        "long-context",
+        "code"
+      ],
+      "en": [
+        "api",
+        "long-context",
+        "code"
+      ]
+    },
+    "pricing": {
+      "zh": "Pay per use",
+      "en": "Pay per use"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "openai-api": {
+    "name": {
+      "zh": "OpenAI API",
+      "en": "OpenAI API"
+    },
+    "cat": "code",
+    "url": "https://platform.openai.com",
+    "icon": "fa-code",
+    "short_desc": {
+      "zh": "GPT model API",
+      "en": "GPT model API"
+    },
+    "long_desc": {
+      "zh": "Official API for GPT-4o, DALL-E, Whisper and more",
+      "en": "Official API for GPT-4o, DALL-E, Whisper and more"
+    },
+    "scenes": {
+      "zh": [
+        "api",
+        "multimodal",
+        "embeddings"
+      ],
+      "en": [
+        "api",
+        "multimodal",
+        "embeddings"
+      ]
+    },
+    "pricing": {
+      "zh": "Pay per use",
+      "en": "Pay per use"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "phind-pro": {
+    "name": {
+      "zh": "Phind Pro",
+      "en": "Phind Pro"
+    },
+    "cat": "code",
+    "url": "https://phind.com",
+    "icon": "fa-code",
+    "short_desc": {
+      "zh": "AI dev search engine",
+      "en": "AI dev search engine"
+    },
+    "long_desc": {
+      "zh": "AI search engine designed for developers",
+      "en": "AI search engine designed for developers"
+    },
+    "scenes": {
+      "zh": [
+        "dev-search",
+        "code",
+        "debugging"
+      ],
+      "en": [
+        "dev-search",
+        "code",
+        "debugging"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "v0-dev": {
+    "name": {
+      "zh": "v0 by Vercel",
+      "en": "v0 by Vercel"
+    },
+    "cat": "code",
+    "url": "https://v0.dev",
+    "icon": "fa-code",
+    "short_desc": {
+      "zh": "AI UI component generator",
+      "en": "AI UI component generator"
+    },
+    "long_desc": {
+      "zh": "Generate React/Tailwind UI from text descriptions",
+      "en": "Generate React/Tailwind UI from text descriptions"
+    },
+    "scenes": {
+      "zh": [
+        "ui-gen",
+        "react",
+        "dev"
+      ],
+      "en": [
+        "ui-gen",
+        "react",
+        "dev"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "bolt-new": {
+    "name": {
+      "zh": "Bolt.new",
+      "en": "Bolt.new"
+    },
+    "cat": "code",
+    "url": "https://bolt.new",
+    "icon": "fa-bolt",
+    "short_desc": {
+      "zh": "AI full-stack app generator",
+      "en": "AI full-stack app generator"
+    },
+    "long_desc": {
+      "zh": "Generate complete full-stack apps from descriptions",
+      "en": "Generate complete full-stack apps from descriptions"
+    },
+    "scenes": {
+      "zh": [
+        "fullstack",
+        "prototype",
+        "mvp"
+      ],
+      "en": [
+        "fullstack",
+        "prototype",
+        "mvp"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "lovable-dev": {
+    "name": {
+      "zh": "Lovable",
+      "en": "Lovable"
+    },
+    "cat": "code",
+    "url": "https://lovable.dev",
+    "icon": "fa-heart",
+    "short_desc": {
+      "zh": "AI full-stack builder",
+      "en": "AI full-stack builder"
+    },
+    "long_desc": {
+      "zh": "Generate full-stack web apps from descriptions",
+      "en": "Generate full-stack web apps from descriptions"
+    },
+    "scenes": {
+      "zh": [
+        "fullstack",
+        "app-gen",
+        "dev"
+      ],
+      "en": [
+        "fullstack",
+        "app-gen",
+        "dev"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "windsurf-edit": {
+    "name": {
+      "zh": "Windsurf Editor",
+      "en": "Windsurf Editor"
+    },
+    "cat": "code",
+    "url": "https://codeium.com/windsurf",
+    "icon": "fa-wind",
+    "short_desc": {
+      "zh": "AI-first code editor",
+      "en": "AI-first code editor"
+    },
+    "long_desc": {
+      "zh": "Codeium AI-first IDE with integrated AI assistant",
+      "en": "Codeium AI-first IDE with integrated AI assistant"
+    },
+    "scenes": {
+      "zh": [
+        "ide",
+        "ai-coding",
+        "editor"
+      ],
+      "en": [
+        "ide",
+        "ai-coding",
+        "editor"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "zed-ai": {
+    "name": {
+      "zh": "Zed",
+      "en": "Zed"
+    },
+    "cat": "code",
+    "url": "https://zed.dev",
+    "icon": "fa-code",
+    "short_desc": {
+      "zh": "High-performance editor",
+      "en": "High-performance editor"
+    },
+    "long_desc": {
+      "zh": "Rust-built high-performance code editor with AI",
+      "en": "Rust-built high-performance code editor with AI"
+    },
+    "scenes": {
+      "zh": [
+        "editor",
+        "performance",
+        "rust"
+      ],
+      "en": [
+        "editor",
+        "performance",
+        "rust"
+      ]
+    },
+    "pricing": {
+      "zh": "Free",
+      "en": "Free"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "trae-ai": {
+    "name": {
+      "zh": "Trae",
+      "en": "Trae"
+    },
+    "cat": "code",
+    "url": "https://trae.ai",
+    "icon": "fa-code",
+    "short_desc": {
+      "zh": "ByteDance AI IDE",
+      "en": "ByteDance AI IDE"
+    },
+    "long_desc": {
+      "zh": "ByteDance AI-first IDE for coding",
+      "en": "ByteDance AI-first IDE for coding"
+    },
+    "scenes": {
+      "zh": [
+        "ide",
+        "ai-coding"
+      ],
+      "en": [
+        "ide",
+        "ai-coding"
+      ]
+    },
+    "pricing": {
+      "zh": "Free",
+      "en": "Free"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "murf-ai": {
+    "name": {
+      "zh": "Murf AI",
+      "en": "Murf AI"
+    },
+    "cat": "audio",
+    "url": "https://murf.ai",
+    "icon": "fa-microphone",
+    "short_desc": {
+      "zh": "AI voice synthesis",
+      "en": "AI voice synthesis"
+    },
+    "long_desc": {
+      "zh": "AI voice synthesis with 120+ voices in 20+ languages",
+      "en": "AI voice synthesis with 120+ voices in 20+ languages"
+    },
+    "scenes": {
+      "zh": [
+        "voiceover",
+        "tts",
+        "narration"
+      ],
+      "en": [
+        "voiceover",
+        "tts",
+        "narration"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "playht": {
+    "name": {
+      "zh": "PlayHT",
+      "en": "PlayHT"
+    },
+    "cat": "audio",
+    "url": "https://play.ht",
+    "icon": "fa-headphones",
+    "short_desc": {
+      "zh": "AI text-to-speech",
+      "en": "AI text-to-speech"
+    },
+    "long_desc": {
+      "zh": "Ultra-realistic AI voices with 800+ options",
+      "en": "Ultra-realistic AI voices with 800+ options"
+    },
+    "scenes": {
+      "zh": [
+        "tts",
+        "voiceover",
+        "podcast"
+      ],
+      "en": [
+        "tts",
+        "voiceover",
+        "podcast"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "listnr": {
+    "name": {
+      "zh": "Listnr",
+      "en": "Listnr"
+    },
+    "cat": "audio",
+    "url": "https://listnr.tech",
+    "icon": "fa-headphones",
+    "short_desc": {
+      "zh": "AI TTS generator",
+      "en": "AI TTS generator"
+    },
+    "long_desc": {
+      "zh": "AI text-to-speech with 600+ voices in 140+ languages",
+      "en": "AI text-to-speech with 600+ voices in 140+ languages"
+    },
+    "scenes": {
+      "zh": [
+        "tts",
+        "voiceover"
+      ],
+      "en": [
+        "tts",
+        "voiceover"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "wellsaid": {
+    "name": {
+      "zh": "WellSaid Labs",
+      "en": "WellSaid Labs"
+    },
+    "cat": "audio",
+    "url": "https://wellsaidlabs.com",
+    "icon": "fa-microphone",
+    "short_desc": {
+      "zh": "Enterprise AI voice",
+      "en": "Enterprise AI voice"
+    },
+    "long_desc": {
+      "zh": "Enterprise AI voice for training and education",
+      "en": "Enterprise AI voice for training and education"
+    },
+    "scenes": {
+      "zh": [
+        "enterprise",
+        "training",
+        "narration"
+      ],
+      "en": [
+        "enterprise",
+        "training",
+        "narration"
+      ]
+    },
+    "pricing": {
+      "zh": "Paid",
+      "en": "Paid"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "assembly-ai": {
+    "name": {
+      "zh": "AssemblyAI",
+      "en": "AssemblyAI"
+    },
+    "cat": "audio",
+    "url": "https://assemblyai.com",
+    "icon": "fa-waveform",
+    "short_desc": {
+      "zh": "AI transcription API",
+      "en": "AI transcription API"
+    },
+    "long_desc": {
+      "zh": "High-accuracy speech-to-text with speaker detection",
+      "en": "High-accuracy speech-to-text with speaker detection"
+    },
+    "scenes": {
+      "zh": [
+        "transcription",
+        "api",
+        "analysis"
+      ],
+      "en": [
+        "transcription",
+        "api",
+        "analysis"
+      ]
+    },
+    "pricing": {
+      "zh": "Pay per use",
+      "en": "Pay per use"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "whisper-api": {
+    "name": {
+      "zh": "OpenAI Whisper",
+      "en": "OpenAI Whisper"
+    },
+    "cat": "audio",
+    "url": "https://github.com/openai/whisper",
+    "icon": "fa-waveform",
+    "short_desc": {
+      "zh": "Open-source speech recognition",
+      "en": "Open-source speech recognition"
+    },
+    "long_desc": {
+      "zh": "Open-source speech recognition model, 99 languages",
+      "en": "Open-source speech recognition model, 99 languages"
+    },
+    "scenes": {
+      "zh": [
+        "stt",
+        "transcription",
+        "open-source"
+      ],
+      "en": [
+        "stt",
+        "transcription",
+        "open-source"
+      ]
+    },
+    "pricing": {
+      "zh": "Free",
+      "en": "Free"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "audo-ai": {
+    "name": {
+      "zh": "Audo AI",
+      "en": "Audo AI"
+    },
+    "cat": "audio",
+    "url": "https://audo.ai",
+    "icon": "fa-volume-up",
+    "short_desc": {
+      "zh": "AI audio noise removal",
+      "en": "AI audio noise removal"
+    },
+    "long_desc": {
+      "zh": "Auto-remove background noise from recordings",
+      "en": "Auto-remove background noise from recordings"
+    },
+    "scenes": {
+      "zh": [
+        "noise-removal",
+        "cleanup",
+        "podcast"
+      ],
+      "en": [
+        "noise-removal",
+        "cleanup",
+        "podcast"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "adobe-podcast": {
+    "name": {
+      "zh": "Adobe Podcast Enhance",
+      "en": "Adobe Podcast Enhance"
+    },
+    "cat": "audio",
+    "url": "https://podcast.adobe.com/enhance",
+    "icon": "fa-microphone",
+    "short_desc": {
+      "zh": "AI podcast audio enhancement",
+      "en": "AI podcast audio enhancement"
+    },
+    "long_desc": {
+      "zh": "Make ordinary mic recordings sound like studio quality",
+      "en": "Make ordinary mic recordings sound like studio quality"
+    },
+    "scenes": {
+      "zh": [
+        "enhancement",
+        "podcast",
+        "free"
+      ],
+      "en": [
+        "enhancement",
+        "podcast",
+        "free"
+      ]
+    },
+    "pricing": {
+      "zh": "Free",
+      "en": "Free"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "audioalter": {
+    "name": {
+      "zh": "AudioAlter",
+      "en": "AudioAlter"
+    },
+    "cat": "audio",
+    "url": "https://audioalter.com",
+    "icon": "fa-waveform",
+    "short_desc": {
+      "zh": "Online audio editing",
+      "en": "Online audio editing"
+    },
+    "long_desc": {
+      "zh": "Browser-based audio editing with multiple effects",
+      "en": "Browser-based audio editing with multiple effects"
+    },
+    "scenes": {
+      "zh": [
+        "editing",
+        "effects",
+        "online"
+      ],
+      "en": [
+        "editing",
+        "effects",
+        "online"
+      ]
+    },
+    "pricing": {
+      "zh": "Free",
+      "en": "Free"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "gladia": {
+    "name": {
+      "zh": "Gladia",
+      "en": "Gladia"
+    },
+    "cat": "audio",
+    "url": "https://gladia.io",
+    "icon": "fa-waveform",
+    "short_desc": {
+      "zh": "AI transcription API",
+      "en": "AI transcription API"
+    },
+    "long_desc": {
+      "zh": "Real-time and async audio/video transcription API",
+      "en": "Real-time and async audio/video transcription API"
+    },
+    "scenes": {
+      "zh": [
+        "transcription",
+        "api",
+        "real-time"
+      ],
+      "en": [
+        "transcription",
+        "api",
+        "real-time"
+      ]
+    },
+    "pricing": {
+      "zh": "Pay per use",
+      "en": "Pay per use"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "frase-io": {
+    "name": {
+      "zh": "Frase",
+      "en": "Frase"
+    },
+    "cat": "text",
+    "url": "https://frase.io",
+    "icon": "fa-file-text",
+    "short_desc": {
+      "zh": "AI SEO content platform",
+      "en": "AI SEO content platform"
+    },
+    "long_desc": {
+      "zh": "AI SEO research and writing for optimized content",
+      "en": "AI SEO research and writing for optimized content"
+    },
+    "scenes": {
+      "zh": [
+        "seo",
+        "content",
+        "research"
+      ],
+      "en": [
+        "seo",
+        "content",
+        "research"
+      ]
+    },
+    "pricing": {
+      "zh": "Paid",
+      "en": "Paid"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "rytr-ai": {
+    "name": {
+      "zh": "Rytr",
+      "en": "Rytr"
+    },
+    "cat": "text",
+    "url": "https://rytr.me",
+    "icon": "fa-pen",
+    "short_desc": {
+      "zh": "AI writing assistant",
+      "en": "AI writing assistant"
+    },
+    "long_desc": {
+      "zh": "Affordable AI writing assistant, multiple use cases and languages",
+      "en": "Affordable AI writing assistant, multiple use cases and languages"
+    },
+    "scenes": {
+      "zh": [
+        "writing",
+        "copy",
+        "email"
+      ],
+      "en": [
+        "writing",
+        "copy",
+        "email"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "contentbot": {
+    "name": {
+      "zh": "ContentBot",
+      "en": "ContentBot"
+    },
+    "cat": "text",
+    "url": "https://contentbot.ai",
+    "icon": "fa-robot",
+    "short_desc": {
+      "zh": "AI content generation",
+      "en": "AI content generation"
+    },
+    "long_desc": {
+      "zh": "AI article generation, summarization and rewriting",
+      "en": "AI article generation, summarization and rewriting"
+    },
+    "scenes": {
+      "zh": [
+        "content",
+        "article",
+        "generation"
+      ],
+      "en": [
+        "content",
+        "article",
+        "generation"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "ink-ai": {
+    "name": {
+      "zh": "INK AI",
+      "en": "INK AI"
+    },
+    "cat": "text",
+    "url": "https://inkforall.com",
+    "icon": "fa-pen",
+    "short_desc": {
+      "zh": "AI SEO writing",
+      "en": "AI SEO writing"
+    },
+    "long_desc": {
+      "zh": "AI writing with SEO scoring and optimization",
+      "en": "AI writing with SEO scoring and optimization"
+    },
+    "scenes": {
+      "zh": [
+        "seo",
+        "writing",
+        "optimization"
+      ],
+      "en": [
+        "seo",
+        "writing",
+        "optimization"
+      ]
+    },
+    "pricing": {
+      "zh": "Paid",
+      "en": "Paid"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "sudowrite-ai": {
+    "name": {
+      "zh": "Sudowrite",
+      "en": "Sudowrite"
+    },
+    "cat": "text",
+    "url": "https://sudowrite.com",
+    "icon": "fa-book",
+    "short_desc": {
+      "zh": "AI fiction writing",
+      "en": "AI fiction writing"
+    },
+    "long_desc": {
+      "zh": "AI assistant for fiction writers with plot and character tools",
+      "en": "AI assistant for fiction writers with plot and character tools"
+    },
+    "scenes": {
+      "zh": [
+        "fiction",
+        "creative",
+        "story"
+      ],
+      "en": [
+        "fiction",
+        "creative",
+        "story"
+      ]
+    },
+    "pricing": {
+      "zh": "Paid",
+      "en": "Paid"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "ai-writer": {
+    "name": {
+      "zh": "AI-Writer",
+      "en": "AI-Writer"
+    },
+    "cat": "text",
+    "url": "https://ai-writer.com",
+    "icon": "fa-file-text",
+    "short_desc": {
+      "zh": "AI article generator",
+      "en": "AI article generator"
+    },
+    "long_desc": {
+      "zh": "Generate cited academic and informational articles",
+      "en": "Generate cited academic and informational articles"
+    },
+    "scenes": {
+      "zh": [
+        "article",
+        "academic",
+        "generation"
+      ],
+      "en": [
+        "article",
+        "academic",
+        "generation"
+      ]
+    },
+    "pricing": {
+      "zh": "Paid",
+      "en": "Paid"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "textcortex": {
+    "name": {
+      "zh": "TextCortex",
+      "en": "TextCortex"
+    },
+    "cat": "text",
+    "url": "https://textcortex.com",
+    "icon": "fa-pen",
+    "short_desc": {
+      "zh": "AI rewriting assistant",
+      "en": "AI rewriting assistant"
+    },
+    "long_desc": {
+      "zh": "AI rewriting, summarization and translation",
+      "en": "AI rewriting, summarization and translation"
+    },
+    "scenes": {
+      "zh": [
+        "rewrite",
+        "summarize",
+        "translate"
+      ],
+      "en": [
+        "rewrite",
+        "summarize",
+        "translate"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "hoppycopy": {
+    "name": {
+      "zh": "Hoppy Copy",
+      "en": "Hoppy Copy"
+    },
+    "cat": "text",
+    "url": "https://hoppycopy.com",
+    "icon": "fa-envelope",
+    "short_desc": {
+      "zh": "AI email marketing copy",
+      "en": "AI email marketing copy"
+    },
+    "long_desc": {
+      "zh": "AI copy tool for email marketing sequences",
+      "en": "AI copy tool for email marketing sequences"
+    },
+    "scenes": {
+      "zh": [
+        "email",
+        "marketing",
+        "copy"
+      ],
+      "en": [
+        "email",
+        "marketing",
+        "copy"
+      ]
+    },
+    "pricing": {
+      "zh": "Paid",
+      "en": "Paid"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "simplified-ai": {
+    "name": {
+      "zh": "Simplified AI",
+      "en": "Simplified AI"
+    },
+    "cat": "text",
+    "url": "https://simplified.com",
+    "icon": "fa-magic",
+    "short_desc": {
+      "zh": "All-in-one AI marketing",
+      "en": "All-in-one AI marketing"
+    },
+    "long_desc": {
+      "zh": "AI writing, design, video and social media in one platform",
+      "en": "AI writing, design, video and social media in one platform"
+    },
+    "scenes": {
+      "zh": [
+        "marketing",
+        "design",
+        "social"
+      ],
+      "en": [
+        "marketing",
+        "design",
+        "social"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "hypotenuse": {
+    "name": {
+      "zh": "Hypotenuse AI",
+      "en": "Hypotenuse AI"
+    },
+    "cat": "text",
+    "url": "https://hypotenuse.ai",
+    "icon": "fa-pen",
+    "short_desc": {
+      "zh": "AI ecommerce content",
+      "en": "AI ecommerce content"
+    },
+    "long_desc": {
+      "zh": "AI content generation for ecommerce product descriptions",
+      "en": "AI content generation for ecommerce product descriptions"
+    },
+    "scenes": {
+      "zh": [
+        "ecommerce",
+        "product",
+        "content"
+      ],
+      "en": [
+        "ecommerce",
+        "product",
+        "content"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "copysmith": {
+    "name": {
+      "zh": "Copysmith",
+      "en": "Copysmith"
+    },
+    "cat": "text",
+    "url": "https://copysmith.ai",
+    "icon": "fa-copy",
+    "short_desc": {
+      "zh": "AI ecommerce copy",
+      "en": "AI ecommerce copy"
+    },
+    "long_desc": {
+      "zh": "AI product descriptions, ads and SEO content for ecommerce",
+      "en": "AI product descriptions, ads and SEO content for ecommerce"
+    },
+    "scenes": {
+      "zh": [
+        "ecommerce",
+        "ads",
+        "seo"
+      ],
+      "en": [
+        "ecommerce",
+        "ads",
+        "seo"
+      ]
+    },
+    "pricing": {
+      "zh": "Paid",
+      "en": "Paid"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "anyword-ai": {
+    "name": {
+      "zh": "Anyword",
+      "en": "Anyword"
+    },
+    "cat": "text",
+    "url": "https://anyword.com",
+    "icon": "fa-bullhorn",
+    "short_desc": {
+      "zh": "AI copy with scoring",
+      "en": "AI copy with scoring"
+    },
+    "long_desc": {
+      "zh": "AI marketing copy with predictive performance scoring",
+      "en": "AI marketing copy with predictive performance scoring"
+    },
+    "scenes": {
+      "zh": [
+        "marketing",
+        "copy",
+        "ab-testing"
+      ],
+      "en": [
+        "marketing",
+        "copy",
+        "ab-testing"
+      ]
+    },
+    "pricing": {
+      "zh": "Paid",
+      "en": "Paid"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "grammarly-prem": {
+    "name": {
+      "zh": "Grammarly Premium",
+      "en": "Grammarly Premium"
+    },
+    "cat": "text",
+    "url": "https://grammarly.com",
+    "icon": "fa-check",
+    "short_desc": {
+      "zh": "AI grammar and style",
+      "en": "AI grammar and style"
+    },
+    "long_desc": {
+      "zh": "Advanced grammar checking, style suggestions and AI rewriting",
+      "en": "Advanced grammar checking, style suggestions and AI rewriting"
+    },
+    "scenes": {
+      "zh": [
+        "grammar",
+        "style",
+        "proofread"
+      ],
+      "en": [
+        "grammar",
+        "style",
+        "proofread"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "monica-ai": {
+    "name": {
+      "zh": "Monica AI",
+      "en": "Monica AI"
+    },
+    "cat": "productivity",
+    "url": "https://monica.im",
+    "icon": "fa-robot",
+    "short_desc": {
+      "zh": "AI browser assistant",
+      "en": "AI browser assistant"
+    },
+    "long_desc": {
+      "zh": "Chrome extension for AI writing, translation and search",
+      "en": "Chrome extension for AI writing, translation and search"
+    },
+    "scenes": {
+      "zh": [
+        "browser",
+        "writing",
+        "translation"
+      ],
+      "en": [
+        "browser",
+        "writing",
+        "translation"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "merlin-ai": {
+    "name": {
+      "zh": "Merlin AI",
+      "en": "Merlin AI"
+    },
+    "cat": "productivity",
+    "url": "https://merlin.foyer.work",
+    "icon": "fa-magic",
+    "short_desc": {
+      "zh": "AI browser extension",
+      "en": "AI browser extension"
+    },
+    "long_desc": {
+      "zh": "AI summarization, writing and search on any webpage",
+      "en": "AI summarization, writing and search on any webpage"
+    },
+    "scenes": {
+      "zh": [
+        "web",
+        "summarize",
+        "writing"
+      ],
+      "en": [
+        "web",
+        "summarize",
+        "writing"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "harpa-ai": {
+    "name": {
+      "zh": "Harpa AI",
+      "en": "Harpa AI"
+    },
+    "cat": "productivity",
+    "url": "https://harpa.ai",
+    "icon": "fa-robot",
+    "short_desc": {
+      "zh": "AI web automation",
+      "en": "AI web automation"
+    },
+    "long_desc": {
+      "zh": "Browser extension for web monitoring and data extraction",
+      "en": "Browser extension for web monitoring and data extraction"
+    },
+    "scenes": {
+      "zh": [
+        "automation",
+        "monitoring",
+        "data"
+      ],
+      "en": [
+        "automation",
+        "monitoring",
+        "data"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "maxai": {
+    "name": {
+      "zh": "MaxAI",
+      "en": "MaxAI"
+    },
+    "cat": "productivity",
+    "url": "https://maxai.me",
+    "icon": "fa-robot",
+    "short_desc": {
+      "zh": "AI browser assistant",
+      "en": "AI browser assistant"
+    },
+    "long_desc": {
+      "zh": "AI writing, reading and search in the browser",
+      "en": "AI writing, reading and search in the browser"
+    },
+    "scenes": {
+      "zh": [
+        "browser",
+        "writing",
+        "search"
+      ],
+      "en": [
+        "browser",
+        "writing",
+        "search"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "sider-ai": {
+    "name": {
+      "zh": "Sider AI",
+      "en": "Sider AI"
+    },
+    "cat": "productivity",
+    "url": "https://sider.ai",
+    "icon": "fa-bars",
+    "short_desc": {
+      "zh": "Browser sidebar AI",
+      "en": "Browser sidebar AI"
+    },
+    "long_desc": {
+      "zh": "Multi-model AI chat in browser sidebar",
+      "en": "Multi-model AI chat in browser sidebar"
+    },
+    "scenes": {
+      "zh": [
+        "browser",
+        "ai-chat",
+        "sidebar"
+      ],
+      "en": [
+        "browser",
+        "ai-chat",
+        "sidebar"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "tldv": {
+    "name": {
+      "zh": "tl;dv",
+      "en": "tl;dv"
+    },
+    "cat": "productivity",
+    "url": "https://tldv.io",
+    "icon": "fa-video",
+    "short_desc": {
+      "zh": "AI meeting recorder",
+      "en": "AI meeting recorder"
+    },
+    "long_desc": {
+      "zh": "Auto record, transcribe and summarize meetings",
+      "en": "Auto record, transcribe and summarize meetings"
+    },
+    "scenes": {
+      "zh": [
+        "meeting",
+        "transcription",
+        "summary"
+      ],
+      "en": [
+        "meeting",
+        "transcription",
+        "summary"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "fathom": {
+    "name": {
+      "zh": "Fathom",
+      "en": "Fathom"
+    },
+    "cat": "productivity",
+    "url": "https://fathom.video",
+    "icon": "fa-video",
+    "short_desc": {
+      "zh": "AI meeting assistant",
+      "en": "AI meeting assistant"
+    },
+    "long_desc": {
+      "zh": "Auto record, transcribe and extract action items",
+      "en": "Auto record, transcribe and extract action items"
+    },
+    "scenes": {
+      "zh": [
+        "meeting",
+        "transcription",
+        "actions"
+      ],
+      "en": [
+        "meeting",
+        "transcription",
+        "actions"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "glide-ai": {
+    "name": {
+      "zh": "Glide AI",
+      "en": "Glide AI"
+    },
+    "cat": "productivity",
+    "url": "https://glideapps.com",
+    "icon": "fa-mobile",
+    "short_desc": {
+      "zh": "No-code AI app builder",
+      "en": "No-code AI app builder"
+    },
+    "long_desc": {
+      "zh": "Build AI-powered apps without coding",
+      "en": "Build AI-powered apps without coding"
+    },
+    "scenes": {
+      "zh": [
+        "no-code",
+        "app-dev",
+        "ai"
+      ],
+      "en": [
+        "no-code",
+        "app-dev",
+        "ai"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "airtable-ai": {
+    "name": {
+      "zh": "Airtable AI",
+      "en": "Airtable AI"
+    },
+    "cat": "productivity",
+    "url": "https://airtable.com",
+    "icon": "fa-table",
+    "short_desc": {
+      "zh": "AI database platform",
+      "en": "AI database platform"
+    },
+    "long_desc": {
+      "zh": "AI-enhanced database with text generation and classification",
+      "en": "AI-enhanced database with text generation and classification"
+    },
+    "scenes": {
+      "zh": [
+        "database",
+        "project",
+        "ai"
+      ],
+      "en": [
+        "database",
+        "project",
+        "ai"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "zapier": {
+    "name": {
+      "zh": "Zapier",
+      "en": "Zapier"
+    },
+    "cat": "productivity",
+    "url": "https://zapier.com",
+    "icon": "fa-bolt",
+    "short_desc": {
+      "zh": "AI automation platform",
+      "en": "AI automation platform"
+    },
+    "long_desc": {
+      "zh": "Connect 6000+ apps with AI workflow generation",
+      "en": "Connect 6000+ apps with AI workflow generation"
+    },
+    "scenes": {
+      "zh": [
+        "automation",
+        "integration",
+        "workflow"
+      ],
+      "en": [
+        "automation",
+        "integration",
+        "workflow"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "resend": {
+    "name": {
+      "zh": "Resend",
+      "en": "Resend"
+    },
+    "cat": "productivity",
+    "url": "https://resend.com",
+    "icon": "fa-envelope",
+    "short_desc": {
+      "zh": "Developer email API",
+      "en": "Developer email API"
+    },
+    "long_desc": {
+      "zh": "Modern email API with React templates and AI content",
+      "en": "Modern email API with React templates and AI content"
+    },
+    "scenes": {
+      "zh": [
+        "email",
+        "api",
+        "dev"
+      ],
+      "en": [
+        "email",
+        "api",
+        "dev"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "twilio-ai": {
+    "name": {
+      "zh": "Twilio AI",
+      "en": "Twilio AI"
+    },
+    "cat": "productivity",
+    "url": "https://twilio.com",
+    "icon": "fa-phone",
+    "short_desc": {
+      "zh": "AI communication API",
+      "en": "AI communication API"
+    },
+    "long_desc": {
+      "zh": "AI-powered voice, messaging and customer service API",
+      "en": "AI-powered voice, messaging and customer service API"
+    },
+    "scenes": {
+      "zh": [
+        "communication",
+        "voice",
+        "api"
+      ],
+      "en": [
+        "communication",
+        "voice",
+        "api"
+      ]
+    },
+    "pricing": {
+      "zh": "Pay per use",
+      "en": "Pay per use"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "lexica": {
+    "name": {
+      "zh": "Lexica",
+      "en": "Lexica"
+    },
+    "cat": "image",
+    "url": "https://lexica.art",
+    "icon": "fa-search",
+    "short_desc": {
+      "zh": "AI image search and generation",
+      "en": "AI image search and generation"
+    },
+    "long_desc": {
+      "zh": "Search AI-generated images and generate with Stable Diffusion",
+      "en": "Search AI-generated images and generate with Stable Diffusion"
+    },
+    "scenes": {
+      "zh": [
+        "search",
+        "generation",
+        "stable-diffusion"
+      ],
+      "en": [
+        "search",
+        "generation",
+        "stable-diffusion"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "tensor-art": {
+    "name": {
+      "zh": "Tensor Art",
+      "en": "Tensor Art"
+    },
+    "cat": "image",
+    "url": "https://tensor.art",
+    "icon": "fa-paint-brush",
+    "short_desc": {
+      "zh": "AI image generation community",
+      "en": "AI image generation community"
+    },
+    "long_desc": {
+      "zh": "AI image generation with community models and LoRA",
+      "en": "AI image generation with community models and LoRA"
+    },
+    "scenes": {
+      "zh": [
+        "art",
+        "community",
+        "lora"
+      ],
+      "en": [
+        "art",
+        "community",
+        "lora"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "civitai": {
+    "name": {
+      "zh": "CivitAI",
+      "en": "CivitAI"
+    },
+    "cat": "image",
+    "url": "https://civitai.com",
+    "icon": "fa-images",
+    "short_desc": {
+      "zh": "AI model sharing community",
+      "en": "AI model sharing community"
+    },
+    "long_desc": {
+      "zh": "Community platform for sharing AI models and LoRA",
+      "en": "Community platform for sharing AI models and LoRA"
+    },
+    "scenes": {
+      "zh": [
+        "models",
+        "community",
+        "lora"
+      ],
+      "en": [
+        "models",
+        "community",
+        "lora"
+      ]
+    },
+    "pricing": {
+      "zh": "Free",
+      "en": "Free"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "openart": {
+    "name": {
+      "zh": "OpenArt AI",
+      "en": "OpenArt AI"
+    },
+    "cat": "image",
+    "url": "https://openart.ai",
+    "icon": "fa-image",
+    "short_desc": {
+      "zh": "AI image generation and editing",
+      "en": "AI image generation and editing"
+    },
+    "long_desc": {
+      "zh": "AI image generation with multiple models and styles",
+      "en": "AI image generation with multiple models and styles"
+    },
+    "scenes": {
+      "zh": [
+        "image",
+        "editing",
+        "creative"
+      ],
+      "en": [
+        "image",
+        "editing",
+        "creative"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "seaart": {
+    "name": {
+      "zh": "SeaArt AI",
+      "en": "SeaArt AI"
+    },
+    "cat": "image",
+    "url": "https://seaart.ai",
+    "icon": "fa-water",
+    "short_desc": {
+      "zh": "AI art generation platform",
+      "en": "AI art generation platform"
+    },
+    "long_desc": {
+      "zh": "AI art generation with community models and tools",
+      "en": "AI art generation with community models and tools"
+    },
+    "scenes": {
+      "zh": [
+        "art",
+        "community",
+        "generation"
+      ],
+      "en": [
+        "art",
+        "community",
+        "generation"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "tensor-gen": {
+    "name": {
+      "zh": "TensorGen",
+      "en": "TensorGen"
+    },
+    "cat": "image",
+    "url": "https://tensorgen.com",
+    "icon": "fa-image",
+    "short_desc": {
+      "zh": "AI image generator",
+      "en": "AI image generator"
+    },
+    "long_desc": {
+      "zh": "Fast AI image generation with multiple models",
+      "en": "Fast AI image generation with multiple models"
+    },
+    "scenes": {
+      "zh": [
+        "image",
+        "generation",
+        "fast"
+      ],
+      "en": [
+        "image",
+        "generation",
+        "fast"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "d-ID-pro": {
+    "name": {
+      "zh": "D-ID Pro",
+      "en": "D-ID Pro"
+    },
+    "cat": "video",
+    "url": "https://d-id.com",
+    "icon": "fa-user",
+    "short_desc": {
+      "zh": "AI video with talking avatars",
+      "en": "AI video with talking avatars"
+    },
+    "long_desc": {
+      "zh": "Create talking head videos from photos and text",
+      "en": "Create talking head videos from photos and text"
+    },
+    "scenes": {
+      "zh": [
+        "avatar",
+        "talking-head",
+        "video"
+      ],
+      "en": [
+        "avatar",
+        "talking-head",
+        "video"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "gliacloud": {
+    "name": {
+      "zh": "GliaCloud",
+      "en": "GliaCloud"
+    },
+    "cat": "video",
+    "url": "https://gliacloud.com",
+    "icon": "fa-video",
+    "short_desc": {
+      "zh": "AI video generation",
+      "en": "AI video generation"
+    },
+    "long_desc": {
+      "zh": "AI video generation from text and data",
+      "en": "AI video generation from text and data"
+    },
+    "scenes": {
+      "zh": [
+        "generation",
+        "text-to-video",
+        "data"
+      ],
+      "en": [
+        "generation",
+        "text-to-video",
+        "data"
+      ]
+    },
+    "pricing": {
+      "zh": "Paid",
+      "en": "Paid"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "sora-pro": {
+    "name": {
+      "zh": "Sora Pro",
+      "en": "Sora Pro"
+    },
+    "cat": "video",
+    "url": "https://sora.com",
+    "icon": "fa-film",
+    "short_desc": {
+      "zh": "OpenAI video generation pro",
+      "en": "OpenAI video generation pro"
+    },
+    "long_desc": {
+      "zh": "OpenAI advanced video generation model",
+      "en": "OpenAI advanced video generation model"
+    },
+    "scenes": {
+      "zh": [
+        "video",
+        "generation",
+        "cinematic"
+      ],
+      "en": [
+        "video",
+        "generation",
+        "cinematic"
+      ]
+    },
+    "pricing": {
+      "zh": "Paid",
+      "en": "Paid"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "genmo-pro": {
+    "name": {
+      "zh": "Genmo Pro",
+      "en": "Genmo Pro"
+    },
+    "cat": "video",
+    "url": "https://genmo.ai",
+    "icon": "fa-video",
+    "short_desc": {
+      "zh": "AI interactive video generation",
+      "en": "AI interactive video generation"
+    },
+    "long_desc": {
+      "zh": "Interactive 3D and video generation",
+      "en": "Interactive 3D and video generation"
+    },
+    "scenes": {
+      "zh": [
+        "3d",
+        "video",
+        "interactive"
+      ],
+      "en": [
+        "3d",
+        "video",
+        "interactive"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "lipsync": {
+    "name": {
+      "zh": "Wav2Lip",
+      "en": "Wav2Lip"
+    },
+    "cat": "video",
+    "url": "https://github.com/Rudrabha/Wav2Lip",
+    "icon": "fa-comment",
+    "short_desc": {
+      "zh": "AI lip sync tool",
+      "en": "AI lip sync tool"
+    },
+    "long_desc": {
+      "zh": "Open-source lip sync from audio to video",
+      "en": "Open-source lip sync from audio to video"
+    },
+    "scenes": {
+      "zh": [
+        "lip-sync",
+        "video",
+        "open-source"
+      ],
+      "en": [
+        "lip-sync",
+        "video",
+        "open-source"
+      ]
+    },
+    "pricing": {
+      "zh": "Free",
+      "en": "Free"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "aider-ai": {
+    "name": {
+      "zh": "Aider",
+      "en": "Aider"
+    },
+    "cat": "code",
+    "url": "https://aider.chat",
+    "icon": "fa-code",
+    "short_desc": {
+      "zh": "AI pair programming CLI",
+      "en": "AI pair programming CLI"
+    },
+    "long_desc": {
+      "zh": "AI pair programming in terminal with git integration",
+      "en": "AI pair programming in terminal with git integration"
+    },
+    "scenes": {
+      "zh": [
+        "pair-programming",
+        "terminal",
+        "git"
+      ],
+      "en": [
+        "pair-programming",
+        "terminal",
+        "git"
+      ]
+    },
+    "pricing": {
+      "zh": "Free",
+      "en": "Free"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "continue-dev": {
+    "name": {
+      "zh": "Continue",
+      "en": "Continue"
+    },
+    "cat": "code",
+    "url": "https://continue.dev",
+    "icon": "fa-code",
+    "short_desc": {
+      "zh": "Open-source AI code assistant",
+      "en": "Open-source AI code assistant"
+    },
+    "long_desc": {
+      "zh": "Open-source AI coding assistant for VS Code and JetBrains",
+      "en": "Open-source AI coding assistant for VS Code and JetBrains"
+    },
+    "scenes": {
+      "zh": [
+        "vscode",
+        "ai-coding",
+        "open-source"
+      ],
+      "en": [
+        "vscode",
+        "ai-coding",
+        "open-source"
+      ]
+    },
+    "pricing": {
+      "zh": "Free",
+      "en": "Free"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "roo-code": {
+    "name": {
+      "zh": "Roo Code",
+      "en": "Roo Code"
+    },
+    "cat": "code",
+    "url": "https://github.com/RooCodeInc/Roo-Code",
+    "icon": "fa-code",
+    "short_desc": {
+      "zh": "AI coding extension",
+      "en": "AI coding extension"
+    },
+    "long_desc": {
+      "zh": "AI coding assistant VS Code extension",
+      "en": "AI coding assistant VS Code extension"
+    },
+    "scenes": {
+      "zh": [
+        "vscode",
+        "extension",
+        "ai-coding"
+      ],
+      "en": [
+        "vscode",
+        "extension",
+        "ai-coding"
+      ]
+    },
+    "pricing": {
+      "zh": "Free",
+      "en": "Free"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "ollama-api": {
+    "name": {
+      "zh": "Ollama API",
+      "en": "Ollama API"
+    },
+    "cat": "code",
+    "url": "https://ollama.com",
+    "icon": "fa-server",
+    "short_desc": {
+      "zh": "Local LLM runtime",
+      "en": "Local LLM runtime"
+    },
+    "long_desc": {
+      "zh": "Run LLMs locally with simple API",
+      "en": "Run LLMs locally with simple API"
+    },
+    "scenes": {
+      "zh": [
+        "local-llm",
+        "api",
+        "self-hosted"
+      ],
+      "en": [
+        "local-llm",
+        "api",
+        "self-hosted"
+      ]
+    },
+    "pricing": {
+      "zh": "Free",
+      "en": "Free"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "lm-studio": {
+    "name": {
+      "zh": "LM Studio",
+      "en": "LM Studio"
+    },
+    "cat": "code",
+    "url": "https://lmstudio.ai",
+    "icon": "fa-desktop",
+    "short_desc": {
+      "zh": "Local LLM desktop app",
+      "en": "Local LLM desktop app"
+    },
+    "long_desc": {
+      "zh": "Run local LLMs on your computer with GUI",
+      "en": "Run local LLMs on your computer with GUI"
+    },
+    "scenes": {
+      "zh": [
+        "local-llm",
+        "desktop",
+        "gui"
+      ],
+      "en": [
+        "local-llm",
+        "desktop",
+        "gui"
+      ]
+    },
+    "pricing": {
+      "zh": "Free",
+      "en": "Free"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "lalals": {
+    "name": {
+      "zh": "Lalals",
+      "en": "Lalals"
+    },
+    "cat": "audio",
+    "url": "https://lalals.com",
+    "icon": "fa-music",
+    "short_desc": {
+      "zh": "AI voice cloning music",
+      "en": "AI voice cloning music"
+    },
+    "long_desc": {
+      "zh": "AI voice cloning for music covers",
+      "en": "AI voice cloning for music covers"
+    },
+    "scenes": {
+      "zh": [
+        "voice-clone",
+        "music",
+        "cover"
+      ],
+      "en": [
+        "voice-clone",
+        "music",
+        "cover"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "kits-ai": {
+    "name": {
+      "zh": "Kits AI",
+      "en": "Kits AI"
+    },
+    "cat": "audio",
+    "url": "https://kits.ai",
+    "icon": "fa-microphone",
+    "short_desc": {
+      "zh": "AI voice cloning toolkit",
+      "en": "AI voice cloning toolkit"
+    },
+    "long_desc": {
+      "zh": "Clone voices for music production",
+      "en": "Clone voices for music production"
+    },
+    "scenes": {
+      "zh": [
+        "voice-clone",
+        "music",
+        "production"
+      ],
+      "en": [
+        "voice-clone",
+        "music",
+        "production"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "musicfy": {
+    "name": {
+      "zh": "Musicfy",
+      "en": "Musicfy"
+    },
+    "cat": "audio",
+    "url": "https://musicfy.lol",
+    "icon": "fa-music",
+    "short_desc": {
+      "zh": "AI music voice clone",
+      "en": "AI music voice clone"
+    },
+    "long_desc": {
+      "zh": "Create AI music covers with voice cloning",
+      "en": "Create AI music covers with voice cloning"
+    },
+    "scenes": {
+      "zh": [
+        "music",
+        "voice-clone",
+        "cover"
+      ],
+      "en": [
+        "music",
+        "voice-clone",
+        "cover"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "cover-ai": {
+    "name": {
+      "zh": "Covers AI",
+      "en": "Covers AI"
+    },
+    "cat": "audio",
+    "url": "https://covers.ai",
+    "icon": "fa-music",
+    "short_desc": {
+      "zh": "AI song cover generator",
+      "en": "AI song cover generator"
+    },
+    "long_desc": {
+      "zh": "Generate AI covers of songs with different voices",
+      "en": "Generate AI covers of songs with different voices"
+    },
+    "scenes": {
+      "zh": [
+        "music",
+        "cover",
+        "voice"
+      ],
+      "en": [
+        "music",
+        "cover",
+        "voice"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "voicemod-pro": {
+    "name": {
+      "zh": "Voicemod Pro",
+      "en": "Voicemod Pro"
+    },
+    "cat": "audio",
+    "url": "https://voicemod.net",
+    "icon": "fa-microphone",
+    "short_desc": {
+      "zh": "Real-time voice changer",
+      "en": "Real-time voice changer"
+    },
+    "long_desc": {
+      "zh": "Real-time AI voice changing for gaming and streaming",
+      "en": "Real-time AI voice changing for gaming and streaming"
+    },
+    "scenes": {
+      "zh": [
+        "voice-change",
+        "gaming",
+        "real-time"
+      ],
+      "en": [
+        "voice-change",
+        "gaming",
+        "real-time"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "typeface-ai": {
+    "name": {
+      "zh": "Typeface AI",
+      "en": "Typeface AI"
+    },
+    "cat": "text",
+    "url": "https://typeface.ai",
+    "icon": "fa-font",
+    "short_desc": {
+      "zh": "Enterprise AI content platform",
+      "en": "Enterprise AI content platform"
+    },
+    "long_desc": {
+      "zh": "Enterprise AI content generation for brands",
+      "en": "Enterprise AI content generation for brands"
+    },
+    "scenes": {
+      "zh": [
+        "enterprise",
+        "content",
+        "brand"
+      ],
+      "en": [
+        "enterprise",
+        "content",
+        "brand"
+      ]
+    },
+    "pricing": {
+      "zh": "Paid",
+      "en": "Paid"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "jasper-art": {
+    "name": {
+      "zh": "Jasper Art",
+      "en": "Jasper Art"
+    },
+    "cat": "text",
+    "url": "https://jasper.ai/art",
+    "icon": "fa-paint-brush",
+    "short_desc": {
+      "zh": "AI art generation by Jasper",
+      "en": "AI art generation by Jasper"
+    },
+    "long_desc": {
+      "zh": "AI image generation integrated with Jasper writing platform",
+      "en": "AI image generation integrated with Jasper writing platform"
+    },
+    "scenes": {
+      "zh": [
+        "image",
+        "art",
+        "marketing"
+      ],
+      "en": [
+        "image",
+        "art",
+        "marketing"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "copyhero": {
+    "name": {
+      "zh": "CopyHero",
+      "en": "CopyHero"
+    },
+    "cat": "text",
+    "url": "https://copyhero.ai",
+    "icon": "fa-pen",
+    "short_desc": {
+      "zh": "AI copywriting tool",
+      "en": "AI copywriting tool"
+    },
+    "long_desc": {
+      "zh": "AI copywriting for marketing and sales content",
+      "en": "AI copywriting for marketing and sales content"
+    },
+    "scenes": {
+      "zh": [
+        "copy",
+        "marketing",
+        "sales"
+      ],
+      "en": [
+        "copy",
+        "marketing",
+        "sales"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "texta-ai": {
+    "name": {
+      "zh": "Texta AI",
+      "en": "Texta AI"
+    },
+    "cat": "text",
+    "url": "https://texta.ai",
+    "icon": "fa-file-text",
+    "short_desc": {
+      "zh": "AI article writer",
+      "en": "AI article writer"
+    },
+    "long_desc": {
+      "zh": "AI article generation with SEO optimization",
+      "en": "AI article generation with SEO optimization"
+    },
+    "scenes": {
+      "zh": [
+        "article",
+        "seo",
+        "generation"
+      ],
+      "en": [
+        "article",
+        "seo",
+        "generation"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "katteb": {
+    "name": {
+      "zh": "Katteb",
+      "en": "Katteb"
+    },
+    "cat": "text",
+    "url": "https://katteb.com",
+    "icon": "fa-pen",
+    "short_desc": {
+      "zh": "AI content writer",
+      "en": "AI content writer"
+    },
+    "long_desc": {
+      "zh": "AI content writing with fact-checking",
+      "en": "AI content writing with fact-checking"
+    },
+    "scenes": {
+      "zh": [
+        "content",
+        "fact-check",
+        "writing"
+      ],
+      "en": [
+        "content",
+        "fact-check",
+        "writing"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "rewind-ai": {
+    "name": {
+      "zh": "Rewind AI",
+      "en": "Rewind AI"
+    },
+    "cat": "productivity",
+    "url": "https://rewind.ai",
+    "icon": "fa-undo",
+    "short_desc": {
+      "zh": "AI life search engine",
+      "en": "AI life search engine"
+    },
+    "long_desc": {
+      "zh": "Search through everything you have seen on your computer",
+      "en": "Search through everything you have seen on your computer"
+    },
+    "scenes": {
+      "zh": [
+        "search",
+        "productivity",
+        "memory"
+      ],
+      "en": [
+        "search",
+        "productivity",
+        "memory"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "mem-ai": {
+    "name": {
+      "zh": "Mem AI",
+      "en": "Mem AI"
+    },
+    "cat": "productivity",
+    "url": "https://mem.ai",
+    "icon": "fa-sticky-note",
+    "short_desc": {
+      "zh": "AI notes workspace",
+      "en": "AI notes workspace"
+    },
+    "long_desc": {
+      "zh": "AI-powered notes workspace with automatic organization",
+      "en": "AI-powered notes workspace with automatic organization"
+    },
+    "scenes": {
+      "zh": [
+        "notes",
+        "organization",
+        "ai"
+      ],
+      "en": [
+        "notes",
+        "organization",
+        "ai"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "taskade-ai": {
+    "name": {
+      "zh": "Taskade AI",
+      "en": "Taskade AI"
+    },
+    "cat": "productivity",
+    "url": "https://taskade.com",
+    "icon": "fa-tasks",
+    "short_desc": {
+      "zh": "AI workspace and tasks",
+      "en": "AI workspace and tasks"
+    },
+    "long_desc": {
+      "zh": "AI-powered workspace for tasks, notes and mind maps",
+      "en": "AI-powered workspace for tasks, notes and mind maps"
+    },
+    "scenes": {
+      "zh": [
+        "tasks",
+        "notes",
+        "mind-map"
+      ],
+      "en": [
+        "tasks",
+        "notes",
+        "mind-map"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "motion-ai": {
+    "name": {
+      "zh": "Motion AI",
+      "en": "Motion AI"
+    },
+    "cat": "productivity",
+    "url": "https://motion.ai",
+    "icon": "fa-calendar",
+    "short_desc": {
+      "zh": "AI calendar and task manager",
+      "en": "AI calendar and task manager"
+    },
+    "long_desc": {
+      "zh": "AI-powered calendar that auto-schedules tasks",
+      "en": "AI-powered calendar that auto-schedules tasks"
+    },
+    "scenes": {
+      "zh": [
+        "calendar",
+        "scheduling",
+        "tasks"
+      ],
+      "en": [
+        "calendar",
+        "scheduling",
+        "tasks"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "taskade-pro": {
+    "name": {
+      "zh": "Taskade Pro",
+      "en": "Taskade Pro"
+    },
+    "cat": "productivity",
+    "url": "https://taskade.com",
+    "icon": "fa-list",
+    "short_desc": {
+      "zh": "AI project management",
+      "en": "AI project management"
+    },
+    "long_desc": {
+      "zh": "AI project management with auto-generated workflows",
+      "en": "AI project management with auto-generated workflows"
+    },
+    "scenes": {
+      "zh": [
+        "project",
+        "management",
+        "ai"
+      ],
+      "en": [
+        "project",
+        "management",
+        "ai"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
   }
 }
