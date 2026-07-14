@@ -48,7 +48,7 @@ $startTime = Get-Date
 # ---------------------------------------------------------------------------
 if (-not $SkipFetch) {
   Write-Log "STEP 1/3: Fetching trends..."
-  & pwsh -NoProfile -ExecutionPolicy Bypass -File "$ProjectRoot\scripts\fetch-weekly-trends.ps1"
+  & powershell -NoProfile -ExecutionPolicy Bypass -File "$ProjectRoot\scripts\fetch-weekly-trends.ps1"
   if ($LASTEXITCODE -ne 0) {
     Write-Log "WARN: trends fetch exited with $LASTEXITCODE, continuing"
   }
@@ -62,7 +62,7 @@ if (-not $SkipFetch) {
 $draftPath = $null
 if (-not $SkipGenerate) {
   Write-Log "STEP 2/3: Generating post with Codex CLI..."
-  & pwsh -NoProfile -ExecutionPolicy Bypass -File "$ProjectRoot\scripts\generate-post-from-trends.ps1"
+  & powershell -NoProfile -ExecutionPolicy Bypass -File "$ProjectRoot\scripts\generate-post-from-trends.ps1"
   if ($LASTEXITCODE -ne 0) {
     Write-Log "ERROR: post generation failed (exit $LASTEXITCODE). Aborting."
     exit 1
@@ -100,7 +100,7 @@ if (-not $SkipPublish) {
     exit 1
   }
   Write-Log "STEP 3/3: Publishing $draftPath ..."
-  & pwsh -NoProfile -ExecutionPolicy Bypass -File "$ProjectRoot\scripts\publish-draft-post.ps1" -DraftPath $draftPath
+  & powershell -NoProfile -ExecutionPolicy Bypass -File "$ProjectRoot\scripts\publish-draft-post.ps1" -DraftPath $draftPath
   if ($LASTEXITCODE -ne 0) {
     Write-Log "ERROR: publish failed (exit $LASTEXITCODE)"
     exit 1

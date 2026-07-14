@@ -1,4 +1,4 @@
-#!/usr/bin/env pwsh
+#!/usr/bin/env powershell
 <#
 .SYNOPSIS
   Publishes a single generated draft post: creates the .astro file, appends
@@ -114,7 +114,10 @@ $retryDelay = 30
 $pushSuccess = $false
 for ($i = 1; $i -le $maxRetries; $i++) {
   try {
-    Write-Log "Push attempt $i of $maxRetries..."
+    # Set proxy for GitHub access (required in China)
+git config http.proxy http://127.0.0.1:7897
+git -c http.sslVerify=false config http.sslVerify false
+Write-Log "Push attempt $i of $maxRetries..."
     $pushOutput = git push 2>&1 | Select-Object -Last 5
     foreach ($line in $pushOutput) { Write-Log "  $line" }
     $pushSuccess = $true
@@ -127,6 +130,10 @@ for ($i = 1; $i -le $maxRetries; $i++) {
     }
   }
 }
+# Clean up proxy config after push
+git config --unset http.proxy 2>$null
+git config --unset http.sslVerify 2>$null
+
 if ($pushSuccess) {
   Write-Log "SUCCESS: Draft post published, committed, and pushed."
 } else {

@@ -1,4 +1,4 @@
-#!/usr/bin/env pwsh
+#!/usr/bin/env powershell
 <#
 .SYNOPSIS
   Generates one blog post from the latest trends-*.json file using Codex CLI.

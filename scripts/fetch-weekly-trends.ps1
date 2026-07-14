@@ -1,4 +1,4 @@
-#!/usr/bin/env pwsh
+#!/usr/bin/env powershell
 <#
 .SYNOPSIS
   Fetches AI / tech trends from multiple sources for the weekly blog post pipeline.
@@ -24,6 +24,11 @@ $ErrorActionPreference = "Continue"
 
 $ProjectRoot = "C:\Users\QuQu\ai-tool-hub-v2"
 Set-Location $ProjectRoot
+
+# Set proxy for external requests (required in China)
+$env:HTTP_PROXY = "http://127.0.0.1:7897"
+$env:HTTPS_PROXY = "http://127.0.0.1:7897"
+
 
 $Date       = Get-Date -Format "yyyy-MM-dd"
 $OutFile    = Join-Path $ProjectRoot "content-queue\trends-$Date.json"
