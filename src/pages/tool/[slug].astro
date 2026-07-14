@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import toolsData from "../../data/tools.json";
+import matchupsData from "../../data/matchups.json";
 import fs from "fs";
 import categories from "../../data/categories.json";
 export async function getStaticPaths() {
@@ -39,6 +40,7 @@ const catLabelZh = categoryLabelsZh[tCat] || tCat;
 const relatedCategories = categories.filter(c => c.tools.includes(id)).slice(0, 4);
 const allTools = Object.entries(toolsData).filter(([k]) => k !== "codewords");
 const alternatives = allTools.filter(([k, t]) => k !== id && t.cat === tCat).slice(0, 6);
+const toolMatchups = matchupsData.filter(m => m.a === id || m.b === id).slice(0, 4);
 const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/tool/" + id + "/";
 const appCategoryMap = { text: "WritingApplication", image: "MultimediaApplication", code: "DeveloperApplication", video: "MultimediaApplication", audio: "MultimediaApplication", productivity: "BusinessApplication" };
@@ -375,6 +377,24 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
         <li>What are the best alternatives to {tNameEn}?</li>
         <li>Is {tNameEn} worth it for your use case?</li>
       </ul>
+    </section>
+    <section class="detail-section">
+      <h2><i class="fas fa-balance-scale"></i> Comparisons</h2>
+      <p>See how {tNameEn} compares to alternatives:</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px;">
+        {toolMatchups.map(m => {
+          const otherId = m.a === id ? m.b : m.a;
+          const otherTool = toolsData[otherId];
+          if (!otherTool) return null;
+          const otherName = otherTool.name?.en || otherId;
+          return (
+            <a href={"/vs/" + m.slug + "/"} style="text-decoration:none;color:inherit;background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:14px;display:block;">
+              <strong style="font-size:14px;">{tNameEn}</strong> vs <strong style="font-size:14px;">{otherName}</strong>
+            </a>
+          );
+        })}
+      </div>
+      <p style="margin-top:12px;"><a href={"/alternatives/" + id + "/"} style="color:var(--accent-color);font-weight:600;">See all alternatives &rarr;</a></p>
     </section>
 
     <section class="detail-section" style="text-align: center;">
