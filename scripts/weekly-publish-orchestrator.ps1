@@ -30,6 +30,7 @@ $ProjectRoot = "C:\Users\QuQu\ai-tool-hub-v2"
 Set-Location $ProjectRoot
 
 $LogFile = Join-Path $ProjectRoot "content-queue\orchestrator.log"
+if (-not (Test-Path (Split-Path $LogFile))) { New-Item -ItemType Directory -Path (Split-Path $LogFile) -Force | Out-Null }
 $DraftDir = Join-Path $ProjectRoot "content-queue\draft-posts"
 
 function Write-Log {

@@ -147,7 +147,7 @@ if (-not (Test-Path $outMsg)) {
   exit 1
 }
 
-$body = Get-Content -LiteralPath $outMsg -Raw
+$body = Get-Content -LiteralPath $outMsg -Raw -Encoding UTF8
 Write-Log "Last message length: $($body.Length)"
 
 # Strip markdown code fences if any
@@ -205,6 +205,6 @@ if (-not $post.date) { $post.date = $date }
 if (-not $post.author) { $post.author = $Author }
 if (-not $post.faq) { $post.faq = @() }
 
-$post | ConvertTo-Json -Depth 12 | Out-File -LiteralPath (Join-Path $DraftDir "$($post.slug).json") -Encoding UTF8
+$postJson = $post | ConvertTo-Json -Depth 12; [System.IO.File]::WriteAllText((Join-Path $DraftDir "$($post.slug).json"), $postJson, [System.Text.UTF8Encoding]::new($false))
 Write-Log "Wrote draft: content-queue/draft-posts/$($post.slug).json"
 Write-Log "Done."

@@ -64,7 +64,7 @@ if ($post.faq -and $post.faq.Count -gt 0) {
 $astroContent = "---`nimport BaseLayout from `"../../layouts/BaseLayout.astro`";`n---`n<BaseLayout title=`"$($post.title_en)`" description=`"$($post.desc_en)`" keywords=`"$($post.tags -join ', ')`">`n  <article class=`"legal-page blog-post`">`n    <nav class=`"breadcrumbs`"><a href=`"/`">Home</a> &rsaquo; <a href=`"/blog/`">Blog</a> &rsaquo; <span>$($post.title_en)</span></nav>`n    <header class=`"article-header`">`n      <span class=`"eyebrow`">$($post.category)</span>`n      <h1>$($post.title_en)</h1>`n      <p class=`"lede`">$($post.desc_en)</p>`n      <div class=`"article-meta`">`n        <div class=`"meta-item`"><i class=`"far fa-calendar`"></i> <span>$($post.date)</span></div>`n        <div class=`"meta-item`"><i class=`"far fa-clock`"></i> <span>$($post.read_time)</span></div>`n        <div class=`"meta-item`"><i class=`"far fa-user`"></i> <span>$($post.author)</span></div>`n        <div class=`"meta-item reviewer`"><i class=`"fas fa-user-check`"></i> <span>Reviewed by <strong>Lin Chen</strong>, Lead Reviewer (5+ years testing AI tools)</span></div>`n      </div>`n    </header>`n`n    <section class=`"blog-content`">`n$($post.body_en)`n    </section>`n$faqSection`n`n    <section style=`"margin-top: 40px;`">`n      <h3>Tags</h3>`n      <div class=`"audience-tags`">$tagSpans`n      </div>`n    </section>`n`n    <section style=`"margin-top: 40px; text-align: center;`">`n      <p style=`"color: var(--text-mute);`">Want us to review a specific tool? <a href=`"/contact/`">Suggest a topic</a>.</p>`n    </section>`n  </article>`n</BaseLayout>`n"
 
 $astroPath = Join-Path $BlogDir "$($post.slug).astro"
-$astroContent | Out-File -LiteralPath $astroPath -Encoding UTF8
+[System.IO.File]::WriteAllText($astroPath, $astroContent, [System.Text.UTF8Encoding]::new($false))
 Write-Log "Created: $astroPath"
 
 # Update posts.json
@@ -93,7 +93,7 @@ if ($existingIdx -ge 0) {
   $posts = @($posts) + $newEntry
   Write-Log "Appended new entry"
 }
-$posts | ConvertTo-Json -Depth 10 | Out-File -LiteralPath $DataFile -Encoding UTF8
+$json = $posts | ConvertTo-Json -Depth 10; [System.IO.File]::WriteAllText($DataFile, $json, [System.Text.UTF8Encoding]::new($false))
 Write-Log "Updated: $DataFile (now has $($posts.Count) posts)"
 
 # Build
