@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import templates from "../../data/templates.json";
+export async function getStaticPaths() {
+  return templates.map(t => ({ params: { slug: t.slug }, props: { template: t } }));
+}
+const { template } = Astro.props;
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/templates/" + template.slug + "/";
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity":[{ "@type":"Question","name":template.title,"acceptedAnswer":{"@type":"Answer","text":template.description } }] };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Templates","item":siteUrl+"/templates/"},{"@type":"ListItem","position":3,"name":template.title,"item":pageUrl}] };
+---
+<BaseLayout title={template.title + " | Template Library"} description={template.description} keywords={template.tags.join(", ")}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article" style="max-width:760px;margin:0 auto;padding:48px 0;">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/templates/">Templates</a> &rsaquo; <span>{template.title}</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">{template.category}</span>
+      <h1>{template.title}</h1>
+      <div style="display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;">
+        <span style="font-size:13px;color:var(--text-mute);">Tool: {template.tool}</span>
+        <span style="font-size:13px;color:var(--text-mute);">|</span>
+        <span style="font-size:13px;color:var(--text-mute);">Level: {template.difficulty}</span>
+      </div>
+    </header>
+    <section class="article-body">
+      <p style="font-size:16px;color:var(--text-soft);line-height:1.7;">{template.description}</p>
+      <div style="background:rgba(59,130,246,0.05);border:1px solid rgba(59,130,246,0.2);border-radius:8px;padding:12px 16px;margin:20px 0;">
+        <p style="font-size:14px;color:var(--text-soft);margin:0;"><strong>Best for:</strong> {template.useCase}</p>
+      </div>
+      <h2 style="margin-top:24px;">Template</h2>
+      <div style="position:relative;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:20px;margin:24px 0;">
+        <button id="cp" style="position:absolute;top:12px;right:12px;background:var(--accent-color);color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:12px;font-weight:600;cursor:pointer;">Copy</button>
+        <pre id="tt" style="white-space:pre-wrap;word-break:break-word;font-size:14px;color:var(--text-soft);line-height:1.7;font-family:monospace;padding-right:80px;">{template.template}</pre>
+      </div>
+      <h2>How to Use</h2>
+      <ol style="margin:12px 0 12px 24px;line-height:1.8;">
+        <li>Copy the template above</li>
+        <li>Replace [PLACEHOLDER] text with your details</li>
+        <li>Customize sections as needed</li>
+        <li>{template.tool === 'ComfyUI' ? 'Set up the nodes in ComfyUI as described' : 'Use in your preferred tool or document'}</li>
+      </ol>
+      <div style="margin-top:24px;display:flex;gap:6px;flex-wrap:wrap;">
+        {template.tags.map(t => <span style="font-size:12px;color:var(--text-mute);background:var(--bg-color);padding:4px 10px;border-radius:5px;">#{t}</span>)}
+      </div>
+      <div style="margin-top:32px;padding:20px;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;">
+        <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;">This Template Answers</h3>
+        <ul style="margin:0;padding-left:20px;font-size:13px;color:var(--text-soft);line-height:1.8;">
+          <li>How to structure a {template.title.toLowerCase()}</li>
+          <li>What sections to include</li>
+          <li>Best practices for {template.category.toLowerCase()}</li>
+        </ul>
+      </div>
+      <p style="text-align:center;margin-top:32px;"><a href="/templates/" style="color:var(--accent-color);font-weight:600;">Back to Templates</a></p>
+    </section>
+  </div>
+</BaseLayout>
+<script is:inline>document.getElementById("cp").addEventListener("click",function(){navigator.clipboard.writeText(document.getElementById("tt").textContent).then(function(){var b=document.getElementById("cp");b.textContent="Copied!";setTimeout(function(){b.textContent="Copy"},2000)})})</script>
