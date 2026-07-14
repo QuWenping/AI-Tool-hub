@@ -462,5 +462,412 @@
         "a": "Use only enterprise AI services that guarantee data confidentiality (Claude Enterprise, OpenAI Enterprise). Never use consumer AI tools for privileged communications. Consider on-premise solutions for highly sensitive matters."
       }
     ]
+  },
+  {
+    "slug": "ai-for-architecture",
+    "industry": "Architecture",
+    "title": "AI Tools for Architects: Design, Visualization, and Documentation",
+    "title_zh": "AI Tools for Architects: Design, Visualization, and Documentation",
+    "description": "How architects use AI for concept design, 3D visualization, rendering, code compliance, and documentation.",
+    "desc_zh": "How architects use AI for concept design, 3D visualization, rendering, code compliance, and documentation.",
+    "icon": "fa-drafting-compass",
+    "tools": [
+      "Midjourney",
+      "Flux",
+      "ComfyUI",
+      "ChatGPT",
+      "Claude",
+      "Dify",
+      "n8n"
+    ],
+    "workflows": [
+      "comfyui-style-transfer-pipeline",
+      "dify-rag-document-qna",
+      "n8n-webhook-automation"
+    ],
+    "sections": [
+      {
+        "heading": "Concept Design & Ideation",
+        "content": "AI image generation has become essential for architectural concept design. Midjourney generates stunning conceptual renders from text descriptions. Flux provides more control over architectural details. ComfyUI with Stable Diffusion generates design variations while maintaining structural logic. Workflow: Define brief -> Generate options with Midjourney -> Refine in ComfyUI -> Present to client. Reduces concept design from days to hours.",
+        "recommendedTools": "Midjourney (concepts), Flux (detailed renders), ComfyUI (variations)"
+      },
+      {
+        "heading": "3D Visualization & Rendering",
+        "content": "AI rendering transforms basic 3D models into photorealistic visualizations. ComfyUI with ControlNet takes SketchUp/Rhino screenshots and generates finished renders with realistic lighting and materials. For batch rendering, ComfyUI pipelines automate the process. AI upscaling enhances low-res renders. Kling and Runway animate static renders into walkthroughs. Eliminates expensive rendering farms, reduces visualization time by 70%.",
+        "recommendedTools": "ComfyUI (rendering pipeline), Midjourney (atmospheric), Kling (video walkthroughs)"
+      },
+      {
+        "heading": "Code Compliance & Building Regulations",
+        "content": "AI speeds up code compliance checking. Using Dify RAG, upload building codes (IBC, ASCE, local amendments) as a knowledge base. Ask \"What is the minimum corridor width for Type B occupancy?\" and get answers with citations. Claude processes lengthy code documents (200K context). For ADA compliance, AI checks door clearances, ramp slopes, fixture heights. Always verify AI findings with a licensed architect.",
+        "recommendedTools": "Dify (code Q&A), Claude (long documents), ChatGPT (compliance checking)"
+      },
+      {
+        "heading": "Construction Documentation & BIM",
+        "content": "AI automates construction documentation. n8n connects BIM software (Revit, ArchiCAD) with documentation tools, auto-generating sheet indexes, room schedules, material takeoffs. Claude generates draft specifications. AI detects common drawing errors (missing dimensions, inconsistent annotations). n8n automates drawing transmittal and revision tracking. Reduces documentation time by 40-60%.",
+        "recommendedTools": "n8n (BIM automation), Claude (specifications), ChatGPT (drawing review)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI replace architects?",
+        "a": "No. AI is a design tool that enhances creativity and productivity. Architects who use AI can explore more options, visualize faster, and check compliance. Professional judgment, liability, and client relationships still require licensed architects."
+      },
+      {
+        "q": "Best AI tool for architectural rendering?",
+        "a": "Midjourney for concept renders, ComfyUI with ControlNet for photorealistic rendering from 3D models, Flux for detailed renders. For animation, Kling and Runway generate smooth walkthroughs."
+      },
+      {
+        "q": "Is AI-generated architectural content copyrightable?",
+        "a": "Copyright for AI-generated images varies by jurisdiction. In the US, purely AI-generated images may not be copyrightable, but images where architects significantly modify AI output may be. Always add significant human creative input."
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-construction",
+    "industry": "Construction Management",
+    "title": "AI Tools for Construction: Planning, Safety, and Project Management",
+    "title_zh": "AI Tools for Construction: Planning, Safety, and Project Management",
+    "description": "How construction professionals use AI for project planning, safety monitoring, progress tracking, and quality control.",
+    "desc_zh": "How construction professionals use AI for project planning, safety monitoring, progress tracking, and quality control.",
+    "icon": "fa-hard-hat",
+    "tools": [
+      "ChatGPT",
+      "Claude",
+      "n8n",
+      "Dify",
+      "Make",
+      "Otter"
+    ],
+    "workflows": [
+      "n8n-webhook-automation",
+      "n8n-api-monitor",
+      "dify-rag-document-qna"
+    ],
+    "sections": [
+      {
+        "heading": "Project Planning & Scheduling",
+        "content": "AI transforms construction planning by analyzing historical data and optimizing schedules. ChatGPT generates draft schedules from project scope, identifying critical path activities. n8n automates schedule updates by connecting Primavera P6, MS Project, Procore. For resource optimization, AI analyzes labor, equipment, material delivery. Claude processes historical data to identify delay patterns. Always validate with experienced PM.",
+        "recommendedTools": "ChatGPT (schedules), n8n (automation), Claude (risk analysis)"
+      },
+      {
+        "heading": "Safety Monitoring & Compliance",
+        "content": "AI-powered safety monitoring uses computer vision to detect PPE compliance, unsafe behaviors, hazard conditions. AI generates daily safety reports from site photos. For OSHA compliance, Dify RAG answers site-specific safety questions. n8n automates incident workflow: detected -> photo -> AI classification -> supervisor alert -> report. Reduces safety documentation time by 50%.",
+        "recommendedTools": "Dify (safety Q&A), n8n (incident workflow), ChatGPT (training materials)"
+      },
+      {
+        "heading": "Progress Tracking & Reporting",
+        "content": "AI automates progress tracking by comparing site photos to BIM models. For daily reports, AI generates drafts from site notes, photos, weather data in 2 minutes vs 30 minutes manual. n8n automates: collect data -> AI generates report -> distribute -> archive. For client updates, AI creates visual progress summaries. For earned value analysis, AI connects cost with progress data.",
+        "recommendedTools": "n8n (reporting), ChatGPT (daily reports), Claude (analysis)"
+      },
+      {
+        "heading": "Quality Control & Defect Management",
+        "content": "AI enhances QC by analyzing site photos for defects, measuring dimensions against drawings. For RFIs, Claude processes questions, searches specs, drafts responses. n8n automates RFI workflow: submitted -> AI categorize -> route -> track response. For submittals, AI checks product data against specs. For commissioning, AI generates test procedures. Reduces RFI response time by 60%.",
+        "recommendedTools": "Claude (RFI responses), n8n (workflow), ChatGPT (QC procedures)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI help with construction safety?",
+        "a": "Yes. AI monitors site photos for PPE compliance, flags unsafe conditions, automates safety reports, and answers OSHA compliance questions. However, AI should supplement not replace human safety officers."
+      },
+      {
+        "q": "How much time can AI save in construction management?",
+        "a": "AI can reduce documentation time by 40-60% (daily reports, RFIs, safety reports), improve RFI response time by 60%, and provide real-time progress visibility. Biggest savings from automating repetitive documentation."
+      },
+      {
+        "q": "What construction software works with AI tools?",
+        "a": "n8n connects to Procore, Primavera P6, MS Project, PlanGrid. Dify integrates with document management. ChatGPT and Claude work standalone for analysis and drafting."
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-structural-engineers",
+    "industry": "Structural Engineering",
+    "title": "AI Tools for Structural Engineers: Analysis, Design, and Calculation",
+    "title_zh": "AI Tools for Structural Engineers: Analysis, Design, and Calculation",
+    "description": "How structural engineers use AI for structural analysis optimization, load calculations, design verification, and documentation.",
+    "desc_zh": "How structural engineers use AI for structural analysis optimization, load calculations, design verification, and documentation.",
+    "icon": "fa-building",
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Dify",
+      "n8n",
+      "ComfyUI"
+    ],
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-webhook-automation",
+      "claude-technical-spec"
+    ],
+    "sections": [
+      {
+        "heading": "Structural Analysis & Optimization",
+        "content": "AI assists structural engineers by generating initial design options, optimizing member sizes, verifying calculations. Claude processes analysis reports, identifies potential issues, checks load paths, suggests alternatives. For parametric design, AI generates options based on load requirements, material properties, code constraints. AI suggests member sizing reductions where capacity exceeds demand. Must be verified by licensed engineer. Accelerates iterative design by 40-50%.",
+        "recommendedTools": "Claude (analysis review), ChatGPT (design options), Gemini (optimization)"
+      },
+      {
+        "heading": "Load Calculations & Code Compliance",
+        "content": "AI speeds up load calculations by automating code requirement lookup and generating calculation templates. Dify RAG stores ASCE 7, IBC, local amendments. Ask \"What is the wind load for a 50m building in exposure B?\" Claude processes seismic provisions. AI generates load combinations per code. For snow/rain/ice, AI calculates based on location and geometry. Always verify with engineering judgment.",
+        "recommendedTools": "Dify (code Q&A), Claude (seismic provisions), ChatGPT (calculation templates)"
+      },
+      {
+        "heading": "Design Documentation & Drawings",
+        "content": "AI streamlines documentation by generating calculation narratives, design criteria, specification sections. Claude writes structural design reports from calculation results. For drawing annotations, AI generates consistent notation. For shop drawing review, Claude compares submitted vs design drawings. n8n automates: calculations -> AI generates report -> review -> stamp -> distribute. Reduces documentation time by 50-70%.",
+        "recommendedTools": "Claude (design reports), n8n (workflow), ChatGPT (notes generation)"
+      },
+      {
+        "heading": "Research & Continuing Education",
+        "content": "AI accelerates research by processing technical papers, code updates, trends. Perplexity provides real-time research on materials, methods, code changes. Claude summarizes research papers and extracts key findings. For PE/SE exam prep, AI generates practice problems. For peer review, AI checks calculations against first principles. For collaboration, AI translates between disciplines.",
+        "recommendedTools": "Perplexity (research), Claude (paper analysis), ChatGPT (study materials)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI do structural calculations?",
+        "a": "AI can assist with load calculations by looking up code requirements, generating templates, verifying results. However, a licensed engineer must perform and stamp all final calculations. AI can make errors in complex load paths."
+      },
+      {
+        "q": "Best AI tools for structural engineering?",
+        "a": "Claude for processing lengthy code documents and analysis reports. Dify for building a code reference knowledge base. n8n for automating documentation workflows. ChatGPT for calculation templates and design narratives."
+      },
+      {
+        "q": "How to ensure AI-generated structural content is safe?",
+        "a": "Always have a licensed PE/SE verify all AI-generated calculations. Use AI for initial drafts and verification, not as primary design tool. Cross-reference with established software (ETABS, SAP2000, RAM). Maintain audit trails."
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-civil-engineers",
+    "industry": "Civil Engineering",
+    "title": "AI Tools for Civil Engineers: Site Design, Hydrology, and Infrastructure",
+    "title_zh": "AI Tools for Civil Engineers: Site Design, Hydrology, and Infrastructure",
+    "description": "How civil engineers use AI for site analysis, drainage design, earthwork optimization, and infrastructure planning.",
+    "desc_zh": "How civil engineers use AI for site analysis, drainage design, earthwork optimization, and infrastructure planning.",
+    "icon": "fa-road",
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Dify",
+      "n8n",
+      "ComfyUI"
+    ],
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-webhook-automation",
+      "gemini-data-insights"
+    ],
+    "sections": [
+      {
+        "heading": "Site Analysis & Grading Design",
+        "content": "AI assists with site analysis by processing topographic data, identifying drainage patterns, optimizing grading plans. ComfyUI generates visual site analysis overlays from aerial photos. For grading optimization, AI analyzes cut/fill volumes, suggests balance points. For drainage, AI processes rainfall data, soil types, surface conditions. For site selection, AI evaluates multiple sites against criteria. Reduces preliminary design time by 50%, improves earthwork efficiency by 10-20%.",
+        "recommendedTools": "ComfyUI (site visualization), Gemini (data analysis), ChatGPT (drainage calcs)"
+      },
+      {
+        "heading": "Hydrology & Stormwater Management",
+        "content": "AI transforms hydrology calculations by automating rainfall-runoff analysis, detention pond sizing, drainage network design. Dify RAG stores local stormwater regulations. Claude processes hydrology reports, verifies calculations. For SWMM modeling, AI generates input parameters from GIS data. For BMP selection, AI evaluates site constraints. For flood analysis, AI processes historical rainfall data. Always verify with HEC-HMS, SWMM.",
+        "recommendedTools": "Dify (regulation Q&A), Claude (report analysis), ChatGPT (hydrology calcs)"
+      },
+      {
+        "heading": "Infrastructure Planning & Utilities",
+        "content": "AI enhances infrastructure planning by optimizing utility layouts, analyzing traffic patterns, coordinating disciplines. For utility coordination, AI processes maps, identifies conflicts. For traffic analysis, AI processes count data, generates impact assessments. For pipe networks, AI optimizes sizes and alignments. n8n automates plan review: submit -> AI check conflicts -> route to utilities -> track responses. Reduces conflict resolution time by 60%.",
+        "recommendedTools": "n8n (coordination workflow), ChatGPT (traffic analysis), Gemini (quantity takeoffs)"
+      },
+      {
+        "heading": "Construction Documents & Permits",
+        "content": "AI streamlines documentation by generating permit applications, construction notes, specifications. Claude drafts SWPPP based on site conditions and EPA requirements. For permits, AI generates complete application packages. For E&S control plans, AI generates standard details based on local requirements. For quantity calculations, AI processes design files, generates earthwork, paving, pipe quantities. Reduces permit preparation time by 40%.",
+        "recommendedTools": "Claude (SWPPP/permits), ChatGPT (specifications), n8n (document workflow)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI help with stormwater management design?",
+        "a": "Yes. AI can calculate runoff coefficients, size detention facilities, generate SWPPP documents, check designs against regulations. All hydrology must be verified with HEC-HMS, SWMM and stamped by licensed engineer."
+      },
+      {
+        "q": "Best AI tools for civil engineering?",
+        "a": "Dify for code/regulation reference database, Claude for processing technical reports, Gemini for data analysis and visualization, n8n for plan review workflows, ChatGPT for calculation templates and permits."
+      },
+      {
+        "q": "How accurate is AI for earthwork calculations?",
+        "a": "AI generates estimates with 85-95% accuracy for preliminary estimates. For final quantities, always verify with dedicated earthwork software. AI is best for rapid comparisons of multiple grading options."
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-hvac-engineers",
+    "industry": "HVAC & MEP Engineering",
+    "title": "AI Tools for HVAC Engineers: Load Calculations, System Design, and Energy Analysis",
+    "title_zh": "AI Tools for HVAC Engineers: Load Calculations, System Design, and Energy Analysis",
+    "description": "How HVAC and MEP engineers use AI for load calculations, equipment selection, energy modeling, and system optimization.",
+    "desc_zh": "How HVAC and MEP engineers use AI for load calculations, equipment selection, energy modeling, and system optimization.",
+    "icon": "fa-wind",
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Dify",
+      "n8n",
+      "ElevenLabs"
+    ],
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-webhook-automation",
+      "gemini-data-insights"
+    ],
+    "sections": [
+      {
+        "heading": "Load Calculations & Energy Modeling",
+        "content": "AI accelerates HVAC load calculations by automating weather data lookup, building envelope properties, occupancy schedules. Dify RAG stores ASHRAE standards (90.1, 62.1, 55). Claude processes energy modeling reports, identifies efficiency improvements. AI generates calculation templates by building type and climate zone. For energy analysis, AI compares system options, estimates annual consumption. For LEED, AI generates energy modeling summary reports. Reduces load calculation time by 50%.",
+        "recommendedTools": "Dify (ASHRAE Q&A), Claude (energy reports), ChatGPT (load calcs)"
+      },
+      {
+        "heading": "Equipment Selection & Sizing",
+        "content": "AI assists equipment selection by matching design requirements with manufacturer specs. For chillers, AI processes cooling loads, efficiency, budget. For duct sizing, AI generates layouts based on airflow and space constraints. For pumps, AI calculates flow rates and head pressures. For control systems, AI generates sequence of operations. For equipment schedules, AI generates complete schedules from design data. Always verify with manufacturer reps. Reduces selection time by 40%.",
+        "recommendedTools": "ChatGPT (equipment schedules), Claude (spec comparison), Gemini (optimization)"
+      },
+      {
+        "heading": "Commissioning & Building Automation",
+        "content": "AI transforms commissioning by automating test procedure generation, analyzing performance data, optimizing control sequences. AI generates test procedures per ASHRAE Guideline 0. For building automation, AI analyzes BMS trend data, identifies issues: simultaneous heating/cooling, inefficient setpoints, short-cycling. n8n connects to BMS, triggers alerts. For ongoing commissioning, AI continuously monitors, suggests adjustments. Reduces commissioning time by 40%.",
+        "recommendedTools": "n8n (BMS monitoring), ChatGPT (test procedures), Gemini (trend analysis)"
+      },
+      {
+        "heading": "Documentation & Coordination",
+        "content": "AI streamlines MEP coordination by automating clash detection, generating coordination reports, managing RFIs. AI processes 3D model exports, identifies clashes between HVAC, plumbing, electrical, structural. Claude generates detailed control narratives. For specifications, AI generates MEP spec sections. For coordination meetings, AI generates clash reports by discipline and priority. For O&M manuals, AI generates documentation from design data. Reduces coordination documentation time by 50%.",
+        "recommendedTools": "Claude (control narratives), n8n (coordination workflow), ChatGPT (specifications)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI do HVAC load calculations?",
+        "a": "AI can generate calculation templates, look up ASHRAE requirements, automate weather data lookup. All load calculations must be verified with HAP, TRACE, EnergyPlus and stamped by licensed engineer."
+      },
+      {
+        "q": "How can AI help with building automation?",
+        "a": "AI can analyze BMS trend data to identify operational issues, optimize control sequences, generate commissioning test procedures, monitor ongoing performance. n8n connects to BMS and triggers automated alerts."
+      },
+      {
+        "q": "What ASHRAE standards can AI help with?",
+        "a": "Using Dify RAG, upload ASHRAE 90.1 (energy), 62.1 (ventilation), 55 (comfort), 15 (refrigeration). AI answers specific questions with citations. All interpretations verified by qualified engineer."
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-bim",
+    "industry": "BIM & Digital Construction",
+    "title": "AI Tools for BIM Engineers: Model Management, Automation, and Collaboration",
+    "title_zh": "AI Tools for BIM Engineers: Model Management, Automation, and Collaboration",
+    "description": "How BIM engineers and coordinators use AI for model checking, clash detection, parameter automation, and project coordination.",
+    "desc_zh": "How BIM engineers and coordinators use AI for model checking, clash detection, parameter automation, and project coordination.",
+    "icon": "fa-cubes",
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "n8n",
+      "Dify",
+      "ComfyUI",
+      "Gemini"
+    ],
+    "workflows": [
+      "n8n-webhook-automation",
+      "dify-rag-document-qna",
+      "n8n-api-monitor"
+    ],
+    "sections": [
+      {
+        "heading": "Model Checking & Quality Assurance",
+        "content": "AI enhances BIM model checking by automating rule-based validation, checking model completeness, verifying parameter consistency. Dify stores company BIM standards, checks models against them. For parameter validation, AI checks required parameters are filled, values in range, units consistent. For model completeness, AI verifies all required elements per BEP. For naming conventions, AI checks element names follow standards. Claude processes audit reports, generates recommendations. Reduces model checking time by 70%.",
+        "recommendedTools": "Dify (standards checking), Claude (audit reports), ChatGPT (parameter validation)"
+      },
+      {
+        "heading": "Clash Detection & Coordination",
+        "content": "AI transforms clash detection by prioritizing clashes, suggesting resolutions, automating coordination workflows. AI analyzes clash reports, ranks by impact. n8n automates: clash detected -> AI categorize -> route to discipline -> track resolution -> update model. For coordination meetings, AI generates agendas by discipline and impact. Claude drafts RFIs from clash details. Reduces clash resolution time by 50%.",
+        "recommendedTools": "n8n (clash workflow), Claude (RFI drafting), ChatGPT (clash analysis)"
+      },
+      {
+        "heading": "Parameter Automation & Dynamo",
+        "content": "AI assists BIM automation by generating Dynamo scripts, Python code for Revit API, parameter mapping rules. ChatGPT generates Dynamo templates for batch parameter updates, element filtering, view creation. Claude generates C#/Python for Revit API add-ins. For parameter mapping, AI generates rules between IFC and project categories. For quantity takeoff, AI generates Dynamo scripts extracting quantities from models. Reduces automation development time by 60%.",
+        "recommendedTools": "ChatGPT (Dynamo scripts), Claude (Revit API code), Gemini (quantity automation)"
+      },
+      {
+        "heading": "Collaboration & Document Management",
+        "content": "AI streamlines BIM collaboration by automating document control, model transmittal, version management. n8n connects BIM 360, Aconex, Procore with team tools. For submittal management, AI checks against specs. For model version control, AI generates comparison reports. For project dashboards, AI creates real-time BIM progress dashboards. For meetings, Otter.ai transcribes, AI generates action items. Reduces collaboration documentation by 40%.",
+        "recommendedTools": "n8n (document automation), Otter (meeting transcription), ChatGPT (training materials)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI automate BIM model checking?",
+        "a": "Yes. AI can validate parameters against company BIM standards, check model completeness, verify naming conventions, generate audit reports. Using Dify, create a knowledge base of your BEP and check models against it."
+      },
+      {
+        "q": "How can AI help with Dynamo and Revit automation?",
+        "a": "ChatGPT generates Dynamo script templates for common tasks. Claude generates Python/C# for Revit API add-ins. AI reduces automation development time by 60% and helps non-programmers create useful scripts."
+      },
+      {
+        "q": "What BIM platforms work with AI tools?",
+        "a": "n8n connects to BIM 360, Aconex, Procore via API. Dify integrates with document management. ChatGPT and Claude work standalone for code generation and analysis. Use n8n as integration layer between BIM platforms and AI."
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-industrial-design",
+    "industry": "Industrial & Product Design",
+    "title": "AI Tools for Industrial Designers: Concept, Prototyping, and Manufacturing",
+    "title_zh": "AI Tools for Industrial Designers: Concept, Prototyping, and Manufacturing",
+    "description": "How industrial designers use AI for concept generation, 3D modeling, prototyping, and manufacturing documentation.",
+    "desc_zh": "How industrial designers use AI for concept generation, 3D modeling, prototyping, and manufacturing documentation.",
+    "icon": "fa-industry",
+    "tools": [
+      "Midjourney",
+      "Flux",
+      "ComfyUI",
+      "Claude",
+      "ChatGPT",
+      "v0-dev"
+    ],
+    "workflows": [
+      "comfyui-style-transfer-pipeline",
+      "comfyui-lora-training",
+      "comfyui-batch-product-photos"
+    ],
+    "sections": [
+      {
+        "heading": "Concept Design & Ideation",
+        "content": "AI revolutionizes industrial design concept generation. Midjourney generates product concept renders from text descriptions. Flux generates variations with different materials, colors, finishes. For ergonomic design, AI generates form studies from human factors data. ComfyUI with LoRA trains on your company portfolio, generates new designs in your brand style. Workflow: brief -> Midjourney concepts -> client feedback -> ComfyUI refinement -> final concept. Reduces concept design from weeks to days.",
+        "recommendedTools": "Midjourney (concepts), Flux (variations), ComfyUI (brand-consistent designs)"
+      },
+      {
+        "heading": "3D Modeling & Prototyping",
+        "content": "AI assists 3D modeling by generating base meshes from concept images, automating repetitive tasks, optimizing geometry for manufacturing. For concept-to-3D, AI converts 2D sketches into rough 3D models. For topology optimization, AI generates structures that reduce material while maintaining strength. For 3D printing, AI optimizes orientation, generates support structures, estimates print time. For rapid prototyping, AI generates scale variations. Accelerates concept-to-prototype cycle by 50%.",
+        "recommendedTools": "ComfyUI (concept-to-3D), ChatGPT (modeling scripts), Claude (optimization analysis)"
+      },
+      {
+        "heading": "Manufacturing & Production Documentation",
+        "content": "AI streamlines manufacturing documentation by generating technical drawings, material specs, production instructions. Claude generates manufacturing specifications from design data: tolerances, surface finishes, material requirements. For assembly instructions, AI generates step-by-step guides with illustrations. For QC, AI generates inspection checklists. For cost estimation, AI generates BOMs and estimates manufacturing costs. For suppliers, AI translates specs into supplier-friendly formats. Reduces documentation time by 60%.",
+        "recommendedTools": "Claude (manufacturing specs), ChatGPT (assembly instructions), Gemini (cost estimation)"
+      },
+      {
+        "heading": "Design Research & User Testing",
+        "content": "AI enhances design research by analyzing user feedback, market trends, competitor products. For user research, AI processes interview transcripts, identifies pain points. For competitive analysis, AI analyzes competitor product images, identifies trends. Perplexity provides real-time research on product categories, pricing. For A/B testing, AI generates multiple design variations. For sustainability, AI evaluates environmental impact. Reduces research time by 50%.",
+        "recommendedTools": "Perplexity (market research), Claude (user research analysis), ChatGPT (design variations)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI generate product designs from scratch?",
+        "a": "AI can generate product concept visuals from text descriptions (Midjourney, Flux) and train on brand style (ComfyUI LoRA). However, AI concepts need human refinement for manufacturability, ergonomics, engineering feasibility. AI is best for rapid concept exploration."
+      },
+      {
+        "q": "How accurate are AI-generated manufacturing specifications?",
+        "a": "AI generates draft specifications from design data with 80-90% accuracy for standard products. For complex or novel designs, always have manufacturing engineer review. AI is best for first drafts and standard documentation."
+      },
+      {
+        "q": "Best AI tool for industrial design?",
+        "a": "Midjourney for concepts, ComfyUI for brand-consistent variations and product photography, Claude for manufacturing documentation, ChatGPT for design research and analysis. Combination provides complete AI-assisted design workflow."
+      }
+    ]
   }
 ]
