@@ -472,5 +472,101 @@
       "claude-computer-use",
       "make-com"
     ]
+  },
+  {
+    "slug": "ai-for-teachers",
+    "title_en": "Best AI Tools for Teachers in 2026",
+    "title_zh": "2026 年教师 AI 工具",
+    "desc_en": "AI tools for lesson planning, grading, content creation, and student engagement.",
+    "desc_zh": "教师 AI 工具：课程规划、评分、内容创建。",
+    "tools": [
+      "claude",
+      "gemini",
+      "notion-ai",
+      "perplexity",
+      "jasper",
+      "chatgpt",
+      "hostinger",
+      "gamma"
+    ]
+  },
+  {
+    "slug": "ai-for-lawyers",
+    "title_en": "Best AI Tools for Lawyers in 2026",
+    "title_zh": "2026 年律师 AI 工具",
+    "desc_en": "AI tools for legal research, contract review, document drafting, and compliance.",
+    "desc_zh": "律师 AI 工具：法律研究、合同审查、文件起草。",
+    "tools": [
+      "claude",
+      "gemini",
+      "jasper",
+      "chatgpt",
+      "deepseek",
+      "copy-ai"
+    ]
+  },
+  {
+    "slug": "ai-for-doctors",
+    "title_en": "Best AI Tools for Healthcare Professionals in 2026",
+    "title_zh": "2026 年医疗 AI 工具",
+    "desc_en": "AI tools for clinical documentation, patient communication, and medical research.",
+    "desc_zh": "医疗 AI 工具：临床文档、患者沟通、医学研究。",
+    "tools": [
+      "claude",
+      "gemini",
+      "notion-ai",
+      "perplexity",
+      "jasper",
+      "chatgpt"
+    ]
+  },
+  {
+    "slug": "ai-for-architects",
+    "title_en": "Best AI Tools for Architects in 2026",
+    "title_zh": "2026 年建筑师 AI 工具",
+    "desc_en": "AI tools for architectural design, rendering, code compliance, and documentation.",
+    "desc_zh": "建筑师 AI 工具：建筑设计、渲染、规范审查。",
+    "tools": [
+      "midjourney",
+      "stable-diffusion",
+      "leonardo",
+      "ideogram",
+      "krea",
+      "flux",
+      "canva-ai",
+      "uizard"
+    ]
+  },
+  {
+    "slug": "ai-for-sales-teams",
+    "title_en": "Best AI Tools for Sales Teams in 2026",
+    "title_zh": "2026 年销售 AI 工具",
+    "desc_en": "AI tools for lead generation, cold outreach, CRM automation, and sales analytics.",
+    "desc_zh": "销售 AI 工具：线索生成、冷拓、CRM 自动化。",
+    "tools": [
+      "claude",
+      "gemini",
+      "notion-ai",
+      "perplexity",
+      "jasper",
+      "chatgpt",
+      "hostinger",
+      "gamma"
+    ]
+  },
+  {
+    "slug": "ai-for-hr-teams",
+    "title_en": "Best AI Tools for HR Teams in 2026",
+    "title_zh": "2026 年 HR AI 工具",
+    "desc_en": "AI tools for recruitment, onboarding, performance review, and employee engagement.",
+    "desc_zh": "HR AI 工具：招聘、入职、绩效评估。",
+    "tools": [
+      "notion-ai",
+      "perplexity",
+      "hostinger",
+      "gamma",
+      "elicit",
+      "taskade"
+    ]
   }
 ]

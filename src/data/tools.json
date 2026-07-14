@@ -15154,5 +15154,158 @@
       "claude",
       "midjourney"
     ]
+  },
+  "manus-ai": {
+    "name": {
+      "zh": "Manus AI",
+      "en": "Manus AI"
+    },
+    "cat": "productivity",
+    "url": "https://manus.im",
+    "icon": "fa-robot",
+    "short_desc": {
+      "zh": "AI autonomous agent platform",
+      "en": "AI autonomous agent platform"
+    },
+    "long_desc": {
+      "zh": "Manus AI is an autonomous AI agent that can complete complex multi-step tasks independently, from research to coding to data analysis.",
+      "en": "Manus AI is an autonomous AI agent that can complete complex multi-step tasks independently, from research to coding to data analysis."
+    },
+    "scenes": {
+      "zh": [
+        "autonomous-agent",
+        "task-completion",
+        "research"
+      ],
+      "en": [
+        "autonomous-agent",
+        "task-completion",
+        "research"
+      ]
+    },
+    "pricing": {
+      "zh": "Freemium",
+      "en": "Freemium"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "mastra": {
+    "name": {
+      "zh": "Mastra",
+      "en": "Mastra"
+    },
+    "cat": "code",
+    "url": "https://mastra.ai",
+    "icon": "fa-project-diagram",
+    "short_desc": {
+      "zh": "TypeScript AI agent framework",
+      "en": "TypeScript AI agent framework"
+    },
+    "long_desc": {
+      "zh": "Mastra is a TypeScript-first AI agent framework for building production-grade AI applications with built-in memory, tools, and workflows.",
+      "en": "Mastra is a TypeScript-first AI agent framework for building production-grade AI applications with built-in memory, tools, and workflows."
+    },
+    "scenes": {
+      "zh": [
+        "agent-framework",
+        "typescript",
+        "production"
+      ],
+      "en": [
+        "agent-framework",
+        "typescript",
+        "production"
+      ]
+    },
+    "pricing": {
+      "zh": "Open Source",
+      "en": "Open Source"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
+  },
+  "flowise": {
+    "name": {
+      "zh": "Flowise",
+      "en": "Flowise"
+    },
+    "cat": "productivity",
+    "url": "https://flowise.ai",
+    "icon": "fa-sitemap",
+    "short_desc": {
+      "zh": "Visual no-code AI agent builder",
+      "en": "Visual no-code AI agent builder"
+    },
+    "long_desc": {
+      "zh": "Flowise is an open-source visual platform for building AI agents and LLM workflows without coding, using a drag-and-drop interface.",
+      "en": "Flowise is an open-source visual platform for building AI agents and LLM workflows without coding, using a drag-and-drop interface."
+    },
+    "scenes": {
+      "zh": [
+        "no-code",
+        "visual",
+        "agent-builder"
+      ],
+      "en": [
+        "no-code",
+        "visual",
+        "agent-builder"
+      ]
+    },
+    "pricing": {
+      "zh": "Open Source",
+      "en": "Open Source"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "See review"
+      ],
+      "en": [
+        "See review"
+      ]
+    },
+    "alt": []
   }
 }
