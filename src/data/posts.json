@@ -1,5 +1,24 @@
 [
   {
+    "slug": "agnes-ai-review-free-omni-modal-api-2026",
+    "title_en": "Agnes AI Review (2026): Free Text, Image & Video API",
+    "title_zh": "Agnes AI 评测：免费全模态 AI API",
+    "desc_en": "Agnes AI offers free API access to text, image, and video generation. We tested all three modes.",
+    "desc_zh": "Agnes AI 提供免费的文本、图片和视频生成 API。我们测试了全部三种模式。",
+    "date": "2026-07-14",
+    "read_time": "8 min read",
+    "author": "AI Tool Hub Editorial",
+    "tags": [
+      "agnes-ai",
+      "free-api",
+      "ai-tools",
+      "text-generation",
+      "image-generation",
+      "video-generation"
+    ],
+    "category": "review"
+  },
+  {
     "slug": "apple-speechanalyzer-vs-whisper-2026",
     "title_en": "Apple SpeechAnalyzer vs. Whisper (2026): The Best Speech-to-Text API?",
     "title_zh": "苹果SpeechAnalyzer对决Whisper：2026语音API评测",

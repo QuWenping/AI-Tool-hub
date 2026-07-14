@@ -15088,5 +15088,71 @@
       ]
     },
     "alt": []
+  },
+  "agnes-ai": {
+    "name": {
+      "zh": "Agnes AI",
+      "en": "Agnes AI"
+    },
+    "cat": "productivity",
+    "url": "https://agnes-ai.com",
+    "icon": "fa-magic",
+    "short_desc": {
+      "zh": "免费全模态 AI API 平台",
+      "en": "Free omni-modal AI API platform"
+    },
+    "long_desc": {
+      "zh": "Agnes AI 由 Sapiens AI 推出，提供免费的文本、图片和视频生成 API。包含 Agnes 2.0 Flash 文本模型、Agnes Image 图片生成和 Agnes Video 视频生成。开发者可获得免费 API 额度和密钥。",
+      "en": "Agnes AI by Sapiens AI is a free omni-modal AI API platform offering text, image, and video generation. Includes Agnes 2.0 Flash text model, Agnes Image for image generation, and Agnes Video for video generation. Developers get free API credits and keys."
+    },
+    "scenes": {
+      "zh": [
+        "文本生成",
+        "图片生成",
+        "视频生成",
+        "API"
+      ],
+      "en": [
+        "text generation",
+        "image generation",
+        "video generation",
+        "API"
+      ]
+    },
+    "pricing": {
+      "zh": "完全免费",
+      "en": "Free"
+    },
+    "rating": 0,
+    "pros": {
+      "zh": [
+        "完全免费 API",
+        "文本+图片+视频全模态",
+        "开源 GitHub",
+        "Agnes Code 编程助手"
+      ],
+      "en": [
+        "Completely free API",
+        "Omni-modal: text + image + video",
+        "Open source on GitHub",
+        "Agnes Code coding assistant"
+      ]
+    },
+    "cons": {
+      "zh": [
+        "新平台，生态待完善",
+        "部分模型仍在预览阶段"
+      ],
+      "en": [
+        "New platform, ecosystem growing",
+        "Some models still in preview"
+      ]
+    },
+    "alt": [
+      "chatgpt",
+      "gemini",
+      "claude",
+      "midjourney"
+    ]
   }
 }
