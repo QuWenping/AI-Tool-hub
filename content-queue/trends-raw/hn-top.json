@@ -1,183 +1,183 @@
-[
+﻿[
   {
     "rank": 1,
-    "id": 48876505,
-    "title": "Mesh LLM: distributed AI computing on iroh",
-    "score": 63,
-    "author": "tionis",
-    "comments": 17,
-    "url": "https://www.iroh.computer/blog/mesh-llm"
+    "id": 48901569,
+    "title": "Japan develops a method to recover up to 90% of lithium from used EV batteries",
+    "score": 144,
+    "author": "donohoe",
+    "comments": 35,
+    "url": "https://tech.supercarblondie.com/japan-recovers-up-to-90-of-lithium-from-used-ev-batteries/"
   },
   {
     "rank": 2,
-    "id": 48875377,
-    "title": "Show HN: Ant – A JavaScript runtime and ecosystem",
-    "score": 170,
-    "author": "theMackabu",
-    "comments": 74,
-    "url": "https://antjs.org"
+    "id": 48901454,
+    "title": "Fundamentals of Wireless Communication",
+    "score": 79,
+    "author": "teleforce",
+    "comments": 2,
+    "url": "https://web.stanford.edu/~dntse/wireless_book.html"
   },
   {
     "rank": 3,
-    "id": 48876245,
-    "title": "RISCBoy is an open-source portable games console, designed from scratch",
-    "score": 50,
-    "author": "mariuz",
-    "comments": 11,
-    "url": "https://github.com/Wren6991/RISCBoy"
+    "id": 48901010,
+    "title": "The Git history command deserves more attention",
+    "score": 143,
+    "author": "turbocon",
+    "comments": 91,
+    "url": "https://lalitm.com/post/git-history/"
   },
   {
     "rank": 4,
-    "id": 48876578,
-    "title": "The fine print that follows you out the door: non-compete clauses are spreading",
-    "score": 20,
-    "author": "hhs",
-    "comments": 16,
-    "url": "https://oecdecoscope.blog/2026/07/07/the-fine-print-that-follows-you-out-the-door-non-compete-clauses-are-spreading-and-holding-back-growth/"
+    "id": 48896665,
+    "title": "Building and shipping Mac and iOS apps without opening Xcode",
+    "score": 367,
+    "author": "speckx",
+    "comments": 160,
+    "url": "https://scottwillsey.com/building-and-shipping-mac-and-ios-apps-without-ever-opening-xcode/"
   },
   {
     "rank": 5,
-    "id": 48873836,
-    "title": "Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom",
-    "score": 151,
-    "author": "adletbalzhanov",
-    "comments": 55,
-    "url": "https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom"
+    "id": 48901224,
+    "title": "The Economics of Recursive Self-Improvement [pdf]",
+    "score": 48,
+    "author": "apsec112",
+    "comments": 4,
+    "url": "https://elasticity.institute/rsi-paper.pdf"
   },
   {
     "rank": 6,
-    "id": 48877269,
-    "title": "A dock that wakes up reliably",
-    "score": 3,
-    "author": "ingve",
-    "comments": 1,
-    "url": "https://fabiensanglard.net/tb4/index.html"
+    "id": 48894752,
+    "title": "Apple's new SpeechAnalyzer API, benchmarked against Whisper and its predecessor",
+    "score": 498,
+    "author": "get-inscribe",
+    "comments": 195,
+    "url": "https://get-inscribe.com/blog/apple-speech-api-benchmark.html"
   },
   {
     "rank": 7,
-    "id": 48849744,
-    "title": "Billions of Sketches Reveal Hidden Cultural Variation in Human Concepts",
-    "score": 45,
-    "author": "Anon84",
-    "comments": 4,
-    "url": "https://arxiv.org/abs/2607.07267"
+    "id": 48872833,
+    "title": "How to build a circular LCD clock",
+    "score": 17,
+    "author": "birdculture",
+    "comments": 0,
+    "url": "https://blinry.org/lcd-clock/"
   },
   {
     "rank": 8,
-    "id": 48872874,
-    "title": "We scaled PgBouncer to 4x throughput",
-    "score": 174,
-    "author": "saisrirampur",
-    "comments": 34,
-    "url": "https://clickhouse.com/blog/pgbouncer-clickhouse-managed-postgres"
+    "id": 48901356,
+    "title": "Satellite Tracker – Live Map of Starlink and 30k Satellites",
+    "score": 37,
+    "author": "rolph",
+    "comments": 5,
+    "url": "https://satellitemap.space/"
   },
   {
     "rank": 9,
-    "id": 48876970,
-    "title": "Odyssey Linux",
-    "score": 12,
-    "author": "Gualdrapo",
-    "comments": 12,
-    "url": "https://odysseylinux.org"
+    "id": 48900191,
+    "title": "An Englishwoman who sketched India before photography took hold",
+    "score": 88,
+    "author": "1659447091",
+    "comments": 29,
+    "url": "https://www.bbc.com/news/articles/cm2drrv6q54o"
   },
   {
     "rank": 10,
-    "id": 48873457,
-    "title": "UPI: Anatomy of a Payment Transaction",
-    "score": 92,
-    "author": "prtk25",
-    "comments": 30,
-    "url": "https://timeseriesofindia.com/economy/reads/upi-architecture/"
+    "id": 48901235,
+    "title": "Is x86 ready to ACE it?",
+    "score": 32,
+    "author": "mfiguiere",
+    "comments": 4,
+    "url": "https://chipsandcheese.com/p/is-x86-ready-to-ace-it"
   },
   {
     "rank": 11,
-    "id": 48873940,
-    "title": "Prefer strict tables in SQLite",
-    "score": 215,
-    "author": "ingve",
-    "comments": 103,
-    "url": "https://evanhahn.com/prefer-strict-tables-in-sqlite/"
+    "id": 48902026,
+    "title": "YouTrackDB is a general-use object-oriented graph database",
+    "score": 8,
+    "author": "gjvc",
+    "comments": 0,
+    "url": "https://github.com/JetBrains/youtrackdb"
   },
   {
     "rank": 12,
-    "id": 48872858,
-    "title": "The early History of the Singular Value Decomposition (1993) [pdf]",
-    "score": 88,
-    "author": "wolfi1",
-    "comments": 51,
-    "url": "https://www.math.ucdavis.edu/~saito/courses/229A/stewart-svd.pdf"
+    "id": 48901645,
+    "title": "Our Amish Language",
+    "score": 12,
+    "author": "NaOH",
+    "comments": 1,
+    "url": "https://www.thedial.world/articles/news/amish-pennsylvania-dutch"
   },
   {
     "rank": 13,
-    "id": 48876741,
-    "title": "Doctors die. It's not like the rest of us, but it should be (2016)",
-    "score": 44,
-    "author": "downbad_",
-    "comments": 21,
-    "url": "https://archive.cancerworld.net/featured/how-doctors-die/"
+    "id": 48901126,
+    "title": "MorphoHDL: A minimalistic language for growing circuits",
+    "score": 39,
+    "author": "jacktang",
+    "comments": 2,
+    "url": "https://paradigms-of-intelligence.github.io/morpho/"
   },
   {
     "rank": 14,
-    "id": 48820361,
-    "title": "Biff.graph: structure your Clojure codebase as a queryable graph",
-    "score": 81,
-    "author": "jacobobryant",
-    "comments": 2,
-    "url": "https://github.com/jacobobryant/biff/tree/v2.x/libs/graph"
+    "id": 48853146,
+    "title": "World-First 'Super Alloy' Could Transform the Way Metals Are Made",
+    "score": 35,
+    "author": "tejohnso",
+    "comments": 19,
+    "url": "https://www.sciencealert.com/world-first-super-alloy-could-transform-the-way-metals-are-made"
   },
   {
     "rank": 15,
-    "id": 48871973,
-    "title": "Show HN: Learn by rebuilding Redis, Git, a database from scratch",
-    "score": 119,
-    "author": "acley",
-    "comments": 35,
-    "url": "https://shipthatcode.com"
+    "id": 48901275,
+    "title": "Building Food Metadata with LLM Juries",
+    "score": 22,
+    "author": "tie-in",
+    "comments": 5,
+    "url": "https://careersatdoordash.com/blog/building-food-metadata-with-llm-juries-context-optimization-multimodal-ai/"
   },
   {
     "rank": 16,
-    "id": 48830664,
-    "title": "Optimization Solver as a Service",
-    "score": 12,
-    "author": "paddi91",
-    "comments": 9,
-    "url": "https://www.quicopt.com/developer/getting-started/"
+    "id": 48897104,
+    "title": "The infinite scroll may become endangered if controversial Calif. law passes",
+    "score": 126,
+    "author": "Stratoscope",
+    "comments": 213,
+    "url": "https://www.sfgate.com/politics/article/meta-social-media-teenagers-22337724.php"
   },
   {
     "rank": 17,
-    "id": 48844476,
-    "title": "How to Achieve Pruning When Querying by Non-Partitioned Columns in PostgreSQL",
-    "score": 3,
-    "author": "theanonymousone",
-    "comments": 0,
-    "url": "https://hakibenita.com/postgresql-partition-pruning"
+    "id": 48893639,
+    "title": "The art and engineering of Sega CD Silpheed",
+    "score": 238,
+    "author": "ibobev",
+    "comments": 50,
+    "url": "https://fabiensanglard.net/silpheed/index.html"
   },
   {
     "rank": 18,
-    "id": 48876593,
-    "title": "Weightlifting beats running for blood sugar control, researchers find",
-    "score": 96,
-    "author": "sublinear",
-    "comments": 47,
-    "url": "https://news.vt.edu/articles/2025/11/research_fralinbiomed_yanweightlifting.html"
+    "id": 48898154,
+    "title": "Show HN: YouTube Guitar Tab Parser",
+    "score": 87,
+    "author": "neogenix",
+    "comments": 56,
+    "url": "https://github.com/marcelpanse/youtube-guitar-tab-parser"
   },
   {
     "rank": 19,
-    "id": 48873501,
-    "title": "Show HN: Orbit – AR satellite tracker, watch 15k+ objects",
-    "score": 57,
-    "author": "lukas9",
-    "comments": 17,
-    "url": "https://nagylukas.github.io/orbit.html"
+    "id": 48900319,
+    "title": "Show HN: Sx 2.0 – Share AI skills with your team through a Dropbox folder",
+    "score": 25,
+    "author": "detkin",
+    "comments": 26,
+    "url": "https://sleuth-io.github.io/sx/2026/07/10/your-dropbox-is-now-a-skill-server.html"
   },
   {
     "rank": 20,
-    "id": 48874297,
-    "title": "ZeroFS vs. Amazon S3 Files",
-    "score": 51,
-    "author": "cbrewster",
-    "comments": 14,
-    "url": "https://www.zerofs.net/blog/zerofs-vs-aws-s3-files/"
+    "id": 48896600,
+    "title": "Linux on the Sega 32X. Who needs hardware synchronization primitives anyway?",
+    "score": 112,
+    "author": "cakehonolulu",
+    "comments": 23,
+    "url": "https://cakehonolulu.github.io/linux-on-32x/"
   }
 ]
 

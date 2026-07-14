@@ -43,7 +43,7 @@ if (-not (Test-Path $DraftPath)) {
   exit 1
 }
 
-$post = Get-Content -LiteralPath $DraftPath -Raw | ConvertFrom-Json
+$post = Get-Content -LiteralPath $DraftPath -Raw -Encoding UTF8 | ConvertFrom-Json
 Write-Log "Publishing draft: $($post.slug)"
 
 # Build .astro file
@@ -68,7 +68,7 @@ $astroContent | Out-File -LiteralPath $astroPath -Encoding UTF8
 Write-Log "Created: $astroPath"
 
 # Update posts.json
-$posts = @(Get-Content -LiteralPath $DataFile -Raw | ConvertFrom-Json)
+$posts = @(Get-Content -LiteralPath $DataFile -Raw -Encoding UTF8 | ConvertFrom-Json)
 $existingIdx = -1
 for ($i = 0; $i -lt $posts.Count; $i++) {
   if ($posts[$i].slug -eq $post.slug) { $existingIdx = $i; break }

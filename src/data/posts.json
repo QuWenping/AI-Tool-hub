@@ -1,5 +1,38 @@
 [
   {
+    "slug": "apple-speechanalyzer-vs-whisper-2026",
+    "title_en": "Apple SpeechAnalyzer vs. Whisper (2026): The Best Speech-to-Text API?",
+    "title_zh": "苹果SpeechAnalyzer对决Whisper：2026语音API评测",
+    "desc_en": "We compare Apple SpeechAnalyzer API with OpenAI Whisper on accuracy, speed, price, and privacy to help developers pick the right STT stack in 2026.",
+    "desc_zh": "我们对比苹果全新SpeechAnalyzer API与OpenAI Whisper，从准确率、速度、价格和隐私四个维度帮助开发者选择。",
+    "date": "2026-07-14",
+    "read_time": "10 min read",
+    "author": "AI Tool Hub Editorial",
+    "tags": [
+      "speech-to-text",
+      "whisper",
+      "apple-intelligence",
+      "api-comparison",
+      "on-device-ai",
+      "developer-tools"
+    ],
+    "category": "comparison",
+    "faq": [
+      {
+        "q": "Is Apple SpeechAnalyzer a cloud API or does it run on device?",
+        "a": "By default SpeechAnalyzer runs fully on device using the Apple Neural Engine. Apple also offers an opt-in cloud fallback for long-form or high-noise audio, but it must be enabled explicitly."
+      },
+      {
+        "q": "Can SpeechAnalyzer replace Whisper for cross-platform apps?",
+        "a": "Not yet. SpeechAnalyzer only ships on Apple operating systems, so apps supporting Android, Windows, Linux, or the web will still need Whisper or another cross-platform engine for non-Apple clients."
+      },
+      {
+        "q": "Is SpeechAnalyzer free for commercial use?",
+        "a": "The on-device API is included with the standard Apple SDK and has no per-minute fees or usage caps for App Store apps. The cloud fallback, when it launches, will have separate metered pricing."
+      }
+    ]
+  },
+  {
     "slug": "best-free-ai-tools-for-students-2026",
     "title_en": "10 Best Free AI Tools for Students in 2026 (Tested for 2 Weeks)",
     "title_zh": "2026 年学生必备的 10 个免费 AI 工具（实测 2 周）",

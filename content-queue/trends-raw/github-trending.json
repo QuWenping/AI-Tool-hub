@@ -1,153 +1,153 @@
-[
+﻿[
   {
     "rank": 1,
-    "repo": "Zackriya-Solutions/meetily",
-    "description": "Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai - https://meetily.ai) is the #1 Self-hosted, Open-source Ai meeting note taker for macOS & Windows. Understand How to write meeting minutes",
-    "language": "Rust",
-    "stars": 23190,
-    "forks": 2440,
-    "starsSince": 8579,
-    "url": "https://github.com/Zackriya-Solutions/meetily"
-  },
-  {
-    "rank": 2,
-    "repo": "openai/codex-plugin-cc",
-    "description": "Use Codex from Claude Code to review code or delegate tasks.",
-    "language": "JavaScript",
-    "stars": 27660,
-    "forks": 1802,
-    "starsSince": 4030,
-    "url": "https://github.com/openai/codex-plugin-cc"
-  },
-  {
-    "rank": 3,
     "repo": "wonderwhy-er/DesktopCommanderMCP",
     "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
     "language": "TypeScript",
-    "stars": 7776,
-    "forks": 966,
-    "starsSince": 1451,
+    "stars": 8198,
+    "forks": 998,
+    "starsSince": 1939,
     "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP"
   },
   {
-    "rank": 4,
-    "repo": "asgeirtj/system_prompts_leaks",
-    "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT GPT-5.6, Codex GPT-5.6, GPT-5.5. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
-    "language": "JavaScript",
-    "stars": 56236,
-    "forks": 9284,
-    "starsSince": 7731,
-    "url": "https://github.com/asgeirtj/system_prompts_leaks"
+    "rank": 2,
+    "repo": "abseil/abseil-cpp",
+    "description": "Abseil Common Libraries (C++)",
+    "language": "C++",
+    "stars": 17970,
+    "forks": 3217,
+    "starsSince": 621,
+    "url": "https://github.com/abseil/abseil-cpp"
   },
   {
-    "rank": 5,
-    "repo": "ogulcancelik/herdr",
-    "description": "agent multiplexer that lives in your terminal.",
+    "rank": 3,
+    "repo": "Zackriya-Solutions/meetily",
+    "description": "Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai - https://meetily.ai) is the #1 Self-hosted, Open-source Ai meeting note taker for macOS & Windows. Understand How to write meeting minutes",
     "language": "Rust",
-    "stars": 15511,
-    "forks": 1039,
-    "starsSince": 4349,
-    "url": "https://github.com/ogulcancelik/herdr"
+    "stars": 24276,
+    "forks": 2544,
+    "starsSince": 5392,
+    "url": "https://github.com/Zackriya-Solutions/meetily"
   },
   {
-    "rank": 6,
+    "rank": 4,
     "repo": "TencentCloud/CubeSandbox",
     "description": "Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.",
     "language": "Rust",
-    "stars": 9699,
-    "forks": 951,
-    "starsSince": 2416,
+    "stars": 10022,
+    "forks": 983,
+    "starsSince": 2367,
     "url": "https://github.com/TencentCloud/CubeSandbox"
   },
   {
+    "rank": 5,
+    "repo": "openai/codex-plugin-cc",
+    "description": "Use Codex from Claude Code to review code or delegate tasks.",
+    "language": "JavaScript",
+    "stars": 28463,
+    "forks": 1874,
+    "starsSince": 2265,
+    "url": "https://github.com/openai/codex-plugin-cc"
+  },
+  {
+    "rank": 6,
+    "repo": "ogulcancelik/herdr",
+    "description": "agent multiplexer that lives in your terminal.",
+    "language": "Rust",
+    "stars": 16190,
+    "forks": 1096,
+    "starsSince": 3449,
+    "url": "https://github.com/ogulcancelik/herdr"
+  },
+  {
     "rank": 7,
-    "repo": "facebook/astryx",
-    "description": "An open source design system that's fully customizable and agent ready",
-    "language": "TypeScript",
-    "stars": 7923,
-    "forks": 673,
-    "starsSince": 2779,
-    "url": "https://github.com/facebook/astryx"
+    "repo": "iOfficeAI/OfficeCLI",
+    "description": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+    "language": "C#",
+    "stars": 16268,
+    "forks": 1101,
+    "starsSince": 7596,
+    "url": "https://github.com/iOfficeAI/OfficeCLI"
   },
   {
     "rank": 8,
-    "repo": "usestrix/strix",
-    "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
-    "language": "Python",
-    "stars": 40557,
-    "forks": 4268,
-    "starsSince": 4987,
-    "url": "https://github.com/usestrix/strix"
-  },
-  {
-    "rank": 9,
-    "repo": "bradautomates/claude-video",
-    "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
-    "language": "Python",
-    "stars": 7557,
-    "forks": 845,
-    "starsSince": 4399,
-    "url": "https://github.com/bradautomates/claude-video"
-  },
-  {
-    "rank": 10,
     "repo": "diegosouzapw/OmniRoute",
     "description": "Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
     "language": "TypeScript",
-    "stars": 15707,
-    "forks": 2380,
-    "starsSince": 4375,
+    "stars": 16938,
+    "forks": 2568,
+    "starsSince": 4345,
     "url": "https://github.com/diegosouzapw/OmniRoute"
+  },
+  {
+    "rank": 9,
+    "repo": "asgeirtj/system_prompts_leaks",
+    "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT GPT-5.6, Codex GPT-5.6, GPT-5.5. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
+    "language": "JavaScript",
+    "stars": 57394,
+    "forks": 9487,
+    "starsSince": 6284,
+    "url": "https://github.com/asgeirtj/system_prompts_leaks"
+  },
+  {
+    "rank": 10,
+    "repo": "bradautomates/claude-video",
+    "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+    "language": "Python",
+    "stars": 8196,
+    "forks": 900,
+    "starsSince": 4128,
+    "url": "https://github.com/bradautomates/claude-video"
   },
   {
     "rank": 11,
     "repo": "stablyai/orca",
     "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
     "language": "TypeScript",
-    "stars": 16377,
-    "forks": 1279,
-    "starsSince": 4368,
+    "stars": 18485,
+    "forks": 1452,
+    "starsSince": 5263,
     "url": "https://github.com/stablyai/orca"
   },
   {
     "rank": 12,
-    "repo": "alibaba/page-agent",
-    "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
-    "language": "TypeScript",
-    "stars": 26055,
-    "forks": 2395,
-    "starsSince": 3317,
-    "url": "https://github.com/alibaba/page-agent"
-  },
-  {
-    "rank": 13,
     "repo": "tt-a1i/archify",
     "description": "Any agent Skill: generate beautiful architecture diagrams with dark/light theme toggle and PNG/JPEG/WebP/SVG export",
     "language": "JavaScript",
-    "stars": 3700,
-    "forks": 366,
-    "starsSince": 1036,
+    "stars": 4271,
+    "forks": 390,
+    "starsSince": 1333,
     "url": "https://github.com/tt-a1i/archify"
   },
   {
-    "rank": 14,
-    "repo": "ChromeDevTools/chrome-devtools-mcp",
-    "description": "Chrome DevTools for coding agents",
+    "rank": 13,
+    "repo": "facebook/astryx",
+    "description": "An open source design system that's fully customizable and agent ready",
     "language": "TypeScript",
-    "stars": 46696,
-    "forks": 3191,
-    "starsSince": 1097,
-    "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp"
+    "stars": 8761,
+    "forks": 730,
+    "starsSince": 2255,
+    "url": "https://github.com/facebook/astryx"
+  },
+  {
+    "rank": 14,
+    "repo": "usestrix/strix",
+    "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
+    "language": "Python",
+    "stars": 41271,
+    "forks": 4343,
+    "starsSince": 3403,
+    "url": "https://github.com/usestrix/strix"
   },
   {
     "rank": 15,
-    "repo": "iOfficeAI/OfficeCLI",
-    "description": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
-    "language": "C#",
-    "stars": 15077,
-    "forks": 1026,
-    "starsSince": 6549,
-    "url": "https://github.com/iOfficeAI/OfficeCLI"
+    "repo": "alibaba/page-agent",
+    "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
+    "language": "TypeScript",
+    "stars": 26487,
+    "forks": 2431,
+    "starsSince": 1950,
+    "url": "https://github.com/alibaba/page-agent"
   }
 ]
 

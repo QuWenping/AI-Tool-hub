@@ -1,182 +1,183 @@
-[
+﻿[
   {
     "rank": 1,
-    "id": 48875377,
-    "title": "Show HN: Ant – A JavaScript runtime and ecosystem",
-    "score": 170,
-    "author": "theMackabu",
-    "comments": 74,
-    "url": "https://antjs.org"
+    "id": 48898154,
+    "title": "Show HN: YouTube Guitar Tab Parser",
+    "score": 87,
+    "author": "neogenix",
+    "comments": 56,
+    "url": "https://github.com/marcelpanse/youtube-guitar-tab-parser"
   },
   {
     "rank": 2,
-    "id": 48871973,
-    "title": "Show HN: Learn by rebuilding Redis, Git, a database from scratch",
-    "score": 119,
-    "author": "acley",
-    "comments": 35,
-    "url": "https://shipthatcode.com"
+    "id": 48900319,
+    "title": "Show HN: Sx 2.0 – Share AI skills with your team through a Dropbox folder",
+    "score": 25,
+    "author": "detkin",
+    "comments": 26,
+    "url": "https://sleuth-io.github.io/sx/2026/07/10/your-dropbox-is-now-a-skill-server.html"
   },
   {
     "rank": 3,
-    "id": 48873501,
-    "title": "Show HN: Orbit – AR satellite tracker, watch 15k+ objects",
-    "score": 57,
-    "author": "lukas9",
-    "comments": 17,
-    "url": "https://nagylukas.github.io/orbit.html"
+    "id": 48893550,
+    "title": "Show HN: Hackney – Compare Uber, Lyft, Waymo, and Robotaxi Prices",
+    "score": 39,
+    "author": "griffinli",
+    "comments": 29,
+    "url": "https://hackney.app/"
   },
   {
     "rank": 4,
-    "id": 48875342,
-    "title": "Show HN: Sqlsure – deterministic semantic checks for AI-generated SQL",
-    "score": 10,
-    "author": "tejusarora",
-    "comments": 0,
-    "url": "https://github.com/sqlsure/sqlsure"
+    "id": 48894630,
+    "title": "Show HN: Jacquard, a programming language for AI-written, human-reviewed code",
+    "score": 66,
+    "author": "jbwinters",
+    "comments": 39,
+    "url": "https://github.com/jbwinters/jacquard-lang"
   },
   {
     "rank": 5,
-    "id": 48873417,
-    "title": "Show HN: Reame – a CPU inference server that gets faster as it runs",
-    "score": 36,
-    "author": "targetbridge",
-    "comments": 12,
-    "url": "https://github.com/swellweb/reame"
+    "id": 48852144,
+    "title": "Show HN: RandoFont – A browser for Google Fonts",
+    "score": 30,
+    "author": "aleshh",
+    "comments": 5,
+    "url": "https://randofont.alesh.com"
   },
   {
     "rank": 6,
-    "id": 48873486,
-    "title": "Show HN: Earth Game – An offline CLI for turning life goals into quests",
-    "score": 31,
-    "author": "modinfo",
-    "comments": 9,
-    "url": "https://github.com/skorotkiewicz/earth-game"
+    "id": 48897975,
+    "title": "Show HN: I implemented a neural network in SQL",
+    "score": 69,
+    "author": "alxmrs",
+    "comments": 16,
+    "url": "https://github.com/xqlsystems/xarray-sql/blob/claude/xarray-sql-mnist-demo/benchmarks/nn.py"
   },
   {
     "rank": 7,
-    "id": 48845049,
-    "title": "Show HN: 18 Words",
-    "score": 1121,
-    "author": "pompomsheep",
-    "comments": 354,
-    "url": "https://18words.com/"
+    "id": 48896599,
+    "title": "Show HN: BillAI Bass, an AI-Powered Big Mouth Billy Bass Using Strands Agents",
+    "score": 64,
+    "author": "mtw14",
+    "comments": 27,
+    "url": "https://github.com/morganwilliscloud/billai-bass"
   },
   {
     "rank": 8,
-    "id": 48875887,
-    "title": "Show HN: The Quiet Map – Earth's quietest place, measured by seismometers",
-    "score": 4,
-    "author": "theceka",
+    "id": 48902068,
+    "title": "Show HN: Self-hosting unpruned GLM-5.2 on a 4-node DGX Spark cluster",
+    "score": 2,
+    "author": "deepseaOne",
     "comments": 0,
-    "url": "https://thequietmap.org/"
+    "url": "https://github.com/XanuNetworks/GLM-5.2-QuantTrio-DCP-4x-DGX-Spark"
   },
   {
     "rank": 9,
-    "id": 48847834,
-    "title": "Show HN: Reverse-engineering web apps into agent tools",
-    "score": 89,
-    "author": "pancomplex",
-    "comments": 36
+    "id": 48902056,
+    "title": "Show HN: Open-source background location tracking SDK for Android and iOS",
+    "score": 2,
+    "author": "tananaev",
+    "comments": 0,
+    "url": "https://www.traccar.org/blog/traccar-client-sdk/"
   },
   {
     "rank": 10,
-    "id": 48816724,
-    "title": "Show HN: Frugon – Find which LLM calls a cheaper model could handle (local, MIT)",
-    "score": 65,
-    "author": "jarodrh",
-    "comments": 18,
-    "url": "https://github.com/Rodiun/frugon"
+    "id": 48891267,
+    "title": "Show HN: DOM-docx – HTML to native, editable Word docs (MIT)",
+    "score": 141,
+    "author": "fishbone",
+    "comments": 33,
+    "url": "https://github.com/floodtide/dom-docx"
   },
   {
     "rank": 11,
-    "id": 48875212,
-    "title": "Show HN: Share and explore custom Claude Code status lines",
-    "score": 2,
-    "author": "rsproule",
+    "id": 48901987,
+    "title": "Show HN:PandaClip a local mcp tool for an agents working state",
+    "score": 3,
+    "author": "VektorGeist",
     "comments": 0,
-    "url": "https://claudelines.com"
+    "url": "https://github.com/xfloukiex-lab/pandaclip"
   },
   {
     "rank": 12,
-    "id": 48871436,
-    "title": "Show HN: Hidetext.sh – encrypted pastebin where the server never sees the key",
-    "score": 5,
-    "author": "hidetext",
+    "id": 48901940,
+    "title": "Show HN: An autonomous SOC built to refuse causation it can't prove",
+    "score": 2,
+    "author": "MohammadKhubaib",
     "comments": 0,
-    "url": "https://hidetext.sh"
+    "url": "https://www.domesoc.com/"
   },
   {
     "rank": 13,
-    "id": 48823608,
-    "title": "Show HN: Dotenv-Diff v3.0.0",
-    "score": 15,
-    "author": "chrillemn",
+    "id": 48901051,
+    "title": "Show HN: MemStitch – Zero-copy context bridging for vLLM (25x TTFT speedup)",
+    "score": 6,
+    "author": "daqulalin",
     "comments": 1,
-    "url": "https://github.com/Chrilleweb/dotenv-diff"
+    "url": "https://github.com/DaqulaLin/MemStitch"
   },
   {
     "rank": 14,
-    "id": 48851476,
-    "title": "Show HN: Reviving my 2001 college band with AI",
-    "score": 55,
-    "author": "jacobgraf",
-    "comments": 59,
-    "url": "https://www.fadingmaize.com"
+    "id": 48898071,
+    "title": "Show HN: Sigwire – a live TUI switchboard for every signal on your Linux box",
+    "score": 29,
+    "author": "zasc",
+    "comments": 14,
+    "url": "https://github.com/yeet-src/sigwire"
   },
   {
     "rank": 15,
-    "id": 48832797,
-    "title": "Show HN: Abralo – Free, easy way to run several Claude Code agents in one window",
-    "score": 37,
-    "author": "cwbuilds",
-    "comments": 29,
-    "url": "https://abralo.com/"
+    "id": 48901763,
+    "title": "Show HN: A MCP for Agents to reverse engineer binary code",
+    "score": 2,
+    "author": "Mplto",
+    "comments": 0,
+    "url": "https://github.com/morluto/rea"
   },
   {
     "rank": 16,
-    "id": 48873939,
-    "title": "Show HN: Quantum hardware now fault-tolerant without extra engineering",
-    "score": 4,
-    "author": "KenographerPrim",
-    "comments": 2,
-    "url": "https://github.com/GamesOfArcadia/ciqs"
+    "id": 48896179,
+    "title": "Show HN: OpenClawMachines – Extending OpenClaw to the Enterprise",
+    "score": 26,
+    "author": "mathaix",
+    "comments": 26,
+    "url": "https://github.com/mathaix/OpenClawMachines"
   },
   {
     "rank": 17,
-    "id": 48859387,
-    "title": "Show HN: Runloom – Go-style coroutines for Python free-threaded",
-    "score": 47,
-    "author": "Uptrenda",
-    "comments": 29,
-    "url": "https://github.com/robertsdotpm/runloom"
+    "id": 48892859,
+    "title": "Show HN: Clawk – Give coding agents a disposable Linux VM, not your laptop",
+    "score": 179,
+    "author": "celrenheit",
+    "comments": 140,
+    "url": "https://github.com/clawkwork/clawk"
   },
   {
     "rank": 18,
-    "id": 48861217,
-    "title": "Show HN: SubjectiveZero, an open-source agentic node editor for creative coding",
-    "score": 24,
-    "author": "tasoeur",
-    "comments": 4,
-    "url": "https://sxp.studio/apps/subz"
+    "id": 48900288,
+    "title": "Show HN: ContextVault – Shared memory layer for your AI and your team",
+    "score": 8,
+    "author": "Repeater22746",
+    "comments": 2,
+    "url": "https://www.contextvault.dev/"
   },
   {
     "rank": 19,
-    "id": 48871138,
-    "title": "Show HN: Axletic – a local-first workout tracker for iPhone",
-    "score": 5,
-    "author": "bjar2",
-    "comments": 0,
-    "url": "https://www.axletic.app"
+    "id": 48899620,
+    "title": "Show HN: I built a one-prompt hackathon platform, free entry, sponsored prizes",
+    "score": 10,
+    "author": "lucasmartinic",
+    "comments": 5,
+    "url": "https://1shotchallenge.ai"
   },
   {
     "rank": 20,
-    "id": 48817218,
-    "title": "Show HN: Phobos – A tiny scale-free kernel language with tile-DAG support",
-    "score": 11,
-    "author": "joajoa",
-    "comments": 2,
-    "url": "https://www.joa-ebert.com/posts/2026-07-07-phobos-lang/"
+    "id": 48900205,
+    "title": "Show HN: Taetype – a complete font engine for Rust and WASM",
+    "score": 4,
+    "author": "silly-tae",
+    "comments": 1,
+    "url": "https://github.com/silly-tae/taetype"
   }
 ]
 
