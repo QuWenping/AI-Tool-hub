@@ -8,3 +8,4 @@ scripts/.baidu-token
 # Baidu push tracking
 scripts/.baidu-pushed
 scripts/.baidu-token
+scripts/baidu-push-log.txt
