@@ -64,6 +64,7 @@ const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":page
           <input type="email" id="nl-email" placeholder="your@email.com" required style="flex:1;min-width:200px;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);" />
           <button type="submit" style="padding:12px 24px;background:var(--accent-color);color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;">Subscribe</button>
         </form>
+        <p style="font-size:11px;color:var(--text-mute);margin-top:8px;">No spam. Unsubscribe anytime. We respect your privacy.</p>
         <p id="nl-msg" style="font-size:13px;margin-top:12px;display:none;color:#22c55e;">Thanks! Check your email to confirm your subscription.</p>
       </div>
 
@@ -91,9 +92,34 @@ const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":page
 document.getElementById("nl-form").addEventListener("submit",function(e){
   e.preventDefault();
   var email=document.getElementById("nl-email").value;
-  if(email){
-    document.getElementById("nl-msg").style.display="block";
-    document.getElementById("nl-form").style.display="none";
-  }
+  var btn=document.querySelector("#nl-form button");
+  var msg=document.getElementById("nl-msg");
+  if(!email) return;
+  btn.textContent="Subscribing...";
+  btn.disabled=true;
+  fetch("/api/subscribe",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({email:email})
+  }).then(function(r){return r.json()}).then(function(data){
+    if(data.success){
+      msg.style.display="block";
+      msg.style.color="#22c55e";
+      msg.textContent="Thanks! Check your email to confirm your subscription.";
+      document.getElementById("nl-form").style.display="none";
+    } else {
+      msg.style.display="block";
+      msg.style.color="#ef4444";
+      msg.textContent="Something went wrong. Please try again.";
+      btn.textContent="Subscribe";
+      btn.disabled=false;
+    }
+  }).catch(function(){
+    msg.style.display="block";
+    msg.style.color="#ef4444";
+    msg.textContent="Network error. Please try again.";
+    btn.textContent="Subscribe";
+    btn.disabled=false;
+  });
 });
 </script>

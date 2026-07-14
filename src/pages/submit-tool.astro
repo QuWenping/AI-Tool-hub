@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/submit-tool/";
@@ -118,7 +118,10 @@ const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":page
 <script is:inline>
 document.getElementById("submit-form").addEventListener("submit",function(e){
   e.preventDefault();
-  document.getElementById("submit-msg").style.display="block";
-  document.getElementById("submit-form").style.display="none";
+  var form=e.target;
+  var data={name:form.querySelector("#tool-name").value,url:form.querySelector("#tool-url").value,category:form.querySelector("#tool-category").value,description:form.querySelector("#tool-desc").value,pricing:form.querySelector("#tool-pricing").value,email:form.querySelector("#submitter-email").value,affiliation:form.querySelector("#affiliation").value,notes:form.querySelector("#tool-notes").value};
+  fetch("/api/submit-tool",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)}).then(function(r){return r.json()}).then(function(d){
+    if(d.success){document.getElementById("submit-msg").style.display="block";form.style.display="none";}
+  }).catch(function(){document.getElementById("submit-msg").style.display="block";document.getElementById("submit-msg").querySelector("p").textContent="Network error. Please try again.";});
 });
 </script>

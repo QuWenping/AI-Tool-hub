@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from "../layouts/BaseLayout.astro";
 const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/submit-prompt/";
@@ -79,7 +79,10 @@ const pageUrl = siteUrl + "/submit-prompt/";
 <script is:inline>
 document.getElementById("prompt-form").addEventListener("submit",function(e){
   e.preventDefault();
-  document.getElementById("prompt-msg").style.display="block";
-  document.getElementById("prompt-form").style.display="none";
+  var form=e.target;
+  var data={title:form.querySelector("#p-title").value,tool:form.querySelector("#p-tool").value,category:form.querySelector("#p-category").value,prompt:form.querySelector("#p-prompt").value,tags:form.querySelector("#p-tags").value,author:form.querySelector("#p-author").value,email:form.querySelector("#p-email").value};
+  fetch("/api/submit-prompt",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)}).then(function(r){return r.json()}).then(function(d){
+    if(d.success){document.getElementById("prompt-msg").style.display="block";form.style.display="none";}
+  }).catch(function(){document.getElementById("prompt-msg").style.display="block";document.getElementById("prompt-msg").querySelector("p").textContent="Network error. Please try again.";});
 });
 </script>
