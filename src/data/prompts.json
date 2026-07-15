@@ -4941,5 +4941,225 @@
       "technical"
     ],
     "prompt": "Technical blog post [TOPIC]: 1) Hook (real-world problem), 2) Background, 3) Core concept + ASCII diagram, 4) Code example (tested), 5) Pitfalls, 6) Best practices, 7. Further reading. 1500 words."
+  },
+  {
+    "slug": "any-startup-metrics",
+    "title": "AI Startup Metrics",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "startup",
+      "metrics"
+    ],
+    "prompt": "Startup metrics dashboard: 1) Activation rate, 2) Retention (D1/D7/D30), 3) Revenue, 4) Growth rate, 5) CAC, 6) LTV, 7) Burn, 8) Runway, 9. NPS. For each: formula, target, frequency."
+  },
+  {
+    "slug": "any-board-deck",
+    "title": "AI Board Deck",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "board",
+      "presentation"
+    ],
+    "prompt": "Board deck (10 slides): 1) Summary, 2) Metrics dashboard, 3) Wins/challenges, 4) Financials, 5) Product roadmap, 6) Team, 7) Market, 8) Competition, 9) Risks, 10. Asks. Each: key message + data."
+  },
+  {
+    "slug": "any-user-story-map",
+    "title": "AI User Story Mapping",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "user-stories",
+      "agile"
+    ],
+    "prompt": "User story map for [PRODUCT]: 1) User activities (horizontal), 2) Tasks under each (vertical), 3) MVP slice, 4) Releases (3-4), 5. Priorities. Format: ASCII grid."
+  },
+  {
+    "slug": "any-sprint-plan",
+    "title": "AI Sprint Planning",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "sprint",
+      "agile"
+    ],
+    "prompt": "Sprint plan for [DURATION]: 1) Sprint goal, 2) Capacity (hours), 3) Stories (with points), 4) Tasks breakdown, 5. Assignments, 6. Definition of Done, 7. Risks."
+  },
+  {
+    "slug": "any-release-notes",
+    "title": "AI Release Notes",
+    "category": "Coding",
+    "tool": "Any",
+    "tags": [
+      "release",
+      "notes"
+    ],
+    "prompt": "Release notes for [VERSION]: 1) Version + date, 2) New features (user-facing), 3) Improvements, 4) Bug fixes, 5) Known issues, 6) Breaking changes, 7. Migration, 8. Credits. Tone: user-friendly."
+  },
+  {
+    "slug": "any-incident-blameless",
+    "title": "AI Blameless Postmortem",
+    "category": "Coding",
+    "tool": "Any",
+    "tags": [
+      "postmortem",
+      "incident"
+    ],
+    "prompt": "Blameless postmortem: 1) Timeline, 2) Impact (users/duration/$), 3) Root cause (5 whys), 4) Contributing factors, 5) What went well, 6) Action items (owner+deadline), 7. Follow-up review."
+  },
+  {
+    "slug": "any-sre-runbook",
+    "title": "AI SRE Runbook",
+    "category": "Coding",
+    "tool": "Any",
+    "tags": [
+      "sre",
+      "runbook"
+    ],
+    "prompt": "SRE runbook for [SERVICE]: 1) Service overview, 2) Dashboards, 3) Alert definitions, 4) Common issues + fixes, 5) Escalation matrix, 6) Capacity planning, 7. Deployment, 8. Rollback."
+  },
+  {
+    "slug": "any-api-doc-template",
+    "title": "AI API Documentation Template",
+    "category": "Coding",
+    "tool": "Any",
+    "tags": [
+      "api",
+      "documentation"
+    ],
+    "prompt": "API doc template: 1) Getting started, 2) Authentication, 3) Rate limits, 4) Endpoints (with examples), 5) Webhooks, 6) SDKs, 7) Changelog, 8. Support. Format: developer-friendly."
+  },
+  {
+    "slug": "any-architecture-review",
+    "title": "AI Architecture Review",
+    "category": "Coding",
+    "tool": "Any",
+    "tags": [
+      "architecture",
+      "review"
+    ],
+    "prompt": "Architecture review for [SYSTEM]: 1) Diagram assessment, 2) Scalability, 3) Reliability, 4) Security, 5) Maintainability, 6) Cost, 7) Team alignment, 8. Recommendations (prioritized)."
+  },
+  {
+    "slug": "any-tech-spec-review",
+    "title": "AI Tech Spec Review",
+    "category": "Coding",
+    "tool": "Any",
+    "tags": [
+      "spec",
+      "review"
+    ],
+    "prompt": "Tech spec review: 1) Completeness, 2) Clarity, 3) Testability, 4) Feasibility, 5) Dependencies, 6) Risks, 7) Estimate, 8. Score (1-10) + top 3 issues. Spec:\n\n[PASTE]"
+  },
+  {
+    "slug": "any-content-strategy",
+    "title": "AI Content Strategy",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "content",
+      "strategy"
+    ],
+    "prompt": "Content strategy for [BRAND]: 1) Goals, 2) Audience (3 personas), 3) Pillars (4), 4) Channels, 5) Calendar (12 weeks), 6) Production workflow, 7. Metrics, 8. Tools."
+  },
+  {
+    "slug": "any-seo-strategy",
+    "title": "AI SEO Strategy",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "seo",
+      "strategy"
+    ],
+    "prompt": "SEO strategy for [SITE]: 1) Keyword research (20 primary + 50 long-tail), 2) Content gaps, 3) Technical audit, 4) On-page checklist, 5. Link building, 6. Local SEO, 7. Monitoring, 8. 90-day plan."
+  },
+  {
+    "slug": "any-digital-strategy",
+    "title": "AI Digital Strategy",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "digital",
+      "strategy"
+    ],
+    "prompt": "Digital strategy for [BUSINESS]: 1) Current state, 2) Digital maturity, 3) Target state, 4) Roadmap (12 months), 5) Technology stack, 6. Team structure, 7. Budget, 8. KPIs."
+  },
+  {
+    "slug": "any-brand-strategy",
+    "title": "AI Brand Strategy",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "brand",
+      "strategy"
+    ],
+    "prompt": "Brand strategy for [COMPANY]: 1) Brand purpose, 2) Values (5), 3) Personality (3 traits), 4) Positioning statement, 5) Voice, 6. Visual identity, 7. Touchpoints, 8. Guidelines."
+  },
+  {
+    "slug": "any-marketing-funnel",
+    "title": "AI Marketing Funnel",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "marketing",
+      "funnel"
+    ],
+    "prompt": "Marketing funnel for [PRODUCT]: 1) Awareness, 2) Interest, 3) Consideration, 4) Intent, 5) Purchase, 6) Retention, 7) Advocacy. For each: channels, content, metrics, optimization."
+  },
+  {
+    "slug": "any-growth-experiment",
+    "title": "AI Growth Experiment",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "growth",
+      "experiment"
+    ],
+    "prompt": "Growth experiment for [GOAL]: 1) Hypothesis, 2) Metric, 3) Variant design, 4) Sample size, 5) Duration, 6. Segments, 7. Success criteria, 8. Rollout plan, 9. Retro plan."
+  },
+  {
+    "slug": "any-customer-research",
+    "title": "AI Customer Research Plan",
+    "category": "Research",
+    "tool": "Any",
+    "tags": [
+      "customer",
+      "research"
+    ],
+    "prompt": "Customer research plan: 1) Objectives (3), 2) Method (interview/survey/observation), 3) Participants (10-15), 4) Discussion guide, 5. Timeline, 6. Budget, 7. Analysis method, 8. Output."
+  },
+  {
+    "slug": "any-competitor-deep",
+    "title": "AI Deep Competitor Analysis",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "competitor",
+      "deep"
+    ],
+    "prompt": "Deep competitor analysis for [COMPETITOR]: 1) Product walkthrough, 2) Pricing, 3) Target customers, 4) Strengths (5), 5) Weaknesses (5), 6) Recent moves, 7) Customer reviews, 8. Strategy prediction."
+  },
+  {
+    "slug": "any-market-sizing-deep",
+    "title": "AI Market Sizing Deep",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "market",
+      "sizing"
+    ],
+    "prompt": "Market sizing for [PRODUCT]: 1) TAM (top-down + bottom-up), 2) SAM, 3) SOM, 4) Growth rate, 5) Trends, 6. Segments, 7. Geographic, 8. Seasonality, 9. Barriers, 10. Sources."
+  },
+  {
+    "slug": "any-startup-pitch",
+    "title": "AI Startup Pitch Generator",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "pitch",
+      "startup"
+    ],
+    "prompt": "Startup pitch for [COMPANY]: 1) One-liner, 2) Problem (with data), 3) Solution, 4) Why now, 5) Market size, 6) Business model, 7) Traction, 8) Competition, 9) Team, 10. Ask. 3 minutes."
   }
 ]
