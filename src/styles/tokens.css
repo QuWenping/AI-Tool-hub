@@ -1,0 +1,146 @@
+/* ============================================
+   AI Tool Hub — Design System Tokens v1.0
+   Based on: Design System & UI Specification
+   ============================================ */
+
+:root {
+  /* ===== COLORS — LIGHT MODE ===== */
+  --bg: #FFFFFF;
+  --bg-muted: #F9FAFB;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F3F4F6;
+  --text: #111827;
+  --text-secondary: #6B7280;
+  --text-soft: #1F2937;
+  --border: #E5E7EB;
+  --brand: #3B82F6;
+  --brand-dark: #2563EB;
+  --brand-glow: rgba(59, 130, 246, 0.2);
+  --green: #22C55E;
+  --green-bg: rgba(34, 197, 94, 0.05);
+  --green-border: rgba(34, 197, 94, 0.2);
+  --amber: #F59E0B;
+  --amber-bg: rgba(245, 158, 11, 0.05);
+  --amber-border: rgba(245, 158, 11, 0.2);
+  --red: #EF4444;
+  --red-bg: rgba(239, 68, 68, 0.05);
+  --red-border: rgba(239, 68, 68, 0.2);
+
+  /* ===== TYPOGRAPHY ===== */
+  --font-en: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-zh: 'Noto Sans SC', 'Inter', system-ui, sans-serif;
+  --font-mono: 'Fira Code', 'SF Mono', Monaco, 'Courier New', monospace;
+
+  --fs-h1-d: 64px;
+  --fs-h1-m: 38px;
+  --fs-h2: 42px;
+  --fs-h3: 32px;
+  --fs-h4: 26px;
+  --fs-body: 20px;
+  --fs-body-m: 18px;
+  --fs-small: 14px;
+  --fs-xs: 12px;
+  --fs-code: 14px;
+
+  --lh-heading: 1.1;
+  --lh-body: 1.85;
+  --lh-tight: 1.4;
+
+  --fw-h1: 800;
+  --fw-h2: 700;
+  --fw-h3: 700;
+  --fw-h4: 600;
+  --fw-body: 400;
+  --fw-mid: 500;
+  --fw-bold: 600;
+  --fw-extrabold: 800;
+
+  /* ===== SPACING ===== */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-12: 48px;
+  --s-16: 64px;
+  --s-24: 96px;
+
+  /* ===== SHADOWS ===== */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 24px 64px rgba(0, 0, 0, 0.16);
+
+  /* ===== RADIUS ===== */
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 20px;
+  --r-full: 999px;
+
+  /* ===== LAYOUT ===== */
+  --max-w: 1320px;
+  --w-article: 760px;
+  --w-toc: 280px;
+  --w-sidebar: 320px;
+  --gap-layout: 24px;
+
+  /* ===== TRANSITIONS ===== */
+  --t-hover: 150ms ease;
+  --t-page: 250ms ease;
+  --t-enter: 300ms ease;
+
+  /* ===== Z-INDEX ===== */
+  --z-header: 100;
+  --z-toc: 50;
+  --z-modal: 1000;
+  --z-toast: 1100;
+
+  /* ===== BREAKPOINTS (for reference, use in media queries) ===== */
+  /* Desktop: >= 1280px, Laptop: 1024-1279, Tablet: 768-1023, Mobile: <768 */
+}
+
+/* ===== DARK MODE ===== */
+[data-theme="dark"] {
+  --bg: #0F172A;
+  --bg-muted: #1E293B;
+  --bg-card: #1E293B;
+  --bg-card-hover: #334155;
+  --text: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --text-soft: #E2E8F0;
+  --border: #334155;
+  --brand: #3B82F6;
+  --brand-dark: #60A5FA;
+  --brand-glow: rgba(59, 130, 246, 0.3);
+  --green-bg: rgba(34, 197, 94, 0.1);
+  --green-border: rgba(34, 197, 94, 0.3);
+  --amber-bg: rgba(245, 158, 11, 0.1);
+  --amber-border: rgba(245, 158, 11, 0.3);
+  --red-bg: rgba(239, 68, 68, 0.1);
+  --red-border: rgba(239, 68, 68, 0.3);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== COMPATIBILITY MAPPING ===== */
+/* Map old variable names to new tokens for backward compatibility */
+:root {
+  --bg-color: var(--bg);
+  --card-bg: var(--bg-card);
+  --card-bg-hover: var(--bg-card-hover);
+  --text-main: var(--text);
+  --text-mute: var(--text-secondary);
+  --text-soft: var(--text-soft);
+  --accent-color: var(--brand);
+  --accent-glow: var(--brand-glow);
+  --border-color: var(--border);
+  --ad-bg: var(--bg-muted);
+  --transition: all var(--t-hover);
+  --radius-sm: var(--r-sm);
+  --radius-md: var(--r-md);
+  --radius-lg: var(--r-lg);
+  --max-width: var(--max-w);
+}

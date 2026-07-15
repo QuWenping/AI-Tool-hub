@@ -1,0 +1,12 @@
+---
+const { format = "banner", label = "Advertisement" } = Astro.props;
+---
+<div class={`ad-slot ad-${format}`}>
+  <span class="ad-label">{label}</span>
+</div>
+<style>
+.ad-slot { background: var(--bg-muted); border: 1px dashed var(--border); border-radius: 12px; padding: 16px; text-align: center; color: var(--text-secondary); font-size: 13px; margin: 24px 0; min-height: 90px; display: flex; align-items: center; justify-content: center; }
+.ad-banner { min-height: 90px; }
+.ad-inarticle { min-height: 250px; }
+.ad-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+</style>

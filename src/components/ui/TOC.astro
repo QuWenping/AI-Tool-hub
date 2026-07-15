@@ -1,0 +1,36 @@
+---
+const { items = [] } = Astro.props;
+---
+<nav class="toc" id="toc-nav">
+  <h4>Table of Contents</h4>
+  {items.map((item, i) => (
+    <a href={`#${item.id}`} class={i === 0 ? "active" : ""} data-toc-item>{item.label}</a>
+  ))}
+</nav>
+<style>
+.toc { position: sticky; top: 24px; max-height: calc(100vh - 120px); overflow-y: auto; }
+.toc h4 { font-size: 13px; font-weight: 600; color: var(--text-secondary); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+.toc a { display: block; font-size: 14px; color: var(--text-secondary); text-decoration: none; padding: 6px 12px; border-left: 2px solid var(--border); transition: all 150ms ease; }
+.toc a:hover, .toc a.active { color: var(--brand); border-left-color: var(--brand); font-weight: 500; }
+@media (max-width: 1023px) { .toc { display: none; } }
+</style>
+<script is:inline>
+// Scroll Spy
+document.addEventListener('DOMContentLoaded', function() {
+  var tocLinks = document.querySelectorAll('[data-toc-item]');
+  if (!tocLinks.length) return;
+  var sections = Array.from(tocLinks).map(function(link) {
+    var id = link.getAttribute('href').substring(1);
+    return { id: id, el: document.getElementById(id), link: link };
+  }).filter(function(s) { return s.el; });
+  function updateActive() {
+    var scrollY = window.scrollY + 100;
+    var active = sections[0];
+    sections.forEach(function(s) { if (s.el.offsetTop <= scrollY) active = s; });
+    tocLinks.forEach(function(l) { l.classList.remove('active'); });
+    if (active) active.link.classList.add('active');
+  }
+  window.addEventListener('scroll', updateActive);
+  updateActive();
+});
+</script>

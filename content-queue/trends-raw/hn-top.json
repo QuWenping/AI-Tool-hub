@@ -3,181 +3,181 @@
     "rank": 1,
     "id": 48914644,
     "title": "Vancouver PD website features Quick Escape button that wipes itself from history",
-    "score": 35,
+    "score": 106,
     "author": "LookAtThatBacon",
-    "comments": 11,
+    "comments": 36,
     "url": "https://vpd.ca/"
   },
   {
     "rank": 2,
-    "id": 48910545,
-    "title": "Bonsai 27B: A 27B-Class model that runs on a phone",
-    "score": 423,
-    "author": "xenova",
-    "comments": 160,
-    "url": "https://prismml.com/news/bonsai-27b"
+    "id": 48915004,
+    "title": "TS-2026-009: Insecure argument handling in Tailscale SSH permitted root access",
+    "score": 39,
+    "author": "jervant",
+    "comments": 14,
+    "url": "https://tailscale.com/security-bulletins"
   },
   {
     "rank": 3,
-    "id": 48913050,
-    "title": "Dependabot version updates introduce default package cooldown",
-    "score": 90,
-    "author": "woodruffw",
-    "comments": 58,
-    "url": "https://github.blog/changelog/2026-07-14-dependabot-version-updates-introduce-default-package-cooldown/"
+    "id": 48910545,
+    "title": "Bonsai 27B: A 27B-Class model that runs on a phone",
+    "score": 448,
+    "author": "xenova",
+    "comments": 169,
+    "url": "https://prismml.com/news/bonsai-27b"
   },
   {
     "rank": 4,
-    "id": 48913443,
-    "title": "Financing the AI boom: from cash flows to debt [pdf]",
-    "score": 79,
-    "author": "1vuio0pswjnm7",
-    "comments": 31,
-    "url": "https://www.bis.org/publ/bisbull120.pdf"
+    "id": 48913050,
+    "title": "Dependabot version updates introduce default package cooldown",
+    "score": 104,
+    "author": "woodruffw",
+    "comments": 66,
+    "url": "https://github.blog/changelog/2026-07-14-dependabot-version-updates-introduce-default-package-cooldown/"
   },
   {
     "rank": 5,
     "id": 48909785,
     "title": "The Tower Keeps Rising",
-    "score": 334,
+    "score": 355,
     "author": "cdrnsf",
-    "comments": 160,
+    "comments": 170,
     "url": "https://lucumr.pocoo.org/2026/7/13/the-tower-keeps-rising/"
   },
   {
     "rank": 6,
-    "id": 48910676,
-    "title": "Cursor 0day: When Full Disclosure Becomes the Only Protection Left",
-    "score": 246,
-    "author": "Synthetic7346",
-    "comments": 106,
-    "url": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left"
+    "id": 48913443,
+    "title": "Financing the AI boom: from cash flows to debt [pdf]",
+    "score": 98,
+    "author": "1vuio0pswjnm7",
+    "comments": 44,
+    "url": "https://www.bis.org/publ/bisbull120.pdf"
   },
   {
     "rank": 7,
-    "id": 48912175,
-    "title": "How I use HTMX with Go",
-    "score": 105,
-    "author": "gnabgib",
-    "comments": 22,
-    "url": "https://www.alexedwards.net/blog/how-i-use-htmx-with-go"
+    "id": 48914646,
+    "title": "Solving 20 Erd艖s Problems with 20 Codex Accounts Running in Parallel",
+    "score": 31,
+    "author": "colin7snyder",
+    "comments": 6,
+    "url": "https://www.starfleetmath.com/"
   },
   {
     "rank": 8,
-    "id": 48913763,
-    "title": "LeMario: Training a JEPA World Model on Super Mario Bros",
-    "score": 38,
-    "author": "kevinjosethomas",
-    "comments": 3,
-    "url": "https://www.benjamin-bai.com/projects/lemario"
+    "id": 48910676,
+    "title": "Cursor 0day: When Full Disclosure Becomes the Only Protection Left",
+    "score": 264,
+    "author": "Synthetic7346",
+    "comments": 111,
+    "url": "https://mindgard.ai/blog/cursor-0day-when-full-disclosure-becomes-the-only-protection-left"
   },
   {
     "rank": 9,
     "id": 48869989,
     "title": "Your 'app' could have been a webpage (so I fixed it for you)",
-    "score": 708,
+    "score": 737,
     "author": "MrVandemar",
-    "comments": 436,
+    "comments": 447,
     "url": "https://danq.me/2026/07/09/your-app-could-have-been-a-webpage/"
   },
   {
     "rank": 10,
-    "id": 48873275,
-    "title": "C++20 Improved the For-Loop Syntax",
-    "score": 18,
-    "author": "jpmitchell",
-    "comments": 13,
-    "url": "https://lzon.ca/posts/tips/cpp-for-range-init/"
+    "id": 48913763,
+    "title": "LeMario: Training a JEPA World Model on Super Mario Bros",
+    "score": 57,
+    "author": "kevinjosethomas",
+    "comments": 6,
+    "url": "https://www.benjamin-bai.com/projects/lemario"
   },
   {
     "rank": 11,
-    "id": 48905183,
-    "title": "Mathematical texts from a Maya site in Guatemala identify an ancient astronomer",
-    "score": 32,
-    "author": "homarp",
-    "comments": 6,
-    "url": "https://www.nature.com/articles/d41586-026-02170-8"
+    "id": 48873275,
+    "title": "C++20 Improved the For-Loop Syntax",
+    "score": 30,
+    "author": "jpmitchell",
+    "comments": 37,
+    "url": "https://lzon.ca/posts/tips/cpp-for-range-init/"
   },
   {
     "rank": 12,
-    "id": 48866848,
-    "title": "Unlocking the PSP's Dual Core Setup",
-    "score": 37,
-    "author": "msephton",
-    "comments": 4,
-    "url": "https://wololo.net/2026/06/16/unlocking-the-psps-dual-core-setup/"
+    "id": 48905183,
+    "title": "Mathematical texts from a Maya site in Guatemala identify an ancient astronomer",
+    "score": 47,
+    "author": "homarp",
+    "comments": 8,
+    "url": "https://www.nature.com/articles/d41586-026-02170-8"
   },
   {
     "rank": 13,
-    "id": 48915004,
-    "title": "TS-2026-009: Insecure argument handling in Tailscale SSH permitted root access",
-    "score": 3,
-    "author": "jervant",
-    "comments": 0,
-    "url": "https://tailscale.com/security-bulletins"
+    "id": 48912175,
+    "title": "How I use HTMX with Go",
+    "score": 125,
+    "author": "gnabgib",
+    "comments": 27,
+    "url": "https://www.alexedwards.net/blog/how-i-use-htmx-with-go"
   },
   {
     "rank": 14,
-    "id": 48905248,
-    "title": "How to stop Claude from saying load-bearing",
-    "score": 431,
-    "author": "shintoist",
-    "comments": 495,
-    "url": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing"
+    "id": 48914683,
+    "title": "Data centers have hiked electricity prices on the public by $23B",
+    "score": 58,
+    "author": "measurablefunc",
+    "comments": 25,
+    "url": "https://fortune.com/2026/07/14/data-centers-23-billion-electricity-bills/"
   },
   {
     "rank": 15,
-    "id": 48872401,
-    "title": "The largest available Minecraft world, totalling 15 TB",
-    "score": 161,
-    "author": "_____k",
-    "comments": 55,
-    "url": "https://2b2t.place/1million"
+    "id": 48905248,
+    "title": "How to stop Claude from saying load-bearing",
+    "score": 442,
+    "author": "shintoist",
+    "comments": 506,
+    "url": "https://jola.dev/posts/how-to-stop-claude-from-saying-load-bearing"
   },
   {
     "rank": 16,
-    "id": 48899473,
-    "title": "The Estranged Worlds of J. G. Ballard",
-    "score": 35,
-    "author": "Caiero",
-    "comments": 6,
-    "url": "https://lareviewofbooks.org/article/jg-ballard-illuminated-man-christopher-priest-nina-allan/"
+    "id": 48862351,
+    "title": "An unusual way for your DHCP server to run out of dynamic IPs",
+    "score": 22,
+    "author": "speckx",
+    "comments": 2,
+    "url": "https://utcc.utoronto.ca/~cks/space/blog/sysadmin/DHCPServerAndScreamingHost"
   },
   {
     "rank": 17,
-    "id": 48906041,
-    "title": "Guardian Angels: LLM Personalization for Productivity and Security",
-    "score": 55,
-    "author": "andsoitis",
-    "comments": 7,
-    "url": "https://gwern.net/guardian-angel"
+    "id": 48872401,
+    "title": "The largest available Minecraft world, totalling 15 TB",
+    "score": 171,
+    "author": "_____k",
+    "comments": 56,
+    "url": "https://2b2t.place/1million"
   },
   {
     "rank": 18,
-    "id": 48914646,
-    "title": "Solving 20 Erdős Problems with 20 Codex Accounts Running in Parallel",
-    "score": 6,
-    "author": "colin7snyder",
-    "comments": 0,
-    "url": "https://www.starfleetmath.com/"
+    "id": 48913190,
+    "title": "Microsoft Patches a Record 570 Security Flaws",
+    "score": 34,
+    "author": "robin_reala",
+    "comments": 19,
+    "url": "https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/"
   },
   {
     "rank": 19,
-    "id": 48908214,
-    "title": "I'm a USB-C Maximalist",
-    "score": 154,
-    "author": "speckx",
-    "comments": 262,
-    "url": "https://shkspr.mobi/blog/2026/07/im-a-usb-c-maximalist/"
+    "id": 48899473,
+    "title": "The Estranged Worlds of J. G. Ballard",
+    "score": 40,
+    "author": "Caiero",
+    "comments": 7,
+    "url": "https://lareviewofbooks.org/article/jg-ballard-illuminated-man-christopher-priest-nina-allan/"
   },
   {
     "rank": 20,
-    "id": 48870217,
-    "title": "The kids with phones are alright",
-    "score": 123,
-    "author": "JumpCrisscross",
-    "comments": 83,
-    "url": "https://heatherburns.tech/2026/07/08/the-kids-with-phones-are-alright/"
+    "id": 48908214,
+    "title": "I'm a USB-C Maximalist",
+    "score": 175,
+    "author": "speckx",
+    "comments": 280,
+    "url": "https://shkspr.mobi/blog/2026/07/im-a-usb-c-maximalist/"
   }
 ]
 

@@ -1,0 +1,18 @@
+---
+const { items = [] } = Astro.props;
+---
+<nav class="breadcrumbs">
+  {items.map((item, i) => (
+    <span>
+      {item.href ? <a href={item.href}>{item.label}</a> : <span class="current">{item.label}</span>}
+      {i < items.length - 1 && <span class="divider">›</span>}
+    </span>
+  ))}
+</nav>
+<style>
+.breadcrumbs { font-size: 13px; color: var(--text-secondary); padding: 12px 0; }
+.breadcrumbs a { color: var(--text-secondary); text-decoration: none; transition: color 150ms ease; }
+.breadcrumbs a:hover { color: var(--brand); }
+.breadcrumbs .current { color: var(--text); }
+.breadcrumbs .divider { margin: 0 6px; color: var(--border); }
+</style>
