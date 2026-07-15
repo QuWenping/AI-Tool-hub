@@ -2,6 +2,8 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import matchups from "../../data/matchups.json";
 import toolsData from "../../data/tools.json";
+import TLDR from "../../components/ui/TLDR.astro";
+import AdSlot from "../../components/ui/AdSlot.astro";
 export async function getStaticPaths() {
   return matchups.map(function(m){return {params:{slug:m.slug},props:{m:m}}});
 }
@@ -94,7 +96,7 @@ const faqSchema = {
       <p style="color: var(--text-soft); max-width: 720px; margin: 0 auto; font-size: 16px; line-height: 1.55;">We tested both <strong>{aName}</strong> and <strong>{bName}</strong> side by side for two weeks.</p>
     </div>
       <TLDR items={[
-        aName + " vs " + bName + ": " + (aFirstPro > bFirstPro ? aName + " wins on " + aFirstPro.toLowerCase() : bName + " wins on " + bFirstPro.toLowerCase()),
+        aName + " vs " + bName + ": " + (aName + " excels at " + aFirstPro.toLowerCase() + ", " + bName + " excels at " + bFirstPro.toLowerCase()),
         "Pricing: " + aName + " (" + ((a && a.pricing && a.pricing.en) || "various") + ") vs " + bName + " (" + ((b && b.pricing && b.pricing.en) || "various") + ")",
         "Best for " + aUse.toLowerCase() + ": " + aName + ". Best for " + bUse.toLowerCase() + ": " + bName,
         "Both have free tiers — try both before committing"
