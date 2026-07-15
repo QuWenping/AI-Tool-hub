@@ -263,26 +263,7 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
       </section>
     )}
 
-    <section class="detail-section">
-      <h2><i class="fas fa-chart-pie"></i> Capability radar</h2>
-      <div style="display:flex;justify-content:center;padding:16px 0;">
-        <svg viewBox="0 0 200 200" width="280" height="280" role="img" aria-label="5-dimension capability radar">
-          <g transform="translate(100,100)">
-            {radarSpokes.map(s => (
-              <line x1="0" y1="0" x2={s.x2} y2={s.y2} stroke="var(--border-color)" stroke-width="0.5" />
-            ))}
-            {radarGrid.map(pts => (
-              <polygon points={pts} fill="none" stroke="var(--border-color)" stroke-width="0.5" opacity="0.3" />
-            ))}
-            <polygon points={radarPoints} fill="var(--accent-color)" fill-opacity="0.2" stroke="var(--accent-color)" stroke-width="1.5" />
-            {radarLabels.map(l => (
-              <text x={l.x} y={l.y} text-anchor="middle" font-size="9" fill="var(--text-mute)">{l.label}</text>
-            ))}
-          </g>
-        </svg>
-      </div>
-      <p style="font-size:12px;color:var(--text-mute);text-align:center;">5-dimension editorial score (out of 10). Based on research.</p>
-    </section>
+    
 
     {tExampleEn && (
       <section class="detail-section">
