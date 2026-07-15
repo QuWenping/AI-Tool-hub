@@ -70,13 +70,10 @@ const realTest = realTestData[id] || null;
 const handReviewedTools = ["chatgpt","claude","gemini","github-copilot","cursor","sora","runway","midjourney","stable-diffusion","leonardo","elevenlabs","suno","descript","notion-ai","perplexity","jasper","hostinger","windsurf","codeium","replit","v0","bolt","lovable","deepseek","aider","flux","ideogram","krea","comfyui","dalle3","photoroom","removebg","kling","pika","luma","hailuo","invideo-ai","synthesia","heygen","d-id","murf","play-ht","speechify","otter","fireflies","copy-ai","writesonic","quillbot","grammarly-ai","n8n"];
 const isHandReviewed = handReviewedTools.includes(id);
 // Pre-compute radar chart data (avoid complex inline JSX math)
-const radarR = rating * 8;
-const radarAngles = [0,1,2,3,4].map(i => -Math.PI/2 + i*2*Math.PI/5);
-const radarPoints = radarAngles.map(a => (Math.cos(a)*radarR).toFixed(1)+","+(Math.sin(a)*radarR).toFixed(1)).join(" ");
+
 const radarLabels = ["Quality","Usability","Price","Support","Privacy"].map((label,i) => ({
   label, x: (Math.cos(radarAngles[i])*90).toFixed(1), y: (Math.sin(radarAngles[i])*90+4).toFixed(1)
 }));
-const radarGrid = [80,60,40,20].map(r => radarAngles.map(a => (Math.cos(a)*r).toFixed(1)+","+(Math.sin(a)*r).toFixed(1)).join(" "));
 const radarSpokes = radarAngles.map(a => ({ x2: (Math.cos(a)*80).toFixed(1), y2: (Math.sin(a)*80).toFixed(1) }));
 const softwareSchema = {
   "@context": "https://schema.org",
