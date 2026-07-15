@@ -537,5 +537,187 @@
     "b": "crewai",
     "title_en": "AutoGen vs CrewAI (2026): Microsoft vs Open Source",
     "title_zh": "AutoGen vs CrewAI (2026): 微软 vs 开源"
+  },
+  {
+    "slug": "sourcegraph-vs-cursor",
+    "a": "sourcegraph",
+    "b": "cursor",
+    "title_en": "Sourcegraph Cody vs Cursor (2026): Which is Better?",
+    "title_zh": "Sourcegraph Cody vs Cursor (2026): 哪个更好?"
+  },
+  {
+    "slug": "snyk-ai-vs-cursor",
+    "a": "snyk-ai",
+    "b": "cursor",
+    "title_en": "Snyk Code vs Cursor (2026): Which is Better?",
+    "title_zh": "Snyk Code vs Cursor (2026): 哪个更好?"
+  },
+  {
+    "slug": "lovo-ai-vs-elevenlabs",
+    "a": "lovo-ai",
+    "b": "elevenlabs",
+    "title_en": "LOVO AI vs ElevenLabs (2026): Which is Better?",
+    "title_zh": "LOVO AI vs ElevenLabs (2026): 哪个更好?"
+  },
+  {
+    "slug": "kaiber-ai-vs-runway",
+    "a": "kaiber-ai",
+    "b": "runway",
+    "title_en": "Kaiber vs Runway (2026): Which is Better?",
+    "title_zh": "Kaiber vs Runway (2026): 哪个更好?"
+  },
+  {
+    "slug": "pika-labs-vs-kling",
+    "a": "pika-labs",
+    "b": "kling",
+    "title_en": "Pika Labs vs Kling (2026): Which is Better?",
+    "title_zh": "Pika Labs vs Kling (2026): 哪个更好?"
+  },
+  {
+    "slug": "genmo-video-vs-runway",
+    "a": "genmo-video",
+    "b": "runway",
+    "title_en": "Genmo Video vs Runway (2026): Which is Better?",
+    "title_zh": "Genmo Video vs Runway (2026): 哪个更好?"
+  },
+  {
+    "slug": "naturalreader-vs-speechify",
+    "a": "naturalreader",
+    "b": "speechify",
+    "title_en": "NaturalReader vs Speechify (2026): Which is Better?",
+    "title_zh": "NaturalReader vs Speechify (2026): 哪个更好?"
+  },
+  {
+    "slug": "ttsmaker-vs-murf",
+    "a": "ttsmaker",
+    "b": "murf",
+    "title_en": "TTSMaker vs Murf (2026): Which is Better?",
+    "title_zh": "TTSMaker vs Murf (2026): 哪个更好?"
+  },
+  {
+    "slug": "uberduck-vs-elevenlabs",
+    "a": "uberduck",
+    "b": "elevenlabs",
+    "title_en": "Uberduck vs ElevenLabs (2026): Which is Better?",
+    "title_zh": "Uberduck vs ElevenLabs (2026): 哪个更好?"
+  },
+  {
+    "slug": "vizcom-ai-vs-midjourney",
+    "a": "vizcom-ai",
+    "b": "midjourney",
+    "title_en": "Vizcom AI vs Midjourney (2026): Which is Better?",
+    "title_zh": "Vizcom AI vs Midjourney (2026): 哪个更好?"
+  },
+  {
+    "slug": "replicate-ai-vs-comfyui",
+    "a": "replicate-ai",
+    "b": "comfyui",
+    "title_en": "Replicate vs ComfyUI (2026): Which is Better?",
+    "title_zh": "Replicate vs ComfyUI (2026): 哪个更好?"
+  },
+  {
+    "slug": "reclaim-ai-vs-motion-pro",
+    "a": "reclaim-ai",
+    "b": "motion-pro",
+    "title_en": "Reclaim AI vs Motion Pro (2026): Which is Better?",
+    "title_zh": "Reclaim AI vs Motion Pro (2026): 哪个更好?"
+  },
+  {
+    "slug": "clockwise-ai-vs-reclaim-ai",
+    "a": "clockwise-ai",
+    "b": "reclaim-ai",
+    "title_en": "Clockwise vs Reclaim AI (2026): Which is Better?",
+    "title_zh": "Clockwise vs Reclaim AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "taskade-pro-vs-notion-ai",
+    "a": "taskade-pro",
+    "b": "notion-ai",
+    "title_en": "Taskade Pro vs Notion AI (2026): Which is Better?",
+    "title_zh": "Taskade Pro vs Notion AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "height-ai-vs-asana-ai",
+    "a": "height-ai",
+    "b": "asana-ai",
+    "title_en": "Height vs Asana AI (2026): Which is Better?",
+    "title_zh": "Height vs Asana AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "sunsama-vs-motion-pro",
+    "a": "sunsama",
+    "b": "motion-pro",
+    "title_en": "Sunsama vs Motion Pro (2026): Which is Better?",
+    "title_zh": "Sunsama vs Motion Pro (2026): 哪个更好?"
+  },
+  {
+    "slug": "scholarcy-vs-perplexity",
+    "a": "scholarcy",
+    "b": "perplexity",
+    "title_en": "Scholarcy vs Perplexity (2026): Which is Better?",
+    "title_zh": "Scholarcy vs Perplexity (2026): 哪个更好?"
+  },
+  {
+    "slug": "researchrabbit-vs-perplexity",
+    "a": "researchrabbit",
+    "b": "perplexity",
+    "title_en": "Research Rabbit vs Perplexity (2026): Which is Better?",
+    "title_zh": "Research Rabbit vs Perplexity (2026): 哪个更好?"
+  },
+  {
+    "slug": "connected-papers-vs-consensus",
+    "a": "connected-papers",
+    "b": "consensus",
+    "title_en": "Connected Papers vs Consensus (2026): Which is Better?",
+    "title_zh": "Connected Papers vs Consensus (2026): 哪个更好?"
+  },
+  {
+    "slug": "koala-writer-vs-copy-ai",
+    "a": "koala-writer",
+    "b": "copy-ai",
+    "title_en": "Koala Writer vs Copy.ai (2026): Which is Better?",
+    "title_zh": "Koala Writer vs Copy.ai (2026): 哪个更好?"
+  },
+  {
+    "slug": "smodin-ai-vs-quillbot",
+    "a": "smodin-ai",
+    "b": "quillbot",
+    "title_en": "Smodin vs QuillBot (2026): Which is Better?",
+    "title_zh": "Smodin vs QuillBot (2026): 哪个更好?"
+  },
+  {
+    "slug": "devika-ai-vs-cursor",
+    "a": "devika-ai",
+    "b": "cursor",
+    "title_en": "Devika vs Cursor (2026): Which is Better?",
+    "title_zh": "Devika vs Cursor (2026): 哪个更好?"
+  },
+  {
+    "slug": "bloop-ai-vs-cursor",
+    "a": "bloop-ai",
+    "b": "cursor",
+    "title_en": "Bloop AI vs Cursor (2026): Which is Better?",
+    "title_zh": "Bloop AI vs Cursor (2026): 哪个更好?"
+  },
+  {
+    "slug": "sweep-ai-vs-cursor",
+    "a": "sweep-ai",
+    "b": "cursor",
+    "title_en": "Sweep AI vs Cursor (2026): Which is Better?",
+    "title_zh": "Sweep AI vs Cursor (2026): 哪个更好?"
+  },
+  {
+    "slug": "deepcode-ai-vs-cursor",
+    "a": "deepcode-ai",
+    "b": "cursor",
+    "title_en": "DeepCode vs Cursor (2026): Which is Better?",
+    "title_zh": "DeepCode vs Cursor (2026): 哪个更好?"
+  },
+  {
+    "slug": "sonarqube-vs-cursor",
+    "a": "sonarqube",
+    "b": "cursor",
+    "title_en": "SonarQube vs Cursor (2026): Which is Better?",
+    "title_zh": "SonarQube vs Cursor (2026): 哪个更好?"
   }
 ]
