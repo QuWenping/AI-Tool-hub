@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/tools/ai-background-remover/";
+const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity":[{"@type":"Question","name":"Is my image uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. All processing happens locally in your browser using the @imgly/background-removal library. Your image never leaves your device."}}]};
+---
+<BaseLayout title="Free AI Background Remover | Online Tool" description="Remove image backgrounds instantly with AI. 100% free, runs in your browser, no upload required." keywords="background remover, remove background, free bg removal, AI background removal, online tool">
+  <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script></Fragment>
+  <div class="container" style="max-width:700px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumbs" style="margin-bottom:24px;"><a href="/">Home</a> &rsaquo; <a href="/tools/">Tools</a> &rsaquo; <span>Background Remover</span></nav>
+    <h1 style="font-size:28px;font-weight:700;margin-bottom:8px;">AI Background Remover</h1>
+    <p style="color:var(--text-mute);font-size:15px;margin-bottom:24px;">Remove image backgrounds with AI. Instant, free, runs in your browser.</p>
+    <div style="margin-bottom:20px;">
+      <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Select Image</label>
+      <input type="file" id="file-input" accept="image/*" style="width:100%;padding:12px;border:1px solid var(--border-color);border-radius:8px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;" />
+    </div>
+    <button id="rm-btn" style="width:100%;padding:14px;background:var(--accent-color);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;margin-bottom:24px;" disabled>Remove Background</button>
+    <div id="status" style="display:none;text-align:center;padding:20px;color:var(--text-mute);font-size:14px;">Processing... (first run downloads AI model, may take 10-20 seconds)</div>
+    <div id="result" style="display:none;">
+      <h2 style="font-size:18px;font-weight:600;margin-bottom:12px;">Result</h2>
+      <div id="img-container" style="border:1px solid var(--border-color);border-radius:12px;overflow:hidden;margin-bottom:16px;background:repeating-conic-gradient(#f0f0f0 0% 25%,#fff 0% 50%) 50% / 20px 20px;"></div>
+      <a id="download" style="display:inline-block;background:var(--accent-color);color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">Download PNG (transparent)</a>
+    </div>
+  </div>
+</BaseLayout>
+<script type="module">
+import { removeBackground } from "https://cdn.jsdelivr.net/npm/@imgly/background-removal@1.4.0/dist/index.mjs";
+document.getElementById("file-input").addEventListener("change",function(e){document.getElementById("rm-btn").disabled=!e.target.files[0];});
+document.getElementById("rm-btn").addEventListener("click",async function(){
+  var file=document.getElementById("file-input").files[0];if(!file)return;
+  document.getElementById("status").style.display="block";document.getElementById("result").style.display="none";
+  try{
+    var blob=await removeBackground(file);
+    var url=URL.createObjectURL(blob);
+    document.getElementById("img-container").innerHTML='<img src="'+url+'" style="width:100%;display:block;" />';
+    document.getElementById("download").href=url;
+    document.getElementById("download").download="no-background.png";
+    document.getElementById("status").style.display="none";document.getElementById("result").style.display="block";
+  }catch(e){document.getElementById("status").textContent="Error: "+e.message;}
+});
+</script>
