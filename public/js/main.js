@@ -91,7 +91,7 @@ function renderTools() {
 function renderRec() {
   const grid = document.getElementById("rec-grid");
   if (!grid) return;
-  const ids = ["elevenlabs", "chatgpt", "claude", "midjourney", "cursor"];
+  const ids = ["cursor", "claude", "chatgpt", "midjourney", "gemini", "github-copilot", "perplexity", "runway", "elevenlabs", "suno"];
   grid.innerHTML = ids.map(id => {
     const t = window.__tools?.[id];
     if (!t) return "";
