@@ -1,995 +1,806 @@
 [
   {
-    "slug": "chatgpt-recipe",
-    "title": "ChatGPT Recipe Generator",
+    "slug": "chatgpt-lesson-plan",
+    "title": "ChatGPT Lesson Plan",
     "category": "Writing",
     "tool": "ChatGPT",
     "tags": [
-      "recipe",
-      "food"
+      "education"
     ],
-    "prompt": "Create a recipe using: [INGREDIENTS]. Include: name, prep/cook time, ingredients, step-by-step, serving size, nutrition, tips. Dietary: [VEGAN/KETO/NONE]."
+    "prompt": "Lesson plan for [SUBJECT] [GRADE]: objective, warm-up, main activity, group work, assessment, homework, materials. Duration: [MIN]."
   },
   {
-    "slug": "chatgpt-travel",
-    "title": "ChatGPT Travel Itinerary",
-    "category": "Productivity",
-    "tool": "ChatGPT",
-    "tags": [
-      "travel"
-    ],
-    "prompt": "[N]-day itinerary for [DESTINATION]: morning/afternoon/evening activities, costs, transport, restaurants, weather. Budget: [BACKPACKER/MID/LUXURY]."
-  },
-  {
-    "slug": "chatgpt-workout",
-    "title": "ChatGPT Workout Plan",
-    "category": "Productivity",
-    "tool": "ChatGPT",
-    "tags": [
-      "fitness"
-    ],
-    "prompt": "[N]-week plan for [GOAL]: exercises with sets/reps, rest, warm-up/cool-down, progression. Level: [BEGINNER/ADVANCED]. Equipment: [DESCRIBE]."
-  },
-  {
-    "slug": "chatgpt-meal-prep",
-    "title": "ChatGPT Meal Prep",
-    "category": "Productivity",
-    "tool": "ChatGPT",
-    "tags": [
-      "meal-prep"
-    ],
-    "prompt": "Weekly meal prep: 5 lunches + 5 dinners, grocery list by aisle, batch prep instructions, storage, reheating. Calories: [TARGET]. Budget: $[AMOUNT]."
-  },
-  {
-    "slug": "chatgpt-book-sum",
-    "title": "ChatGPT Book Summary",
+    "slug": "chatgpt-rubric-mk",
+    "title": "ChatGPT Rubric Maker",
     "category": "Writing",
     "tool": "ChatGPT",
     "tags": [
-      "book"
+      "education"
     ],
-    "prompt": "Summarize [TITLE + AUTHOR]: thesis (1 sentence), 5 key arguments, evidence, takeaways, critique, who should read it."
+    "prompt": "Rubric for [ASSIGNMENT]: 5 criteria scored 1-4 with descriptions. Content, organization, creativity, mechanics, effort. Assignment: [DESCRIBE]."
   },
   {
-    "slug": "chatgpt-language",
-    "title": "ChatGPT Language Lesson",
+    "slug": "chatgpt-quiz",
+    "title": "ChatGPT Quiz Generator",
     "category": "Writing",
     "tool": "ChatGPT",
     "tags": [
-      "language"
+      "education"
     ],
-    "prompt": "[LANGUAGE] lesson for [LEVEL]: 10 vocabulary words, grammar rule, exercises, dialogue, cultural note. Topic: [DESCRIBE]."
+    "prompt": "Quiz on [TOPIC]: 5 MC, 3 T/F, 2 short answer, 1 essay. Answer key with explanations. Level: [DESCRIBE]."
   },
   {
-    "slug": "chatgpt-finance",
-    "title": "ChatGPT Personal Finance",
-    "category": "Business",
-    "tool": "ChatGPT",
-    "tags": [
-      "finance"
-    ],
-    "prompt": "Finance plan: monthly budget, debt payoff, emergency fund, investment basics, tax accounts, 30-day challenge. Income: $[AMOUNT]. Goals: [DESCRIBE]."
-  },
-  {
-    "slug": "chatgpt-cover-letter",
-    "title": "ChatGPT Cover Letter",
+    "slug": "chatgpt-flashcard",
+    "title": "ChatGPT Flashcard Set",
     "category": "Writing",
     "tool": "ChatGPT",
     "tags": [
-      "cover-letter"
+      "education"
     ],
-    "prompt": "Cover letter for [JOB] at [COMPANY]: hook, relevant experience (2-3 examples), unique value, closing + CTA. Background: [DESCRIBE]."
+    "prompt": "20 flashcards for [TOPIC]: front (question), back (answer). Organized easy/medium/hard. Q/A pairs."
   },
   {
-    "slug": "chatgpt-negotiation",
-    "title": "ChatGPT Salary Negotiation",
-    "category": "Business",
+    "slug": "chatgpt-paren-teacher",
+    "title": "ChatGPT Parent Teacher Email",
+    "category": "Writing",
     "tool": "ChatGPT",
     "tags": [
-      "negotiation"
+      "education"
     ],
-    "prompt": "Salary negotiation script: opening, value proposition (data-backed), the ask, objection handling (3 scenarios), closing. Current: $[X]. Target: $[Y]."
+    "prompt": "Parent-teacher email: positive opening, observations, concern (data-based), suggested action, meeting invitation. Collaborative tone. Situation: [DESCRIBE]."
   },
   {
-    "slug": "chatgpt-date",
-    "title": "ChatGPT Date Ideas",
-    "category": "Productivity",
+    "slug": "chatgpt-study-guide",
+    "title": "ChatGPT Study Guide",
+    "category": "Writing",
     "tool": "ChatGPT",
     "tags": [
-      "dating"
+      "education"
     ],
-    "prompt": "10 date night ideas for [COUPLE TYPE]: activity, cost, location, what to bring, conversation starter. Budget: $[X]. Vibe: [DESCRIBE]."
+    "prompt": "Study guide for [EXAM]: key concepts (10), formulas/terms, practice questions (5), common mistakes (3), 7-day schedule. Level: [DESCRIBE]."
   },
   {
-    "slug": "chatgpt-habits",
-    "title": "ChatGPT Habit Tracker",
-    "category": "Productivity",
+    "slug": "chatgpt-diff-instruction",
+    "title": "ChatGPT Differentiated Instruction",
+    "category": "Writing",
     "tool": "ChatGPT",
     "tags": [
-      "habits"
+      "education"
     ],
-    "prompt": "Habit system: 5 keystone habits, tracking method, rewards, accountability, review cadence, failure recovery. Goals: [DESCRIBE]."
+    "prompt": "Differentiated lesson for [TOPIC]: 3 versions (below/at/above grade): objectives, materials, activities, assessment."
   },
   {
-    "slug": "chatgpt-gift",
-    "title": "ChatGPT Gift Guide",
-    "category": "Productivity",
+    "slug": "chatgpt-iep",
+    "title": "ChatGPT IEP Goals",
+    "category": "Writing",
     "tool": "ChatGPT",
     "tags": [
-      "gift"
+      "education"
     ],
-    "prompt": "10 gifts for [RECIPIENT]: why it fits, where to buy, personalization, backups. Budget: $[X]. Interests: [DESCRIBE]."
+    "prompt": "IEP goals for [NEED]: 3 measurable annual goals, each with objective, measurement, quarterly benchmarks, mastery criteria. Need: [DESCRIBE]."
   },
   {
-    "slug": "chatgpt-argument",
-    "title": "ChatGPT Argument Analysis",
+    "slug": "chatgpt-grant-edu",
+    "title": "ChatGPT Education Grant",
+    "category": "Writing",
+    "tool": "ChatGPT",
+    "tags": [
+      "education",
+      "grant"
+    ],
+    "prompt": "Education grant for [PROGRAM]: need, description, objectives (SMART), activities, budget, evaluation, sustainability. Amount: $[X]."
+  },
+  {
+    "slug": "chatgpt-pd",
+    "title": "ChatGPT Professional Development",
+    "category": "Writing",
+    "tool": "ChatGPT",
+    "tags": [
+      "education"
+    ],
+    "prompt": "PD plan for [TEACHERS]: topic, objectives, agenda (half-day), materials, activities, assessment, follow-up. Topic: [DESCRIBE]."
+  },
+  {
+    "slug": "chatgpt-syllabus",
+    "title": "ChatGPT Course Syllabus",
+    "category": "Writing",
+    "tool": "ChatGPT",
+    "tags": [
+      "education"
+    ],
+    "prompt": "Syllabus for [COURSE]: description, objectives, materials, 15-week schedule, grading, attendance, integrity. Course: [DESCRIBE]."
+  },
+  {
+    "slug": "chatgpt-sub-plans",
+    "title": "ChatGPT Substitute Plans",
+    "category": "Writing",
+    "tool": "ChatGPT",
+    "tags": [
+      "education"
+    ],
+    "prompt": "Sub plans for [GRADE/SUBJECT]: schedule, 3 lesson activities, behavior expectations, contacts, early finishers, materials. Duration: [N] days."
+  },
+  {
+    "slug": "chatgpt-reading-edu",
+    "title": "ChatGPT Curated Reading List",
     "category": "Research",
     "tool": "ChatGPT",
     "tags": [
-      "argument"
+      "education"
     ],
-    "prompt": "Analyze argument: main claim, premises, logical structure, fallacies, counterarguments, stronger version. Argument:\n\n[PASTE]"
+    "prompt": "10 books for [GRADE/TOPIC]: title, author, level, summary, why recommended, discussion questions. Theme: [DESCRIBE]."
   },
   {
-    "slug": "chatgpt-learning",
-    "title": "ChatGPT Learning Style",
-    "category": "Research",
+    "slug": "chatgpt-lab-report",
+    "title": "ChatGPT Lab Report Helper",
+    "category": "Writing",
     "tool": "ChatGPT",
     "tags": [
-      "learning"
+      "education",
+      "science"
     ],
-    "prompt": "Learning style analysis: visual/auditory/kinesthetic, best study methods, note-taking, memory techniques, schedule. Preferences: [DESCRIBE]."
+    "prompt": "Lab report for [EXPERIMENT]: hypothesis, materials, procedure, data table, analysis, conclusion, error discussion, future work."
   },
   {
-    "slug": "chatgpt-ats",
-    "title": "ChatGPT ATS Resume",
-    "category": "Business",
+    "slug": "chatgpt-project-rub",
+    "title": "ChatGPT Project Rubric",
+    "category": "Writing",
     "tool": "ChatGPT",
     "tags": [
-      "resume"
+      "education"
     ],
-    "prompt": "Optimize resume for ATS: keyword analysis vs job, format check, action verbs, quantify achievements, skills section. Job:\n[PASTE]\nResume:\n[PASTE]"
+    "prompt": "Project rubric: 6 criteria (content/creativity/presentation/research/collaboration/timeliness), each 1-4 with descriptors. Project: [DESCRIBE]."
   },
   {
-    "slug": "chatgpt-networking",
-    "title": "ChatGPT Networking Email",
-    "category": "Business",
-    "tool": "ChatGPT",
-    "tags": [
-      "networking"
-    ],
-    "prompt": "Networking email to [CONTACT TYPE]: personal opener, why reaching out, specific ask, value offer, clear CTA. Context: [DESCRIBE]."
-  },
-  {
-    "slug": "chatgpt-side-hustle",
-    "title": "ChatGPT Side Hustle",
-    "category": "Business",
-    "tool": "ChatGPT",
-    "tags": [
-      "side-hustle"
-    ],
-    "prompt": "10 side hustles: skills [DESCRIBE], time [HOURS/week], budget $[X], goal $[Y/month]. Each: startup cost, time to first $, scaling, risk."
-  },
-  {
-    "slug": "chatgpt-debate",
-    "title": "ChatGPT Debate Prep",
-    "category": "Research",
-    "tool": "ChatGPT",
-    "tags": [
-      "debate"
-    ],
-    "prompt": "Debate prep for [TOPIC], position [PRO/CON]: 3 strongest arguments each side, rebuttals, key data/sources, persuasive framing."
-  },
-  {
-    "slug": "chatgpt-reading-list",
-    "title": "ChatGPT Reading List",
-    "category": "Research",
-    "tool": "ChatGPT",
-    "tags": [
-      "reading"
-    ],
-    "prompt": "Reading list for [TOPIC]: 3 foundational, 3 intermediate, 3 advanced, 2 contrarian. Each: why it matters, key takeaway, reading order, time."
-  },
-  {
-    "slug": "chatgpt-smart-goals",
-    "title": "ChatGPT SMART Goals",
-    "category": "Productivity",
-    "tool": "ChatGPT",
-    "tags": [
-      "goals"
-    ],
-    "prompt": "SMART goals for [AREA]: specific, measurable, achievable, relevant, time-bound. Break into monthly milestones, weekly actions, daily habits."
-  },
-  {
-    "slug": "chatgpt-art-improve",
-    "title": "ChatGPT AI Art Prompt Improver",
-    "category": "Image",
-    "tool": "ChatGPT",
-    "tags": [
-      "art"
-    ],
-    "prompt": "Improve AI art prompt: add art style references, lighting/atmosphere, composition guidance, technical specs, 3 variations. Original:\n\n[PASTE]"
-  },
-  {
-    "slug": "chatgpt-comments",
-    "title": "ChatGPT Code Comments",
-    "category": "Coding",
-    "tool": "ChatGPT",
-    "tags": [
-      "comments"
-    ],
-    "prompt": "Add meaningful comments: function-level (what + why), complex logic, edge cases, TODOs. Avoid obvious comments.\n\n[PASTE CODE]"
-  },
-  {
-    "slug": "chatgpt-api-tests",
-    "title": "ChatGPT API Test Cases",
-    "category": "Coding",
-    "tool": "ChatGPT",
-    "tags": [
-      "api"
-    ],
-    "prompt": "API test cases for [ENDPOINT]: positive, negative, edge cases, performance (concurrent/large), security (auth/injection). Format: name, request, expected."
-  },
-  {
-    "slug": "chatgpt-pr-desc",
-    "title": "ChatGPT PR Description",
-    "category": "Coding",
-    "tool": "ChatGPT",
-    "tags": [
-      "github"
-    ],
-    "prompt": "PR description for [CHANGE]: title, summary, changes list, testing done, screenshots if UI, breaking changes, checklist. Changes:\n\n[DESCRIBE]"
-  },
-  {
-    "slug": "chatgpt-retro",
-    "title": "ChatGPT Sprint Retrospective",
-    "category": "Productivity",
-    "tool": "ChatGPT",
-    "tags": [
-      "agile"
-    ],
-    "prompt": "Sprint retrospective: what went well, improvements, commitments, action items (SMART+owner), team health (trust/speed/quality/comm). Sprint: [DESCRIBE]."
-  },
-  {
-    "slug": "chatgpt-content-audit",
-    "title": "ChatGPT Content Audit",
-    "category": "Business",
-    "tool": "ChatGPT",
-    "tags": [
-      "seo"
-    ],
-    "prompt": "Content audit: SEO check, readability, structure, completeness, accuracy, engagement (hooks/CTAs). Content:\n\n[PASTE]"
-  },
-  {
-    "slug": "chatgpt-difficult-talk",
-    "title": "ChatGPT Difficult Conversation",
-    "category": "Productivity",
-    "tool": "ChatGPT",
-    "tags": [
-      "communication"
-    ],
-    "prompt": "Prepare for difficult conversation with [PERSON]: my goal, their perspective, opening statement, key points, handling defensiveness, compromises. Situation: [DESCRIBE]."
-  },
-  {
-    "slug": "chatgpt-sleep",
-    "title": "ChatGPT Sleep Optimization",
-    "category": "Productivity",
-    "tool": "ChatGPT",
-    "tags": [
-      "sleep"
-    ],
-    "prompt": "Sleep optimization: ideal schedule, pre-sleep routine (90 min), bedroom checklist, disruptors to fix, nap strategy, tracking. Issues: [DESCRIBE]."
-  },
-  {
-    "slug": "chatgpt-digital-detox",
-    "title": "ChatGPT Digital Minimalism",
-    "category": "Productivity",
-    "tool": "ChatGPT",
-    "tags": [
-      "minimalism"
-    ],
-    "prompt": "Digital minimalism: apps to limit, notification audit, screen time goals, replacement activities, weekly review, social media strategy. Usage: [DESCRIBE]."
-  },
-  {
-    "slug": "chatgpt-event",
-    "title": "ChatGPT Event Planning",
-    "category": "Productivity",
-    "tool": "ChatGPT",
-    "tags": [
-      "event"
-    ],
-    "prompt": "Event checklist for [TYPE]: 8 weeks, 4 weeks, 1 week, day of, post-event. Each phase: tasks, owner, deadline, budget. Budget: $[AMOUNT]."
-  },
-  {
-    "slug": "claude-novel",
-    "title": "Claude Novel Chapter",
+    "slug": "claude-essay-fb",
+    "title": "Claude Essay Feedback",
     "category": "Writing",
     "tool": "Claude",
     "tags": [
-      "fiction"
+      "education"
     ],
-    "prompt": "Write next novel chapter: continue plot, maintain voices, advance conflict, sensory details, end with hook. Previous summary:\n\n[PASTE]\nNext: [DESCRIBE]"
+    "prompt": "Essay feedback: thesis clarity, argument structure, evidence, mechanics, originality. Specific suggestions. Score A-F.\n\n[PASTE ESSAY]"
   },
   {
-    "slug": "claude-screenplay",
-    "title": "Claude Screenplay Scene",
-    "category": "Writing",
-    "tool": "Claude",
-    "tags": [
-      "screenplay"
-    ],
-    "prompt": "[N]-page screenplay: scene heading, action description, character intros, dialogue (natural, subtext), parentheticals, transition. Scene: [DESCRIBE]."
-  },
-  {
-    "slug": "claude-poem",
-    "title": "Claude Poetry",
-    "category": "Writing",
-    "tool": "Claude",
-    "tags": [
-      "poetry"
-    ],
-    "prompt": "Poem about [TOPIC], form [FREE/SONNET/HAIKU]: vivid imagery, consistent meter, meaningful line breaks, emotional arc, memorable final line. Mood: [DESCRIBE]."
-  },
-  {
-    "slug": "claude-character",
-    "title": "Claude Character Bible",
-    "category": "Writing",
-    "tool": "Claude",
-    "tags": [
-      "character"
-    ],
-    "prompt": "Character bible: physical description, personality (3 traits + contradictions), backstory, motivations (want vs need), voice, relationships, arc. Genre: [DESCRIBE]."
-  },
-  {
-    "slug": "claude-worldbuilding",
-    "title": "Claude Worldbuilding",
-    "category": "Writing",
-    "tool": "Claude",
-    "tags": [
-      "worldbuilding"
-    ],
-    "prompt": "Fictional world: geography, magic/tech system (rules + limits), politics, economy, religion, daily life, history (3 events), conflicts. Genre: [DESCRIBE]."
-  },
-  {
-    "slug": "claude-abstract",
-    "title": "Claude Academic Abstract",
+    "slug": "claude-research-q",
+    "title": "Claude Research Question",
     "category": "Research",
     "tool": "Claude",
     "tags": [
       "academic"
     ],
-    "prompt": "Abstract: background (2 sentences), research gap, methodology, key findings, significance, keywords (5). 250 words max. Formal style. Paper:\n\n[PASTE]"
+    "prompt": "Refine research question: specific enough? answerable? novel? significant? 3 alternative formulations. Question: [DESCRIBE]."
   },
   {
-    "slug": "claude-policy-brief",
-    "title": "Claude Policy Brief",
+    "slug": "claude-citation",
+    "title": "Claude Citation Check",
     "category": "Research",
     "tool": "Claude",
     "tags": [
-      "policy"
+      "academic"
     ],
-    "prompt": "Policy brief: exec summary, issue background, current situation (data), policy options (2-3), recommendation (with evidence), implementation. 2 pages. Audience: [DESCRIBE]."
+    "prompt": "Check citations: format (APA/MLA/Chicago), missing info, DOI accuracy, in-text match, reference list completeness.\n\n[PASTE]"
   },
   {
-    "slug": "claude-grant-budget",
-    "title": "Claude Grant Budget",
+    "slug": "claude-peer-review",
+    "title": "Claude Peer Review",
+    "category": "Research",
+    "tool": "Claude",
+    "tags": [
+      "academic"
+    ],
+    "prompt": "Peer review: summary, strengths (3), weaknesses (3), minor issues, recommendation (accept/revise/reject), specific comments.\n\n[PASTE ABSTRACT]"
+  },
+  {
+    "slug": "claude-syllabus-d",
+    "title": "Claude Detailed Syllabus",
     "category": "Writing",
     "tool": "Claude",
     "tags": [
-      "grant"
+      "education"
     ],
-    "prompt": "Budget justification: personnel (roles/FTE/rates), equipment, materials, travel, indirect costs, total + alignment with goals. Budget: $[AMOUNT]."
+    "prompt": "Syllabus for [COURSE]: outcomes (5), weekly topics (15), readings, assignments, grading rubric, policies, accommodations. Course: [DESCRIBE]."
   },
   {
-    "slug": "claude-pep-talk",
-    "title": "Claude Pep Talk",
-    "category": "Productivity",
-    "tool": "Claude",
-    "tags": [
-      "motivation"
-    ],
-    "prompt": "Motivational message for [PERSON/TEAM] facing [CHALLENGE]: acknowledge difficulty, remind of past wins, reframe as opportunity, next step, confidence. 200 words."
-  },
-  {
-    "slug": "claude-editorial",
-    "title": "Claude Editorial Letter",
-    "category": "Writing",
-    "tool": "Claude",
-    "tags": [
-      "editing"
-    ],
-    "prompt": "Editorial letter: overall impression, big-picture issues (structure/pacing/character), chapter notes, recurring line issues, revision suggestions, encouragement. Manuscript:\n\n[PASTE]"
-  },
-  {
-    "slug": "claude-translation-review",
-    "title": "Claude Translation Review",
-    "category": "Writing",
-    "tool": "Claude",
-    "tags": [
-      "translation"
-    ],
-    "prompt": "Review translation [SOURCE] to [TARGET]: accuracy, fluency, cultural appropriateness, consistency, style match, specific improvements. Original:\n[PASTE]\nTranslation:\n[PASTE]"
-  },
-  {
-    "slug": "claude-pitch-script",
-    "title": "Claude Pitch Script",
+    "slug": "any-mvp-spec",
+    "title": "AI MVP Spec",
     "category": "Business",
-    "tool": "Claude",
+    "tool": "Any",
     "tags": [
-      "pitch"
+      "mvp"
     ],
-    "prompt": "Pitch script for [STARTUP]: problem(30s), solution(30s), market(30s), traction(30s), model(30s), team(15s), ask(15s). 3 min total. Data-driven."
+    "prompt": "MVP spec for [PRODUCT]: core problem, minimum features (3-5), what to exclude, success criteria, 4-week timeline, tech stack, validation metrics."
   },
   {
-    "slug": "claude-strategy-memo",
-    "title": "Claude Strategy Memo",
+    "slug": "any-gtm",
+    "title": "AI Go-to-Market Strategy",
     "category": "Business",
-    "tool": "Claude",
+    "tool": "Any",
     "tags": [
-      "strategy"
+      "gtm"
     ],
-    "prompt": "Strategy memo: market context, current position (data), options (3 with investment/return), recommended path, resources, risks, 12-month milestones. Company: [DESCRIBE]."
+    "prompt": "GTM for [PRODUCT]: target segment, positioning, pricing, channels (3), 12-week timeline, marketing, sales process, metrics."
   },
   {
-    "slug": "claude-crisis-plan",
-    "title": "Claude Crisis Plan",
+    "slug": "any-unit-eco",
+    "title": "AI Unit Economics",
     "category": "Business",
-    "tool": "Claude",
+    "tool": "Any",
     "tags": [
-      "crisis"
+      "finance"
     ],
-    "prompt": "Crisis response plan: severity levels, response team, communication protocol, decision tree, resources, recovery steps, post-crisis review. Scenario: [DESCRIBE]."
+    "prompt": "Unit economics: revenue/user, CAC, LTV, gross margin, payback, contribution margin, break-even, sensitivity. Product: [DESCRIBE]."
   },
   {
-    "slug": "claude-methodology",
-    "title": "Claude Research Methodology",
-    "category": "Research",
-    "tool": "Claude",
+    "slug": "any-churn-pred",
+    "title": "AI Churn Prediction",
+    "category": "Business",
+    "tool": "Any",
     "tags": [
-      "methodology"
+      "churn"
     ],
-    "prompt": "Research methodology for [QUESTION]: approach, data collection, sample, variables, analysis, validity, ethics, limitations. Question: [DESCRIBE]."
+    "prompt": "Churn framework: definition, predictors (10), data sources, model, alert thresholds, intervention playbook, measurement."
   },
   {
-    "slug": "claude-arch-doc",
-    "title": "Claude Architecture Document",
+    "slug": "any-nps",
+    "title": "AI NPS Analysis",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "nps"
+    ],
+    "prompt": "NPS: score breakdown, themes by segment, detractor root causes, promoter drivers, action plan, follow-up survey."
+  },
+  {
+    "slug": "any-segment",
+    "title": "AI Customer Segmentation",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "segmentation"
+    ],
+    "prompt": "Segmentation: criteria, 4-6 segments, each (size/value/needs/channels), target segment, strategy per segment."
+  },
+  {
+    "slug": "any-vendor-rfp",
+    "title": "AI Vendor RFP",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "vendor"
+    ],
+    "prompt": "RFP for [CATEGORY]: requirements (must/should/could), evaluation criteria + weights, timeline, budget, contract terms, submission format."
+  },
+  {
+    "slug": "any-sla",
+    "title": "AI SLA Template",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "sla"
+    ],
+    "prompt": "SLA for [SERVICE]: description, uptime target, response times (by severity), escalation, reporting, credits/penalties, exclusions."
+  },
+  {
+    "slug": "any-dr",
+    "title": "AI Disaster Recovery",
+    "category": "Business",
+    "tool": "Any",
+    "tags": [
+      "disaster"
+    ],
+    "prompt": "DR plan: RTO/RPO, backup strategy, failover, data recovery, communication, testing schedule, roles + contacts. System: [DESCRIBE]."
+  },
+  {
+    "slug": "any-cloud-mig",
+    "title": "AI Cloud Migration",
     "category": "Coding",
-    "tool": "Claude",
+    "tool": "Any",
     "tags": [
-      "architecture"
+      "cloud"
     ],
-    "prompt": "Architecture doc: system overview (ASCII diagram), components, data flow, tech choices (rationale), scalability, security, monitoring, limitations. System: [DESCRIBE]."
+    "prompt": "Cloud migration: current state, target architecture, strategy (lift/shift/refactor), phased timeline, risks, cost comparison, rollback."
   },
   {
-    "slug": "claude-tech-eval",
-    "title": "Claude Technical Evaluation",
+    "slug": "any-react-pat",
+    "title": "AI React Patterns",
     "category": "Coding",
-    "tool": "Claude",
+    "tool": "Any",
     "tags": [
-      "evaluation"
+      "react"
     ],
-    "prompt": "Evaluate solution: requirements coverage, architecture, security, performance, maintainability, cost, risk, recommendation (adopt/modify/reject). Solution:\n\n[PASTE]"
+    "prompt": "React patterns for [USE CASE]: which pattern (compound/hooks/render props/context), why, code example, trade-offs, when NOT to use."
   },
   {
-    "slug": "claude-due-diligence",
-    "title": "Claude Due Diligence",
-    "category": "Business",
-    "tool": "Claude",
-    "tags": [
-      "due-diligence"
-    ],
-    "prompt": "Due diligence: financials, market position, technology, team, legal/IP, customer concentration, growth, risks, valuation, recommendation. Data:\n\n[PASTE]"
-  },
-  {
-    "slug": "claude-process-design",
-    "title": "Claude Process Design",
-    "category": "Productivity",
-    "tool": "Claude",
-    "tags": [
-      "process"
-    ],
-    "prompt": "Process design: process map, inputs/outputs, RACI, quality gates, metrics (lead/cycle/throughput), failure modes, automation opportunities. Workflow: [DESCRIBE]."
-  },
-  {
-    "slug": "claude-changelog",
-    "title": "Claude Changelog Generator",
+    "slug": "any-async-js",
+    "title": "AI Async JavaScript",
     "category": "Coding",
-    "tool": "Claude",
-    "tags": [
-      "changelog"
-    ],
-    "prompt": "Changelog from commits: group by Added/Changed/Fixed/Removed, user-facing descriptions, breaking changes highlighted, migration notes. Commits:\n\n[PASTE]"
-  },
-  {
-    "slug": "any-color",
-    "title": "AI Color Palette",
-    "category": "Image",
     "tool": "Any",
     "tags": [
-      "color",
-      "design"
+      "javascript"
     ],
-    "prompt": "Color palette for [PROJECT]: primary, 2 secondary, 3 accents, backgrounds (light/dark), text colors, usage guidelines, contrast ratios. Mood: [DESCRIBE]."
+    "prompt": "Async patterns: promises vs async/await, error handling, parallel, rate limiting, cancellation, retry. Scenario: [DESCRIBE]."
   },
   {
-    "slug": "any-font",
-    "title": "AI Font Pairing",
-    "category": "Image",
+    "slug": "any-python-bp",
+    "title": "AI Python Best Practices",
+    "category": "Coding",
     "tool": "Any",
     "tags": [
-      "font"
+      "python"
     ],
-    "prompt": "Font pairings for [PROJECT]: heading font, body font, accent, weights, line-height, Google Fonts alternatives. Style: [MODERN/CLASSIC/MINIMAL]."
+    "prompt": "Python best practices: type hints, error handling, logging, testing, performance, documentation, packaging. Task: [DESCRIBE]."
   },
   {
-    "slug": "any-naming",
-    "title": "AI Brand Naming",
-    "category": "Business",
+    "slug": "any-sql-schema",
+    "title": "AI SQL Schema Design",
+    "category": "Coding",
     "tool": "Any",
     "tags": [
-      "branding"
+      "sql"
     ],
-    "prompt": "20 brand names for [PRODUCT]: 5 descriptive, 5 abstract, 5 compound, 5 evocative. Each: pronunciation, meaning, domain suggestion. Industry: [DESCRIBE]."
+    "prompt": "SQL schema for [APP]: tables + columns, relationships, indexes, constraints, views, stored procedures, migration. App: [DESCRIBE]."
   },
   {
-    "slug": "any-tagline",
-    "title": "AI Tagline Generator",
-    "category": "Business",
+    "slug": "any-testing-strat",
+    "title": "AI Testing Strategy",
+    "category": "Coding",
     "tool": "Any",
     "tags": [
-      "tagline"
+      "testing"
     ],
-    "prompt": "15 taglines for [BRAND]: 5 benefit, 5 emotional, 5 clever. Each: why it works, audience appeal, cultural issues. Personality: [DESCRIBE]."
+    "prompt": "Testing strategy: unit (framework, coverage), integration, E2E, manual, CI integration, flaky test handling. Project: [DESCRIBE]."
   },
   {
-    "slug": "any-mission",
-    "title": "AI Mission Statement",
-    "category": "Business",
+    "slug": "any-review-checklist",
+    "title": "AI Code Review Checklist",
+    "category": "Coding",
     "tool": "Any",
     "tags": [
-      "mission"
+      "code-review"
     ],
-    "prompt": "5 mission statements for [ORG]: under 25 words, clear + inspiring, action-oriented, different from competitors. Purpose: [DESCRIBE]."
+    "prompt": "Code review checklist: functionality, design, complexity, tests, naming, comments, security, performance. Project: [DESCRIBE]."
   },
   {
-    "slug": "any-value-prop",
-    "title": "AI Value Proposition",
-    "category": "Business",
+    "slug": "any-git-strat",
+    "title": "AI Git Strategy",
+    "category": "Coding",
     "tool": "Any",
     "tags": [
-      "positioning"
+      "git"
     ],
-    "prompt": "3 value props for [PRODUCT]: target customer, problem, unique benefit, why better, proof. For [target], [product] is [category] that [benefit] because [reason]."
+    "prompt": "Git strategy: branching model (GitHub Flow/Trunk/GitFlow), PR process, review requirements, merge rules, release, hotfix. Team: [N]."
   },
   {
-    "slug": "any-swot-q",
-    "title": "AI Quick SWOT",
-    "category": "Business",
+    "slug": "any-deploy-strat",
+    "title": "AI Deployment Strategy",
+    "category": "Coding",
     "tool": "Any",
     "tags": [
-      "swot"
+      "deployment"
     ],
-    "prompt": "Quick SWOT: 3 strengths, 3 weaknesses, 3 opportunities, 3 threats. Each 1 sentence, actionable. Strategic insight from the 12 points."
+    "prompt": "Deployment: blue-green, canary, rolling, feature flags, rollback, health checks, traffic splitting, monitoring. App: [DESCRIBE]."
   },
   {
-    "slug": "any-pestle",
-    "title": "AI PESTLE Analysis",
-    "category": "Business",
+    "slug": "any-tech-debt",
+    "title": "AI Technical Debt",
+    "category": "Coding",
     "tool": "Any",
     "tags": [
-      "pestle"
+      "tech-debt"
     ],
-    "prompt": "PESTLE for [BUSINESS]: Political, Economic, Social, Technological, Legal, Environmental. Each: 3 current, 1 emerging, 1 impact. Top 3 to monitor."
+    "prompt": "Tech debt: categories (code/arch/test/deps), each item (impact/effort/risk), prioritize, 90-day plan, prevention."
   },
   {
-    "slug": "any-porter",
-    "title": "AI Porter Five Forces",
-    "category": "Business",
+    "slug": "any-load-test",
+    "title": "AI Load Testing",
+    "category": "Coding",
     "tool": "Any",
     "tags": [
-      "porter"
+      "load-testing"
     ],
-    "prompt": "Five Forces for [INDUSTRY]: rivalry, new entrants, supplier power, buyer power, substitutes. Each: high/med/low + why. Industry attractiveness + recommendations."
+    "prompt": "Load testing: scenarios (normal/peak/spike), user journeys, concurrent users, ramp-up, duration, metrics, tools, pass criteria."
   },
   {
-    "slug": "any-bcg",
-    "title": "AI BCG Matrix",
-    "category": "Business",
-    "tool": "Any",
-    "tags": [
-      "bcg"
-    ],
-    "prompt": "BCG matrix for [PRODUCTS]: Stars, Cash cows, Question marks, Dogs. Each: strategy (invest/harvest/divest). Products: [LIST]."
-  },
-  {
-    "slug": "any-persona",
-    "title": "AI User Persona",
-    "category": "Business",
-    "tool": "Any",
-    "tags": [
-      "persona"
-    ],
-    "prompt": "User persona for [PRODUCT]: name, demographics, goals(3), frustrations(3), behaviors, tech comfort, channels, buying triggers, quote. Data: [DESCRIBE]."
-  },
-  {
-    "slug": "any-rice",
-    "title": "AI Feature Prioritization",
-    "category": "Business",
-    "tool": "Any",
-    "tags": [
-      "prioritization"
-    ],
-    "prompt": "RICE prioritization: Reach, Impact(1-3), Confidence(0-100%), Effort(weeks). Score = R*I*C/E. Rank all. Features:\n\n[PASTE LIST]"
-  },
-  {
-    "slug": "any-experiment",
-    "title": "AI Experiment Design",
-    "category": "Data",
-    "tool": "Any",
-    "tags": [
-      "experiment"
-    ],
-    "prompt": "Experiment for [HYPOTHESIS]: variables, control, sample size (power), duration, randomization, metrics, success/failure criteria. Hypothesis: [DESCRIBE]."
-  },
-  {
-    "slug": "any-ab-analysis",
-    "title": "AI A/B Test Analysis",
-    "category": "Data",
-    "tool": "Any",
-    "tags": [
-      "ab-testing"
-    ],
-    "prompt": "Analyze A/B test: significance (p-value), effect size, confidence interval, sample adequacy, segments, practical vs statistical significance, recommendation. Data:\n\n[PASTE]"
-  },
-  {
-    "slug": "any-survey",
-    "title": "AI Survey Design",
-    "category": "Research",
-    "tool": "Any",
-    "tags": [
-      "survey"
-    ],
-    "prompt": "Survey for [GOAL]: screening, 10-15 questions (mix types), skip logic, demographics, open-ended, completion time, analysis plan. Target: [DESCRIBE]."
-  },
-  {
-    "slug": "any-comp-matrix",
-    "title": "AI Competitor Matrix",
-    "category": "Business",
-    "tool": "Any",
-    "tags": [
-      "competitor"
-    ],
-    "prompt": "Competitor matrix: 5 competitors, 8 criteria, score (1-5), weighted ranking, your position, gaps to exploit, threats. Industry: [DESCRIBE]."
-  },
-  {
-    "slug": "any-market-brief",
-    "title": "AI Market Research Brief",
-    "category": "Business",
-    "tool": "Any",
-    "tags": [
-      "market"
-    ],
-    "prompt": "Market brief: objectives(3), segments, key questions(10), methodology (qual+quant), sample, timeline, budget, deliverables, decision it informs."
-  },
-  {
-    "slug": "any-pricing-exp",
-    "title": "AI Pricing Experiment",
-    "category": "Business",
-    "tool": "Any",
-    "tags": [
-      "pricing"
-    ],
-    "prompt": "Pricing experiment: hypothesis, 3 variants, traffic split, metrics (conversion/ARPU/churn), duration, segments, guardrails, success criteria, rollout."
-  },
-  {
-    "slug": "any-cal-30",
-    "title": "AI 30-Day Content Calendar",
-    "category": "Business",
-    "tool": "Any",
-    "tags": [
-      "content"
-    ],
-    "prompt": "30-day calendar for [BRAND]: platform, content type (edu/entertain/promo), topic, format, CTA. 40% edu, 30% entertain, 20% promo, 10% UGC."
-  },
-  {
-    "slug": "any-seo-audit",
-    "title": "AI SEO Audit",
-    "category": "Business",
-    "tool": "Any",
-    "tags": [
-      "seo"
-    ],
-    "prompt": "SEO audit: title tag (60 chars), meta (160), H1/H2, alt text, internal links, page speed, mobile, schema, content quality. Page: [DESCRIBE]."
-  },
-  {
-    "slug": "any-keywords",
-    "title": "AI Keyword Strategy",
-    "category": "Business",
-    "tool": "Any",
-    "tags": [
-      "keywords"
-    ],
-    "prompt": "Keyword strategy for [TOPIC]: 10 primary (volume+difficulty), 20 long-tail, PAA questions, content mapping, internal linking, priority order."
-  },
-  {
-    "slug": "any-link-building",
-    "title": "AI Link Building",
-    "category": "Business",
-    "tool": "Any",
-    "tags": [
-      "link-building"
-    ],
-    "prompt": "Link building for [SITE]: 10 target sites, outreach angle, content assets, guest post topics, resource pages, broken links, timeline. Site: [DESCRIBE]."
-  },
-  {
-    "slug": "any-social-strat",
-    "title": "AI Social Strategy",
-    "category": "Business",
-    "tool": "Any",
-    "tags": [
-      "social"
-    ],
-    "prompt": "Social strategy for [BRAND]: 3 platforms, 4 content pillars, posting frequency, content types, engagement plan, growth tactics, metrics."
-  },
-  {
-    "slug": "any-email-strat",
-    "title": "AI Email Strategy",
-    "category": "Business",
-    "tool": "Any",
-    "tags": [
-      "email"
-    ],
-    "prompt": "Email strategy: types (welcome/promo/content/transactional), segmentation, automation flows, frequency, subject line formula, metrics. Business: [DESCRIBE]."
-  },
-  {
-    "slug": "any-customer-int",
-    "title": "AI Customer Interview",
-    "category": "Research",
-    "tool": "Any",
-    "tags": [
-      "interview"
-    ],
-    "prompt": "Customer interview guide: opening, background, current behavior, problem exploration, solution feedback, closing. Each: why asking + what to listen for."
-  },
-  {
-    "slug": "any-pitch-deck",
-    "title": "AI Pitch Deck Outline",
-    "category": "Business",
-    "tool": "Any",
-    "tags": [
-      "pitch"
-    ],
-    "prompt": "Pitch deck: title, problem, solution, market, product, traction, model, competition, team, financials, ask. Each slide: key message + visual. 10-12 slides."
-  },
-  {
-    "slug": "any-financial-model",
-    "title": "AI Financial Model",
-    "category": "Business",
-    "tool": "Any",
-    "tags": [
-      "financial"
-    ],
-    "prompt": "Financial model: revenue assumptions, cost structure, 12-month P&L, cash flow, break-even, sensitivity (best/base/worst), metrics (MRR/CAC/LTV/burn)."
-  },
-  {
-    "slug": "any-investor-update",
-    "title": "AI Investor Update",
-    "category": "Business",
-    "tool": "Any",
-    "tags": [
-      "investor"
-    ],
-    "prompt": "Monthly investor update: one-sentence summary, metrics (MRR/growth/burn/runway), wins, challenges, asks, next month focus. Honest, concise, data-driven."
-  },
-  {
-    "slug": "any-hiring-process",
-    "title": "AI Hiring Process",
-    "category": "Business",
-    "tool": "Any",
-    "tags": [
-      "hiring"
-    ],
-    "prompt": "Hiring process for [ROLE]: job description, sourcing, screening, interviews (3-4), assessment, decision criteria, onboarding. Level: [DESCRIBE]."
-  },
-  {
-    "slug": "any-perf-review",
-    "title": "AI Performance Review",
-    "category": "Business",
-    "tool": "Any",
-    "tags": [
-      "performance"
-    ],
-    "prompt": "Performance review template: self-assessment, manager assessment (5 dimensions), 360 feedback, goal review, development plan, rating scale. Role: [DESCRIBE]."
-  },
-  {
-    "slug": "any-training-plan",
-    "title": "AI Training Plan",
+    "slug": "any-project-charter",
+    "title": "AI Project Charter",
     "category": "Productivity",
     "tool": "Any",
     "tags": [
-      "training"
+      "project"
     ],
-    "prompt": "Training plan for [SKILL]: objectives(5), prerequisites, 8-week schedule, resources (free), exercises, assessment, milestone. Level: [BEGINNER/INTERMEDIATE]."
+    "prompt": "Project charter: name, description, goals (3), scope (in/out), timeline, budget, roles, stakeholders, risks, success criteria."
   },
   {
-    "slug": "any-coding-roadmap",
-    "title": "AI Coding Roadmap",
-    "category": "Coding",
+    "slug": "any-wbs",
+    "title": "AI Work Breakdown",
+    "category": "Productivity",
     "tool": "Any",
     "tags": [
-      "coding"
+      "wbs"
     ],
-    "prompt": "Coding roadmap for [LANGUAGE]: fundamentals (wk1-2), core (wk3-4), projects (wk5-6), advanced (wk7-8), portfolio. Each: topics, resources, mini-project."
+    "prompt": "WBS for [PROJECT]: phases with tasks. Each: ID, name, duration, dependencies, owner, deliverable. Critical path + milestones."
   },
   {
-    "slug": "any-api-guide",
-    "title": "AI API Design Guide",
-    "category": "Coding",
+    "slug": "any-risk-reg",
+    "title": "AI Risk Register",
+    "category": "Productivity",
     "tool": "Any",
     "tags": [
-      "api"
+      "risk"
     ],
-    "prompt": "API design: resource naming, HTTP methods, status codes, pagination, filtering, versioning, auth, rate limiting, error format, documentation."
+    "prompt": "Risk register: 10 risks, each: description, probability (1-5), impact (1-5), score, mitigation, owner, status, trigger. Table format."
   },
   {
-    "slug": "any-db-design",
-    "title": "AI Database Design",
-    "category": "Coding",
+    "slug": "any-comms-plan",
+    "title": "AI Comms Plan",
+    "category": "Productivity",
     "tool": "Any",
     "tags": [
-      "database"
+      "communications"
     ],
-    "prompt": "Database schema for [APP]: entities + relationships, table definitions, indexes, normalization check, denormalization, migration. DB: [POSTGRES/MONGO]."
+    "prompt": "Comms plan: stakeholders + info needs, message matrix, channels, frequency, owner, escalation, feedback mechanism."
   },
   {
-    "slug": "any-cicd",
-    "title": "AI CI/CD Pipeline",
-    "category": "Coding",
+    "slug": "any-lessons",
+    "title": "AI Lessons Learned",
+    "category": "Productivity",
     "tool": "Any",
     "tags": [
-      "ci-cd"
+      "lessons"
     ],
-    "prompt": "CI/CD for [PROJECT]: source control, build, test (unit/integration/e2e), security scan, staging, approval, production, rollback. Platform: [GITHUB/GITLAB]."
+    "prompt": "Lessons learned: what went well (5), improvements (5), insights (3), action items, knowledge transfer, process improvements."
   },
   {
-    "slug": "any-microservice",
-    "title": "AI Microservice Design",
-    "category": "Coding",
+    "slug": "any-decision-log",
+    "title": "AI Decision Log",
+    "category": "Productivity",
     "tool": "Any",
     "tags": [
-      "microservice"
+      "decisions"
     ],
-    "prompt": "Microservice for [CAPABILITY]: boundary, API contract, data ownership, communication, discovery, health, observability, scaling."
+    "prompt": "Decision log: date, decision, context, options, rationale, decided by, reversible?, review date. Table format."
   },
   {
-    "slug": "any-incident-plan",
-    "title": "AI Incident Response",
-    "category": "Coding",
+    "slug": "any-timezone-plan",
+    "title": "AI Time Zone Planner",
+    "category": "Productivity",
     "tool": "Any",
     "tags": [
-      "incident"
+      "timezone"
     ],
-    "prompt": "Incident response: severity levels (SEV1-4), on-call, detection, response steps, communication (internal/external), postmortem template, runbooks."
+    "prompt": "Meeting across time zones: participants + locations, converter, best overlap windows, rotation, async alternative, recording policy."
   },
   {
-    "slug": "any-dataviz",
-    "title": "AI Data Viz Design",
-    "category": "Data",
+    "slug": "any-kickoff",
+    "title": "AI Project Kickoff",
+    "category": "Productivity",
     "tool": "Any",
     "tags": [
-      "visualization"
+      "kickoff"
     ],
-    "prompt": "Best viz for [DATA]: data type, recommended chart + why, alternatives, color strategy (accessible), annotations, interactivity, common mistakes."
+    "prompt": "Kickoff agenda: welcome+intros (10m), project overview (15m), goals+scope (15m), roles (10m), timeline (10m), Q&A (20m)."
   },
   {
-    "slug": "any-dashboard-metrics",
-    "title": "AI Dashboard Metrics",
-    "category": "Data",
+    "slug": "any-impact-effort",
+    "title": "AI Impact Effort Matrix",
+    "category": "Productivity",
     "tool": "Any",
     "tags": [
-      "dashboard"
+      "matrix"
     ],
-    "prompt": "Dashboard metrics for [USE CASE]: North Star, leading(3-5), lagging(3-5), guardrails(3). Each: definition, formula, source, frequency, target, owner. Alerts."
+    "prompt": "Impact/effort: list tasks, score impact (1-5), score effort (1-5), plot matrix, quick wins, big bets, fill-ins, time sinks."
   },
   {
-    "slug": "any-data-quality",
-    "title": "AI Data Quality",
-    "category": "Data",
+    "slug": "any-runbook",
+    "title": "AI Runbook Template",
+    "category": "Productivity",
     "tool": "Any",
     "tags": [
-      "data-quality"
+      "runbook"
     ],
-    "prompt": "Data quality: completeness, accuracy, consistency, timeliness, validity, uniqueness. Each: measurement, threshold, alert. Dataset: [DESCRIBE]."
+    "prompt": "Runbook for [PROCESS]: overview, prerequisites, step-by-step, common issues + fixes, escalation, verification, rollback."
   },
   {
-    "slug": "any-ml-pipeline",
-    "title": "AI ML Pipeline",
-    "category": "Data",
+    "slug": "any-llm-eval",
+    "title": "AI LLM Evaluation",
+    "category": "AI",
     "tool": "Any",
     "tags": [
-      "ml"
+      "llm"
     ],
-    "prompt": "ML pipeline for [MODEL]: ingestion, preprocessing, feature engineering, training, validation, deployment, monitoring (drift), retraining. Frequency: [BATCH/REAL-TIME]."
+    "prompt": "Evaluate LLM for [USE CASE]: benchmarks, cost/1M tokens, latency, context window, fine-tuning, safety, recommendation."
   },
   {
-    "slug": "any-agent-memory",
-    "title": "AI Agent Memory",
+    "slug": "any-prompt-test",
+    "title": "AI Prompt Testing",
+    "category": "AI",
+    "tool": "Any",
+    "tags": [
+      "prompt"
+    ],
+    "prompt": "Test prompt: clarity, completeness, bias, edge cases, 10 test inputs, scoring rubric. Prompt: [PASTE]."
+  },
+  {
+    "slug": "any-rag-eval",
+    "title": "AI RAG Evaluation",
+    "category": "AI",
+    "tool": "Any",
+    "tags": [
+      "rag"
+    ],
+    "prompt": "Evaluate RAG: retrieval accuracy, faithfulness, answer relevance, context recall, context precision, latency."
+  },
+  {
+    "slug": "any-agent-orch",
+    "title": "AI Agent Orchestration",
     "category": "AI",
     "tool": "Any",
     "tags": [
       "agent"
     ],
-    "prompt": "Memory architecture: short-term, long-term, episodic, semantic. Storage (vector/relational/graph), retrieval, forgetting. Agent: [DESCRIBE]."
+    "prompt": "Agent orchestration: roles (3), task distribution, communication, state management, error recovery, human checkpoints, output format."
   },
   {
-    "slug": "any-multi-agent-sys",
-    "title": "AI Multi-Agent System",
+    "slug": "any-embedding",
+    "title": "AI Embedding Strategy",
     "category": "AI",
     "tool": "Any",
     "tags": [
-      "multi-agent"
+      "embedding"
     ],
-    "prompt": "Multi-agent system: roles, communication, coordination (sequential/parallel/hierarchical), shared state, conflict resolution, failure, human-in-loop. Framework: [DESCRIBE]."
+    "prompt": "Embedding strategy: model, dimension, chunk size, index type (HNSW/IVF), query (hybrid), re-ranking, cost. Use case: [DESCRIBE]."
   },
   {
-    "slug": "any-tool-design",
-    "title": "AI Tool Design",
+    "slug": "any-finetune-data",
+    "title": "AI Fine-Tuning Data Prep",
     "category": "AI",
     "tool": "Any",
     "tags": [
-      "tool"
+      "fine-tuning"
     ],
-    "prompt": "Tool for [AGENT]: name, input schema, output schema, error handling, rate limiting, auth, caching, testing, documentation. Framework: [OPENAI/MCP]."
+    "prompt": "Data prep for fine-tuning: format, cleaning, splits, balance, augmentation, quality criteria, size. Model: [DESCRIBE]."
   },
   {
-    "slug": "any-prompt-chain-d",
-    "title": "AI Prompt Chain",
+    "slug": "any-inference-opt",
+    "title": "AI Inference Optimization",
     "category": "AI",
     "tool": "Any",
     "tags": [
-      "prompt",
-      "chain"
+      "inference"
     ],
-    "prompt": "Prompt chain for [TASK]: decompose into steps, prompt per step (input/output spec), quality gates, retry/fallback, context management, human review."
+    "prompt": "Optimize inference: quantization (INT8/INT4), distillation, batching, caching, speculative decoding, hardware, cost vs latency."
   },
   {
-    "slug": "any-eval-data",
-    "title": "AI Eval Dataset Builder",
-    "category": "AI",
-    "tool": "Any",
-    "tags": [
-      "evaluation"
-    ],
-    "prompt": "Eval dataset for [SYSTEM]: categories (accuracy/safety/helpfulness/edge), 20 test cases each, expected outputs, scoring (0-5), adversarial, bias. System: [DESCRIBE]."
-  },
-  {
-    "slug": "any-safety-policy",
-    "title": "AI Safety Policy",
+    "slug": "any-safety-cls",
+    "title": "AI Safety Classifier",
     "category": "AI",
     "tool": "Any",
     "tags": [
       "safety"
     ],
-    "prompt": "Safety policy: use cases (allowed/prohibited), data handling, human oversight, bias testing, incident response, transparency, audit, training. Org: [DESCRIBE]."
+    "prompt": "Safety classifier: categories (toxicity/PII/harmful/legal), training data, model choice, threshold, human review, monitoring."
   },
   {
-    "slug": "any-product-spec",
-    "title": "AI Product Spec",
+    "slug": "any-conversation-fl",
+    "title": "AI Conversation Flow",
+    "category": "AI",
+    "tool": "Any",
+    "tags": [
+      "conversation"
+    ],
+    "prompt": "Conversation flow: intent map, slot filling, context management, fallback, escalation, error recovery, analytics. Chatbot: [DESCRIBE]."
+  },
+  {
+    "slug": "any-token-opt",
+    "title": "AI Token Optimization",
+    "category": "AI",
+    "tool": "Any",
+    "tags": [
+      "token"
+    ],
+    "prompt": "Token optimization: prompt compression, context pruning, caching, model routing, batch API, streaming, cost estimate."
+  },
+  {
+    "slug": "any-yt-script",
+    "title": "AI YouTube Script",
+    "category": "Video",
+    "tool": "Any",
+    "tags": [
+      "youtube"
+    ],
+    "prompt": "YouTube script [TOPIC] [MIN] min: hook (15s), intro (30s), content sections with timestamps, B-roll, sponsored segment, outro+CTA."
+  },
+  {
+    "slug": "any-tiktok-script",
+    "title": "AI TikTok Script",
+    "category": "Video",
+    "tool": "Any",
+    "tags": [
+      "tiktok"
+    ],
+    "prompt": "TikTok 30-sec script [TOPIC]: hook (3s), value, twist, CTA. Visual cues + text overlay. Trending audio suggestion."
+  },
+  {
+    "slug": "any-podcast-plan",
+    "title": "AI Podcast Plan",
+    "category": "Audio",
+    "tool": "Any",
+    "tags": [
+      "podcast"
+    ],
+    "prompt": "Podcast plan: concept, 10 episodes, format (interview/solo/panel), length, guest wishlist, equipment, distribution, monetization."
+  },
+  {
+    "slug": "any-thumbnail",
+    "title": "AI Thumbnail Concept",
+    "category": "Image",
+    "tool": "Any",
+    "tags": [
+      "thumbnail"
+    ],
+    "prompt": "YouTube thumbnail [TOPIC]: visual idea, text (5 words), color scheme, expression, background, layout, 3 variations."
+  },
+  {
+    "slug": "any-instagram-grid",
+    "title": "AI Instagram Grid Plan",
+    "category": "Image",
+    "tool": "Any",
+    "tags": [
+      "instagram"
+    ],
+    "prompt": "Instagram grid [BRAND]: aesthetic, 9-post cycle, mix (quotes/product/lifestyle/UGC/edu), color rotation, caption + hashtag strategy."
+  },
+  {
+    "slug": "any-video-edit",
+    "title": "AI Video Edit Plan",
+    "category": "Video",
+    "tool": "Any",
+    "tags": [
+      "video-editing"
+    ],
+    "prompt": "Video edit plan for [RAW FOOTAGE]: 1) Cut list (what to keep/remove), 2) Sequence, 3) Transitions, 4) Music, 5) Color, 6) Text, 7) Export specs."
+  },
+  {
+    "slug": "any-podcast-edit",
+    "title": "AI Podcast Edit Guide",
+    "category": "Audio",
+    "tool": "Any",
+    "tags": [
+      "podcast-edit"
+    ],
+    "prompt": "Podcast edit guide: 1) Noise removal, 2) Volume leveling, 3) Cut filler words, 4) Add intro/outro, 5) Music, 6) Export, 7. Show notes."
+  },
+  {
+    "slug": "any-color-theory",
+    "title": "AI Color Theory Guide",
+    "category": "Image",
+    "tool": "Any",
+    "tags": [
+      "color",
+      "theory"
+    ],
+    "prompt": "Color theory for [PROJECT]: 1) Color wheel basics, 2) Scheme (mono/analogous/complementary/triadic), 3) 60-30-10 rule, 4) Psychology, 5. Accessibility."
+  },
+  {
+    "slug": "any-logo-concept",
+    "title": "AI Logo Concept",
+    "category": "Image",
+    "tool": "Any",
+    "tags": [
+      "logo"
+    ],
+    "prompt": "Logo concept for [BRAND]: 5 ideas, each: style (wordmark/symbol/combination), color, meaning, scalability, applications. Brand: [DESCRIBE]."
+  },
+  {
+    "slug": "any-brand-guidelines",
+    "title": "AI Brand Guidelines",
+    "category": "Image",
+    "tool": "Any",
+    "tags": [
+      "branding"
+    ],
+    "prompt": "Brand guidelines: logo usage, color palette (with hex), typography, imagery style, tone of voice, do/dont examples. Brand: [DESCRIBE]."
+  },
+  {
+    "slug": "any-ghost-write",
+    "title": "AI Ghost Writing",
+    "category": "Writing",
+    "tool": "Any",
+    "tags": [
+      "ghost-writing"
+    ],
+    "prompt": "Ghost write in [AUTHOR] voice: 1) Analyze their style (sentence length, vocabulary, tone), 2) Write [CONTENT TYPE] matching their voice, 3) Notes on adaptation. Sample:\n\n[PASTE]"
+  },
+  {
+    "slug": "any-script-edit",
+    "title": "AI Script Editing",
+    "category": "Writing",
+    "tool": "Any",
+    "tags": [
+      "script"
+    ],
+    "prompt": "Edit this script: 1) Tighten dialogue (cut unnecessary), 2) Improve pacing, 3) Fix plot holes, 4) Enhance character voice, 5) Add stage directions. Script:\n\n[PASTE]"
+  },
+  {
+    "slug": "any-press-kit",
+    "title": "AI Press Kit",
     "category": "Business",
     "tool": "Any",
     "tags": [
-      "spec"
+      "press-kit"
     ],
-    "prompt": "Product spec for [FEATURE]: problem, target users, user stories, functional requirements, non-functional, success metrics, timeline, risks, open questions."
+    "prompt": "Press kit for [COMPANY]: 1) Company overview, 2) Fact sheet, 3) Bios, 4) Logo + brand assets, 5) Product screenshots, 6) Press releases, 7. Contact. Company: [DESCRIBE]."
   },
   {
-    "slug": "any-competitive-analysis",
-    "title": "AI Competitive Analysis",
+    "slug": "any-faq-page-gen",
+    "title": "AI FAQ Page Generator",
+    "category": "Writing",
+    "tool": "Any",
+    "tags": [
+      "faq"
+    ],
+    "prompt": "FAQ page for [TOPIC]: 15 Q&As from simple to advanced. Each: natural language Q, clear A (2-3 sentences), related question link. SEO-optimized."
+  },
+  {
+    "slug": "any-style-guide",
+    "title": "AI Style Guide",
+    "category": "Writing",
+    "tool": "Any",
+    "tags": [
+      "style-guide"
+    ],
+    "prompt": "Writing style guide for [BRAND]: voice (3 adjectives), tone examples (welcome/error/social/complaint), vocabulary do/dont, formatting rules, banned phrases."
+  },
+  {
+    "slug": "any-newsletter-template",
+    "title": "AI Newsletter Template",
+    "category": "Writing",
+    "tool": "Any",
+    "tags": [
+      "newsletter"
+    ],
+    "prompt": "Newsletter template: 1) Subject line formula, 2) Preview text, 3) Lead story, 4) Quick hits (3), 5) Resource section, 6) CTA, 7. Footer. Brand: [DESCRIBE]."
+  },
+  {
+    "slug": "any-case-study",
+    "title": "AI Case Study",
     "category": "Business",
     "tool": "Any",
     "tags": [
-      "competitive"
+      "case-study"
     ],
-    "prompt": "Competitive analysis for [YOUR PRODUCT] vs [COMPETITORS]: feature matrix, pricing, market position, strengths/weaknesses, differentiation strategy, action items."
+    "prompt": "Case study for [CLIENT+PRODUCT]: 1) Challenge, 2) Solution, 3) Implementation, 4) Results (metrics), 5) Quote, 6. Takeaways. 800 words. Professional tone."
+  },
+  {
+    "slug": "any-whitepaper",
+    "title": "AI Whitepaper Outline",
+    "category": "Writing",
+    "tool": "Any",
+    "tags": [
+      "whitepaper"
+    ],
+    "prompt": "Whitepaper outline for [TOPIC]: 1) Executive summary, 2) Problem, 3) Solution, 4) Technical details, 5) Case studies, 6) ROI, 7) Conclusion, 8. References. 10-15 pages."
+  },
+  {
+    "slug": "any-ebook-outline",
+    "title": "AI Ebook Outline",
+    "category": "Writing",
+    "tool": "Any",
+    "tags": [
+      "ebook"
+    ],
+    "prompt": "Ebook outline for [TOPIC]: 1) Title + subtitle, 2) Chapter list (8-10), 3) Each chapter: key points, word count, visuals needed, 4) Total estimate. Topic: [DESCRIBE]."
+  },
+  {
+    "slug": "any-technical-blog",
+    "title": "AI Technical Blog Post",
+    "category": "Writing",
+    "tool": "Any",
+    "tags": [
+      "blog",
+      "technical"
+    ],
+    "prompt": "Technical blog post [TOPIC]: 1) Hook (real-world problem), 2) Background, 3) Core concept + ASCII diagram, 4) Code example (tested), 5) Pitfalls, 6) Best practices, 7. Further reading. 1500 words."
   }
 ]
