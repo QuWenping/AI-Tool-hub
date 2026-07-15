@@ -19,8 +19,8 @@ const pageUrl = siteUrl + "/best/" + cat.slug + "/";
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Best " + cat.title_en + " in 2026 (Hands-On Tested)",
-  "description": cat.desc_en + " Tested hands-on for 2+ weeks. Real reviews, real pros and cons, no pay-to-play rankings.",
+  "headline": "Best " + cat.title_en + " in 2026 (Regularly Updated)",
+  "description": cat.desc_en + " Tested with the latest information. Real reviews, real pros and cons, no pay-to-play rankings.",
   "url": pageUrl,
   "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
   "image": { "@type": "ImageObject", "url": siteUrl + "/og-image.svg", "width": 1200, "height": 630 },
@@ -132,7 +132,7 @@ const faqSchema = {
   }))
 };
 ---
-<BaseLayout title={"Best " + cat.title_en + " in 2026 (Hands-On Tested)"} description={cat.desc_en + " Tested hands-on for 2+ weeks. Real reviews, real pros and cons, no pay-to-play rankings."} keywords={"best " + cat.title_en + ", " + cat.slug + " AI tools, " + cat.title_en.toLowerCase()}>
+<BaseLayout title={"Best " + cat.title_en + " in 2026 (Regularly Updated)"} description={cat.desc_en + " Tested with the latest information. Real reviews, real pros and cons, no pay-to-play rankings."} keywords={"best " + cat.title_en + ", " + cat.slug + " AI tools, " + cat.title_en.toLowerCase()}>
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
@@ -144,7 +144,7 @@ const faqSchema = {
       <span class="eyebrow" data-i18n="eyebrow_best">Best of 2026</span>
       <h1 data-i18n="best_h1_template">{cat.title_en}</h1>
       <p class="lede">{cat.desc_en}</p>
-      <p class="update-note"><em data-i18n="last_updated">Last updated</em>: July 2026 &middot; <span data-i18n="we_tested">{`We tested ${total} tools hands-on for 2+ weeks.`}</span></p>
+      <p class="update-note"><em data-i18n="last_updated">Last updated</em>: July 2026 &middot; <span data-i18n="we_tested">{`We tested ${total} tools with the latest information.`}</span></p>
       <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:6px;padding:4px 12px;margin-top:8px;font-size:13px;font-weight:600;color:#22c55e;"><i class="fas fa-check-circle"></i> Expert Tested &middot; Updated July 2026</div>
     </header>
 

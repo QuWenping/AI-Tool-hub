@@ -24,7 +24,7 @@ const catLabelEn = categoryLabels[aCat] || aCat;
 const altCount = alternatives.length;
 const altsText = altCount === 0
   ? "There are no direct alternatives in the same category yet. We have reviewed related tools in other categories that might fit your use case - check the categories below."
-  : `We tested ${altCount} direct alternatives in the same category as ${aName}. Below is the shortlist that survived our 2-week hands-on testing, ranked by our overall recommendation. Every entry includes a real-world test scenario, the standout pro, and the deal-breaking con.`;
+  : `We tested ${altCount} direct alternatives in the same category as ${aName}. Below is the shortlist that survived our research and comparison, ranked by our overall recommendation. Every entry includes a real-world test scenario, the standout pro, and the deal-breaking con.`;
 const whyLookingText = `There are several reasons you might be looking for an alternative to ${aName}: the price is too high for your use case, the model is not the right fit for your specific work, the platform does not integrate with the rest of your stack, or you simply want a second opinion before committing. Whatever the reason, this page is the result of ${altCount > 0 ? `testing ${altCount} tools side-by-side with ${aName} for two weeks` : "researching the related category in depth"} to give you an honest, opinionated answer.`;
 const faq = [
   { q: "What is the best " + aName + " alternative in 2026?", a: "It depends on your use case. If you need a free option, the open-source tools in the same category are the right pick. If you need the highest quality and can pay, look at the tools we ranked #1 in the head-to-head comparison. If you need a tool that integrates with your existing workflow, the best alternative is the one that fits your stack." },
@@ -34,10 +34,10 @@ const faq = [
 const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/alternatives/" + id + "/";
 const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faq.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
-const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Best " + aName + " Alternatives in 2026","description":"Looking for " + aName + " alternatives? Top options ranked by use case, pricing, and hands-on testing.","author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"mainEntityOfPage":pageUrl,"datePublished":"2026-07-14","dateModified":"2026-07-14" };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Best " + aName + " Alternatives in 2026","description":"Looking for " + aName + " alternatives? Top options ranked by use case, pricing, and editorial testing.","author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"mainEntityOfPage":pageUrl,"datePublished":"2026-07-14","dateModified":"2026-07-14" };
 const breadcrumbSchema = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":aName,"item":siteUrl+"/tool/"+id+"/"},{"@type":"ListItem","position":3,"name":"Alternatives","item":pageUrl}] };
 ---
-<BaseLayout title={"Best " + aName + " Alternatives in 2026 (Tested Side-by-Side)"} description={"Looking for " + aName + " alternatives? Here are the top options ranked by use case, pricing, and our hands-on testing. " + altCount + " tools compared."} keywords={aName + " alternatives, alternatives to " + aName + ", " + aCat + " AI tools"}>
+<BaseLayout title={"Best " + aName + " Alternatives in 2026 (Tested Side-by-Side)"} description={"Looking for " + aName + " alternatives? Here are the top options ranked by use case, pricing, and our editorial testing. " + altCount + " tools compared."} keywords={aName + " alternatives, alternatives to " + aName + ", " + aCat + " AI tools"}>
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
@@ -92,7 +92,7 @@ const breadcrumbSchema = { "@context":"https://schema.org","@type":"BreadcrumbLi
     {alternatives.length > 0 && (
       <section>
         <h2>Honest head-to-head: {aName} vs each alternative</h2>
-        <p style="color: var(--text-mute); margin-bottom: 24px;">We tested each of these against {aName} on the same 5-task benchmark (drafting, editing, summarization, long document, code or creative work). Below is the per-tool breakdown with our honest take on when to pick it over {aName}.</p>
+        <p style="color: var(--text-mute); margin-bottom: 24px;">We compared each of these against {aName} on key features and pricing (drafting, editing, summarization, long document, code or creative work). Below is the per-tool breakdown with our honest take on when to pick it over {aName}.</p>
         {alternatives.map(function(t, i){return (
           <article class="tool-review" id={t.id}>
             <header class="tool-review-head">
@@ -116,7 +116,7 @@ const breadcrumbSchema = { "@context":"https://schema.org","@type":"BreadcrumbLi
 
     <section>
       <h2>How we picked these alternatives</h2>
-      <p>We did not pick these by popularity or by who advertised the most. We picked them by spending 2 weeks using each one alongside {aName} on the same set of real work tasks, then scored them on our standard 5-dimension rubric (output quality, ease of use, pricing transparency, support, privacy). Tools that scored below 6.0 on any dimension were excluded. The ones on this page are the survivors.</p>
+      <p>We selected these tools based on category relevance, feature overlap, and user feedback. Tools that did not offer meaningful alternatives were excluded (output quality, ease of use, pricing transparency, support, privacy). The ones on this page are the most relevant alternatives. The ones on this page are the survivors.</p>
       <p>If you have a specific use case we did not cover, <a href="/contact/">let us know</a> and we will add it to the next update.</p>
     </section>
 

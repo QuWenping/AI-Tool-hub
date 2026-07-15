@@ -161,7 +161,7 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
 ---
 <BaseLayout
   title={tNameEn + " Review (2026) | AI Tool Hub"}
-  description={"Honest " + tNameEn + " review based on 2+ weeks of hands-on testing. Real pros, real cons, real pricing, and our verdict on whether it is worth paying for."}
+  description={"Honest " + tNameEn + " review based on 2+ weeks of research. Real pros, real cons, real pricing, and our verdict on whether it is worth paying for."}
   keywords={tNameEn + ", " + tNameEn + " review, " + tNameEn + " pricing, " + tCat + " AI tools"}
 >
   <Fragment slot="head">
@@ -189,7 +189,7 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
         )}
         {!isHandReviewed && (
           <div class="tool-rating" style="margin-top:6px;font-size:12px;color:var(--text-mute);">
-            <i class="fas fa-info-circle"></i> AI-sourced summary — pending hands-on review
+            <i class="fas fa-info-circle"></i> AI-sourced summary — pending editorial review
           </div>
         )}
       </div>
@@ -206,7 +206,7 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
       tNameEn + " is a " + (categoryLabels[tCat] || tCat) + " tool that " + (tShortEn || "helps you work with AI"),
       "Pricing: " + ((tool && tool.pricing && tool.pricing.en) || "Various plans available"),
       "Best for: " + (tUseEn[0] || "general use"),
-      "Tested by AI Tool Hub — " + (isHandReviewed ? "hands-on reviewed" : "AI-sourced, pending review")
+      "Tested by AI Tool Hub — " + (isHandReviewed ? "editorially reviewed" : "AI-sourced, pending review")
     ]} />
 
     <AdSlot format="banner" label="Advertisement" />
@@ -287,7 +287,7 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
           </g>
         </svg>
       </div>
-      <p style="font-size:12px;color:var(--text-mute);text-align:center;">5-dimension editorial score (out of 10). Based on hands-on testing.</p>
+      <p style="font-size:12px;color:var(--text-mute);text-align:center;">5-dimension editorial score (out of 10). Based on research.</p>
     </section>
 
     {tExampleEn && (
@@ -413,11 +413,11 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
     <section class="detail-section" style="text-align: center;">
       {isHandReviewed ? (
         <p style="font-size: 13px; color: var(--text-mute); font-style: italic; margin: 0;">
-          Reviewed by <strong>Lin Chen</strong>, Lead Reviewer at AI Tool Hub. Lin has been testing AI tools hands-on for 5+ years and has personally used {tNameEn} on real client work for at least 2 weeks before this review was published. Last updated: July 2026.
+          Curated by AI Tool Hub editorial team. This page is regularly updated with the latest information about {tNameEn}. Last updated: July 2026.
         </p>
       ) : (
         <p style="font-size: 13px; color: var(--text-mute); font-style: italic; margin: 0;">
-          This is an AI-sourced summary based on publicly available information. It has not yet been hands-on tested by our editorial team. We will update this page with real test data and a verified score after hands-on testing.
+          This is an AI-sourced summary based on publicly available information. It has not yet been catalogued by our editorial team. We will update this page with real test data and a verified score after research.
         </p>
       )}
     </section>
