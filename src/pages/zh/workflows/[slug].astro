@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import workflows from "../../../data/workflows.json";
+import Chart from "../../../components/Chart.astro";
 export async function getStaticPaths() {
   return workflows.map(w => ({ params: { slug: w.slug }, props: { workflow: w } }));
 }
@@ -41,6 +42,14 @@ const diffLabels = { "Beginner": "入门", "Intermediate": "中级", "Advanced":
         <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;color:#f59e0b;">前提条件</h3>
         <p style="font-size:14px;color:var(--text-soft);margin:0;">{workflow.prerequisites}</p>
       </div>
+
+      <h2 style="margin-top:32px;">工作流图</h2>
+    <Chart type="flowchart" title={workflow.title_zh || workflow.title} data={{
+      steps: workflow.steps.map((s, i) => ({
+        label: s.title,
+        type: i === 0 ? "start" : "step"
+      }))
+    }} />
 
       <h2 style="margin-top:32px;">分步指南</h2>
       <ol style="margin:0;padding-left:0;list-style:none;">

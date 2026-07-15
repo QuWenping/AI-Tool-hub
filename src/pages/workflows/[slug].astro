@@ -1,6 +1,7 @@
-﻿---
+---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import workflows from "../../data/workflows.json";
+import Chart from "../../components/Chart.astro";
 export async function getStaticPaths() {
   return workflows.map(w => ({ params: { slug: w.slug }, props: { workflow: w } }));
 }
@@ -45,6 +46,14 @@ const diffColors = { "Beginner": "#22c55e", "Intermediate": "#f59e0b", "Advanced
         <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;color:#f59e0b;">Prerequisites</h3>
         <p style="font-size:14px;color:var(--text-soft);margin:0;">{workflow.prerequisites}</p>
       </div>
+
+      <h2 style="margin-top:32px;">Workflow Diagram</h2>
+    <Chart type="flowchart" title={workflow.title} data={{
+      steps: workflow.steps.map((s, i) => ({
+        label: s.title,
+        type: i === 0 ? "start" : "step"
+      }))
+    }} />
 
       <h2 style="margin-top:32px;">Step-by-Step Guide</h2>
       <ol style="margin:0;padding-left:0;list-style:none;">

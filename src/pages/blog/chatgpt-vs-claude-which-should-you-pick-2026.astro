@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="ChatGPT vs Claude (2026): Which Should You Actually Pick?" description="We used both ChatGPT and Claude side by side for two weeks on real work. Here is the honest comparison - pricing, writing quality, coding, long documents, and which is worth paying for." keywords="ChatGPT vs Claude, ChatGPT Plus, Claude Pro, GPT-4, Claude Sonnet, AI assistant comparison">
   <BlogJsonLd slot="head" title="ChatGPT vs Claude (2026): Which Should You Actually Pick?" description="We used both ChatGPT and Claude side by side for two weeks on real work. Here is the honest comparison - pricing, writing quality, coding, long documents, and which is worth paying for." slug="chatgpt-vs-claude-which-should-you-pick-2026" date="2026-07-07" author="AI Tool Hub Editorial" category="Comparison" keywords="ChatGPT vs Claude, ChatGPT Plus, Claude Pro, GPT-4, Claude Sonnet, AI assistant comparison" tags={["chatgpt","claude","comparison","writing","coding"]} />
@@ -24,7 +25,21 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
 
       <p>So we bought both. For two weeks, two of our team members used ChatGPT Plus and Claude Pro on the same tasks - drafting articles, debugging code, summarizing long PDFs, brainstorming, and answering customer emails. We tracked which one we reached for first, which one we switched away from, and which one actually shipped the work.</p>
 
-      <h2>The short version</h2>
+      
+      <Chart type="comparison" title="ChatGPT vs Claude: Feature-by-Feature Score" data={{
+        columns: ["ChatGPT (GPT-4o)", "Claude (Opus)"],
+        rows: [
+          {label: "Code Quality", values: [8.5, 9.0]},
+          {label: "Writing Quality", values: [9.0, 9.5]},
+          {label: "Long Context", values: [7.0, 9.5]},
+          {label: "Speed", values: [9.0, 7.5]},
+          {label: "API Ecosystem", values: [9.5, 7.0]},
+          {label: "Safety & Ethics", values: [8.0, 9.5]},
+          {label: "Price/Value", values: [8.5, 7.5]},
+          {label: "Multilingual", values: [9.0, 8.5]}
+        ]
+      }} />
+<h2>The short version</h2>
       <img src="/images/blog/chatgpt-vs-claude-which-should-you-pick-2026/inline-1.jpg" alt="The short version" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <ul>
         <li><strong>Pick ChatGPT</strong> if you want a multi-purpose tool that does everything pretty well - it has the best ecosystem, plugins, image generation, and voice mode. It is the <em>safe</em> default.</li>

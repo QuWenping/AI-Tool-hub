@@ -1,0 +1,128 @@
+---
+/**
+ * Chart.astro — Universal chart renderer
+ * Supports: bar, comparison, timeline, flowchart
+ * Usage: <Chart type="bar" title="..." data={...} />
+ */
+const { type, title, data } = Astro.props;
+const siteUrl = "https://thebestaitoolsreview.com";
+---
+
+{type === "bar" && (
+  <div class="chart-container" style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:24px;margin:24px 0;">
+    {title && <h3 style="font-size:16px;font-weight:700;margin:0 0 16px;">{title}</h3>}
+    <div style="display:grid;gap:12px;">
+      {data.map((item, i) => {
+        const maxVal = Math.max(...data.map(d => d.value));
+        const pct = Math.round((item.value / maxVal) * 100);
+        const color = item.color || (item.value >= maxVal * 0.8 ? "#22c55e" : item.value >= maxVal * 0.5 ? "#f59e0b" : "#ef4444");
+        return (
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:120px;font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">{item.label}</div>
+            <div style="flex:1;height:24px;background:var(--bg-color);border-radius:6px;overflow:hidden;position:relative;">
+              <div style={`width:${pct}%;height:100%;background:${color};border-radius:6px;transition:width 0.6s ease;`}></div>
+              <span style="position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:12px;font-weight:700;color:var(--text-color);">{item.value}{item.unit || ""}</span>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+    {data.source && <p style="font-size:11px;color:var(--text-mute);margin-top:12px;">Source: {data.source}</p>}
+  </div>
+)}
+
+{type === "comparison" && (
+  <div class="chart-container" style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:24px;margin:24px 0;">
+    {title && <h3 style="font-size:16px;font-weight:700;margin:0 0 16px;">{title}</h3>}
+    <table style="width:100%;border-collapse:collapse;">
+      <thead>
+        <tr style="border-bottom:2px solid var(--border-color);">
+          <th style="padding:8px;text-align:left;font-size:13px;"></th>
+          {data.columns.map(col => <th style="padding:8px;text-align:center;font-size:13px;font-weight:700;">{col}</th>)}
+        </tr>
+      </thead>
+      <tbody>
+        {data.rows.map((row, i) => {
+          const maxVal = Math.max(...data.columns.map((_, j) => row.values[j] || 0));
+          return (
+            <tr style={i % 2 === 0 ? "" : "background:rgba(0,0,0,0.02);"}>
+              <td style="padding:10px 8px;font-size:13px;font-weight:600;">{row.label}</td>
+              {row.values.map((val, j) => {
+                const pct = Math.round((val / (maxVal || 1)) * 100);
+                const color = val >= maxVal * 0.8 ? "#22c55e" : val >= maxVal * 0.5 ? "#f59e0b" : "#ef4444";
+                return (
+                  <td style="padding:10px 8px;text-align:center;">
+                    <div style="font-size:13px;font-weight:600;margin-bottom:4px;">{val}{row.unit || ""}</div>
+                    <div style="height:4px;background:var(--bg-color);border-radius:2px;overflow:hidden;margin:0 auto;max-width:80px;">
+                      <div style={`width:${pct}%;height:100%;background:${color};border-radius:2px;`}></div>
+                    </div>
+                  </td>
+                );
+              })}
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+    {data.source && <p style="font-size:11px;color:var(--text-mute);margin-top:12px;">Source: {data.source}</p>}
+  </div>
+)}
+
+{type === "timeline" && (
+  <div class="chart-container" style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:24px;margin:24px 0;">
+    {title && <h3 style="font-size:16px;font-weight:700;margin:0 0 16px;">{title}</h3>}
+    <div style="position:relative;padding-left:24px;">
+      <div style="position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--border-color);"></div>
+      {data.map((item, i) => (
+        <div style="position:relative;padding-bottom:24px;">
+          <div style="position:absolute;left:-20px;top:4px;width:12px;height:12px;border-radius:50%;background:var(--accent-color);border:2px solid var(--card-bg);"></div>
+          <div style="font-size:13px;font-weight:700;color:var(--accent-color);margin-bottom:4px;">{item.date}</div>
+          <div style="font-size:14px;font-weight:600;margin-bottom:4px;">{item.title}</div>
+          {item.description && <div style="font-size:13px;color:var(--text-soft);line-height:1.6;">{item.description}</div>}
+          {item.tags && (
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;">
+              {item.tags.map(t => <span style="font-size:11px;color:var(--text-mute);background:var(--bg-color);padding:2px 8px;border-radius:4px;">#{t}</span>)}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
+{type === "flowchart" && (
+  <div class="chart-container" style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:24px;margin:24px 0;">
+    {title && <h3 style="font-size:16px;font-weight:700;margin:0 0 16px;">{title}</h3>}
+    <div style="display:flex;flex-direction:column;align-items:center;gap:0;">
+      {data.steps.map((step, i) => {
+        const isLast = i === data.steps.length - 1;
+        const isDecision = step.type === "decision";
+        const isStart = i === 0;
+        const bg = isStart ? "var(--accent-color)" : isDecision ? "#f59e0b" : "var(--card-bg)";
+        const color = isStart ? "#fff" : isDecision ? "#fff" : "var(--text-color)";
+        const border = isStart ? "none" : isDecision ? "none" : "1px solid var(--border-color)";
+        return (
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <div style={`background:${bg};color:${color};border:${border};border-radius:${isDecision ? "12px" : "8px"};padding:12px 24px;font-size:14px;font-weight:600;text-align:center;min-width:200px;max-width:400px;`}>
+              {step.label}
+            </div>
+            {!isLast && (
+              <div style="width:2px;height:24px;background:var(--border-color);"></div>
+            )}
+            {step.branches && !isLast && (
+              <div style="display:flex;gap:32px;margin-top:0;">
+                {step.branches.map(branch => (
+                  <div style="display:flex;flex-direction:column;align-items:center;">
+                    <div style="font-size:12px;color:var(--text-mute);font-style:italic;margin-bottom:4px;">{branch.label}</div>
+                    <div style="width:2px;height:16px;background:var(--border-color);"></div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </div>
+    {data.source && <p style="font-size:11px;color:var(--text-mute);margin-top:12px;">Source: {data.source}</p>}
+  </div>
+)}

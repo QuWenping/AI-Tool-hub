@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 const post = {
   slug: "agnes-ai-review-free-omni-modal-api-2026",
   title_en: "Agnes AI Review (2026): Free Text, Image & Video API",
@@ -35,7 +36,17 @@ const siteUrl = "https://thebestaitoolsreview.com";
       </ul>
       <p>Beyond raw models, Agnes AI also offers application products: <strong>Agnes</strong> (chat app), <strong>Agnes Code</strong> (coding assistant), <strong>Pavo</strong>, and <strong>Echo</strong>. The platform is open source on GitHub.</p>
 
-      <h2>Key Features</h2>
+      
+      <Chart type="bar" title="Agnes AI Model Performance Scores" data={[
+        {label: "Agnes 2.0 Flash (Text)", value: 60.9, unit: "%"},
+        {label: "Claude Opus 4.6 (Text)", value: 70.8, unit: "%"},
+        {label: "GPT 5.4 (Text)", value: 60.2, unit: "%"},
+        {label: "Agnes Image 2.0", value: 1178, unit: " Elo"},
+        {label: "GPT Image 2", value: 1250, unit: " Elo"},
+        {label: "Agnes Video V2.0", value: 934, unit: " Elo"},
+        {label: "Kling 3.0 Omni (Video)", value: 1066, unit: " Elo"}
+      ]} />
+<h2>Key Features</h2>
 
       <img src="/images/blog/agnes-ai-review-free-omni-modal-api-2026/inline-1.jpg" alt="Agnes AI text generation" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
 
@@ -121,7 +132,15 @@ const siteUrl = "https://thebestaitoolsreview.com";
 
       <img src="/images/blog/agnes-ai-review-free-omni-modal-api-2026/closing.jpg" alt="Future of free AI APIs" style="width:100%;border-radius:12px;margin:24px 0;" loading="lazy" />
 
-      <h2>FAQ</h2>
+      
+      <Chart type="timeline" title="Agnes AI Development Timeline" data={[
+        {date: "2026 Q1", title: "Platform Launch", description: "Agnes AI platform launched with free API access for developers."},
+        {date: "2026 Q2", title: "Agnes 2.0 Flash", description: "Text model released with competitive benchmark scores on ClawEval."},
+        {date: "2026 Q2", title: "Image 2.0 & 2.1 Flash", description: "Image generation models launched, competing with GPT Image and Flux."},
+        {date: "2026 Q3", title: "Video V2.0", description: "Video generation model released with synchronized audio."},
+        {date: "2026 Q4", title: "2.5 Models (Coming Soon)", description: "Next-generation models for text, image, and video in development."}
+      ]} />
+<h2>FAQ</h2>
       <div style="display:grid;gap:16px;">
         <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;">
           <h3 style="font-size:15px;font-weight:600;margin-bottom:8px;">Is Agnes AI really free?</h3>
