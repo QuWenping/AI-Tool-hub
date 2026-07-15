@@ -17,7 +17,7 @@ import Chart from "../../components/Chart.astro";
         <span class="meta-item"><i class="far fa-user"></i> AI Tool Hub Editorial</span>
       </div>
     </header>
-      <img src="/images/blog/cursor-vs-github-copilot-2026/hero.jpg" alt="Cursor vs GitHub Copilot (2026): Which AI Coding Tool Should You Pay For?" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
+      <img src="/images/blog/cursor-vs-github-copilot-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/cursor-vs-github-copilot-2026/hero.jpg'" alt="Cursor vs GitHub Copilot (2026): Which AI Coding Tool Should You Pay For?" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
 
     <section class="blog-content">
       <p>Cursor and GitHub Copilot are the two AI coding tools that actually ship code to production. Everything else — Codeium, Cody, Tabnine, Continue — is good, but the real choice in 2026 is still between these two. They are also surprisingly different tools, despite both calling themselves "AI pair programmers."</p>
@@ -36,7 +36,7 @@ import Chart from "../../components/Chart.astro";
       }} />
 
 <h2>The short version</h2>
-      <img src="/images/blog/cursor-vs-github-copilot-2026/inline-1.jpg" alt="The short version" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/cursor-vs-github-copilot-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/cursor-vs-github-copilot-2026/inline-1.jpg'" alt="The short version" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <ul>
         <li><strong>Pick GitHub Copilot</strong> if you want a fast, cheap autocomplete that lives inside your existing editor (VS Code, JetBrains). $10/month Individual or free for students/open source. Best for: people who mostly want the "tab to accept a suggestion" experience.</li>
         <li><strong>Pick Cursor</strong> if you regularly do multi-file edits, refactors, or work on a codebase you are not intimately familiar with. $20/month Pro. Best for: people who want to chat with their code, generate entire files from a description, and treat the AI as a real collaborator.</li>
@@ -44,7 +44,7 @@ import Chart from "../../components/Chart.astro";
       </ul>
 
       <h2>How we tested</h2>
-      <img src="/images/blog/cursor-vs-github-copilot-2026/inline-2.jpg" alt="How we tested" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/cursor-vs-github-copilot-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/cursor-vs-github-copilot-2026/inline-2.jpg'" alt="How we tested" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <p>The setup: a real production app we were shipping — a Next.js 14 dashboard, TypeScript, Prisma ORM, Postgres, deployed to Vercel. Roughly 18,000 lines of code, 12 API routes, 6 third-party integrations. Both of us used both tools on the same tasks for two weeks. Tasks we tracked:</p>
       <ul>
         <li>Adding a new feature end-to-end (UI + API + DB schema)</li>
@@ -55,7 +55,7 @@ import Chart from "../../components/Chart.astro";
       </ul>
 
       <h2>Round 1: Inline completion (the "tab to accept" feature)</h2>
-      <img src="/images/blog/cursor-vs-github-copilot-2026/inline-3.jpg" alt="Round 1: Inline completion (the tab to accept feature)" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/cursor-vs-github-copilot-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/cursor-vs-github-copilot-2026/inline-3.jpg'" alt="Round 1: Inline completion (the tab to accept feature)" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <p><strong>Winner: GitHub Copilot (slightly).</strong></p>
       <p>This is what both tools were originally designed for and what they are still best at. When you are typing a function signature or a long boilerplate block, both tools feel almost psychic. The difference is subtle: Copilot is a hair faster (its suggestions appear about 80-120ms after you stop typing, vs Cursor at 150-250ms) and it tends to produce shorter, more focused suggestions. Cursor's suggestions are sometimes a bit too long, which is great when you want them and annoying when you do not.</p>
       <p>For pure "I am typing code, AI finishes my thought" — Copilot wins by a nose. For "I am typing a complex conditional and want the whole block written" — Cursor wins because its suggestions are more contextual.</p>
