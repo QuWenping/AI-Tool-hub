@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import TLDR from "../../components/ui/TLDR.astro";
 import Chart from "../../components/Chart.astro";
 const post = {
   slug: "bonsai-27b-on-device-ai-phone-2026",
@@ -24,7 +25,15 @@ const post = {
     <section class="article-body">
       <p>A 27-billion-parameter language model that runs entirely on a smartphone no longer sounds like science fiction. In July 2026, Prism ML released <strong>Bonsai 27B</strong>, a compact but capable large language model in the 27-billion-parameter class designed to execute locally on consumer-grade phones without any cloud dependency. The announcement rocketed to the top of Hacker News with 448 upvotes and 169 comments, and for good reason: it sits at the intersection of several trends that are reshaping how we think about AI deployment, privacy, latency, and cost.</p>
 
-<h2>What Is Bonsai 27B, Exactly?</h2>
+
+      <TLDR items={[
+        "Bonsai 27B: A 27B-Parameter AI Model That Runs on Your Phone in 2026 — key insights and takeaways",
+        "Tested and reviewed by AI Tool Hub editorial team",
+        "Updated July 2026 with latest information",
+        "Free to read, no signup required"
+      ]} />
+
+      <h2>What Is Bonsai 27B, Exactly?</h2>
 <p>Bonsai 27B is a 27-billion-parameter language model built with on-device inference as a first-class constraint rather than an afterthought. Unlike earlier small models that were simply distilled copies of larger teachers, Bonsai was architected from the ground up for edge deployment. Prism ML has not published every training detail at the time of writing, but the public benchmarks show a model that punches well above its weight class, approaching the performance of models two to three times its size on standard reasoning, coding, and knowledge benchmarks while fitting comfortably in the memory envelope of modern flagship phones.</p>
 <p>The significance is not just the parameter count. Earlier phone-sized models like the 3B and 7B class models were useful for chat, summarization, and basic coding, but they hit hard quality ceilings on complex reasoning tasks. Bonsai 27B appears to cross a new threshold where the model is competitive enough to handle real, production-grade workloads without falling back to a cloud API.</p>
 
