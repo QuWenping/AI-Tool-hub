@@ -71,8 +71,9 @@ const ogImage = siteUrl + "/og-image.svg";
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/src/styles/tokens.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap"></noscript>
+  <link rel="preload" href="/src/styles/tokens.css" as="style"><link rel="stylesheet" href="/src/styles/tokens.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
@@ -223,5 +224,13 @@ const ogImage = siteUrl + "/og-image.svg";
   </footer>
   <script src="/js/main.js" defer></script>
 <CookieConsent />
+<script is:inline>
+// Lazy load images without loading attribute
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('img:not([loading])').forEach(function(img){
+    if(!img.hasAttribute('loading')) img.setAttribute('loading','lazy');
+  });
+});
+</script>
 </body>
 </html>
