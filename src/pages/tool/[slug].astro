@@ -6,7 +6,6 @@ import TLDR from "../../components/ui/TLDR.astro";
 import ProsCons from "../../components/ui/ProsCons.astro";
 import Verdict from "../../components/ui/Verdict.astro";
 import AdSlot from "../../components/ui/AdSlot.astro";
-import TOC from "../../components/ui/TOC.astro";
 import Chart from "../../components/Chart.astro";
 import fs from "fs";
 import categories from "../../data/categories.json";
@@ -207,9 +206,7 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
 
     {hasScreenshots && (
       
-    <div style="display:grid;grid-template-columns:1fr 280px;gap:24px;align-items:start;">
-    <div>
-<section class="detail-section">
+    <section class="detail-section">
         <h2 id="screenshots"><i class="fas fa-images"></i> Screenshots</h2>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:16px;">
           {screenshotFiles.map((sf, i) => (
@@ -381,9 +378,7 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
       <p style="margin-top:12px;"><a href={"/alternatives/" + id + "/"} style="color:var(--accent-color);font-weight:600;">See all alternatives &rarr;</a></p>
     </section>
 
-    <section class="
-    </div>
-    <aside>
+    
       <TOC items={[
         {id: "overview", label: "Overview"},
         {id: "screenshots", label: "Screenshots"},
