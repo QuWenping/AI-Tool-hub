@@ -95,7 +95,7 @@ const softwareSchema = {
   },
   "review": {
     "@type": "Review",
-    "author": { "@type": "Person", "name": "Lin Chen", "jobTitle": "Lead Reviewer", "url": siteUrl + "/team/" },
+    "author": { "@type": "Person", "name": "AI Tool Hub Editorial Team", "jobTitle": "Lead Reviewer", "url": siteUrl + "/team/" },
     "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl },
     "datePublished": "2026-07-01",
     "reviewRating": {
@@ -228,12 +228,6 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
     <section class="detail-section">
       <h2><i class="fas fa-info-circle"></i> What is {tNameEn}?</h2>
       <p data-i18n-en={tLongEn} data-i18n-zh={tLongZh}>{tLongEn}</p>
-    <Chart type="bar" title={tNameEn + " Pricing Overview"} data={[
-      {label: "Free Tier", value: 0, unit: "$", color: "#22c55e"},
-      {label: "Starter", value: 10, unit: "$/mo", color: "#f59e0b"},
-      {label: "Pro", value: 25, unit: "$/mo", color: "#f59e0b"},
-      {label: "Enterprise", value: 100, unit: "$/mo", color: "#ef4444"}
-    ]} />
 
     </section>
 
