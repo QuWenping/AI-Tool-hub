@@ -2,6 +2,8 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import workflows from "../../data/workflows.json";
 import Chart from "../../components/Chart.astro";
+import TLDR from "../../components/ui/TLDR.astro";
+import AdSlot from "../../components/ui/AdSlot.astro";
 export async function getStaticPaths() {
   return workflows.map(w => ({ params: { slug: w.slug }, props: { workflow: w } }));
 }
@@ -36,6 +38,15 @@ const diffColors = { "Beginner": "#22c55e", "Intermediate": "#f59e0b", "Advanced
     </header>
     <section class="article-body">
       <p style="font-size:16px;color:var(--text-soft);line-height:1.7;">{workflow.summary}</p>
+    <TLDR items={[
+      workflow.title + " — " + (workflow.difficulty || "intermediate") + " level",
+      "Tool: " + workflow.tool,
+      workflow.steps.length + " steps with detailed instructions",
+      "Prerequisites: " + (workflow.prerequisites || "See below")
+    ]} />
+
+    <AdSlot format="banner" />
+
 
       <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:20px;margin:24px 0;">
         <h3 style="font-size:14px;font-weight:600;margin-bottom:12px;">Use Case</h3>

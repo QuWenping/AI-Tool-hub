@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import templates from "../../data/templates.json";
+import TLDR from "../../components/ui/TLDR.astro";
 export async function getStaticPaths() {
   return templates.map(t => ({ params: { slug: t.slug }, props: { template: t } }));
 }
@@ -28,6 +29,13 @@ const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","i
     </header>
     <section class="article-body">
       <p style="font-size:16px;color:var(--text-soft);line-height:1.7;">{template.description}</p>
+    <TLDR items={[
+      template.title,
+      "Category: " + template.category,
+      "Tool: " + template.tool,
+      "Difficulty: " + template.difficulty
+    ]} />
+
       <div style="background:rgba(59,130,246,0.05);border:1px solid rgba(59,130,246,0.2);border-radius:8px;padding:12px 16px;margin:20px 0;">
         <p style="font-size:14px;color:var(--text-soft);margin:0;"><strong>Best for:</strong> {template.useCase}</p>
       </div>

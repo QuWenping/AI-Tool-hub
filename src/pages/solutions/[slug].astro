@@ -1,7 +1,9 @@
-﻿---
+---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import solutions from "../../data/solutions.json";
 import workflows from "../../data/workflows.json";
+import TLDR from "../../components/ui/TLDR.astro";
+import AdSlot from "../../components/ui/AdSlot.astro";
 export async function getStaticPaths() {
   return solutions.map(s => ({ params: { slug: s.slug }, props: { solution: s } }));
 }
@@ -27,6 +29,15 @@ const relatedWorkflows = workflows.filter(w => solution.workflows.includes(w.slu
     </header>
     <section class="article-body">
       <p style="font-size:16px;color:var(--text-soft);line-height:1.7;">{solution.description}</p>
+    <TLDR items={[
+      solution.title + " — industry guide",
+      "Tools covered: " + solution.tools.length,
+      "Sections: " + solution.sections.length,
+      "Related workflows: " + (solution.workflows ? solution.workflows.length : 0)
+    ]} />
+
+    <AdSlot format="banner" />
+
 
       <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:16px;margin:24px 0;">
         <h3 style="font-size:14px;font-weight:600;margin-bottom:10px;">Recommended AI Tools</h3>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import prompts from "../../data/prompts.json";
+import TLDR from "../../components/ui/TLDR.astro";
 export async function getStaticPaths() {
   return prompts.map(p => ({ params: { slug: p.slug }, props: { prompt: p } }));
 }
@@ -16,6 +17,13 @@ const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":page
     <header class="article-header"><span class="eyebrow">{prompt.category} - {prompt.tool}</span><h1>{prompt.title}</h1></header>
     <section class="article-body">
       <p>Copy and paste this prompt into <strong>{prompt.tool}</strong> or any AI assistant:</p>
+    <TLDR items={[
+      prompt.title,
+      "Tool: " + prompt.tool,
+      "Category: " + prompt.category,
+      "Tags: " + prompt.tags.join(", ")
+    ]} />
+
       <div style="position:relative;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:20px;margin:24px 0;">
         <button id="cp" style="position:absolute;top:12px;right:12px;background:var(--accent-color);color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:12px;font-weight:600;cursor:pointer;">Copy</button>
         <pre id="pt" style="white-space:pre-wrap;word-break:break-word;font-size:14px;color:var(--text-soft);line-height:1.7;font-family:monospace;padding-right:80px;">{prompt.prompt}</pre>
