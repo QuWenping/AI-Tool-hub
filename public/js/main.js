@@ -78,16 +78,18 @@ function renderTools() {
     return matchCat && matchSearch;
   });
   entries.sort((a, b) => (b[1].featured ? 1 : 0) - (a[1].featured ? 1 : 0));
-
-  grid.innerHTML = entries.map(([id, t]) =>
-    `<a class="tool-card" href="/tool/${id}/">${cardHTML(t)}</a>`
-  ).join("");
-
+  const SHOW = 10;
+  const isSearch = q.length > 0;
+  const show = isSearch ? entries : entries.slice(0, SHOW);
+  const rest = entries.length - show.length;
+  grid.innerHTML = show.map(([id, t]) => <a class="tool-card" href="/tool//"></a>).join("");
   if (entries.length === 0) {
-    grid.innerHTML = `<p style="grid-column:1/-1;text-align:center;color:var(--text-mute);padding:40px 0;">${currentLang === "zh" ? "暂时没有找到相关的 AI 工具..." : "No AI tools found..."}</p>`;
+    grid.innerHTML = <p style="grid-column:1/-1;text-align:center;color:var(--text-mute);padding:40px 0;"></p>;
+  } else if (rest > 0 && !isSearch) {
+    const link = cat !== "all" ? /best// : "/best/students/";
+    grid.insertAdjacentHTML("afterend", <div style="text-align:center;padding:32px 0;"><a href="" style="display:inline-block;background:var(--accent-color);color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px;"> &rarr;</a></div>);
   }
 }
-
 function renderRec() {
   const grid = document.getElementById("rec-grid");
   if (!grid) return;
