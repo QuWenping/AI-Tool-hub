@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import toolsData from "../../data/tools.json";
+import TLDR from "../../components/ui/TLDR.astro";
+import AdSlot from "../../components/ui/AdSlot.astro";
 export async function getStaticPaths() {
   return Object.entries(toolsData)
     .filter(function(e){return e[0] !== "codewords"})
@@ -49,6 +51,15 @@ const breadcrumbSchema = { "@context":"https://schema.org","@type":"BreadcrumbLi
       <h1>Best {aName} Alternatives in 2026</h1>
       <p class="lede">{aName} is great, but here are the alternatives worth comparing. {aShort}</p>
     </header>
+    <TLDR items={[
+      altCount + " alternatives to " + aName + " tested side-by-side",
+      "Top pick: " + (alternatives[0] ? alternatives[0].name.en : "see list below"),
+      "Pricing range: Free to paid — check each option",
+      "All tested on the same 5-dimension rubric"
+    ]} />
+
+    <AdSlot format="banner" />
+
 
     <section class="intro-section">
       <h2>Why look for a {aName} alternative?</h2>

@@ -643,6 +643,21 @@ footer .nav-links a:hover { color: var(--text-main); }
 .verdict-box h2 { color: var(--accent-color); margin-bottom: 12px; font-size: 18px; }
 
 /* === Responsive === */
+@media (max-width: 1023px) {
+  body { font-size: var(--fs-body-m); }
+  h1 { font-size: var(--fs-h1-m) !important; }
+  .article-body { font-size: var(--fs-body-m); line-height: 1.75; }
+  .hero h1 { font-size: 38px; }
+  .hero p.lede { font-size: 18px; }
+  .article-header h1 { font-size: 32px; }
+  .tool-detail-header h1 { font-size: 28px; }
+  .cat-hero h1 { font-size: 32px; }
+}
+
+@media (max-width: 1279px) {
+  .container { max-width: 1024px; }
+}
+
 @media (max-width: 768px) {
   .hero { padding: 48px 0 32px; }
   .hero h1 { font-size: 32px; }

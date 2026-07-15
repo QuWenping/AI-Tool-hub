@@ -2,6 +2,10 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import toolsData from "../../data/tools.json";
 import matchupsData from "../../data/matchups.json";
+import TLDR from "../../components/ui/TLDR.astro";
+import ProsCons from "../../components/ui/ProsCons.astro";
+import Verdict from "../../components/ui/Verdict.astro";
+import AdSlot from "../../components/ui/AdSlot.astro";
 import Chart from "../../components/Chart.astro";
 import fs from "fs";
 import categories from "../../data/categories.json";
@@ -198,6 +202,15 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
     </header>
 
     <p class="lede">{tShortEn}</p>
+    <TLDR items={[
+      tNameEn + " is a " + (categoryLabels[tCat] || tCat) + " tool that " + (tShortEn || "helps you work with AI"),
+      "Pricing: " + ((tool && tool.pricing && tool.pricing.en) || "Various plans available"),
+      "Best for: " + (tUseEn[0] || "general use"),
+      "Tested by AI Tool Hub — " + (isHandReviewed ? "hands-on reviewed" : "AI-sourced, pending review")
+    ]} />
+
+    <AdSlot format="banner" label="Advertisement" />
+
 
     {hasScreenshots && (
       <section class="detail-section">
@@ -286,17 +299,9 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
 
     <div class="grid-2">
       <section class="detail-section">
-        <h2><i class="fas fa-thumbs-up" style="color:#10b981;"></i> Pros</h2>
-        <ul class="pros-list" data-i18n-en-rich={JSON.stringify(tProsEn)} data-i18n-zh-rich={JSON.stringify(tProsZh)}>
-          {tProsEn.map(p => <li>{p}</li>)}
-        </ul>
-      </section>
-      <section class="detail-section">
-        <h2><i class="fas fa-thumbs-down" style="color:#ef4444;"></i> Cons</h2>
-        <ul class="cons-list" data-i18n-en-rich={JSON.stringify(tConsEn)} data-i18n-zh-rich={JSON.stringify(tConsZh)}>
-          {tConsEn.map(c => <li>{c}</li>)}
-        </ul>
-      </section>
+        
+    <ProsCons pros={tProsEn} cons={tConsEn} />
+
     </div>
 
     {tFeaturesEn.length > 0 && (

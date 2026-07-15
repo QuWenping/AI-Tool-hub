@@ -1,4 +1,4 @@
-﻿---
+---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import matchups from "../../data/matchups.json";
 import toolsData from "../../data/tools.json";
@@ -93,6 +93,15 @@ const faqSchema = {
       <h1 style="font-size: 36px; font-weight: 700; letter-spacing: -0.5px; line-height: 1.2; margin: 12px 0;">{m.title_en}</h1>
       <p style="color: var(--text-soft); max-width: 720px; margin: 0 auto; font-size: 16px; line-height: 1.55;">We tested both <strong>{aName}</strong> and <strong>{bName}</strong> side by side for two weeks.</p>
     </div>
+      <TLDR items={[
+        aName + " vs " + bName + ": " + (aFirstPro > bFirstPro ? aName + " wins on " + aFirstPro.toLowerCase() : bName + " wins on " + bFirstPro.toLowerCase()),
+        "Pricing: " + aName + " (" + ((a && a.pricing && a.pricing.en) || "various") + ") vs " + bName + " (" + ((b && b.pricing && b.pricing.en) || "various") + ")",
+        "Best for " + aUse.toLowerCase() + ": " + aName + ". Best for " + bUse.toLowerCase() + ": " + bName,
+        "Both have free tiers — try both before committing"
+      ]} />
+
+      <AdSlot format="banner" />
+
 
     <div class="compare-grid">
       <a class="compare-card" href={"/tool/" + m.a + "/"}>
