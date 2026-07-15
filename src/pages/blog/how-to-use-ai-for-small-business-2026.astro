@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="How to Use AI for Small Business in 2026 (Practical Guide)" description="A practical guide to using AI for small business in 2026. The 8 best tools, the 10 workflows, the 5 use cases (marketing, sales, support, ops, finance), and the 5 things to avoid." keywords="AI for small business, AI for SMB, small business AI tools, AI automation, AI for entrepreneurs">
   <BlogJsonLd slot="head" title="How to Use AI for Small Business in 2026 (Practical Guide)" description="A practical guide to using AI for small business in 2026. The 8 best tools, the 10 workflows, the 5 use cases (marketing, sales, support, ops, finance), and the 5 things to avoid." slug="how-to-use-ai-for-small-business-2026" date="2026-06-21" author="Daniel Park, Marketing Lead" category="Tutorial" keywords="AI for small business, AI for SMB, small business AI tools, AI automation, AI for entrepreneurs" tags={[]} />
@@ -23,7 +24,15 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
 
       <p>We have worked with 30+ small businesses on AI adoption in 2026. This is the consolidated guide - the 8 best tools, 10 workflows, 5 use cases, and 5 things to avoid.</p>
 
-      <h2>The 8 best AI tools for small business in 2026</h2>
+      
+      <Chart type="timeline" title="Learning Path" data={[
+        {date: "Week 1", title: "Getting Started", description: "Learn the basics and set up."},
+        {date: "Week 2", title: "Core Features", description: "Master main features through practice."},
+        {date: "Week 3", title: "Advanced", description: "Explore advanced workflows."},
+        {date: "Week 4", title: "Real Projects", description: "Apply to real-world projects."}
+      ]} />
+
+<h2>The 8 best AI tools for small business in 2026</h2>
       <img src="/images/blog/how-to-use-ai-for-small-business-2026/inline-1.jpg" alt="The 8 best AI tools for small business in 2026" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <p>These are the 8 tools that cover 90% of small business use cases. The list is intentionally short - the goal is to use a few tools well, not many tools poorly.</p>
 

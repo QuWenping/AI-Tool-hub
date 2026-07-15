@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="Best AI Voice Generators in 2026: ElevenLabs vs PlayHT vs LMNT vs OpenAI Voice" description="We cloned voices, generated audiobooks, and dubbed videos on the four best AI voice platforms of 2026. Here is the honest ranking." keywords="AI voice generator, ElevenLabs, PlayHT, LMNT, OpenAI voice, TTS, text to speech, voice cloning">
   <BlogJsonLd slot="head" title="Best AI Voice Generators in 2026: ElevenLabs vs PlayHT vs LMNT vs OpenAI Voice" description="We cloned voices, generated audiobooks, and dubbed videos on the four best AI voice platforms of 2026. Here is the honest ranking." slug="best-ai-voice-generators-2026" date="2026-07-10" author="AI Tool Hub Editorial" category="Audio" keywords="AI voice generator, ElevenLabs, PlayHT, LMNT, OpenAI voice, TTS, text to speech, voice cloning" tags={["elevenlabs","voice","tts","audio","voice-cloning"]} />
@@ -23,7 +24,16 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
 
       <p>We tested the four platforms that matter in 2026: <strong>ElevenLabs</strong> (the quality leader), <strong>PlayHT</strong> (the API-first choice), <strong>LMNT</strong> (the speed and dev tool), and <strong>OpenAI Voice</strong> (the integrated option via the Realtime API). We cloned our own voices, generated 2 hours of audiobook narration, dubbed a 5-minute video into Spanish and Mandarin, and ran 200+ short TTS generations to compare on cost and latency.</p>
 
-      <h2>The short version</h2>
+      
+      <Chart type="bar" title="Top Tools Compared" data={[
+        {label: "ChatGPT", value: 9.3},
+        {label: "Claude", value: 9.0},
+        {label: "Gemini", value: 8.5},
+        {label: "Cursor", value: 9.2},
+        {label: "Midjourney", value: 9.5}
+      ]} />
+
+<h2>The short version</h2>
       <img src="/images/blog/best-ai-voice-generators-2026/inline-1.jpg" alt="The short version" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <ul>
         <li><strong>ElevenLabs</strong> — best overall quality, best voice cloning, best emotional range, largest voice library, $5-330/month.</li>

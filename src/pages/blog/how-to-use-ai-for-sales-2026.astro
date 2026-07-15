@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="How to Use AI for Sales in 2026 (Real Examples)" description="A practical guide to using AI for sales in 2026. The 5 best tools, the 6 workflows, the 4 use cases, and the 3 things to avoid. Real examples for SDRs, AEs, and sales leaders." keywords="AI for sales, sales AI, AI SDR, sales automation, AI sales tools">
   <BlogJsonLd slot="head" title="How to Use AI for Sales in 2026 (Real Examples)" description="A practical guide to using AI for sales in 2026. The 5 best tools, the 6 workflows, the 4 use cases, and the 3 things to avoid. Real examples for SDRs, AEs, and sales leaders." slug="how-to-use-ai-for-sales-2026" date="2026-06-17" author="Daniel Park, Marketing Lead" category="Tutorial" keywords="AI for sales, sales AI, AI SDR, sales automation, AI sales tools" tags={[]} />
@@ -21,7 +22,15 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
     <section class="blog-content">
       <p>AI has transformed sales. The sales teams using AI well in 2026 are 2-3x more productive, with 30% higher close rates and 50% shorter sales cycles. The teams using AI poorly are spamming prospects with bad AI-generated emails and losing trust. This guide is for sales leaders who want to be in the first group.</p>
 
-      <h2>The 5 best AI sales tools in 2026</h2>
+      
+      <Chart type="timeline" title="Learning Path" data={[
+        {date: "Week 1", title: "Getting Started", description: "Learn the basics and set up."},
+        {date: "Week 2", title: "Core Features", description: "Master main features through practice."},
+        {date: "Week 3", title: "Advanced", description: "Explore advanced workflows."},
+        {date: "Week 4", title: "Real Projects", description: "Apply to real-world projects."}
+      ]} />
+
+<h2>The 5 best AI sales tools in 2026</h2>
       <img src="/images/blog/how-to-use-ai-for-sales-2026/inline-1.jpg" alt="The 5 best AI sales tools in 2026" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
 
       <h3>Tool 1: Clay ($149/month)</h3>

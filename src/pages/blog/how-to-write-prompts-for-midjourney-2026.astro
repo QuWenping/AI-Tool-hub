@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="How to Write Midjourney Prompts in 2026 (The 7-Pattern Framework)" description="Stop guessing. The 7 Midjourney prompt patterns that consistently produce publishable images, with 20 real before/after examples and the exact prompts to copy." keywords="Midjourney prompts, Midjourney tutorial, AI image prompts, Midjourney v7, Midjourney 7 patterns">
   <BlogJsonLd slot="head" title="How to Write Midjourney Prompts in 2026 (The 7-Pattern Framework)" description="Stop guessing. The 7 Midjourney prompt patterns that consistently produce publishable images, with 20 real before/after examples and the exact prompts to copy." slug="how-to-write-prompts-for-midjourney-2026" date="2026-06-10" author="Sofia Reyes, Product Designer" category="Tutorial" keywords="Midjourney prompts, Midjourney tutorial, AI image prompts, Midjourney v7, Midjourney 7 patterns" tags={["midjourney","prompts","image-generation","tutorial","how-to"]} />
@@ -21,7 +22,15 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
     <section class="blog-content">
       <p>After generating 500+ Midjourney images for client work in 2026, I can tell you the difference between a good image and a great one is almost never the model - it is the prompt. Midjourney v7 is the most capable image model in the world for aesthetic quality, but it cannot read your mind. The 7 patterns below are the ones that consistently produce publishable output, with 20 real before/after examples to show the difference.</p>
 
-      <h2>Pattern 1: Subject + Action + Setting + Style + Lighting + Parameters</h2>
+      
+      <Chart type="timeline" title="Learning Path" data={[
+        {date: "Week 1", title: "Getting Started", description: "Learn the basics and set up."},
+        {date: "Week 2", title: "Core Features", description: "Master main features through practice."},
+        {date: "Week 3", title: "Advanced", description: "Explore advanced workflows."},
+        {date: "Week 4", title: "Real Projects", description: "Apply to real-world projects."}
+      ]} />
+
+<h2>Pattern 1: Subject + Action + Setting + Style + Lighting + Parameters</h2>
       <img src="/images/blog/how-to-write-prompts-for-midjourney-2026/inline-1.jpg" alt="Pattern 1: Subject + Action + Setting + Style + Lighting + Parameters" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <p><strong>The structure:</strong> Every good prompt has these 6 layers, in this order. The mistake most people make: they write a vibe ("a magical forest") and hope Midjourney fills in the rest. It will - but the result is random. The fix: be specific about each layer.</p>
       <p><strong>Weak prompt:</strong> "A woman in a forest"</p>

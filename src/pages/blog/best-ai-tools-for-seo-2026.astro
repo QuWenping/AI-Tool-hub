@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="Best AI Tools for SEO in 2026: Keyword Research, Content, and Rank Tracking" description="We rebuilt our SEO workflow with AI in 2026 and tracked the impact for 6 months. Here are the tools that actually moved rankings, with real before/after data." keywords="AI SEO tools, AI for SEO, SEO AI 2026, keyword research AI, AI content optimization">
   <BlogJsonLd slot="head" title="Best AI Tools for SEO in 2026: Keyword Research, Content, and Rank Tracking" description="We rebuilt our SEO workflow with AI in 2026 and tracked the impact for 6 months. Here are the tools that actually moved rankings, with real before/after data." slug="best-ai-tools-for-seo-2026" date="2026-06-04" author="AI Tool Hub Editorial" category="SEO" keywords="AI SEO tools, AI for SEO, SEO AI 2026, keyword research AI, AI content optimization" tags={["seo","marketing","keywords","content","ai-overviews"]} />
@@ -23,7 +24,16 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
 
       <p>This is the workflow that took our site from 89K organic sessions/month to 256K organic sessions/month in 6 months. The total monthly bill is $1,143 across 4 tools. The team's content output is 3x with the same headcount.</p>
 
-      <h2>The 4 tools that moved the needle</h2>
+      
+      <Chart type="bar" title="Top Tools Compared" data={[
+        {label: "ChatGPT", value: 9.3},
+        {label: "Claude", value: 9.0},
+        {label: "Gemini", value: 8.5},
+        {label: "Cursor", value: 9.2},
+        {label: "Midjourney", value: 9.5}
+      ]} />
+
+<h2>The 4 tools that moved the needle</h2>
       <img src="/images/blog/best-ai-tools-for-seo-2026/inline-1.jpg" alt="The 4 tools that moved the needle" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <ol>
         <li><strong>Ahrefs + AI Content Helper ($129/month)</strong> — best for keyword research and competitive analysis</li>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="Meetily Review: The Best Local AI Meeting Assistant in 2026?" description="Meetily is a Rust-based, privacy-first AI meeting assistant that runs 100% locally. We tested its live transcription, summarization, and how it stacks up against Otter and Fireflies." keywords="ai-meeting-assistant, open-source, local-first, self-hosted, productivity, rust">
   <BlogJsonLd slot="head" title="Meetily Review: The Best Local AI Meeting Assistant in 2026?" description="Meetily is a Rust-based, privacy-first AI meeting assistant that runs 100% locally. We tested its live transcription, summarization, and how it stacks up against Otter and Fireflies." slug="meetily-review-best-local-ai-meeting-assistant-2026" date="" author="" category="productivity" keywords="ai-meeting-assistant, open-source, local-first, self-hosted, productivity, rust" tags={["ai-meeting-assistant","open-source","local-first","self-hosted","productivity","rust"]} />
@@ -21,6 +22,17 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
 
     <section class="blog-content">
 <p>If you have hesitated to invite Otter or Fireflies into a sensitive sales call, investor update, or therapy appointment because you do not know where the recording ends up, you are not alone. Meetily, a new Rust-based open-source AI meeting assistant that transcribes and summarizes conversations entirely on your own machine, is quickly climbing GitHub’s trending charts as the privacy-first alternative everyone has been waiting for.</p>
+
+      <Chart type="comparison" title="Feature Comparison" data={{
+        columns: ["Option A", "Option B"],
+        rows: [
+          {label: "Ease of Use", values: [9, 7]},
+          {label: "Price", values: [6, 9]},
+          {label: "Features", values: [8, 6]},
+          {label: "Support", values: [8, 7]}
+        ]
+      }} />
+
 <h2>What Is Meetily?</h2>
       <img src="/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/inline-1.jpg" alt="What Is Meetily?" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
 <p>Meetily is an open-source AI meeting note-taker built in Rust that promises live transcription, speaker diarization, and summarization without sending a single byte to the cloud. It hit the top of GitHub Trending in early July 2026 with more than 8,500 stars in a few days, a signal that developers and knowledge workers are ready for a local-first option in a category long dominated by cloud-only SaaS.</p>

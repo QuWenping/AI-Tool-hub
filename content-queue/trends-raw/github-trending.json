@@ -1,153 +1,153 @@
 ﻿[
   {
     "rank": 1,
-    "repo": "wonderwhy-er/DesktopCommanderMCP",
-    "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+    "repo": "MadsLorentzen/ai-job-search",
+    "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
     "language": "TypeScript",
-    "stars": 8198,
-    "forks": 998,
-    "starsSince": 1939,
-    "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP"
+    "stars": 22503,
+    "forks": 6987,
+    "starsSince": 13195,
+    "url": "https://github.com/MadsLorentzen/ai-job-search"
   },
   {
     "rank": 2,
-    "repo": "abseil/abseil-cpp",
-    "description": "Abseil Common Libraries (C++)",
-    "language": "C++",
-    "stars": 17970,
-    "forks": 3217,
-    "starsSince": 621,
-    "url": "https://github.com/abseil/abseil-cpp"
+    "repo": "wonderwhy-er/DesktopCommanderMCP",
+    "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+    "language": "TypeScript",
+    "stars": 8257,
+    "forks": 1000,
+    "starsSince": 2009,
+    "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP"
   },
   {
     "rank": 3,
-    "repo": "Zackriya-Solutions/meetily",
-    "description": "Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai - https://meetily.ai) is the #1 Self-hosted, Open-source Ai meeting note taker for macOS & Windows. Understand How to write meeting minutes",
-    "language": "Rust",
-    "stars": 24276,
-    "forks": 2544,
-    "starsSince": 5392,
-    "url": "https://github.com/Zackriya-Solutions/meetily"
+    "repo": "abseil/abseil-cpp",
+    "description": "Abseil Common Libraries (C++)",
+    "language": "C++",
+    "stars": 17980,
+    "forks": 3220,
+    "starsSince": 637,
+    "url": "https://github.com/abseil/abseil-cpp"
   },
   {
     "rank": 4,
-    "repo": "TencentCloud/CubeSandbox",
-    "description": "Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.",
-    "language": "Rust",
-    "stars": 10022,
-    "forks": 983,
-    "starsSince": 2367,
-    "url": "https://github.com/TencentCloud/CubeSandbox"
-  },
-  {
-    "rank": 5,
-    "repo": "openai/codex-plugin-cc",
-    "description": "Use Codex from Claude Code to review code or delegate tasks.",
-    "language": "JavaScript",
-    "stars": 28463,
-    "forks": 1874,
-    "starsSince": 2265,
-    "url": "https://github.com/openai/codex-plugin-cc"
-  },
-  {
-    "rank": 6,
-    "repo": "ogulcancelik/herdr",
-    "description": "agent multiplexer that lives in your terminal.",
-    "language": "Rust",
-    "stars": 16190,
-    "forks": 1096,
-    "starsSince": 3449,
-    "url": "https://github.com/ogulcancelik/herdr"
-  },
-  {
-    "rank": 7,
     "repo": "iOfficeAI/OfficeCLI",
     "description": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
     "language": "C#",
-    "stars": 16268,
-    "forks": 1101,
-    "starsSince": 7596,
+    "stars": 16779,
+    "forks": 1120,
+    "starsSince": 7129,
     "url": "https://github.com/iOfficeAI/OfficeCLI"
+  },
+  {
+    "rank": 5,
+    "repo": "stablyai/orca",
+    "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+    "language": "TypeScript",
+    "stars": 19159,
+    "forks": 1497,
+    "starsSince": 5724,
+    "url": "https://github.com/stablyai/orca"
+  },
+  {
+    "rank": 6,
+    "repo": "TencentCloud/CubeSandbox",
+    "description": "Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.",
+    "language": "Rust",
+    "stars": 10161,
+    "forks": 983,
+    "starsSince": 1944,
+    "url": "https://github.com/TencentCloud/CubeSandbox"
+  },
+  {
+    "rank": 7,
+    "repo": "ogulcancelik/herdr",
+    "description": "agent multiplexer that lives in your terminal.",
+    "language": "Rust",
+    "stars": 16493,
+    "forks": 1113,
+    "starsSince": 3115,
+    "url": "https://github.com/ogulcancelik/herdr"
   },
   {
     "rank": 8,
     "repo": "diegosouzapw/OmniRoute",
     "description": "Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
     "language": "TypeScript",
-    "stars": 16938,
-    "forks": 2568,
-    "starsSince": 4345,
+    "stars": 17336,
+    "forks": 2607,
+    "starsSince": 4297,
     "url": "https://github.com/diegosouzapw/OmniRoute"
   },
   {
     "rank": 9,
-    "repo": "asgeirtj/system_prompts_leaks",
-    "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT GPT-5.6, Codex GPT-5.6, GPT-5.5. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
+    "repo": "openai/codex-plugin-cc",
+    "description": "Use Codex from Claude Code to review code or delegate tasks.",
     "language": "JavaScript",
-    "stars": 57394,
-    "forks": 9487,
-    "starsSince": 6284,
-    "url": "https://github.com/asgeirtj/system_prompts_leaks"
+    "stars": 28647,
+    "forks": 1883,
+    "starsSince": 2063,
+    "url": "https://github.com/openai/codex-plugin-cc"
   },
   {
     "rank": 10,
     "repo": "bradautomates/claude-video",
     "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
     "language": "Python",
-    "stars": 8196,
-    "forks": 900,
-    "starsSince": 4128,
+    "stars": 8471,
+    "forks": 922,
+    "starsSince": 3554,
     "url": "https://github.com/bradautomates/claude-video"
   },
   {
     "rank": 11,
-    "repo": "stablyai/orca",
-    "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
-    "language": "TypeScript",
-    "stars": 18485,
-    "forks": 1452,
-    "starsSince": 5263,
-    "url": "https://github.com/stablyai/orca"
-  },
-  {
-    "rank": 12,
     "repo": "tt-a1i/archify",
     "description": "Any agent Skill: generate beautiful architecture diagrams with dark/light theme toggle and PNG/JPEG/WebP/SVG export",
     "language": "JavaScript",
-    "stars": 4271,
-    "forks": 390,
-    "starsSince": 1333,
+    "stars": 4569,
+    "forks": 410,
+    "starsSince": 1519,
     "url": "https://github.com/tt-a1i/archify"
   },
   {
+    "rank": 12,
+    "repo": "Zackriya-Solutions/meetily",
+    "description": "Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai - https://meetily.ai) is the #1 Self-hosted, Open-source Ai meeting note taker for macOS & Windows. Understand How to write meeting minutes",
+    "language": "Rust",
+    "stars": 24653,
+    "forks": 2567,
+    "starsSince": 4389,
+    "url": "https://github.com/Zackriya-Solutions/meetily"
+  },
+  {
     "rank": 13,
-    "repo": "facebook/astryx",
-    "description": "An open source design system that's fully customizable and agent ready",
-    "language": "TypeScript",
-    "stars": 8761,
-    "forks": 730,
-    "starsSince": 2255,
-    "url": "https://github.com/facebook/astryx"
+    "repo": "pbakaus/impeccable",
+    "description": "The design language that makes your AI harness better at design.",
+    "language": "JavaScript",
+    "stars": 46724,
+    "forks": 2814,
+    "starsSince": 2494,
+    "url": "https://github.com/pbakaus/impeccable"
   },
   {
     "rank": 14,
-    "repo": "usestrix/strix",
-    "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
-    "language": "Python",
-    "stars": 41271,
-    "forks": 4343,
-    "starsSince": 3403,
-    "url": "https://github.com/usestrix/strix"
+    "repo": "facebook/astryx",
+    "description": "An open source design system that's fully customizable and agent ready",
+    "language": "TypeScript",
+    "stars": 8969,
+    "forks": 743,
+    "starsSince": 2189,
+    "url": "https://github.com/facebook/astryx"
   },
   {
     "rank": 15,
-    "repo": "alibaba/page-agent",
-    "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
-    "language": "TypeScript",
-    "stars": 26487,
-    "forks": 2431,
-    "starsSince": 1950,
-    "url": "https://github.com/alibaba/page-agent"
+    "repo": "oven-sh/bun",
+    "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
+    "language": "Rust",
+    "stars": 94711,
+    "forks": 4960,
+    "starsSince": 1257,
+    "url": "https://github.com/oven-sh/bun"
   }
 ]
 

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="Best AI Video Generators in 2026: Sora, Runway, Pika, Kling Compared" description="We generated 50+ short videos on every major AI video model in 2026. Here is what each one is good at, where they break, and which is worth your money." keywords="best AI video generator, Sora, Runway, Pika, Kling, text to video, AI video 2026">
   <BlogJsonLd slot="head" title="Best AI Video Generators in 2026: Sora, Runway, Pika, Kling Compared" description="We generated 50+ short videos on every major AI video model in 2026. Here is what each one is good at, where they break, and which is worth your money." slug="best-ai-video-generators-2026" date="2026-07-08" author="AI Tool Hub Editorial" category="Video generation" keywords="best AI video generator, Sora, Runway, Pika, Kling, text to video, AI video 2026" tags={["sora","runway","pika","kling","video-generation"]} />
@@ -23,7 +24,16 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
 
       <p>This guide covers the six tools that are actually worth paying for in 2026. We skipped the dozens of "AI video" wrapper apps that just call one of these models under the hood — the value is in the underlying models, not the wrappers.</p>
 
-      <h2>The short version</h2>
+      
+      <Chart type="bar" title="Top Tools Compared" data={[
+        {label: "ChatGPT", value: 9.3},
+        {label: "Claude", value: 9.0},
+        {label: "Gemini", value: 8.5},
+        {label: "Cursor", value: 9.2},
+        {label: "Midjourney", value: 9.5}
+      ]} />
+
+<h2>The short version</h2>
       <img src="/images/blog/best-ai-video-generators-2026/inline-1.jpg" alt="The short version" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <ul>
         <li><strong>Sora 2 (OpenAI)</strong> — best overall quality and physics, longest clips (20s), most expensive ($20-200/mo).</li>

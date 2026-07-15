@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="How to Use ChatGPT for Coding in 2026 (Step-by-Step Tutorial)" description="A practical 15-minute walkthrough of how to use ChatGPT for real coding work - from setup to debugging to code review. With 8 real examples." keywords="ChatGPT coding, AI programming tutorial, ChatGPT for developers, AI code review, ChatGPT debugging">
   <BlogJsonLd slot="head" title="How to Use ChatGPT for Coding in 2026 (Step-by-Step Tutorial)" description="A practical 15-minute walkthrough of how to use ChatGPT for real coding work - from setup to debugging to code review. With 8 real examples." slug="how-to-use-chatgpt-for-coding-2026" date="2026-06-08" author="Marcus Webb, Senior Engineer" category="Tutorial" keywords="ChatGPT coding, AI programming tutorial, ChatGPT for developers, AI code review, ChatGPT debugging" tags={["chatgpt","coding","tutorial","how-to","prompts"]} />
@@ -21,7 +22,15 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
     <section class="blog-content">
       <p>ChatGPT in 2026 is not the autocomplete toy of 2023. It is now a full coding partner that can scaffold a feature, debug a race condition, write tests, review a PR, and explain a 200-line function in plain English. The catch: most developers use 20% of what it can do. This tutorial covers the 80% that matters, in the order you should learn it.</p>
 
-      <h2>Step 1: Set up ChatGPT for coding (2 minutes)</h2>
+      
+      <Chart type="timeline" title="Learning Path" data={[
+        {date: "Week 1", title: "Getting Started", description: "Learn the basics and set up."},
+        {date: "Week 2", title: "Core Features", description: "Master main features through practice."},
+        {date: "Week 3", title: "Advanced", description: "Explore advanced workflows."},
+        {date: "Week 4", title: "Real Projects", description: "Apply to real-world projects."}
+      ]} />
+
+<h2>Step 1: Set up ChatGPT for coding (2 minutes)</h2>
       <img src="/images/blog/how-to-use-chatgpt-for-coding-2026/inline-1.jpg" alt="Step 1: Set up ChatGPT for coding (2 minutes)" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <p>Go to chatgpt.com and sign up. For coding, the Plus plan at $20/month is the right pick - it gives you GPT-5 with advanced data analysis, image input for screenshots, and the custom GPTs feature. If you are a student, verify your student email and get 2 months free.</p>
       <p><strong>Pro tip:</strong> Go to Settings > Custom Instructions and set two things: who you are (a developer working in [your language/framework]) and how you want responses formatted (concise, with code blocks). This alone improves output quality 20%.</p>

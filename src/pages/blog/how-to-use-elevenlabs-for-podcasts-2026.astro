@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="How to Use ElevenLabs for Podcasts in 2026 (Voice Cloning Tutorial)" description="A 6-step guide to using ElevenLabs voice cloning for real podcast production - from recording your voice sample to deploying the cloned voice across episodes. With audio examples and quality tips." keywords="ElevenLabs voice cloning, ElevenLabs podcast, AI voice tutorial, voice cloning, AI audio production">
   <BlogJsonLd slot="head" title="How to Use ElevenLabs for Podcasts in 2026 (Voice Cloning Tutorial)" description="A 6-step guide to using ElevenLabs voice cloning for real podcast production - from recording your voice sample to deploying the cloned voice across episodes. With audio examples and quality tips." slug="how-to-use-elevenlabs-for-podcasts-2026" date="2026-06-12" author="Marcus Webb, Podcast Producer" category="Tutorial" keywords="ElevenLabs voice cloning, ElevenLabs podcast, AI voice tutorial, voice cloning, AI audio production" tags={["elevenlabs","voice-cloning","podcast","tutorial","how-to"]} />
@@ -21,7 +22,15 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
     <section class="blog-content">
       <p>ElevenLabs voice cloning crossed the indistinguishable from a real human threshold in late 2025. The 2026 version is the standard for AI voice in podcast production, audiobook narration, and video dubbing. This is the practical workflow we use to produce a 5-episode podcast with cloned voice for ad reads and intro/outro segments, including the 3 things that go wrong and how to avoid them.</p>
 
-      <h2>Step 1: Record a clean voice sample (20 minutes)</h2>
+      
+      <Chart type="timeline" title="Learning Path" data={[
+        {date: "Week 1", title: "Getting Started", description: "Learn the basics and set up."},
+        {date: "Week 2", title: "Core Features", description: "Master main features through practice."},
+        {date: "Week 3", title: "Advanced", description: "Explore advanced workflows."},
+        {date: "Week 4", title: "Real Projects", description: "Apply to real-world projects."}
+      ]} />
+
+<h2>Step 1: Record a clean voice sample (20 minutes)</h2>
       <img src="/images/blog/how-to-use-elevenlabs-for-podcasts-2026/inline-1.jpg" alt="Step 1: Record a clean voice sample (20 minutes)" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <p>The quality of the clone is determined by the quality of the sample. The 5 rules for a good sample:</p>
       <ol>

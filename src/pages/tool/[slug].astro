@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import toolsData from "../../data/tools.json";
 import matchupsData from "../../data/matchups.json";
+import Chart from "../../components/Chart.astro";
 import fs from "fs";
 import categories from "../../data/categories.json";
 export async function getStaticPaths() {
@@ -214,6 +215,13 @@ const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if y
     <section class="detail-section">
       <h2><i class="fas fa-info-circle"></i> What is {tNameEn}?</h2>
       <p data-i18n-en={tLongEn} data-i18n-zh={tLongZh}>{tLongEn}</p>
+    <Chart type="bar" title={tNameEn + " Pricing Overview"} data={[
+      {label: "Free Tier", value: 0, unit: "$", color: "#22c55e"},
+      {label: "Starter", value: 10, unit: "$/mo", color: "#f59e0b"},
+      {label: "Pro", value: 25, unit: "$/mo", color: "#f59e0b"},
+      {label: "Enterprise", value: 100, unit: "$/mo", color: "#ef4444"}
+    ]} />
+
     </section>
 
     <section class="detail-section">

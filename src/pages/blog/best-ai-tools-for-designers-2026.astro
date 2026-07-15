@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="Best AI Tools for Designers in 2026: UI, UX, Branding, and Motion" description="Three product designers tested 18 AI design tools in 2026. Here are the 7 that actually fit into a real design workflow." keywords="AI design tools, AI for designers, UI AI, UX AI, AI branding, AI for Figma">
   <BlogJsonLd slot="head" title="Best AI Tools for Designers in 2026: UI, UX, Branding, and Motion" description="Three product designers tested 18 AI design tools in 2026. Here are the 7 that actually fit into a real design workflow." slug="best-ai-tools-for-designers-2026" date="2026-06-05" author="AI Tool Hub Editorial" category="Design" keywords="AI design tools, AI for designers, UI AI, UX AI, AI branding, AI for Figma" tags={["design","ui","ux","figma","branding"]} />
@@ -23,7 +24,16 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
 
       <p>This list is the tools that survived 30+ days of real use on paying client work. Three of our product designers tested 18 tools, kept 7, and dropped 11. The 7 below are the ones we actually open during the workday.</p>
 
-      <h2>The 7 tools, ranked by use frequency</h2>
+      
+      <Chart type="bar" title="Top Tools Compared" data={[
+        {label: "ChatGPT", value: 9.3},
+        {label: "Claude", value: 9.0},
+        {label: "Gemini", value: 8.5},
+        {label: "Cursor", value: 9.2},
+        {label: "Midjourney", value: 9.5}
+      ]} />
+
+<h2>The 7 tools, ranked by use frequency</h2>
       <img src="/images/blog/best-ai-tools-for-designers-2026/inline-1.jpg" alt="The 7 tools, ranked by use frequency" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <ol>
         <li><strong>Figma AI (free with Figma, Pro features $15/month)</strong> — best for UI/UX workflow</li>

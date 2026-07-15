@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="How to Set Up Cursor for Your Development Team in 2026 (5-Step Guide)" description="A 5-step guide to rolling out Cursor across an engineering team - license management, code indexing, custom rules, and how to measure productivity gains. Includes a real team rollout case study." keywords="Cursor for teams, Cursor setup, Cursor enterprise, Cursor team rollout, Cursor productivity">
   <BlogJsonLd slot="head" title="How to Set Up Cursor for Your Development Team in 2026 (5-Step Guide)" description="A 5-step guide to rolling out Cursor across an engineering team - license management, code indexing, custom rules, and how to measure productivity gains. Includes a real team rollout case study." slug="how-to-set-up-cursor-for-your-team-2026" date="2026-06-11" author="Marcus Webb, Senior Engineer" category="Tutorial" keywords="Cursor for teams, Cursor setup, Cursor enterprise, Cursor team rollout, Cursor productivity" tags={["cursor","coding","tutorial","how-to","team"]} />
@@ -21,7 +22,15 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
     <section class="blog-content">
       <p>Rolling out an AI coding tool to a team is not the same as installing it for yourself. The questions change: who pays, who sees what, who controls the rules, how do we measure if it is working? This guide covers the 5 steps that matter, based on what worked (and did not work) when we rolled out Cursor to a 12-engineer team in Q1 2026.</p>
 
-      <h2>Step 1: Pick the right plan (5 minutes)</h2>
+      
+      <Chart type="timeline" title="Learning Path" data={[
+        {date: "Week 1", title: "Getting Started", description: "Learn the basics and set up."},
+        {date: "Week 2", title: "Core Features", description: "Master main features through practice."},
+        {date: "Week 3", title: "Advanced", description: "Explore advanced workflows."},
+        {date: "Week 4", title: "Real Projects", description: "Apply to real-world projects."}
+      ]} />
+
+<h2>Step 1: Pick the right plan (5 minutes)</h2>
       <img src="/images/blog/how-to-set-up-cursor-for-your-team-2026/inline-1.jpg" alt="Step 1: Pick the right plan (5 minutes)" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <p>Cursor has 3 plans that matter for teams:</p>
       <ul>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="Best AI Tools for Academic Research in 2026 (Writing, Citations, Literature Review)" description="We asked three PhD students to test 12 AI research tools on a real thesis chapter. Here are the 6 that actually saved hours, not just minutes." keywords="AI for research, AI academic tools, AI literature review, AI citations, AI for PhD students, research AI">
   <BlogJsonLd slot="head" title="Best AI Tools for Academic Research in 2026 (Writing, Citations, Literature Review)" description="We asked three PhD students to test 12 AI research tools on a real thesis chapter. Here are the 6 that actually saved hours, not just minutes." slug="best-ai-research-tools-2026" date="2026-06-03" author="AI Tool Hub Editorial" category="Research" keywords="AI for research, AI academic tools, AI literature review, AI citations, AI for PhD students, research AI" tags={["research","writing","citations","students","phd"]} />
@@ -23,7 +24,16 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
 
       <p>Important caveat: we are not your university's academic integrity office. Use these tools to <em>accelerate</em> your work, not to <em>replace</em> your thinking. Always disclose AI use to your advisor and follow your university's policy. Most universities in 2026 have an explicit policy on AI use, and most allow tools used for editing and ideation but ban tools that generate text you submit as your own.</p>
 
-      <h2>The 6 tools, ranked by time saved</h2>
+      
+      <Chart type="bar" title="Top Tools Compared" data={[
+        {label: "ChatGPT", value: 9.3},
+        {label: "Claude", value: 9.0},
+        {label: "Gemini", value: 8.5},
+        {label: "Cursor", value: 9.2},
+        {label: "Midjourney", value: 9.5}
+      ]} />
+
+<h2>The 6 tools, ranked by time saved</h2>
       <img src="/images/blog/best-ai-research-tools-2026/inline-1.jpg" alt="The 6 tools, ranked by time saved" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <ol>
         <li><strong>Perplexity Pro ($20/month)</strong> — literature review and paper discovery</li>

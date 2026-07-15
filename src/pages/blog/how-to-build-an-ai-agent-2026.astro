@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="How to Build an AI Agent in 2026 (No Code Required)" description="A practical guide to building an AI agent in 2026 without code. The 5 platforms, the 7-step build process, the 4 use cases, and the 3 things to avoid." keywords="AI agent, no code AI, build AI agent, AI agent builder, AI automation">
   <BlogJsonLd slot="head" title="How to Build an AI Agent in 2026 (No Code Required)" description="A practical guide to building an AI agent in 2026 without code. The 5 platforms, the 7-step build process, the 4 use cases, and the 3 things to avoid." slug="how-to-build-an-ai-agent-2026" date="2026-06-15" author="Marcus Webb, Senior Engineer" category="Tutorial" keywords="AI agent, no code AI, build AI agent, AI agent builder, AI automation" tags={[]} />
@@ -21,7 +22,15 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
     <section class="blog-content">
       <p>AI agents are the most important development in 2026. The no-code tools have finally caught up - you can build a useful AI agent in an afternoon, no engineering background required. This guide walks you through the entire process: choosing a platform, designing the agent, building it, testing it, and deploying it. By the end, you will have a working AI agent you built yourself.</p>
 
-      <h2>The 5 best no-code AI agent platforms</h2>
+      
+      <Chart type="timeline" title="Learning Path" data={[
+        {date: "Week 1", title: "Getting Started", description: "Learn the basics and set up."},
+        {date: "Week 2", title: "Core Features", description: "Master main features through practice."},
+        {date: "Week 3", title: "Advanced", description: "Explore advanced workflows."},
+        {date: "Week 4", title: "Real Projects", description: "Apply to real-world projects."}
+      ]} />
+
+<h2>The 5 best no-code AI agent platforms</h2>
       <img src="/images/blog/how-to-build-an-ai-agent-2026/inline-1.jpg" alt="The 5 best no-code AI agent platforms" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
 
       <h3>Platform 1: n8n (free + $20/month)</h3>

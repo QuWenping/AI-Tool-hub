@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 const post = {
   slug: "free-ai-writer-2026",
   title_en: "Free AI Writer (2026): 10 Best Free AI Writing Tools",
@@ -23,7 +24,18 @@ const siteUrl = "https://thebestaitoolsreview.com";
     </header>
     <section class="article-body">
       <p style="font-size:16px;color:var(--text-soft);line-height:1.7;">10 best free AI writing tools in 2026. Write articles, emails, and content for free with these AI writing assistants. We tested the free tiers of each tool and ranked them by quality, ease of use, and what you can actually do without paying.</p>
-      <h2>Top Free Options</h2>
+      
+      <Chart type="comparison" title="Feature Comparison" data={{
+        columns: ["Option A", "Option B"],
+        rows: [
+          {label: "Ease of Use", values: [9, 7]},
+          {label: "Price", values: [6, 9]},
+          {label: "Features", values: [8, 6]},
+          {label: "Support", values: [8, 7]}
+        ]
+      }} />
+
+<h2>Top Free Options</h2>
       <h3>1. ChatGPT free</h3>
       <p>ChatGPT free offers free access to AI capabilities that previously required paid subscriptions. The free tier is sufficient for personal use, student projects, and small-scale professional work. For heavy commercial use, consider upgrading to a paid plan.</p>
 

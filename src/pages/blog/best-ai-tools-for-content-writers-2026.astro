@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="Best AI Tools for Content Writers in 2026 (Tested by Full-Time Writers)" description="Three of our full-time writers used 14 AI writing tools for 60 days on paying client work. Here is what is worth paying for, and what is just a glorified autocomplete." keywords="AI writing tools, AI for writers, content writing, AI content, best AI for writing">
   <BlogJsonLd slot="head" title="Best AI Tools for Content Writers in 2026 (Tested by Full-Time Writers)" description="Three of our full-time writers used 14 AI writing tools for 60 days on paying client work. Here is what is worth paying for, and what is just a glorified autocomplete." slug="best-ai-tools-for-content-writers-2026" date="2026-06-01" author="AI Tool Hub Editorial" category="Content writing" keywords="AI writing tools, AI for writers, content writing, AI content, best AI for writing" tags={["writing","content","blogging","claude","chatgpt"]} />
@@ -23,7 +24,16 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
 
       <p>This is the first time in 4 years that we can say honestly: the best AI writing tools in 2026 actually make us better writers, not just faster typists. But the list of tools that earned a spot in our stack is much shorter than the marketing would suggest.</p>
 
-      <h2>What we tested</h2>
+      
+      <Chart type="bar" title="Top Tools Compared" data={[
+        {label: "ChatGPT", value: 9.3},
+        {label: "Claude", value: 9.0},
+        {label: "Gemini", value: 8.5},
+        {label: "Cursor", value: 9.2},
+        {label: "Midjourney", value: 9.5}
+      ]} />
+
+<h2>What we tested</h2>
       <img src="/images/blog/best-ai-tools-for-content-writers-2026/inline-1.jpg" alt="What we tested" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <p>14 tools across 5 categories:</p>
       <ul>

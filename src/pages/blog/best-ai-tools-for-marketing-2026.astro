@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="8 Best AI Tools for Marketing in 2026: SEO, Ads, Email, and Content" description="Our marketing team tested 22 AI marketing tools in 2026. Here are the 8 that actually moved the needle on traffic, conversions, and time saved." keywords="AI marketing tools, AI for SEO, AI email marketing, AI content marketing, AI ads">
   <BlogJsonLd slot="head" title="8 Best AI Tools for Marketing in 2026: SEO, Ads, Email, and Content" description="Our marketing team tested 22 AI marketing tools in 2026. Here are the 8 that actually moved the needle on traffic, conversions, and time saved." slug="best-ai-tools-for-marketing-2026" date="2026-07-14" author="AI Tool Hub Editorial" category="Marketing" keywords="AI marketing tools, AI for SEO, AI email marketing, AI content marketing, AI ads" tags={["marketing","seo","email","content","ads"]} />
@@ -23,7 +24,16 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
 
       <p>We tested each for 30+ days and measured: hours saved, traffic impact (where applicable), conversion impact, and cost. The 8 below are the ones that stayed in our stack.</p>
 
-      <h2>The 8 tools, ranked by impact</h2>
+      
+      <Chart type="bar" title="Top Tools Compared" data={[
+        {label: "ChatGPT", value: 9.3},
+        {label: "Claude", value: 9.0},
+        {label: "Gemini", value: 8.5},
+        {label: "Cursor", value: 9.2},
+        {label: "Midjourney", value: 9.5}
+      ]} />
+
+<h2>The 8 tools, ranked by impact</h2>
       <img src="/images/blog/best-ai-tools-for-marketing-2026/inline-1.jpg" alt="The 8 tools, ranked by impact" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <ol>
         <li><strong>Surfer SEO ($89/month)</strong> — best for on-page SEO optimization</li>

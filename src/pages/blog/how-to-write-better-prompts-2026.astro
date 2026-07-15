@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="How to Write Better AI Prompts in 2026 (Real Examples, Not Theory)" description="We A/B tested 200+ prompt variations across ChatGPT, Claude, and Midjourney. Here are the 9 patterns that consistently produced better outputs." keywords="AI prompt engineering, prompt writing, better prompts, ChatGPT prompts, Claude prompts, Midjourney prompts">
   <BlogJsonLd slot="head" title="How to Write Better AI Prompts in 2026 (Real Examples, Not Theory)" description="We A/B tested 200+ prompt variations across ChatGPT, Claude, and Midjourney. Here are the 9 patterns that consistently produced better outputs." slug="how-to-write-better-prompts-2026" date="2026-06-06" author="AI Tool Hub Editorial" category="Guide" keywords="AI prompt engineering, prompt writing, better prompts, ChatGPT prompts, Claude prompts, Midjourney prompts" tags={["prompts","guide","writing","tutorial"]} />
@@ -23,7 +24,15 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
 
       <p>None of these are magic. They are the patterns that survive contact with the real world. Apply them and the output quality jumps 30-50% in our testing.</p>
 
-      <h2>Pattern 1: Set the role, not the task</h2>
+      
+      <Chart type="timeline" title="Learning Path" data={[
+        {date: "Week 1", title: "Getting Started", description: "Learn the basics and set up."},
+        {date: "Week 2", title: "Core Features", description: "Master main features through practice."},
+        {date: "Week 3", title: "Advanced", description: "Explore advanced workflows."},
+        {date: "Week 4", title: "Real Projects", description: "Apply to real-world projects."}
+      ]} />
+
+<h2>Pattern 1: Set the role, not the task</h2>
       <img src="/images/blog/how-to-write-better-prompts-2026/inline-1.jpg" alt="Pattern 1: Set the role, not the task" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <p><strong>Weak prompt:</strong> "Write me a marketing email for a SaaS product."</p>
       <p><strong>Strong prompt:</strong> "You are a senior B2B SaaS copywriter with 10 years of experience writing for early-stage startups. Write a marketing email for [product] targeting [ICP]. The email should be under 150 words, conversational, and end with a single clear CTA."</p>

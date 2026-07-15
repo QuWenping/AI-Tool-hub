@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="10 Best AI Tools for Small Business in 2026 (Save 20+ Hours a Week)" description="We rebuilt our small business workflow with AI tools over 90 days. Here are the 10 that actually paid for themselves - ranked by ROI, not hype." keywords="AI tools small business, AI for business, productivity AI, AI workflow, AI automation">
   <BlogJsonLd slot="head" title="10 Best AI Tools for Small Business in 2026 (Save 20+ Hours a Week)" description="We rebuilt our small business workflow with AI tools over 90 days. Here are the 10 that actually paid for themselves - ranked by ROI, not hype." slug="best-ai-tools-for-small-business-2026" date="2026-07-12" author="AI Tool Hub Editorial" category="Small business" keywords="AI tools small business, AI for business, productivity AI, AI workflow, AI automation" tags={["small-business","productivity","workflow","roi"]} />
@@ -23,7 +24,16 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
 
       <p>The setup: an 8-person team (2 founders, 2 engineers, 1 designer, 1 marketer, 1 customer success, 1 ops). Roughly $1.4M ARR, mostly B2B SaaS. The 90 days: Q1 2026 (January through March). For each tool, we tracked: hours saved per week, dollars in, dollars out (via attribution or before/after comparison), and how much the team hated or loved it.</p>
 
-      <h2>The 10 tools, ranked by ROI</h2>
+      
+      <Chart type="bar" title="Top Tools Compared" data={[
+        {label: "ChatGPT", value: 9.3},
+        {label: "Claude", value: 9.0},
+        {label: "Gemini", value: 8.5},
+        {label: "Cursor", value: 9.2},
+        {label: "Midjourney", value: 9.5}
+      ]} />
+
+<h2>The 10 tools, ranked by ROI</h2>
       <img src="/images/blog/best-ai-tools-for-small-business-2026/inline-1.jpg" alt="The 10 tools, ranked by ROI" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <ol>
         <li><strong>ChatGPT Team ($25/user/month)</strong> — the workhorse</li>

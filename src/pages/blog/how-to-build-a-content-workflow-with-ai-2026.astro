@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="How to Build a Content Workflow with AI in 2026 (Full Stack)" description="A real content team workflow from research to publishing, with the exact tools, prompts, and automations used by our editorial team. 7 stages, 13 tools, 4 hours/week saved." keywords="AI content workflow, content production AI, AI editorial workflow, AI writing stack, content marketing AI">
   <BlogJsonLd slot="head" title="How to Build a Content Workflow with AI in 2026 (Full Stack)" description="A real content team workflow from research to publishing, with the exact tools, prompts, and automations used by our editorial team. 7 stages, 13 tools, 4 hours/week saved." slug="how-to-build-a-content-workflow-with-ai-2026" date="2026-06-13" author="Daniel Park, Marketing Lead" category="Tutorial" keywords="AI content workflow, content production AI, AI editorial workflow, AI writing stack, content marketing AI" tags={["workflow","content","tutorial","how-to","automation"]} />
@@ -21,7 +22,15 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
     <section class="blog-content">
       <p>This is the full content workflow our 3-person content team uses to produce 12 posts per week - up from 4 posts per week with the same headcount. It is not theoretical. It is the actual stack, in the actual order, with the actual prompts. If you are a content team of 1-10 people and you want to 2-3x your output without sacrificing quality, this is the playbook.</p>
 
-      <h2>The 7-stage workflow (overview)</h2>
+      
+      <Chart type="timeline" title="Learning Path" data={[
+        {date: "Week 1", title: "Getting Started", description: "Learn the basics and set up."},
+        {date: "Week 2", title: "Core Features", description: "Master main features through practice."},
+        {date: "Week 3", title: "Advanced", description: "Explore advanced workflows."},
+        {date: "Week 4", title: "Real Projects", description: "Apply to real-world projects."}
+      ]} />
+
+<h2>The 7-stage workflow (overview)</h2>
       <img src="/images/blog/how-to-build-a-content-workflow-with-ai-2026/inline-1.jpg" alt="The 7-stage workflow (overview)" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <p>Every piece of content we publish goes through these 7 stages. The AI tools are different per stage, but the workflow is consistent. Total time per piece: from 6 hours (old way) to 2.5 hours (new way).</p>
       <ol>

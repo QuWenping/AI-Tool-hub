@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="Best AI Tools for Podcasters in 2026: Recording, Editing, Transcription, Clips" description="We rebuilt a 5-episode podcast with AI tools in 2026. Here are the 7 that cut production time in half without hurting quality." keywords="AI for podcasters, podcast AI tools, AI audio editing, podcast transcription AI, AI clips">
   <BlogJsonLd slot="head" title="Best AI Tools for Podcasters in 2026: Recording, Editing, Transcription, Clips" description="We rebuilt a 5-episode podcast with AI tools in 2026. Here are the 7 that cut production time in half without hurting quality." slug="best-ai-tools-for-podcasters-2026" date="2026-06-07" author="AI Tool Hub Editorial" category="Podcasters" keywords="AI for podcasters, podcast AI tools, AI audio editing, podcast transcription AI, AI clips" tags={["podcasters","audio","descript","elevenlabs","video-generation"]} />
@@ -23,7 +24,16 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
 
       <p>The setup: a 5-episode long-form interview podcast. Episodes run 60-90 minutes. We publish on Spotify, Apple, YouTube, and Substack. The audience is B2B SaaS founders and PMs. Our previous workflow took ~25 hours per episode end-to-end. The new workflow takes ~13 hours. The quality is the same or better.</p>
 
-      <h2>The 7 tools, ranked by time saved</h2>
+      
+      <Chart type="bar" title="Top Tools Compared" data={[
+        {label: "ChatGPT", value: 9.3},
+        {label: "Claude", value: 9.0},
+        {label: "Gemini", value: 8.5},
+        {label: "Cursor", value: 9.2},
+        {label: "Midjourney", value: 9.5}
+      ]} />
+
+<h2>The 7 tools, ranked by time saved</h2>
       <img src="/images/blog/best-ai-tools-for-podcasters-2026/inline-1.jpg" alt="The 7 tools, ranked by time saved" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <ol>
         <li><strong>Riverside.fm ($24/month Standard)</strong> — best for remote recording</li>

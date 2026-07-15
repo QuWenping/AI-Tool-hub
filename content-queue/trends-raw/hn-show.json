@@ -1,183 +1,183 @@
 ﻿[
   {
     "rank": 1,
-    "id": 48898154,
-    "title": "Show HN: YouTube Guitar Tab Parser",
-    "score": 87,
-    "author": "neogenix",
-    "comments": 56,
-    "url": "https://github.com/marcelpanse/youtube-guitar-tab-parser"
+    "id": 48908271,
+    "title": "Show HN: Opening lines of famous literary works",
+    "score": 143,
+    "author": "plicerin",
+    "comments": 80,
+    "url": "https://www.verbaprima.com/"
   },
   {
     "rank": 2,
-    "id": 48900319,
-    "title": "Show HN: Sx 2.0 – Share AI skills with your team through a Dropbox folder",
-    "score": 25,
-    "author": "detkin",
-    "comments": 26,
-    "url": "https://sleuth-io.github.io/sx/2026/07/10/your-dropbox-is-now-a-skill-server.html"
+    "id": 48883305,
+    "title": "Show HN: Juggler – an open-source GUI coding agent, by the creator of JUCE",
+    "score": 174,
+    "author": "julesrms",
+    "comments": 79,
+    "url": "https://github.com/juggler-ai/juggler"
   },
   {
     "rank": 3,
-    "id": 48893550,
-    "title": "Show HN: Hackney – Compare Uber, Lyft, Waymo, and Robotaxi Prices",
-    "score": 39,
-    "author": "griffinli",
-    "comments": 29,
-    "url": "https://hackney.app/"
+    "id": 48914954,
+    "title": "Show HN: Vehir – a platform built for AI agents: compiler, microkernel, CAS",
+    "score": 2,
+    "author": "dewdgi",
+    "comments": 0,
+    "url": "https://github.com/grigoriitropin/vehir-platform"
   },
   {
     "rank": 4,
-    "id": 48894630,
-    "title": "Show HN: Jacquard, a programming language for AI-written, human-reviewed code",
-    "score": 66,
-    "author": "jbwinters",
-    "comments": 39,
-    "url": "https://github.com/jbwinters/jacquard-lang"
+    "id": 48905919,
+    "title": "Show HN: I RL-trained an agent that trains models with RL (for ~$1.3k)",
+    "score": 96,
+    "author": "Danau5tin",
+    "comments": 42,
+    "url": "https://github.com/Danau5tin/ai-trains-ai"
   },
   {
     "rank": 5,
-    "id": 48852144,
-    "title": "Show HN: RandoFont – A browser for Google Fonts",
-    "score": 30,
-    "author": "aleshh",
-    "comments": 5,
-    "url": "https://randofont.alesh.com"
+    "id": 48905914,
+    "title": "Show HN: Beautiful Type Erasure with C++26 Reflection",
+    "score": 109,
+    "author": "RyanJK5",
+    "comments": 47,
+    "url": "https://ryanjk5.github.io/posts/rjk-duck/"
   },
   {
     "rank": 6,
-    "id": 48897975,
-    "title": "Show HN: I implemented a neural network in SQL",
-    "score": 69,
-    "author": "alxmrs",
-    "comments": 16,
-    "url": "https://github.com/xqlsystems/xarray-sql/blob/claude/xarray-sql-mnist-demo/benchmarks/nn.py"
+    "id": 48914589,
+    "title": "Show HN: Digital De-Centralized Internship",
+    "score": 2,
+    "author": "joey9prints",
+    "comments": 0,
+    "url": "https://lab.cedarridge.capital/"
   },
   {
     "rank": 7,
-    "id": 48896599,
-    "title": "Show HN: BillAI Bass, an AI-Powered Big Mouth Billy Bass Using Strands Agents",
-    "score": 64,
-    "author": "mtw14",
-    "comments": 27,
-    "url": "https://github.com/morganwilliscloud/billai-bass"
+    "id": 48911854,
+    "title": "Show HN: Flashbang – DuckDuckGo bangs resolved locally with a Service Worker",
+    "score": 9,
+    "author": "t3ntxcles",
+    "comments": 1,
+    "url": "https://flashbang-dyr.pages.dev"
   },
   {
     "rank": 8,
-    "id": 48902068,
-    "title": "Show HN: Self-hosting unpruned GLM-5.2 on a 4-node DGX Spark cluster",
+    "id": 48914428,
+    "title": "Show HN: Asciitopia – a library of animated ASCII art patterns",
     "score": 2,
-    "author": "deepseaOne",
+    "author": "flawn",
     "comments": 0,
-    "url": "https://github.com/XanuNetworks/GLM-5.2-QuantTrio-DCP-4x-DGX-Spark"
+    "url": "https://github.com/flawnn/asciitopia"
   },
   {
     "rank": 9,
-    "id": 48902056,
-    "title": "Show HN: Open-source background location tracking SDK for Android and iOS",
+    "id": 48914420,
+    "title": "Show HN: Self-hosted Minecraft multi-server panel for vanilla and modpacks",
     "score": 2,
-    "author": "tananaev",
+    "author": "ahmednefzaoui",
     "comments": 0,
-    "url": "https://www.traccar.org/blog/traccar-client-sdk/"
+    "url": "https://github.com/anefzaoui/minecraft-server-manager"
   },
   {
     "rank": 10,
-    "id": 48891267,
-    "title": "Show HN: DOM-docx – HTML to native, editable Word docs (MIT)",
-    "score": 141,
-    "author": "fishbone",
-    "comments": 33,
-    "url": "https://github.com/floodtide/dom-docx"
+    "id": 48911998,
+    "title": "Show HN: A Free RSS reader with a configurable recommendation engine",
+    "score": 11,
+    "author": "sammy0910",
+    "comments": 7,
+    "url": "https://sprinklz.io/feed/home"
   },
   {
     "rank": 11,
-    "id": 48901987,
-    "title": "Show HN:PandaClip a local mcp tool for an agents working state",
-    "score": 3,
-    "author": "VektorGeist",
-    "comments": 0,
-    "url": "https://github.com/xfloukiex-lab/pandaclip"
+    "id": 48887276,
+    "title": "Show HN: Self-hosted voice AI agent for Asterisk/FreePBX",
+    "score": 24,
+    "author": "hkjarral",
+    "comments": 10,
+    "url": "https://github.com/hkjarral/AVA-AI-Voice-Agent-for-Asterisk"
   },
   {
     "rank": 12,
-    "id": 48901940,
-    "title": "Show HN: An autonomous SOC built to refuse causation it can't prove",
-    "score": 2,
-    "author": "MohammadKhubaib",
+    "id": 48913174,
+    "title": "Show HN: Voidfall – Space looter shooter in the browser",
+    "score": 3,
+    "author": "nickyvanurk",
     "comments": 0,
-    "url": "https://www.domesoc.com/"
+    "url": "https://github.com/nickyvanurk/voidfall"
   },
   {
     "rank": 13,
-    "id": 48901051,
-    "title": "Show HN: MemStitch – Zero-copy context bridging for vLLM (25x TTFT speedup)",
-    "score": 6,
-    "author": "daqulalin",
-    "comments": 1,
-    "url": "https://github.com/DaqulaLin/MemStitch"
+    "id": 48912702,
+    "title": "Show HN: A dashboard for tracking SK Hynix price gaps across exchanges",
+    "score": 3,
+    "author": "jaxzxu",
+    "comments": 0,
+    "url": "https://jaxzxu.com/skhynix"
   },
   {
     "rank": 14,
-    "id": 48898071,
-    "title": "Show HN: Sigwire – a live TUI switchboard for every signal on your Linux box",
-    "score": 29,
-    "author": "zasc",
-    "comments": 14,
-    "url": "https://github.com/yeet-src/sigwire"
+    "id": 48913614,
+    "title": "Show HN: DevQuest – live GitHub profile cards and a daily repository battle",
+    "score": 3,
+    "author": "hizyyo",
+    "comments": 1,
+    "url": "https://github.com/yiaany/devquest"
   },
   {
     "rank": 15,
-    "id": 48901763,
-    "title": "Show HN: A MCP for Agents to reverse engineer binary code",
-    "score": 2,
-    "author": "Mplto",
-    "comments": 0,
-    "url": "https://github.com/morluto/rea"
-  },
-  {
-    "rank": 16,
-    "id": 48896179,
-    "title": "Show HN: OpenClawMachines – Extending OpenClaw to the Enterprise",
-    "score": 26,
-    "author": "mathaix",
-    "comments": 26,
-    "url": "https://github.com/mathaix/OpenClawMachines"
-  },
-  {
-    "rank": 17,
     "id": 48892859,
     "title": "Show HN: Clawk – Give coding agents a disposable Linux VM, not your laptop",
-    "score": 179,
+    "score": 215,
     "author": "celrenheit",
-    "comments": 140,
+    "comments": 156,
     "url": "https://github.com/clawkwork/clawk"
   },
   {
+    "rank": 16,
+    "id": 48913553,
+    "title": "Show HN: Mechacraft.io – Browser Vehicle Builder",
+    "score": 3,
+    "author": "nickyvanurk",
+    "comments": 0,
+    "url": "https://mechacraft.io/"
+  },
+  {
+    "rank": 17,
+    "id": 48913303,
+    "title": "Show HN: Pupul, portable and revocable memory you carry into any AI",
+    "score": 2,
+    "author": "coleaalkire",
+    "comments": 0,
+    "url": "https://pupulcorp.com/revoke-demo"
+  },
+  {
     "rank": 18,
-    "id": 48900288,
-    "title": "Show HN: ContextVault – Shared memory layer for your AI and your team",
-    "score": 8,
-    "author": "Repeater22746",
+    "id": 48911920,
+    "title": "Show HN: An Interactive Guide for Castlevania II: Simon's Quest",
+    "score": 5,
+    "author": "baclap",
     "comments": 2,
-    "url": "https://www.contextvault.dev/"
+    "url": "https://theultimatesimonsquestguide.com/"
   },
   {
     "rank": 19,
-    "id": 48899620,
-    "title": "Show HN: I built a one-prompt hackathon platform, free entry, sponsored prizes",
-    "score": 10,
-    "author": "lucasmartinic",
-    "comments": 5,
-    "url": "https://1shotchallenge.ai"
+    "id": 48897975,
+    "title": "Show HN: I implemented a neural network in SQL",
+    "score": 111,
+    "author": "alxmrs",
+    "comments": 19,
+    "url": "https://github.com/xqlsystems/xarray-sql/blob/claude/xarray-sql-mnist-demo/benchmarks/nn.py"
   },
   {
     "rank": 20,
-    "id": 48900205,
-    "title": "Show HN: Taetype – a complete font engine for Rust and WASM",
-    "score": 4,
-    "author": "silly-tae",
-    "comments": 1,
-    "url": "https://github.com/silly-tae/taetype"
+    "id": 48904912,
+    "title": "Show HN: Rejourney – Open-source revenue leak prediction for web and mobile apps",
+    "score": 30,
+    "author": "mrr7337",
+    "comments": 6,
+    "url": "https://github.com/rejourneyco/rejourney"
   }
 ]
 

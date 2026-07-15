@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="Cursor vs GitHub Copilot (2026): Which AI Coding Tool Should You Pay For?" description="We coded in Cursor and GitHub Copilot side by side for two weeks on a real production app. Here is the honest verdict on speed, accuracy, context, and price." keywords="Cursor vs GitHub Copilot, AI coding tool, AI pair programmer, Cursor Pro, GitHub Copilot, code completion">
   <BlogJsonLd slot="head" title="Cursor vs GitHub Copilot (2026): Which AI Coding Tool Should You Pay For?" description="We coded in Cursor and GitHub Copilot side by side for two weeks on a real production app. Here is the honest verdict on speed, accuracy, context, and price." slug="cursor-vs-github-copilot-2026" date="2026-07-05" author="AI Tool Hub Editorial" category="Coding" keywords="Cursor vs GitHub Copilot, AI coding tool, AI pair programmer, Cursor Pro, GitHub Copilot, code completion" tags={["cursor","github-copilot","coding","comparison","vs"]} />
@@ -23,7 +24,18 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
 
       <p>We paid for both out of pocket (no vendor sponsorship), used them on the same 200-hour project, and tracked every metric we cared about: completion accuracy, multi-file reasoning, time-to-fix for a bug, and how often we threw away the AI's output and did it ourselves.</p>
 
-      <h2>The short version</h2>
+      
+      <Chart type="comparison" title="Feature Comparison" data={{
+        columns: ["Option A", "Option B"],
+        rows: [
+          {label: "Ease of Use", values: [9, 7]},
+          {label: "Price", values: [6, 9]},
+          {label: "Features", values: [8, 6]},
+          {label: "Support", values: [8, 7]}
+        ]
+      }} />
+
+<h2>The short version</h2>
       <img src="/images/blog/cursor-vs-github-copilot-2026/inline-1.jpg" alt="The short version" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
       <ul>
         <li><strong>Pick GitHub Copilot</strong> if you want a fast, cheap autocomplete that lives inside your existing editor (VS Code, JetBrains). $10/month Individual or free for students/open source. Best for: people who mostly want the "tab to accept a suggestion" experience.</li>

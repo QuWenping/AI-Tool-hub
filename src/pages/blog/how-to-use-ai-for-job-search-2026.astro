@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import Chart from "../../components/Chart.astro";
 ---
 <BaseLayout title="How to Use AI for Job Search in 2026 (Resume, Interview, Negotiation)" description="A practical guide to using AI for job search in 2026. The 5 best tools, the 6 workflows (resume, cover letter, interview, networking, negotiation), and the 3 things to avoid." keywords="AI for job search, AI resume, AI interview, AI cover letter, AI job hunt">
   <BlogJsonLd slot="head" title="How to Use AI for Job Search in 2026 (Resume, Interview, Negotiation)" description="A practical guide to using AI for job search in 2026. The 5 best tools, the 6 workflows (resume, cover letter, interview, networking, negotiation), and the 3 things to avoid." slug="how-to-use-ai-for-job-search-2026" date="2026-06-20" author="Lin Chen, Lead Reviewer" category="Tutorial" keywords="AI for job search, AI resume, AI interview, AI cover letter, AI job hunt" tags={[]} />
@@ -21,7 +22,15 @@ import BlogJsonLd from "../../components/BlogJsonLd.astro";
     <section class="blog-content">
       <p>AI has transformed job search. The job seekers using AI well in 2026 are landing interviews 2-3x faster, with better resumes, better interview performance, and higher offer rates. The job seekers using AI poorly are sending generic AI resumes that all look the same and missing out. This guide is for job seekers who want to be in the first group.</p>
 
-      <h2>The 5 best AI job search tools in 2026</h2>
+      
+      <Chart type="timeline" title="Learning Path" data={[
+        {date: "Week 1", title: "Getting Started", description: "Learn the basics and set up."},
+        {date: "Week 2", title: "Core Features", description: "Master main features through practice."},
+        {date: "Week 3", title: "Advanced", description: "Explore advanced workflows."},
+        {date: "Week 4", title: "Real Projects", description: "Apply to real-world projects."}
+      ]} />
+
+<h2>The 5 best AI job search tools in 2026</h2>
       <img src="/images/blog/how-to-use-ai-for-job-search-2026/inline-1.jpg" alt="The 5 best AI job search tools in 2026" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
 
       <h3>Tool 1: ChatGPT Plus ($20/month)</h3>
