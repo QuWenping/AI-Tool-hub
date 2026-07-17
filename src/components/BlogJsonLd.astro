@@ -10,22 +10,25 @@ const {
   tags = Array.isArray(post.tags) ? post.tags : [],
   keywords = post.keywords ?? ''
 } = Astro.props;
+// Ensure title and description have fallback values to avoid empty structured data
+const safeTitle = (title ?? "").trim() || "Untitled Article";
+const safeDescription = (description ?? "").trim() || (safeTitle ? `Description for ${safeTitle}` : "");
 const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/blog/" + slug + "/";
 const kw = (keywords && keywords.trim())
   ? keywords.trim()
-  : ((tags && tags.length) ? tags.join(", ") : [category, title].filter(Boolean).join(", "));
+  : ((tags && tags.length) ? tags.join(", ") : [category, safeTitle].filter(Boolean).join(", "));
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": title,
-  "description": description,
+  "headline": safeTitle,
+  "description": safeDescription,
   "url": pageUrl,
   "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
   "image": { "@type": "ImageObject", "url": siteUrl + "/og-image.svg", "width": 1200, "height": 630 },
   "datePublished": date,
   "dateModified": date,
-  "author": { "@type": "Person", "name": author },
+  "author": { "@type": "Person", "name": author || "AI Tool Hub Editorial" },
   "publisher": {
     "@type": "Organization",
     "name": "AI Tool Hub",
@@ -47,7 +50,7 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl + "/" },
     { "@type": "ListItem", "position": 2, "name": "Blog", "item": siteUrl + "/blog/" },
-    { "@type": "ListItem", "position": 3, "name": title, "item": pageUrl }
+    { "@type": "ListItem", "position": 3, "name": safeTitle, "item": pageUrl }
   ]
 };
 const faqSchema = {
@@ -55,8 +58,8 @@ const faqSchema = {
   "@type": "FAQPage",
   "url": pageUrl,
   "mainEntity": [
-    { "@type": "Question", "name": `What is ${title}?`, "acceptedAnswer": { "@type": "Answer", "text": description } },
-    { "@type": "Question", "name": "Who is this for?", "acceptedAnswer": { "@type": "Answer", "text": `Anyone interested in ${category} - ${description}` } },
+    { "@type": "Question", "name": `What is ${safeTitle}?`, "acceptedAnswer": { "@type": "Answer", "text": safeDescription } },
+    { "@type": "Question", "name": "Who is this for?", "acceptedAnswer": { "@type": "Answer", "text": `Anyone interested in ${category} - ${safeDescription}` } },
     { "@type": "Question", "name": "How was this content created?", "acceptedAnswer": { "@type": "Answer", "text": "Our editorial team tested real AI tools on real work over multiple weeks before publishing this review." } }
   ]
 };
