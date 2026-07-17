@@ -1,0 +1,85 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import toolsData from "../../../data/tools.json";
+import workflows from "../../../data/workflows.json";
+const agentTools = ["n8n","dify","crewai","langgraph","autogen","autogpt","agentgpt","llamaindex","browser-use","multion","lindy","bardeen","claude-computer-use","make-com"];
+const tools = agentTools.map(id => ({ id, ...toolsData[id] })).filter(t => t && t.name);
+const agentWorkflows = workflows.filter(w => w.category === "Agent" || w.category === "Automation" || w.tool === "n8n" || w.tool === "Dify" || w.tool === "MCP");
+const frameworkTypes = [
+  { name: "代码框架", tools: ["langgraph","autogen","crewai","llamaindex"], desc: "面向开发者的 Python 框架，构建自定义多 Agent 系统。灵活性最高，需要编程能力。" },
+  { name: "可视化自动化平台", tools: ["n8n","dify","make-com","lindy","bardeen"], desc: "无代码/低代码平台，可视化编辑器构建自动化。适合非技术用户。" },
+  { name: "浏览器和桌面 Agent", tools: ["browser-use","multion","claude-computer-use"], desc: "控制浏览器或桌面应用执行任务的 Agent。" },
+  { name: "自主目标 Agent", tools: ["autogpt","agentgpt"], desc: "自主分解高层目标并执行的 Agent。" }
+];
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/best/ai-agents/";
+const faqItems = [
+  { q: "什么是 AI Agent？", a: "AI Agent 是使用大语言模型自主规划和执行多步骤任务的系统。与只回答问题的聊天机器人不同，Agent 可以使用工具、浏览网页、编写代码并做出决策来实现目标。" },
+  { q: "最好的 AI Agent 框架是什么？", a: "取决于需求：开发者适合 LangGraph 和 CrewAI；非技术用户适合 n8n 和 Dify；浏览器自动化适合 Browser Use。从一个工具开始，按需扩展。" },
+  { q: "AI Agent 会取代人类工作吗？", a: "AI Agent 擅长重复性、规则性任务，可以增强人类能力。目前还不能完全替代人类的判断力、创造力和情商。最佳模式是人机协作。" },
+  { q: "运行 AI Agent 需要多少成本？", a: "开源工具（LangGraph、CrewAI、AutoGen）免费但需 API 费用（每月 $50-500）。可视化平台（n8n、Dify）从免费（自部署）到 $50-200/月（云版）。" }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+---
+<BaseLayout title="2026 年最佳 AI Agent 平台 | 框架、工具与工作流" description="AI Agent 平台完整指南：LangGraph、CrewAI、n8n、Dify、AutoGen、Browser Use 等 14 个工具对比。" keywords="AI Agent, Agent 框架, LangGraph, CrewAI, n8n, Dify, AutoGen, Browser Use">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+  <div class="article" style="max-width:860px;margin:0 auto;padding:48px 0;">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/best/students/">分类</a> &rsaquo; <span>AI Agent</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">AI Agent 平台</span>
+      <h1>2026 年最佳 AI Agent 平台</h1>
+      <p style="color:var(--text-mute);font-size:15px;margin-top:8px;">14 个工具，4 大类别：代码框架、可视化平台、浏览器 Agent、自主目标 Agent。</p>
+    </header>
+    <section class="article-body">
+      <p style="font-size:16px;color:var(--text-soft);line-height:1.8;">AI Agent 是 AI 工具的下一个进化方向——不只是回答问题，而是自主规划和执行多步骤任务。无论你需要自动化数据采集、搭建客服机器人，还是构建复杂的多 Agent 系统，都有适合你的平台。</p>
+
+      <h2 style="margin-top:32px;">Agent 工具分类</h2>
+      {frameworkTypes.map(ft => (
+        <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:20px;margin:16px 0;">
+          <h3 style="font-size:17px;font-weight:600;margin-bottom:8px;">{ft.name}</h3>
+          <p style="font-size:14px;color:var(--text-soft);margin-bottom:12px;line-height:1.6;">{ft.desc}</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            {ft.tools.map(tid => {
+              const tool = tools.find(t => t.id === tid);
+              return tool ? (
+                <a href={"/zh/tool/" + tid + "/"} style="font-size:13px;color:var(--accent-color);background:rgba(59,130,246,0.08);padding:4px 12px;border-radius:6px;text-decoration:none;font-weight:500;">{tool.name.en}</a>
+              ) : null
+            })}
+          </div>
+        </div>
+      ))}
+
+      <h2 style="margin-top:40px;">Agent 工作流教程</h2>
+      <div style="display:grid;gap:12px;margin-top:16px;">
+        {agentWorkflows.map(w => (
+          <a href={"/zh/workflows/" + w.slug + "/"} style="text-decoration:none;color:inherit;display:block;background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;">
+            <h3 style="font-size:15px;font-weight:600;margin:0 0 4px 0;">{w.title_zh || w.title}</h3>
+            <p style="font-size:12px;color:var(--text-mute);margin:0;">{w.tool} - {w.steps.length} 步骤</p>
+          </a>
+        ))}
+      </div>
+
+      <h2 style="margin-top:40px;">如何选择 AI Agent 平台</h2>
+      <ol style="margin:12px 0 12px 24px;line-height:1.8;font-size:15px;color:var(--text-soft);">
+        <li><strong>你是开发者？</strong> 用 LangGraph 或 CrewAI 获得最大灵活性。AutoGen 适合研究。LlamaIndex 适合数据密集型应用。</li>
+        <li><strong>非技术或偏好可视化？</strong> 从 n8n 开始（最佳全能）或 Dify（AI 专用工作流）。</li>
+        <li><strong>需要浏览器自动化？</strong> Browser Use（开源、灵活）或 MultiOn（托管、简单）。</li>
+        <li><strong>想体验自主 Agent？</strong> AutoGPT 或 AgentGPT（实用性有限但适合学习）。</li>
+      </ol>
+
+      <h2 style="margin-top:32px;">常见问题</h2>
+      <div style="display:grid;gap:16px;">
+        {faqItems.map(f => (
+          <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;">
+            <h3 style="font-size:15px;font-weight:600;margin-bottom:8px;">{f.q}</h3>
+            <p style="font-size:14px;color:var(--text-soft);line-height:1.6;margin:0;">{f.a}</p>
+          </div>
+        ))}
+      </div>
+
+      <p style="text-align:center;margin-top:32px;"><a href="/zh/workflows/" style="color:var(--accent-color);font-weight:600;">浏览工作流教程</a> &nbsp;|&nbsp; <a href="/zh/solutions/" style="color:var(--accent-color);font-weight:600;">行业方案</a></p>
+    </section>
+  </div>
+</BaseLayout>

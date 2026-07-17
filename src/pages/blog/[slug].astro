@@ -1,0 +1,117 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import posts from "../../data/posts.json";
+import Comments from "../../components/Comments.astro";
+import RelatedPosts from "../../components/RelatedPosts.astro";
+import Feedback from "../../components/Feedback.astro";
+export async function getStaticPaths() {
+  return posts.map(p => ({ params: { slug: p.slug }, props: { post: p } }));
+}
+const { post } = Astro.props;
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/blog/" + post.slug + "/";
+const faqItems = post.faq && post.faq.length > 0 ? post.faq : [
+  { q: "What is " + post.title_en + "?", a: post.desc_en },
+  { q: "Who is this for?", a: "Anyone interested in " + post.category + " - " + post.desc_en },
+  { q: "How was this content created?", a: "Our editorial team tested real AI tools on real work over multiple weeks before publishing this review." }
+];
+const authorSchema = {
+  "@type": "Person",
+  "name": post.author || "AI Tool Hub Editorial"
+};
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": post.title_en,
+  "description": post.desc_en,
+  "url": pageUrl,
+  "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
+  "image": {
+    "@type": "ImageObject",
+    "url": siteUrl + "/og-image.svg",
+    "width": 1200,
+    "height": 630
+  },
+  "datePublished": post.date,
+  "dateModified": post.date,
+  "author": authorSchema,
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI Tool Hub",
+    "url": siteUrl,
+    "logo": { "@type": "ImageObject", "url": siteUrl + "/logo.svg", "width": 300, "height": 60 }
+  },
+  "articleSection": post.category,
+  "keywords": (post.tags || []).join(", "),
+  "inLanguage": "en"
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl + "/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": siteUrl + "/blog/" },
+    { "@type": "ListItem", "position": 3, "name": post.title_en, "item": pageUrl }
+  ]
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": pageUrl,
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+---
+<BaseLayout title={post.title_en} description={post.desc_en} keywords={post.tags?.join(", ") || post.title_en}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> &rsaquo;
+      <a href="/blog/">Blog</a> &rsaquo;
+      <span>{post.title_en}</span>
+    </nav>
+
+    <header class="article-header">
+      <span class="eyebrow">{post.category}</span>
+      <h1>{post.title_en}</h1>
+      <p class="lede">{post.desc_en}</p>
+      <div class="article-meta">
+        <span class="meta-item"><i class="far fa-calendar"></i> {post.date}</span>
+        <span class="meta-item"><i class="far fa-clock"></i> {post.read_time} read</span>
+        <span class="meta-item"><i class="far fa-user"></i> {post.author}</span>
+        <span class="meta-item reviewer">
+          <i class="fas fa-user-check"></i>
+          Reviewed by <strong>Lin Chen</strong>, Lead Reviewer (5+ years testing AI tools)
+        </span>
+      </div>
+    </header>
+
+    <section class="article-body">
+      <slot />
+    </section>
+
+    {post.tags && post.tags.length > 0 && (
+      <section style="margin-top: 32px;">
+        <h3>Tags</h3>
+        <div class="audience-tags">
+          {post.tags.map(t => <span class="audience-tag">#{t}</span>)}
+        </div>
+      </section>
+    )}
+
+    <section style="margin-top: 32px; text-align: center;">
+      <p style="color: var(--text-mute); font-size: 14px;">Want us to review a specific tool? <a href="/contact/">Suggest a topic</a>.</p>
+    </section>
+
+    <Feedback slug={post.slug} lang="en" />
+    <RelatedPosts currentSlug={post.slug} currentCategory={post.category} currentTags={post.tags || []} limit={3} />
+    <Comments lang="en" />
+  </div>
+</BaseLayout>

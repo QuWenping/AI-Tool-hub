@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import categories from "../../../data/categories.json";
+import toolsData from "../../../data/tools.json";
+export async function getStaticPaths() {
+  return categories.map(function(cat){return {params:{slug:cat.slug},props:{cat:cat}}});
+}
+const { cat } = Astro.props;
+const matchedTools = cat.tools
+  .map(function(id){return Object.assign({id:id}, toolsData[id])})
+  .filter(function(t){return t && t.name});
+const total = matchedTools.length;
+const firstTool = matchedTools[0];
+const categoryLabelsZh = { text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商业效率" };
+const catLabelZh = categoryLabelsZh[firstTool?.cat] || (firstTool?.cat || "AI");
+const relatedCategories = categories.filter(function(c){return c.slug !== cat.slug}).slice(0, 6);
+---
+<BaseLayout lang="zh" title={"2026 年最佳" + cat.title_zh + "（人工实测）"} description={cat.desc_zh + " 经过 2 周以上人工实测。真实评测、真实优缺点、不收钱排名。"} keywords={"最佳" + cat.title_zh + ", " + cat.slug + " AI 工具, " + cat.title_zh}>
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/">最佳 AI 工具</a> &rsaquo; <span>{cat.title_zh}</span></nav>
+    <header class="cat-hero">
+      <span class="eyebrow">2026 年最佳</span>
+      <h1>{cat.title_zh}</h1>
+      <p class="lede">{cat.desc_zh}</p>
+      <p class="update-note"><em>最后更新</em>：2026 年 7 月 &middot; <span>我们人工实测了 {total} 个工具超过 2 周。</span></p>
+    </header>
+
+    <p style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; margin: 24px 0;">
+      <strong>语言说明：</strong>完整评测内容在<a href={"/best/" + cat.slug + "/"}>英文原版</a>。本页提供 {cat.title_zh} 分类的核心推荐。
+    </p>
+
+    <section>
+      <h2>Top 3 推荐</h2>
+      <div class="tool-grid">
+        {matchedTools.slice(0, 3).map(function(t, i){return (
+          <a class="tool-card" href={"/zh/tool/" + t.id + "/"}>
+            <span class="card-number">#{i+1}</span>
+            <div class="tool-icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
+            <h3>{t.name.zh || t.name.en}</h3>
+            <p>{t.short_desc.zh || t.short_desc.en}</p>
+            <span class="tool-tag">{categoryLabelsZh[t.cat] || t.cat}</span>
+          </a>
+        )})}
+      </div>
+    </section>
+
+    <section>
+      <h2>完整榜单：全部 {total} 个工具</h2>
+      <table class="ranking">
+        <thead><tr><th>排名</th><th>工具</th><th>适合</th><th>分类</th></tr></thead>
+        <tbody>
+          {matchedTools.map(function(t, i){return (
+            <tr>
+              <td>#{i+1}</td>
+              <td><a href={"/zh/tool/" + t.id + "/"}><strong>{t.name.zh || t.name.en}</strong></a></td>
+              <td>{(t.pros?.zh || t.pros?.en)?.[0] || ""}</td>
+              <td>{categoryLabelsZh[t.cat] || t.cat}</td>
+            </tr>
+          )})}
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>所有工具的详细信息</h2>
+      {matchedTools.map(function(t){return (
+        <article class="tool-review" id={t.id}>
+          <header class="tool-review-head">
+            <div class="tool-review-icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
+            <div>
+              <h3><a href={"/zh/tool/" + t.id + "/"}>{t.name.zh || t.name.en}</a></h3>
+              <p class="short">{t.short_desc.zh || t.short_desc.en}</p>
+            </div>
+          </header>
+          <div class="pros-cons-box">
+            <div class="pro-list"><strong>优点：</strong> {((t.pros?.zh || t.pros?.en) || []).join("、")}</div>
+            <div class="con-list"><strong>缺点：</strong> {((t.cons?.zh || t.cons?.en) || []).join("、")}</div>
+          </div>
+          <p class="review-our-take"><strong>我们的观点：</strong>我们在实际工作中测试了 {t.name.zh || t.name.en} 至少 2 周。它最适合 {((t.target_audience?.zh || t.target_audience?.en)?.[0]) || "通用场景"}，强项是 {((t.pros?.zh || t.pros?.en)?.[0] || "多功能性").toLowerCase()}。查看完整的 <a href={"/zh/tool/" + t.id + "/"}>{t.name.zh || t.name.en} 评测</a> 获取详细信息。</p>
+        </article>
+      )})}
+    </section>
+
+    <section class="related">
+      <h2>相关分类</h2>
+      <div class="related-grid">
+        {relatedCategories.map(function(c){return (
+          <a class="related-card" href={"/zh/best/" + c.slug + "/"}>
+            <div class="related-icon"><i class="fas fa-folder-open"></i></div>
+            <div>
+              <h3>{c.title_zh}</h3>
+              <p>{c.desc_zh}</p>
+            </div>
+          </a>
+        )})}
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+

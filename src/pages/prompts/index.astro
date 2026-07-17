@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import prompts from "../../data/prompts.json";
+const cats = [...new Set(prompts.map(p => p.category))];
+---
+<BaseLayout title="AI Prompt Library | 20+ Copy-Paste Prompts for Every Tool" description="Free AI prompt library. Copy-paste prompts for ChatGPT, Claude, Midjourney, Cursor, Gemini, and more. Categorized by use case." keywords="AI prompts, prompt library, ChatGPT prompts, Claude prompts, Midjourney prompts, copy paste prompts">
+  <div class="container" style="max-width:900px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumbs" style="margin-bottom:24px;"><a href="/">Home</a> &rsaquo; <span>Prompt Library</span></nav>
+    <h1 style="font-size:32px;font-weight:700;margin-bottom:8px;">AI Prompt Library</h1>
+    <p style="color:var(--text-mute);font-size:16px;margin-bottom:32px;">{prompts.length} copy-paste prompts for every major AI tool. Free to use.</p>
+
+    {cats.map(cat => (
+      <section style="margin-bottom:32px;">
+        <h2 style="font-size:20px;font-weight:700;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid var(--border-color);">{cat}</h2>
+        <div style="display:grid;gap:12px;">
+          {prompts.filter(p => p.category === cat).map(p => (
+            <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:16px;">
+              <div style="display:flex;justify-content:space-between;align-items:start;gap:12px;margin-bottom:8px;">
+                <h3 style="font-size:15px;font-weight:600;">{p.title}</h3>
+                <span style="font-size:11px;color:var(--accent-color);background:rgba(59,130,246,0.1);padding:2px 8px;border-radius:999px;white-space:nowrap;">{p.tool}</span>
+              </div>
+              <pre style="background:var(--bg-color);border-radius:8px;padding:12px;font-size:13px;color:var(--text-soft);overflow-x:auto;white-space:pre-wrap;word-break:break-word;max-height:120px;overflow-y:auto;">{p.prompt}</pre>
+              <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;">
+                {p.tags.map(t => <span style="font-size:11px;color:var(--text-mute);background:var(--bg-color);padding:2px 8px;border-radius:5px;">#{t}</span>)}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</BaseLayout>

@@ -1,0 +1,14 @@
+---
+const { items = [] } = Astro.props;
+---
+<div class="tldr">
+  <h3>TL;DR — Key Takeaways</h3>
+  <ul>{items.map(item => <li>{item}</li>)}</ul>
+</div>
+<style>
+.tldr { background: var(--bg-muted); border-left: 4px solid var(--brand); border-radius: 0 12px 12px 0; padding: 24px; margin: 24px 0; }
+.tldr h3 { font-size: 16px; font-weight: 600; margin-bottom: 12px; }
+.tldr ul { list-style: none; padding: 0; }
+.tldr li { font-size: 15px; color: var(--text); padding: 6px 0; display: flex; gap: 8px; align-items: start; }
+.tldr li::before { content: "→"; color: var(--brand); font-weight: 600; flex-shrink: 0; }
+</style>

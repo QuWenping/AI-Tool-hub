@@ -1,0 +1,186 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Claude Deep Dive (2026): The Complete Guide for Writers and Long-Document Users" description="A 4,000-word deep dive into Claude in 2026: the 200K context window, Artifacts, projects, the 10 power user tips, and the 3 things it cannot do." keywords="Claude deep dive, Claude power user, Claude Artifacts, 200K context, Claude 4.5">
+  <article class="legal-page blog-post">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/tool/claude/">Claude</a> &rsaquo; <span>Deep Dive</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">Deep dive</span>
+      <h1>Claude Deep Dive (2026): The Complete Guide for Writers and Long-Document Users</h1>
+      <p class="lede">A 4,000-word guide to everything Claude can do in 2026. The 200K context window in practice, the Artifacts feature in depth, Projects for long-term work, the 10 power user tips, and the 3 things it cannot do.</p>
+      <p style="color: var(--text-mute); font-size: 14px; margin-top: 16px;">
+        <i class="far fa-calendar"></i> 2026-06-04 &middot; <i class="far fa-clock"></i> 16 min read &middot; <i class="far fa-user"></i> Lin Chen, Lead Reviewer
+      </p>
+    </header>
+
+    <section class="blog-content">
+      <p>Claude in 2026 is the writing quality leader of the AI assistant category, and the 200K context window (about 500 pages of text) is the killer feature that the other assistants do not match. Most users use Claude for casual chat and never realize what the long context can do. This guide is for users who want to use Claude for serious writing work and long-document analysis.</p>
+
+      <h2>1. The 200K context window in practice</h2>
+      <p>The headline feature. 200,000 tokens is roughly 150,000 words, or about 500 pages of single-spaced text. To put that in perspective:</p>
+      <ul>
+        <li>Most novels: 80-100K words (fits with room to spare)</li>
+        <li>Average PhD thesis: 80K words (fits with room to spare)</li>
+        <li>Standard business contracts: 5-30 pages (trivial)</li>
+        <li>Large codebases: 200+ source files (fits)</li>
+        <li>Research literature reviews: 50-100 papers (fits)</li>
+      </ul>
+      <p>The "fits" part is what matters: you can paste an entire book and ask Claude to do something with it, in one shot. No chunking, no embeddings, no RAG setup. Just paste and ask.</p>
+
+      <h3>When to use the full context</h3>
+      <p>The 200K context is genuinely useful for:</p>
+      <ul>
+        <li><strong>Book analysis.</strong> Paste a 300-page book, ask for a 500-word summary + 5 key ideas + 3 critical points.</li>
+        <li><strong>Legal contract review.</strong> Paste a 20-page contract, ask for your obligations, their obligations, unusual clauses, and 3 things to ask a lawyer.</li>
+        <li><strong>PhD literature review.</strong> Paste 30-50 papers, ask for thematic groupings + synthesis + gap analysis.</li>
+        <li><strong>Code review of a large PR.</strong> Paste a 5,000-line change, ask for bugs, performance, security, and style issues.</li>
+        <li><strong>Long document editing.</strong> Paste a 100-page report, ask for structural improvements, consistency fixes, and tone adjustments.</li>
+      </ul>
+
+      <h3>When NOT to use the full context</h3>
+      <p>The 200K context is NOT useful for:</p>
+      <ul>
+        <li><strong>Real-time information.</strong> Use Perplexity or ChatGPT with browsing.</li>
+        <li><strong>Short tasks.</strong> A 2,000-token context is faster and more accurate than 200K for a simple question.</li>
+        <li><strong>Code generation at scale.</strong> For a 100K token codebase, use Cursor or Copilot with proper indexing.</li>
+        <li><strong>Anything time-sensitive.</strong> Long contexts take longer to process.</li>
+      </ul>
+
+      <h2>2. Artifacts: the killer feature you are not using</h2>
+      <p>Artifacts are the single most underrated Claude feature. When Claude generates content that is more than a few lines (code, documents, HTML, SVG, diagrams), it automatically creates an "Artifact" - a separate panel on the right where you can see the output in its native format.</p>
+
+      <h3>What you can do in Artifacts</h3>
+      <ul>
+        <li><strong>Code:</strong> HTML, CSS, JavaScript, Python, React - rendered in the panel, can be edited directly.</li>
+        <li><strong>Documents:</strong> Markdown, formatted text - rendered with full formatting.</li>
+        <li><strong>SVG:</strong> Generated SVGs render visually, can be copied or downloaded.</li>
+        <li><strong>Diagrams:</strong> Mermaid diagrams render as images, can be exported.</li>
+        <li><strong>Web pages:</strong> HTML+CSS+JS render as a real web page you can interact with.</li>
+      </ul>
+
+      <h3>The 5 things Artifacts unlock</h3>
+      <ol>
+        <li><strong>Iterate without copy-paste.</strong> Ask Claude to "make the button blue" - the artifact updates, no copy-paste needed.</li>
+        <li><strong>Test code in-place.</strong> Generate a Python script, run it in the artifact panel, see the output.</li>
+        <li><strong>Visual feedback.</strong> Generate an SVG, see it visually, ask for changes based on what you see.</li>
+        <li><strong>Compare versions.</strong> The artifact panel shows the current version, but you can ask "show me the previous version" and it appears side-by-side.</li>
+        <li><strong>Export directly.</strong> Click "Copy code" or "Download" to export the artifact to your project.</li>
+      </ol>
+
+      <h2>3. Projects: long-term work in Claude</h2>
+      <p>Projects are the new (in 2026) way to organize long-term work in Claude. A Project is a persistent workspace that includes:</p>
+      <ul>
+        <li><strong>Custom instructions</strong> that apply to all conversations in the project</li>
+        <li><strong>Knowledge files</strong> that Claude references in every conversation</li>
+        <li><strong>Conversation history</strong> for the project (separate from your main history)</li>
+      </ul>
+
+      <h3>How we use Projects</h3>
+      <p>We have 3 active Projects on the team plan:</p>
+      <ol>
+        <li><strong>AI Tool Hub Editorial.</strong> Custom instructions: "You are a senior content editor. Maintain our house style. Always cite sources. Use 2-3 examples per claim." Knowledge: our style guide, our 20 best past posts, our keyword research template. Conversations: 30+ long-running conversations for ongoing content projects.</li>
+        <li><strong>Codebase Assistant.</strong> Custom instructions: "You are a senior TypeScript engineer. Use modern syntax. Always include types. Prefer functional patterns." Knowledge: our entire codebase, our style guide, our architecture docs. Conversations: 50+ for ongoing engineering projects.</li>
+        <li><strong>Research Workspace.</strong> Custom instructions: "You are a research analyst. Cite sources with author and year. Distinguish established findings from emerging research. Note limitations." Knowledge: 200+ papers in our research library. Conversations: 20+ for ongoing research projects.</li>
+      </ol>
+      <p>The Projects feature turns Claude from a chat tool into a long-term work tool. The custom instructions + knowledge files mean you do not have to re-explain context every conversation.</p>
+
+      <h2>4. The 4 model variants and which to use when</h2>
+      <p>Claude runs 4 model variants on the consumer tier. The right pick depends on the task.</p>
+
+      <p><strong>Claude 4.5 Haiku (free, fast):</strong> The default on the free tier. Fast, cheap, surprisingly capable for short tasks. Use for: quick questions, simple edits, brainstorming. Do not use for: long-form content, complex reasoning, or anything requiring nuance.</p>
+
+      <p><strong>Claude 4.5 Sonnet (Pro, workhorse):</strong> The default on Pro. The right pick for 80% of what you do. Use for: writing, editing, analysis, code, planning. The best general-purpose Claude.</p>
+
+      <p><strong>Claude 4.5 Opus (Pro, premium):</strong> The most capable. Better at long-form reasoning, complex code, multi-step planning. Use for: writing that requires nuance, code that requires understanding, planning that requires multi-step thinking, and anything where the output quality matters more than the response time.</p>
+
+      <p><strong>Claude 4.5 with Extended Thinking (Pro, reasoning):</strong> Forces the model to think step by step before answering. Use for: complex math, logic puzzles, multi-step reasoning, anything where you need the model to show its work.</p>
+
+      <p><strong>Pro tip:</strong> Sonnet is the right default for most tasks. Switch to Opus only when Sonnet output is not good enough. Extended Thinking is for hard reasoning, not for everyday use.</p>
+
+      <h2>5. The 10 power user tips our team uses daily</h2>
+
+      <p><strong>Tip 1: Always paste 2-3 examples of the style you want.</strong> "Here are 3 examples of our best past blog posts. Write a new one in the same style about [topic]." The model matches your voice with high fidelity.</p>
+
+      <p><strong>Tip 2: Use the "Edit" pattern, not "Regenerate".</strong> When the output is close but not quite right, use the Edit button (or say "Edit the third paragraph to be more concise"). Iterative editing produces better output than full regeneration.</p>
+
+      <p><strong>Tip 3: Use Artifacts for everything that is more than 5 lines.</strong> Code, documents, HTML, SVG, diagrams - if it is more than 5 lines, ask for an Artifact. The visual feedback changes how you iterate.</p>
+
+      <p><strong>Tip 4: Use Projects for recurring work.</strong> If you do the same kind of work every week (writing, coding, research), create a Project with the relevant custom instructions and knowledge files. Saves 10-15 minutes per conversation.</p>
+
+      <p><strong>Tip 5: Use the "Read aloud" feature.</strong> Claude can read its own responses aloud. Use for: editing (catch awkward phrasing), accessibility, multi-tasking (listen while you work on something else).</p>
+
+      <p><strong>Tip 6: Specify the role, audience, format, and length in every prompt.</strong> "You are a senior B2B SaaS writer. Write a 1,500-word blog post targeting mid-market product managers about [topic]. Use the AIDA framework. Output as markdown." The specificity improves output by 50%.</p>
+
+      <p><strong>Tip 7: Use the "Continue" pattern for long content.</strong> When writing a 3,000-word article, write the first 1,000 words, then say "Continue from where you left off." Repeat until done. The output is more coherent than a single mega-prompt.</p>
+
+      <p><strong>Tip 8: Use the "Critique" pattern.</strong> After Claude produces an output, say "Critique this output. What is wrong with it? What would you change?" The model often produces a much better output in the second pass.</p>
+
+      <p><strong>Tip 9: Use Artifacts to compare versions.</strong> After iterating, ask "Show me the original version and the current version side by side." The Artifact panel will show both. This is the easiest way to see what changed.</p>
+
+      <p><strong>Tip 10: Save your best conversations.</strong> When you have a particularly good Claude conversation (e.g. a 2-hour session that produced a great output), save it. You can re-use the structure of the conversation for similar tasks in the future.</p>
+
+      <h2>6. The 3 things Claude cannot do well in 2026</h2>
+
+      <p><strong>Limitation 1: Real-time information.</strong> Claude's knowledge cutoff is January 2025. For anything current, you must provide the information manually or use a different tool. There is no web browsing in Claude (yet).</p>
+
+      <p><strong>Limitation 2: Image generation.</strong> Claude cannot generate images natively. For image generation, use ChatGPT (DALL-E) or Midjourney.</p>
+
+      <p><strong>Limitation 3: Voice mode.</strong> Claude does not have a real-time voice mode (yet). For voice, use ChatGPT's voice mode or ElevenLabs.</p>
+
+      <h2>7. The pricing tiers in 2026 (the real comparison)</h2>
+
+      <p><strong>Free ($0):</strong> Claude 4.5 Haiku, basic access, web search for current info, Artifacts. Best for: occasional use, students, anyone who does not need Claude daily.</p>
+
+      <p><strong>Pro ($20/month):</strong> Claude 4.5 Sonnet and Opus, Projects, longer context, higher rate limits, priority access during peak. Best for: daily use, writers, researchers, anyone who uses Claude for work.</p>
+
+      <p><strong>Team ($25/user/month, min 2 seats):</strong> Everything in Pro, plus shared Projects, admin console, team billing, higher rate limits. Best for: 2+ person teams who want shared Projects and centralized billing.</p>
+
+      <p><strong>Enterprise (custom):</strong> Everything in Team, plus SSO, advanced data privacy, dedicated support, custom terms. Best for: 50+ person teams, regulated industries.</p>
+
+      <p><strong>Max ($200/month, new in 2026):</strong> Everything in Pro, plus 5x more usage on Opus, priority access during peak, early access to new features. Best for: power users, AI researchers, anyone who needs more Opus usage than Pro allows.</p>
+
+      <p><strong>The honest recommendation:</strong> Pro at $20/month is the right pick for 80% of users. Team is the right pick for any team. Max is only worth it if you are using Opus heavily and hitting the Pro rate limits.</p>
+
+      <h2>8. The workflow we use for long-form content with Claude</h2>
+
+      <p>For a 2,000-word blog post (our typical content length):</p>
+      <ol>
+        <li>Open the AI Tool Hub Editorial Project (15 seconds, custom instructions are pre-loaded)</li>
+        <li>Paste the brief from the blog post outline (10 seconds)</li>
+        <li>Ask Claude to "write the body of the post, no intro, no conclusion, no CTA" (45 seconds, model writes ~1,500 words)</li>
+        <li>Iterate on the worst sections: "Make section 3 more specific" or "Add a real example to section 5" (5-10 minutes)</li>
+        <li>Ask Claude to "write the intro based on the body" (30 seconds, much better than writing first)</li>
+        <li>Hand-write the conclusion and the CTA (3-5 minutes - this is where our voice lives)</li>
+        <li>Ask Claude to "review the full post for consistency" and fix any issues (1-2 minutes)</li>
+        <li>Paste into Grammarly for final pass (2 minutes)</li>
+        <li>Total time: 15-25 minutes for a 2,000-word post that would take 3-4 hours from scratch</li>
+      </ol>
+
+      <h2>9. The 4 things we use Claude for that ChatGPT cannot match</h2>
+
+      <p><strong>1. Long document analysis.</strong> Claude's 200K context with the same quality as short context means we can paste an entire book and ask for analysis. ChatGPT cannot do this with the same quality.</p>
+
+      <p><strong>2. Long-form writing with consistent voice.</strong> Claude matches the voice of pasted examples with 80% accuracy. ChatGPT is closer to 60%. For brand voice, Claude wins.</p>
+
+      <p><strong>3. Artifacts for visual iteration.</strong> The Artifact panel is genuinely useful for code, documents, and SVGs. ChatGPT has code execution but not the same visual feedback.</p>
+
+      <p><strong>4. Projects for long-term work.</strong> The Projects feature turns Claude into a long-term work tool. ChatGPT has Custom GPTs but not the same persistent knowledge + instructions structure.</p>
+
+      <h2>10. Should you switch from ChatGPT to Claude?</h2>
+      <p>It depends on what you do. For most users, the right answer is: use both. ChatGPT for breadth (plugins, multimodal, voice), Claude for depth (writing, long documents, projects). The $40/month combined is the best AI tool spend in our stack.</p>
+
+      <p>For the broader comparison, see <a href="/blog/chatgpt-vs-claude-which-should-you-pick-2026/">our ChatGPT vs Claude guide</a>. For the Big Three comparison, see <a href="/blog/claude-vs-gemini-vs-chatgpt-2026/">our Big Three guide</a>. For the full review with the 5-dimension score, see <a href="/tool/claude/">our Claude review page</a>.</p>
+    </section>
+
+    <section style="margin-top: 40px;">
+      <h3>Tags</h3>
+      <div class="audience-tags">
+        <span class="audience-tag">#claude</span>
+        <span class="audience-tag">#deep-dive</span>
+        <span class="audience-tag">#power-user</span>
+        <span class="audience-tag">#writing</span>
+        <span class="audience-tag">#200k</span>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

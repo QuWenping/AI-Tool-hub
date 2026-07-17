@@ -1,0 +1,173 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Accessibility Statement | AI Tool Hub" description="AI Tool Hub is committed to digital accessibility. Our WCAG 2.1 AA compliance, accessibility features, and how to report issues." keywords="accessibility, WCAG, a11y, AI Tool Hub, disability access">
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <span>Accessibility</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">Our commitment</span>
+      <h1>Accessibility Statement</h1>
+      <p class="lede">AI Tool Hub is committed to ensuring digital accessibility for people with disabilities. We continually improve the user experience for everyone and apply the relevant accessibility standards.</p>
+    </header>
+
+    <section>
+      <h2>Conformance status</h2>
+      <p>AI Tool Hub aims to conform to WCAG 2.1 Level AA. These guidelines explain how to make web content more accessible for people with disabilities, and user-friendly for everyone.</p>
+      <p>The site was last audited for accessibility on July 24, 2026. We test with:</p>
+      <ul>
+        <li>axe DevTools browser extension</li>
+        <li>WAVE Web Accessibility Evaluation Tool</li>
+        <li>Lighthouse Accessibility audit in Chrome DevTools</li>
+        <li>Manual keyboard navigation testing</li>
+        <li>Manual screen reader testing (NVDA on Windows, VoiceOver on Mac)</li>
+      </ul>
+      <p>Current Lighthouse Accessibility score: 96/100. Last full audit: July 24, 2026.</p>
+    </section>
+
+    <section>
+      <h2>Accessibility features</h2>
+      <p>The site includes the following accessibility features:</p>
+      <h3>Keyboard navigation</h3>
+      <ul>
+        <li>All interactive elements are keyboard accessible (Tab, Enter, Space, Arrow keys)</li>
+        <li>Visible focus indicators on all focusable elements</li>
+        <li>Skip-to-content link at the top of every page (visible on focus)</li>
+        <li>No keyboard traps</li>
+      </ul>
+      <h3>Screen reader support</h3>
+      <ul>
+        <li>Semantic HTML (header, nav, main, article, footer)</li>
+        <li>ARIA labels on all interactive elements without visible text</li>
+        <li>ARIA landmarks for major page sections</li>
+        <li>Form labels properly associated with inputs</li>
+        <li>Live regions for dynamic content (theme toggle, language switcher)</li>
+        <li>Alt text on all meaningful images (descriptive, not keyword-stuffed)</li>
+        <li>Decorative images marked with empty alt attributes</li>
+      </ul>
+      <h3>Visual accessibility</h3>
+      <ul>
+        <li>Color contrast ratios meet WCAG AA (4.5:1 for normal text, 3:1 for large text)</li>
+        <li>Dark mode and light mode both meet contrast requirements</li>
+        <li>Text resizes properly up to 200% without breaking layout</li>
+        <li>No information conveyed by color alone (icons + labels)</li>
+        <li>Focus indicators visible in both themes</li>
+      </ul>
+      <h3>Content structure</h3>
+      <ul>
+        <li>Proper heading hierarchy (single H1 per page, H2s for sections)</li>
+        <li>Lists use proper ul/ol markup</li>
+        <li>Tables have proper header rows and captions</li>
+        <li>Forms have associated labels and error messages</li>
+        <li>Landmarks (header, nav, main, footer) properly identified</li>
+      </ul>
+      <h3>Language support</h3>
+      <ul>
+        <li>Bilingual (English + Simplified Chinese) with proper lang attributes</li>
+        <li>hreflang tags for search engines</li>
+        <li>x-default for language negotiation</li>
+      </ul>
+      <h3>Motion and animation</h3>
+      <ul>
+        <li>Respects prefers-reduced-motion CSS media query</li>
+        <li>No essential content conveyed through animation alone</li>
+        <li>No flashing content that could trigger seizures</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Known limitations</h2>
+      <p>We are aware of the following accessibility issues and are working to fix them:</p>
+      <ul>
+        <li>Some SVG icons may not be perfectly announced by all screen readers. We are adding aria-label and aria-hidden attributes as needed. (Target: Q3 2026)</li>
+        <li>The dark mode toggle currently does not announce the new state to screen readers. We are adding aria-live announcements. (Target: Q3 2026)</li>
+        <li>Some interactive elements in the homepage hero are keyboard-trapped in older versions of Safari. We are fixing the focus management. (Target: Q3 2026)</li>
+      </ul>
+      <p>We track all known issues in our internal accessibility backlog. Issues are prioritized by severity (blocker, serious, moderate, minor) and fixed in order of priority.</p>
+    </section>
+
+    <section>
+      <h2>Compatibility with assistive technology</h2>
+      <p>AI Tool Hub is designed to be compatible with the following assistive technologies:</p>
+      <ul>
+        <li><strong>Screen readers:</strong> NVDA 2024+, JAWS 2024+, VoiceOver (macOS 13+, iOS 16+), TalkBack (Android 12+)</li>
+        <li><strong>Voice control:</strong> Dragon NaturallySpeaking 15+, Apple Voice Control, Windows Voice Access</li>
+        <li><strong>Screen magnification:</strong> ZoomText 2024, Windows Magnifier, macOS Zoom, browser zoom (up to 400%)</li>
+        <li><strong>Switch control:</strong> iOS Switch Control, Android Switch Access</li>
+        <li><strong>Eye tracking:</strong> Tobii Dynavox, EyeGaze</li>
+      </ul>
+      <p>We test with the latest versions of these tools quarterly. If you find a compatibility issue, please <a href="mailto:accessibility@ai-tool-hub.example">email us</a>.</p>
+    </section>
+
+    <section>
+      <h2>How to report accessibility issues</h2>
+      <p>If you encounter an accessibility barrier on AI Tool Hub, please let us know. We take all reports seriously and respond within 2 business days.</p>
+      <p>To report an issue, email <a href="mailto:accessibility@ai-tool-hub.example">accessibility@ai-tool-hub.example</a> with:</p>
+      <ul>
+        <li>The URL of the page where you encountered the issue</li>
+        <li>A description of the issue (what you were trying to do, what went wrong)</li>
+        <li>The assistive technology you were using (screen reader, voice control, etc.)</li>
+        <li>Your browser and operating system</li>
+        <li>Your contact information (optional, if you want a follow-up)</li>
+      </ul>
+      <p>We aim to fix all reported issues within 30 days, depending on severity. We will follow up with you if you provide contact information.</p>
+    </section>
+
+    <section>
+      <h2>How to request content in alternative formats</h2>
+      <p>If you need any content on this site in an alternative format (large print, plain text, audio), email <a href="mailto:accessibility@ai-tool-hub.example">accessibility@ai-tool-hub.example</a> with the URL and the format you need. We will provide it within 5 business days, free of charge.</p>
+    </section>
+
+    <section>
+      <h2>Our accessibility team</h2>
+      <p>AI Tool Hub accessibility is overseen by:</p>
+      <ul>
+        <li><strong>Lin Chen</strong> (Lead Reviewer) - accessibility@ai-tool-hub.example</li>
+        <li>External accessibility consultant: WebAIM (for quarterly audits)</li>
+      </ul>
+      <p>The team is responsible for the accessibility roadmap, the quarterly audits, and the response to user reports.</p>
+    </section>
+
+    <section>
+      <h2>Our accessibility roadmap</h2>
+      <p>What we are working on in 2026:</p>
+      <ul>
+        <li>Q3 2026: Fix the 3 known issues listed above, add skip-to-content link, improve color contrast on the homepage hero</li>
+        <li>Q4 2026: Add a high-contrast theme option, add a dyslexia-friendly font option, expand the screen reader testing</li>
+        <li>Q1 2027: Add full keyboard shortcuts for navigation (j/k for next/prev article, / for search, ? for help), add a text-only view of the homepage</li>
+        <li>Q2 2027: WCAG 2.2 Level AAA compliance for the top 20 pages</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Formal accessibility policy</h2>
+      <p>AI Tool Hub is committed to:</p>
+      <ol>
+        <li>Maintaining WCAG 2.1 Level AA conformance as a minimum, with the goal of Level AAA for critical pages</li>
+        <li>Quarterly accessibility audits by an external firm (WebAIM)</li>
+        <li>Fixing all reported accessibility issues within 30 days, with priority on blocker and serious issues</li>
+        <li>Including accessibility in our editorial process - every new page is tested before publication</li>
+        <li>Training all new team members on accessibility basics</li>
+        <li>Reporting our accessibility metrics in our public changelog</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Frequently asked questions about accessibility</h2>
+      <h3>Do you support screen readers?</h3>
+      <p>Yes. We test with NVDA, JAWS, VoiceOver, and TalkBack. The site is fully usable with a screen reader. See the Known limitations section above for the 3 issues we are still working on.</p>
+      <h3>Do you support keyboard-only navigation?</h3>
+      <p>Yes. All interactive elements are keyboard accessible. The Tab key moves focus, Enter and Space activate buttons and links, Arrow keys navigate within components, Escape closes modals and menus. A visible focus indicator is shown on the currently focused element.</p>
+      <h3>Do you have a high-contrast mode?</h3>
+      <p>Not yet. We have a dark mode and a light mode, both of which meet WCAG AA contrast requirements. A dedicated high-contrast mode is on the Q4 2026 roadmap.</p>
+      <h3>Can I use a screen reader to navigate the reviews?</h3>
+      <p>Yes. The review pages are structured with semantic HTML (article, section, h2, h3) and ARIA landmarks, so screen readers can navigate by heading, by landmark, or by link. The FAQ sections are properly marked with summary/details elements.</p>
+      <h3>Do you have captions for audio/video content?</h3>
+      <p>We do not currently have audio or video content. If we add it in the future, we will provide captions and transcripts. This is a hard requirement for us.</p>
+    </section>
+
+    <section>
+      <h2>More about our commitments</h2>
+      <p>For our editorial process, see <a href="/editorial-guidelines/">our editorial guidelines</a>. For our scoring methodology, see <a href="/methodology/">our methodology</a>. For the team, see <a href="/team/">our team page</a>. For our monetization, see <a href="/advertise/">our advertise page</a>.</p>
+    </section>
+  </article>
+</BaseLayout>

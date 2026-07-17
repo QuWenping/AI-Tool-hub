@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Markdown Editor & Preview | Free Online Tool" description="Free online Markdown editor with live preview. Write, edit, and preview Markdown in real-time. Export to HTML. No signup." keywords="markdown editor, markdown preview, md to html, free online tool">
+  <div class="container" style="max-width:1000px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumbs" style="margin-bottom:24px;"><a href="/">Home</a> &rsaquo; <a href="/tools/">Free Tools</a> &rsaquo; <span>Markdown Editor</span></nav>
+    <h1 style="font-size:32px;font-weight:700;margin-bottom:8px;">Markdown Editor & Preview</h1>
+    <p style="color:var(--text-mute);font-size:16px;margin-bottom:32px;">Write Markdown with live preview. Free, no signup.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;height:450px;">
+      <textarea id="md-input" style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;color:var(--text-main);font-family:monospace;font-size:14px;resize:none;line-height:1.6;" oninput="updatePreview()"># Hello World
+
+This is **bold** and *italic*.
+
+- Item 1
+- Item 2
+
+[Link](https://example.com)
+
+`inline code`</textarea>
+      <div id="md-preview" style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;overflow-y:auto;color:var(--text-main);font-size:14px;line-height:1.6;"></div>
+    </div>
+    <div style="margin-top:16px;">
+      <button id="md-copy" style="background:var(--accent-color);color:#fff;border:none;border-radius:8px;padding:10px 20px;font-size:14px;font-weight:600;cursor:pointer;">Copy HTML</button>
+    </div>
+  </div>
+</BaseLayout>
+<style>#md-preview h1{font-size:24px;font-weight:700;margin:16px 0 8px;}#md-preview h2{font-size:20px;font-weight:700;margin:14px 0 6px;}#md-preview p{margin:8px 0;}#md-preview ul{margin:8px 0 8px 20px;}#md-preview li{margin:4px 0;}#md-preview a{color:var(--accent-color);}#md-preview code{background:var(--bg-color);padding:2px 6px;border-radius:4px;}#md-preview pre{background:var(--bg-color);border-radius:8px;padding:12px;margin:12px 0;}</style>
+<script is:inline>
+  function updatePreview(){var t=document.getElementById("md-input").value;
+    var h=t.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+      .replace(/^### (.+)$/gm,'<h3>$1</h3>').replace(/^## (.+)$/gm,'<h2>$1</h2>').replace(/^# (.+)$/gm,'<h1>$1</h1>')
+      .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\*(.+?)\*/g,'<em>$1</em>')
+      .replace(/`([^`]+)`/g,'<code>$1</code>').replace(/```([\s\S]*?)```/g,'<pre><code>$1</code></pre>')
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g,'<a href="$2">$1</a>')
+      .replace(/^- (.+)$/gm,'<li>$1</li>').replace(/(<li>[\s\S]*?<\/li>)/g,'<ul>$1</ul>')
+      .replace(/\n\n/g,'</p><p>').replace(/^/,'<p>').replace(/$/,'</p>')
+      .replace(/<p>(<h[1-3]>)/g,'$1').replace(/<\/h[1-3]><\/p>/g,'</h3>')
+      .replace(/<p>(<ul>)/g,'$1').replace(/<\/ul><\/p>/g,'</ul>')
+      .replace(/<p>(<pre>)/g,'$1').replace(/<\/pre><\/p>/g,'</pre>');
+    document.getElementById("md-preview").innerHTML=h;}
+  updatePreview();
+  document.getElementById("md-copy").addEventListener("click",function(){navigator.clipboard.writeText(document.getElementById("md-preview").innerHTML).then(function(){var b=document.getElementById("md-copy");b.textContent="Copied!";setTimeout(function(){b.textContent="Copy HTML"},2000);});});
+</script>

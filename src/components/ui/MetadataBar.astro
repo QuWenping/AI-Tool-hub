@@ -1,0 +1,17 @@
+---
+const { author = "AI Tool Hub Editorial", date, readTime, updated } = Astro.props;
+---
+<div class="meta-bar">
+  <span class="meta-item"><i class="fas fa-user"></i> {author}</span>
+  <span class="divider">•</span>
+  <span class="meta-item"><i class="fas fa-calendar"></i> {date}</span>
+  <span class="divider">•</span>
+  <span class="meta-item"><i class="fas fa-clock"></i> {readTime}</span>
+  {updated && <span class="divider">•</span>}
+  {updated && <span class="meta-item"><i class="fas fa-sync"></i> Updated: {updated}</span>}
+</div>
+<style>
+.meta-bar { display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--text-secondary); margin: 12px 0; flex-wrap: wrap; }
+.meta-item { display: flex; align-items: center; gap: 6px; }
+.divider { color: var(--border); }
+</style>

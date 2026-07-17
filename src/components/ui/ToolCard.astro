@@ -1,0 +1,29 @@
+---
+const { name, category, icon = "fa-robot", rating, pricing, desc, href } = Astro.props;
+---
+<a href={href} class="tool-card">
+  <div class="tc-header">
+    <div class="tc-logo"><i class={`fas ${icon}`}></i></div>
+    <div>
+      <div class="tc-name">{name}</div>
+      <div class="tc-cat">{category}</div>
+    </div>
+  </div>
+  {rating && <div class="tc-rating"><span class="tc-stars">{"★".repeat(Math.round(rating / 2))}</span><span>{rating}/10</span><span class="tc-price">{pricing}</span></div>}
+  <div class="tc-desc">{desc}</div>
+  <div class="tc-footer"><span class="tc-cta">Read Review →</span></div>
+</a>
+<style>
+.tool-card { width: 360px; min-height: 220px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 24px; display: flex; flex-direction: column; gap: 8px; text-decoration: none; color: inherit; transition: transform 150ms ease, box-shadow 150ms ease; }
+.tool-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.tc-header { display: flex; align-items: center; gap: 12px; }
+.tc-logo { width: 40px; height: 40px; border-radius: 8px; background: var(--brand); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 18px; }
+.tc-name { font-size: 16px; font-weight: 600; }
+.tc-cat { font-size: 12px; color: var(--text-secondary); }
+.tc-rating { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+.tc-stars { color: var(--amber); }
+.tc-price { margin-left: auto; font-size: 11px; color: var(--text-secondary); background: var(--bg-muted); padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border); }
+.tc-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.5; flex: 1; }
+.tc-footer { display: flex; justify-content: flex-end; }
+.tc-cta { font-size: 13px; font-weight: 600; color: var(--brand); }
+</style>

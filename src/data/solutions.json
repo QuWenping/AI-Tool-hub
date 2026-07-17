@@ -1,0 +1,873 @@
+[
+  {
+    "slug": "ai-for-developers",
+    "industry": "Software Development",
+    "title": "AI Tools for Developers: Code, Test, and Ship Faster",
+    "description": "A complete guide to using AI for code generation, review, testing, documentation, and deployment automation in software development teams.",
+    "icon": "code",
+    "tools": [
+      "Cursor",
+      "GitHub Copilot",
+      "Claude",
+      "Codeium",
+      "Tabnine",
+      "Amazon Q"
+    ],
+    "workflows": [
+      "mcp-github-code-review",
+      "cursor-architect-patterns",
+      "cursor-test-generation"
+    ],
+    "sections": [
+      {
+        "heading": "Code Generation & Completion",
+        "content": "AI coding assistants like Cursor and GitHub Copilot have become essential for modern development. Cursor integrates AI directly into your IDE with context-aware completions, multi-file edits, and natural language code generation. GitHub Copilot provides inline suggestions based on your codebase patterns. For complex refactoring, Claude excels at understanding entire codebases and suggesting architectural improvements. Setup tip: Configure your AI assistant with project-specific context files (.cursorrules or copilot-instructions.md) to align suggestions with your team conventions.",
+        "recommendedTools": "Cursor (best overall IDE), GitHub Copilot (best for VS Code), Claude (best for complex reasoning)"
+      },
+      {
+        "heading": "Automated Code Review",
+        "content": "AI-powered code review catches issues that human reviewers might miss, especially in large PRs. Using MCP (Model Context Protocol), you can connect Claude directly to your GitHub repository to automatically review pull requests. The agent checks for SOLID violations, security vulnerabilities (OWASP Top 10), performance bottlenecks, and test coverage gaps. It posts inline comments on specific lines and provides a summary review. This reduces manual review time by 50-70% for routine PRs while maintaining quality standards.",
+        "recommendedTools": "Claude + MCP GitHub Server, Cursor (built-in review), Codeium"
+      },
+      {
+        "heading": "Test Generation & Quality Assurance",
+        "content": "Generating comprehensive test suites is one of the highest-ROI uses of AI in development. Cursor and Claude can generate unit tests covering happy paths, edge cases, error conditions, and performance scenarios. The key is providing clear test descriptions that explain the 'why' not just the 'what'. For existing code, AI can analyze coverage reports and suggest tests for uncovered branches. Best practice: Always run AI-generated tests and verify they actually pass before merging - AI can produce tests with subtle logical errors.",
+        "recommendedTools": "Cursor (test generation), Claude (test strategy), Codeium (coverage analysis)"
+      },
+      {
+        "heading": "Documentation & API Specs",
+        "content": "AI dramatically reduces documentation overhead. Claude can generate OpenAPI 3.0 specifications from endpoint descriptions, write developer-friendly API docs with curl examples, and create architecture decision records (ADRs) from code analysis. For inline documentation, Cursor can add JSDoc/docstrings to undocumented functions. For codebase onboarding, use MCP to let Claude read your entire project and generate a comprehensive README with setup instructions, architecture overview, and contribution guidelines.",
+        "recommendedTools": "Claude (API docs, technical specs), Cursor (inline docs), MCP (codebase analysis)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Will AI replace developers?",
+        "a": "No. AI tools augment developers by handling repetitive tasks (boilerplate code, tests, docs) so developers can focus on architecture, design, and complex problem-solving. Developers who use AI tools effectively are 30-50% more productive."
+      },
+      {
+        "q": "Which AI coding tool should I start with?",
+        "a": "Cursor is the best all-in-one choice for most developers. It combines IDE functionality with AI, supports multi-file edits, and has excellent context awareness. If you already use VS Code, GitHub Copilot is a seamless addition."
+      },
+      {
+        "q": "Is AI-generated code safe for production?",
+        "a": "AI-generated code should always be reviewed and tested before production use. AI tools can produce code with subtle bugs, security issues, or licensing concerns. Use AI as a pair programmer, not an autonomous developer."
+      }
+    ],
+    "title_zh": "开发者 AI 工具指南：编码、测试与部署",
+    "desc_zh": "软件开发团队如何用 AI 进行代码生成、审查、测试、文档和部署自动化。"
+  },
+  {
+    "slug": "ai-for-marketing",
+    "industry": "Marketing & Content",
+    "title": "AI Tools for Marketing: Content, SEO, and Campaigns at Scale",
+    "description": "How marketing teams use AI for content creation, SEO optimization, social media management, ad copy, and campaign analysis.",
+    "icon": "bullhorn",
+    "tools": [
+      "ChatGPT",
+      "Claude",
+      "Surfer SEO",
+      "Frase",
+      "Copy.ai",
+      "Writesonic",
+      "Gamma",
+      "Jasper"
+    ],
+    "workflows": [
+      "n8n-social-media-scheduler",
+      "n8n-email-triage-agent",
+      "chatgpt-email-sequence"
+    ],
+    "sections": [
+      {
+        "heading": "Content Creation at Scale",
+        "content": "AI has transformed content marketing from a bottleneck to a pipeline. ChatGPT and Claude can draft blog posts, landing pages, and email sequences in minutes. The key is providing detailed prompts with your brand voice, target audience, and SEO keywords. For SEO content, Surfer SEO and Frase analyze top-ranking pages and suggest content gaps to fill. Best practice: Use AI for first drafts (70% done) and human editors for final polish. Never publish AI content without review - it can contain factual errors and generic phrasing that hurts credibility.",
+        "recommendedTools": "ChatGPT (drafts), Claude (long-form), Surfer SEO (optimization), Copy.ai (variations)"
+      },
+      {
+        "heading": "SEO and Keyword Research",
+        "content": "AI-powered SEO tools analyze search intent, identify content gaps, and optimize on-page elements. Surfer SEO provides real-time content scores based on top-ranking competitors. Frase helps with research and outline generation based on SERP analysis. For keyword research, use ChatGPT to brainstorm long-tail keywords and content cluster ideas. For technical SEO, AI can generate schema markup, meta descriptions, and alt text at scale. Workflow: Research keywords with AI -> Create content brief -> Draft with AI -> Optimize with Surfer SEO -> Publish.",
+        "recommendedTools": "Surfer SEO (on-page), Frase (research), ChatGPT (keyword ideation), Claude (schema generation)"
+      },
+      {
+        "heading": "Social Media Automation",
+        "content": "Managing multiple social platforms is time-consuming. Using n8n, you can create a workflow that takes one piece of content and automatically adapts it for Twitter/X (280 chars, punchy), LinkedIn (professional, 300 words), and other platforms. AI generates platform-specific versions, schedules posts at optimal times, and tracks engagement. For visual content, Midjourney and Ideogram create eye-catching graphics. For video, Kling and Invideo AI produce short-form clips. This automation lets one person manage a full social media presence.",
+        "recommendedTools": "n8n (automation), ChatGPT (copy adaptation), Midjourney (visuals), Kling (video)"
+      },
+      {
+        "heading": "Campaign Analysis & Reporting",
+        "content": "AI excels at analyzing campaign data and extracting insights. Use ChatGPT or Claude to process campaign metrics (CTR, conversion rate, CPA) and generate actionable recommendations. For A/B testing, AI can suggest test variants and predict which copy will perform better based on historical data. For reporting, Gamma creates presentation-ready reports from your data in minutes. Set up a weekly workflow: export campaign data -> AI analysis -> generate report -> distribute to stakeholders.",
+        "recommendedTools": "ChatGPT (analysis), Claude (insights), Gamma (reporting), Gemini (data insights)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI write content that ranks on Google?",
+        "a": "AI can help with content creation, but Google prioritizes helpful, original content regardless of how it's created. The key is adding unique value: original research, expert insights, and real experience. Use AI for efficiency, not as a replacement for expertise."
+      },
+      {
+        "q": "How do I avoid AI-sounding content?",
+        "a": "Provide detailed brand voice guidelines in your prompts, edit for specificity (replace generic phrases with concrete examples), add personal experience and opinions, and always read aloud to catch awkward phrasing. Tools like Surfer SEO can also help ensure content matches the depth of top-ranking pages."
+      },
+      {
+        "q": "What is the best AI tool for marketing?",
+        "a": "There is no single best tool. For content: ChatGPT + Claude. For SEO: Surfer SEO. For social: n8n + ChatGPT. For visuals: Midjourney. For presentations: Gamma. The best approach is combining 3-4 tools into an integrated workflow."
+      }
+    ],
+    "title_zh": "营销 AI 工具指南：内容、SEO 与活动",
+    "desc_zh": "营销团队如何用 AI 进行内容创作、SEO 优化、社媒管理和活动分析。"
+  },
+  {
+    "slug": "ai-for-education",
+    "industry": "Education & Training",
+    "title": "AI Tools for Education: Teaching, Learning, and Administration",
+    "description": "How educators and institutions use AI for lesson planning, personalized learning paths, grading, content creation, and student engagement.",
+    "icon": "graduation-cap",
+    "tools": [
+      "ChatGPT",
+      "Claude",
+      "Gamma",
+      "ElevenLabs",
+      "Suno",
+      "Kling"
+    ],
+    "workflows": [
+      "gamma-course-lesson",
+      "dify-rag-document-qna",
+      "n8n-rss-to-blog-post"
+    ],
+    "sections": [
+      {
+        "heading": "Lesson Planning & Content Creation",
+        "content": "AI dramatically reduces lesson planning time. ChatGPT and Claude can generate lesson plans aligned to curriculum standards, create differentiated materials for various learning levels, and produce practice problems with answer keys. Gamma transforms lesson plans into interactive slide presentations with speaker notes. For multimedia, ElevenLabs generates narration for educational videos, Suno creates background music, and Kling produces animated explanations. Workflow: Define learning objective -> AI generates lesson plan -> Create slides with Gamma -> Add narration with ElevenLabs -> Publish to LMS.",
+        "recommendedTools": "ChatGPT (lesson plans), Claude (curriculum design), Gamma (presentations), ElevenLabs (narration)"
+      },
+      {
+        "heading": "Personalized Learning Paths",
+        "content": "AI enables truly personalized education at scale. Using Dify's RAG (Retrieval Augmented Generation), you can build a Q&A system where students ask questions and get answers grounded in your course materials with citations. Claude can analyze student performance data and recommend personalized study paths. For adaptive assessments, AI generates questions at appropriate difficulty levels based on student responses. This approach helps each student learn at their own pace while reducing teacher workload for one-on-one support.",
+        "recommendedTools": "Dify (RAG Q&A system), Claude (learning path analysis), ChatGPT (adaptive questions)"
+      },
+      {
+        "heading": "Grading & Assessment",
+        "content": "AI assists with grading by evaluating written responses, checking for understanding, and providing feedback. ChatGPT can grade short-answer questions against rubrics and generate personalized feedback for each student. For code-based courses, AI can run and evaluate student submissions, providing detailed error explanations. Important: AI grading should supplement, not replace, teacher review. Use AI for initial grading and flagging areas where the teacher should focus attention. Always review AI-generated grades for fairness and accuracy.",
+        "recommendedTools": "ChatGPT (essay grading), Claude (code evaluation), Cursor (programming assignments)"
+      },
+      {
+        "heading": "Student Engagement & Support",
+        "content": "AI chatbots provide 24/7 student support, answering questions about assignments, deadlines, and course content. Using Dify, you can build a support bot trained on your syllabus, FAQ, and course materials. The bot answers common questions, escalates complex ones to teachers, and logs all interactions for follow-up. For engagement, AI can generate quiz games, flashcards, and interactive scenarios. For accessibility, ElevenLabs provides text-to-speech for visually impaired students, and ChatGPT can simplify complex text for different reading levels.",
+        "recommendedTools": "Dify (support bot), ChatGPT (engagement content), ElevenLabs (accessibility)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Is using AI in education ethical?",
+        "a": "AI is a tool that amplifies both good and bad practices. Ethical use means: being transparent with students about AI use, protecting student data privacy, using AI to augment (not replace) teacher judgment, and ensuring AI doesn't introduce bias. Many universities have published AI use guidelines - follow your institution's policy."
+      },
+      {
+        "q": "How do I prevent students from using AI to cheat?",
+        "a": "Focus assessments on process over output: oral presentations, in-class problem solving, project-based learning with checkpoints. Use AI detection tools as a signal, not proof. Design questions that require personal reflection, class-specific context, or real-time problem solving that AI cannot easily replicate."
+      },
+      {
+        "q": "What AI skills should students learn?",
+        "a": "Students should learn: prompt engineering, AI output evaluation (fact-checking, bias detection), ethical AI use, and when NOT to use AI. These are increasingly essential workplace skills regardless of field."
+      }
+    ],
+    "title_zh": "教育 AI 工具指南：教学、学习与管理",
+    "desc_zh": "教育工作者如何用 AI 进行课程规划、个性化学习和评分。"
+  },
+  {
+    "slug": "ai-for-business",
+    "industry": "Business & Operations",
+    "title": "AI Tools for Business: Automation, Analytics, and Growth",
+    "description": "How businesses use AI for process automation, data analysis, customer support, lead management, and strategic decision-making.",
+    "icon": "briefcase",
+    "tools": [
+      "n8n",
+      "Dify",
+      "ChatGPT",
+      "Claude",
+      "Gemini",
+      "Make"
+    ],
+    "workflows": [
+      "n8n-lead-enrichment",
+      "dify-customer-support-bot",
+      "n8n-email-triage-agent",
+      "dify-data-analysis-agent"
+    ],
+    "sections": [
+      {
+        "heading": "Process Automation",
+        "content": "n8n and Make are powerful automation platforms that connect your business tools and eliminate repetitive tasks. Common automations: new lead -> CRM update + Slack alert + welcome email; customer support ticket -> AI classification -> route to right team; daily report -> collect data from 5 sources -> AI summary -> email to stakeholders. The key is identifying repetitive workflows that follow predictable patterns. Start with one process, build it in n8n, test for 2 weeks, then expand. Most businesses can automate 30-50% of routine operations.",
+        "recommendedTools": "n8n (best overall, self-hostable), Make (visual builder), Dify (AI agent workflows)"
+      },
+      {
+        "heading": "AI Customer Support",
+        "content": "Dify enables businesses to build knowledge-base chatbots that handle 40-60% of support tickets automatically. Upload your FAQs, product docs, and past tickets as a knowledge base. The bot retrieves relevant answers with citations and escalates complex issues to humans with full conversation context. Setup: upload documents -> create knowledge base -> build chatbot -> deploy on website/API -> monitor and refine. Key metric to track: deflection rate (percentage of tickets resolved without human intervention). Target 40%+ deflection within 3 months.",
+        "recommendedTools": "Dify (best for AI support), n8n (routing + escalation), Intercom/Zendesk (human fallback)"
+      },
+      {
+        "heading": "Data Analysis & Insights",
+        "content": "AI transforms how businesses analyze data. Using Dify's agent mode, you can build an autonomous data analyst that accepts natural language questions, writes SQL, executes queries, generates charts, and produces reports. For business intelligence, Gemini and ChatGPT can analyze spreadsheets, identify trends, and recommend actions. For competitive analysis, AI can scrape competitor websites, compare features and pricing, and generate SWOT analyses. Key insight: AI doesn't replace analysts - it handles routine queries so analysts focus on strategic work.",
+        "recommendedTools": "Dify (autonomous analysis), Gemini (spreadsheet insights), ChatGPT (competitive analysis)"
+      },
+      {
+        "heading": "Lead Management & Sales",
+        "content": "AI-powered lead enrichment automatically adds company data, social profiles, and qualification scores to new leads. Using n8n, the workflow triggers on new lead capture, calls enrichment APIs (Clearbit, Apollo), uses AI to score the lead against your ICP, and pushes enriched data to your CRM with recommended next actions. High-score leads trigger Slack alerts with one-click meeting booking. Low-score leads enter nurture campaigns automatically. This ensures sales teams focus on the right prospects and respond faster to qualified leads.",
+        "recommendedTools": "n8n (automation pipeline), ChatGPT (lead scoring), HubSpot/Salesforce (CRM)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "How much does it cost to implement AI automation?",
+        "a": "Costs vary: n8n self-hosted is free (cloud from $20/mo), Dify cloud starts free, AI API calls typically $50-200/mo for small teams. The real cost is setup time: 10-20 hours per workflow. ROI is usually positive within 2-3 months for businesses processing 100+ transactions/week."
+      },
+      {
+        "q": "Do I need technical skills to set up AI automation?",
+        "a": "n8n and Make are designed for non-technical users with visual builders. Dify's interface is user-friendly for chatbot creation. However, complex workflows may need some technical assistance for initial setup. Consider hiring a consultant for the first workflow, then maintain it yourself."
+      },
+      {
+        "q": "What is the biggest mistake businesses make with AI?",
+        "a": "Trying to automate everything at once. Start with one high-volume, repetitive process. Build, test, measure results for 2 weeks, then expand. Another common mistake: removing human oversight entirely. Always keep a human-in-the-loop for critical decisions."
+      }
+    ],
+    "title_zh": "企业 AI 工具指南：自动化、分析与增长",
+    "desc_zh": "企业如何用 AI 进行流程自动化、数据分析、客户支持和决策。"
+  },
+  {
+    "slug": "ai-for-creatives",
+    "industry": "Creative & Design",
+    "title": "AI Tools for Creatives: Image, Video, Audio, and Music Production",
+    "description": "How designers, filmmakers, musicians, and content creators use AI for image generation, video editing, voice synthesis, and music production.",
+    "icon": "palette",
+    "tools": [
+      "Midjourney",
+      "Flux",
+      "ComfyUI",
+      "Kling",
+      "ElevenLabs",
+      "Suno",
+      "Ideogram",
+      "Runway"
+    ],
+    "workflows": [
+      "comfyui-batch-product-photos",
+      "comfyui-style-transfer-pipeline",
+      "comfyui-video-frame-interpolation"
+    ],
+    "sections": [
+      {
+        "heading": "Image Generation & Editing",
+        "content": "AI image generation has matured from novelty to production tool. Midjourney v6 produces photorealistic images with excellent composition and lighting. Flux offers more control over specific details and photorealistic product shots. ComfyUI provides a node-based pipeline for batch processing, style transfer, and compositing. For text-heavy graphics, Ideogram excels at typography. Professional workflow: Generate base image with Midjourney -> Refine in ComfyUI (upscale, inpaint, style transfer) -> Final touch-ups in Photoshop. This produces commercial-quality visuals at a fraction of traditional costs.",
+        "recommendedTools": "Midjourney (concept and creative), Flux (photorealistic), ComfyUI (pipeline and batch), Ideogram (typography)"
+      },
+      {
+        "heading": "Video Production",
+        "content": "AI video tools have made professional video production accessible to everyone. Kling and Runway generate short video clips from text or image prompts - ideal for social media, ads, and explainers. ComfyUI with RIFE models handles frame interpolation for smooth slow-motion. For editing, AI tools in CapCut and Kapwing automate subtitle generation, scene detection, and color correction. For full production: script with ChatGPT -> storyboard with Midjourney -> generate clips with Kling -> interpolate frames with ComfyUI -> edit in CapCut -> add narration with ElevenLabs.",
+        "recommendedTools": "Kling (generation), Runway (editing AI), ComfyUI (frame interpolation), CapCut (editing)"
+      },
+      {
+        "heading": "Audio & Voice Production",
+        "content": "ElevenLabs is the industry leader in AI voice synthesis, offering natural-sounding voices in 30+ languages with emotion control. For narration, ElevenLabs eliminates the need for voice actors for routine content. For music, Suno generates complete songs from text descriptions - useful for background tracks, jingles, and sound design. For podcasts, AI handles noise removal, level normalization, and transcription. Professional audio workflow: Write script -> Generate voiceover with ElevenLabs -> Create background music with Suno -> Mix and master -> Publish.",
+        "recommendedTools": "ElevenLabs (voice synthesis), Suno (music generation), Murf (alternative voice), Speechify (text-to-speech)"
+      },
+      {
+        "heading": "Creative Pipeline Integration",
+        "content": "The real power of AI for creatives is integrating multiple tools into a pipeline. ComfyUI serves as the hub: it can receive text prompts, generate images, apply style transfers, upscale, and batch process. For a brand campaign: 1) Define visual style with Midjourney, 2) Set up ComfyUI pipeline with the style reference, 3) Batch generate variations for different platforms, 4) Add video elements with Kling, 5) Create voiceover with ElevenLabs, 6) Assemble in your editor. This pipeline produces consistent branded content across all channels.",
+        "recommendedTools": "ComfyUI (pipeline hub), Midjourney (style definition), Kling (video), ElevenLabs (audio)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI-generated images be copyrighted?",
+        "a": "Copyright law for AI-generated content is evolving. In the US, purely AI-generated images may not be copyrightable, but images where humans significantly modify or arrange AI output may be. Always check your jurisdiction and platform terms of service. When in doubt, add significant human creative input."
+      },
+      {
+        "q": "Will AI replace designers and artists?",
+        "a": "AI is a tool that enhances creative workflows, not replaces creators. Designers who use AI effectively produce more work, explore more ideas, and focus on high-level creative direction. The skills that remain valuable: art direction, brand strategy, client communication, and taste/judgment."
+      },
+      {
+        "q": "Which AI image tool produces the most realistic results?",
+        "a": "For photorealism: Flux and Midjourney v6 lead the field. For product photography specifically, Flux with proper prompting produces commercial-quality results. For artistic work, Midjourney excels at mood and composition. For maximum control, ComfyUI with Stable Diffusion models offers the most customization."
+      }
+    ],
+    "title_zh": "创意设计 AI 工具指南：图像、视频、音频",
+    "desc_zh": "设计师和创作者如何用 AI 进行图像生成、视频编辑和音乐制作。"
+  },
+  {
+    "slug": "ai-for-healthcare",
+    "industry": "Healthcare & Medical",
+    "title": "AI Tools for Healthcare: Diagnosis, Documentation, and Patient Care",
+    "title_zh": "医疗健康 AI 工具指南：诊断、文档与患者护理",
+    "description": "How healthcare professionals use AI for medical imaging, clinical documentation, patient communication, and research.",
+    "desc_zh": "医疗专业人员如何用 AI 进行医学影像、临床文档、患者沟通和研究。",
+    "icon": "heartbeat",
+    "tools": [
+      "ChatGPT",
+      "Claude",
+      "ElevenLabs",
+      "Kling",
+      "Dify"
+    ],
+    "workflows": [
+      "dify-rag-document-qna",
+      "dify-customer-support-bot"
+    ],
+    "sections": [
+      {
+        "heading": "Medical Imaging & Diagnostics",
+        "content": "AI has transformed medical imaging analysis. Tools like Google Health and Aidoc can detect anomalies in X-rays, MRIs, and CT scans with accuracy matching specialist radiologists. For clinical documentation, AI scribes like Otter.ai and Fireflies.ai transcribe patient consultations in real-time, generate structured notes, and update EHR systems automatically. This saves physicians 2-3 hours per day on paperwork. For patient communication, AI chatbots powered by Dify can answer common health questions, schedule appointments, and send medication reminders. Always ensure HIPAA compliance when using AI with patient data.",
+        "recommendedTools": "Dify (patient chatbot), Otter.ai (clinical notes), ChatGPT (research)"
+      },
+      {
+        "heading": "Clinical Documentation & EHR",
+        "content": "AI dramatically reduces the documentation burden in healthcare. Voice-to-text tools like Otter.ai and Fireflies.ai transcribe patient visits, generate SOAP notes, and integrate with EHR systems. Claude can process long medical documents, summarize research papers, and extract relevant clinical guidelines. For patient education, AI can generate personalized discharge instructions and medication guides in plain language. Best practice: Always have a physician review AI-generated clinical content before it enters the patient record.",
+        "recommendedTools": "Otter.ai (transcription), Claude (document analysis), ChatGPT (patient education)"
+      },
+      {
+        "heading": "Patient Communication & Support",
+        "content": "AI chatbots handle routine patient communications: appointment scheduling, medication reminders, FAQ answering, and triage. Using Dify, you can build a HIPAA-compliant chatbot trained on your practice guidelines and common questions. For multilingual patients, ElevenLabs provides real-time translation and voice services. For remote monitoring, AI can analyze patient-reported data and flag concerning trends for clinician review. Always maintain human oversight for clinical decisions.",
+        "recommendedTools": "Dify (patient bot), ElevenLabs (multilingual), ChatGPT (content)"
+      },
+      {
+        "heading": "Medical Research & Literature",
+        "content": "AI accelerates medical research by processing vast amounts of literature. Claude and ChatGPT can summarize research papers, identify relevant studies, and generate literature reviews. Perplexity provides real-time web search with citations for the latest medical findings. For data analysis, AI tools can process clinical trial data, identify patterns, and generate statistical summaries. For grant writing, AI assists with drafting proposals and generating preliminary research summaries.",
+        "recommendedTools": "Claude (literature review), Perplexity (research), ChatGPT (grant writing)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Is AI safe for medical diagnosis?",
+        "a": "AI should augment, not replace, physician judgment. AI tools for medical imaging are FDA-cleared as decision support tools. A physician must always review and confirm AI findings before making clinical decisions."
+      },
+      {
+        "q": "How do I ensure HIPAA compliance with AI tools?",
+        "a": "Use only HIPAA-compliant AI services (OpenAI Enterprise, Azure OpenAI). Never send PHI to consumer AI tools. Use on-premise solutions like Dify or LlamaIndex for sensitive data. Always sign BAAs with AI service providers."
+      },
+      {
+        "q": "Can AI replace medical scribes?",
+        "a": "AI can handle 60-80% of routine documentation tasks, but human oversight is still needed for complex cases and quality assurance. The best approach is AI-assisted documentation with physician review."
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-finance",
+    "industry": "Finance & Accounting",
+    "title": "AI Tools for Finance: Analysis, Forecasting, and Automation",
+    "title_zh": "金融财务 AI 工具指南：分析、预测与自动化",
+    "description": "How finance professionals use AI for data analysis, financial forecasting, report generation, and compliance monitoring.",
+    "desc_zh": "金融专业人员如何用 AI 进行数据分析、财务预测、报告生成和合规监控。",
+    "icon": "chart-line",
+    "tools": [
+      "ChatGPT",
+      "Claude",
+      "Gemini",
+      "n8n",
+      "Dify"
+    ],
+    "workflows": [
+      "dify-data-analysis-agent",
+      "n8n-webhook-automation",
+      "n8n-api-monitor"
+    ],
+    "sections": [
+      {
+        "heading": "Financial Analysis & Insights",
+        "content": "AI transforms financial analysis by processing large datasets and extracting insights. Gemini and ChatGPT can analyze spreadsheets, identify trends, and generate narrative reports. For SQL-based analysis, Dify agent mode accepts natural language questions, writes SQL, executes queries, and produces visualizations. For competitive analysis, AI can scrape competitor financial data and generate comparison reports. Best practice: Always verify AI-generated financial calculations with traditional methods.",
+        "recommendedTools": "Gemini (data insights), Dify (SQL agent), ChatGPT (analysis)"
+      },
+      {
+        "heading": "Report Generation & Automation",
+        "content": "AI automates financial reporting by generating monthly/quarterly reports from raw data. n8n can connect to your accounting software, pull data, use AI to generate narrative analysis, and distribute reports to stakeholders. For regulatory filings, Claude can process regulatory requirements and ensure report compliance. For investor communications, AI generates summaries of financial performance with key metrics and trend analysis. Workflow: Pull data from ERP → AI generates analysis → Format report → Email to stakeholders.",
+        "recommendedTools": "n8n (automation), Claude (compliance), ChatGPT (narratives)"
+      },
+      {
+        "heading": "Risk Assessment & Compliance",
+        "content": "AI enhances risk assessment by analyzing patterns in transaction data, flagging anomalies, and predicting potential fraud. For compliance, AI can monitor regulatory changes, update internal policies, and ensure documentation meets requirements. n8n can automate compliance monitoring by checking transactions against rules and alerting compliance officers. For audit preparation, AI organizes documentation and generates audit trails. Always maintain human oversight for high-stakes financial decisions.",
+        "recommendedTools": "n8n (monitoring), Claude (regulatory), ChatGPT (documentation)"
+      },
+      {
+        "heading": "Investment Research",
+        "content": "AI accelerates investment research by processing earnings calls, SEC filings, and market data. Perplexity provides real-time research with citations. Claude can analyze long financial documents and extract key metrics. For portfolio analysis, AI tools compare performance across assets and suggest rebalancing strategies. For market sentiment, AI analyzes news and social media to gauge market mood. Best practice: Use AI as a research assistant, not as the sole basis for investment decisions.",
+        "recommendedTools": "Perplexity (research), Claude (document analysis), Gemini (market data)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI replace financial analysts?",
+        "a": "AI augments analysts by handling data processing and routine analysis. Analysts who use AI are more productive but strategic judgment, client relationships, and complex scenario analysis still require human expertise."
+      },
+      {
+        "q": "Is it safe to use AI for financial analysis?",
+        "a": "Use enterprise-grade AI services with data protection guarantees. Never send sensitive financial data to consumer AI tools. Always verify AI calculations independently. Maintain audit trails of all AI-assisted decisions."
+      },
+      {
+        "q": "How much can AI automate in finance?",
+        "a": "60-80% of routine reporting, data entry, and basic analysis can be automated. Strategic planning, client advisory, and complex modeling still require human expertise."
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-legal",
+    "industry": "Legal & Compliance",
+    "title": "AI Tools for Legal: Research, Contract Review, and Document Automation",
+    "title_zh": "法律合规 AI 工具指南：研究、合同审查与文档自动化",
+    "description": "How legal professionals use AI for legal research, contract analysis, document drafting, and compliance monitoring.",
+    "desc_zh": "法律专业人员如何用 AI 进行法律研究、合同分析、文件起草和合规监控。",
+    "icon": "gavel",
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Perplexity",
+      "Dify",
+      "n8n"
+    ],
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-email-triage-agent"
+    ],
+    "sections": [
+      {
+        "heading": "Legal Research & Case Law",
+        "content": "AI dramatically speeds up legal research. Perplexity provides real-time search with citations for case law and statutes. Claude can process lengthy court opinions, identify relevant precedents, and generate research memoranda. For litigation preparation, AI analyzes opposing arguments and suggests counter-strategies. Always verify AI-cited cases independently — AI can sometimes hallucinate citations. Best practice: Use AI for initial research, then verify all citations in primary sources.",
+        "recommendedTools": "Perplexity (research), Claude (case analysis), ChatGPT (memos)"
+      },
+      {
+        "heading": "Contract Review & Analysis",
+        "content": "AI transforms contract review by identifying risks, anomalies, and non-standard clauses. Claude excels at analyzing long contracts (200K context window) and comparing them against your standard templates. For due diligence, AI can review hundreds of contracts in minutes, flagging unusual terms and potential liabilities. For contract drafting, AI generates initial drafts based on your templates and specific deal terms. Workflow: Upload contract → AI identifies risks → Compare to standards → Generate review notes → Attorney review.",
+        "recommendedTools": "Claude (long contracts), ChatGPT (drafting), Dify (contract Q&A)"
+      },
+      {
+        "heading": "Document Automation & Drafting",
+        "content": "AI accelerates document drafting for routine legal work. ChatGPT and Claude can generate initial drafts of standard documents: NDAs, employment agreements, privacy policies. For document Q&A, Dify RAG systems let attorneys search through thousands of firm documents and find relevant precedents instantly. For client communications, AI drafts engagement letters and status updates. Always have an attorney review and finalize all AI-generated legal documents.",
+        "recommendedTools": "ChatGPT (drafting), Claude (complex docs), Dify (document search)"
+      },
+      {
+        "heading": "Compliance & Risk Management",
+        "content": "AI helps legal teams monitor regulatory changes and ensure organizational compliance. n8n can automate compliance workflows: monitor regulatory websites, alert when changes occur, and track internal policy updates. For risk assessment, AI analyzes contracts and communications for compliance gaps. For audit preparation, AI organizes documentation and generates compliance reports. For multi-jurisdiction compliance, AI tracks varying requirements across states and countries.",
+        "recommendedTools": "n8n (monitoring), Claude (risk analysis), ChatGPT (compliance docs)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI replace lawyers?",
+        "a": "No. AI is a tool that makes lawyers more efficient but cannot replace legal judgment, ethical obligations, or client representation. Lawyers who use AI effectively can handle more cases and provide faster service."
+      },
+      {
+        "q": "Is AI-generated legal advice reliable?",
+        "a": "AI can assist with research and drafting but should never be the sole source of legal advice. Always have a licensed attorney review all AI output. AI can sometimes hallucinate case citations, so verify all references independently."
+      },
+      {
+        "q": "How do I ensure attorney-client privilege with AI?",
+        "a": "Use only enterprise AI services that guarantee data confidentiality (Claude Enterprise, OpenAI Enterprise). Never use consumer AI tools for privileged communications. Consider on-premise solutions for highly sensitive matters."
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-architecture",
+    "industry": "Architecture",
+    "title": "AI Tools for Architects: Design, Visualization, and Documentation",
+    "title_zh": "AI Tools for Architects: Design, Visualization, and Documentation",
+    "description": "How architects use AI for concept design, 3D visualization, rendering, code compliance, and documentation.",
+    "desc_zh": "How architects use AI for concept design, 3D visualization, rendering, code compliance, and documentation.",
+    "icon": "fa-drafting-compass",
+    "tools": [
+      "Midjourney",
+      "Flux",
+      "ComfyUI",
+      "ChatGPT",
+      "Claude",
+      "Dify",
+      "n8n"
+    ],
+    "workflows": [
+      "comfyui-style-transfer-pipeline",
+      "dify-rag-document-qna",
+      "n8n-webhook-automation"
+    ],
+    "sections": [
+      {
+        "heading": "Concept Design & Ideation",
+        "content": "AI image generation has become essential for architectural concept design. Midjourney generates stunning conceptual renders from text descriptions. Flux provides more control over architectural details. ComfyUI with Stable Diffusion generates design variations while maintaining structural logic. Workflow: Define brief -> Generate options with Midjourney -> Refine in ComfyUI -> Present to client. Reduces concept design from days to hours.",
+        "recommendedTools": "Midjourney (concepts), Flux (detailed renders), ComfyUI (variations)"
+      },
+      {
+        "heading": "3D Visualization & Rendering",
+        "content": "AI rendering transforms basic 3D models into photorealistic visualizations. ComfyUI with ControlNet takes SketchUp/Rhino screenshots and generates finished renders with realistic lighting and materials. For batch rendering, ComfyUI pipelines automate the process. AI upscaling enhances low-res renders. Kling and Runway animate static renders into walkthroughs. Eliminates expensive rendering farms, reduces visualization time by 70%.",
+        "recommendedTools": "ComfyUI (rendering pipeline), Midjourney (atmospheric), Kling (video walkthroughs)"
+      },
+      {
+        "heading": "Code Compliance & Building Regulations",
+        "content": "AI speeds up code compliance checking. Using Dify RAG, upload building codes (IBC, ASCE, local amendments) as a knowledge base. Ask \"What is the minimum corridor width for Type B occupancy?\" and get answers with citations. Claude processes lengthy code documents (200K context). For ADA compliance, AI checks door clearances, ramp slopes, fixture heights. Always verify AI findings with a licensed architect.",
+        "recommendedTools": "Dify (code Q&A), Claude (long documents), ChatGPT (compliance checking)"
+      },
+      {
+        "heading": "Construction Documentation & BIM",
+        "content": "AI automates construction documentation. n8n connects BIM software (Revit, ArchiCAD) with documentation tools, auto-generating sheet indexes, room schedules, material takeoffs. Claude generates draft specifications. AI detects common drawing errors (missing dimensions, inconsistent annotations). n8n automates drawing transmittal and revision tracking. Reduces documentation time by 40-60%.",
+        "recommendedTools": "n8n (BIM automation), Claude (specifications), ChatGPT (drawing review)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI replace architects?",
+        "a": "No. AI is a design tool that enhances creativity and productivity. Architects who use AI can explore more options, visualize faster, and check compliance. Professional judgment, liability, and client relationships still require licensed architects."
+      },
+      {
+        "q": "Best AI tool for architectural rendering?",
+        "a": "Midjourney for concept renders, ComfyUI with ControlNet for photorealistic rendering from 3D models, Flux for detailed renders. For animation, Kling and Runway generate smooth walkthroughs."
+      },
+      {
+        "q": "Is AI-generated architectural content copyrightable?",
+        "a": "Copyright for AI-generated images varies by jurisdiction. In the US, purely AI-generated images may not be copyrightable, but images where architects significantly modify AI output may be. Always add significant human creative input."
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-construction",
+    "industry": "Construction Management",
+    "title": "AI Tools for Construction: Planning, Safety, and Project Management",
+    "title_zh": "AI Tools for Construction: Planning, Safety, and Project Management",
+    "description": "How construction professionals use AI for project planning, safety monitoring, progress tracking, and quality control.",
+    "desc_zh": "How construction professionals use AI for project planning, safety monitoring, progress tracking, and quality control.",
+    "icon": "fa-hard-hat",
+    "tools": [
+      "ChatGPT",
+      "Claude",
+      "n8n",
+      "Dify",
+      "Make",
+      "Otter"
+    ],
+    "workflows": [
+      "n8n-webhook-automation",
+      "n8n-api-monitor",
+      "dify-rag-document-qna"
+    ],
+    "sections": [
+      {
+        "heading": "Project Planning & Scheduling",
+        "content": "AI transforms construction planning by analyzing historical data and optimizing schedules. ChatGPT generates draft schedules from project scope, identifying critical path activities. n8n automates schedule updates by connecting Primavera P6, MS Project, Procore. For resource optimization, AI analyzes labor, equipment, material delivery. Claude processes historical data to identify delay patterns. Always validate with experienced PM.",
+        "recommendedTools": "ChatGPT (schedules), n8n (automation), Claude (risk analysis)"
+      },
+      {
+        "heading": "Safety Monitoring & Compliance",
+        "content": "AI-powered safety monitoring uses computer vision to detect PPE compliance, unsafe behaviors, hazard conditions. AI generates daily safety reports from site photos. For OSHA compliance, Dify RAG answers site-specific safety questions. n8n automates incident workflow: detected -> photo -> AI classification -> supervisor alert -> report. Reduces safety documentation time by 50%.",
+        "recommendedTools": "Dify (safety Q&A), n8n (incident workflow), ChatGPT (training materials)"
+      },
+      {
+        "heading": "Progress Tracking & Reporting",
+        "content": "AI automates progress tracking by comparing site photos to BIM models. For daily reports, AI generates drafts from site notes, photos, weather data in 2 minutes vs 30 minutes manual. n8n automates: collect data -> AI generates report -> distribute -> archive. For client updates, AI creates visual progress summaries. For earned value analysis, AI connects cost with progress data.",
+        "recommendedTools": "n8n (reporting), ChatGPT (daily reports), Claude (analysis)"
+      },
+      {
+        "heading": "Quality Control & Defect Management",
+        "content": "AI enhances QC by analyzing site photos for defects, measuring dimensions against drawings. For RFIs, Claude processes questions, searches specs, drafts responses. n8n automates RFI workflow: submitted -> AI categorize -> route -> track response. For submittals, AI checks product data against specs. For commissioning, AI generates test procedures. Reduces RFI response time by 60%.",
+        "recommendedTools": "Claude (RFI responses), n8n (workflow), ChatGPT (QC procedures)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI help with construction safety?",
+        "a": "Yes. AI monitors site photos for PPE compliance, flags unsafe conditions, automates safety reports, and answers OSHA compliance questions. However, AI should supplement not replace human safety officers."
+      },
+      {
+        "q": "How much time can AI save in construction management?",
+        "a": "AI can reduce documentation time by 40-60% (daily reports, RFIs, safety reports), improve RFI response time by 60%, and provide real-time progress visibility. Biggest savings from automating repetitive documentation."
+      },
+      {
+        "q": "What construction software works with AI tools?",
+        "a": "n8n connects to Procore, Primavera P6, MS Project, PlanGrid. Dify integrates with document management. ChatGPT and Claude work standalone for analysis and drafting."
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-structural-engineers",
+    "industry": "Structural Engineering",
+    "title": "AI Tools for Structural Engineers: Analysis, Design, and Calculation",
+    "title_zh": "AI Tools for Structural Engineers: Analysis, Design, and Calculation",
+    "description": "How structural engineers use AI for structural analysis optimization, load calculations, design verification, and documentation.",
+    "desc_zh": "How structural engineers use AI for structural analysis optimization, load calculations, design verification, and documentation.",
+    "icon": "fa-building",
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Dify",
+      "n8n",
+      "ComfyUI"
+    ],
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-webhook-automation",
+      "claude-technical-spec"
+    ],
+    "sections": [
+      {
+        "heading": "Structural Analysis & Optimization",
+        "content": "AI assists structural engineers by generating initial design options, optimizing member sizes, verifying calculations. Claude processes analysis reports, identifies potential issues, checks load paths, suggests alternatives. For parametric design, AI generates options based on load requirements, material properties, code constraints. AI suggests member sizing reductions where capacity exceeds demand. Must be verified by licensed engineer. Accelerates iterative design by 40-50%.",
+        "recommendedTools": "Claude (analysis review), ChatGPT (design options), Gemini (optimization)"
+      },
+      {
+        "heading": "Load Calculations & Code Compliance",
+        "content": "AI speeds up load calculations by automating code requirement lookup and generating calculation templates. Dify RAG stores ASCE 7, IBC, local amendments. Ask \"What is the wind load for a 50m building in exposure B?\" Claude processes seismic provisions. AI generates load combinations per code. For snow/rain/ice, AI calculates based on location and geometry. Always verify with engineering judgment.",
+        "recommendedTools": "Dify (code Q&A), Claude (seismic provisions), ChatGPT (calculation templates)"
+      },
+      {
+        "heading": "Design Documentation & Drawings",
+        "content": "AI streamlines documentation by generating calculation narratives, design criteria, specification sections. Claude writes structural design reports from calculation results. For drawing annotations, AI generates consistent notation. For shop drawing review, Claude compares submitted vs design drawings. n8n automates: calculations -> AI generates report -> review -> stamp -> distribute. Reduces documentation time by 50-70%.",
+        "recommendedTools": "Claude (design reports), n8n (workflow), ChatGPT (notes generation)"
+      },
+      {
+        "heading": "Research & Continuing Education",
+        "content": "AI accelerates research by processing technical papers, code updates, trends. Perplexity provides real-time research on materials, methods, code changes. Claude summarizes research papers and extracts key findings. For PE/SE exam prep, AI generates practice problems. For peer review, AI checks calculations against first principles. For collaboration, AI translates between disciplines.",
+        "recommendedTools": "Perplexity (research), Claude (paper analysis), ChatGPT (study materials)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI do structural calculations?",
+        "a": "AI can assist with load calculations by looking up code requirements, generating templates, verifying results. However, a licensed engineer must perform and stamp all final calculations. AI can make errors in complex load paths."
+      },
+      {
+        "q": "Best AI tools for structural engineering?",
+        "a": "Claude for processing lengthy code documents and analysis reports. Dify for building a code reference knowledge base. n8n for automating documentation workflows. ChatGPT for calculation templates and design narratives."
+      },
+      {
+        "q": "How to ensure AI-generated structural content is safe?",
+        "a": "Always have a licensed PE/SE verify all AI-generated calculations. Use AI for initial drafts and verification, not as primary design tool. Cross-reference with established software (ETABS, SAP2000, RAM). Maintain audit trails."
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-civil-engineers",
+    "industry": "Civil Engineering",
+    "title": "AI Tools for Civil Engineers: Site Design, Hydrology, and Infrastructure",
+    "title_zh": "AI Tools for Civil Engineers: Site Design, Hydrology, and Infrastructure",
+    "description": "How civil engineers use AI for site analysis, drainage design, earthwork optimization, and infrastructure planning.",
+    "desc_zh": "How civil engineers use AI for site analysis, drainage design, earthwork optimization, and infrastructure planning.",
+    "icon": "fa-road",
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Dify",
+      "n8n",
+      "ComfyUI"
+    ],
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-webhook-automation",
+      "gemini-data-insights"
+    ],
+    "sections": [
+      {
+        "heading": "Site Analysis & Grading Design",
+        "content": "AI assists with site analysis by processing topographic data, identifying drainage patterns, optimizing grading plans. ComfyUI generates visual site analysis overlays from aerial photos. For grading optimization, AI analyzes cut/fill volumes, suggests balance points. For drainage, AI processes rainfall data, soil types, surface conditions. For site selection, AI evaluates multiple sites against criteria. Reduces preliminary design time by 50%, improves earthwork efficiency by 10-20%.",
+        "recommendedTools": "ComfyUI (site visualization), Gemini (data analysis), ChatGPT (drainage calcs)"
+      },
+      {
+        "heading": "Hydrology & Stormwater Management",
+        "content": "AI transforms hydrology calculations by automating rainfall-runoff analysis, detention pond sizing, drainage network design. Dify RAG stores local stormwater regulations. Claude processes hydrology reports, verifies calculations. For SWMM modeling, AI generates input parameters from GIS data. For BMP selection, AI evaluates site constraints. For flood analysis, AI processes historical rainfall data. Always verify with HEC-HMS, SWMM.",
+        "recommendedTools": "Dify (regulation Q&A), Claude (report analysis), ChatGPT (hydrology calcs)"
+      },
+      {
+        "heading": "Infrastructure Planning & Utilities",
+        "content": "AI enhances infrastructure planning by optimizing utility layouts, analyzing traffic patterns, coordinating disciplines. For utility coordination, AI processes maps, identifies conflicts. For traffic analysis, AI processes count data, generates impact assessments. For pipe networks, AI optimizes sizes and alignments. n8n automates plan review: submit -> AI check conflicts -> route to utilities -> track responses. Reduces conflict resolution time by 60%.",
+        "recommendedTools": "n8n (coordination workflow), ChatGPT (traffic analysis), Gemini (quantity takeoffs)"
+      },
+      {
+        "heading": "Construction Documents & Permits",
+        "content": "AI streamlines documentation by generating permit applications, construction notes, specifications. Claude drafts SWPPP based on site conditions and EPA requirements. For permits, AI generates complete application packages. For E&S control plans, AI generates standard details based on local requirements. For quantity calculations, AI processes design files, generates earthwork, paving, pipe quantities. Reduces permit preparation time by 40%.",
+        "recommendedTools": "Claude (SWPPP/permits), ChatGPT (specifications), n8n (document workflow)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI help with stormwater management design?",
+        "a": "Yes. AI can calculate runoff coefficients, size detention facilities, generate SWPPP documents, check designs against regulations. All hydrology must be verified with HEC-HMS, SWMM and stamped by licensed engineer."
+      },
+      {
+        "q": "Best AI tools for civil engineering?",
+        "a": "Dify for code/regulation reference database, Claude for processing technical reports, Gemini for data analysis and visualization, n8n for plan review workflows, ChatGPT for calculation templates and permits."
+      },
+      {
+        "q": "How accurate is AI for earthwork calculations?",
+        "a": "AI generates estimates with 85-95% accuracy for preliminary estimates. For final quantities, always verify with dedicated earthwork software. AI is best for rapid comparisons of multiple grading options."
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-hvac-engineers",
+    "industry": "HVAC & MEP Engineering",
+    "title": "AI Tools for HVAC Engineers: Load Calculations, System Design, and Energy Analysis",
+    "title_zh": "AI Tools for HVAC Engineers: Load Calculations, System Design, and Energy Analysis",
+    "description": "How HVAC and MEP engineers use AI for load calculations, equipment selection, energy modeling, and system optimization.",
+    "desc_zh": "How HVAC and MEP engineers use AI for load calculations, equipment selection, energy modeling, and system optimization.",
+    "icon": "fa-wind",
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Dify",
+      "n8n",
+      "ElevenLabs"
+    ],
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-webhook-automation",
+      "gemini-data-insights"
+    ],
+    "sections": [
+      {
+        "heading": "Load Calculations & Energy Modeling",
+        "content": "AI accelerates HVAC load calculations by automating weather data lookup, building envelope properties, occupancy schedules. Dify RAG stores ASHRAE standards (90.1, 62.1, 55). Claude processes energy modeling reports, identifies efficiency improvements. AI generates calculation templates by building type and climate zone. For energy analysis, AI compares system options, estimates annual consumption. For LEED, AI generates energy modeling summary reports. Reduces load calculation time by 50%.",
+        "recommendedTools": "Dify (ASHRAE Q&A), Claude (energy reports), ChatGPT (load calcs)"
+      },
+      {
+        "heading": "Equipment Selection & Sizing",
+        "content": "AI assists equipment selection by matching design requirements with manufacturer specs. For chillers, AI processes cooling loads, efficiency, budget. For duct sizing, AI generates layouts based on airflow and space constraints. For pumps, AI calculates flow rates and head pressures. For control systems, AI generates sequence of operations. For equipment schedules, AI generates complete schedules from design data. Always verify with manufacturer reps. Reduces selection time by 40%.",
+        "recommendedTools": "ChatGPT (equipment schedules), Claude (spec comparison), Gemini (optimization)"
+      },
+      {
+        "heading": "Commissioning & Building Automation",
+        "content": "AI transforms commissioning by automating test procedure generation, analyzing performance data, optimizing control sequences. AI generates test procedures per ASHRAE Guideline 0. For building automation, AI analyzes BMS trend data, identifies issues: simultaneous heating/cooling, inefficient setpoints, short-cycling. n8n connects to BMS, triggers alerts. For ongoing commissioning, AI continuously monitors, suggests adjustments. Reduces commissioning time by 40%.",
+        "recommendedTools": "n8n (BMS monitoring), ChatGPT (test procedures), Gemini (trend analysis)"
+      },
+      {
+        "heading": "Documentation & Coordination",
+        "content": "AI streamlines MEP coordination by automating clash detection, generating coordination reports, managing RFIs. AI processes 3D model exports, identifies clashes between HVAC, plumbing, electrical, structural. Claude generates detailed control narratives. For specifications, AI generates MEP spec sections. For coordination meetings, AI generates clash reports by discipline and priority. For O&M manuals, AI generates documentation from design data. Reduces coordination documentation time by 50%.",
+        "recommendedTools": "Claude (control narratives), n8n (coordination workflow), ChatGPT (specifications)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI do HVAC load calculations?",
+        "a": "AI can generate calculation templates, look up ASHRAE requirements, automate weather data lookup. All load calculations must be verified with HAP, TRACE, EnergyPlus and stamped by licensed engineer."
+      },
+      {
+        "q": "How can AI help with building automation?",
+        "a": "AI can analyze BMS trend data to identify operational issues, optimize control sequences, generate commissioning test procedures, monitor ongoing performance. n8n connects to BMS and triggers automated alerts."
+      },
+      {
+        "q": "What ASHRAE standards can AI help with?",
+        "a": "Using Dify RAG, upload ASHRAE 90.1 (energy), 62.1 (ventilation), 55 (comfort), 15 (refrigeration). AI answers specific questions with citations. All interpretations verified by qualified engineer."
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-bim",
+    "industry": "BIM & Digital Construction",
+    "title": "AI Tools for BIM Engineers: Model Management, Automation, and Collaboration",
+    "title_zh": "AI Tools for BIM Engineers: Model Management, Automation, and Collaboration",
+    "description": "How BIM engineers and coordinators use AI for model checking, clash detection, parameter automation, and project coordination.",
+    "desc_zh": "How BIM engineers and coordinators use AI for model checking, clash detection, parameter automation, and project coordination.",
+    "icon": "fa-cubes",
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "n8n",
+      "Dify",
+      "ComfyUI",
+      "Gemini"
+    ],
+    "workflows": [
+      "n8n-webhook-automation",
+      "dify-rag-document-qna",
+      "n8n-api-monitor"
+    ],
+    "sections": [
+      {
+        "heading": "Model Checking & Quality Assurance",
+        "content": "AI enhances BIM model checking by automating rule-based validation, checking model completeness, verifying parameter consistency. Dify stores company BIM standards, checks models against them. For parameter validation, AI checks required parameters are filled, values in range, units consistent. For model completeness, AI verifies all required elements per BEP. For naming conventions, AI checks element names follow standards. Claude processes audit reports, generates recommendations. Reduces model checking time by 70%.",
+        "recommendedTools": "Dify (standards checking), Claude (audit reports), ChatGPT (parameter validation)"
+      },
+      {
+        "heading": "Clash Detection & Coordination",
+        "content": "AI transforms clash detection by prioritizing clashes, suggesting resolutions, automating coordination workflows. AI analyzes clash reports, ranks by impact. n8n automates: clash detected -> AI categorize -> route to discipline -> track resolution -> update model. For coordination meetings, AI generates agendas by discipline and impact. Claude drafts RFIs from clash details. Reduces clash resolution time by 50%.",
+        "recommendedTools": "n8n (clash workflow), Claude (RFI drafting), ChatGPT (clash analysis)"
+      },
+      {
+        "heading": "Parameter Automation & Dynamo",
+        "content": "AI assists BIM automation by generating Dynamo scripts, Python code for Revit API, parameter mapping rules. ChatGPT generates Dynamo templates for batch parameter updates, element filtering, view creation. Claude generates C#/Python for Revit API add-ins. For parameter mapping, AI generates rules between IFC and project categories. For quantity takeoff, AI generates Dynamo scripts extracting quantities from models. Reduces automation development time by 60%.",
+        "recommendedTools": "ChatGPT (Dynamo scripts), Claude (Revit API code), Gemini (quantity automation)"
+      },
+      {
+        "heading": "Collaboration & Document Management",
+        "content": "AI streamlines BIM collaboration by automating document control, model transmittal, version management. n8n connects BIM 360, Aconex, Procore with team tools. For submittal management, AI checks against specs. For model version control, AI generates comparison reports. For project dashboards, AI creates real-time BIM progress dashboards. For meetings, Otter.ai transcribes, AI generates action items. Reduces collaboration documentation by 40%.",
+        "recommendedTools": "n8n (document automation), Otter (meeting transcription), ChatGPT (training materials)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI automate BIM model checking?",
+        "a": "Yes. AI can validate parameters against company BIM standards, check model completeness, verify naming conventions, generate audit reports. Using Dify, create a knowledge base of your BEP and check models against it."
+      },
+      {
+        "q": "How can AI help with Dynamo and Revit automation?",
+        "a": "ChatGPT generates Dynamo script templates for common tasks. Claude generates Python/C# for Revit API add-ins. AI reduces automation development time by 60% and helps non-programmers create useful scripts."
+      },
+      {
+        "q": "What BIM platforms work with AI tools?",
+        "a": "n8n connects to BIM 360, Aconex, Procore via API. Dify integrates with document management. ChatGPT and Claude work standalone for code generation and analysis. Use n8n as integration layer between BIM platforms and AI."
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-industrial-design",
+    "industry": "Industrial & Product Design",
+    "title": "AI Tools for Industrial Designers: Concept, Prototyping, and Manufacturing",
+    "title_zh": "AI Tools for Industrial Designers: Concept, Prototyping, and Manufacturing",
+    "description": "How industrial designers use AI for concept generation, 3D modeling, prototyping, and manufacturing documentation.",
+    "desc_zh": "How industrial designers use AI for concept generation, 3D modeling, prototyping, and manufacturing documentation.",
+    "icon": "fa-industry",
+    "tools": [
+      "Midjourney",
+      "Flux",
+      "ComfyUI",
+      "Claude",
+      "ChatGPT",
+      "v0-dev"
+    ],
+    "workflows": [
+      "comfyui-style-transfer-pipeline",
+      "comfyui-lora-training",
+      "comfyui-batch-product-photos"
+    ],
+    "sections": [
+      {
+        "heading": "Concept Design & Ideation",
+        "content": "AI revolutionizes industrial design concept generation. Midjourney generates product concept renders from text descriptions. Flux generates variations with different materials, colors, finishes. For ergonomic design, AI generates form studies from human factors data. ComfyUI with LoRA trains on your company portfolio, generates new designs in your brand style. Workflow: brief -> Midjourney concepts -> client feedback -> ComfyUI refinement -> final concept. Reduces concept design from weeks to days.",
+        "recommendedTools": "Midjourney (concepts), Flux (variations), ComfyUI (brand-consistent designs)"
+      },
+      {
+        "heading": "3D Modeling & Prototyping",
+        "content": "AI assists 3D modeling by generating base meshes from concept images, automating repetitive tasks, optimizing geometry for manufacturing. For concept-to-3D, AI converts 2D sketches into rough 3D models. For topology optimization, AI generates structures that reduce material while maintaining strength. For 3D printing, AI optimizes orientation, generates support structures, estimates print time. For rapid prototyping, AI generates scale variations. Accelerates concept-to-prototype cycle by 50%.",
+        "recommendedTools": "ComfyUI (concept-to-3D), ChatGPT (modeling scripts), Claude (optimization analysis)"
+      },
+      {
+        "heading": "Manufacturing & Production Documentation",
+        "content": "AI streamlines manufacturing documentation by generating technical drawings, material specs, production instructions. Claude generates manufacturing specifications from design data: tolerances, surface finishes, material requirements. For assembly instructions, AI generates step-by-step guides with illustrations. For QC, AI generates inspection checklists. For cost estimation, AI generates BOMs and estimates manufacturing costs. For suppliers, AI translates specs into supplier-friendly formats. Reduces documentation time by 60%.",
+        "recommendedTools": "Claude (manufacturing specs), ChatGPT (assembly instructions), Gemini (cost estimation)"
+      },
+      {
+        "heading": "Design Research & User Testing",
+        "content": "AI enhances design research by analyzing user feedback, market trends, competitor products. For user research, AI processes interview transcripts, identifies pain points. For competitive analysis, AI analyzes competitor product images, identifies trends. Perplexity provides real-time research on product categories, pricing. For A/B testing, AI generates multiple design variations. For sustainability, AI evaluates environmental impact. Reduces research time by 50%.",
+        "recommendedTools": "Perplexity (market research), Claude (user research analysis), ChatGPT (design variations)"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can AI generate product designs from scratch?",
+        "a": "AI can generate product concept visuals from text descriptions (Midjourney, Flux) and train on brand style (ComfyUI LoRA). However, AI concepts need human refinement for manufacturability, ergonomics, engineering feasibility. AI is best for rapid concept exploration."
+      },
+      {
+        "q": "How accurate are AI-generated manufacturing specifications?",
+        "a": "AI generates draft specifications from design data with 80-90% accuracy for standard products. For complex or novel designs, always have manufacturing engineer review. AI is best for first drafts and standard documentation."
+      },
+      {
+        "q": "Best AI tool for industrial design?",
+        "a": "Midjourney for concepts, ComfyUI for brand-consistent variations and product photography, Claude for manufacturing documentation, ChatGPT for design research and analysis. Combination provides complete AI-assisted design workflow."
+      }
+    ]
+  }
+]

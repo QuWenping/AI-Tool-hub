@@ -1,0 +1,43 @@
+---
+/**
+ * RelatedPosts.astro - 相关文章推荐
+ * 基于 tag 匹配 + 分类匹配
+ */
+import posts from "../data/posts.json";
+const { currentSlug, currentCategory, currentTags = [], limit = 3 } = Astro.props;
+
+// 评分：相同分类 +5，相同 tag 每个 +2
+const scoredPosts = posts
+  .filter(p => p.slug !== currentSlug)
+  .map(p => {
+    let score = 0;
+    if (p.category === currentCategory) score += 5;
+    const sharedTags = (p.tags || []).filter(t => currentTags.includes(t));
+    score += sharedTags.length * 2;
+    return { ...p, score };
+  })
+  .filter(p => p.score > 0)
+  .sort((a, b) => b.score - a.score)
+  .slice(0, limit);
+---
+{scoredPosts.length > 0 && (
+  <section class="related-posts" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-color);">
+    <h3 style="font-size: 20px; margin-bottom: 24px;" data-i18n-en="Related articles" data-i18n-zh="相关文章">Related articles</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
+      {scoredPosts.map(p => (
+        <a
+          href={`/blog/${p.slug}/`}
+          style="display: block; padding: 20px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;"
+          onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"
+          onmouseout="this.style.transform=''; this.style.boxShadow='';"
+        >
+          <h4 style="margin: 0 0 8px; font-size: 16px; line-height: 1.4;">{p.title_en}</h4>
+          <p style="color: var(--text-mute); font-size: 13px; margin: 0; line-height: 1.5;">{p.desc_en}</p>
+          <p style="font-size: 11px; color: var(--text-mute); margin-top: 12px; margin-bottom: 0;">
+            <i class="far fa-calendar"></i> {p.date} · {p.read_time}
+          </p>
+        </a>
+      ))}
+    </div>
+  </section>
+)}

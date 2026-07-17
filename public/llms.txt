@@ -1,0 +1,44 @@
+# AI Tool Hub
+
+> Curated, hand-tested reviews of the best AI tools. Updated weekly. Real reviews, no pay-to-play.
+
+## About
+
+AI Tool Hub is an independent directory of 16+ AI tools across 20 categories, with 19 head-to-head comparisons and 15+ long-form guides. Every tool is tested hands-on by a practitioner for at least 2 weeks before being listed. The team is small (5 people), independent, and editorially transparent.
+
+## Coverage
+
+- 16 AI tools with in-depth reviews (ChatGPT, Claude, Gemini, Cursor, Copilot, Midjourney, Stable Diffusion, Leonardo.AI, Sora, Runway, ElevenLabs, Suno, Descript, Notion AI, Perplexity, Jasper)
+- 19 head-to-head comparison pages (ChatGPT vs Claude, Midjourney vs SD, Cursor vs Copilot, etc.)
+- 20 curated categories (best AI writing tools, best image generators, etc.)
+- 15+ long-form guides (best free AI tools for students, ChatGPT vs Claude, etc.)
+
+## Editorial standards
+
+- No pay-to-play rankings
+- No AI-generated reviews
+- Every review is signed by the human who wrote it
+- Re-testing every 6 months
+- Affiliate links disclosed in the privacy policy and on relevant pages
+- 5-dimension rubric: output quality, ease of use, pricing transparency, support, privacy
+- Tools scoring below 6.0 on any dimension are excluded
+
+## Categories
+
+- AI Writing Tools (ChatGPT, Claude, Gemini, Jasper)
+- AI Image Generators (Midjourney, Stable Diffusion, Leonardo.AI)
+- AI Coding Tools (Cursor, GitHub Copilot)
+- AI Video Generators (Sora, Runway)
+- AI Audio Tools (ElevenLabs, Suno, Descript)
+- AI Productivity Tools (Notion AI, Perplexity)
+
+## Contact
+
+- Website: https://ai-tool-hub-self.vercel.app
+- Contact: https://ai-tool-hub-self.vercel.app/contact/
+- Privacy: https://ai-tool-hub-self.vercel.app/privacy/
+- Terms: https://ai-tool-hub-self.vercel.app/terms/
+
+## Pricing disclosure
+
+We display ads via Google AdSense. We have a small number of affiliate links (ElevenLabs, Hostinger). Affiliate links never influence our rankings.

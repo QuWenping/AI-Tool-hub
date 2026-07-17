@@ -1,0 +1,236 @@
+---
+import toolsData from "../data/tools.json";
+import categoriesData from "../data/categories.json";
+import Newsletter from "../components/Newsletter.astro";
+import CookieConsent from "../components/CookieConsent.astro";
+const { title, description, keywords, canonical, lang = "en" } = Astro.props;
+const siteUrl = "https://thebestaitoolsreview.com";
+const fullTitle = title ? title + " | AI Tool Hub" : "AI Tool Hub | Best AI Tools Directory";
+const desc = description || "Explore curated AI tools for writing, coding, image generation, video, audio and productivity.";
+const kw = keywords || "AI tools, best AI tools, AI writing, AI coding, AI image generators";
+const url = canonical || siteUrl + Astro.url.pathname;
+const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "/index.html";
+// AdSense policy: no ads on non-content / legal / meta pages
+const noAdsSlugs = ["privacy","terms","contact","about","sponsor","advertise","press-kit","changelog","submit-sitemap","accessibility","editorial-guidelines","methodology","team"];
+const _cleanPath = Astro.url.pathname.replace(/\/+$/, "");
+const noAdsPage = noAdsSlugs.some(s => _cleanPath === "/" + s || _cleanPath === "/zh/" + s);
+const ogImage = siteUrl + "/og-image.svg";
+---
+<!DOCTYPE html>
+<html lang={lang === "zh" ? "zh-CN" : "en-US"}>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{fullTitle}</title>
+  <meta name="description" content={desc}>
+  <meta name="keywords" content={kw}>
+  <link rel="canonical" href={url}>
+  <meta name="citation_title" content={fullTitle}>
+  <meta name="citation_author" content="AI Tool Hub Editorial">
+  <meta name="citation_publication_date" content="2026-07-13">
+  <meta name="citation_online_date" content="2026-07-13">
+  <meta name="citation_publisher" content="AI Tool Hub">
+  <meta name="citation_language" content={lang === "zh" ? "zh-CN" : "en-US"}>
+  <meta name="author" content="AI Tool Hub Editorial Team">
+  <meta name="publisher" content="AI Tool Hub">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#3b82f6">
+  <meta name="application-name" content="AI Tool Hub">
+  <meta name="apple-mobile-web-app-title" content="AI Tool Hub">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.svg">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <meta name="msapplication-TileColor" content="#3b82f6">
+
+  <meta property="og:title" content={fullTitle}>
+  <meta property="og:description" content={desc}>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={url}>
+  <meta property="og:image" content={ogImage}>
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AI Tool Hub - Best AI Tools Directory">
+  <meta property="og:site_name" content="AI Tool Hub">
+  <meta property="og:locale" content={lang === "zh" ? "zh_CN" : "en_US"}>
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="AI Tool Hub Editorial">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={fullTitle}>
+  <meta name="twitter:description" content={desc}>
+  <meta name="twitter:image" content={siteUrl + "/twitter-card.svg"}>
+  <meta name="twitter:image:alt" content="AI Tool Hub - Best AI Tools Directory">
+  <meta name="twitter:site" content="@aitoolhub">
+  <meta name="twitter:creator" content="@aitoolhub">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap"></noscript>
+  <link rel="preload" href="/src/styles/tokens.css" as="style"><link rel="stylesheet" href="/src/styles/tokens.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
+
+  <!-- Google Consent Mode v2: default denied, updated on user consent -->
+  {import.meta.env.PROD && (
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+  )}
+  <!-- Google Analytics 4 (production only; respects privacy policy IP anonymization) -->
+  {import.meta.env.PROD && (
+    <Fragment>
+      <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+      <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-BRKGD43DFT"></script>
+      <script is:inline>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-BRKGD43DFT', { anonymize_ip: true });
+      </script>
+    </Fragment>
+  )}
+  {lang === "zh" ? (
+    <Fragment>
+      <link rel="alternate" hreflang="zh" href={siteUrl + "/zh" + Astro.url.pathname.replace(/^\/zh/, "")} />
+      <link rel="alternate" hreflang="en" href={siteUrl + Astro.url.pathname.replace(/^\/zh/, "")} />
+      <link rel="alternate" hreflang="x-default" href={siteUrl + Astro.url.pathname.replace(/^\/zh/, "")} />
+    </Fragment>
+  ) : (
+    <Fragment>
+      <link rel="alternate" hreflang="en" href={siteUrl + Astro.url.pathname} />
+      <link rel="alternate" hreflang="zh" href={siteUrl + "/zh" + Astro.url.pathname} />
+      <link rel="alternate" hreflang="x-default" href={siteUrl + Astro.url.pathname} />
+    </Fragment>
+  )}
+  <link rel="canonical" href={url}>
+  <meta name="citation_title" content={fullTitle}>
+  <meta name="citation_author" content="AI Tool Hub Editorial">
+  <meta name="citation_publication_date" content="2026-07-13">
+  <meta name="citation_online_date" content="2026-07-13">
+  <meta name="citation_publisher" content="AI Tool Hub">
+  <meta name="citation_language" content={lang === "zh" ? "zh-CN" : "en-US"}>
+
+  <meta name="geo.region" content="US">
+  <meta name="geo.placename" content="United States">
+  <meta name="language" content={lang === "zh" ? "zh-CN" : "en-US"}>
+  <meta name="distribution" content="global">
+  <meta name="rating" content="general">
+  <meta name="revisit-after" content="3 days">
+  <meta name="category" content="technology, AI, software">
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AI Tool Hub",
+    "alternateName": "AI Tool Hub - Best AI Tools Directory",
+    "url": siteUrl,
+    "description": "Hand-tested reviews of the best AI tools for writing, coding, image generation, video, audio, and productivity.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI Tool Hub",
+      "url": siteUrl,
+      "logo": {
+        "@type": "ImageObject",
+        "url": siteUrl + "/logo.svg"
+      }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": siteUrl + "/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "inLanguage": ["en", "zh"]
+  })}></script>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AI Tool Hub",
+    "url": siteUrl,
+    "logo": siteUrl + "/logo.svg",
+    "description": "Independent directory of hand-tested AI tools. Real reviews, no pay-to-play.",
+    "foundingDate": "2025",
+    "sameAs": [
+      "https://github.com/QuWenping/AI-Tool-hub"
+    ]
+  })}></script>
+
+  <slot name="head" />
+
+  <meta name="google-adsense-account" content="ca-pub-3930397953691472">
+  {import.meta.env.PROD && !noAdsPage && (
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3930397953691472" crossorigin="anonymous"></script>
+  )}
+
+  {isHome && <script type="application/json" id="tools-data" set:html={JSON.stringify(toolsData)}></script>}
+  {isHome && <script type="application/json" id="categories-data" set:html={JSON.stringify(categoriesData)}></script>}
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo"><a href="/" class="logo-link">AI Tool <span>Hub</span></a></div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/best/students/">Categories</a></li>
+        <li><a href="/workflows/">Workflows</a></li><li><a href="/solutions/">Solutions</a></li><li><a href="/prompts/">Prompts</a></li><li><a href="/blog/">Blog</a></li>
+        <li><a href="/newsletter/">Newsletter</a></li><li><a href="/submit-tool/">Submit Tool</a></li><li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <div class="header-actions">
+        <div class="action-group">
+          <select id="lang-select" class="style-select" aria-label="Language">
+            <option value="zh">中文</option>
+            <option value="en">English</option>
+          </select>
+          <button id="theme-toggle" aria-label="Toggle theme"><i id="theme-icon" class="fas fa-moon"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    <slot />
+  </main>
+  <section style="padding: 40px 0; background: var(--bg-color);">
+    <div class="container">
+      <Newsletter lang={lang} />
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>(c) 2026 AI Tool Hub. An ultra-minimal, curated directory of useful AI tools.</p>
+      <ul class="nav-links">
+        <li><a href="/newsletter/">Newsletter</a></li><li><a href="/submit-tool/">Submit Tool</a></li><li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/privacy/">Privacy</a></li>
+        <li><a href="/terms/">Terms</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="/js/main.js" defer></script>
+<CookieConsent />
+<script is:inline>
+// Lazy load images without loading attribute
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('img:not([loading])').forEach(function(img){
+    if(!img.hasAttribute('loading')) img.setAttribute('loading','lazy');
+  });
+});
+</script>
+</body>
+</html>

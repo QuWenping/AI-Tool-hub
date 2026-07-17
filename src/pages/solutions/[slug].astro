@@ -1,0 +1,97 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import solutions from "../../data/solutions.json";
+import workflows from "../../data/workflows.json";
+import TLDR from "../../components/ui/TLDR.astro";
+import AdSlot from "../../components/ui/AdSlot.astro";
+export async function getStaticPaths() {
+  return solutions.map(s => ({ params: { slug: s.slug }, props: { solution: s } }));
+}
+const { solution } = Astro.props;
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/solutions/" + solution.slug + "/";
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": solution.faq.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":solution.title,"description":solution.description,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"mainEntityOfPage":pageUrl,"datePublished":"2026-07-13","dateModified":"2026-07-13" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Solutions","item":siteUrl+"/solutions/"},{"@type":"ListItem","position":3,"name":solution.title,"item":pageUrl}] };
+const relatedWorkflows = workflows.filter(w => solution.workflows.includes(w.slug));
+---
+<BaseLayout title={solution.title + " | AI Solutions"} description={solution.description} keywords={solution.tools.join(", ") + ", AI " + solution.industry}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article" style="max-width:800px;margin:0 auto;padding:48px 0;">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/solutions/">Solutions</a> &rsaquo; <span>{solution.industry}</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">{solution.industry}</span>
+      <h1>{solution.title}</h1>
+    </header>
+    <section class="article-body">
+      <p style="font-size:16px;color:var(--text-soft);line-height:1.7;">{solution.description}</p>
+    <TLDR items={[
+      solution.title + " — industry guide",
+      "Tools covered: " + solution.tools.length,
+      "Sections: " + solution.sections.length,
+      "Related workflows: " + (solution.workflows ? solution.workflows.length : 0)
+    ]} />
+
+    <AdSlot format="banner" />
+
+
+      <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:16px;margin:24px 0;">
+        <h3 style="font-size:14px;font-weight:600;margin-bottom:10px;">Recommended AI Tools</h3>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          {solution.tools.map(t => <a href={"/tool/" + t.toLowerCase().replace(/[^a-z0-9]/g, "-") + "/"} style="font-size:13px;color:var(--accent-color);background:rgba(59,130,246,0.08);padding:4px 12px;border-radius:6px;text-decoration:none;font-weight:500;">{t}</a>)}
+        </div>
+      </div>
+
+      {solution.sections.map(section => (
+        <section style="margin-top:32px;">
+          <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;">{section.heading}</h2>
+          <p style="font-size:15px;color:var(--text-soft);line-height:1.8;margin-bottom:12px;">{section.content}</p>
+          <div style="background:rgba(59,130,246,0.05);border-left:3px solid var(--accent-color);padding:12px 16px;border-radius:0 8px 8px 0;margin:12px 0;">
+            <p style="font-size:13px;color:var(--text-soft);margin:0;"><strong>Recommended:</strong> {section.recommendedTools}</p>
+          </div>
+        </section>
+      ))}
+
+      {relatedWorkflows.length > 0 && (
+        <section style="margin-top:40px;">
+          <h2 style="font-size:22px;font-weight:700;margin-bottom:16px;">Related Workflows</h2>
+          <div style="display:grid;gap:12px;">
+            {relatedWorkflows.map(w => (
+              <a href={"/workflows/" + w.slug + "/"} style="text-decoration:none;color:inherit;display:block;background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;">
+                <h3 style="font-size:15px;font-weight:600;margin:0 0 4px 0;">{w.title}</h3>
+                <p style="font-size:13px;color:var(--text-mute);margin:0;">{w.tool} - {w.difficulty} - {w.steps.length} steps</p>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <section style="margin-top:40px;">
+        <h2 style="font-size:22px;font-weight:700;margin-bottom:16px;">FAQ</h2>
+        <div style="display:grid;gap:16px;">
+          {solution.faq.map(f => (
+            <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;">
+              <h3 style="font-size:15px;font-weight:600;margin-bottom:8px;">{f.q}</h3>
+              <p style="font-size:14px;color:var(--text-soft);line-height:1.6;margin:0;">{f.a}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div style="margin-top:32px;padding:20px;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;">
+        <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;">This guide answers:</h3>
+        <ul style="margin:0;padding-left:20px;font-size:13px;color:var(--text-soft);line-height:1.8;">
+          <li>Which AI tools work best for {solution.industry.toLowerCase()}</li>
+          <li>How to combine multiple AI tools into effective workflows</li>
+          <li>Common questions and concerns about AI adoption in {solution.industry.toLowerCase()}</li>
+        </ul>
+      </div>
+
+      <p style="text-align:center;margin-top:32px;"><a href="/solutions/" style="color:var(--accent-color);font-weight:600;">Back to Solutions</a></p>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,67 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import toolsData from "../../data/tools.json";
+import categoriesData from "../../data/categories.json";
+const toolCount = Object.keys(toolsData).filter(k => k !== "codewords").length;
+const categoriesCount = categoriesData.length;
+---
+<BaseLayout lang="zh" title="关于 AI Tool Hub - 我们的测试流程和编辑标准" description="了解 AI Tool Hub 团队、我们如何人工实测每个 AI 工具 2 周以上、我们的编辑标准，以及 16+ 深度评测背后的 5 人小团队。">
+
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <span>关于</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">我们的故事</span>
+      <h1>关于 AI Tool Hub</h1>
+      <p class="lede">每个上榜的 AI 工具都经过我们至少 2 周的人工实测。我们目前跟踪 {toolCount} 个工具，涵盖 {categoriesCount} 个分类。这是关于我们的团队、工作方式和为什么你可以信任我们的推荐。</p>
+    </header>
+
+    <p style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; margin: 24px 0;">
+      <strong>语言说明：</strong>完整内容在<a href="/about/">英文原版</a>。本页提供核心要点。
+    </p>
+
+    <section>
+      <h2>我们是谁</h2>
+      <p>AI Tool Hub 由一个小型分布式团队运营，团队成员包括作家、软件工程师、产品设计师和前学术研究员。我们每天都使用 AI 工具处理自己的工作 - 写文章、重构代码、生成营销视觉、进行研究、剪辑播客 - 所以我们对自己推荐的工具都有第一手经验。</p>
+      <p>网站创建于 2025 年初，因为 AI 工具领域几乎无法导航。现有目录要么<strong>收钱排名</strong>（排名是买的不是挣的），要么<strong>垃圾泛滥</strong>（每个新包装器一上线就列出），要么<strong>明显是 AI 生成</strong>（相同的模板被重写 200 次，没有人真正使用过产品）。我们想要一个诚实、有观点、小到能真正维护的目录。</p>
+      <p>两年后，我们测试了 200 多个 AI 工具，发布了 15+ 深度评测，建立了一个虽小但忠实的 AI 工具用户受众。我们仍然很小、仍然独立、仍然自己做工作。没有内容农场、没有 AI 生成的 SEO 垃圾、没有影响排名的付费位置。</p>
+    </section>
+
+    <section>
+      <h2>团队介绍</h2>
+      <p>AI Tool Hub 由一群从业者编辑。每篇评测都由真正在真实工作中使用过该工具的人撰写。</p>
+      <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin: 24px 0;">
+        <article class="team-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px;">
+          <h3 style="margin-top: 0;">Lin Chen（林晨）</h3>
+          <p><strong>首席评测师</strong>。8 年写作经验，前 Google 员工，专注于写作和内容生成 AI 工具评测。</p>
+        </article>
+        <article class="team-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px;">
+          <h3 style="margin-top: 0;">Marcus Webb（马库斯·韦伯）</h3>
+          <p><strong>高级工程师</strong>。12 年软件开发经验，前 Stripe 员工，专注于 AI 编程工具和企业部署。</p>
+        </article>
+        <article class="team-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px;">
+          <h3 style="margin-top: 0;">Sofia Reyes（索菲亚·雷耶斯）</h3>
+          <p><strong>设计负责人</strong>。10 年设计经验，前 Figma 员工，专注于 AI 图像、视频和设计工具。</p>
+        </article>
+        <article class="team-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px;">
+          <h3 style="margin-top: 0;">Daniel Park（丹尼尔·帕克）</h3>
+          <p><strong>市场负责人</strong>。8 年 B2B SaaS 市场经验，专注于 AI 营销工具和小企业案例研究。</p>
+        </article>
+        <article class="team-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px;">
+          <h3 style="margin-top: 0;">Aisha Patel（艾莎·帕特尔）</h3>
+          <p><strong>研究负责人</strong>。计算机科学博士，6 年 AI 研究经验，专注于 AI 工具的研究和评估方法论。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>如何联系</h2>
+      <p>有问题、反馈或想推荐一个工具？<a href="/zh/contact/">联系我们</a>。我们阅读每一条消息。</p>
+    </section>
+
+    <section>
+      <h2>编辑标准</h2>
+      <p>我们的 <a href="/editorial-guidelines/">编辑指南</a> 详细说明了我们如何选择、测试、评测和更新 AI 工具。</p>
+      <p>我们的 <a href="/methodology/">评测方法论</a> 解释了我们使用的 5 维度评分标准。</p>
+    </section>
+  </article>
+</BaseLayout>

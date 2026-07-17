@@ -1,0 +1,19 @@
+---
+const { variant = "primary", href, onClick } = Astro.props;
+const Tag = href ? "a" : "button";
+const classes = { primary: "btn-primary", secondary: "btn-secondary", ghost: "btn-ghost", affiliate: "btn-affiliate" };
+---
+<Tag class={`btn ${classes[variant] || "btn-primary"}`} href={href} onclick={onClick}>
+  <slot />
+</Tag>
+
+<style>
+.btn { display: inline-flex; align-items: center; justify-content: center; height: 52px; min-width: 240px; padding: 0 24px; border-radius: 12px; font-size: 15px; font-weight: 600; cursor: pointer; border: none; transition: transform 150ms ease, background 150ms ease; text-decoration: none; font-family: var(--font-en); }
+.btn:hover { transform: scale(1.03); }
+.btn-primary { background: var(--brand); color: #fff; }
+.btn-primary:hover { background: var(--brand-dark); }
+.btn-secondary { background: var(--bg-card); color: var(--text); border: 1px solid var(--border); }
+.btn-ghost { background: transparent; color: var(--brand); border: 1px solid var(--brand); }
+.btn-affiliate { background: var(--green); color: #fff; }
+[data-theme="dark"] .btn-secondary { background: var(--bg-card); color: var(--text); }
+</style>

@@ -1,0 +1,11 @@
+node_modules/
+.astro/
+dist/
+.DS_Store
+*.log
+scripts/.baidu-token
+
+# Baidu push tracking
+scripts/.baidu-pushed
+scripts/.baidu-token
+scripts/baidu-push-log.txt

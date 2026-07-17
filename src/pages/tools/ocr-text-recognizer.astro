@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/tools/ocr-text-recognizer/";
+const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity":[{"@type":"Question","name":"Is my image uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. All processing happens locally in your browser using Tesseract.js. Your image never leaves your device."}},{"@type":"Question","name":"What languages are supported?","acceptedAnswer":{"@type":"Answer","text":"Over 100 languages including English, Chinese, Japanese, Korean, Arabic, and European languages."}}]};
+---
+<BaseLayout title="Free OCR Text Recognizer | Online Image to Text Tool" description="Free online OCR tool. Extract text from images directly in your browser. No upload, no signup, supports 100+ languages." keywords="OCR, text recognition, image to text, free OCR, online OCR">
+  <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script></Fragment>
+  <div class="container" style="max-width:700px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumbs" style="margin-bottom:24px;"><a href="/">Home</a> &rsaquo; <a href="/tools/">Tools</a> &rsaquo; <span>OCR Text Recognizer</span></nav>
+    <h1 style="font-size:28px;font-weight:700;margin-bottom:8px;">OCR Text Recognizer</h1>
+    <p style="color:var(--text-mute);font-size:15px;margin-bottom:24px;">Extract text from images. 100+ languages. Runs in your browser - no upload, 100% private.</p>
+    <div style="margin-bottom:20px;">
+      <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Select Image</label>
+      <input type="file" id="file-input" accept="image/*" style="width:100%;padding:12px;border:1px solid var(--border-color);border-radius:8px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;" />
+    </div>
+    <div style="margin-bottom:20px;">
+      <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Language</label>
+      <select id="lang" style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;">
+        <option value="eng">English</option>
+        <option value="chi_sim">Chinese (Simplified)</option>
+        <option value="chi_tra">Chinese (Traditional)</option>
+        <option value="jpn">Japanese</option>
+        <option value="kor">Korean</option>
+        <option value="ara">Arabic</option>
+        <option value="fra">French</option>
+        <option value="deu">German</option>
+        <option value="spa">Spanish</option>
+      </select>
+    </div>
+    <button id="ocr-btn" style="width:100%;padding:14px;background:var(--accent-color);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;margin-bottom:24px;" disabled>Extract Text</button>
+    <div id="status" style="display:none;text-align:center;padding:20px;color:var(--text-mute);font-size:14px;">Processing...</div>
+    <div id="result" style="display:none;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <h2 style="font-size:18px;font-weight:600;margin:0;">Extracted Text</h2>
+        <div style="display:flex;gap:8px;">
+          <button id="copy-btn" style="background:var(--accent-color);color:#fff;border:none;border-radius:6px;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;">Copy</button>
+          <button id="dl-btn" style="background:var(--card-bg);color:var(--text-color);border:1px solid var(--border-color);border-radius:6px;padding:8px 16px;font-size:12px;font-weight:600;cursor:pointer;">Download .txt</button>
+        </div>
+      </div>
+      <textarea id="output" style="width:100%;height:300px;padding:16px;border:1px solid var(--border-color);border-radius:12px;font-family:monospace;font-size:13px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;resize:vertical;" readonly></textarea>
+    </div>
+  </div>
+</BaseLayout>
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js" defer></script>
+<script is:inline>
+document.getElementById("file-input").addEventListener("change",function(e){document.getElementById("ocr-btn").disabled=!e.target.files[0];});
+document.getElementById("ocr-btn").addEventListener("click",async function(){
+  var file=document.getElementById("file-input").files[0];if(!file)return;
+  document.getElementById("status").style.display="block";document.getElementById("result").style.display="none";
+  try{
+    var lang=document.getElementById("lang").value;
+    var worker=await Tesseract.createWorker(lang);
+    var result=await worker.recognize(file);
+    document.getElementById("output").value=result.data.text;
+    document.getElementById("status").style.display="none";document.getElementById("result").style.display="block";
+    await worker.terminate();
+  }catch(e){document.getElementById("status").textContent="Error: "+e.message;}
+});
+document.getElementById("copy-btn").addEventListener("click",function(){document.getElementById("output").select();document.execCommand("copy");var b=document.getElementById("copy-btn");b.textContent="Copied!";setTimeout(function(){b.textContent="Copy"},2000);});
+document.getElementById("dl-btn").addEventListener("click",function(){var b=new Blob([document.getElementById("output").value],{type:"text/plain"});var a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="extracted-text.txt";a.click();});
+</script>

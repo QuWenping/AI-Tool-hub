@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BlogJsonLd from "../../components/BlogJsonLd.astro";
+const post = {
+  slug: "ai-tools-daily-2026-07-12",
+  title_en: "AI Tools Daily Roundup — July 12, 2026",
+  desc_en: "Today: OpenAI launches GPT-5 mini, Runway Gen-4 announced, Dify hits 100K users, and 4 new tools.",
+  date: "2026-07-12",
+  tags: ["daily", "news", "roundup"]
+};
+---
+<BaseLayout title={post.title_en} description={post.desc_en} keywords={post.tags.join(", ")}>
+  <BlogJsonLd post={post} />
+  <div class="article" style="max-width:760px;margin:0 auto;padding:48px 0;">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>Daily Roundup</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Daily Roundup</span>
+      <h1>{post.title_en}</h1>
+      <p style="color:var(--text-mute);font-size:14px;margin-top:4px;">{post.date}</p>
+    </header>
+      <img src="/images/blog/ai-tools-daily-2026-07-12/hero.webp" onerror="this.onerror=null;this.src='/images/blog/ai-tools-daily-2026-07-12/hero.jpg'" alt="ai tools daily 2026 07 12" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
+    <section class="article-body">
+      <h2>Major Updates</h2>
+      <img src="/images/blog/ai-tools-daily-2026-07-12/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/ai-tools-daily-2026-07-12/inline-1.jpg'" alt="Major Updates" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <h3>OpenAI Launches GPT-5 Mini</h3>
+      <p>OpenAI released <strong>GPT-5 Mini</strong>, a smaller, faster, and cheaper model targeting developers building high-volume applications. Key specs: 128K context window, 3x faster than GPT-4o, 10x cheaper at $0.15/M input tokens. Available via API and ChatGPT Plus. <a href="/tool/chatgpt/">Read our ChatGPT review</a>.</p>
+
+      <h3>Runway Gen-4 Announced</h3>
+      <p>Runway announced <strong>Gen-4</strong> with major improvements: 60-second video generation (up from 10s), consistent character generation across multiple clips, and native audio generation. Available in alpha to Pro users. <a href="/tool/runway/">See our Runway review</a>.</p>
+
+      <h3>Dify Hits 100K Users</h3>
+      <p>Dify announced crossing <strong>100,000 registered users</strong>, making it the most popular open-source AI application platform. New features announced: multi-agent orchestration, visual prompt debugger, and a marketplace for sharing Dify apps. <a href="/tool/dify/">Explore Dify workflows</a>.</p>
+
+      <h2>New Tool Launches</h2>
+      <img src="/images/blog/ai-tools-daily-2026-07-12/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/ai-tools-daily-2026-07-12/inline-2.jpg'" alt="New Tool Launches" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <ul style="line-height:1.8;">
+        <li><strong>AgentKit</strong> — Open-source toolkit for building AI agents with TypeScript</li>
+        <li><strong>Renderform AI</strong> — Batch image generation API for e-commerce</li>
+        <li><strong>ScriptAI</strong> — AI-powered video script writer with scene breakdowns</li>
+        <li><strong>DataPilot</strong> — Natural language to SQL with auto-visualization</li>
+      </ul>
+
+      <h2>Workflow of the Day</h2>
+      <img src="/images/blog/ai-tools-daily-2026-07-12/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/ai-tools-daily-2026-07-12/inline-3.jpg'" alt="Workflow of the Day" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <p>Want to build a customer support bot? Check out our <a href="/workflows/dify-customer-support-bot/">Dify Customer Support Bot workflow</a> — it shows you how to create a knowledge-base chatbot with human escalation.</p>
+
+      <h2>Tool Comparison Highlight</h2>
+      <p>New to AI agents? Our <a href="/best/ai-agents/">AI Agent Platform guide</a> compares 14 agent tools across 4 categories to help you choose the right one.</p>
+
+      <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:20px;margin:24px 0;">
+        <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;">This Page Answers</h3>
+        <ul style="margin:0;padding-left:20px;font-size:13px;color:var(--text-soft);line-height:1.8;">
+          <li>What AI tools launched on July 12, 2026?</li>
+          <li>What is GPT-5 Mini and how much does it cost?</li>
+          <li>What is new with Runway Gen-4 and Dify?</li>
+        </ul>
+      </div>
+
+      <p style="text-align:center;margin-top:24px;"><a href="/newsletter/" style="color:var(--accent-color);font-weight:600;">Subscribe for daily updates</a></p>
+    </section>
+  </div>
+</BaseLayout>

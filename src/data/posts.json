@@ -1,0 +1,722 @@
+[
+  {
+    "slug": "bonsai-27b-on-device-ai-phone-2026",
+    "title_en": "Bonsai 27B: A 27B-Parameter AI Model That Runs on Your Phone in 2026",
+    "desc_en": "Bonsai 27B brings 27B-parameter LLM performance to your phone. Here is why on-device AI matters in 2026 and what it changes for developers.",
+    "date": "2026-07-15",
+    "read_time": "10 min read",
+    "author": "AI Tool Hub Editorial",
+    "tags": [
+      "ai-tools",
+      "2026",
+      "on-device-ai"
+    ],
+    "category": "news"
+  },
+  {
+    "slug": "free-ai-resume-builder-2026",
+    "title_en": "Free AI Resume Builder (2026): 8 Best Free Tools",
+    "title_zh": "Free AI Resume Builder (2026): 8 Best Free Tools",
+    "desc_en": "8 best free AI resume builders in 2026. Create ATS-friendly resumes with AI assistance.",
+    "desc_zh": "8 best free AI resume builders in 2026. Create ATS-friendly resumes with AI assistance.",
+    "date": "2026-07-14",
+    "read_time": "6 min read",
+    "author": "AI Tool Hub Editorial",
+    "tags": [
+      "free",
+      "ai-tools",
+      "2026"
+    ],
+    "category": "list"
+  },
+  {
+    "slug": "free-ai-logo-maker-2026",
+    "title_en": "Free AI Logo Maker (2026): 8 Best Free Logo Tools",
+    "title_zh": "Free AI Logo Maker (2026): 8 Best Free Logo Tools",
+    "desc_en": "8 best free AI logo makers in 2026. Create professional logos with AI without design skills.",
+    "desc_zh": "8 best free AI logo makers in 2026. Create professional logos with AI without design skills.",
+    "date": "2026-07-14",
+    "read_time": "6 min read",
+    "author": "AI Tool Hub Editorial",
+    "tags": [
+      "free",
+      "ai-tools",
+      "2026"
+    ],
+    "category": "list"
+  },
+  {
+    "slug": "free-ai-image-generator-2026",
+    "title_en": "Free AI Image Generator (2026): 10 Best Free Tools",
+    "title_zh": "Free AI Image Generator (2026): 10 Best Free Tools",
+    "desc_en": "10 best free AI image generators in 2026. Create images from text descriptions without paying.",
+    "desc_zh": "10 best free AI image generators in 2026. Create images from text descriptions without paying.",
+    "date": "2026-07-14",
+    "read_time": "6 min read",
+    "author": "AI Tool Hub Editorial",
+    "tags": [
+      "free",
+      "ai-tools",
+      "2026"
+    ],
+    "category": "list"
+  },
+  {
+    "slug": "free-ai-pdf-chat-2026",
+    "title_en": "Free AI PDF Chat (2026): 5 Best Tools to Chat with PDFs",
+    "title_zh": "Free AI PDF Chat (2026): 5 Best Tools to Chat with PDFs",
+    "desc_en": "5 best free AI PDF chat tools in 2026. Ask questions about your PDF documents and get instant answers.",
+    "desc_zh": "5 best free AI PDF chat tools in 2026. Ask questions about your PDF documents and get instant answers.",
+    "date": "2026-07-14",
+    "read_time": "6 min read",
+    "author": "AI Tool Hub Editorial",
+    "tags": [
+      "free",
+      "ai-tools",
+      "2026"
+    ],
+    "category": "list"
+  },
+  {
+    "slug": "free-ai-writer-2026",
+    "title_en": "Free AI Writer (2026): 10 Best Free AI Writing Tools",
+    "title_zh": "Free AI Writer (2026): 10 Best Free AI Writing Tools",
+    "desc_en": "10 best free AI writing tools in 2026. Write articles, emails, and content for free with these AI writing assistants.",
+    "desc_zh": "10 best free AI writing tools in 2026. Write articles, emails, and content for free with these AI writing assistants.",
+    "date": "2026-07-14",
+    "read_time": "6 min read",
+    "author": "AI Tool Hub Editorial",
+    "tags": [
+      "free",
+      "ai-tools",
+      "2026"
+    ],
+    "category": "list"
+  },
+  {
+    "slug": "free-ai-voice-generator-2026",
+    "title_en": "Free AI Voice Generator (2026): 10 Best Free TTS Tools",
+    "title_zh": "Free AI Voice Generator (2026): 10 Best Free TTS Tools",
+    "desc_en": "10 best free AI voice generators in 2026. Generate natural-sounding speech from text with these free text-to-speech tools.",
+    "desc_zh": "10 best free AI voice generators in 2026. Generate natural-sounding speech from text with these free text-to-speech tools.",
+    "date": "2026-07-14",
+    "read_time": "6 min read",
+    "author": "AI Tool Hub Editorial",
+    "tags": [
+      "free",
+      "ai-tools",
+      "2026"
+    ],
+    "category": "list"
+  },
+  {
+    "slug": "agnes-ai-review-free-omni-modal-api-2026",
+    "title_en": "Agnes AI Review (2026): Free Text, Image & Video API",
+    "title_zh": "Agnes AI 评测：免费全模态 AI API",
+    "desc_en": "Agnes AI offers free API access to text, image, and video generation. We tested all three modes.",
+    "desc_zh": "Agnes AI 提供免费的文本、图片和视频生成 API。我们测试了全部三种模式。",
+    "date": "2026-07-14",
+    "read_time": "8 min read",
+    "author": "AI Tool Hub Editorial",
+    "tags": [
+      "agnes-ai",
+      "free-api",
+      "ai-tools",
+      "text-generation",
+      "image-generation",
+      "video-generation"
+    ],
+    "category": "review"
+  },
+  {
+    "slug": "apple-speechanalyzer-vs-whisper-2026",
+    "title_en": "Apple SpeechAnalyzer vs. Whisper (2026): The Best Speech-to-Text API?",
+    "title_zh": "苹果SpeechAnalyzer对决Whisper：2026语音API评测",
+    "desc_en": "We compare Apple SpeechAnalyzer API with OpenAI Whisper on accuracy, speed, price, and privacy to help developers pick the right STT stack in 2026.",
+    "desc_zh": "我们对比苹果全新SpeechAnalyzer API与OpenAI Whisper，从准确率、速度、价格和隐私四个维度帮助开发者选择。",
+    "date": "2026-07-14",
+    "read_time": "10 min read",
+    "author": "AI Tool Hub Editorial",
+    "tags": [
+      "speech-to-text",
+      "whisper",
+      "apple-intelligence",
+      "api-comparison",
+      "on-device-ai",
+      "developer-tools"
+    ],
+    "category": "comparison",
+    "faq": [
+      {
+        "q": "Is Apple SpeechAnalyzer a cloud API or does it run on device?",
+        "a": "By default SpeechAnalyzer runs fully on device using the Apple Neural Engine. Apple also offers an opt-in cloud fallback for long-form or high-noise audio, but it must be enabled explicitly."
+      },
+      {
+        "q": "Can SpeechAnalyzer replace Whisper for cross-platform apps?",
+        "a": "Not yet. SpeechAnalyzer only ships on Apple operating systems, so apps supporting Android, Windows, Linux, or the web will still need Whisper or another cross-platform engine for non-Apple clients."
+      },
+      {
+        "q": "Is SpeechAnalyzer free for commercial use?",
+        "a": "The on-device API is included with the standard Apple SDK and has no per-minute fees or usage caps for App Store apps. The cloud fallback, when it launches, will have separate metered pricing."
+      }
+    ]
+  },
+  {
+    "slug": "best-ai-tools-for-marketing-2026",
+    "title_en": "Best AI Tools for Marketing in 2026: SEO, Ads, Email, and Content",
+    "title_zh": "2026 年营销人必备的 8 个 AI 工具：SEO、广告、邮件、内容",
+    "desc_en": "Our marketing team tested 22 AI marketing tools in 2026. Here are the 8 that actually moved the needle on traffic, conversions, and time saved.",
+    "desc_zh": "我们营销团队在 2026 年实测了 22 个 AI 营销工具，这 8 个真正在流量、转化、节省时间上起了作用。",
+    "category": "marketing",
+    "date": "2026-07-14",
+    "read_time": "11 min",
+    "author": "Daniel Park",
+    "tags": [
+      "marketing",
+      "seo",
+      "content",
+      "email"
+    ]
+  },
+  {
+    "slug": "best-ai-tools-for-small-business-2026",
+    "title_en": "10 Best AI Tools for Small Business in 2026 (Save 20+ Hours a Week)",
+    "title_zh": "2026 年小企业必备的 10 个 AI 工具（每周省 20 小时）",
+    "desc_en": "We rebuilt our small business workflow with AI tools over 90 days. Here are the 10 that actually paid for themselves - ranked by ROI, not hype.",
+    "desc_zh": "我们用 AI 工具重构了 90 天的小企业工作流，这 10 个真正回了本 - 按 ROI 排序，不看噱头。",
+    "category": "small-business",
+    "date": "2026-07-12",
+    "read_time": "10 min",
+    "author": "Daniel Park",
+    "tags": [
+      "small-business",
+      "productivity",
+      "marketing"
+    ]
+  },
+  {
+    "slug": "meetily-review-best-local-ai-meeting-assistant-2026",
+    "title_en": "Meetily Review: The Best Local AI Meeting Assistant in 2026?",
+    "title_zh": "Meetily 评测：2026年最佳本地AI会议助手？",
+    "desc_en": "Meetily is a Rust-based, privacy-first AI meeting assistant that runs 100% locally. We tested its live transcription, summarization, and how it stacks up against Otter and Fireflies.",
+    "desc_zh": "Meetily 是一款基于 Rust、100% 本地运行的隐私优先 AI 会议助手。我们实测了它的实时转录、总结能力，并对比 Otter、Fireflies 等主流工具。",
+    "category": "productivity",
+    "date": "2026-07-12",
+    "read_time": "9 min read",
+    "author": "AI Tool Hub Editorial",
+    "tags": [
+      "ai-meeting-assistant",
+      "open-source",
+      "local-first",
+      "self-hosted",
+      "productivity",
+      "rust"
+    ]
+  },
+  {
+    "slug": "best-ai-voice-generators-2026",
+    "title_en": "Best AI Voice Generators in 2026: ElevenLabs vs PlayHT vs LMNT vs OpenAI Voice",
+    "title_zh": "2026 年最佳 AI 语音生成器：ElevenLabs、PlayHT、LMNT 横评",
+    "desc_en": "We cloned voices, generated audiobooks, and dubbed videos on the four best AI voice platforms of 2026. Here is the honest ranking.",
+    "desc_zh": "我们在 2026 年四大 AI 语音平台上做了声音克隆、有声书生成、视频配音，给出真实排名。",
+    "category": "audio",
+    "date": "2026-07-10",
+    "read_time": "9 min",
+    "author": "Lin Chen",
+    "tags": [
+      "elevenlabs",
+      "voice",
+      "audio",
+      "tts"
+    ]
+  },
+  {
+    "slug": "best-ai-video-generators-2026",
+    "title_en": "Best AI Video Generators in 2026: Sora, Runway, Pika, Kling Compared",
+    "title_zh": "2026 年最佳 AI 视频生成器：Sora、Runway、Pika、Kling 横评",
+    "desc_en": "We generated 50+ short videos on every major AI video model in 2026. Here is what each one is good at, where they break, and which is worth your money.",
+    "desc_zh": "我们用 2026 年所有主流 AI 视频模型生成了 50+ 段视频，告诉你各自的优势、缺陷和值不值得付费。",
+    "category": "video-generation",
+    "date": "2026-07-08",
+    "read_time": "13 min",
+    "author": "Sofia Reyes",
+    "tags": [
+      "sora",
+      "runway",
+      "pika",
+      "kling",
+      "video-generation"
+    ]
+  },
+  {
+    "slug": "cursor-vs-github-copilot-2026",
+    "title_en": "Cursor vs GitHub Copilot (2026): Which AI Coding Tool Should You Pay For?",
+    "title_zh": "Cursor vs GitHub Copilot (2026)：AI 编程工具到底该订阅哪个？",
+    "desc_en": "We coded in Cursor and GitHub Copilot side by side for two weeks on a real production app. Here is the honest verdict on speed, accuracy, context, and price.",
+    "desc_zh": "我们用 Cursor 和 GitHub Copilot 在真实项目上各写了两周代码，从速度、准确性、上下文理解、价格四个维度给你真实结论。",
+    "category": "coding",
+    "date": "2026-07-05",
+    "read_time": "11 min",
+    "author": "Marcus Webb",
+    "tags": [
+      "cursor",
+      "github-copilot",
+      "coding",
+      "comparison"
+    ]
+  },
+  {
+    "slug": "best-ai-image-generators-compared-2026",
+    "title_en": "Best AI Image Generators Compared (2026): Midjourney vs Stable Diffusion vs DALL-E vs Flux",
+    "title_zh": "2026 年最佳 AI 图像生成器横评：Midjourney vs Stable Diffusion vs DALL-E vs Flux",
+    "desc_en": "We paid for every major AI image generator in 2026 and generated 100+ images side by side. Here is the honest comparison of Midjourney, Stable Diffusion, DALL-E, Flux, and Ideogram.",
+    "desc_zh": "我们订阅了 2026 年所有主流 AI 图像生成器，同一 prompt 对比 100+ 张图，给出真实横评。",
+    "category": "image-generation",
+    "date": "2026-06-28",
+    "read_time": "12 min",
+    "author": "Sofia Reyes",
+    "tags": [
+      "midjourney",
+      "stable-diffusion",
+      "dall-e",
+      "flux",
+      "ideogram",
+      "image-generation"
+    ]
+  },
+  {
+    "slug": "best-ai-tools-for-product-managers-2026",
+    "title_en": "Best AI Tools for Product Managers in 2026 (Tested by PMs)",
+    "title_zh": "2026 年产品经理必备 AI 工具（产品经理实测）",
+    "desc_en": "We surveyed 50 product managers on the AI tools they actually use daily in 2026. Here are the 8 that consistently save 5+ hours per week, ranked by impact.",
+    "desc_zh": "我们调研了 50 位产品经理 2026 年每天实际使用的 AI 工具，这是 8 个每周稳定省 5+ 小时、效果最强的工具。",
+    "category": "product-management",
+    "date": "2026-06-23",
+    "read_time": "11 min",
+    "author": "Daniel Park",
+    "tags": [
+      "product-management",
+      "productivity",
+      "writing",
+      "research"
+    ]
+  },
+  {
+    "read_time": "12 min",
+    "title_zh": "Claude 4.5 vs GPT-5 写代码对决（2026）：真实项目实测",
+    "tags": [
+      "claude",
+      "chatgpt",
+      "coding",
+      "comparison",
+      "llm"
+    ],
+    "desc_en": "We built the same production app twice - once with Claude 4.5, once with GPT-5. Here is the honest verdict on accuracy, speed, cost, and the cases where one clearly beats the other.",
+    "slug": "claude-vs-gpt-2026-coding-showdown",
+    "desc_zh": "我们用 Claude 4.5 和 GPT-5 各搭了同一个生产应用，从准确性、速度、成本、谁明显更强的场景四个维度给你真实结论。",
+    "title_en": "Claude 4.5 vs GPT-5 for Coding (2026): The Real-World Test",
+    "author": "Marcus Webb",
+    "date": "2026-06-22",
+    "category": "comparison"
+  },
+  {
+    "slug": "how-to-use-ai-for-small-business-2026",
+    "title_en": "How to Use AI for Small Business in 2026 (Practical Guide)",
+    "title_zh": "2026 年小企业如何用 AI（实操指南）",
+    "desc_en": "A practical guide to using AI for small business in 2026. The 8 best tools, the 10 workflows, the 5 use cases, and the 5 things to avoid.",
+    "desc_zh": "2026 年小企业用 AI 的实操指南：8 个最佳工具、10 个工作流、5 个使用场景、5 个要避免的坑。",
+    "category": "tutorial",
+    "date": "2026-06-21",
+    "read_time": "15 min",
+    "author": "Daniel Park",
+    "tags": [
+      "small-business",
+      "productivity",
+      "tutorial",
+      "how-to",
+      "automation"
+    ]
+  },
+  {
+    "slug": "how-to-use-ai-for-job-search-2026",
+    "title_en": "How to Use AI for Job Search in 2026 (Resume, Interview, Negotiation)",
+    "title_zh": "2026 年如何用 AI 找工作（简历、面试、谈薪）",
+    "desc_en": "A practical guide to using AI for job search in 2026. The 5 best tools, the 6 workflows, and the 3 things to avoid.",
+    "desc_zh": "2026 年用 AI 找工作的实操指南：5 个最佳工具、6 个工作流、3 个要避免的坑。",
+    "category": "tutorial",
+    "date": "2026-06-20",
+    "read_time": "13 min",
+    "author": "Lin Chen",
+    "tags": [
+      "job-search",
+      "resume",
+      "interview",
+      "tutorial",
+      "how-to"
+    ]
+  },
+  {
+    "slug": "how-to-use-ai-for-personal-finance-2026",
+    "title_en": "How to Use AI for Personal Finance in 2026 (Practical Guide)",
+    "title_zh": "2026 年如何用 AI 管理个人财务（实操指南）",
+    "desc_en": "A practical guide to using AI for personal finance in 2026. The 5 best tools, the 6 workflows, the 4 use cases, and the 3 things to avoid.",
+    "desc_zh": "2026 年用 AI 管理个人财务的实操指南：5 个最佳工具、6 个工作流、4 个使用场景、3 个要避免的坑。",
+    "category": "tutorial",
+    "date": "2026-06-19",
+    "read_time": "13 min",
+    "author": "Aisha Patel",
+    "tags": [
+      "finance",
+      "budgeting",
+      "tutorial",
+      "how-to",
+      "personal"
+    ]
+  },
+  {
+    "slug": "chatgpt-vs-claude-which-should-you-pick-2026",
+    "title_en": "ChatGPT vs Claude (2026): Which Should You Actually Pick?",
+    "title_zh": "ChatGPT vs Claude (2026)：你到底该选哪个？",
+    "desc_en": "We used both ChatGPT and Claude side by side for two weeks on real work. Here is the honest comparison - pricing, writing quality, coding, long documents, and which is worth paying for.",
+    "desc_zh": "我们把 ChatGPT 和 Claude 并排用两周实测，从写作、代码、长文档、价格全面对比，告诉你谁值得订阅。",
+    "category": "comparison",
+    "date": "2026-06-18",
+    "read_time": "10 min",
+    "author": "Lin Chen",
+    "tags": [
+      "chatgpt",
+      "claude",
+      "comparison",
+      "writing",
+      "coding"
+    ]
+  },
+  {
+    "slug": "how-to-use-ai-for-education-2026",
+    "title_en": "How to Use AI for Education in 2026 (Students and Teachers)",
+    "title_zh": "2026 年如何用 AI 做教育（学生与教师）",
+    "desc_en": "A practical guide to using AI for education in 2026. The 6 best tools for students, the 6 best tools for teachers, the 8 workflows, and the 5 things to avoid.",
+    "desc_zh": "2026 年用 AI 做教育的实操指南：6 个学生工具、6 个教师工具、8 个工作流、5 个要避免的坑。",
+    "category": "tutorial",
+    "date": "2026-06-18",
+    "read_time": "15 min",
+    "author": "Lin Chen",
+    "tags": [
+      "education",
+      "students",
+      "teachers",
+      "tutorial",
+      "how-to"
+    ]
+  },
+  {
+    "slug": "how-to-use-ai-for-sales-2026",
+    "title_en": "How to Use AI for Sales in 2026 (Real Examples)",
+    "title_zh": "2026 年如何用 AI 做销售（真实案例）",
+    "desc_en": "A practical guide to using AI for sales in 2026. The 5 best tools, the 6 workflows, the 4 use cases, and the 3 things to avoid. Real examples for SDRs, AEs, and sales leaders.",
+    "desc_zh": "2026 年用 AI 做销售的实操指南：5 个最佳工具、6 个工作流、4 个使用场景、3 个要避免的坑。SDR、AE、销售 leader 的真实案例。",
+    "category": "tutorial",
+    "date": "2026-06-17",
+    "read_time": "14 min",
+    "author": "Daniel Park",
+    "tags": [
+      "sales",
+      "automation",
+      "tutorial",
+      "how-to",
+      "sdr"
+    ]
+  },
+  {
+    "slug": "how-to-use-ai-for-data-analysis-2026",
+    "title_en": "How to Use AI for Data Analysis in 2026 (Practical Guide)",
+    "title_zh": "2026 年如何用 AI 做数据分析（实操指南）",
+    "desc_en": "A practical guide to using AI for data analysis in 2026. The 5 best tools, the 6 workflows, the 4 use cases, and the 3 things to avoid.",
+    "desc_zh": "2026 年用 AI 做数据分析的实操指南：5 个最佳工具、6 个工作流、4 个使用场景、3 个要避免的坑。",
+    "category": "tutorial",
+    "date": "2026-06-16",
+    "read_time": "14 min",
+    "author": "Aisha Patel",
+    "tags": [
+      "data",
+      "analysis",
+      "tutorial",
+      "how-to",
+      "sql"
+    ]
+  },
+  {
+    "slug": "how-to-build-an-ai-agent-2026",
+    "title_en": "How to Build an AI Agent in 2026 (No Code Required)",
+    "title_zh": "2026 年如何零代码构建 AI Agent",
+    "desc_en": "A practical guide to building an AI agent in 2026 without code. The 5 platforms, the 7-step build process, the 4 use cases, and the 3 things to avoid.",
+    "desc_zh": "2026 年零代码构建 AI Agent 的实操指南：5 个平台、7 步构建流程、4 个使用场景、3 个要避免的坑。",
+    "category": "tutorial",
+    "date": "2026-06-15",
+    "read_time": "15 min",
+    "author": "Marcus Webb",
+    "tags": [
+      "agent",
+      "automation",
+      "no-code",
+      "tutorial",
+      "how-to"
+    ]
+  },
+  {
+    "slug": "how-to-use-ai-for-customer-support-2026",
+    "title_en": "How to Use AI for Customer Support in 2026 (Real Examples)",
+    "title_zh": "2026 年如何用 AI 做客服支持（真实案例）",
+    "desc_en": "A practical guide to using AI for customer support in 2026. The 4 best tools, the 5 workflows, the 4 things to avoid, and 3 real case studies from SaaS companies.",
+    "desc_zh": "2026 年用 AI 做客服支持的实操指南：4 个最佳工具、5 个工作流、4 个要避免的坑、3 个 SaaS 公司真实案例。",
+    "category": "tutorial",
+    "date": "2026-06-14",
+    "read_time": "14 min",
+    "author": "Daniel Park",
+    "tags": [
+      "support",
+      "automation",
+      "tutorial",
+      "how-to",
+      "saas"
+    ]
+  },
+  {
+    "slug": "how-to-build-a-content-workflow-with-ai-2026",
+    "title_en": "How to Build a Content Workflow with AI in 2026 (Full Stack)",
+    "title_zh": "2026 年如何用 AI 搭建内容生产工作流（完整技术栈）",
+    "desc_en": "A real content team workflow from research to publishing, with the exact tools, prompts, and automations used by our editorial team. 7 stages, 13 tools, 4 hours/week saved.",
+    "desc_zh": "一个真实内容团队的工作流：从研究到发布，包含我们编辑团队使用的所有工具、prompt 和自动化。7 个阶段、13 个工具、每周省 4 小时。",
+    "category": "tutorial",
+    "date": "2026-06-13",
+    "read_time": "16 min",
+    "author": "Daniel Park",
+    "tags": [
+      "workflow",
+      "content",
+      "tutorial",
+      "how-to",
+      "automation"
+    ]
+  },
+  {
+    "slug": "how-to-use-elevenlabs-for-podcasts-2026",
+    "title_en": "How to Use ElevenLabs for Podcasts in 2026 (Voice Cloning Tutorial)",
+    "title_zh": "2026 年如何用 ElevenLabs 做播客（声音克隆教程）",
+    "desc_en": "A 6-step guide to using ElevenLabs voice cloning for real podcast production - from recording your voice sample to deploying the cloned voice across episodes. With audio examples.",
+    "desc_zh": "6 步指南：如何用 ElevenLabs 声音克隆做真实播客制作 - 从录制声音样本到在多集节目中部署克隆声音。包含音频示例。",
+    "category": "tutorial",
+    "date": "2026-06-12",
+    "read_time": "11 min",
+    "author": "Marcus Webb",
+    "tags": [
+      "elevenlabs",
+      "voice-cloning",
+      "podcast",
+      "tutorial",
+      "how-to"
+    ]
+  },
+  {
+    "slug": "how-to-set-up-cursor-for-your-team-2026",
+    "title_en": "How to Set Up Cursor for Your Development Team in 2026 (5-Step Guide)",
+    "title_zh": "2026 年如何为开发团队部署 Cursor（5 步指南）",
+    "desc_en": "A 5-step guide to rolling out Cursor across an engineering team - license management, code indexing, custom rules, and how to measure productivity gains. Includes a real team rollout case study.",
+    "desc_zh": "5 步指南：在工程团队中推广 Cursor - 许可证管理、代码索引、自定义规则、如何衡量生产力提升。包含一个真实团队推广案例研究。",
+    "category": "tutorial",
+    "date": "2026-06-11",
+    "read_time": "13 min",
+    "author": "Marcus Webb",
+    "tags": [
+      "cursor",
+      "coding",
+      "tutorial",
+      "how-to",
+      "team"
+    ]
+  },
+  {
+    "slug": "how-to-write-prompts-for-midjourney-2026",
+    "title_en": "How to Write Midjourney Prompts in 2026 (The 7-Pattern Framework)",
+    "title_zh": "2026 年如何写 Midjourney Prompt（7 模式框架）",
+    "desc_en": "Stop guessing. The 7 Midjourney prompt patterns that consistently produce publishable images, with 20 real before/after examples and the exact prompts to copy.",
+    "desc_zh": "别再猜了。7 个能稳定产出可发布图像的 Midjourney prompt 模式，20 个真实前后对比和可直接复制的 prompt。",
+    "category": "tutorial",
+    "date": "2026-06-10",
+    "read_time": "14 min",
+    "author": "Sofia Reyes",
+    "tags": [
+      "midjourney",
+      "prompts",
+      "image-generation",
+      "tutorial",
+      "how-to"
+    ]
+  },
+  {
+    "slug": "how-to-use-claude-for-long-documents-2026",
+    "title_en": "How to Use Claude for Long Documents in 2026 (200K Context Window Tutorial)",
+    "title_zh": "2026 年如何用 Claude 处理长文档（200K 上下文教程）",
+    "desc_en": "A practical guide to using Claude 4.5s 200K context window for real work - book analysis, legal contracts, research papers, and code review. With 6 worked examples.",
+    "desc_zh": "实操指南：如何用 Claude 4.5 的 200K 上下文做真实工作 - 书籍分析、法律合同、学术论文、code review。6 个真实案例。",
+    "category": "tutorial",
+    "date": "2026-06-09",
+    "read_time": "12 min",
+    "author": "Aisha Patel",
+    "tags": [
+      "claude",
+      "long-documents",
+      "tutorial",
+      "how-to"
+    ]
+  },
+  {
+    "slug": "how-to-use-chatgpt-for-coding-2026",
+    "title_en": "How to Use ChatGPT for Coding in 2026 (Step-by-Step Tutorial)",
+    "title_zh": "2026 年如何用 ChatGPT 写代码（分步教程）",
+    "desc_en": "A practical 15-minute walkthrough of how to use ChatGPT for real coding work - from setup to debugging to code review. With 8 real examples.",
+    "desc_zh": "15 分钟实操教程：如何用 ChatGPT 写代码 - 从配置到调试到 code review。8 个真实案例。",
+    "category": "tutorial",
+    "date": "2026-06-08",
+    "read_time": "15 min",
+    "author": "Marcus Webb",
+    "tags": [
+      "chatgpt",
+      "coding",
+      "tutorial",
+      "how-to"
+    ]
+  },
+  {
+    "slug": "best-ai-tools-for-podcasters-2026",
+    "title_en": "Best AI Tools for Podcasters in 2026: Recording, Editing, Transcription, Clips",
+    "title_zh": "2026 年播客主必备 AI 工具：录制、剪辑、转录、切片",
+    "desc_en": "We rebuilt a 5-episode podcast with AI tools in 2026. Here are the 7 that cut production time in half without hurting quality.",
+    "desc_zh": "我们用 AI 工具在 2026 年重做了一档 5 集播客，这 7 个把后期时间砍半而质量不降。",
+    "category": "podcasters",
+    "date": "2026-06-07",
+    "read_time": "8 min",
+    "author": "Marcus Webb",
+    "tags": [
+      "podcasters",
+      "audio",
+      "video-generation"
+    ]
+  },
+  {
+    "slug": "how-to-write-better-prompts-2026",
+    "title_en": "How to Write Better AI Prompts in 2026 (Real Examples, Not Theory)",
+    "title_zh": "2026 年如何写出更好的 AI Prompt（真实案例，不是理论）",
+    "desc_en": "We A/B tested 200+ prompt variations across ChatGPT, Claude, and Midjourney. Here are the 9 patterns that consistently produced better outputs.",
+    "desc_zh": "我们在 ChatGPT、Claude、Midjourney 上 A/B 测试了 200+ 个 prompt 变体，这是持续产出更好结果的 9 个模式。",
+    "category": "guide",
+    "date": "2026-06-06",
+    "read_time": "8 min",
+    "author": "Lin Chen",
+    "tags": [
+      "prompts",
+      "guide",
+      "writing"
+    ]
+  },
+  {
+    "slug": "best-ai-tools-for-designers-2026",
+    "title_en": "Best AI Tools for Designers in 2026: UI, UX, Branding, and Motion",
+    "title_zh": "2026 年设计师必备 AI 工具：UI、UX、品牌、动效",
+    "desc_en": "Three product designers tested 18 AI design tools in 2026. Here are the 7 that actually fit into a real design workflow.",
+    "desc_zh": "三位产品设计师在 2026 年实测了 18 个 AI 设计工具，这 7 个真正能塞进真实设计工作流。",
+    "category": "design",
+    "date": "2026-06-05",
+    "read_time": "10 min",
+    "author": "Sofia Reyes",
+    "tags": [
+      "design",
+      "ui",
+      "ux",
+      "image-generation"
+    ]
+  },
+  {
+    "slug": "best-ai-tools-for-seo-2026",
+    "title_en": "Best AI Tools for SEO in 2026: Keyword Research, Content, and Rank Tracking",
+    "title_zh": "2026 年 SEO 必备 AI 工具：关键词、内容、排名追踪",
+    "desc_en": "We rebuilt our SEO workflow with AI in 2026 and tracked the impact for 6 months. Here are the tools that actually moved rankings, with real before/after data.",
+    "desc_zh": "我们用 AI 重构了 2026 年 SEO 工作流并跟踪了 6 个月的效果，这是真正带动排名的工具。",
+    "category": "seo",
+    "date": "2026-06-04",
+    "read_time": "9 min",
+    "author": "Daniel Park",
+    "tags": [
+      "seo",
+      "marketing",
+      "keywords"
+    ]
+  },
+  {
+    "slug": "best-free-ai-tools-for-students-2026",
+    "title_en": "10 Best Free AI Tools for Students in 2026 (Tested for 2 Weeks)",
+    "title_zh": "2026 年学生必备的 10 个免费 AI 工具（实测 2 周）",
+    "desc_en": "We tested every free AI tool students actually need - writing, research, math, flashcards - and ranked them by what is genuinely useful vs what is just marketing.",
+    "desc_zh": "我们实测了学生真正需要的每一个免费 AI 工具 - 写作、文献、数学、闪卡 - 按真实有用程度排序，不看营销噱头。",
+    "category": "students",
+    "date": "2026-06-03",
+    "read_time": "8 min",
+    "author": "Lin Chen",
+    "tags": [
+      "free",
+      "students",
+      "writing",
+      "research"
+    ]
+  },
+  {
+    "slug": "best-ai-research-tools-2026",
+    "title_en": "Best AI Tools for Academic Research in 2026 (Writers, Citations, Literature Review)",
+    "title_zh": "2026 年学术研究最佳 AI 工具（写作、引用、文献综述）",
+    "desc_en": "We asked three PhD students to test 12 AI research tools on a real thesis chapter. Here are the 6 that actually saved hours, not just minutes.",
+    "desc_zh": "我们让三位博士生在真实论文章节上实测 12 个 AI 研究工具，这 6 个真正按小时省时间。",
+    "category": "research",
+    "date": "2026-06-03",
+    "read_time": "10 min",
+    "author": "Aisha Patel",
+    "tags": [
+      "research",
+      "writing",
+      "citations",
+      "students"
+    ]
+  },
+  {
+    "slug": "claude-vs-gemini-vs-chatgpt-2026",
+    "title_en": "Claude vs Gemini vs ChatGPT (2026): The Big Three Compared",
+    "title_zh": "Claude vs Gemini vs ChatGPT (2026)：三大 AI 助手横评",
+    "desc_en": "We paid for Claude Pro, Gemini Advanced, and ChatGPT Plus for a month and used them on the same set of work tasks. Here is who wins each one.",
+    "desc_zh": "我们订阅了 Claude Pro、Gemini Advanced、ChatGPT Plus 一个月，在同一批工作上对比，告诉你每个任务的胜者。",
+    "category": "comparison",
+    "date": "2026-06-02",
+    "read_time": "10 min",
+    "author": "Lin Chen",
+    "tags": [
+      "claude",
+      "gemini",
+      "chatgpt",
+      "comparison"
+    ]
+  },
+  {
+    "slug": "best-ai-tools-for-content-writers-2026",
+    "title_en": "Best AI Tools for Content Writers in 2026 (Tested by Full-Time Writers)",
+    "title_zh": "2026 年内容写作者必备 AI 工具（全职写作者实测）",
+    "desc_en": "Three of our full-time writers used 14 AI writing tools for 60 days on paying client work. Here is what is worth paying for, and what is just a glorified autocomplete.",
+    "desc_zh": "我们三位全职写作者在 60 天、14 个 AI 写作工具上接付费客户项目，给出真实可用的推荐。",
+    "category": "content-writing",
+    "date": "2026-06-01",
+    "read_time": "9 min",
+    "author": "Lin Chen",
+    "tags": [
+      "writing",
+      "content",
+      "blogging"
+    ]
+  }
+]

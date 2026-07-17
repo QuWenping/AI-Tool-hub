@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/tools/seo-title-generator/";
+const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity":[{"@type":"Question","name":"How does the SEO Title Generator work?","acceptedAnswer":{"@type":"Answer","text":"Enter your topic and keywords. The tool generates title variations optimized for search engines, keeping them under 60 characters for optimal display in Google results."}},{"@type":"Question","name":"What makes a good SEO title?","acceptedAnswer":{"@type":"Answer","text":"A good SEO title includes your target keyword near the beginning, stays under 60 characters, uses compelling language (numbers, questions, power words), and accurately describes the content."}}]};
+---
+<BaseLayout title="SEO Title Generator | Free Online Tool" description="Free SEO title generator. Create optimized, click-worthy titles under 60 characters. Enter your keyword and get 10+ variations instantly." keywords="seo title generator, title generator, headline generator, free seo tool, meta title">
+  <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script></Fragment>
+  <div class="container" style="max-width:700px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumbs" style="margin-bottom:24px;"><a href="/">Home</a> &rsaquo; <a href="/tools/">Tools</a> &rsaquo; <span>SEO Title Generator</span></nav>
+    <h1 style="font-size:28px;font-weight:700;margin-bottom:8px;">SEO Title Generator</h1>
+    <p style="color:var(--text-mute);font-size:15px;margin-bottom:24px;">Generate optimized titles under 60 characters. Free, no signup.</p>
+    <div style="margin-bottom:20px;">
+      <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Your Topic / Keyword</label>
+      <input type="text" id="topic" placeholder="e.g., AI coding tools" style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;" />
+    </div>
+    <div style="margin-bottom:20px;">
+      <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Title Style</label>
+      <select id="style" style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;">
+        <option value="list">List (Top 10, Best of)</option>
+        <option value="howto">How-to (Guide, Tutorial)</option>
+        <option value="question">Question (Why, How, What)</option>
+        <option value="comparison">Comparison (vs, Alternative)</option>
+        <option value="benefit">Benefit (Save time, Boost)</option>
+      </select>
+    </div>
+    <button id="gen-btn" style="width:100%;padding:14px;background:var(--accent-color);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;margin-bottom:24px;">Generate Titles</button>
+    <div id="results" style="display:none;">
+      <h2 style="font-size:18px;font-weight:600;margin-bottom:12px;">Generated Titles</h2>
+      <div id="title-list" style="display:grid;gap:10px;"></div>
+    </div>
+  </div>
+</BaseLayout>
+<script is:inline>
+document.getElementById("gen-btn").addEventListener("click",function(){
+  var t=document.getElementById("topic").value.trim();
+  var s=document.getElementById("style").value;
+  if(!t)return;
+  var titles=[];
+  var T=t.charAt(0).toUpperCase()+t.slice(1);
+  if(s==="list"){
+    titles=["10 Best "+T+" in 2026 (Tested & Ranked)","Top "+T+": 7 Picks for 2026","The Ultimate List of "+T+" for 2026","7 "+T+" That Actually Work in 2026","Best Free "+T+" in 2026: Complete Guide","5 "+T+" You Should Be Using in 2026",""+T+": The 2026 Definitive Guide","8 "+T+" Ranked by Real Users","Best "+T+" for Beginners in 2026",""+T+": Top 6 Compared and Reviewed"];
+  }else if(s==="howto"){
+    titles=["How to Choose the Right "+T+" in 2026",""+T+": A Step-by-Step Guide for 2026","How to Use "+T+" Effectively: 2026 Guide","Complete "+T+" Tutorial for Beginners","How to Get Started with "+T+" in 2026",""+T+" 101: Everything You Need to Know","How to Master "+T+" in 7 Days",""+T+" Guide: From Zero to Pro in 2026","The Practical Guide to "+T+" in 2026","How to Evaluate "+T+": Expert Tips"];
+  }else if(s==="question"){
+    titles=["Which "+T+" Is Best for You in 2026?","Why "+T+" Matters More Than You Think","What Makes a Great "+T+"?","Is "+T+" Worth It in 2026?","How Do "+T+" Compare? Full Breakdown","Are Free "+T+" Any Good? We Tested","What Nobody Tells You About "+T+"","Can "+T+" Really Save You 10+ Hours?",""+T+": What You Need to Know in 2026","Should You Invest in "+T+" Now?"];
+  }else if(s==="comparison"){
+    titles=["Best "+T+" Alternatives in 2026",""+T+" Compared: Which One Wins?",""+T+" vs The Competition: 2026",""+T+": Feature-by-Feature Comparison","Top "+T+" Alternatives (Free & Paid)",""+T+" Showdown: Which Is Better?","The Ultimate "+T+" Comparison Guide",""+T+": Pros, Cons & Verdicts","Best "+T+" for the Price in 2026",""+T+" Face-Off: 5 Tools Compared"];
+  }else{
+    titles=[""+T+": Save 20+ Hours with These Tips","Boost Your Workflow with "+T+" in 2026",""+T+" That Will Transform Your Productivity","Get More Done with the Right "+T+"",""+T+": Work Smarter, Not Harder","Unlock Your Potential with "+T+"",""+T+" Secrets Nobody Shares","Maximize Results with "+T+" in 2026",""+T+": The Productivity Game-Changer","How "+T+" Can 10x Your Output"];
+  }
+  titles=titles.filter(function(x){return x.length<=60});
+  var html=titles.map(function(title){
+    var len=title.length;
+    var color=len<=50?"#22c55e":len<=60?"#f59e0b":"#ef4444";
+    return '<div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:14px;display:flex;justify-content:space-between;align-items:center;gap:12px;"><span style="font-size:14px;color:var(--text-soft);">'+title+'</span><span style="font-size:11px;color:'+color+';white-space:nowrap;font-weight:600;">'+len+' chars</span></div>';
+  }).join("");
+  document.getElementById("title-list").innerHTML=html;
+  document.getElementById("results").style.display="block";
+});
+</script>

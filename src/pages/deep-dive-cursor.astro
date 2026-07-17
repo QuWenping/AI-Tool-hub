@@ -1,0 +1,170 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Cursor Deep Dive (2026): The Complete Guide for AI-Native Development" description="A 4,000-word deep dive into Cursor in 2026: the AI-native editor, Agent mode, the .cursorrules file, the 8 power user techniques, the 4 things it cannot do." keywords="Cursor deep dive, Cursor power user, Cursor Agent mode, .cursorrules, AI coding">
+  <article class="legal-page blog-post">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/tool/cursor/">Cursor</a> &rsaquo; <span>Deep Dive</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">Deep dive</span>
+      <h1>Cursor Deep Dive (2026): The Complete Guide for AI-Native Development</h1>
+      <p class="lede">A 4,000-word guide to everything Cursor can do in 2026. The AI-native editor explained, the Agent mode in depth, the .cursorrules file as your project personality, the 8 power user techniques, the 4 things it cannot do.</p>
+      <p style="color: var(--text-mute); font-size: 14px; margin-top: 16px;">
+        <i class="far fa-calendar"></i> 2026-06-04 &middot; <i class="far fa-clock"></i> 18 min read &middot; <i class="far fa-user"></i> Marcus Webb, Senior Engineer
+      </p>
+    </header>
+
+    <section class="blog-content">
+      <p>Cursor in 2026 is the highest-leverage tool a full-time developer can buy. The AI-native editor does things that no other tool does well: refactor across 30 files, generate an entire feature from a description, chat with your entire codebase, run a background agent on a long task while you work on something else. This is the consolidated guide from a team that has been using Cursor daily for 18 months.</p>
+
+      <h2>1. What makes Cursor different (the philosophy)</h2>
+      <p>Cursor is a VS Code fork with the AI built in (not a plugin). That difference matters in 3 ways:</p>
+
+      <p><strong>1. The AI has the same primitives as the editor.</strong> Cursor AI can read the file you are on, the files you have open, the files in the same directory, the codebase, and the project. It is not parsing the code from a chat - it is in the IDE. The result: it understands context the way you do, and the suggestions are contextually correct.</p>
+
+      <p><strong>2. The AI can act, not just suggest.</strong> Cursor Agent mode can edit multiple files, run commands, install dependencies, run tests, fix the test failures, and repeat. It is not "AI that suggests" - it is "AI that does." The loop is: you describe, it does, you review.</p>
+
+      <p><strong>3. The AI is a first-class IDE citizen.</strong> Keyboard shortcuts, snippets, multi-cursor, find-and-replace, all the things you do in an IDE - the AI does them too. You are not switching between "coding" and "AI helping" modes. You are just coding, and the AI is part of the coding.</p>
+
+      <h2>2. The 3 modes (Tab, Cmd+K, Agent)</h2>
+      <p>Cursor has 3 modes for using AI. Most users default to one and never use the others. The right pick depends on the task.</p>
+
+      <p><strong>Mode 1: Tab autocomplete.</strong> Press Tab to accept the suggestion, just like Copilot. This is the fastest mode for writing new code. Use for: routine implementation, boilerplate, anything you would write the same way twice.</p>
+
+      <p><strong>Mode 2: Cmd+K (inline edit).</strong> Select a block of code, press Cmd+K, describe the change. The AI rewrites the block in place. Use for: refactoring a specific function, fixing a bug, adding a feature to a specific file.</p>
+
+      <p><strong>Mode 3: Agent (Cmd+I).</strong> Open the chat, describe the task in natural language, the AI does it across multiple files. Use for: new features, multi-file refactors, debugging across the codebase.</p>
+
+      <p><strong>The honest workflow:</strong> Tab for writing new code. Cmd+K for editing specific blocks. Agent for new features and big changes. Knowing which mode to use is 50% of the productivity gain.</p>
+
+      <h2>3. The .cursorrules file (your project personality)</h2>
+      <p>The .cursorrules file is the single highest-leverage configuration in Cursor. It is a plain-text file at the root of your repo that tells Cursor how to behave. The format is natural language instructions.</p>
+
+      <p>Example .cursorrules for a TypeScript Next.js project: "You are working on a Next.js 14 app with TypeScript and Prisma. Code style: Use functional components with hooks. Prefer server components. Use Tailwind for styling, never inline styles. Use Zod for runtime validation. Always add types to function parameters. Never use 'any'. Use 'unknown' instead. Patterns: API routes in /app/api/. Database queries go in /lib/db/. Auth in /lib/auth/. Components in /components/. Testing: Every new function needs a test in __tests__/. Use vitest. Mock external services, not internal modules. Do not: Use class components. Use any. Skip error handling. Use console.log for debugging. When suggesting code, always include the file path and explain why you chose that approach."</p>
+
+      <h3>What to put in .cursorrules</h3>
+      <ul>
+        <li>Code style preferences (functional vs OOP, naming conventions, type strictness)</li>
+        <li>Project structure (where each type of code goes)</li>
+        <li>Testing requirements (which test framework, what to test, mocking rules)</li>
+        <li>Common patterns (how to do specific things in this codebase)</li>
+        <li>Anti-patterns (what NOT to do)</li>
+        <li>Communication style (how the AI should explain its suggestions)</li>
+      </ul>
+
+      <h3>How to maintain .cursorrules</h3>
+      <p>The .cursorrules file should be reviewed quarterly. When the team adopts a new pattern, add it. When the AI keeps making a mistake, add a "Do not" line. When the project structure changes, update the paths.</p>
+
+      <h2>4. The Agent mode in depth</h2>
+      <p>Agent mode (Cmd+I) is the killer feature. You describe a task, the AI does it across multiple files, runs commands, runs tests, and iterates until done. The 3 things that matter:</p>
+
+      <p><strong>1. The 4-step loop.</strong> Every Agent task follows the same loop: (1) Read the request, (2) Find the relevant files, (3) Make the changes, (4) Run the tests. If the tests fail, the AI loops back to step 3. The loop runs for up to 25 iterations before giving up.</p>
+
+      <p><strong>2. The 3 prompt patterns that work.</strong></p>
+      <ul>
+        <li><strong>The "build me X" pattern:</strong> "Add a /api/users endpoint that returns paginated users. Use the existing User model. Add a test. Update the OpenAPI spec." Complete spec, AI does it.</li>
+        <li><strong>The "fix this" pattern:</strong> "The /api/users endpoint returns 500 when called with a negative page number. Diagnose and fix." Diagnosis + fix in one prompt.</li>
+        <li><strong>The "refactor this" pattern:</strong> "Refactor the auth module to use the new error handling pattern in /lib/errors. Update all callers." Multi-file refactor.</li>
+      </ul>
+
+      <p><strong>3. The "background agent" feature (new in 2026).</strong> You can kick off a long-running Agent task in the background, work on something else, and get notified when it is done. Use for: large refactors, generating test suites, documentation generation, dependency upgrades. The background agent runs in the cloud (not on your machine), so it does not slow down your editor.</p>
+
+      <h2>5. The 8 power user techniques</h2>
+
+      <p><strong>Technique 1: Use the .cursorrules file aggressively.</strong> The single biggest productivity gain. Spend 1 hour on it upfront. Update it quarterly. The acceptance rate of AI suggestions goes from 40% to 70% with a good .cursorrules file.</p>
+
+      <p><strong>Technique 2: Use @ references in chat.</strong> Type @ in any Cursor chat to reference a file, a function, a folder, the docs, the web, or the codebase. "@src/api/users.ts what does this do?" gets a specific answer.</p>
+
+      <p><strong>Technique 3: Use the diff view to review AI changes.</strong> After Agent makes changes, the diff view shows exactly what changed. Review the diff before accepting. The "Accept all" button is dangerous - it is for small, low-risk changes only.</p>
+
+      <p><strong>Technique 4: Use multi-cursor with AI.</strong> Select a pattern, Cmd+D to select all instances, Cmd+K to ask the AI to change all of them. The "change all" pattern works for renaming, refactoring, and adding type annotations.</p>
+
+      <p><strong>Technique 5: Use the "explain" pattern for code review.</strong> "Explain this function in plain English" or "What does this code do?" The AI explains code faster than you can read it.</p>
+
+      <p><strong>Technique 6: Use the "tests first" pattern.</strong> For new features, write the tests in Cursor chat first, then ask the AI to "make these tests pass." The test-driven approach produces more robust code than the "write code first" approach.</p>
+
+      <p><strong>Technique 7: Use the documentation lookup.</strong> Cursor can read your codebase docs (if you point it at the right folder). "What is our deployment process?" references the docs and gives the right answer.</p>
+
+      <p><strong>Technique 8: Use the "commit message" pattern.</strong> Cursor can write commit messages based on the diff. "Write a commit message for these changes" produces better messages than typing them yourself, and it follows your repo commit style.</p>
+
+      <h2>6. The pricing tiers in 2026 (the real comparison)</h2>
+
+      <p><strong>Hobby ($20/month):</strong> Pro features for individuals. 500 fast requests per month. Best for: hobbyists, students, occasional users.</p>
+
+      <p><strong>Pro ($20/month):</strong> Pro features for individuals. 500 fast requests per month. Best for: solo developers, freelancers.</p>
+
+      <p><strong>Business ($40/month per user):</strong> SSO, admin dashboard, privacy mode (no training on your code), centralized billing, 500 fast requests per user. Best for: 2+ person teams.</p>
+
+      <p><strong>Enterprise (custom):</strong> Custom terms, dedicated support, on-prem options, unlimited requests. Best for: 50+ person teams, regulated industries.</p>
+
+      <p><strong>The honest recommendation:</strong> Pro at $20/month is the right pick for individual developers. Business is the right pick for any team. The jump from Pro to Business ($20 more) is the best ROI decision a team can make - you get privacy mode, SSO, and the admin dashboard.</p>
+
+      <h2>7. The 3 workflows we use daily</h2>
+
+      <p><strong>Workflow 1: Adding a new feature (45 minutes).</strong></p>
+      <ol>
+        <li>Write the test in Cursor (5 min)</li>
+        <li>Open Agent mode, describe the feature with the test as context (1 min)</li>
+        <li>AI implements the feature, runs the test, iterates until the test passes (10-15 min)</li>
+        <li>Review the diff, accept the good changes, edit the rest (10-15 min)</li>
+        <li>Write the integration test, run the full test suite (5-10 min)</li>
+        <li>Commit with an AI-written commit message (1 min)</li>
+      </ol>
+
+      <p><strong>Workflow 2: Debugging a production issue (30 minutes).</strong></p>
+      <ol>
+        <li>Paste the error log into Cursor chat (1 min)</li>
+        <li>Ask: "What is the most likely cause of this error? Show me the relevant code." (3 min)</li>
+        <li>AI identifies the likely cause with file/line references</li>
+        <li>Ask: "Write a test that reproduces this bug." (3 min)</li>
+        <li>Ask: "Fix the bug. Make the test pass." (5 min)</li>
+        <li>Review the fix, test in staging, deploy (18 min)</li>
+      </ol>
+
+      <p><strong>Workflow 3: Refactoring a module (1 hour).</strong></p>
+      <ol>
+        <li>Identify the module to refactor (1 min)</li>
+        <li>Open Agent mode, describe the refactor with the target pattern (2 min)</li>
+        <li>AI does the refactor across all callers, runs the tests (20-30 min)</li>
+        <li>Review the diff carefully (15-20 min)</li>
+        <li>Run the full test suite, fix any issues (10-15 min)</li>
+        <li>Commit as a single change (1 min)</li>
+      </ol>
+
+      <h2>8. The 4 things Cursor cannot do well in 2026</h2>
+
+      <p><strong>Limitation 1: Massive refactors across hundreds of files.</strong> Cursor is good for refactors of 5-30 files. Beyond that, the context window is not enough and the Agent mode starts hallucinating. For massive refactors, use a dedicated migration tool.</p>
+
+      <p><strong>Limitation 2: Security-critical code without review.</strong> Cursor writes code that works in 90% of cases. The other 10% has subtle bugs in security, auth, crypto, payments. Always code review AI output, especially for security-sensitive code.</p>
+
+      <p><strong>Limitation 3: Code in languages with poor training data.</strong> Cursor is best at TypeScript, Python, JavaScript, Go, Rust, Java. For COBOL, Fortran, niche languages, the output quality is lower.</p>
+
+      <p><strong>Limitation 4: Large monorepos with millions of lines.</strong> Cursor indexes your codebase for context, but the indexing is slow and the context window is not enough for very large monorepos. For monorepos, use Cursor for individual packages, not for the whole repo.</p>
+
+      <h2>9. The 3 alternatives and when to use them</h2>
+
+      <p><strong>GitHub Copilot:</strong> Best for: developers who want fast autocomplete without switching editors. Use when: you are happy in VS Code or JetBrains and do not need the multi-file editing.</p>
+
+      <p><strong>Claude (via API):</strong> Best for: code review, complex refactoring, long document analysis. Use when: you need a second opinion or a specific task that Cursor is not great at.</p>
+
+      <p><strong>ChatGPT Plus:</strong> Best for: brainstorming, architecture decisions, one-off questions. Use when: you want to think out loud about a design problem.</p>
+
+      <p><strong>The honest recommendation:</strong> Use Cursor for 80% of your coding. Use Copilot as a complement (the autocomplete is genuinely faster). Use Claude or ChatGPT for the design and review parts.</p>
+
+      <h2>10. Should you switch to Cursor from Copilot?</h2>
+      <p>It depends on what you do. For most full-time developers, the answer is yes - Cursor is the highest-ROI tool in our stack. The $20/month pays for itself in the first week for anyone who does multi-file work.</p>
+
+      <p>For the broader comparison, see <a href="/blog/cursor-vs-github-copilot-2026/">our Cursor vs Copilot guide</a>. For the team setup, see <a href="/blog/how-to-set-up-cursor-for-your-team-2026/">our team setup guide</a>. For the full review, see <a href="/tool/cursor/">our Cursor review page</a>.</p>
+    </section>
+
+    <section style="margin-top: 40px;">
+      <h3>Tags</h3>
+      <div class="audience-tags">
+        <span class="audience-tag">#cursor</span>
+        <span class="audience-tag">#deep-dive</span>
+        <span class="audience-tag">#coding</span>
+        <span class="audience-tag">#agent</span>
+        <span class="audience-tag">#power-user</span>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

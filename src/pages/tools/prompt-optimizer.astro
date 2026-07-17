@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout title="AI Prompt Optimizer | Free Online Tool" description="Free AI prompt optimizer. Turn basic prompts into structured, effective prompts with role, context, format, and constraints. No signup." keywords="prompt optimizer, AI prompt enhancer, improve prompts, free AI tool">
+  <div class="container" style="max-width:800px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumbs" style="margin-bottom:24px;"><a href="/">Home</a> &rsaquo; <a href="/tools/">Free Tools</a> &rsaquo; <span>Prompt Optimizer</span></nav>
+    <h1 style="font-size:32px;font-weight:700;margin-bottom:8px;">AI Prompt Optimizer</h1>
+    <p style="color:var(--text-mute);font-size:16px;margin-bottom:32px;">Turn a basic prompt into a structured, effective prompt. Free, no signup.</p>
+    <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:14px;padding:24px;margin-bottom:24px;">
+      <label style="font-size:14px;font-weight:600;display:block;margin-bottom:8px;">Your basic prompt:</label>
+      <textarea id="po-input" rows="4" placeholder="e.g. write a blog about AI tools" style="width:100%;background:var(--bg-color);border:1px solid var(--border-color);border-radius:10px;padding:12px;color:var(--text-main);font-size:14px;resize:vertical;"></textarea>
+      <button id="po-optimize" style="background:var(--accent-color);color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:600;cursor:pointer;margin-top:12px;">Optimize</button>
+    </div>
+    <div id="po-output" style="display:none;background:var(--card-bg);border:1px solid var(--border-color);border-radius:14px;padding:24px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+        <h2 style="font-size:18px;">Optimized Prompt</h2>
+        <button id="po-copy" style="background:var(--bg-color);border:1px solid var(--border-color);border-radius:8px;padding:6px 16px;font-size:13px;cursor:pointer;color:var(--text-main);">Copy</button>
+      </div>
+      <pre id="po-result" style="background:var(--bg-color);border-radius:8px;padding:16px;font-size:14px;color:var(--text-soft);white-space:pre-wrap;word-break:break-word;line-height:1.6;"></pre>
+    </div>
+  </div>
+</BaseLayout>
+<script is:inline>
+  document.getElementById("po-optimize").addEventListener("click",function(){
+    var input=document.getElementById("po-input").value.trim(); if(!input){return;}
+    var optimized="You are an expert assistant with deep knowledge of the subject.\n\n";
+    optimized+="Context: The user wants to accomplish the following task:\n\""+input+"\"\n\n";
+    optimized+="Instructions:\n1. Understand the core intent behind the request\n2. Provide a thorough, well-structured response\n3. Use clear headings and bullet points where appropriate\n4. Include specific examples or data to support your points\n5. Keep the tone professional but approachable\n\n";
+    optimized+="Output format:\n- Start with a brief summary (1-2 sentences)\n- Provide detailed content organized by sections\n- End with actionable next steps or recommendations\n\n";
+    optimized+="Constraints:\n- Avoid generic statements; be specific\n- If unsure about something, say so rather than guessing\n- Tailor the response to a reader who wants practical, actionable information";
+    document.getElementById("po-result").textContent=optimized;
+    document.getElementById("po-output").style.display="block";
+  });
+  document.getElementById("po-copy").addEventListener("click",function(){
+    var text=document.getElementById("po-result").textContent;
+    navigator.clipboard.writeText(text).then(function(){
+      var btn=document.getElementById("po-copy");btn.textContent="Copied!";setTimeout(function(){btn.textContent="Copy"},2000);
+    });
+  });
+</script>

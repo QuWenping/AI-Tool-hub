@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout lang="zh" title="评测方法论 | 我们如何给 AI 工具打分（5 维度评分体系）" description="我们 AI 工具评分背后的完整方法论：5 个维度各自的 1–10 评分细则、3 个演算示例、加权平均公式，以及边界情况的处理方式。" keywords="AI 工具评分方法论, 评分体系, 如何评测 AI 工具, 评估框架">
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <span>评测方法论</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">我们的流程</span>
+      <h1>评测方法论：我们如何给 AI 工具打分</h1>
+      <p class="lede">AI 工具评分背后的完整方法论。每个维度 1–10 分的评分细则、3 个演算示例、加权平均公式与边界情况处理。本页比编辑指南更技术化，面向想精确了解分数如何得出的人。</p>
+    </header>
+    <p style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; margin: 24px 0;"><strong>语言说明：</strong>完整的 1–10 评分细则、3 个演算示例与边界情况处理见<a href="/methodology/">英文原版</a>。本页提供框架与核心要点。</p>
+
+    <section>
+      <h2>5 维度框架（概览）</h2>
+      <p>我们对每个工具在 5 个维度上分别打 1–10 分，再加权平均得到总分。维度与权重：</p>
+      <ul>
+        <li><strong>维度 1：输出质量（权重 30%）</strong> - 工具实际产出物的质量。这是最重要的一维，占比最高。</li>
+        <li><strong>维度 2：易用性（权重 20%）</strong> - 普通用户上手与日常使用的难度。</li>
+        <li><strong>维度 3：价格透明度（权重 20%）</strong> - 定价是否清晰、有无隐藏费用、是否有免费层。</li>
+        <li><strong>维度 4：支持质量（权重 15%）</strong> - 文档、客服响应、社区与更新频率。</li>
+        <li><strong>维度 5：隐私与数据处理（权重 15%）</strong> - 数据是否被用于训练、是否可删除、合规情况。</li>
+      </ul>
+    </section>
+    <section>
+      <h2>为何是这 5 个维度</h2>
+      <p>我们选择这 5 维，是因为它们最直接决定一个工具对真实用户的价值：产出物好不好用、好不好上手、贵不贵、出问题有没有人帮、数据安不安全。我们刻意不把"营销热度""融资规模""媒体曝光"纳入评分，因为它们与工具的实际效用无关。</p>
+    </section>
+    <section>
+      <h2>评分公式</h2>
+      <p>总分 = 输出质量×0.30 + 易用性×0.20 + 价格透明度×0.20 + 支持质量×0.15 + 隐私×0.15，结果四舍五入到一位小数。每个维度都有独立的 1–10 判分细则（如输出质量 10 分=接近人类专家水平且稳定；5 分=可用但需大量人工修正；2 分=频繁出错、不可靠）。</p>
+    </section>
+    <section>
+      <h2>3 个演算示例</h2>
+      <ul>
+        <li><strong>示例 1：ChatGPT Plus</strong> - 目录中评分最高的工具，各维度均高，隐私项因数据用于训练略扣。</li>
+        <li><strong>示例 2：Jasper</strong> - 未进入目录的工具：输出质量与价格透明度未达门槛。</li>
+        <li><strong>示例 3：通过门槛但带隐私警告的工具</strong> - 总分达标但隐私分低，会标注隐私警示。</li>
+      </ul>
+    </section>
+    <section>
+      <h2>边界情况处理</h2>
+      <ul>
+        <li><strong>开源无官方支持的工具</strong>：支持维度按社区/文档质量评估，不因"无官方客服"直接判低。</li>
+        <li><strong>纯免费工具</strong>：价格透明度通常得高分；若免费但数据变现激进，隐私维度扣分。</li>
+        <li><strong>仅企业版工具</strong>：若无可试用个人版，标注"企业级"，价格维度按公开报价评估。</li>
+        <li><strong>评测期间大版本更新</strong>：6 个月复评周期内可触发加测。</li>
+        <li><strong>工具被收购/关停</strong>：标注状态，必要时下架。</li>
+      </ul>
+    </section>
+    <section>
+      <h2>如何校准与核验</h2>
+      <p>我们每季度校准一次判分尺度，避免分数膨胀；评分基于可复现的测试任务。如对某工具评分有疑问，可对照本方法论的维度与权重自行核验，或通过<a href="/zh/contact/">联系页面</a>提出。更多流程详见<a href="/zh/about/">关于我们</a>与英文编辑指南。</p>
+    </section>
+  </article>
+</BaseLayout>

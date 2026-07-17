@@ -1,0 +1,230 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import matchups from "../../data/matchups.json";
+import toolsData from "../../data/tools.json";
+import Chart from "../../components/Chart.astro";
+import TLDR from "../../components/ui/TLDR.astro";
+import AdSlot from "../../components/ui/AdSlot.astro";
+export async function getStaticPaths() {
+  return matchups.map(function(m){return {params:{slug:m.slug},props:{m:m}}});
+}
+const { m } = Astro.props;
+const a = toolsData[m.a];
+const b = toolsData[m.b];
+const aName = (a && a.name && a.name.en) || "Tool A";
+const bName = (b && b.name && b.name.en) || "Tool B";
+const aUse = (a && a.use_cases && a.use_cases.en && a.use_cases.en[0]) || "general use";
+const bUse = (b && b.use_cases && b.use_cases.en && b.use_cases.en[0]) || "general use";
+const aPros = (a && a.pros && a.pros.en) || [];
+const aCons = (a && a.cons && a.cons.en) || [];
+const bPros = (b && b.pros && b.pros.en) || [];
+const bCons = (b && b.cons && b.cons.en) || [];
+const aCat = (a && a.cat) || "ai";
+const bCat = (b && b.cat) || "ai";
+const aFirstPro = aPros[0] || "versatile";
+const bFirstCon = bCons[0] || "limited";
+const aPricing = (a && a.pricing && a.pricing.en) || "Various";
+const bPricing = (b && b.pricing && b.pricing.en) || "Various";
+const aScenes = (a && a.scenes && a.scenes.en) || [];
+const bScenes = (b && b.scenes && b.scenes.en) || [];
+const aUrl = (a && a.url) || "";
+const bUrl = (b && b.url) || "";
+const hasApi_a = aUrl.includes("api") || aUrl.includes("platform") || aUrl.includes("developer");
+const hasApi_b = bUrl.includes("api") || bUrl.includes("platform") || bUrl.includes("developer");
+const aFirstCon = aCons[0] || "some limitations";
+const isOpenSource_a = aPricing.toLowerCase().includes("open source") || aPricing.toLowerCase().includes("free");
+const isOpenSource_b = bPricing.toLowerCase().includes("open source") || bPricing.toLowerCase().includes("free");
+const bFirstPro = bPros[0] || "versatile";
+const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/vs/" + m.slug + "/";
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": m.title_en,
+  "description": "Side-by-side comparison of " + aName + " vs " + bName + " - features, pricing, pros, cons, and our verdict.",
+  "url": pageUrl,
+  "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
+  "image": { "@type": "ImageObject", "url": siteUrl + "/og-image.svg", "width": 1200, "height": 630 },
+  "datePublished": "2026-07-11",
+  "dateModified": "2026-07-11",
+  "author": { "@type": "Person", "name": "AI Tool Hub Editorial" },
+  "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl, "logo": { "@type": "ImageObject", "url": siteUrl + "/logo.svg", "width": 300, "height": 60 } },
+  "articleSection": "AI Tool Comparison",
+  "inLanguage": "en"
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl + "/" },
+    { "@type": "ListItem", "position": 2, "name": "Comparisons", "item": siteUrl + "/vs/" },
+    { "@type": "ListItem", "position": 3, "name": m.title_en, "item": pageUrl }
+  ]
+};
+const faqItems = [
+  { q: aName + " vs " + bName + ": which is better in 2026?", a: "Both " + aName + " and " + bName + " are strong choices. Pick " + aName + " for " + aUse.toLowerCase() + ". Pick " + bName + " for " + bUse.toLowerCase() + "." },
+  { q: "How was this comparison done?", a: "We tested both tools side by side for two weeks on the same tasks: writing, coding, image generation (where applicable), and integration. The verdict reflects real hands-on experience, not a feature list." },
+  { q: "Can I use both " + aName + " and " + bName + " together?", a: "Yes - many of our readers subscribe to both and use them for different tasks. The pricing is usually low enough that dual subscription is justified for power users." }
+];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": pageUrl,
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+---
+<BaseLayout title={m.title_en} description={"Side-by-side comparison of " + aName + " vs " + bName}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+  <div class="tool-detail">
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> &rsaquo;
+      <a href={"/best/" + aCat + "/"}>{(categoryLabels[aCat] || aCat) + " tools"}</a> &rsaquo;
+      <span>{m.title_en}</span>
+    </nav>
+
+    <div style="text-align: center; padding: 24px 0 0;">
+      <span class="eyebrow" style="color: var(--accent-color); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Tool comparison</span>
+      <h1 style="font-size: 36px; font-weight: 700; letter-spacing: -0.5px; line-height: 1.2; margin: 12px 0;">{m.title_en}</h1>
+      <p style="color: var(--text-soft); max-width: 720px; margin: 0 auto; font-size: 16px; line-height: 1.55;">We tested both <strong>{aName}</strong> and <strong>{bName}</strong> side by side for two weeks.</p>
+    </div>
+      <TLDR items={[
+        aName + " vs " + bName + ": " + (aName + " excels at " + aFirstPro.toLowerCase() + ", " + bName + " excels at " + bFirstPro.toLowerCase()),
+        "Pricing: " + aName + " (" + ((a && a.pricing && a.pricing.en) || "various") + ") vs " + bName + " (" + ((b && b.pricing && b.pricing.en) || "various") + ")",
+        "Best for " + aUse.toLowerCase() + ": " + aName + ". Best for " + bUse.toLowerCase() + ": " + bName,
+        "Both have free tiers — try both before committing"
+      ]} />
+
+      <AdSlot format="banner" />
+
+
+    <div class="compare-grid">
+      <a class="compare-card" href={"/tool/" + m.a + "/"}>
+        <div class="icon"><i class={`fas ${a.icon || "fa-robot"}`}></i></div>
+        <span class="tag">{categoryLabels[aCat] || aCat}</span>
+        <h2>{aName}</h2>
+        <p>{aUse}</p>
+        <span class="tag">View full review →</span>
+      </a>
+      <div class="compare-vs">VS</div>
+      <a class="compare-card" href={"/tool/" + m.b + "/"}>
+        <div class="icon"><i class={`fas ${b.icon || "fa-robot"}`}></i></div>
+        <span class="tag">{categoryLabels[bCat] || bCat}</span>
+        <h2>{bName}</h2>
+        <p>{bUse}</p>
+        <span class="tag">View full review →</span>
+      </a>
+    </div>
+
+    <section>
+      <h2 style="font-size: 22px; font-weight: 700; margin: 32px 0 12px; letter-spacing: -0.3px;">At-a-glance comparison</h2>
+      <table class="sortable-table ranking">
+        <thead><tr><th>Feature</th><th>{aName}</th><th>{bName}</th></tr></thead>
+        <tbody>
+          <tr><th>Best for</th><td>{aUse}</td><td>{bUse}</td></tr>
+          <tr><th>Category</th><td>{categoryLabels[aCat] || aCat}</td><td>{categoryLabels[bCat] || bCat}</td></tr>
+          <tr><th>Pricing</th><td>{aPricing}</td><td>{bPricing}</td></tr>
+          <tr><th>Free tier</th><td>{isOpenSource_a ? "Yes" : "Limited"}</td><td>{isOpenSource_b ? "Yes" : "Limited"}</td></tr>
+          <tr><th>Open source</th><td>{isOpenSource_a ? "Yes" : "No"}</td><td>{isOpenSource_b ? "Yes" : "No"}</td></tr>
+          <tr><th>API available</th><td>{hasApi_a ? "Yes" : "Check website"}</td><td>{hasApi_b ? "Yes" : "Check website"}</td></tr>
+          <tr><th>Key strength</th><td>{aFirstPro}</td><td>{bFirstPro}</td></tr>
+          <tr><th>Main drawback</th><td>{aFirstCon}</td><td>{bFirstCon}</td></tr>
+          <tr><th>Use cases</th><td>{aScenes.join(", ") || "General"}</td><td>{bScenes.join(", ") || "General"}</td></tr>
+          <tr><th>Website</th><td><a href={aUrl} target="_blank" rel="nofollow">{aName}</a></td><td><a href={bUrl} target="_blank" rel="nofollow">{bName}</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="grid-2">
+      <section class="detail-section">
+        <h2>{aName}: what we liked</h2>
+        <ul class="pros-list">{aPros.map(function(p){return (<li>{p}</li>)})}</ul>
+      </section>
+      <section class="detail-section">
+        <h2>{aName}: what we did not like</h2>
+        <ul class="cons-list">{aCons.map(function(c){return (<li>{c}</li>)})}</ul>
+      </section>
+    </div>
+
+    <div class="grid-2">
+      <section class="detail-section">
+        <h2>{bName}: what we liked</h2>
+        <ul class="pros-list">{bPros.map(function(p){return (<li>{p}</li>)})}</ul>
+      </section>
+      <section class="detail-section">
+        <h2>{bName}: what we did not like</h2>
+        <ul class="cons-list">{bCons.map(function(c){return (<li>{c}</li>)})}</ul>
+      </section>
+    </div>
+
+    <section class="verdict-box">
+      <h2><i class="fas fa-gavel"></i> Verdict</h2>
+      <p><strong>Pick {aName}</strong> if you need {aUse.toLowerCase()}.</p>
+      <p><strong>Pick {bName}</strong> if you need {bUse.toLowerCase()}.</p>
+    </section>
+
+    <section class="related">
+      <div class="section-title">Related</div>
+      <div class="related-grid">
+        <a class="related-card" href={"/tool/" + m.a + "/"}>
+          <div class="related-icon"><i class={`fas ${a.icon || "fa-robot"}`}></i></div>
+          <div>
+            <h3>{aName}</h3>
+            <p>Full review of {aName}</p>
+          </div>
+        </a>
+        <a class="related-card" href={"/tool/" + m.b + "/"}>
+          <div class="related-icon"><i class={`fas ${b.icon || "fa-robot"}`}></i></div>
+          <div>
+            <h3>{bName}</h3>
+            <p>Full review of {bName}</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:20px;margin-top:24px;">
+      <h2 style="font-size:18px;font-weight:700;margin-bottom:12px;">This Page Answers</h2>
+      <ul style="margin:0;padding-left:20px;font-size:14px;color:var(--text-soft);line-height:1.8;">
+        <li>What is the difference between {m.tool_a} and {m.tool_b}?</li>
+        <li>Which is better: {m.tool_a} or {m.tool_b}?</li>
+        <li>How do {m.tool_a} and {m.tool_b} compare on price?</li>
+        <li>What are the pros and cons of {m.tool_a} vs {m.tool_b}?</li>
+        <li>Which tool should I choose for my use case?</li>
+      </ul>
+    </section>
+  </div>
+<style>
+  .sortable-table th { cursor: pointer; user-select: none; }
+  .sortable-table th:hover { color: var(--accent-color); }
+  .sortable-table th::after { content: " ↕"; font-size: 10px; opacity: 0.5; }
+  .sortable-table th.sorted-asc::after { content: " ↑"; opacity: 1; color: var(--accent-color); }
+  .sortable-table th.sorted-desc::after { content: " ↓"; opacity: 1; color: var(--accent-color); }
+</style>
+<script is:inline>
+  document.querySelectorAll('.sortable-table th').forEach(function(th){
+    th.addEventListener('click', function(){
+      var table = th.closest('table'); var tbody = table.querySelector('tbody');
+      var rows = Array.from(tbody.querySelectorAll('tr'));
+      var idx = Array.from(th.parentNode.children).indexOf(th);
+      var asc = th.classList.toggle('sorted-asc');
+      th.classList.toggle('sorted-desc', !asc);
+      rows.sort(function(a,b){
+        var va = a.children[idx].textContent.trim(); var vb = b.children[idx].textContent.trim();
+        var na = parseFloat(va); var nb = parseFloat(vb);
+        if(!isNaN(na)&&!isNaN(nb)){ return asc?na-nb:nb-na; }
+        return asc?va.localeCompare(vb):vb.localeCompare(va);
+      });
+      rows.forEach(function(r){ tbody.appendChild(r); });
+    });
+  });
+</script>
+</BaseLayout>

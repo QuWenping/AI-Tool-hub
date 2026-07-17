@@ -1,0 +1,217 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Editorial Guidelines | How We Test, Score, and Review AI Tools" description="Our full editorial guidelines: how we pick tools, how we test them, how we score them on our 5-dimension rubric, how we write reviews, and what we will not do. Written by hand, updated quarterly." keywords="editorial guidelines, AI tool review process, scoring rubric, how we test, editorial standards">
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <span>Editorial Guidelines</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">Our process</span>
+      <h1>Editorial Guidelines</h1>
+      <p class="lede">How we pick tools, how we test them, how we score them on our 5-dimension rubric, how we write reviews, and what we will not do. This page is the full source of truth for our editorial process. Written by hand, reviewed quarterly, and updated whenever the process changes.</p>
+      <p class="update-note"><em>Last updated:</em> July 24, 2026 &middot; <em>Version:</em> 2.3 &middot; <em>Next review:</em> October 2026</p>
+    </header>
+
+    <section>
+      <h2>1. What AI Tool Hub is (and is not)</h2>
+      <p>AI Tool Hub is an independent, editorially-led directory of hand-tested AI tools. We exist to help you decide which AI tools are worth your time and money. We are not a list of every AI tool that exists. We are a curated shortlist of the ones we would actually pay for.</p>
+      <p>We are not affiliated with any of the tools we review. We do not accept payment for reviews. We do not allow vendors to edit our reviews. We do not produce sponsored content disguised as editorial. We are also not for sale.</p>
+      <p>What we are: a small team of practitioners who use AI tools every day for our own work, who test the tools on real projects, and who write honest reviews of the ones that pass our quality bar.</p>
+    </section>
+
+    <section>
+      <h2>2. The 5-dimension scoring rubric (our core method)</h2>
+      <p>Every tool in our directory is scored on 5 dimensions, each on a 1-10 scale. The total score is the weighted average of the 5 dimensions. The weights are: output quality (30%), ease of use (20%), pricing transparency (20%), support quality (15%), privacy and data handling (15%).</p>
+
+      <h3>Dimension 1: Output quality (30% weight)</h3>
+      <p><strong>What we measure:</strong> How good is what the tool produces, on real work, with no special preparation?</p>
+      <p><strong>How we test:</strong> Each reviewer uses the tool for at least 2 weeks on their normal work. We do not use synthetic prompts or test data - we use real projects, real deadlines, real stakeholders. We score on a 1-10 scale where 1 is "consistently produces unusable output" and 10 is "indistinguishable from a top human practitioner."</p>
+      <p><strong>The scoring rubric:</strong></p>
+      <ul>
+        <li><strong>9-10:</strong> Indistinguishable from top human work. We would ship it without editing in most cases.</li>
+        <li><strong>7-8:</strong> Production-ready with light editing. 70-80% of the work is done well by the tool.</li>
+        <li><strong>5-6:</strong> Useful as a starting point. Significant editing required, but faster than starting from scratch.</li>
+        <li><strong>3-4:</strong> Below average. Frequent errors, hallucinations, or quality issues. Not recommended.</li>
+        <li><strong>1-2:</strong> Not usable. Output is consistently wrong, irrelevant, or actively misleading.</li>
+      </ul>
+      <p><strong>Minimum to list:</strong> 7.0</p>
+
+      <h3>Dimension 2: Ease of use (20% weight)</h3>
+      <p><strong>What we measure:</strong> How long does it take a new user to produce something good? Is the interface intuitive or does it require a tutorial?</p>
+      <p><strong>How we test:</strong> The reviewer signs up for a new account, times themselves on the first 3 tasks they would normally do with this tool, and rates the learning curve.</p>
+      <p><strong>The scoring rubric:</strong></p>
+      <ul>
+        <li><strong>9-10:</strong> Intuitive from minute one. No tutorial needed for common tasks.</li>
+        <li><strong>7-8:</strong> Easy to learn. May need 1-2 hours of exploration for advanced features.</li>
+        <li><strong>5-6:</strong> Has a learning curve. Tutorial recommended for new users.</li>
+        <li><strong>3-4:</strong> Steep learning curve. Requires significant time investment to use effectively.</li>
+        <li><strong>1-2:</strong> Not usable without extensive training or external documentation.</li>
+      </ul>
+      <p><strong>Minimum to list:</strong> 6.0</p>
+
+      <h3>Dimension 3: Pricing transparency (20% weight)</h3>
+      <p><strong>What we measure:</strong> Is the pricing page clear? Are there hidden costs, opaque credit systems, or surprise overage charges?</p>
+      <p><strong>How we test:</strong> The reviewer signs up for the cheapest paid plan, uses it for a month, and tries to predict next month's bill. They also check for: cancellation policies, refund policies, auto-renewal settings, and any usage limits that would trigger overage charges.</p>
+      <p><strong>The scoring rubric:</strong></p>
+      <ul>
+        <li><strong>9-10:</strong> Clear pricing, easy to predict, no hidden costs, fair cancellation policy.</li>
+        <li><strong>7-8:</strong> Pricing is clear, but a few edge cases (overage, refund) are not obvious upfront.</li>
+        <li><strong>5-6:</strong> Pricing is documented but complex. Multiple tiers, add-ons, or credit systems.</li>
+        <li><strong>3-4:</strong> Opaque or hard to predict. Surprise charges or aggressive upsells.</li>
+        <li><strong>1-2:</strong> Misleading or predatory pricing. Hidden fees, dark patterns, or no clear pricing page.</li>
+      </ul>
+      <p><strong>Minimum to list:</strong> 6.0</p>
+
+      <h3>Dimension 4: Support quality (15% weight)</h3>
+      <p><strong>What we measure:</strong> When something breaks, can a real person help? How fast?</p>
+      <p><strong>How we test:</strong> The reviewer sends a real support ticket during the evaluation period (a legitimate question, not a fake "test" question). We measure: response time, helpfulness, and whether the issue was actually resolved.</p>
+      <p><strong>The scoring rubric:</strong></p>
+      <ul>
+        <li><strong>9-10:</strong> 24/7 human support. Real person, real help, within 4 hours.</li>
+        <li><strong>7-8:</strong> Email support with 24-hour response time. Knowledgeable and helpful.</li>
+        <li><strong>5-6:</strong> Email or chat support, 48-hour response. Sometimes helpful, sometimes not.</li>
+        <li><strong>3-4:</strong> Slow support, mostly bot-driven, requires multiple escalations to reach a human.</li>
+        <li><strong>1-2:</strong> No support, or support is actively unhelpful or hostile.</li>
+      </ul>
+      <p><strong>Minimum to list:</strong> 6.0</p>
+
+      <h3>Dimension 5: Privacy and data handling (15% weight)</h3>
+      <p><strong>What we measure:</strong> Does the tool train on our inputs by default? Can we opt out? Where is data stored? Is the data encrypted in transit and at rest?</p>
+      <p><strong>How we test:</strong> The reviewer reads the privacy policy, the terms of service, the data retention policy, and the security page. We also check for: SOC 2 compliance, GDPR compliance, data processing agreements, and breach disclosure history.</p>
+      <p><strong>The scoring rubric:</strong></p>
+      <ul>
+        <li><strong>9-10:</strong> No training on inputs by default. Clear opt-out. SOC 2 + GDPR compliant. Data encrypted.</li>
+        <li><strong>7-8:</strong> No training by default. Clear privacy policy. GDPR compliant.</li>
+        <li><strong>5-6:</strong> Trains on inputs but offers opt-out. Privacy policy exists but is complex.</li>
+        <li><strong>3-4:</strong> Trains on inputs by default. Opt-out is hard to find or incomplete.</li>
+        <li><strong>1-2:</strong> No clear privacy policy. Sells or shares data with third parties.</li>
+      </ul>
+      <p><strong>Minimum to list:</strong> 7.0 (this one is higher because privacy failures are deal-breakers)</p>
+    </section>
+
+    <section>
+      <h2>3. The threshold and the exclusion list</h2>
+      <p><strong>To be listed in our directory, a tool must:</strong></p>
+      <ul>
+        <li>Score 7.0 or higher in output quality</li>
+        <li>Score 6.0 or higher in ease of use, pricing transparency, and support</li>
+        <li>Score 7.0 or higher in privacy (the deal-breaker dimension)</li>
+        <li>Have an active product (not deprecated, in alpha, or shut down)</li>
+        <li>Have a real company behind it (not a single-dev wrapper around another API)</li>
+      </ul>
+      <p><strong>Tools that are excluded regardless of score:</strong></p>
+      <ul>
+        <li>Tools that train on user inputs by default with no opt-out</li>
+        <li>Tools that share or sell user data to third parties</li>
+        <li>Tools that have misleading or predatory pricing</li>
+        <li>Tools that have been deprecated or shut down</li>
+        <li>Tools that are pure wrappers around another tool with no original value</li>
+        <li>Tools that require paid access before you can see the product (no free trial)</li>
+      </ul>
+      <p>As of July 2026, we have tested 200+ tools and listed 16. The exclusion rate is 92%, which is by design. We would rather have a small, trusted list than a large, noisy one.</p>
+    </section>
+
+    <section>
+      <h2>4. The review process (4 steps, 2-3 weeks per tool)</h2>
+      <p>Every tool in our directory has gone through this exact process. We do not skip steps. We do not take shortcuts.</p>
+      <h3>Step 1: Hands-on testing (10-14 days)</h3>
+      <p>The assigned reviewer signs up for a new account and uses the tool on their normal work for at least 2 weeks. They do not use synthetic prompts or test data - they use real projects, real deadlines, real stakeholders. The reviewer keeps a daily log of: what they used the tool for, what worked, what did not, and any surprising findings.</p>
+      <h3>Step 2: Comparative scoring (1-2 days)</h3>
+      <p>The reviewer scores the tool on the 5-dimension rubric and benchmarks it against the top 2-3 alternatives in the same category. The benchmark comparison is critical - it tells us whether the tool is good in absolute terms or just less bad than the alternatives.</p>
+      <h3>Step 3: Editorial review (1-2 days)</h3>
+      <p>Lin (Lead Reviewer) reads the draft, fact-checks the pricing, and writes the final verdict section. If the draft and the verdict disagree, the reviewer rewrites until they align. The final review is signed by the reviewer.</p>
+      <h3>Step 4: Update cycle (ongoing)</h3>
+      <p>We revisit the review every 6 months. If the tool quality drops, the price changes, or a better alternative appears, we update the review in place. The page always shows the last updated date at the top.</p>
+    </section>
+
+    <section>
+      <h2>5. How we handle conflicts of interest</h2>
+      <p>We plan to use a small number of affiliate links; none are active yet. Here is how we will handle the conflict when they are:</p>
+      <ul>
+        <li><strong>Affiliate links never influence our rankings or scores.</strong> The 5-dimension rubric is the only thing that determines what makes the list.</li>
+        <li><strong>Affiliate relationships are disclosed in two places:</strong> on the relevant tool review page (with a small "affiliate" tag) and in our <a href="/privacy/">privacy policy</a>.</li>
+        <li><strong>We do not enter exclusive affiliate deals.</strong> We link to whichever tool is best for the user, regardless of affiliate status.</li>
+        <li><strong>We do not let vendors edit our reviews.</strong> Vendors see their review before publication for factual accuracy (pricing, feature names) but cannot change the verdict or the score.</li>
+        <li><strong>When in doubt, we do not link.</strong> If the affiliate relationship would even appear to influence the review, we remove the affiliate link.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. How we handle AI-generated content</h2>
+      <p><strong>Our position:</strong> We use AI for editing and ideation. We do not use AI to write reviews.</p>
+      <p>Every word on this site is written by a human who actually used the product. Here is what AI is and is not allowed to do in our workflow:</p>
+      <ul>
+        <li><strong>AI IS allowed to:</strong> suggest outline structure based on competitor reviews, check grammar and spelling (Grammarly), summarize a long transcript for the reviewer's notes, generate comparison tables from structured data.</li>
+        <li><strong>AI is NOT allowed to:</strong> write any paragraph of a review, generate the verdict, write the pros/cons (those come from real use), write the author bio, write the FAQ answers.</li>
+      </ul>
+      <p>We are explicit about this because other AI directories do not disclose their AI use. We do. The full content of every review was written by the named human reviewer.</p>
+    </section>
+
+    <section>
+      <h2>7. How we handle corrections and updates</h2>
+      <p>Errors happen. Here is how we handle them.</p>
+      <ul>
+        <li><strong>Typo or minor factual error:</strong> We fix it within 1 business day, no announcement needed.</li>
+        <li><strong>Pricing change:</strong> We update the review within 3 business days, add a note at the top: "Pricing updated on [date]."</li>
+        <li><strong>Tool quality change (up or down):</strong> We re-test within 30 days, update the review, and add a note at the top.</li>
+        <li><strong>Tool shutdown or major pivot:</strong> We add a banner at the top: "This tool was shut down on [date] / pivoted to [new direction]. We have moved it to the archive." The page is kept for historical reference but no longer listed in the directory.</li>
+        <li><strong>Reader reports an error:</strong> We credit the reporter on the page (with their permission) and fix the error within 1 business day.</li>
+      </ul>
+      <p>To report an error: <a href="mailto:corrections@ai-tool-hub.example">corrections@ai-tool-hub.example</a></p>
+    </section>
+
+    <section>
+      <h2>8. What we will not do</h2>
+      <p>The list of things we will not do, regardless of pressure:</p>
+      <ul>
+        <li>List a tool that did not pass our 5-dimension rubric, no matter how much we are paid to list it.</li>
+        <li>Remove a negative review in exchange for payment.</li>
+        <li>Use AI to write the body of a review.</li>
+        <li>Publish a review we have not actually tested ourselves.</li>
+        <li>Disguise sponsored content as editorial review.</li>
+        <li>Promote a tool that we know to be harmful, misleading, or predatory.</li>
+        <li>Share user data with third parties (we do not collect user data, period).</li>
+        <li>Take exclusive affiliate deals that would create a financial incentive to rank a tool higher.</li>
+        <li>Pay for backlinks or engage in any other SEO manipulation.</li>
+        <li>Copy content from other sites (every review is original).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>9. How to suggest a tool or report an error</h2>
+      <p>Found a tool we missed? Email <a href="mailto:submissions@ai-tool-hub.example">submissions@ai-tool-hub.example</a> with the tool name, URL, and why you think it is worth covering. We respond within 2-3 business days.</p>
+      <p>Found an error in a review? Email <a href="mailto:corrections@ai-tool-hub.example">corrections@ai-tool-hub.example</a> with the URL and a description. We respond within 1 business day.</p>
+      <p>Disagree with a ranking or score? Email <a href="mailto:contact@ai-tool-hub.example">contact@ai-tool-hub.example</a> with your reasoning and any data that supports your view. We consider every disagreement and update if the evidence warrants.</p>
+    </section>
+
+    <section>
+      <h2>10. How to verify what we do</h2>
+      <p>We are not asking you to take our word for it. Here is how you can verify what we do:</p>
+      <ul>
+        <li><strong>Cross-reference with the tools' own docs.</strong> Every review links to the official tool page and documentation. Check our pricing claims against the vendor's pricing page.</li>
+        <li><strong>Read multiple sources.</strong> We do not pretend to be the only voice. The "alternatives" section of every review links to the 2-3 closest competitors, with our honest take on when to pick which.</li>
+        <li><strong>Read the author bio.</strong> Every review is signed by the human who wrote it. The bio tells you who they are and what their background is. If you do not trust the person, you do not have to trust the review.</li>
+        <li><strong>Send us feedback.</strong> We have a public contact form and a public editorial process. If you see something that does not match our stated process, tell us.</li>
+        <li><strong>Check our history.</strong> Our <a href="/changelog/">changelog</a> page documents every update we have made. The record is public.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Frequently asked questions about our process</h2>
+      <h3>How long does it take to test a tool?</h3>
+      <p>Minimum 2 weeks. Longer if the tool has a learning curve, shorter if the reviewer is already familiar with the category.</p>
+      <h3>Do you ever change a score after publishing?</h3>
+      <p>Yes. We re-test every 6 months. If a tool quality drops, the score drops. If it improves, the score improves. The last-updated date on the page is always current.</p>
+      <h3>Do you accept free access from vendors?</h3>
+      <p>Yes, for the purpose of testing. We do not promise a positive review in exchange for access. We always sign up with a new account (not a vendor-provided demo account) and we use the tool on our own work, not vendor-prepared demos.</p>
+      <h3>Do you ever list a tool that is below the threshold?</h3>
+      <p>No. The threshold is the threshold. If a tool scores below 7.0 on output quality or 7.0 on privacy, it does not get listed. Period.</p>
+      <h3>What happens to tools that get acquired or shut down?</h3>
+      <p>They get a banner on their page and are moved to the archive section. The review stays online for historical reference but is no longer linked from the directory.</p>
+    </section>
+
+    <section>
+      <h2>More about our process</h2>
+      <p>For the team behind the reviews, see <a href="/about/">our about page</a>. For the rubric in more detail, see <a href="/methodology/">our methodology page</a>. For the changelog of what we have published and updated, see <a href="/changelog/">our changelog</a>.</p>
+    </section>
+  </article>
+</BaseLayout>

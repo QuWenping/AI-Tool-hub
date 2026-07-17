@@ -1,0 +1,66 @@
+--- 
+const post = Astro.props.post ?? {};
+const {
+  title = post.title ?? post.title_en ?? post.title_zh ?? '',
+  description = post.description ?? post.desc_en ?? post.desc_zh ?? '',
+  slug = post.slug ?? '',
+  date = post.date ?? '',
+  author = post.author ?? '',
+  category = post.category ?? '',
+  tags = Array.isArray(post.tags) ? post.tags : [],
+  keywords = post.keywords ?? ''
+} = Astro.props;
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/blog/" + slug + "/";
+const kw = (keywords && keywords.trim())
+  ? keywords.trim()
+  : ((tags && tags.length) ? tags.join(", ") : [category, title].filter(Boolean).join(", "));
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "url": pageUrl,
+  "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
+  "image": { "@type": "ImageObject", "url": siteUrl + "/og-image.svg", "width": 1200, "height": 630 },
+  "datePublished": date,
+  "dateModified": date,
+  "author": { "@type": "Person", "name": author },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI Tool Hub",
+    "url": siteUrl,
+    "logo": {
+      "@type": "ImageObject",
+      "url": siteUrl + "/logo.svg",
+      "width": 300,
+      "height": 60
+    }
+  },
+  "articleSection": category,
+  "keywords": kw,
+  "inLanguage": "en"
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl + "/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": siteUrl + "/blog/" },
+    { "@type": "ListItem", "position": 3, "name": title, "item": pageUrl }
+  ]
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": pageUrl,
+  "mainEntity": [
+    { "@type": "Question", "name": `What is ${title}?`, "acceptedAnswer": { "@type": "Answer", "text": description } },
+    { "@type": "Question", "name": "Who is this for?", "acceptedAnswer": { "@type": "Answer", "text": `Anyone interested in ${category} - ${description}` } },
+    { "@type": "Question", "name": "How was this content created?", "acceptedAnswer": { "@type": "Answer", "text": "Our editorial team tested real AI tools on real work over multiple weeks before publishing this review." } }
+  ]
+};
+---
+<script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>

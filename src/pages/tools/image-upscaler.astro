@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/tools/image-upscaler/";
+const faqSchema = {"@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity":[{"@type":"Question","name":"How does the image upscaler work?","acceptedAnswer":{"@type":"Answer","text":"The tool uses browser-based canvas API with bilinear interpolation to upscale images 2x or 4x. Processing happens entirely in your browser - no upload required."}},{"@type":"Question","name":"Is my image uploaded anywhere?","acceptedAnswer":{"@type":"Answer","text":"No. All processing happens locally in your browser using HTML5 Canvas. Your image never leaves your device."}}]};
+---
+<BaseLayout title="Free Image Upscaler | 2x 4x Online Tool" description="Free online image upscaler. Enlarge images 2x or 4x directly in your browser. No upload, no signup, privacy-friendly." keywords="image upscaler, free upscaler, enlarge image, upscale photo, online image tool">
+  <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script></Fragment>
+  <div class="container" style="max-width:700px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumbs" style="margin-bottom:24px;"><a href="/">Home</a> &rsaquo; <a href="/tools/">Tools</a> &rsaquo; <span>Image Upscaler</span></nav>
+    <h1 style="font-size:28px;font-weight:700;margin-bottom:8px;">Image Upscaler</h1>
+    <p style="color:var(--text-mute);font-size:15px;margin-bottom:24px;">Enlarge images 2x or 4x. Runs in your browser - no upload, 100% private.</p>
+    <div style="margin-bottom:20px;">
+      <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Select Image</label>
+      <input type="file" id="file-input" accept="image/*" style="width:100%;padding:12px;border:1px solid var(--border-color);border-radius:8px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;" />
+    </div>
+    <div style="margin-bottom:20px;">
+      <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Upscale Factor</label>
+      <select id="scale" style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;">
+        <option value="2">2x (Double resolution)</option>
+        <option value="3">3x (Triple resolution)</option>
+        <option value="4">4x (Quadruple resolution)</option>
+      </select>
+    </div>
+    <button id="upscale-btn" style="width:100%;padding:14px;background:var(--accent-color);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;margin-bottom:24px;" disabled>Upscale Image</button>
+    <div id="result" style="display:none;">
+      <h2 style="font-size:18px;font-weight:600;margin-bottom:12px;">Result</h2>
+      <div id="img-container" style="border:1px solid var(--border-color);border-radius:12px;overflow:hidden;margin-bottom:16px;"></div>
+      <p id="info" style="font-size:13px;color:var(--text-mute);margin-bottom:16px;"></p>
+      <a id="download" style="display:inline-block;background:var(--accent-color);color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:600;font-size:14px;">Download Upscaled Image</a>
+    </div>
+  </div>
+</BaseLayout>
+<script is:inline>
+var img=null;
+document.getElementById("file-input").addEventListener("change",function(e){
+  var file=e.target.files[0];if(!file)return;
+  var reader=new FileReader();
+  reader.onload=function(ev){img=new Image();img.onload=function(){document.getElementById("upscale-btn").disabled=false;};img.src=ev.target.result;};
+  reader.readAsDataURL(file);
+});
+document.getElementById("upscale-btn").addEventListener("click",function(){
+  if(!img)return;
+  var scale=parseInt(document.getElementById("scale").value);
+  var canvas=document.createElement("canvas");
+  canvas.width=img.width*scale;canvas.height=img.height*scale;
+  var ctx=canvas.getContext("2d");
+  ctx.imageSmoothingEnabled=true;
+  ctx.imageSmoothingQuality="high";
+  ctx.drawImage(img,0,0,canvas.width,canvas.height);
+  var dataUrl=canvas.toDataURL("image/png");
+  document.getElementById("img-container").innerHTML='<img src="'+dataUrl+'" style="width:100%;display:block;" />';
+  document.getElementById("info").textContent="Original: "+img.width+"x"+img.height+"px | Upscaled: "+canvas.width+"x"+canvas.height+"px ("+scale+"x)";
+  document.getElementById("download").href=dataUrl;
+  document.getElementById("download").download="upscaled-"+scale+"x.png";
+  document.getElementById("result").style.display="block";
+});
+</script>

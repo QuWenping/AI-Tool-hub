@@ -1,0 +1,132 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import toolsData from "../../data/tools.json";
+import workflows from "../../data/workflows.json";
+const agentTools = ["n8n","dify","crewai","langgraph","autogen","autogpt","agentgpt","llamaindex","browser-use","multion","lindy","bardeen","claude-computer-use","make-com"];
+const tools = agentTools.map(id => ({ id, ...toolsData[id] })).filter(t => t && t.name);
+const agentWorkflows = workflows.filter(w => w.category === "Agent" || w.category === "Automation" || w.tool === "n8n" || w.tool === "Dify" || w.tool === "MCP");
+const frameworkTypes = [
+  { name: "Code-First Frameworks", tools: ["langgraph","autogen","crewai","llamaindex"], desc: "Python-based frameworks for developers building custom multi-agent systems. Maximum flexibility, requires coding." },
+  { name: "Visual Automation Platforms", tools: ["n8n","dify","make-com","lindy","bardeen"], desc: "No-code or low-code platforms for building automations with visual editors. Best for non-technical users." },
+  { name: "Browser & Desktop Agents", tools: ["browser-use","multion","claude-computer-use"], desc: "Agents that control browsers or desktop applications to execute tasks visually." },
+  { name: "Autonomous Goal Agents", tools: ["autogpt","agentgpt"], desc: "Self-directed agents that break down high-level goals into steps and execute them autonomously." }
+];
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/best/ai-agents/";
+const faqItems = [
+  { q: "What is an AI Agent?", a: "An AI Agent is a system that uses a large language model to autonomously plan and execute multi-step tasks. Unlike a chatbot that only responds to prompts, an agent can use tools, browse the web, write code, and make decisions to achieve a goal." },
+  { q: "What is the best AI Agent framework?", a: "It depends on your needs: For developers, LangGraph and CrewAI offer the most flexibility. For non-technical users, n8n and Dify provide visual builders. For browser automation, Browser Use is excellent. Start with one tool and expand as needed." },
+  { q: "How is an AI Agent different from a workflow?", a: "A workflow follows predefined steps (deterministic), while an agent decides its own steps based on the goal (non-deterministic). Many modern tools like n8n and Dify combine both approaches, using workflows for structure and AI for decision-making." },
+  { q: "Can AI Agents replace human workers?", a: "AI Agents excel at repetitive, rule-based tasks and can augment human capabilities. They are not yet capable of fully replacing human judgment, creativity, and emotional intelligence. The best results come from human-agent collaboration." },
+  { q: "How much does it cost to run AI Agents?", a: "Costs vary by framework: open-source tools (LangGraph, CrewAI, AutoGen) are free but require API costs ($50-500/month depending on usage). Visual platforms (n8n, Dify) range from free (self-hosted) to $50-200/month (cloud). Browser agents add compute costs for running browsers." },
+  { q: "Are AI Agents safe to use in production?", a: "Always implement safety measures: sandbox code execution, limit tool access, require human approval for critical actions, log all agent decisions, and start with read-only operations. Never give agents unrestricted access to production systems without oversight." }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Best AI Agent Platforms in 2026: Frameworks, Tools, and Workflows","description":"Complete guide to AI agent platforms: LangGraph, CrewAI, n8n, Dify, AutoGen, Browser Use, and more. Compare frameworks, learn workflows, and choose the right agent tool.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-14","dateModified":"2026-07-14" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Best AI Tools","item":siteUrl+"/best/"},{"@type":"ListItem","position":3,"name":"AI Agents","item":pageUrl}] };
+---
+<BaseLayout title="Best AI Agent Platforms in 2026 | Frameworks, Tools & Workflows" description="Complete guide to AI agent platforms: LangGraph, CrewAI, n8n, Dify, AutoGen, Browser Use, and more. Compare 14 agent tools, learn workflows, and choose the right one." keywords="AI agents, agent framework, LangGraph, CrewAI, n8n agents, Dify, AutoGen, Browser Use, autonomous agents, multi-agent">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article" style="max-width:860px;margin:0 auto;padding:48px 0;">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/best/students/">Categories</a> &rsaquo; <span>AI Agents</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">AI Agent Platforms</span>
+      <h1>Best AI Agent Platforms in 2026</h1>
+      <p style="color:var(--text-mute);font-size:15px;margin-top:8px;">14 tools compared across 4 categories: code frameworks, visual automation, browser agents, and autonomous goal agents.</p>
+    </header>
+    <section class="article-body">
+
+      <p style="font-size:16px;color:var(--text-soft);line-height:1.8;">AI Agents represent the next evolution of AI tools — systems that don't just answer questions, but autonomously plan and execute multi-step tasks. Whether you need to automate data collection, build customer support bots, or create complex multi-agent systems, there's a platform designed for your use case. This guide covers 14 AI agent tools across 4 categories, with real workflows you can implement today.</p>
+
+      <h2 style="margin-top:32px;">Agent Tool Categories</h2>
+      <p style="font-size:15px;color:var(--text-soft);line-height:1.7;">AI agent tools fall into four main categories based on how they're built and what they do:</p>
+
+      {frameworkTypes.map(ft => (
+        <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:20px;margin:16px 0;">
+          <h3 style="font-size:17px;font-weight:600;margin-bottom:8px;">{ft.name}</h3>
+          <p style="font-size:14px;color:var(--text-soft);margin-bottom:12px;line-height:1.6;">{ft.desc}</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            {ft.tools.map(tid => {
+              const tool = tools.find(t => t.id === tid);
+              return tool ? (
+                <a href={"/tool/" + tid + "/"} style="font-size:13px;color:var(--accent-color);background:rgba(59,130,246,0.08);padding:4px 12px;border-radius:6px;text-decoration:none;font-weight:500;">{tool.name.en}</a>
+              ) : null
+            })}
+          </div>
+        </div>
+      ))}
+
+      <h2 style="margin-top:40px;">All AI Agent Tools</h2>
+      <div style="display:grid;gap:16px;">
+        {tools.map(t => (
+          <a href={"/tool/" + t.id + "/"} style="text-decoration:none;color:inherit;display:block;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:20px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent-color)'" onmouseout="this.style.borderColor='var(--border-color)'">
+            <div style="display:flex;justify-content:space-between;align-items:start;gap:12px;">
+              <div>
+                <h3 style="font-size:16px;font-weight:600;margin:0 0 4px 0;">{t.name.en}</h3>
+                <p style="font-size:13px;color:var(--text-mute);margin:0 0 8px 0;">{t.short_desc?.en || ''}</p>
+              </div>
+              <span style="font-size:11px;color:var(--accent-color);background:rgba(59,130,246,0.1);padding:3px 10px;border-radius:999px;white-space:nowrap;font-weight:600;">{t.pricing?.en || 'Various'}</span>
+            </div>
+            {t.pros && t.pros.en && (
+              <div style="margin-top:8px;font-size:13px;color:var(--text-soft);">
+                <strong>Pros:</strong> {t.pros.en.slice(0, 2).join(', ')}
+              </div>
+            )}
+          </a>
+        ))}
+      </div>
+
+      <h2 style="margin-top:40px;">Ready-to-Use Agent Workflows</h2>
+      <p style="font-size:15px;color:var(--text-soft);line-height:1.7;">Step-by-step guides for building real agent workflows:</p>
+      <div style="display:grid;gap:12px;margin-top:16px;">
+        {agentWorkflows.map(w => (
+          <a href={"/workflows/" + w.slug + "/"} style="text-decoration:none;color:inherit;display:block;background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
+              <div>
+                <h3 style="font-size:15px;font-weight:600;margin:0 0 4px 0;">{w.title}</h3>
+                <p style="font-size:12px;color:var(--text-mute);margin:0;">{w.tool} - {w.difficulty} - {w.steps.length} steps</p>
+              </div>
+              <span style="font-size:12px;color:var(--accent-color);">&rarr;</span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <h2 style="margin-top:40px;">How to Choose an AI Agent Platform</h2>
+      <ol style="margin:12px 0 12px 24px;line-height:1.8;font-size:15px;color:var(--text-soft);">
+        <li><strong>Are you a developer?</strong> Use LangGraph or CrewAI for maximum flexibility. AutoGen for research. LlamaIndex for data-heavy applications.</li>
+        <li><strong>Non-technical or prefer visual tools?</strong> Start with n8n (best overall) or Dify (best for AI-specific workflows). Make for simple integrations.</li>
+        <li><strong>Need browser automation?</strong> Browser Use (open-source, flexible) or MultiOn (managed, easier setup).</li>
+        <li><strong>Want desktop automation?</strong> Claude Computer Use for Claude-powered desktop agents.</li>
+        <li><strong>Just want to experiment?</strong> AutoGPT or AgentGPT for autonomous goal-driven agents (limited practical use but great for learning).</li>
+      </ol>
+
+      <h2 style="margin-top:32px;">FAQ</h2>
+      <div style="display:grid;gap:16px;">
+        {faqItems.map(f => (
+          <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;">
+            <h3 style="font-size:15px;font-weight:600;margin-bottom:8px;">{f.q}</h3>
+            <p style="font-size:14px;color:var(--text-soft);line-height:1.6;margin:0;">{f.a}</p>
+          </div>
+        ))}
+      </div>
+
+      <div style="margin-top:32px;padding:20px;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;">
+        <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;">This Page Answers</h3>
+        <ul style="margin:0;padding-left:20px;font-size:13px;color:var(--text-soft);line-height:1.8;">
+          <li>What are the best AI agent platforms in 2026?</li>
+          <li>How do LangGraph, CrewAI, n8n, and Dify compare?</li>
+          <li>Which AI agent framework should I choose?</li>
+          <li>What is the difference between an AI agent and a workflow?</li>
+          <li>How much does it cost to build and run AI agents?</li>
+        </ul>
+      </div>
+
+      <p style="text-align:center;margin-top:32px;"><a href="/workflows/" style="color:var(--accent-color);font-weight:600;">Browse All Workflows</a> &nbsp;|&nbsp; <a href="/solutions/" style="color:var(--accent-color);font-weight:600;">Industry Solutions</a></p>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,394 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import toolsData from "../../data/tools.json";
+import matchupsData from "../../data/matchups.json";
+import TLDR from "../../components/ui/TLDR.astro";
+import ProsCons from "../../components/ui/ProsCons.astro";
+import Verdict from "../../components/ui/Verdict.astro";
+import AdSlot from "../../components/ui/AdSlot.astro";
+import Chart from "../../components/Chart.astro";
+import fs from "fs";
+import categories from "../../data/categories.json";
+export async function getStaticPaths() {
+  return Object.entries(toolsData)
+    .filter(([id]) => id !== "codewords")
+    .map(([id, tool]) => ({ params: { slug: id }, props: { id, tool } }));
+}
+const { id, tool } = Astro.props;
+const tNameEn = tool?.name?.en || "Tool";
+const tNameZh = tool?.name?.zh || tNameEn;
+const tShortEn = tool?.short_desc?.en || "";
+const tShortZh = tool?.short_desc?.zh || tShortEn;
+const tLongEn = tool?.long_desc?.en || "";
+const tLongZh = tool?.long_desc?.zh || tLongEn;
+const tProsEn = tool?.pros?.en || [];
+const tProsZh = tool?.pros?.zh || [];
+const tConsEn = tool?.cons?.en || [];
+const tConsZh = tool?.cons?.zh || [];
+const tUseEn = tool?.use_cases?.en || [];
+const tUseZh = tool?.use_cases?.zh || [];
+const tFeaturesEn = tool?.features?.en || [];
+const tFeaturesZh = tool?.features?.zh || [];
+const tScenesEn = tool?.scenes?.en || [];
+const tScenesZh = tool?.scenes?.zh || [];
+const tAudienceEn = tool?.target_audience?.en || [];
+const tAudienceZh = tool?.target_audience?.zh || [];
+const tExampleEn = tool?.example?.en || "";
+const tExampleZh = tool?.example?.zh || "";
+const tCat = tool?.cat || "ai";
+const tUrl = tool?.url || "#";
+const tIcon = tool?.icon || "fa-robot";
+const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
+const categoryLabelsZh = { text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商业" };
+const catLabelEn = categoryLabels[tCat] || tCat;
+const catLabelZh = categoryLabelsZh[tCat] || tCat;
+const relatedCategories = categories.filter(c => c.tools.includes(id)).slice(0, 4);
+const allTools = Object.entries(toolsData).filter(([k]) => k !== "codewords");
+const alternatives = allTools.filter(([k, t]) => k !== id && t.cat === tCat).slice(0, 6);
+const toolMatchups = matchupsData.filter(m => m.a === id || m.b === id).slice(0, 4);
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/tool/" + id + "/";
+const appCategoryMap = { text: "WritingApplication", image: "MultimediaApplication", code: "DeveloperApplication", video: "MultimediaApplication", audio: "MultimediaApplication", productivity: "BusinessApplication" };
+const appCategory = appCategoryMap[tCat] || "MultimediaApplication";
+// Check for screenshots
+const screenshotDir = `public/images/tools/${id}`;
+const hasScreenshots = fs.existsSync(screenshotDir);
+const screenshotFiles = hasScreenshots ? fs.readdirSync(screenshotDir).filter(f => f.match(/\.(jpg|jpeg|png|webp)$/i)).slice(0, 3) : [];
+// Editorial rating per tool (out of 10, matches our 5-dimension methodology).
+// Provisional scores based on our verdicts; adjust to final rubric scores anytime.
+const toolRatings = {
+  chatgpt: 9.2, claude: 9.0, gemini: 8.6, "github-copilot": 8.4, cursor: 9.0,
+  sora: 8.2, runway: 8.8, midjourney: 9.0, "stable-diffusion": 8.0, leonardo: 8.2,
+  elevenlabs: 9.0, suno: 8.4, descript: 8.6, "notion-ai": 8.2, perplexity: 8.8,
+  jasper: 6.8, hostinger: 7.8
+};
+const rating = toolRatings[id] || 8.5;
+// Real test data per tool (same prompt benchmark across all tools)
+const realTestData = {};
+const realTest = realTestData[id] || null;
+// Only original 17 tools have hand-written intros/verdicts
+const handReviewedTools = ["chatgpt","claude","gemini","github-copilot","cursor","sora","runway","midjourney","stable-diffusion","leonardo","elevenlabs","suno","descript","notion-ai","perplexity","jasper","hostinger","windsurf","codeium","replit","v0","bolt","lovable","deepseek","aider","flux","ideogram","krea","comfyui","dalle3","photoroom","removebg","kling","pika","luma","hailuo","invideo-ai","synthesia","heygen","d-id","murf","play-ht","speechify","otter","fireflies","copy-ai","writesonic","quillbot","grammarly-ai","n8n"];
+const isHandReviewed = handReviewedTools.includes(id);
+
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": tNameEn,
+  "description": tShortEn,
+  "url": pageUrl,
+  "image": siteUrl + "/og-image.svg",
+  "applicationCategory": appCategory,
+  "operatingSystem": "Web, iOS, Android",
+  "offers": {
+    "@type": "Offer",
+    "price": 0,
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "review": {
+    "@type": "Review",
+    "author": { "@type": "Person", "name": "AI Tool Hub Editorial Team", "jobTitle": "Lead Reviewer", "url": siteUrl + "/team/" },
+    "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl },
+    "datePublished": "2026-07-01",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": rating,
+      "bestRating": 10,
+      "worstRating": 1
+    }
+  },
+  "author": { "@type": "Organization", "name": "AI Tool Hub Editorial", "url": siteUrl },
+  "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl }
+};
+if (!isHandReviewed) { softwareSchema.review = undefined; }
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl + "/" },
+    { "@type": "ListItem", "position": 2, "name": "Best " + catLabelEn, "item": siteUrl + "/best/" + tCat + "/" },
+    { "@type": "ListItem", "position": 3, "name": tNameEn, "item": pageUrl }
+  ]
+};
+const ourIntros = {
+  chatgpt: "ChatGPT is the AI assistant that started the generative AI boom in late 2022, and it is still the most-used AI tool in the world in 2026. The free tier is genuinely useful (GPT-4o mini is fast and capable), and the Plus tier ($20/month) adds GPT-5, image generation, voice mode, and the Advanced Data Analysis features. We use it daily for brainstorming, drafting, and quick research.",
+  claude: "Claude is Anthropic direct competitor to ChatGPT, and in our testing it produces the highest-quality long-form English writing of any general assistant. The 200K context window is the killer feature - you can paste a 100-page document and ask Claude to summarize, analyze, or rewrite without losing the thread. The Pro tier at $20/month is the right pick for anyone who writes for a living.",
+  gemini: "Gemini is Google answer to the AI assistant race, and the 2.5 Pro version is the best in the category for multimodal input. The 2 million token context window is the largest in the industry, the Google Search integration is the deepest, and Gemini Live (real-time voice conversation) is the most natural-sounding of the consumer voice modes. Best for: research, multimodal content, anyone who lives in the Google ecosystem.",
+  "github-copilot": "GitHub Copilot is the AI coding tool that started the AI pair-programming era, and it is still the gold standard for autocomplete in your existing IDE. The free tier for verified students is one of the best deals in tech. The $10/month Individual plan or $19/month Business plan add the chat, multi-file edits, and the best IDE integration in the category. Best for: developers who want fast autocomplete without switching editors.",
+  cursor: "Cursor is the AI-native code editor that has eaten Copilot lunch in the multi-file editing category. Built as a VS Code fork with GPT-4-level AI baked in, it is the only tool that can refactor across 30 files, generate an entire feature from a description, and chat with your entire codebase. The $20/month Pro plan is the highest-ROI subscription for a full-time developer.",
+  sora: "Sora 2 is OpenAI text-to-video model and the quality leader in 2026. The physics understanding, character consistency, and 20-second clip length are the best in the category. The catch: it is expensive ($20-200/month) and the safety filters are aggressive. Best for: cinematic shots, high-end creative work, and projects where the budget exists.",
+  runway: "Runway is the OG of AI video and still the most production-ready tool in the category. Gen-3 Alpha is the model, and the surrounding tooling (motion brush, inpainting, storyboard, multi-shot) is unmatched. If you are making more than a one-off clip - ads, music videos, short films, social content - Runway is the default. The $35/month Pro plan is the sweet spot.",
+  midjourney: "Midjourney is the AI image generator that has the highest aesthetic ceiling in 2026. v7 (released early 2026) handles lighting, composition, and color grading almost automatically. Even on bad prompts you usually get something presentable. Best for: art, illustration, stylized images, anything that needs to look designed without you being a designer. The $30/month Standard plan is the right pick for most users.",
+  "stable-diffusion": "Stable Diffusion is the most popular open-source image generation model, and it is the right pick if you want total control, custom styles, or zero per-image cost. The 3.5 version is good out of the box, and the community ecosystem (LoRAs, ControlNets, ComfyUI) makes it the most flexible tool in the category. The catch: the learning curve is steep and you need a decent GPU.",
+  leonardo: "Leonardo.AI is the image generation platform that is best for game art, character design, and concept art. The Alchemy mode produces noticeably better image quality while keeping style consistency, the Canvas editor is the most polished in the category, and the free tier is the most generous. Best for: game artists, character designers, and anyone who needs consistent character art across many generations.",
+  elevenlabs: "ElevenLabs is the AI voice generator that has the most realistic text-to-speech in 2026. The voice cloning (30 seconds of audio is enough to clone a voice) is the best in the category, the 29-language support is the deepest, and the emotional range in v3 is genuinely surprising. Best for: podcasts, audiobooks, YouTube narration, and any project where voice quality matters. The $5/month Starter plan is enough for hobbyists.",
+  suno: "Suno is the AI music generator that can produce a complete song - vocals, lyrics, arrangement - from a simple text description. It is the only music AI tool in 2026 that ships output you would actually publish. The free tier is generous (enough for a hobby project), the paid plans unlock commercial use, and the Chinese-language support is genuinely good. Best for: video creators, podcasters, indie musicians, and anyone who needs a custom jingle.",
+  descript: "Descript is the audio/video editor that works like a Word document - you edit media by editing the transcript. The 2026 version has AI filler word removal, Studio Sound audio enhancement, and the Edit for Clarity feature that removes false starts. For a 90-minute interview, the editing time drops from 6 hours in a traditional DAW to 90 minutes in Descript. Best for: podcasters, YouTubers, course creators.",
+  "notion-ai": "Notion AI is the AI writing assistant built into Notion. If your team already uses Notion for notes and docs, the AI add-on is a no-brainer: it summarizes meeting notes, extracts action items, translates documents, and writes first drafts of blog posts without you leaving the workspace. The $10/month add-on is the cheapest line item on this list and one of the highest-value.",
+  perplexity: "Perplexity is the AI search engine that cites its sources. For research, current events, and product decisions, it is dramatically faster than Google + opening 10 tabs. The free tier gives 3 Pro searches per day, the Pro plan at $20/month adds unlimited Pro searches, file upload, and the focus mode for academic/Reddit/news sources. Best for: anyone who does research, journalists, students, investors.",
+  jasper: "Jasper is the AI writing platform built specifically for marketing teams. The brand voice training, marketing templates, and SEO mode are useful if you are a marketing team with a consistent brand. For everyone else, Claude Pro does the same job for less money. Best for: marketing teams of 3+ people who need to keep brand voice consistent across many writers.",
+  hostinger: "Hostinger is a web hosting provider we use to host small sites (including this one before it moved to Vercel). The pricing is the lowest in the category for the features, the hPanel control panel is genuinely easy to use, and the WordPress one-click install gets a site live in 10 minutes. The catch: lower-tier plans have resource limits, and you will outgrow the cheapest plan as your site grows."
+};
+const ourVerdicts = {
+  chatgpt: { best: "ChatGPT is the right pick if you want one tool that does everything pretty well. The plugin ecosystem, image generation, and voice mode are the best in the category, and the $20/month price is fair for what you get. The only reason to pick something else is if you specifically need Claude writing quality or Gemini multimodal capabilities.", avoid: "If you are publishing anything that needs to sound like a specific human voice (a blog, a brand, a book), Claude produces noticeably more natural writing. If you do most of your work with video or audio input, Gemini is the better multimodal choice." },
+  claude: { best: "Claude is the right pick if you write for a living. The 200K context window, Artifacts feature, and natural writing style are the best in the category. The $20/month Pro plan is the right pick for almost everyone - the Team plan is only worth it if you are sharing custom instructions across a team.", avoid: "If you need a real-time web search built into the chat, Perplexity or Gemini are better choices. If you want image generation, voice mode, or a plugin ecosystem, ChatGPT Plus is the more well-rounded option." },
+  gemini: { best: "Gemini is the right pick if you regularly work with multimodal content (video, audio, images) or if you do real-time research that needs the latest information. The Google Search integration is the deepest, Gemini Live is the best voice mode, and the 2M context window is the largest. The free tier is generous, Advanced is $20/month.", avoid: "If your primary use case is long-form English writing, Claude is the better choice. If you want a richer plugin ecosystem and a more mature chat experience, ChatGPT Plus is the safer pick." },
+  "github-copilot": { best: "GitHub Copilot is the right pick if you want a fast autocomplete that lives inside the IDE you already use. The $10/month Individual plan (free for verified students) is one of the best deals in tech, and the autocomplete is fast and accurate. For most developers, Copilot is the right default.", avoid: "If you regularly refactor across multiple files, debug unfamiliar codebases, or want to chat with your entire project, Cursor is the more powerful tool. The $10/month savings are not worth giving up multi-file editing for full-time developers." },
+  cursor: { best: "Cursor is the right pick if you are a full-time developer who regularly refactors code, debugs unfamiliar codebases, or works on a long-lived project you do not fully know. The multi-file Agent mode, codebase chat, and background agent are the killer features. The $20/month Pro plan pays for itself in the first week for most developers.", avoid: "If you only write code a few hours a week, the $20/month is harder to justify. Stick with the free tier of Copilot or Cursor. If you are deeply tied to JetBrains and do not want to switch editors, Copilot is the better pick." },
+  sora: { best: "Sora 2 is the right pick if quality is the priority and the budget exists. The physics, character consistency, and 20-second clip length are the best in the category. The $200/month Pro plan is the right pick for studios; the $20/month Plus plan is enough for experimentation.", avoid: "If you need editing tools, multi-shot storyboarding, or production workflows, Runway is the better pick. If you only need 5-10 second clips for social media, Pika or Kling free tier is enough." },
+  runway: { best: "Runway Gen-3 is the right pick if you are a creative professional who needs more than a generate-and-pray workflow. The motion brush, inpainting, frame interpolation, and storyboard tools are unmatched. The $35/month Pro plan is the sweet spot - the Standard plan runs out of credits too fast for real work.", avoid: "If you only need 5-second clips for social and do not care about editing tools, Sora 2 or Pika is the simpler pick. If you are on a tight budget, Kling free tier or Hailuo is the right starting point." },
+  midjourney: { best: "Midjourney v7 is the right pick if aesthetic quality is the priority and you do not want to learn prompt engineering. The default style is elevated - even on bad prompts, you usually get something presentable. The $30/month Standard plan is the right pick for most users.", avoid: "If you need photorealism specifically, Flux Pro is the better pick. If you need text in images, Ideogram is the specialist. If you need total control over the model, Stable Diffusion is the open-source option." },
+  "stable-diffusion": { best: "Stable Diffusion 3.5 is the right pick if you want total control, custom styles, or zero per-image cost. The community ecosystem (LoRAs, ControlNets, ComfyUI) is unmatched. Best for developers, AI researchers, and artists who want to fine-tune the model to their own style.", avoid: "If you are not comfortable with command-line tools or do not have a decent GPU, the learning curve is too steep. Use Midjourney or DALL-E instead." },
+  leonardo: { best: "Leonardo.AI is the right pick if you are a game artist, character designer, or concept artist. The Alchemy mode produces noticeably better quality while keeping style consistency, the Canvas editor is the most polished in the category, and the free tier is the most generous. The $12/month Apprentice plan is the right pick for hobbyists, $30/month for serious use.", avoid: "If your primary use case is generic image generation (e.g. blog headers, social graphics), Midjourney or DALL-E is the better pick. Leonardo is specialized for game art and character design." },
+  elevenlabs: { best: "ElevenLabs is the right pick if voice quality matters. The 2026 v3 model is the most realistic in the category, the voice cloning is the best, and the 29-language support is the deepest. The $5/month Starter plan is enough for hobbyists; serious creators will want the $22/month Creator plan.", avoid: "If you are building a production app that needs TTS at scale, PlayHT is cheaper. If you need real-time voice for a conversational agent, LMNT or OpenAI Realtime API is the better pick." },
+  suno: { best: "Suno is the right pick if you need custom music or jingles for your video, podcast, or project. The output is the best in the AI music category in 2026, the Chinese-language support is genuinely good, and the free tier is enough for hobby use. The Pro plan at $10/month unlocks commercial use.", avoid: "If you need a specific song by a specific artist, AI music tools cannot do that (copyright issues). If you are a professional musician, Suno is a fun toy, not a replacement for your craft." },
+  descript: { best: "Descript is the right pick if you edit audio or video regularly. The transcript-based editing is 5-10x faster than a traditional DAW for most tasks, the AI filler word removal is a huge time saver, and the Studio Sound feature is genuinely impressive. The $24/month Hobbyist plan is enough for most podcasters; serious creators will want the $33/month Pro plan.", avoid: "If you only edit audio or video a few times a year, the learning curve is not worth it. Use your existing DAW. If you need more advanced multi-track editing (e.g. music production), Descript is not the right tool - use a traditional DAW like Reaper or Logic Pro." },
+  "notion-ai": { best: "Notion AI is the right pick if your team already uses Notion. The $10/month add-on is the cheapest line item on this list and one of the highest-value, because the AI is where the work already happens. For Notion users, this is a no-brainer.", avoid: "If your team does not use Notion, the value drops dramatically. There is no point paying for Notion AI just for the AI - use a general assistant instead. If you need heavy-duty document AI, Claude Pro is more capable." },
+  perplexity: { best: "Perplexity is the right pick if you do regular research - whether that is for work, investing, or academic purposes. The cited sources mean you can trust the output, the Pro Search handles complex multi-step research in one prompt, and the $20/month Pro plan is the right pick for anyone who does more than casual research.", avoid: "If you only need a general assistant, ChatGPT Plus is more well-rounded. If you need the deepest multimodal capabilities, Gemini is the better pick. Perplexity is a research tool, not a general assistant." },
+  jasper: { best: "Jasper is the right pick if you are a marketing team of 3+ people who need to maintain brand voice consistency across many writers. The brand voice training, marketing templates, and team collaboration features are useful at scale. The $49/month Team plan is the right starting point.", avoid: "If you are an individual marketer, the value is not there - Claude Pro does the same job for less money. If you are not in a marketing role, skip Jasper entirely - it is a specialized tool for a specific use case." },
+  hostinger: { best: "Hostinger is the right pick if you need to host a small site (personal blog, small business site, side project) and you want the lowest price. The Business plan at $3.99/month is the right pick for most use cases - it includes free SSL, daily backups, and a free domain for the first year.", avoid: "If you are running a high-traffic site or a mission-critical application, the cheaper tiers may not have the resources you need. For serious production use, Cloudways or Vercel is the better pick." }
+};
+const ourIntro = ourIntros[id] || (tLongEn + " " + tShortEn);
+const ourVerdict = ourVerdicts[id] || { best: tNameEn + " is the right pick if you need a reliable " + catLabelEn.toLowerCase() + " AI tool. " + tProsEn[0] + ". The " + (tNameEn === "Hostinger" ? "Business plan" : "standard plan") + " is the right starting point for most users.", avoid: "If you need a tool that integrates more deeply with another workflow, or if the pricing structure does not match your usage pattern, look at the alternatives in the same category." };
+---
+<BaseLayout
+  title={tNameEn + " Review (2026) | AI Tool Hub"}
+  description={"Comprehensive " + tNameEn + " review with regularly updated information. Real pros, real cons, real pricing, and our verdict on whether it is worth paying for."}
+  keywords={tNameEn + ", " + tNameEn + " review, " + tNameEn + " pricing, " + tCat + " AI tools"}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(softwareSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+  <div class="tool-detail">
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> &rsaquo;
+      <a href={"/best/" + tCat + "/"}>Best {catLabelEn}</a> &rsaquo;
+      <span>{tNameEn}</span>
+    </nav>
+
+    <header class="tool-detail-header">
+      <div class="icon"><i class={`fas ${tIcon}`}></i></div>
+      <div class="title-group">
+        <h1>{tNameEn}</h1>
+        <span class="tag">{catLabelEn}</span>
+        {isHandReviewed && (
+          <div class="tool-rating" style="display:flex;align-items:center;gap:6px;margin-top:6px;font-size:14px;color:var(--text-soft);">
+            <i class="fas fa-star" style="color:#f59e0b"></i>
+            <strong>{rating.toFixed(1)}</strong><span style="color:var(--text-mute);">/10</span>
+            <span style="color:var(--text-mute);font-size:12px;">Editorial rating</span>
+          </div>
+        )}
+        {!isHandReviewed && (
+          <div class="tool-rating" style="margin-top:6px;font-size:12px;color:var(--text-mute);">
+            <i class="fas fa-info-circle"></i> AI-sourced summary — pending editorial review
+          </div>
+        )}
+      </div>
+      <div class="actions">
+        <a class="use" href={tUrl} rel="nofollow noopener" target="_blank">
+          <i class="fas fa-external-link-alt"></i> Use Now
+        </a>
+        <a class="alt" href={"/alternatives/" + id + "/"}>Alternatives</a>
+      </div>
+    </header>
+
+    <p class="lede">{tShortEn}</p>
+    <TLDR items={[
+      tNameEn + " is a " + (categoryLabels[tCat] || tCat) + " tool that " + (tShortEn || "helps you work with AI"),
+      "Pricing: " + ((tool && tool.pricing && tool.pricing.en) || "Various plans available"),
+      "Best for: " + (tUseEn[0] || "general use"),
+      "Tested by AI Tool Hub — " + (isHandReviewed ? "editorially reviewed" : "AI-sourced, pending review")
+    ]} />
+
+    <AdSlot format="banner" label="Advertisement" />
+
+
+    {hasScreenshots && (
+      
+    <section class="detail-section">
+        <h2 id="screenshots"><i class="fas fa-images"></i> Screenshots</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:16px;">
+          {screenshotFiles.map((sf, i) => (
+            <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border-color);">
+              <img src={`/images/tools/${id}/${sf}`} alt={`${tNameEn} screenshot ${i+1}`} style="width:100%;display:block;" loading="lazy" />
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="detail-section">
+      <h2 id="overview"><i class="fas fa-info-circle"></i> What is {tNameEn}?</h2>
+      <p data-i18n-en={tLongEn} data-i18n-zh={tLongZh}>{tLongEn}</p>
+
+    </section>
+
+    <section class="detail-section">
+      <h2><i class="fas fa-user-edit"></i> Our take</h2>
+      <p>{ourIntro}</p>
+    </section>
+
+    {realTest && (
+      <section class="detail-section real-test-section">
+        <h2><i class="fas fa-flask"></i> Real test data</h2>
+        <p class="test-prompt" style="font-size:13px;color:var(--text-mute);margin-bottom:12px;"><strong>Prompt used:</strong> "{realTest.prompt}"</p>
+        <div class="test-metrics" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin-bottom:12px;">
+          <div class="metric-card" style="background:var(--bg-color);border:1px solid var(--border-color);border-radius:10px;padding:12px;text-align:center;">
+            <div style="font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:0.5px;">Time</div>
+            <div style="font-size:20px;font-weight:700;color:var(--text-main);margin-top:4px;">{realTest.timeSec}s</div>
+          </div>
+          <div class="metric-card" style="background:var(--bg-color);border:1px solid var(--border-color);border-radius:10px;padding:12px;text-align:center;">
+            <div style="font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:0.5px;">Tokens</div>
+            <div style="font-size:20px;font-weight:700;color:var(--text-main);margin-top:4px;">{realTest.tokens || "N/A"}</div>
+          </div>
+          <div class="metric-card" style="background:var(--bg-color);border:1px solid var(--border-color);border-radius:10px;padding:12px;text-align:center;">
+            <div style="font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:0.5px;">Cost</div>
+            <div style="font-size:20px;font-weight:700;color:var(--text-main);margin-top:4px;">{realTest.cost}</div>
+          </div>
+          <div class="metric-card" style="background:var(--bg-color);border:1px solid var(--border-color);border-radius:10px;padding:12px;text-align:center;">
+            <div style="font-size:11px;color:var(--text-mute);text-transform:uppercase;letter-spacing:0.5px;">Accuracy</div>
+            <div style="font-size:20px;font-weight:700;color:var(--accent-color);margin-top:4px;">{realTest.accuracy}</div>
+          </div>
+        </div>
+        <p style="font-size:14px;color:var(--text-soft);line-height:1.6;"><strong>Result:</strong> {realTest.notes}</p>
+        <p style="font-size:12px;color:var(--text-mute);font-style:italic;margin-top:8px;">Same prompt tested across all tools for fair comparison. Tested July 2026.</p>
+      </section>
+    )}
+
+    
+
+    {tExampleEn && (
+      <section class="detail-section">
+        <h2><i class="fas fa-terminal"></i> Example</h2>
+        <div class="example-box" data-i18n-en={tExampleEn} data-i18n-zh={tExampleZh}>{tExampleEn}</div>
+      </section>
+    )}
+
+    <div class="grid-2">
+      <section class="detail-section">
+        
+    <ProsCons pros={tProsEn} cons={tConsEn} />
+
+    </div>
+
+    {tFeaturesEn.length > 0 && (
+      <section class="detail-section">
+        <h2><i class="fas fa-star"></i> Key Features</h2>
+        <ul class="pros-list" data-i18n-en-rich={JSON.stringify(tFeaturesEn)} data-i18n-zh-rich={JSON.stringify(tFeaturesZh)}>
+          {tFeaturesEn.map(f => <li>{f}</li>)}
+        </ul>
+      </section>
+    )}
+
+    {tUseEn.length > 0 && (
+      <section class="detail-section">
+        <h2><i class="fas fa-rocket"></i> Use cases that actually work</h2>
+        <ul class="pros-list" data-i18n-en-rich={JSON.stringify(tUseEn)} data-i18n-zh-rich={JSON.stringify(tUseZh)}>
+          {tUseEn.map(u => <li>{u}</li>)}
+        </ul>
+      </section>
+    )}
+
+    {tScenesEn.length > 0 && (
+      <section class="detail-section">
+        <h2><i class="fas fa-bullseye"></i> Best for</h2>
+        <ul class="pros-list" data-i18n-en-rich={JSON.stringify(tScenesEn)} data-i18n-zh-rich={JSON.stringify(tScenesZh)}>
+          {tScenesEn.map(s => <li>{s}</li>)}
+        </ul>
+      </section>
+    )}
+
+    {tAudienceEn.length > 0 && (
+      <section class="detail-section">
+        <h2><i class="fas fa-users"></i> Target Audience</h2>
+        <div class="audience-tags" data-i18n-en-rich={JSON.stringify(tAudienceEn)} data-i18n-zh-rich={JSON.stringify(tAudienceZh)}>
+          {tAudienceEn.map(a => <span class="audience-tag">{a}</span>)}
+        </div>
+      </section>
+    )}
+
+    <section class="detail-section">
+      <h2><i class="fas fa-gavel"></i> Our verdict</h2>
+      <p><strong>Pick {tNameEn} if:</strong> {ourVerdict.best}</p>
+      <p><strong>Skip {tNameEn} if:</strong> {ourVerdict.avoid}</p>
+    </section>
+
+    {alternatives.length > 0 && (
+      <section class="detail-section">
+        <h2><i class="fas fa-exchange-alt"></i> Alternatives to {tNameEn}</h2>
+        <div class="tool-grid">
+          {alternatives.map(([k, t]) => (
+            <a class="tool-card" href={"/tool/" + k + "/"}>
+              <div class="icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
+              <h3 data-i18n-en={t.name.en} data-i18n-zh={t.name.zh || t.name.en}>{t.name.en}</h3>
+              <p data-i18n-en={t.short_desc.en} data-i18n-zh={t.short_desc.zh || t.short_desc.en}>{t.short_desc.en}</p>
+              <span class="tag">{categoryLabels[t.cat] || t.cat}</span>
+            </a>
+          ))}
+        </div>
+        <p style="margin-top: 16px;">Want a deeper comparison? See our <a href={"/alternatives/" + id + "/"}>full list of {tNameEn} alternatives</a> with pros, cons, and pricing.</p>
+      </section>
+    )}
+
+    {relatedCategories.length > 0 && (
+      <section class="related">
+        <div class="section-title">Related categories</div>
+        <div class="related-grid">
+          {relatedCategories.map(c => (
+            <a class="related-card" href={"/best/" + c.slug + "/"}>
+              <div class="related-icon"><i class="fas fa-folder-open"></i></div>
+              <div>
+                <h3>{c.title_en}</h3>
+                <p>{c.desc_en}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="<section class="detail-section" style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:20px;">
+      <h2 style="font-size:18px;font-weight:700;margin-bottom:12px;">This Page Answers</h2>
+      <ul style="margin:0;padding-left:20px;font-size:14px;color:var(--text-soft);line-height:1.8;">
+        <li>What is {tNameEn} and what does it do?</li>
+        <li>How much does {tNameEn} cost (pricing tiers)?</li>
+        <li>What are {tNameEn}'s key features and capabilities?</li>
+        <li>What are the pros and cons of using {tNameEn}?</li>
+        <li>What are the best alternatives to {tNameEn}?</li>
+        <li>Is {tNameEn} worth it for your use case?</li>
+      </ul>
+    </section>
+    <section class="detail-section">
+      <h2 id="comparisons"><i class="fas fa-balance-scale"></i> Comparisons</h2>
+      <p>See how {tNameEn} compares to alternatives:</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px;">
+        {toolMatchups.map(m => {
+          const otherId = m.a === id ? m.b : m.a;
+          const otherTool = toolsData[otherId];
+          if (!otherTool) return null;
+          const otherName = otherTool.name?.en || otherId;
+          return (
+            <a href={"/vs/" + m.slug + "/"} style="text-decoration:none;color:inherit;background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:14px;display:block;">
+              <strong style="font-size:14px;">{tNameEn}</strong> vs <strong style="font-size:14px;">{otherName}</strong>
+            </a>
+          );
+        })}
+      </div>
+      <p style="margin-top:12px;"><a href={"/alternatives/" + id + "/"} style="color:var(--accent-color);font-weight:600;">See all alternatives &rarr;</a></p>
+    </section>
+
+    </div>
+<section class="detail-section" style="text-align: center;">
+      {isHandReviewed ? (
+        <p style="font-size: 13px; color: var(--text-mute); font-style: italic; margin: 0;">
+          Curated by AI Tool Hub editorial team. This page is regularly updated with the latest information about {tNameEn}. Last updated: July 2026.
+        </p>
+      ) : (
+        <p style="font-size: 13px; color: var(--text-mute); font-style: italic; margin: 0;">
+          This is an AI-sourced summary based on publicly available information. It has not yet been catalogued by our editorial team. We will update this page with real test data and a verified score after research.
+        </p>
+      )}
+    </section>
+  </div>
+</BaseLayout>

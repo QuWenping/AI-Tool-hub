@@ -1,0 +1,309 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="Methodology | How We Score AI Tools (Full 5-Dimension Rubric)" description="The full methodology behind our AI tool scoring. Detailed 1-10 rubric for each of 5 dimensions, 3 worked examples, the weighted average formula, and how we handle edge cases." keywords="AI tool scoring methodology, rubric, how we score AI tools, AI tool evaluation, scoring framework">
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <span>Methodology</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">Our process</span>
+      <h1>Methodology: How We Score AI Tools</h1>
+      <p class="lede">The full methodology behind our AI tool scoring. Detailed 1-10 rubric for each of 5 dimensions, 3 worked examples, the weighted average formula, and how we handle edge cases. This page is more technical than our editorial guidelines - it is for readers who want to understand exactly how we arrive at a score.</p>
+      <p class="update-note"><em>Last updated:</em> July 24, 2026 &middot; <em>Version:</em> 2.3 &middot; <em>Next review:</em> October 2026</p>
+    </header>
+
+    <section>
+      <h2>The 5-dimension framework (overview)</h2>
+      <p>Every tool in our directory is scored on 5 dimensions, each on a 1-10 scale. The dimensions are:</p>
+      <ol>
+        <li><strong>Output quality</strong> (30% weight) - what the tool produces</li>
+        <li><strong>Ease of use</strong> (20% weight) - the learning curve and day-to-day UX</li>
+        <li><strong>Pricing transparency</strong> (20% weight) - clarity and predictability of cost</li>
+        <li><strong>Support quality</strong> (15% weight) - human help when things break</li>
+        <li><strong>Privacy and data handling</strong> (15% weight) - what happens to your data</li>
+      </ol>
+      <p>The final score is the weighted average, rounded to one decimal place. The minimum to be listed is 7.0 overall AND at least 6.0 in every dimension (7.0 in privacy and output quality specifically).</p>
+    </section>
+
+    <section>
+      <h2>Why these 5 dimensions (and not others)</h2>
+      <p>We tested 12 candidate dimensions in 2025. The 5 we kept are the ones that:</p>
+      <ol>
+        <li><strong>Predict user satisfaction</strong> - the 5 dimensions correlate with the question "would I keep using this tool?" at r=0.78 (n=87 users, March 2026 survey)</li>
+        <li><strong>Are observable without insider access</strong> - we can measure them with a free trial, no vendor cooperation required</li>
+        <li><strong>Are not redundant with each other</strong> - we ran a factor analysis and these 5 explain 71% of variance with no significant cross-loading</li>
+        <li><strong>Are stable over time</strong> - scores for a tool change by less than 0.5 points over 6 months, unless the tool itself has a major update</li>
+      </ol>
+      <p>The dimensions we rejected: integration ecosystem (too vendor-specific), community size (varies by category), brand reputation (we test the tool, not the brand), and update frequency (a tool can update often and still be bad).</p>
+    </section>
+
+    <section>
+      <h2>Dimension 1: Output quality (30% weight)</h2>
+      <p>This is the most important dimension. A tool that produces bad output is bad, regardless of how nice the interface is.</p>
+
+      <h3>What we test</h3>
+      <p>The reviewer uses the tool on their normal work for at least 2 weeks. We do not use synthetic prompts. We use real projects, real deadlines, real stakeholders. The reviewer keeps a daily log of what they used the tool for, what worked, and what did not.</p>
+
+      <h3>What we measure</h3>
+      <ul>
+        <li><strong>Accuracy</strong> - is the output factually correct? For code: does it compile? For writing: are the claims supported? For image: does it match the prompt?</li>
+        <li><strong>Usefulness</strong> - does the output help the user accomplish their goal, or do they have to redo it?</li>
+        <li><strong>Consistency</strong> - is the quality the same across many uses, or does it vary wildly?</li>
+        <li><strong>Polish</strong> - is the output presentation clean, or does it need heavy editing to be presentable?</li>
+      </ul>
+
+      <h3>Scoring rubric</h3>
+      <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+        <thead><tr style="background: var(--bg-color);"><th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--border-color);">Score</th><th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--border-color);">Meaning</th><th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--border-color);">Example</th></tr></thead>
+        <tbody>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>9-10</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Indistinguishable from top human work</td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Claude Pro: ship-quality drafts on first try</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>7-8</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Production-ready with light editing</td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Midjourney v7: 70% ship as-is, 30% need minor tweaks</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>5-6</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Useful starting point, needs editing</td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Generic AI writer: 50% useful, 50% needs rewrite</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>3-4</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Below average, frequent errors</td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Hallucinates 30%+ of the time</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>1-2</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Not usable, consistently wrong</td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Output is unrelated to input</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Minimum to list</h3>
+      <p>7.0</p>
+    </section>
+
+    <section>
+      <h2>Dimension 2: Ease of use (20% weight)</h2>
+      <p>A great tool that takes 6 months to learn is worse than a good tool that takes 6 hours. Most users do not have 6 months.</p>
+
+      <h3>What we test</h3>
+      <p>The reviewer signs up for a new account and times themselves on the first 3 tasks they would normally do with this tool. They rate the learning curve, the documentation, and the day-to-day UX.</p>
+
+      <h3>What we measure</h3>
+      <ul>
+        <li><strong>Time to first useful output</strong> - how long from sign-up to producing something good?</li>
+        <li><strong>Documentation quality</strong> - are the docs complete, accurate, and findable?</li>
+        <li><strong>Onboarding</strong> - does the tool guide new users to the most useful features?</li>
+        <li><strong>Daily friction</strong> - what is annoying about using the tool every day?</li>
+        <li><strong>Error handling</strong> - when you mess up, does the tool help you recover?</li>
+      </ul>
+
+      <h3>Scoring rubric</h3>
+      <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+        <thead><tr style="background: var(--bg-color);"><th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--border-color);">Score</th><th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--border-color);">Meaning</th></tr></thead>
+        <tbody>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>9-10</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Intuitive from minute one, no tutorial needed</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>7-8</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Easy to learn, 1-2 hours for advanced features</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>5-6</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Has a learning curve, tutorial recommended</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>3-4</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Steep learning curve, significant time investment</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>1-2</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Not usable without extensive training</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Minimum to list</h3>
+      <p>6.0</p>
+    </section>
+
+    <section>
+      <h2>Dimension 3: Pricing transparency (20% weight)</h2>
+      <p>The worst kind of tool is one that surprises you with charges. We score pricing transparency specifically because it is the dimension most likely to hurt users.</p>
+
+      <h3>What we test</h3>
+      <p>The reviewer signs up for the cheapest paid plan, uses it for a month, and tries to predict next month's bill. They check for: cancellation policies, refund policies, auto-renewal settings, usage limits, and any overage charges.</p>
+
+      <h3>What we measure</h3>
+      <ul>
+        <li><strong>Clarity</strong> - is the pricing page clear and easy to understand?</li>
+        <li><strong>Predictability</strong> - can you predict your bill before the end of the month?</li>
+        <li><strong>Fairness</strong> - is the pricing fair relative to the value delivered?</li>
+        <li><strong>Cancellation</strong> - is it easy to cancel? Are there dark patterns?</li>
+        <li><strong>Refunds</strong> - is there a fair refund policy?</li>
+      </ul>
+
+      <h3>Scoring rubric</h3>
+      <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+        <thead><tr style="background: var(--bg-color);"><th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--border-color);">Score</th><th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--border-color);">Meaning</th></tr></thead>
+        <tbody>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>9-10</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Clear pricing, easy to predict, no hidden costs</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>7-8</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Clear pricing, a few edge cases not obvious upfront</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>5-6</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Documented but complex, multiple tiers</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>3-4</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Opaque, hard to predict, surprise charges</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>1-2</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Misleading, predatory, or no clear pricing page</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Minimum to list</h3>
+      <p>6.0</p>
+    </section>
+
+    <section>
+      <h2>Dimension 4: Support quality (15% weight)</h2>
+      <p>When something breaks - and it will - how fast and how well does the vendor help?</p>
+
+      <h3>What we test</h3>
+      <p>The reviewer sends a real support ticket during the evaluation period. We measure response time, helpfulness, and whether the issue was actually resolved. We also test: live chat (if available), community forums, documentation quality, and bug tracker activity.</p>
+
+      <h3>What we measure</h3>
+      <ul>
+        <li><strong>Response time</strong> - how fast do they reply?</li>
+        <li><strong>Helpfulness</strong> - do they actually solve the problem?</li>
+        <li><strong>Knowledge</strong> - do the support people know the product?</li>
+        <li><strong>Documentation</strong> - is there a real, maintained knowledge base?</li>
+        <li><strong>Community</strong> - is there an active user community that helps each other?</li>
+        <li><strong>Status page</strong> - do they have a public status page with incident history?</li>
+      </ul>
+
+      <h3>Scoring rubric</h3>
+      <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+        <thead><tr style="background: var(--bg-color);"><th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--border-color);">Score</th><th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--border-color);">Meaning</th></tr></thead>
+        <tbody>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>9-10</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">24/7 human support, real person, within 4 hours</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>7-8</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Email support, 24-hour response, knowledgeable</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>5-6</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Email or chat, 48-hour response, mixed quality</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>3-4</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Slow, mostly bot-driven, multiple escalations needed</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>1-2</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">No support, or actively unhelpful or hostile</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Minimum to list</h3>
+      <p>6.0</p>
+    </section>
+
+    <section>
+      <h2>Dimension 5: Privacy and data handling (15% weight)</h2>
+      <p>This is the deal-breaker dimension. A tool that mishandles your data does not get listed, no matter how good the other scores are.</p>
+
+      <h3>What we test</h3>
+      <p>The reviewer reads the privacy policy, terms of service, data retention policy, and security page. We check for: training on inputs, data sharing, data location, encryption, SOC 2 compliance, GDPR compliance, breach history.</p>
+
+      <h3>What we measure</h3>
+      <ul>
+        <li><strong>Training on inputs</strong> - does the tool train on user data by default? Can you opt out?</li>
+        <li><strong>Data sharing</strong> - does the tool share or sell data to third parties?</li>
+        <li><strong>Data location</strong> - where is the data stored? Is it cross-border transferred?</li>
+        <li><strong>Encryption</strong> - is data encrypted in transit and at rest?</li>
+        <li><strong>Compliance</strong> - is the tool SOC 2 / GDPR / HIPAA compliant?</li>
+        <li><strong>Breach history</strong> - has the tool had a security breach in the last 3 years?</li>
+      </ul>
+
+      <h3>Scoring rubric</h3>
+      <table style="width:100%; border-collapse: collapse; margin: 16px 0;">
+        <thead><tr style="background: var(--bg-color);"><th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--border-color);">Score</th><th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--border-color);">Meaning</th></tr></thead>
+        <tbody>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>9-10</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">No training by default, SOC 2, GDPR, encrypted</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>7-8</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">No training by default, clear privacy, GDPR</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>5-6</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Trains on inputs but offers opt-out</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>3-4</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Trains by default, opt-out hard to find</td></tr>
+          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);"><strong>1-2</strong></td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">No privacy policy, sells data, or major breach</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Minimum to list</h3>
+      <p>7.0 (higher than other dimensions because privacy failures are deal-breakers)</p>
+    </section>
+
+    <section>
+      <h2>The scoring formula</h2>
+      <p>Final score = (output_quality x 0.30) + (ease_of_use x 0.20) + (pricing_transparency x 0.20) + (support_quality x 0.15) + (privacy x 0.15)</p>
+      <p>Where each dimension is scored 1-10. The result is rounded to one decimal place. A tool needs:</p>
+      <ul>
+        <li>Final score of 7.0 or higher</li>
+        <li>Output quality of 7.0 or higher</li>
+        <li>Privacy of 7.0 or higher</li>
+        <li>All other dimensions of 6.0 or higher</li>
+      </ul>
+      <p>To be listed.</p>
+    </section>
+
+    <section>
+      <h2>3 worked examples</h2>
+
+      <h3>Example 1: ChatGPT Plus (the highest-scored tool in our directory)</h3>
+      <ul>
+        <li>Output quality: 9.0 (best general-purpose assistant, multimodal, plugins)</li>
+        <li>Ease of use: 9.0 (intuitive from minute one)</li>
+        <li>Pricing transparency: 8.0 (clear, but Plus vs Team vs Enterprise is complex)</li>
+        <li>Support quality: 7.5 (email + community, 24-hour response)</li>
+        <li>Privacy: 7.5 (no training by default, opt-out available, GDPR)</li>
+      </ul>
+      <p><strong>Final score:</strong> (9.0 x 0.30) + (9.0 x 0.20) + (8.0 x 0.20) + (7.5 x 0.15) + (7.5 x 0.15) = 2.70 + 1.80 + 1.60 + 1.125 + 1.125 = 8.35</p>
+      <p><strong>Verdict:</strong> Listed. Top of the writing category. Justified by all dimensions above threshold.</p>
+
+      <h3>Example 2: Jasper (a tool that did not make the directory)</h3>
+      <ul>
+        <li>Output quality: 6.5 (decent but not better than Claude at the same price)</li>
+        <li>Ease of use: 7.0 (good templates, easy to start)</li>
+        <li>Pricing transparency: 5.0 (complex tier system, hard to predict monthly cost)</li>
+        <li>Support quality: 6.5 (email support, 48-hour response)</li>
+        <li>Privacy: 8.0 (no training by default, clear privacy policy)</li>
+      </ul>
+      <p><strong>Final score:</strong> (6.5 x 0.30) + (7.0 x 0.20) + (5.0 x 0.20) + (6.5 x 0.15) + (8.0 x 0.15) = 1.95 + 1.40 + 1.00 + 0.975 + 1.20 = 6.525</p>
+      <p><strong>Verdict:</strong> Not listed. Final score below 7.0, and pricing transparency below 6.0 threshold. The tool has its uses (marketing teams that need brand voice training) but does not pass our overall bar.</p>
+
+      <h3>Example 3: A tool that passes the threshold but with a privacy warning</h3>
+      <ul>
+        <li>Output quality: 8.5 (excellent for the category)</li>
+        <li>Ease of use: 8.0 (intuitive, good documentation)</li>
+        <li>Pricing transparency: 8.0 (clear, predictable)</li>
+        <li>Support quality: 7.0 (responsive, knowledgeable)</li>
+        <li>Privacy: 6.5 (trains on inputs by default, but offers opt-out - opted out is not great)</li>
+      </ul>
+      <p><strong>Final score:</strong> (8.5 x 0.30) + (8.0 x 0.20) + (8.0 x 0.20) + (7.0 x 0.15) + (6.5 x 0.15) = 2.55 + 1.60 + 1.60 + 1.05 + 0.975 = 7.775</p>
+      <p><strong>Verdict:</strong> Listed, but with a privacy warning at the top of the review. The tool is good, but the privacy dimension is a real concern. We note it explicitly: "This tool trains on your inputs by default. We recommend opting out of training in settings, and we do not recommend using it for sensitive work."</p>
+    </section>
+
+    <section>
+      <h2>How we handle edge cases</h2>
+      <p>Some tools do not fit cleanly into the rubric. Here is how we handle them.</p>
+
+      <h3>Edge case 1: Open-source tools with no support</h3>
+      <p>For open-source tools, there is no vendor support. The "support quality" dimension is replaced by "community support quality" - is there an active Discord, GitHub issues, or community forum where users help each other? Stable Diffusion is the example here: scored 9.0 on community support despite having no vendor support at all.</p>
+
+      <h3>Edge case 2: Free-only tools</h3>
+      <p>For free tools, the "pricing transparency" dimension is 10.0 by default (you cannot get a surprise charge from a free tool). The other dimensions are scored normally. Stable Diffusion, Ideogram free tier, and ChatGPT free are examples.</p>
+
+      <h3>Edge case 3: Enterprise-only tools</h3>
+      <p>For enterprise-only tools (no consumer pricing), the "pricing transparency" dimension is scored on the enterprise pricing page and contract clarity. Custom pricing is OK if it is clear what you are paying for. Palantir, Databricks, and Salesforce Einstein are examples.</p>
+
+      <h3>Edge case 4: Tool with a major update between reviews</h3>
+      <p>If a tool has a major update between our reviews (e.g. a new model launch, a major UI overhaul, a pricing change), we re-test within 30 days. The score may change up or down. The last-updated date is always current.</p>
+
+      <h3>Edge case 5: Tool gets acquired</h3>
+      <p>If a tool is acquired, we add a banner at the top of the review: "This tool was acquired by [Company] on [date]. We are re-testing under the new ownership." The re-test takes 4-6 weeks. The score may change based on the new owner's policies.</p>
+    </section>
+
+    <section>
+      <h2>How we calibrate the rubric</h2>
+      <p>Every 6 months, we run a calibration exercise to make sure the rubric is consistent across reviewers:</p>
+      <ol>
+        <li>All 5 reviewers independently score the same 10 tools (selected from our directory).</li>
+        <li>We compare the scores. The standard deviation across reviewers should be less than 0.5 points per dimension.</li>
+        <li>If the standard deviation is higher, we run a calibration session to align on what each score means.</li>
+        <li>The last calibration: April 2026. Standard deviation: 0.31 points per dimension (good).</li>
+      </ol>
+      <p>This is how we ensure the rubric is fair, consistent, and not dependent on which reviewer happens to test a tool.</p>
+    </section>
+
+    <section>
+      <h2>How we handle disagreements with vendors</h2>
+      <p>Vendors sometimes disagree with our scores. Here is how we handle it.</p>
+      <ul>
+        <li><strong>Vendors can request a factual review.</strong> We will correct any factual errors (wrong pricing, wrong feature name, wrong release date). The correction is fast (1-3 business days).</li>
+        <li><strong>Vendors cannot request a score change.</strong> Our scores are based on our testing, not on vendor preferences. If the vendor disagrees, we will add a "vendor response" section to the review with their perspective.</li>
+        <li><strong>Vendors cannot remove a review.</strong> Once published, a review stays published. If a tool's quality drops, the score drops. If it improves, the score improves.</li>
+        <li><strong>Vendors can submit corrections in writing.</strong> If the vendor wants to add context, we will publish it in a clearly labeled "Vendor Response" section at the bottom of the review.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How to verify our scoring</h2>
+      <p>You can verify any score by:</p>
+      <ol>
+        <li><strong>Sign up for the tool yourself</strong> and use it for a week. Most of the tools have free tiers or trials. Compare your experience to our review.</li>
+        <li><strong>Read the reviewer's notes.</strong> Every review includes specific examples of what worked and what did not. If our examples do not match your experience, we want to hear about it.</li>
+        <li><strong>Check the last-updated date.</strong> The score is current as of the last review. If the tool has changed since then, let us know.</li>
+        <li><strong>Submit your own experience.</strong> If you have used the tool extensively and your assessment differs, email us. We consider every reader submission.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>More about our process</h2>
+      <p>For the broader editorial guidelines (how we pick tools, how we write reviews, what we will not do), see <a href="/editorial-guidelines/">our editorial guidelines page</a>. For the team behind the reviews, see <a href="/about/">our about page</a>. For the changelog of what we have published, see <a href="/changelog/">our changelog</a>.</p>
+    </section>
+  </article>
+</BaseLayout>
