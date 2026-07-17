@@ -64,3 +64,6 @@ npm run build      # 输出在 dist/
 - [ ] 加 1-2 篇 blog 文章
 - [ ] 买真域名 (bestaitoolsreview.com 之类)
 - [ ] 加 Google Analytics / Plausible
+
+## 最近更新
+- 修复结构化数据：确保 BlogJsonLd 组件在标题或描述为空时提供后备值，避免 BreadcrumbList 中的 name 缺失，解决 Google Search Console 警告。
