@@ -295,6 +295,11 @@ a.tool-pill { text-decoration: none; }
 .tag-pill { white-space: nowrap; }
 .list-footer { text-align: center; margin-top: var(--s-12); padding-top: var(--s-6); border-top: 1px solid var(--border); color: var(--text-secondary); font-size: var(--fs-small); }
 .prompt-preview { background: var(--bg-muted); border-radius: var(--r-sm); padding: var(--s-3); font-size: var(--fs-xs); color: var(--text-soft); overflow: auto; white-space: pre-wrap; word-break: break-word; max-height: 120px; margin: 0; font-family: var(--font-mono); }
+.team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--s-6); margin: var(--s-6) 0; }
+.team-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg); padding: var(--s-6); }
+.team-card h3 { margin-top: 0; margin-bottom: var(--s-2); }
+.team-card .team-role { color: var(--brand); font-size: var(--fs-small); font-weight: var(--fw-bold); margin-bottom: var(--s-3); }
+.team-card .team-bio { font-size: var(--fs-small); color: var(--text); line-height: 1.6; }
 .tag-row { display: flex; gap: var(--s-2); align-items: center; flex-wrap: wrap; margin-top: var(--s-3); }
 .tag-pill { display: inline-block; font-size: var(--fs-small); font-weight: var(--fw-bold); color: #fff; background: var(--brand); padding: 3px 12px; border-radius: var(--r-full); }
 .tag-chip { display: inline-block; font-size: var(--fs-xs); color: var(--text-secondary); background: var(--bg-muted); padding: 3px 10px; border-radius: var(--r-full); }

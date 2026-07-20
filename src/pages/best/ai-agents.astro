@@ -31,48 +31,48 @@ const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","i
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
   </Fragment>
-  <div class="article" style="max-width:860px;margin:0 auto;padding:48px 0;">
+  <div class="article">
     <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/best/students/">Categories</a> &rsaquo; <span>AI Agents</span></nav>
     <header class="article-header">
       <span class="eyebrow">AI Agent Platforms</span>
       <h1>Best AI Agent Platforms in 2026</h1>
-      <p style="color:var(--text-mute);font-size:15px;margin-top:8px;">14 tools compared across 4 categories: code frameworks, visual automation, browser agents, and autonomous goal agents.</p>
+      <p>14 tools compared across 4 categories: code frameworks, visual automation, browser agents, and autonomous goal agents.</p>
     </header>
     <section class="article-body">
 
-      <p style="font-size:16px;color:var(--text-soft);line-height:1.8;">AI Agents represent the next evolution of AI tools — systems that don't just answer questions, but autonomously plan and execute multi-step tasks. Whether you need to automate data collection, build customer support bots, or create complex multi-agent systems, there's a platform designed for your use case. This guide covers 14 AI agent tools across 4 categories, with real workflows you can implement today.</p>
+      <p>AI Agents represent the next evolution of AI tools — systems that don't just answer questions, but autonomously plan and execute multi-step tasks. Whether you need to automate data collection, build customer support bots, or create complex multi-agent systems, there's a platform designed for your use case. This guide covers 14 AI agent tools across 4 categories, with real workflows you can implement today.</p>
 
-      <h2 style="margin-top:32px;">Agent Tool Categories</h2>
-      <p style="font-size:15px;color:var(--text-soft);line-height:1.7;">AI agent tools fall into four main categories based on how they're built and what they do:</p>
+      <h2>Agent Tool Categories</h2>
+      <p>AI agent tools fall into four main categories based on how they're built and what they do:</p>
 
       {frameworkTypes.map(ft => (
-        <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:20px;margin:16px 0;">
-          <h3 style="font-size:17px;font-weight:600;margin-bottom:8px;">{ft.name}</h3>
-          <p style="font-size:14px;color:var(--text-soft);margin-bottom:12px;line-height:1.6;">{ft.desc}</p>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <div class="info-card">
+          <h3>{ft.name}</h3>
+          <p>{ft.desc}</p>
+          <div class="tag-row">
             {ft.tools.map(tid => {
               const tool = tools.find(t => t.id === tid);
               return tool ? (
-                <a href={"/tool/" + tid + "/"} style="font-size:13px;color:var(--accent-color);background:rgba(59,130,246,0.08);padding:4px 12px;border-radius:6px;text-decoration:none;font-weight:500;">{tool.name.en}</a>
+                <a class="tool-pill" href={"/tool/" + tid + "/"}>{tool.name.en}</a>
               ) : null
             })}
           </div>
         </div>
       ))}
 
-      <h2 style="margin-top:40px;">All AI Agent Tools</h2>
-      <div style="display:grid;gap:16px;">
+      <h2>All AI Agent Tools</h2>
+      <div class="card-grid">
         {tools.map(t => (
-          <a href={"/tool/" + t.id + "/"} style="text-decoration:none;color:inherit;display:block;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:20px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent-color)'" onmouseout="this.style.borderColor='var(--border-color)'">
-            <div style="display:flex;justify-content:space-between;align-items:start;gap:12px;">
+          <a class="list-card" href={"/tool/" + t.id + "/"}>
+            <div class="card-head">
               <div>
-                <h3 style="font-size:16px;font-weight:600;margin:0 0 4px 0;">{t.name.en}</h3>
-                <p style="font-size:13px;color:var(--text-mute);margin:0 0 8px 0;">{t.short_desc?.en || ''}</p>
+                <h3>{t.name.en}</h3>
+                <p class="card-desc">{t.short_desc?.en || ''}</p>
               </div>
-              <span style="font-size:11px;color:var(--accent-color);background:rgba(59,130,246,0.1);padding:3px 10px;border-radius:999px;white-space:nowrap;font-weight:600;">{t.pricing?.en || 'Various'}</span>
+              <span class="tool-pill">{t.pricing?.en || 'Various'}</span>
             </div>
             {t.pros && t.pros.en && (
-              <div style="margin-top:8px;font-size:13px;color:var(--text-soft);">
+              <div class="card-desc">
                 <strong>Pros:</strong> {t.pros.en.slice(0, 2).join(', ')}
               </div>
             )}
@@ -80,24 +80,24 @@ const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","i
         ))}
       </div>
 
-      <h2 style="margin-top:40px;">Ready-to-Use Agent Workflows</h2>
-      <p style="font-size:15px;color:var(--text-soft);line-height:1.7;">Step-by-step guides for building real agent workflows:</p>
-      <div style="display:grid;gap:12px;margin-top:16px;">
+      <h2>Ready-to-Use Agent Workflows</h2>
+      <p>Step-by-step guides for building real agent workflows:</p>
+      <div class="card-grid">
         {agentWorkflows.map(w => (
-          <a href={"/workflows/" + w.slug + "/"} style="text-decoration:none;color:inherit;display:block;background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;">
-            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;">
+          <a class="list-card" href={"/workflows/" + w.slug + "/"}>
+            <div class="card-head">
               <div>
-                <h3 style="font-size:15px;font-weight:600;margin:0 0 4px 0;">{w.title}</h3>
-                <p style="font-size:12px;color:var(--text-mute);margin:0;">{w.tool} - {w.difficulty} - {w.steps.length} steps</p>
+                <h3>{w.title}</h3>
+                <p class="meta-text">{w.tool} - {w.difficulty} - {w.steps.length} steps</p>
               </div>
-              <span style="font-size:12px;color:var(--accent-color);">&rarr;</span>
+              <span class="meta-text">&rarr;</span>
             </div>
           </a>
         ))}
       </div>
 
-      <h2 style="margin-top:40px;">How to Choose an AI Agent Platform</h2>
-      <ol style="margin:12px 0 12px 24px;line-height:1.8;font-size:15px;color:var(--text-soft);">
+      <h2>How to Choose an AI Agent Platform</h2>
+      <ol>
         <li><strong>Are you a developer?</strong> Use LangGraph or CrewAI for maximum flexibility. AutoGen for research. LlamaIndex for data-heavy applications.</li>
         <li><strong>Non-technical or prefer visual tools?</strong> Start with n8n (best overall) or Dify (best for AI-specific workflows). Make for simple integrations.</li>
         <li><strong>Need browser automation?</strong> Browser Use (open-source, flexible) or MultiOn (managed, easier setup).</li>
@@ -105,19 +105,19 @@ const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","i
         <li><strong>Just want to experiment?</strong> AutoGPT or AgentGPT for autonomous goal-driven agents (limited practical use but great for learning).</li>
       </ol>
 
-      <h2 style="margin-top:32px;">FAQ</h2>
-      <div style="display:grid;gap:16px;">
+      <h2>FAQ</h2>
+      <div class="card-grid">
         {faqItems.map(f => (
-          <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;">
-            <h3 style="font-size:15px;font-weight:600;margin-bottom:8px;">{f.q}</h3>
-            <p style="font-size:14px;color:var(--text-soft);line-height:1.6;margin:0;">{f.a}</p>
+          <div class="info-card">
+            <h3>{f.q}</h3>
+            <p>{f.a}</p>
           </div>
         ))}
       </div>
 
-      <div style="margin-top:32px;padding:20px;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;">
-        <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;">This Page Answers</h3>
-        <ul style="margin:0;padding-left:20px;font-size:13px;color:var(--text-soft);line-height:1.8;">
+      <div class="qa-box">
+        <h3>This Page Answers</h3>
+        <ul>
           <li>What are the best AI agent platforms in 2026?</li>
           <li>How do LangGraph, CrewAI, n8n, and Dify compare?</li>
           <li>Which AI agent framework should I choose?</li>
@@ -126,7 +126,7 @@ const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","i
         </ul>
       </div>
 
-      <p style="text-align:center;margin-top:32px;"><a href="/workflows/" style="color:var(--accent-color);font-weight:600;">Browse All Workflows</a> &nbsp;|&nbsp; <a href="/solutions/" style="color:var(--accent-color);font-weight:600;">Industry Solutions</a></p>
+      <p class="back-link"><a href="/workflows/">Browse All Workflows</a> &nbsp;|&nbsp; <a href="/solutions/">Industry Solutions</a></p>
     </section>
   </div>
 </BaseLayout>
