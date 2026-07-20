@@ -22,6 +22,8 @@ related:
 
 ## 🚀 最近里程碑
 
+- **Sprint 6 step 8（round 3 step 5）**：team(20→0)+contact(15→0) 去 inline style；新增 form 类 + 增强 cta-primary；Playwright 6 全绿；已推送
+
 - **Sprint 6（2026-07-21）step 7（round 3 step 4）**：静态结构性页 best-ai-agents/about/zh-solutions 去 inline style + zh-solutions 防御化
   - best/ai-agents(39→0)、about(21→0，team 卡片转 class)、zh/solutions(23→0) 全部 0 inline style
   - ⚠️ 跨界：Claude solutions.json 新条目 mechanical-engineers 缺 tools/sections 字段致构建崩溃；zh/solutions 模板已防御化（不完整条目降级渲染，不再整站失败）
