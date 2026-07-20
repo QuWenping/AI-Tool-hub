@@ -198,6 +198,25 @@ status: active
 
 ---
 
+## 🚪 阶段收尾上线门禁（每个 Sprint 必跑）
+
+> **规则**：每完成一个阶段任务，先跑 `scripts/pre-deploy-check.mjs`；**通过则 `git push origin main`**（Vercel 自动构建上线 thebestaitoolsreview.com），**不通过则按报告修复后重跑**。详见 `docs/DEPLOYMENT-CHECKLIST.md`。
+
+**通过标准（全部满足才推送）**：
+1. `npm run build` 退出码 0（当前 ~2142 页）
+2. Playwright 冒烟 4 类核心路由 × 2 视口（1440/390）全 200、无 console error、无横向溢出
+3. Git 工作树无未提交的跟踪改动
+4. 本地领先 `origin/main`（有内容可推）且不落后
+5. `origin` 远程可达
+
+**不阻塞但关注**：`npx astro check` 有 ~115 个历史遗留 TS 类型告警（JSON 联合类型导致），Vercel 用 `astro build` 不做完整 TS 检查，故不阻塞；新代码不应新增，长期清理归 P0-3。
+
+**冒烟路由**：`/`、`/tool/chatgpt/`、`/vs/chatgpt-vs-claude/`、`/solutions/ai-for-architecture/`
+
+**首次执行（Sprint 4，2026-07-20）**：✅ 构建 + 冒烟 + Git 状态全绿；❌ `git push` 被 GitHub 拒绝（403，凭据 `quwenping88` 无权 / keyring token 失效）—— 需用户在本机执行 `gh auth login -h github.com` 或更新 PAT 后重推。代码与构建均已就绪，仅本地凭据问题待解。
+
+---
+
 # 🤝 多人协作规则
 
 ## 更新任务状态
