@@ -1,0 +1,100 @@
+---
+/**
+ * BlogPostLayout.astro — canonical blog post layout (P0-3 round 2)
+ * Encapsulates: .article (760px) + .article-header + .article-body (prose)
+ * + breadcrumbs + JSON-LD + optional engagement widgets.
+ *
+ * NEW blog posts MUST use this layout so formatting stays uniform while
+ * Codex cleans legacy posts in parallel. See docs/BLOG-POST-CONVENTION.md.
+ *
+ * Props:
+ *   title, description, keywords       SEO + header
+ *   eyebrow                            category label (e.g. "Review", "Tutorial")
+ *   date, readTime, author             meta row
+ *   reviewer                           optional "Reviewed by" line
+ *   tags                               string[] optional
+ *   slug                               required for JSON-LD URL + feedback + related
+ *   category                           required for RelatedPosts matching (e.g. "Tutorial")
+ *   lang                               "en" | "zh" (default en)
+ *   breadcrumb                         optional override for last crumb text (default title)
+ *   showEngagement                     bool default true (Feedback + RelatedPosts + Comments)
+ *
+ * Slot (default): article body (HTML/h2/p/ul/Chart/TLDR/img ...).
+ */
+import BaseLayout from "./BaseLayout.astro";
+import BlogJsonLd from "../components/BlogJsonLd.astro";
+import Feedback from "../components/Feedback.astro";
+import RelatedPosts from "../components/RelatedPosts.astro";
+import Comments from "../components/Comments.astro";
+
+const {
+  title,
+  description,
+  keywords,
+  eyebrow,
+  date,
+  readTime,
+  author,
+  reviewer,
+  tags = [],
+  slug,
+  category,
+  lang = "en",
+  breadcrumb,
+  showEngagement = true,
+} = Astro.props;
+
+const post = { slug, title_en: title, desc_en: description, date, read_time: readTime, author, tags, category };
+const crumb = breadcrumb || title;
+const hasMeta = date || readTime || author || reviewer;
+---
+<BaseLayout title={title} description={description} keywords={keywords || (tags && tags.join(", "))} lang={lang}>
+  <BlogJsonLd slot="head" post={post} />
+  <div class="article">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a> &rsaquo;
+      <a href="/blog/">Blog</a> &rsaquo;
+      <span>{crumb}</span>
+    </nav>
+
+    <header class="article-header">
+      {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+      <h1>{title}</h1>
+      {description && <p class="lede">{description}</p>}
+      {hasMeta && (
+        <div class="article-meta">
+          {date && <span class="meta-item"><i class="far fa-calendar" aria-hidden="true"></i> {date}</span>}
+          {readTime && <span class="meta-item"><i class="far fa-clock" aria-hidden="true"></i> {readTime}</span>}
+          {author && <span class="meta-item"><i class="far fa-user" aria-hidden="true"></i> {author}</span>}
+          {reviewer && (
+            <span class="meta-item reviewer">
+              <i class="fas fa-user-check" aria-hidden="true"></i>
+              Reviewed by <strong>{reviewer}</strong>
+            </span>
+          )}
+        </div>
+      )}
+    </header>
+
+    <section class="article-body">
+      <slot />
+    </section>
+
+    {tags && tags.length > 0 && (
+      <section class="article-tags">
+        <h3>Tags</h3>
+        <div class="audience-tags">
+          {tags.map(t => <span class="audience-tag">#{t}</span>)}
+        </div>
+      </section>
+    )}
+
+    {showEngagement && (
+      <>
+        <Feedback slug={slug} lang={lang} />
+        <RelatedPosts currentSlug={slug} currentCategory={category} currentTags={tags} limit={3} />
+        <Comments lang={lang} />
+      </>
+    )}
+  </div>
+</BaseLayout>

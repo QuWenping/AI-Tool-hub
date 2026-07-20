@@ -258,6 +258,10 @@ header.site-header .container { display: flex; justify-content: space-between; a
 .article-body ul, .article-body ol { margin: 12px 0 18px 24px; }
 .article-body li { margin-bottom: 6px; }
 .article-body a { color: var(--accent-color); }
+.article-footer { margin-top: var(--s-12); padding-top: var(--s-6); border-top: 1px solid var(--border); color: var(--text-secondary); font-size: var(--fs-small); }
+.article-footer p { margin-bottom: var(--s-2); }
+.article-body img, .legal-page img, .blog-content img { max-width: 100%; height: auto; border-radius: var(--r-md); margin: var(--s-6) 0; }
+.article-body img[loading="lazy"], .article-body img[decoding="async"] { display: block; }
 .article-body strong { color: var(--text-main); }
 .article-body blockquote {
   border-left: 3px solid var(--accent-color);
