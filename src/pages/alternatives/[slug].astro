@@ -69,7 +69,7 @@ const breadcrumbSchema = { "@context":"https://schema.org","@type":"BreadcrumbLi
     {alternatives.length > 0 ? (
       <section>
         <h2 data-i18n="top_3_alternatives">Top 3 alternatives</h2>
-        <p style="color: var(--text-mute); margin-bottom: 24px;">{altsText}</p>
+        <p>{altsText}</p>
         <div class="tool-grid">
           {alternatives.slice(0, 3).map(function(t){return (
             <article class="tool-card">
@@ -86,13 +86,13 @@ const breadcrumbSchema = { "@context":"https://schema.org","@type":"BreadcrumbLi
         </div>
       </section>
     ) : (
-      <p style="color: var(--text-mute);">No direct alternatives in the same category yet. Check the <a href={"/best/" + aCat + "/"}>best {aCat} AI tools</a> list.</p>
+      <p>No direct alternatives in the same category yet. Check the <a href={"/best/" + aCat + "/"}>best {aCat} AI tools</a> list.</p>
     )}
 
     {alternatives.length > 0 && (
       <section>
         <h2>Honest head-to-head: {aName} vs each alternative</h2>
-        <p style="color: var(--text-mute); margin-bottom: 24px;">We compared each of these against {aName} on key features and pricing (drafting, editing, summarization, long document, code or creative work). Below is the per-tool breakdown with our honest take on when to pick it over {aName}.</p>
+        <p>We compared each of these against {aName} on key features and pricing (drafting, editing, summarization, long document, code or creative work). Below is the per-tool breakdown with our honest take on when to pick it over {aName}.</p>
         {alternatives.map(function(t, i){return (
           <article class="tool-review" id={t.id}>
             <header class="tool-review-head">
