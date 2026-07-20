@@ -52,7 +52,7 @@ status: active
 
 ## Design System 基础
 
-- [ ] P0-3 组件化重构现存页面（消除 100+ 页面 inline style / hard-coded 颜色） ⚙️ Sprint 5 round 1（best/vs/blog 动态模板 + 11 篇 .article 博客 + 站点 header 作用域修复）+ Sprint 6 round 2 step 1（BlogPostLayout + 新博文规范 + 1 篇参考迁移 + 博客图片 max-width 修复）已完成；剩余 ~32 篇 .legal-page legacy 博客待批量迁移到 BlogPostLayout @Codex 2026-07-20
+- [ ] P0-3 组件化重构现存页面（消除 100+ 页面 inline style / hard-coded 颜色） ⚙️ 博客块已完成（46 篇全部统一：32 篇迁移 BlogPostLayout + 12 篇 .article 去 inline style，共去 ~380 个 inline style）；best/vs/blog 动态模板 + 站点 header 作用域已修；剩余：~13 篇 .article 博客可再迁 BlogPostLayout 求统一（可选）、组件级 inline style（Feedback/Chart 等）、prompts/workflows/templates/solutions/alternatives/zh 镜像等非博客页面的 inline style 清理 @Codex 2026-07-20
 - [ ] P0-7 Lighthouse 全站达标（Performance ≥95、SEO 100）
 - [x] P0-8 图片规范（WebP/AVIF + Lightbox + Lazy Load） @Codex 2026-07-20
 - [x] P0-9 Grid System 统一（Article 760 / TOC 280 / Sidebar 320） @Codex 2026-07-20
@@ -173,6 +173,12 @@ status: active
 
 # ✅ 已完成里程碑（记录 & 归档）
 
+- [x] **Sprint 6（2026-07-21）P0-3 round 2 step 2+3：博客全量统一到 BlogPostLayout / 去 inline style** @Codex 2026-07-21
+  - step 2：批量迁移 31 篇 `.legal-page blog-post` 到 `BlogPostLayout`（best-ai-* 11 / how-to-* 13 / vs 5 / meetily / apple-speechanalyzer）；3 篇特殊处理（apple 无 BlogJsonLd+div meta、2 篇带 scoped `<style>`）；全部移除 `<section class=blog-content>` 包装与死 scoped style；剥离全部 inline style（审计确认 0 结构性 inline style，244 个全为装饰性）
+  - step 3：12 篇 `.article` 博客剥离 136 个 inline style；agnes 2 个结构性 grid style 转 `.grid-2`/`.grid-stack` class
+  - CSS 溢出修复（惠及全博客）：`.audience-tags` flex-wrap + `.audience-tag` overflow-wrap；`.article-body table` 响应式横向滚动；`.article-body pre/code` overflow；`.article img` max-width:100%（修 hero 图在 .article 非 article-body 区的移动端溢出）；`.article-body .callout`、`.grid-stack` 全局类
+  - 结果：0 篇 `.legal-page blog-post` 残留；46 篇博客全部统一布局 + 页面级 inline style 清零
+  - Playwright 验证 13 篇迁移博客 + 12 篇 .article 博客 × 2 视口 = 50 检查全绿（200、0 page error、无溢出、单一 H1、无 legacy 包装）；构建 2142 页；门禁全绿；已推送 origin/main
 - [x] **Sprint 6（2026-07-21）P0-3 round 2 step 1：BlogPostLayout + 新博文规范 + 参考迁移** @Codex 2026-07-21
   - 新建 `src/layouts/BlogPostLayout.astro`：封装 `.article`(760) + `.article-header`(eyebrow/h1/lede/meta) + `.article-body`(prose) + 面包屑 + JSON-LD(BlogJsonLd) + 可选 Tags/Feedback/RelatedPosts/Comments；props 覆盖 title/description/slug/category/eyebrow/date/readTime/author/reviewer/tags/keywords/lang/breadcrumb/showEngagement
   - 新建 `docs/BLOG-POST-CONVENTION.md`：规定**新博文必须用 BlogPostLayout**，附 props 参考、正文规则、文件归属（Claude=内容数据+新博文，Codex=layouts/components/CSS+legacy 清理）——让 Claude 内容更新可与 Codex 重构并行、无格式漂移

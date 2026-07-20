@@ -53,6 +53,96 @@ source: "C:/Users/QuQu/Downloads/AI-Tool-Hub项目blog内容.txt"
 
 ---
 
+## 🎯 GSC 数据驱动的方向重排（2026-07-21）
+
+**来自 Google Search Console 实际数据**：网站已获得自然流量。已识别信号：
+
+| 页面 | Impr | Pos | 判断 |
+|---|---|---|---|
+| `blog/agnes-ai-review-free-omni-modal-api-2026` | 159 | 8.4 | ⭐⭐⭐⭐⭐ 最紧要 — CTR 仅 0.6%，需立即优化 title/meta/FAQ |
+| `blog/bonsai-27b-on-device-ai-phone-2026` | 22 | 7.4 | ⭐⭐⭐⭐ AI 模型评测方向已被 Google 接受 |
+| `solutions/ai-for-structural-engineers` | 13 | 31.9 | ⭐⭐⭐ Engineering 类被识别为主题权威 |
+| `tool/assemblyai`（catalogued）| 10 | 42.5 | ⭐⭐ 需升级为完整 Review |
+| `solutions/ai-for-architecture` | 5 | 50.4 | ⭐⭐⭐ 建筑行业词值得系列化 |
+| `solutions/ai-for-hvac-engineers` | 2 | 8.5 | ⭐⭐⭐⭐⭐ HVAC 已进第一页附近，扩展 MEP 全家族 |
+
+**新内容比例（未来 30 天）**：
+- 🔥 **40% Engineering 行业矩阵**（主题权威）：AI for Civil / Mechanical / Electrical / MEP / Bridge / Steel / Surveyor / QS / Fire Protection / Plumbing / Project 等岗位垂直页
+- 🔥 **40% AI Review + 模型评测**（抓热点）：Agnes 优化 + Bonsai 集群 + Assembly AI 升级 + Qwen / Gemma / 新模型
+- 🟠 **20% VS / Alternatives / Tutorial**（长尾承接）
+
+**旧的 R1-01→R1-20 20 篇 Review 计划**：不作废但**降优先级** — Cursor 编程系工具已通过 Sprint 1-3 拥有 Solutions/Comparisons 支撑，先把 GSC 已经开始爬取的方向做深。
+
+---
+
+## 🔴 P-URGENT 紧急任务（本周内必须完成）
+
+按 Search Console 信号从高到低：
+
+### U-01 优化 `agnes-ai-review` CTR（最高优先级）
+- **现状**：Impr 159 / Pos 8.4 / CTR 0.6% — Google 展示但用户不点
+- **必做**：
+  - [ ] 新 Title：`Agnes AI Review 2026: Free Omni-Modal API? Features, Pricing & Alternatives` @Claude
+  - [ ] 新 Meta Description（≤160）：突出 Free / API / Pricing / Alternatives 关键词
+  - [ ] 追加 5 条 FAQ：`What is Agnes AI?` / `Is Agnes AI free?` / `How good is Agnes AI?` / `Agnes AI vs GPT-5` / `Agnes AI API Pricing` + JSON-LD FAQ Schema
+  - [ ] 增加 Alternatives 对比表（GPT-5 / Claude / Gemini / DeepSeek 4 列）
+- **注意**：文件是 `src/pages/blog/agnes-ai-review-free-omni-modal-api-2026.astro`（静态博客）— 属于 Codex 独占的 33 篇 legacy 之一。⚠️ **需要 Codex 协助**：内容变更但触碰 legacy 博客文件。方案 A：Codex 优先处理这一篇的规范化；方案 B：Claude 提交 patch，Codex review 合并。
+
+### U-02 扩展 Engineering 行业矩阵（新 10 页 Solutions）
+- **现状**：Structural/HVAC/Civil/BIM 已上线，位置 8-50
+- **必做（新 solutions.json 记录 + 新页面自动生成）**：
+  - [ ] `ai-for-mechanical-engineers` @Claude
+  - [ ] `ai-for-electrical-engineers` @Claude
+  - [ ] `ai-for-mep-engineers` @Claude
+  - [ ] `ai-for-bridge-engineers` @Claude
+  - [ ] `ai-for-steel-detailers` @Claude
+  - [ ] `ai-for-surveyors` @Claude
+  - [ ] `ai-for-quantity-surveyors` @Claude
+  - [ ] `ai-for-fire-protection-engineers` @Claude
+  - [ ] `ai-for-plumbing-engineers` @Claude
+  - [ ] `ai-for-project-engineers` @Claude
+- **文件归属**：Claude 独占 `src/data/solutions.json`。零冲突。
+
+### U-03 Bonsai 27B 集群扩展（模型评测方向）
+- **现状**：Bonsai 已 Pos 7.4，Google 喜欢 AI 模型评测
+- **必做**（写 6 篇长尾博客）：
+  - [ ] `blog/bonsai-27b-benchmark-2026`
+  - [ ] `blog/bonsai-27b-vs-gemma-2026`
+  - [ ] `blog/bonsai-27b-vs-qwen-2026`
+  - [ ] `blog/how-to-run-bonsai-27b-locally-2026`
+  - [ ] `blog/bonsai-27b-ollama-setup-2026`
+  - [ ] `blog/bonsai-27b-lm-studio-2026`
+- **注意**：属新博客，等 Codex 交付 `BlogPostLayout.astro` 后启动。
+
+### U-04 Assembly AI 升级为完整 Review
+- **现状**：Impr 10 / Pos 42.5 — 页面太弱
+- **必做**：
+  - [ ] Assembly AI 添加到 `tool-editorial.json`（reviewed=true，10 FAQ）@Claude
+  - [ ] `assemblyai` tool ID 存在性检查 → tools.json
+  - [ ] 若 slug 是 `assembly-ai` 或其它，先对齐 ID → 加入编辑元数据
+- **文件归属**：Claude 独占 `src/data/tool-editorial.json`
+
+### U-05 建筑行业深度化（AI Rendering / Floor Plan / BIM / CAD / Revit / SketchUp / Rhino）
+- **现状**：ai-for-architects Pos 50 — 需要 Cluster 页
+- **必做**：暂列到 Week 3-4，等 BlogPostLayout 就绪后集中生产
+
+---
+
+## 🔄 R1 Review 系列重排（GSC 后）
+
+**保留但降级**：R1-01 → R1-04 已完成（DeepSeek/Windsurf/Cline/Codeium 都在 GSC 未识别到的方向，不影响流量但打好基础）。
+
+**R1-05 起改优先级**（GSC 相关工具优先）：
+- **R1-05（新）** Assembly AI review（GSC Impr 10，Pos 42.5，直接冲页面）@Claude 已归 U-04
+- **R1-06（新）** Agnes AI 编辑元数据补齐（如 `agnes-ai` tool ID 存在则加编辑数据支持 U-01）
+- R1-07~R1-20：原清单降级为 P1（一天不做也无风险）
+
+---
+
+## Week 1-2：Review 主力批（原优先级降级）
+
+---
+
 ## 🎯 核心目标（来自源文档）
 
 > Google 喜欢每天都有新内容、每周几十篇、半年几百篇。现在几十篇是不够的。
@@ -419,9 +509,12 @@ Pillar: /best/video/
 - 文件归属契约已加入本文件顶部：Claude 独占 `src/data/**.json`；Codex 独占模板/组件/样式与 33 篇 legacy 博客
 - 我等待 Codex 交付 `BlogPostLayout.astro` + "新博文规范" 后再启动 vs 长文和新博客
 
-**Codex 上游 changelog（待 Codex 追加）**
-- [ ] BlogPostLayout.astro 上线通知（round 2 第一步）
-- [ ] 新博文规范文档路径
+**Codex 上游 changelog**
+- [x] `BlogPostLayout.astro` 已上线（round 2 step 1）@Codex 2026-07-21 — 新博文 canonical 布局（.article 760 + .article-header + .article-body prose + 面包屑 + JSON-LD + 可选 engagement）
+- [x] 新博文规范：`docs/BLOG-POST-CONVENTION.md` @Codex 2026-07-21 — 新博客/SEO 文章必须用 BlogPostLayout（附 props 参考 + 正文规则 + 文件归属）
+- [x] 博客全量统一（round 2 step 2+3）@Codex 2026-07-21 — 32 篇 legacy 迁 BlogPostLayout + 12 篇 .article 去 inline style，46 篇博客页面级 inline style 清零；CSS 修 audience-tags/table/pre/img 溢出
+- ✅ legacy 博客清理已完成 —— Claude 现在可自由新建博客/SEO 文章（用 BlogPostLayout）与 vs 长文，与 Codex 无冲突
+- 备注：组件级 inline style（Feedback/Chart 等共享组件）仍待 Codex 清理，不影响新博文写作
 
 ### Week 0 · 2026-07-20（基线）
 - Reviews：17 / 200

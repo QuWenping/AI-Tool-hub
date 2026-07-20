@@ -22,6 +22,12 @@ related:
 
 ## 🚀 最近里程碑
 
+- **Sprint 6（2026-07-21）step 2+3**：P0-3 博客块全量统一
+  - step 2：31 篇 `.legal-page blog-post` 批量迁移到 `BlogPostLayout`（去包装/死 scoped style/全部 inline style，244 个装饰性 style 属性清零）
+  - step 3：12 篇 `.article` 博客剥离 136 个 inline style；agnes 2 个结构性 grid 转 `.grid-2`/`.grid-stack`
+  - CSS 溢出修复（惠及全博客）：audience-tags flex-wrap、article-body table 响应式滚动、pre/code overflow、`.article img` max-width:100%、`.article-body .callout`、`.grid-stack`
+  - 结果：0 篇 `.legal-page blog-post` 残留；46 篇博客全部统一布局 + 页面级 inline style 清零
+  - Playwright 50 检查全绿；构建 2142 页；门禁全绿；已推送
 - **Sprint 6（2026-07-21）**：P0-3 round 2 step 1 — BlogPostLayout + 新博文规范 + 参考迁移
   - 新建 `src/layouts/BlogPostLayout.astro`（canonical 博客布局：.article+.article-header+.article-body+面包屑+JSON-LD+可选 engagement）
   - 新建 `docs/BLOG-POST-CONVENTION.md`：新博文必须用 BlogPostLayout；文件归属（Claude=内容数据+新博文，Codex=layouts/components/CSS+legacy 清理）→ 内容与工程可并行无漂移
@@ -92,7 +98,7 @@ related:
 | 1.7 | 图片规范（WebP/AVIF + LazyLoad） | ⚠️ 部分 | Sprint 4：Lightbox + LazyLoad 已落地；WebP 优先读取已在 tool 页（同 basename 优先 avif/webp）；AVIF 批量转换管道仍缺 |
 | 1.8 | 动效规范（150ms/250ms） | ✅ 已完成 | 首页 CSS 已按规范 |
 | 1.9 | Lighthouse ≥95 达标 | ❌ 未测试 | 尚未运行完整评估 |
-| 1.10 | 组件化（禁止页面内写死样式） | ⚠️ 进行中 | Sprint 5 round 1 + Sprint 6 round 2 step 1：best/vs/blog 动态模板 + 11 篇 .article 博客已去 inline style；BlogPostLayout + 新博文规范已就位（1 篇参考迁移完成）；站点 header 作用域修复；博客图片 max-width 修复；剩余 ~32 篇 .legal-page legacy 博客待批量迁移到 BlogPostLayout |
+| 1.10 | 组件化（禁止页面内写死样式） | ⚠️ 进行中 | 博客块完成（46 篇全部统一：32 篇 BlogPostLayout + 12 篇 .article 去 inline style，~380 个 page-level inline style 清零）；best/vs/blog 动态模板 + 站点 header 作用域已修。剩余：~13 篇 .article 可选迁 BlogPostLayout、组件级 inline style（Feedback/Chart 等）、prompts/workflows/templates/solutions/alternatives/zh 等非博客页面 |
 
 ## 二、页面模板
 
