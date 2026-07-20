@@ -52,7 +52,7 @@ status: active
 
 ## Design System 基础
 
-- [ ] P0-3 组件化重构现存页面（消除 100+ 页面 inline style / hard-coded 颜色） ⚙️ Sprint 5 完成 round 1：best/vs/blog 三大动态模板 + 11 篇 .article 博客已落地 article-grid+prose；站点 header 作用域修复；剩余 ~33 篇 .legal-page 博客与零散 inline style 待后续 round @Codex 2026-07-20
+- [ ] P0-3 组件化重构现存页面（消除 100+ 页面 inline style / hard-coded 颜色） ⚙️ Sprint 5 round 1（best/vs/blog 动态模板 + 11 篇 .article 博客 + 站点 header 作用域修复）+ Sprint 6 round 2 step 1（BlogPostLayout + 新博文规范 + 1 篇参考迁移 + 博客图片 max-width 修复）已完成；剩余 ~32 篇 .legal-page legacy 博客待批量迁移到 BlogPostLayout @Codex 2026-07-20
 - [ ] P0-7 Lighthouse 全站达标（Performance ≥95、SEO 100）
 - [x] P0-8 图片规范（WebP/AVIF + Lightbox + Lazy Load） @Codex 2026-07-20
 - [x] P0-9 Grid System 统一（Article 760 / TOC 280 / Sidebar 320） @Codex 2026-07-20
@@ -173,6 +173,13 @@ status: active
 
 # ✅ 已完成里程碑（记录 & 归档）
 
+- [x] **Sprint 6（2026-07-21）P0-3 round 2 step 1：BlogPostLayout + 新博文规范 + 参考迁移** @Codex 2026-07-21
+  - 新建 `src/layouts/BlogPostLayout.astro`：封装 `.article`(760) + `.article-header`(eyebrow/h1/lede/meta) + `.article-body`(prose) + 面包屑 + JSON-LD(BlogJsonLd) + 可选 Tags/Feedback/RelatedPosts/Comments；props 覆盖 title/description/slug/category/eyebrow/date/readTime/author/reviewer/tags/keywords/lang/breadcrumb/showEngagement
+  - 新建 `docs/BLOG-POST-CONVENTION.md`：规定**新博文必须用 BlogPostLayout**，附 props 参考、正文规则、文件归属（Claude=内容数据+新博文，Codex=layouts/components/CSS+legacy 清理）——让 Claude 内容更新可与 Codex 重构并行、无格式漂移
+  - 参考迁移：`how-to-use-ai-for-data-analysis-2026.astro` 从 `<article class=legal-page blog-post>` + inline style 迁移到 BlogPostLayout，验证布局端到端（单一 H1、.article-body prose、engagement 组件、无重复 JSON-LD）
+  - CSS：`.article-footer`；`.article-body/.legal-page/.blog-content img { max-width:100% }`（修复博客内联图片固有宽度导致的移动端溢出）
+  - 升级 `pre-deploy-check.mjs` 为并行协作感知：Claude 的内容数据 WIP（tool-editorial.json 等）不再阻塞 Codex 工程推送，仅工程文件未提交才阻塞
+  - Playwright 验证迁移后博文 @1440/390：200、0 console error、无溢出、H1 64/38、H2 42/26、单一 H1、无 legacy 包装、engagement 在位；构建 2142 页；门禁全绿；已推送 origin/main
 - [x] **Sprint 5（2026-07-20）P0-3 round 1：best/vs/blog 模板套用 article-grid+prose + 站点 header 作用域修复** @Codex 2026-07-20
   - `vs/[slug].astro`（103 页）：套 `.article-grid`（760+280 TOC，5 项）+ 新 `ArticleToc.astro` 组件；移除 hero/at-a-glance/This Page Answers 的 inline style → `.vs-hero` / `.detail-section`
   - `best/[slug].astro`（~11 页）：套 `.article-grid`（760+280 TOC，7 项）+ 7 个 h2 补 id；inline updated-badge → `.updated-badge` class

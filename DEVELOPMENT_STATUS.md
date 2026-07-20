@@ -22,6 +22,12 @@ related:
 
 ## 🚀 最近里程碑
 
+- **Sprint 6（2026-07-21）**：P0-3 round 2 step 1 — BlogPostLayout + 新博文规范 + 参考迁移
+  - 新建 `src/layouts/BlogPostLayout.astro`（canonical 博客布局：.article+.article-header+.article-body+面包屑+JSON-LD+可选 engagement）
+  - 新建 `docs/BLOG-POST-CONVENTION.md`：新博文必须用 BlogPostLayout；文件归属（Claude=内容数据+新博文，Codex=layouts/components/CSS+legacy 清理）→ 内容与工程可并行无漂移
+  - 参考迁移 `how-to-use-ai-for-data-analysis-2026.astro` 到 BlogPostLayout；CSS 加 `.article-footer` + 博客图片 `max-width:100%`（修移动端溢出）
+  - `pre-deploy-check.mjs` 升级为并行协作感知：内容数据 WIP 不阻塞工程推送
+  - 验证迁移后博文 @1440/390 全绿；构建 2142 页；门禁全绿；已推送
 - **Sprint 5（2026-07-20）**：P0-3 round 1 — best/vs/blog 套用 article-grid+prose + 站点 header 作用域修复
   - `vs/[slug].astro`（103 页）：`.article-grid`（760+280 TOC，5 项）+ `ArticleToc.astro`；移除 hero/at-a-glance/This Page Answers inline style
   - `best/[slug].astro`（~11 页）：`.article-grid`（760+280 TOC，7 项）+ 7 个 h2 补 id；inline badge → `.updated-badge`
@@ -86,7 +92,7 @@ related:
 | 1.7 | 图片规范（WebP/AVIF + LazyLoad） | ⚠️ 部分 | Sprint 4：Lightbox + LazyLoad 已落地；WebP 优先读取已在 tool 页（同 basename 优先 avif/webp）；AVIF 批量转换管道仍缺 |
 | 1.8 | 动效规范（150ms/250ms） | ✅ 已完成 | 首页 CSS 已按规范 |
 | 1.9 | Lighthouse ≥95 达标 | ❌ 未测试 | 尚未运行完整评估 |
-| 1.10 | 组件化（禁止页面内写死样式） | ⚠️ 进行中 | Sprint 5 round 1：best/vs/blog 三大动态模板 + 11 篇 .article 博客已去 inline style、套 article-grid+prose；站点 header 作用域修复；剩余 ~33 篇 .legal-page 博客与零散 inline style 待后续 round |
+| 1.10 | 组件化（禁止页面内写死样式） | ⚠️ 进行中 | Sprint 5 round 1 + Sprint 6 round 2 step 1：best/vs/blog 动态模板 + 11 篇 .article 博客已去 inline style；BlogPostLayout + 新博文规范已就位（1 篇参考迁移完成）；站点 header 作用域修复；博客图片 max-width 修复；剩余 ~32 篇 .legal-page legacy 博客待批量迁移到 BlogPostLayout |
 
 ## 二、页面模板
 

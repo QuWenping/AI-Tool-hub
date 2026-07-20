@@ -27,6 +27,32 @@ source: "C:/Users/QuQu/Downloads/AI-Tool-Hub项目blog内容.txt"
 
 ---
 
+## 📂 文件归属契约（避免合并冲突）
+
+**Claude 独占**（内容数据层，只改 JSON）：
+- `src/data/tool-editorial.json` — 编辑元数据 / Review
+- `src/data/tools.json` — 工具目录字段
+- `src/data/matchups.json` — vs 对比配对
+- `src/data/categories.json` — 分类
+- `src/data/solutions.json` — 行业方案
+
+**Codex 独占**（模板 / 组件 / 样式 / 静态资源）：
+- `src/pages/**/[slug].astro` 动态模板
+- `src/components/**`
+- `src/styles/**`、`public/css/**`、`public/js/**`
+- 33 篇 legacy `src/pages/blog/*.astro`（Codex 串行清理，Claude 期间不动）
+
+**跨界改动**：动对方文件 → 在 [[AI-Tool-Hub-任务计划]] 加 `- [ ] Pn-XX` + ⚠️ + 具名协商。
+
+## 🧭 并行工作序列（对接 Codex 契约）
+
+1. **Now**：Claude 开始 R1-01 → R1-20 **纯数据驱动的 Review**（改 `tool-editorial.json` + 上截图），零模板冲突。
+2. **Next**：Codex 交付 `BlogPostLayout.astro`（round 2 第一步）+ "新博文规范"。
+3. **Then**：Claude 新写的博客/SEO 文章使用 `BlogPostLayout.astro`（新文件，与 Codex 清理老文章不冲突）。
+4. **Parallel**：Codex 串行清理 33 篇 legacy .article 博客；期间 Claude 不改这些老文件。
+
+---
+
 ## 🎯 核心目标（来自源文档）
 
 > Google 喜欢每天都有新内容、每周几十篇、半年几百篇。现在几十篇是不够的。
@@ -266,7 +292,7 @@ Pillar: /best/video/
 
 ### Week 1-2：Review 主力批
 
-- [ ] R1-01 `deepseek` review
+- [x] R1-01 `deepseek` review @Claude 2026-07-21
 - [ ] R1-02 `windsurf` review
 - [ ] R1-03 `cline` review
 - [ ] R1-04 `codeium` review
@@ -382,6 +408,20 @@ Pillar: /best/video/
 ## 📈 周报（追加区）
 
 <!-- 每周五在这里追加，最新在上 -->
+
+### Week 1 · 2026-07-21（进行中）
+
+**Claude 产出**
+- ✅ R1-01 `deepseek` review 上线（reviewed=true，8.6/10，10 FAQ，Playwright 全绿）
+- 🔜 R1-02 `windsurf` → R1-20 `gamma` 逐个跟进
+
+**契约生效**
+- 文件归属契约已加入本文件顶部：Claude 独占 `src/data/**.json`；Codex 独占模板/组件/样式与 33 篇 legacy 博客
+- 我等待 Codex 交付 `BlogPostLayout.astro` + "新博文规范" 后再启动 vs 长文和新博客
+
+**Codex 上游 changelog（待 Codex 追加）**
+- [ ] BlogPostLayout.astro 上线通知（round 2 第一步）
+- [ ] 新博文规范文档路径
 
 ### Week 0 · 2026-07-20（基线）
 - Reviews：17 / 200
