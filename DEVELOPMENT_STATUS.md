@@ -22,6 +22,13 @@ related:
 
 ## 🚀 最近里程碑
 
+- **Sprint 5（2026-07-20）**：P0-3 round 1 — best/vs/blog 套用 article-grid+prose + 站点 header 作用域修复
+  - `vs/[slug].astro`（103 页）：`.article-grid`（760+280 TOC，5 项）+ `ArticleToc.astro`；移除 hero/at-a-glance/This Page Answers inline style
+  - `best/[slug].astro`（~11 页）：`.article-grid`（760+280 TOC，7 项）+ 7 个 h2 补 id；inline badge → `.updated-badge`
+  - `blog`（46 篇）：CSS 升级 `.article-header h1` / `.article-body h2/h3` / `.lede` 到规范尺寸；11 篇移除冗余 inline `max-width:760px`
+  - **根因修复**：`<header>` → `<header class="site-header">`，`style.css` 把 `header{}` 等规则作用域到 `.site-header`，修复全局 header 规则误伤内容 `<header>`（导致内容头被压 64px+sticky、best/blog 移动端溢出）
+  - 新组件 `src/components/ui/ArticleToc.astro`（可复用 sticky TOC）
+  - Playwright 7 路由 × 2 视口全绿；构建 2142 页；pre-deploy-check 全绿；已推送上线
 - **Sprint 4（2026-07-20）**：P0-8 / P0-9 / P0-10 / P0-14 — Design System 统一 + 图片 Lightbox
   - 新增 `docs/URL-STRUCTURE.md`：URL 结构规范化决策（保留 `/tool/`、`/vs/`、`/best/`；`/tools/` 留给免费在线工具；不做大规模 301）
   - `src/styles/global.css` 新增 `.article-grid`（760 文章 + 280 sticky TOC + 可选 320 sidebar）与 `.prose` 响应式排版（H1 64 / H2 42 / H3 32 / 正文 20，clamp）
@@ -79,7 +86,7 @@ related:
 | 1.7 | 图片规范（WebP/AVIF + LazyLoad） | ⚠️ 部分 | Sprint 4：Lightbox + LazyLoad 已落地；WebP 优先读取已在 tool 页（同 basename 优先 avif/webp）；AVIF 批量转换管道仍缺 |
 | 1.8 | 动效规范（150ms/250ms） | ✅ 已完成 | 首页 CSS 已按规范 |
 | 1.9 | Lighthouse ≥95 达标 | ❌ 未测试 | 尚未运行完整评估 |
-| 1.10 | 组件化（禁止页面内写死样式） | ❌ 大部分未达标 | 100+ 页面充斥 inline style 和 hard-coded 颜色 |
+| 1.10 | 组件化（禁止页面内写死样式） | ⚠️ 进行中 | Sprint 5 round 1：best/vs/blog 三大动态模板 + 11 篇 .article 博客已去 inline style、套 article-grid+prose；站点 header 作用域修复；剩余 ~33 篇 .legal-page 博客与零散 inline style 待后续 round |
 
 ## 二、页面模板
 
