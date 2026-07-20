@@ -2,96 +2,226 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import solutions from "../../data/solutions.json";
 import workflows from "../../data/workflows.json";
+import toolsData from "../../data/tools.json";
+import editorialData from "../../data/tool-editorial.json";
+import taxonomy from "../../data/industry-taxonomy.json";
 import TLDR from "../../components/ui/TLDR.astro";
 import AdSlot from "../../components/ui/AdSlot.astro";
+import IndustryStack from "../../components/ui/IndustryStack.astro";
+import SolutionSection from "../../components/ui/SolutionSection.astro";
+import WorkflowCard from "../../components/ui/WorkflowCard.astro";
+import ToolFAQ from "../../components/ui/ToolFAQ.astro";
+
 export async function getStaticPaths() {
   return solutions.map(s => ({ params: { slug: s.slug }, props: { solution: s } }));
 }
+
 const { solution } = Astro.props;
+
+const categoryLabels = { text: "Writing", image: "Image", code: "Coding", video: "Video", audio: "Audio", productivity: "Productivity" };
+
+function normaliseTool(id, role) {
+  const t = toolsData[id];
+  if (!t) return null;
+  return {
+    id,
+    name: t.name?.en || id,
+    description: t.short_desc?.en || "",
+    icon: t.icon || "fa-robot",
+    category: categoryLabels[t.cat] || t.cat,
+    role
+  };
+}
+
+const stackToolIds = solution.toolIds || [];
+const stackTools = stackToolIds
+  .map(id => normaliseTool(id, solution.stackRoles?.[id]?.en))
+  .filter(Boolean);
+
+const workflowMap = new Map(workflows.map(w => [w.slug, w]));
+const relatedWorkflows = (solution.workflows || [])
+  .map(slug => workflowMap.get(slug))
+  .filter(Boolean);
+
+const relatedSolutionSlugs = solution.relatedSolutionSlugs || [];
+const relatedSolutions = relatedSolutionSlugs
+  .map(slug => solutions.find(s => s.slug === slug))
+  .filter(Boolean);
+
+const taxonomyMap = new Map((taxonomy.tags || []).map(t => [t.slug, t]));
+const industryTagBadges = (solution.industryTags || [])
+  .map(t => taxonomyMap.get(t))
+  .filter(Boolean);
+
 const siteUrl = "https://thebestaitoolsreview.com";
-const pageUrl = siteUrl + "/solutions/" + solution.slug + "/";
-const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": solution.faq.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
-const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":solution.title,"description":solution.description,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"mainEntityOfPage":pageUrl,"datePublished":"2026-07-13","dateModified":"2026-07-13" };
-const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Solutions","item":siteUrl+"/solutions/"},{"@type":"ListItem","position":3,"name":solution.title,"item":pageUrl}] };
-const relatedWorkflows = workflows.filter(w => solution.workflows.includes(w.slug));
+const pageUrl = `${siteUrl}/solutions/${solution.slug}/`;
+const updatedAt = solution.updatedAt || "2026-07-20";
+
+const tlDrItems = [
+  solution.audience?.en || `${solution.industry} teams applying AI in real workflows.`,
+  `Recommended stack: ${stackTools.length} tools (${stackTools.slice(0,3).map(t => t.name).join(", ") || "curated"})`,
+  `Workflow guides: ${relatedWorkflows.length}`,
+  `Task areas covered: ${(solution.sections || []).length}`,
+  `Last reviewed: ${updatedAt}`
+];
+
+const seoTitle = `Best AI Tools for ${solution.industry} in 2026: Stack, Workflows & Use Cases`;
+const seoDescription = (solution.description || `Recommended AI stack, workflows and use cases for ${solution.industry.toLowerCase()} in 2026.`).slice(0, 158);
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteUrl + "/" },
+    { "@type": "ListItem", position: 2, name: "Solutions", item: siteUrl + "/solutions/" },
+    { "@type": "ListItem", position: 3, name: solution.industry, item: pageUrl }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: solution.title,
+  description: solution.description,
+  url: pageUrl,
+  mainEntityOfPage: pageUrl,
+  author: { "@type": "Organization", name: "AI Tool Hub Editorial", url: siteUrl },
+  publisher: { "@type": "Organization", name: "AI Tool Hub", url: siteUrl, logo: { "@type": "ImageObject", url: siteUrl + "/logo.svg" } },
+  datePublished: updatedAt,
+  dateModified: updatedAt,
+  inLanguage: "en"
+};
+
+const itemListSchema = stackTools.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: `${solution.industry} AI stack`,
+  itemListElement: stackTools.map((t, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: t.name,
+    url: `${siteUrl}/tool/${t.id}/`
+  }))
+} : null;
+
+const faqList = solution.faq || [];
+const isTargetPage = ["ai-for-architecture","ai-for-engineers","ai-for-construction","ai-for-small-business","ai-for-students"].includes(solution.slug);
+const bestRankingHref = {
+  "ai-for-students": "/best/students/",
+  "ai-for-small-business": "/best/small-business/",
+  "ai-for-architecture": "/best/",
+  "ai-for-engineers": "/best/developers/",
+  "ai-for-construction": "/best/"
+}[solution.slug];
 ---
-<BaseLayout title={solution.title + " | AI Solutions"} description={solution.description} keywords={solution.tools.join(", ") + ", AI " + solution.industry}>
+<BaseLayout title={seoTitle} description={seoDescription} keywords={`${solution.industry} AI, AI for ${solution.industry.toLowerCase()}, AI stack, AI workflows`}>
   <Fragment slot="head">
-    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
-    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    {itemListSchema && <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>}
   </Fragment>
-  <div class="article" style="max-width:800px;margin:0 auto;padding:48px 0;">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/solutions/">Solutions</a> &rsaquo; <span>{solution.industry}</span></nav>
-    <header class="article-header">
-      <span class="eyebrow">{solution.industry}</span>
-      <h1>{solution.title}</h1>
-    </header>
-    <section class="article-body">
-      <p style="font-size:16px;color:var(--text-soft);line-height:1.7;">{solution.description}</p>
-    <TLDR items={[
-      solution.title + " — industry guide",
-      "Tools covered: " + solution.tools.length,
-      "Sections: " + solution.sections.length,
-      "Related workflows: " + (solution.workflows ? solution.workflows.length : 0)
-    ]} />
+  <article class="solution-detail">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a> &rsaquo;
+      <a href="/solutions/">Solutions</a> &rsaquo;
+      <span>{solution.industry}</span>
+    </nav>
 
-    <AdSlot format="banner" />
-
-
-      <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:16px;margin:24px 0;">
-        <h3 style="font-size:14px;font-weight:600;margin-bottom:10px;">Recommended AI Tools</h3>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;">
-          {solution.tools.map(t => <a href={"/tool/" + t.toLowerCase().replace(/[^a-z0-9]/g, "-") + "/"} style="font-size:13px;color:var(--accent-color);background:rgba(59,130,246,0.08);padding:4px 12px;border-radius:6px;text-decoration:none;font-weight:500;">{t}</a>)}
+    <header class="solution-hero">
+      <div class="solution-hero-copy">
+        <div class="solution-hero-tags">
+          <span class="status-badge status-badge--industry"><i class={`fas ${solution.icon || "fa-briefcase"}`} aria-hidden="true"></i> {solution.industry}</span>
+          {industryTagBadges.map(tag => (
+            <span class="industry-tag">{tag.label?.en || tag.slug}</span>
+          ))}
+          <span class="solution-hero-updated">Updated {updatedAt}</span>
+        </div>
+        <h1>{solution.title}</h1>
+        {solution.description && <p class="solution-hero-summary">{solution.description}</p>}
+        <div class="solution-hero-cta">
+          <a class="solution-hero-btn primary" href="#recommended-stack">See recommended stack</a>
+          {bestRankingHref && <a class="solution-hero-btn secondary" href={bestRankingHref}>Compare individual tools →</a>}
         </div>
       </div>
+    </header>
 
-      {solution.sections.map(section => (
-        <section style="margin-top:32px;">
-          <h2 style="font-size:22px;font-weight:700;margin-bottom:12px;">{section.heading}</h2>
-          <p style="font-size:15px;color:var(--text-soft);line-height:1.8;margin-bottom:12px;">{section.content}</p>
-          <div style="background:rgba(59,130,246,0.05);border-left:3px solid var(--accent-color);padding:12px 16px;border-radius:0 8px 8px 0;margin:12px 0;">
-            <p style="font-size:13px;color:var(--text-soft);margin:0;"><strong>Recommended:</strong> {section.recommendedTools}</p>
-          </div>
-        </section>
-      ))}
+    <TLDR items={tlDrItems} />
 
-      {relatedWorkflows.length > 0 && (
-        <section style="margin-top:40px;">
-          <h2 style="font-size:22px;font-weight:700;margin-bottom:16px;">Related Workflows</h2>
-          <div style="display:grid;gap:12px;">
-            {relatedWorkflows.map(w => (
-              <a href={"/workflows/" + w.slug + "/"} style="text-decoration:none;color:inherit;display:block;background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;">
-                <h3 style="font-size:15px;font-weight:600;margin:0 0 4px 0;">{w.title}</h3>
-                <p style="font-size:13px;color:var(--text-mute);margin:0;">{w.tool} - {w.difficulty} - {w.steps.length} steps</p>
-              </a>
-            ))}
-          </div>
-        </section>
-      )}
+    <AdSlot format="banner" label="Advertisement" />
 
-      <section style="margin-top:40px;">
-        <h2 style="font-size:22px;font-weight:700;margin-bottom:16px;">FAQ</h2>
-        <div style="display:grid;gap:16px;">
-          {solution.faq.map(f => (
-            <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;">
-              <h3 style="font-size:15px;font-weight:600;margin-bottom:8px;">{f.q}</h3>
-              <p style="font-size:14px;color:var(--text-soft);line-height:1.6;margin:0;">{f.a}</p>
-            </div>
+    <section id="recommended-stack" class="solution-anchor">
+      <IndustryStack
+        tools={stackTools}
+        heading={`Recommended AI stack for ${solution.industry.toLowerCase()}`}
+        kicker="Recommended Stack"
+      />
+    </section>
+
+    {(solution.sections || []).length > 0 && (
+      <section class="solution-tasks">
+        <h2>Task areas and recommended tools</h2>
+        {(solution.sections || []).map(sec => (
+          <SolutionSection
+            heading={sec.heading}
+            content={sec.content}
+            tools={(sec.recommendedToolIds || []).map(id => normaliseTool(id, solution.stackRoles?.[id]?.en)).filter(Boolean)}
+          />
+        ))}
+      </section>
+    )}
+
+    <section class="solution-adoption">
+      <h2>How to adopt this stack</h2>
+      <ol class="adoption-path">
+        <li><strong>Start.</strong> Pick one general assistant from the stack, use it daily for two weeks, and standardize prompts your team can reuse.</li>
+        <li><strong>Automate.</strong> Add one automation tool (n8n or Make) and move a single repetitive workflow first, then expand.</li>
+        <li><strong>Govern.</strong> Store standards, brand voice and safety rules in a shared knowledge base (Notion AI or Dify). Keep a human in the loop for decisions with legal, safety or client impact.</li>
+      </ol>
+    </section>
+
+    {relatedWorkflows.length > 0 && (
+      <section class="solution-workflows">
+        <h2>Related workflows</h2>
+        <div class="workflow-grid">
+          {relatedWorkflows.map(w => <WorkflowCard workflow={w} />)}
+        </div>
+      </section>
+    )}
+
+    <section class="solution-safety">
+      <h2>Safety, ethics and disclosure</h2>
+      <ul>
+        <li>AI outputs must be verified against source documents or standards before being acted on.</li>
+        <li>For regulated or safety-critical decisions, licensed professionals remain accountable.</li>
+        <li>Do not upload confidential client data to consumer AI products; use enterprise plans with training turned off, or self-hosted alternatives.</li>
+      </ul>
+    </section>
+
+    <ToolFAQ faqs={faqList} heading="Frequently asked questions" />
+
+    {relatedSolutions.length > 0 && (
+      <section class="solution-related">
+        <h2>Related solution pages</h2>
+        <div class="related-grid">
+          {relatedSolutions.map(r => (
+            <a class="related-card" href={`/solutions/${r.slug}/`}>
+              <div class="related-icon" aria-hidden="true"><i class={`fas ${r.icon || "fa-briefcase"}`}></i></div>
+              <div>
+                <h3>{r.title}</h3>
+                {r.description && <p>{r.description}</p>}
+              </div>
+            </a>
           ))}
         </div>
       </section>
+    )}
 
-      <div style="margin-top:32px;padding:20px;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;">
-        <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;">This guide answers:</h3>
-        <ul style="margin:0;padding-left:20px;font-size:13px;color:var(--text-soft);line-height:1.8;">
-          <li>Which AI tools work best for {solution.industry.toLowerCase()}</li>
-          <li>How to combine multiple AI tools into effective workflows</li>
-          <li>Common questions and concerns about AI adoption in {solution.industry.toLowerCase()}</li>
-        </ul>
+    <section class="solution-cta">
+      <div>
+        <h2>Not sure which tools to start with?</h2>
+        <p>Run the AI Stack Builder for a 3-step, budget-aware recommendation drawn from real tools in this directory.</p>
       </div>
-
-      <p style="text-align:center;margin-top:32px;"><a href="/solutions/" style="color:var(--accent-color);font-weight:600;">Back to Solutions</a></p>
+      <a class="solution-hero-btn primary" href="/#finder">Open the AI Stack Builder →</a>
     </section>
-  </div>
+  </article>
 </BaseLayout>

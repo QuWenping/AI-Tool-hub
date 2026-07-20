@@ -98,7 +98,17 @@
         "Whitepaper",
         "Paper comparison"
       ]
-    }
+    },
+    "industry_tags": [
+      "architecture",
+      "engineering",
+      "construction",
+      "bim",
+      "small-business",
+      "students",
+      "education",
+      "marketing"
+    ]
   },
   "gemini": {
     "name": {
@@ -202,7 +212,13 @@
         "Cross-doc research",
         "Voice brainstorm"
       ]
-    }
+    },
+    "industry_tags": [
+      "engineering",
+      "small-business",
+      "students",
+      "education"
+    ]
   },
   "github-copilot": {
     "name": {
@@ -303,7 +319,12 @@
         "Explain legacy",
         "Language convert"
       ]
-    }
+    },
+    "industry_tags": [
+      "engineering",
+      "students",
+      "software-development"
+    ]
   },
   "cursor": {
     "name": {
@@ -404,7 +425,11 @@
         "Symptom-based fix",
         "Generate README"
       ]
-    }
+    },
+    "industry_tags": [
+      "engineering",
+      "software-development"
+    ]
   },
   "sora": {
     "name": {
@@ -606,7 +631,11 @@
         "60fps interp",
         "Style transfer"
       ]
-    }
+    },
+    "industry_tags": [
+      "architecture",
+      "industrial-design"
+    ]
   },
   "midjourney": {
     "name": {
@@ -707,7 +736,11 @@
         "Square graphic",
         "Blog hero"
       ]
-    }
+    },
+    "industry_tags": [
+      "architecture",
+      "industrial-design"
+    ]
   },
   "stable-diffusion": {
     "name": {
@@ -808,7 +841,12 @@
         "Restore photos",
         "Train style"
       ]
-    }
+    },
+    "industry_tags": [
+      "architecture",
+      "bim",
+      "industrial-design"
+    ]
   },
   "leonardo": {
     "name": {
@@ -909,7 +947,11 @@
         "Arch concepts",
         "E-com models"
       ]
-    }
+    },
+    "industry_tags": [
+      "architecture",
+      "industrial-design"
+    ]
   },
   "elevenlabs": {
     "name": {
@@ -1318,7 +1360,13 @@
         "Doc translate",
         "Weekly report"
       ]
-    }
+    },
+    "industry_tags": [
+      "engineering",
+      "small-business",
+      "education",
+      "marketing"
+    ]
   },
   "perplexity": {
     "name": {
@@ -1419,7 +1467,11 @@
         "News summary",
         "Academic papers"
       ]
-    }
+    },
+    "industry_tags": [
+      "engineering",
+      "students"
+    ]
   },
   "jasper": {
     "name": {
@@ -1518,7 +1570,11 @@
         "Brand social",
         "Email seq"
       ]
-    }
+    },
+    "industry_tags": [
+      "small-business",
+      "marketing"
+    ]
   },
   "chatgpt": {
     "name": {
@@ -1619,7 +1675,16 @@
         "Translate",
         "Brainstorm"
       ]
-    }
+    },
+    "industry_tags": [
+      "architecture",
+      "engineering",
+      "construction",
+      "small-business",
+      "students",
+      "education",
+      "marketing"
+    ]
   },
   "hostinger": {
     "name": {
@@ -2024,7 +2089,11 @@
         "Commercial",
         "Concept"
       ]
-    }
+    },
+    "industry_tags": [
+      "architecture",
+      "industrial-design"
+    ]
   },
   "pika": {
     "name": {
@@ -2937,7 +3006,12 @@
         "Lectures",
         "Actions"
       ]
-    }
+    },
+    "industry_tags": [
+      "construction",
+      "students",
+      "education"
+    ]
   },
   "fireflies": {
     "name": {
@@ -3038,7 +3112,12 @@
         "Analytics",
         "Meetings"
       ]
-    }
+    },
+    "industry_tags": [
+      "construction",
+      "small-business",
+      "marketing"
+    ]
   },
   "gamma": {
     "name": {
@@ -3242,7 +3321,10 @@
         "Debugging",
         "Scaffolding"
       ]
-    }
+    },
+    "industry_tags": [
+      "software-development"
+    ]
   },
   "windsurf": {
     "name": {
@@ -3339,7 +3421,10 @@
         "Autocomplete",
         "Debug"
       ]
-    }
+    },
+    "industry_tags": [
+      "software-development"
+    ]
   },
   "aider": {
     "name": {
@@ -3432,7 +3517,10 @@
         "Git workflow",
         "Batch refactor"
       ]
-    }
+    },
+    "industry_tags": [
+      "software-development"
+    ]
   },
   "codeium": {
     "name": {
@@ -3525,7 +3613,10 @@
         "Quick protos",
         "Learning"
       ]
-    }
+    },
+    "industry_tags": [
+      "software-development"
+    ]
   },
   "replit": {
     "name": {
@@ -3622,7 +3713,11 @@
         "Deploy",
         "Collab"
       ]
-    }
+    },
+    "industry_tags": [
+      "students",
+      "software-development"
+    ]
   },
   "v0": {
     "name": {
@@ -3717,7 +3812,10 @@
         "Components",
         "Demos"
       ]
-    }
+    },
+    "industry_tags": [
+      "software-development"
+    ]
   },
   "lovable": {
     "name": {
@@ -3812,7 +3910,10 @@
         "Protos",
         "SaaS"
       ]
-    }
+    },
+    "industry_tags": [
+      "software-development"
+    ]
   },
   "deepseek": {
     "name": {
@@ -3909,7 +4010,10 @@
         "API",
         "Local deploy"
       ]
-    }
+    },
+    "industry_tags": [
+      "software-development"
+    ]
   },
   "copy-ai": {
     "name": {
@@ -4006,7 +4110,11 @@
         "Social",
         "Blog"
       ]
-    }
+    },
+    "industry_tags": [
+      "small-business",
+      "marketing"
+    ]
   },
   "quillbot": {
     "name": {
@@ -4103,7 +4211,11 @@
         "Summaries",
         "Grammar"
       ]
-    }
+    },
+    "industry_tags": [
+      "students",
+      "education"
+    ]
   },
   "elicit": {
     "name": {
@@ -4200,7 +4312,11 @@
         "Paper analysis",
         "Research"
       ]
-    }
+    },
+    "industry_tags": [
+      "students",
+      "education"
+    ]
   },
   "phind": {
     "name": {
@@ -4390,7 +4506,11 @@
         "Presentations",
         "Photo edit"
       ]
-    }
+    },
+    "industry_tags": [
+      "small-business",
+      "marketing"
+    ]
   },
   "uizard": {
     "name": {
@@ -4580,7 +4700,10 @@
         "Internal tools",
         "Demos"
       ]
-    }
+    },
+    "industry_tags": [
+      "software-development"
+    ]
   },
   "writesonic": {
     "name": {
@@ -4677,7 +4800,10 @@
         "Landing",
         "Marketing"
       ]
-    }
+    },
+    "industry_tags": [
+      "marketing"
+    ]
   },
   "taskade": {
     "name": {
@@ -4774,7 +4900,10 @@
         "Collab",
         "Notes"
       ]
-    }
+    },
+    "industry_tags": [
+      "construction"
+    ]
   },
   "read-ai": {
     "name": {
@@ -5063,7 +5192,10 @@
         "Q&A",
         "Citations"
       ]
-    }
+    },
+    "industry_tags": [
+      "students"
+    ]
   },
   "coda-ai": {
     "name": {
@@ -5936,7 +6068,11 @@
         "Docs",
         "Accessibility"
       ]
-    }
+    },
+    "industry_tags": [
+      "students",
+      "education"
+    ]
   },
   "surfer-seo": {
     "name": {
@@ -6613,7 +6749,11 @@
         "Workflows",
         "Experiments"
       ]
-    }
+    },
+    "industry_tags": [
+      "architecture",
+      "bim"
+    ]
   },
   "dalle3": {
     "name": {
@@ -6809,7 +6949,10 @@
         "Social",
         "Bg removal"
       ]
-    }
+    },
+    "industry_tags": [
+      "small-business"
+    ]
   },
   "removebg": {
     "name": {
@@ -6997,7 +7140,10 @@
         "Enterprise",
         "Security"
       ]
-    }
+    },
+    "industry_tags": [
+      "software-development"
+    ]
   },
   "n8n": {
     "name": {
@@ -7096,7 +7242,13 @@
         "AI Agent",
         "API"
       ]
-    }
+    },
+    "industry_tags": [
+      "engineering",
+      "construction",
+      "bim",
+      "small-business"
+    ]
   },
   "autogpt": {
     "name": {
@@ -7294,7 +7446,12 @@
         "Workflows",
         "RAG"
       ]
-    }
+    },
+    "industry_tags": [
+      "engineering",
+      "construction",
+      "bim"
+    ]
   },
   "make-com": {
     "name": {
@@ -7391,7 +7548,12 @@
         "AI workflows",
         "Integration"
       ]
-    }
+    },
+    "industry_tags": [
+      "construction",
+      "small-business",
+      "marketing"
+    ]
   },
   "amazon-q": {
     "name": {
@@ -8161,7 +8323,10 @@
         "Email",
         "A/B"
       ]
-    }
+    },
+    "industry_tags": [
+      "marketing"
+    ]
   },
   "genmo": {
     "name": {
@@ -15918,7 +16083,11 @@
         "See review"
       ]
     },
-    "alt": []
+    "alt": [],
+    "industry_tags": [
+      "architecture",
+      "industrial-design"
+    ]
   },
   "marmof-ai": {
     "name": {
@@ -19233,7 +19402,10 @@
         "See review"
       ]
     },
-    "alt": []
+    "alt": [],
+    "industry_tags": [
+      "construction"
+    ]
   },
   "-clickup-ai": {
     "name": {
@@ -19284,7 +19456,10 @@
         "See review"
       ]
     },
-    "alt": []
+    "alt": [],
+    "industry_tags": [
+      "construction"
+    ]
   },
   "asana-ai": {
     "name": {
@@ -19386,7 +19561,10 @@
         "See review"
       ]
     },
-    "alt": []
+    "alt": [],
+    "industry_tags": [
+      "construction"
+    ]
   },
   "notion-calendar": {
     "name": {

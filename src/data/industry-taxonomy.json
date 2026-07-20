@@ -1,0 +1,92 @@
+{
+  "tags": [
+    {
+      "slug": "architecture",
+      "label": { "en": "Architecture", "zh": "建筑设计" },
+      "description": { "en": "Concept design, 3D visualization, rendering, code compliance and documentation for practicing architects.", "zh": "面向建筑师的方案设计、可视化、渲染、规范审查与文档工作。" },
+      "solutionSlug": "ai-for-architecture",
+      "parent": null,
+      "related": ["bim", "engineering", "construction", "industrial-design"]
+    },
+    {
+      "slug": "engineering",
+      "label": { "en": "Engineering", "zh": "工程" },
+      "description": { "en": "Umbrella tag for structural, civil, HVAC/MEP and technical engineering work.", "zh": "结构、市政、机电和技术工程工作的汇总标签。" },
+      "solutionSlug": "ai-for-engineers",
+      "parent": null,
+      "related": ["architecture", "construction", "bim"]
+    },
+    {
+      "slug": "construction",
+      "label": { "en": "Construction", "zh": "施工建造" },
+      "description": { "en": "Project planning, safety, quality, RFI management and reporting on construction sites.", "zh": "施工项目的计划、安全、质量、RFI 与汇报工作。" },
+      "solutionSlug": "ai-for-construction",
+      "parent": null,
+      "related": ["architecture", "engineering", "bim", "project-management"]
+    },
+    {
+      "slug": "bim",
+      "label": { "en": "BIM & Digital Construction", "zh": "BIM 与数字化建造" },
+      "description": { "en": "BIM coordination, model federation, quantity take-off, and issue tracking.", "zh": "BIM 协同、模型合并、工程量清单与问题追踪。" },
+      "solutionSlug": "ai-for-bim",
+      "parent": "construction",
+      "related": ["architecture", "engineering"]
+    },
+    {
+      "slug": "industrial-design",
+      "label": { "en": "Industrial & Product Design", "zh": "工业与产品设计" },
+      "description": { "en": "Concept sketching, CMF exploration, and design communication for physical products.", "zh": "产品概念、CMF 探索与设计沟通。" },
+      "solutionSlug": "ai-for-industrial-design",
+      "parent": null,
+      "related": ["architecture", "engineering"]
+    },
+    {
+      "slug": "small-business",
+      "label": { "en": "Small Business", "zh": "小企业" },
+      "description": { "en": "Owner-operators and lean teams using AI for marketing, sales, support and operations.", "zh": "创业者和精益团队用 AI 处理营销、销售、支持和运营。" },
+      "solutionSlug": "ai-for-small-business",
+      "parent": null,
+      "related": ["marketing", "project-management"]
+    },
+    {
+      "slug": "students",
+      "label": { "en": "Students & Learners", "zh": "学生与学习者" },
+      "description": { "en": "Learners using AI for note-taking, research, coding, writing and language study.", "zh": "学习者用 AI 处理笔记、研究、编程、写作与语言学习。" },
+      "solutionSlug": "ai-for-students",
+      "parent": null,
+      "related": ["education"]
+    },
+    {
+      "slug": "education",
+      "label": { "en": "Education", "zh": "教育" },
+      "description": { "en": "Teaching, learning and administration in schools and training providers.", "zh": "学校与培训机构中的教学、学习与管理工作。" },
+      "solutionSlug": "ai-for-education",
+      "parent": null,
+      "related": ["students"]
+    },
+    {
+      "slug": "marketing",
+      "label": { "en": "Marketing", "zh": "市场营销" },
+      "description": { "en": "Content marketing, SEO, ads and social workflows for growth teams.", "zh": "增长团队的内容、SEO、广告和社交工作流。" },
+      "solutionSlug": "ai-for-marketing",
+      "parent": null,
+      "related": ["small-business"]
+    },
+    {
+      "slug": "software-development",
+      "label": { "en": "Software Development", "zh": "软件开发" },
+      "description": { "en": "Engineering workflows across coding, testing, review and DevOps.", "zh": "编码、测试、评审和 DevOps 全链路开发工作流。" },
+      "solutionSlug": "ai-for-developers",
+      "parent": null,
+      "related": ["engineering"]
+    },
+    {
+      "slug": "project-management",
+      "label": { "en": "Project Management", "zh": "项目管理" },
+      "description": { "en": "Planning, tracking and cross-team coordination.", "zh": "计划、跟踪与跨团队协作。" },
+      "solutionSlug": null,
+      "parent": null,
+      "related": ["small-business", "construction"]
+    }
+  ]
+}

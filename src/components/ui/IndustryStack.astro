@@ -1,0 +1,19 @@
+---
+import IndustryToolCard from "./IndustryToolCard.astro";
+const { tools = [], heading, kicker } = Astro.props;
+const list = (tools || []).filter(x => x && x.id);
+---
+{list.length > 0 && (
+  <section class="industry-stack" aria-labelledby="industry-stack-heading">
+    {kicker && <span class="section-kicker">{kicker}</span>}
+    <h2 id="industry-stack-heading">{heading || "Recommended AI stack"}</h2>
+    <ol class="industry-stack-list">
+      {list.map((item, i) => (
+        <li class="industry-stack-item">
+          <span class="industry-stack-rank" aria-hidden="true">{i + 1}</span>
+          <IndustryToolCard tool={item} role={item.role} />
+        </li>
+      ))}
+    </ol>
+  </section>
+)}

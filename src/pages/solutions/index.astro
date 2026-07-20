@@ -1,27 +1,128 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import solutions from "../../data/solutions.json";
----
-<BaseLayout title="AI Solutions by Industry | Developer, Marketing, Education, Business" description="Industry-specific AI tool guides for developers, marketers, educators, businesses, and creatives. Learn which AI tools to use, how to combine them, and real workflows for your field." keywords="AI solutions, AI for developers, AI for marketing, AI for education, AI for business, AI for creatives, industry AI guide">
-  <div class="container" style="max-width:900px;margin:0 auto;padding:48px 24px;">
-    <nav class="breadcrumbs" style="margin-bottom:24px;"><a href="/">Home</a> &rsaquo; <span>Solutions</span></nav>
-    <h1 style="font-size:32px;font-weight:700;margin-bottom:8px;">AI Solutions by Industry</h1>
-    <p style="color:var(--text-mute);font-size:16px;margin-bottom:32px;">Industry-specific guides: which AI tools to use, how to combine them into workflows, and real-world implementation strategies.</p>
+import taxonomy from "../../data/industry-taxonomy.json";
 
-    <div style="display:grid;gap:20px;">
-      {solutions.map(s => (
-        <a href={"/solutions/" + s.slug + "/"} style="text-decoration:none;color:inherit;display:block;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:24px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent-color)'" onmouseout="this.style.borderColor='var(--border-color)'">
-          <div style="display:flex;justify-content:space-between;align-items:start;gap:12px;margin-bottom:8px;">
-            <h2 style="font-size:18px;font-weight:600;margin:0;">{s.title}</h2>
-            <span style="font-size:11px;color:var(--accent-color);background:rgba(59,130,246,0.1);padding:3px 10px;border-radius:999px;white-space:nowrap;font-weight:600;">{s.industry}</span>
-          </div>
-          <p style="font-size:14px;color:var(--text-soft);margin:0 0 12px 0;line-height:1.5;">{s.description}</p>
-          <div style="display:flex;gap:6px;flex-wrap:wrap;">
-            {s.tools.slice(0, 5).map(t => <span style="font-size:12px;color:var(--text-mute);background:var(--bg-color);padding:3px 10px;border-radius:5px;">{t}</span>)}
-            {s.tools.length > 5 && <span style="font-size:12px;color:var(--text-mute);padding:3px 6px;">+{s.tools.length - 5} more</span>}
-          </div>
-        </a>
-      ))}
-    </div>
-  </div>
+const featuredSlugs = [
+  "ai-for-architecture",
+  "ai-for-engineers",
+  "ai-for-construction",
+  "ai-for-small-business",
+  "ai-for-students"
+];
+const featured = featuredSlugs.map(slug => solutions.find(s => s.slug === slug)).filter(Boolean);
+const others = solutions.filter(s => !featuredSlugs.includes(s.slug));
+
+const filterTags = [
+  { slug: "all", label: "All" },
+  { slug: "architecture", label: "Architecture" },
+  { slug: "engineering", label: "Engineering" },
+  { slug: "construction", label: "Construction" },
+  { slug: "small-business", label: "Small Business" },
+  { slug: "students", label: "Students" },
+  { slug: "marketing", label: "Marketing" },
+  { slug: "software-development", label: "Software" }
+];
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/solutions/";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: siteUrl + "/" },
+    { "@type": "ListItem", position: 2, name: "Solutions", item: pageUrl }
+  ]
+};
+---
+<BaseLayout
+  title="AI Solutions by Industry in 2026: Stacks, Workflows & Use Cases"
+  description="Industry-specific AI stacks and workflows for architecture, engineering, construction, small business and students. Real tools, real use cases, real workflows."
+  keywords="AI solutions, AI for architects, AI for engineers, AI for construction, AI for small business, AI for students"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+  <article class="solutions-index">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a> &rsaquo; <span>Solutions</span>
+    </nav>
+
+    <header class="solutions-hero">
+      <span class="section-kicker">AI Solutions by Industry</span>
+      <h1>AI stacks, workflows and use cases by industry</h1>
+      <p class="solutions-hero-summary">
+        Solution pages recommend a complete <strong>stack</strong> and real <strong>workflows</strong> for your industry.
+        For head-to-head tool rankings, use our <a href="/best/">Best AI Tools</a> guides.
+        Not sure where to start? Run the <a href="/#finder">AI Stack Builder</a>.
+      </p>
+      <div class="solution-filter" role="tablist" aria-label="Industry filter">
+        {filterTags.map(tag => (
+          <button class="solution-filter-btn" type="button" data-filter={tag.slug} aria-pressed={tag.slug === "all" ? "true" : "false"}>{tag.label}</button>
+        ))}
+      </div>
+    </header>
+
+    <section class="solutions-featured">
+      <h2>Featured industry pages</h2>
+      <div class="solutions-grid">
+        {featured.map(s => (
+          <a class="solution-card" href={`/solutions/${s.slug}/`} data-tags={(s.industryTags || []).join(",")}>
+            <div class="solution-card-head">
+              <span class="solution-card-icon" aria-hidden="true"><i class={`fas ${s.icon || "fa-briefcase"}`}></i></span>
+              <span class="solution-card-industry">{s.industry}</span>
+            </div>
+            <h3>{s.title}</h3>
+            {s.description && <p>{s.description}</p>}
+            <div class="solution-card-meta">
+              <span>{(s.toolIds || []).length} tools</span>
+              <span>{(s.workflows || []).length} workflows</span>
+              <span>{(s.faq || []).length} FAQs</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="solutions-list">
+      <h2>All industries and use cases</h2>
+      <div class="solutions-grid">
+        {others.map(s => (
+          <a class="solution-card compact" href={`/solutions/${s.slug}/`} data-tags={(s.industryTags || []).join(",")}>
+            <div class="solution-card-head">
+              <span class="solution-card-icon" aria-hidden="true"><i class={`fas ${s.icon || "fa-briefcase"}`}></i></span>
+              <span class="solution-card-industry">{s.industry}</span>
+            </div>
+            <h3>{s.title}</h3>
+            {s.description && <p>{s.description}</p>}
+            <div class="solution-card-meta">
+              <span>{(s.toolIds || []).length} tools</span>
+              <span>{(s.workflows || []).length} workflows</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </article>
+
+  <script is:inline>
+    (function () {
+      const buttons = document.querySelectorAll(".solution-filter-btn");
+      const cards = document.querySelectorAll(".solution-card");
+      if (!buttons.length || !cards.length) return;
+      function apply(filter) {
+        cards.forEach(card => {
+          const tags = (card.getAttribute("data-tags") || "").split(",").filter(Boolean);
+          card.hidden = !(filter === "all" || tags.includes(filter));
+        });
+        buttons.forEach(btn => {
+          btn.setAttribute("aria-pressed", String(btn.dataset.filter === filter));
+        });
+      }
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => apply(btn.dataset.filter));
+      });
+    })();
+  </script>
 </BaseLayout>

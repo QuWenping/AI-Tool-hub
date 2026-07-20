@@ -1,0 +1,21 @@
+---
+const { tool, role } = Astro.props;
+if (!tool || !tool.id) return null;
+const name = tool.name || tool.id;
+const desc = tool.description || "";
+const icon = tool.icon || "fa-robot";
+const cat = tool.category;
+const href = `/tool/${tool.id}/`;
+---
+<a class="industry-tool-card" href={href}>
+  <div class="industry-tool-icon" aria-hidden="true"><i class={`fas ${icon}`}></i></div>
+  <div class="industry-tool-body">
+    <div class="industry-tool-row">
+      <strong class="industry-tool-name">{name}</strong>
+      {cat && <span class="industry-tool-cat">{cat}</span>}
+    </div>
+    {role && <div class="industry-tool-role">{role}</div>}
+    {desc && <p class="industry-tool-desc">{desc}</p>}
+    <span class="industry-tool-cta" aria-hidden="true">View review →</span>
+  </div>
+</a>
