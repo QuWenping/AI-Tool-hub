@@ -18,10 +18,19 @@ related:
 > **文档说明**：本文件用于盘点每一项计划的当前状态。建议每周五更新一次；日常任务勾选请到 [[AI-Tool-Hub-任务计划]]，完整规划参考 [[AI-Tool-Hub-完整规划]]。
 
 **基于开发计划**：[[AI-Tool-Hub-完整规划]]（含 SEO 自动化生产系统）
-**盘点日期**：2026-07-19
+**盘点日期**：2026-07-20
 
 ## 🚀 最近里程碑
 
+- **Sprint 4（2026-07-20）**：P0-8 / P0-9 / P0-10 / P0-14 — Design System 统一 + 图片 Lightbox
+  - 新增 `docs/URL-STRUCTURE.md`：URL 结构规范化决策（保留 `/tool/`、`/vs/`、`/best/`；`/tools/` 留给免费在线工具；不做大规模 301）
+  - `src/styles/global.css` 新增 `.article-grid`（760 文章 + 280 sticky TOC + 可选 320 sidebar）与 `.prose` 响应式排版（H1 64 / H2 42 / H3 32 / 正文 20，clamp）
+  - `src/pages/tool/[slug].astro` 重构为参考实现：`.article-grid` 双栏 + 16 项自动 TOC（所有 h2 补 id，TOC 链接全部命中锚点）
+  - `public/css/style.css`：`.tool-detail-header h1`、`.lede`、`.detail-section h2/p/li` 升级到规范尺寸（H1 clamp→64、H2 clamp→42、正文 20、行高 1.85）
+  - 新增 `public/js/lightbox.js`（无依赖、渐进增强、Esc/方向键、上一张/下一张、caption、计数）+ `.lb-overlay` 样式；`ScreenshotGallery.astro` 加 `data-lightbox`；`BaseLayout` 引入脚本
+  - 新增 `scripts/verify-sprint4.mjs` Playwright 校验脚本
+  - 验证 `/tool/chatgpt/`：article-main 760px + article-toc 280px、H1 64 / H2 42 / lede 20、16 TOC 链接全部命中、1440/390 无溢出、无控制台错误、移动端 TOC 隐藏 + H1 38px、Lightbox 点击截图弹出 overlay 正确
+  - 构建通过：2142 页
 - **Sprint 3（2026-07-20）**：P0-13 industry_tags + P0-15 五个行业场景页上线
   - 新增 `src/data/industry-taxonomy.json`（11 项分类）
   - `tools.json` 43 款工具补齐 `industry_tags`（数据完整性 100% 通过校验）
@@ -63,11 +72,11 @@ related:
 |---|---|---|---|
 | 1.1 | Design Token（tokens.css） | ✅ 已完成 | 颜色/字体/间距/阴影/圆角齐全 |
 | 1.2 | 亮/暗主题统一 | ✅ 已完成 | body.light-theme + data-theme 已同步 |
-| 1.3 | Grid System（1320/760/280/320） | ⚠️ 部分 | 首页已按 1320px，Article 760/TOC 280 未统一 |
-| 1.4 | Typography（H1 64、H2 42、正文 20） | ⚠️ 部分 | 首页 Hero 已达标，其他页面仍偏小 |
+| 1.3 | Grid System（1320/760/280/320） | ✅ 系统已建 | Sprint 4：`.article-grid`（760+280+可选320）落地，tool 详情页为参考实现；其余页面待逐页迁移 |
+| 1.4 | Typography（H1 64、H2 42、正文 20） | ✅ 系统已建 | Sprint 4：`.prose` 响应式排版 + tool 详情页 H1/H2/正文 已达规范；其余页面待套用 |
 | 1.5 | 响应式断点（1280/1024/768） | ✅ 已完成 | 首页 + 全局导航折叠已实现 |
 | 1.6 | 组件库（40+ 组件） | ⚠️ 部分 | 已有 25 个（Hero、ToolCard、ProsCons、TLDR、Verdict、Comparison、AdSlot 等），缺 AI Stack Builder、Finder、Benchmark、Radar 等业务组件 |
-| 1.7 | 图片规范（WebP/AVIF + LazyLoad） | ❌ 未完成 | 无 WebP/AVIF 转换管道，无 Lightbox |
+| 1.7 | 图片规范（WebP/AVIF + LazyLoad） | ⚠️ 部分 | Sprint 4：Lightbox + LazyLoad 已落地；WebP 优先读取已在 tool 页（同 basename 优先 avif/webp）；AVIF 批量转换管道仍缺 |
 | 1.8 | 动效规范（150ms/250ms） | ✅ 已完成 | 首页 CSS 已按规范 |
 | 1.9 | Lighthouse ≥95 达标 | ❌ 未测试 | 尚未运行完整评估 |
 | 1.10 | 组件化（禁止页面内写死样式） | ❌ 大部分未达标 | 100+ 页面充斥 inline style 和 hard-coded 颜色 |

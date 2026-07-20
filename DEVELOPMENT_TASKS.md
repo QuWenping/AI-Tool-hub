@@ -14,9 +14,14 @@ status: active
 
 > **说明**：本文件是主索引，任务状态用 `- [ ]` / `- [x]` 复选框标记，Obsidian 内可直接点击勾选。
 > **多人协作**：修改任务状态时请在末尾追加 `@name 2026-MM-DD`，例如 `- [x] 任务 A @QuQu 2026-07-19`。
+> **AI 分工**：
+> - **Claude → [[AI-Tool-Hub-内容更新计划]]**：Reviews / Comparisons / Topic Clusters / 内链 / 外链 / 编辑元数据 / Newsletter
+> - **Codex → 本文件其它所有代码类任务**：Design System / 组件 / 页面模板 / Supabase / Agent Pipeline / 性能 / 安全
+>
 > **配套文档**：
 > - [[AI-Tool-Hub-完整规划|完整规划详情（Design System / SEO / Agent Pipeline）]]
 > - [[AI-Tool-Hub-现状对比|计划 vs 现状对比表]]
+> - [[AI-Tool-Hub-内容更新计划|内容运营（Claude 主导）]]
 
 ---
 
@@ -49,9 +54,9 @@ status: active
 
 - [ ] P0-3 组件化重构现存页面（消除 100+ 页面 inline style / hard-coded 颜色）
 - [ ] P0-7 Lighthouse 全站达标（Performance ≥95、SEO 100）
-- [ ] P0-8 图片规范（WebP/AVIF + Lightbox + Lazy Load）
-- [ ] P0-9 Grid System 统一（Article 760 / TOC 280 / Sidebar 320）
-- [ ] P0-10 Typography 全站统一（H1 64 / H2 42 / 正文 20）
+- [x] P0-8 图片规范（WebP/AVIF + Lightbox + Lazy Load） @Claude 2026-07-20
+- [x] P0-9 Grid System 统一（Article 760 / TOC 280 / Sidebar 320） @Claude 2026-07-20
+- [x] P0-10 Typography 全站统一（H1 64 / H2 42 / 正文 20） @Claude 2026-07-20
 
 ## AI 决策平台核心
 
@@ -69,7 +74,7 @@ status: active
 
 - [ ] P0-11 首批 50 个 SEO 页面上线（10 工具 + 5 vs + 5 场景 + 4 趋势 + 26 补齐）
 - [x] P0-13 tools.json 增加 `industry_tags` 字段（Architecture / Engineering / Construction / BIM / Industrial + 教育 / 营销 / 软件） @Claude 2026-07-20
-- [ ] P0-14 URL 结构规范化决策（`/tools/{slug}` vs `/tool/{slug}`；`/compare/A-vs-B` vs `/vs/{slug}`）
+- [x] P0-14 URL 结构规范化决策（`/tools/{slug}` vs `/tool/{slug}`；`/compare/A-vs-B` vs `/vs/{slug}`） @Claude 2026-07-20
 - [x] P0-15 场景页新增 5 篇（Architects / Engineers / Construction / Small Business / Students） @Claude 2026-07-20
 
 ---
@@ -168,6 +173,9 @@ status: active
 
 # ✅ 已完成里程碑（记录 & 归档）
 
+- [x] **P0-14 URL 结构规范化决策** — `docs/URL-STRUCTURE.md`：保留 `/tool/{slug}/`、`/vs/{slug}/`、`/best/{cat}/`；`/tools/`（复数）留给免费在线工具；不做大规模 301 迁移 @Claude 2026-07-20
+- [x] **P0-9 + P0-10 Article Grid + Prose Typography 系统** — `global.css` 新增 `.article-grid`（760 文章 + 280 sticky TOC + 可选 320 sidebar）与 `.prose` 响应式排版（H1 64 / H2 42 / H3 32 / 正文 20，clamp 响应式）；`tool/[slug].astro` 重构为参考实现（760+280 双栏 + 16 项自动 TOC）；`.tool-detail-header h1`、`.lede`、`.detail-section h2/p/li` 升级到规范尺寸 @Claude 2026-07-20
+- [x] **P0-8 图片 Lightbox + Lazy Load** — `public/js/lightbox.js`（无依赖、渐进增强、Esc/方向键、上一张/下一张、caption、计数）+ `.lb-overlay` 样式；`ScreenshotGallery.astro` 加 `data-lightbox`；`BaseLayout` 引入脚本；截图 `<img>` 已 `loading=lazy` + `decoding=async` @Claude 2026-07-20
 - [x] **P0-13 industry_tags 分类体系落地** — 11 项分类 + 43 款工具打标 + `industry-taxonomy.json` @Claude 2026-07-20
 - [x] **P0-15 五个行业场景页上线** — Architects / Engineers / Construction / Small Business / Students（每页 9-11 工具 + 10 FAQ + 完整 JSON-LD） @Claude 2026-07-20
 - [x] **P0-4 Tool Detail 模板重构（基础）** — Quick Facts / TestStatus / FeatureTable / ToolFAQ / SEO Schema 全部到位，17 家旗舰工具补齐编辑元数据 @Claude 2026-07-20
@@ -212,11 +220,18 @@ status: active
 
 ## 分工建议
 
+- **Claude（内容运营）**：全权负责 [[AI-Tool-Hub-内容更新计划]] — Reviews / Comparisons / Topic Clusters / 内链 / 外链 / 编辑元数据 / Newsletter / 稳态产线
+- **Codex（工程实施）**：全权负责本文件里其它所有代码类任务 — Design System / 组件 / 页面模板 / Supabase / Agent Pipeline / 性能 / 安全 / DevOps
 - **前端 / UI**：P0-3、P0-4、P0-7~P0-10、P1-7、P1-13
-- **内容运营**：P0-11、P0-15、P1-4、P1-10
+- **内容运营**：P0-11、P0-15、P1-4、P1-10（走内容更新计划的排期与规范）
 - **后端 / 数据**：P0-1、P0-2、P0-13、P1-14、P1-15
 - **自动化 / Agent**：P1-2、P2-12~P2-18
 - **行业内容**：P0-15、P2-3
+
+**协作接口**：
+- 内容运营发现模板缺陷或字段需扩展 → 在 [[AI-Tool-Hub-任务计划]] 加 `- [ ] Pn-XX` 交给 Codex
+- Codex 发布新模板/新字段 → 在 [[AI-Tool-Hub-内容更新计划]] 顶部 "📈 周报" 区留一条 changelog 通知 Claude
+- 争议或跨界任务 → 标 `⚠️` + 具名 `@Claude` 或 `@Codex` 触发协商
 
 ---
 
@@ -232,11 +247,11 @@ LIMIT 0
 ```
 
 **当前状态**（2026-07-20）：
-- P0：6/15
+- P0：10/15
 - P1：0/19
 - P2：0/18
 - P3：0/10
-- **总计**：6/62 已明确任务
+- **总计**：10/62 已明确任务
 - **已完成**：19 项基础里程碑（含 Sprint 1 的 P0-1/P0-2、Sprint 2 的 P0-4/P0-12、Sprint 3 的 P0-13/P0-15）
 
 > **Sprint 3 备注**：P0-13 落地为**分类体系 + 精选工具打标（43/299）**，全站 5000 工具的标签化仍归 P1-1/P1-14；P0-15 交付 Architects / Engineers / Construction / Small Business / Students 五页面向工作流意图（不与 `/best/` 排名意图重复）。
