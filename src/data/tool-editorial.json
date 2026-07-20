@@ -211,5 +211,25 @@
       { "q_en": "Is Hostinger suitable for high-traffic sites?", "q_zh": "Hostinger 能扛住大流量吗？", "a_en": "Entry-level plans have shared resource caps; scale up to Cloud or use a CDN when traffic grows.", "a_zh": "低价套餐资源受限；高流量请升级 Cloud 或叠加 CDN。" },
       { "q_en": "Does Hostinger include a free domain?", "q_zh": "Hostinger 是否赠送域名？", "a_en": "Yes, annual Business+ plans include a free first-year domain and SSL.", "a_zh": "年付 Business 及以上版本赠首年域名和 SSL。" }
     ]
+  },
+  "deepseek": {
+    "reviewed": true,
+    "updatedAt": "2026-07-21",
+    "testedVersion": "DeepSeek-V3 / DeepSeek-R1 (2026)",
+    "score": 8.6,
+    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Web","iOS","Android","API","Self-hosted"] },
+    "pricingSummary": { "en": "Free web/app chat · API $0.14/M input, $0.28/M output for V3 · R1 reasoning at $0.55/M input, $2.19/M output · Weights open-source for self-hosting.", "zh": "网页/APP 免费使用；V3 API 输入 $0.14/M、输出 $0.28/M；R1 推理输入 $0.55/M、输出 $2.19/M；开源权重可自部署。" },
+    "faq": [
+      { "q_en": "Is DeepSeek free to use?", "q_zh": "DeepSeek 免费吗？", "a_en": "Yes — the web app and mobile app are free. Paid usage only kicks in when you call the API or self-host on your own GPUs.", "a_zh": "网页版和 App 免费使用。只有调用 API 或自托管 GPU 部署时才产生费用。" },
+      { "q_en": "How is DeepSeek so much cheaper than GPT-5 or Claude?", "q_zh": "DeepSeek 为什么比 GPT-5 和 Claude 便宜这么多？", "a_en": "DeepSeek trained a Mixture-of-Experts (MoE) model that activates only ~37B of its 671B parameters per token, so inference cost is a fraction of dense frontier models. Public weights let cloud vendors compete on price.", "a_zh": "DeepSeek 用 MoE 架构，每个 token 只激活 671B 中的约 37B 参数，推理成本大幅低于稠密前沿模型；开源权重让云厂商充分竞争，进一步压价。" },
+      { "q_en": "What is DeepSeek-R1 and how is it different from V3?", "q_zh": "DeepSeek-R1 和 V3 有什么区别？", "a_en": "V3 is the general-purpose chat/coding model. R1 is the reasoning model with visible chain-of-thought; use R1 for math, code review, planning and hard reasoning, use V3 for everything else.", "a_zh": "V3 是通用对话/编程模型；R1 是推理模型，会输出显式思维链，适合数学、代码审查、复杂规划；日常任务用 V3 更划算。" },
+      { "q_en": "How does DeepSeek compare to ChatGPT for Chinese content?", "q_zh": "中文内容上 DeepSeek 和 ChatGPT 谁更强？", "a_en": "DeepSeek's Chinese writing and reasoning are noticeably more natural than ChatGPT on native mainland-Chinese prompts. For English long-form writing, Claude still leads.", "a_zh": "在中国大陆语境的中文提示上，DeepSeek 的表达自然度和推理能力优于 ChatGPT；英文长文写作仍以 Claude 最佳。" },
+      { "q_en": "Can I self-host DeepSeek?", "q_zh": "DeepSeek 可以自部署吗？", "a_en": "Yes. Full weights are released under an MIT-style license. Practical self-hosting requires 8×H100 or equivalent for the full V3/R1; distilled variants run on a single 24 GB GPU.", "a_zh": "可以，权重按 MIT 类协议开放。完整 V3/R1 需 8×H100 或等效算力；蒸馏版可在单卡 24 GB 上运行。" },
+      { "q_en": "Is DeepSeek safe for enterprise data?", "q_zh": "企业用 DeepSeek 数据安全吗？", "a_en": "The hosted API stores prompts and may use them for service improvement unless you opt out. For sensitive data, deploy the open-source weights on your own infrastructure or use a private cloud (Azure, AWS, Volcano Engine) that offers DeepSeek without data retention.", "a_zh": "官方 API 默认会保留提示、用于改进服务，除非申请退出。敏感数据建议自部署开源权重，或选择 Azure、AWS、火山引擎等提供 DeepSeek 且不留存数据的私有云。" },
+      { "q_en": "How good is DeepSeek at coding?", "q_zh": "DeepSeek 写代码能力如何？", "a_en": "V3 is competitive with Claude 3.5 Sonnet on HumanEval and beats GPT-4o on many benchmarks. R1 excels at multi-file refactor reasoning. Cursor and Cline both support DeepSeek as the underlying model.", "a_zh": "V3 在 HumanEval 上接近 Claude 3.5 Sonnet，多数基准优于 GPT-4o；R1 在多文件重构推理上表现出色。Cursor 与 Cline 均支持将 DeepSeek 作为底层模型。" },
+      { "q_en": "Does DeepSeek support image and voice input?", "q_zh": "DeepSeek 支持图像和语音输入吗？", "a_en": "V3 has limited multimodal support; DeepSeek-VL handles vision separately. For serious multimodal work, Gemini 2.5 Pro or GPT-5 remain stronger choices in 2026.", "a_zh": "V3 多模态能力有限，DeepSeek-VL 单独处理视觉输入；2026 年需要重度多模态时仍建议 Gemini 2.5 Pro 或 GPT-5。" },
+      { "q_en": "Are there censorship or topic restrictions?", "q_zh": "有内容审查或话题限制吗？", "a_en": "The hosted DeepSeek service filters politically sensitive Chinese topics. The open-source weights on your own hardware do not carry the same filter but still reflect training-data bias.", "a_zh": "官方托管服务对政治敏感中文话题存在过滤；自部署开源权重没有相同过滤层，但仍受训练数据影响。" },
+      { "q_en": "Who should not use DeepSeek?", "q_zh": "什么用户不适合用 DeepSeek？", "a_en": "Teams needing tightly integrated voice, image and plugin ecosystems (ChatGPT Plus wins) or the most natural English long-form writing (Claude wins). For everyone else it is the best price/performance model in 2026.", "a_zh": "需要深度整合语音、图像和插件生态的团队（选 ChatGPT Plus）、追求最自然英文长文的团队（选 Claude）；其他场景 DeepSeek 是 2026 年性价比最高的选择。" }
+    ]
   }
 }
