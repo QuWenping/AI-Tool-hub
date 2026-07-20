@@ -22,6 +22,10 @@ related:
 
 ## 🚀 最近里程碑
 
+- **Sprint 6（2026-07-21）step 7（round 3 step 4）**：静态结构性页 best-ai-agents/about/zh-solutions 去 inline style + zh-solutions 防御化
+  - best/ai-agents(39→0)、about(21→0，team 卡片转 class)、zh/solutions(23→0) 全部 0 inline style
+  - ⚠️ 跨界：Claude solutions.json 新条目 mechanical-engineers 缺 tools/sections 字段致构建崩溃；zh/solutions 模板已防御化（不完整条目降级渲染，不再整站失败）
+  - Playwright 8 检查全绿；构建 2162 页；门禁全绿；已推送
 - **Sprint 6（2026-07-21）step 6（round 3 step 3）**：listing index 页去 inline style
   - prompts/templates/workflows 三个 index 页全部 inline style → listing 工具类（.page-container/.list-card/.card-grid/.card-head/.tool-pill/.prompt-preview 等）
   - 3 页各 0 inline style；Playwright 6 检查全绿（cards 639/19/25）；构建 2142 页；门禁全绿；已推送
