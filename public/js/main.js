@@ -37,6 +37,8 @@ function applyI18n() {
 
 function applyTheme(theme) {
   const icon = document.getElementById("theme-icon");
+  document.documentElement.setAttribute("data-theme", theme);
+  document.documentElement.style.colorScheme = theme;
   if (theme === "light") {
     document.body.classList.add("light-theme");
     if (icon) icon.className = "fas fa-sun";
@@ -52,13 +54,22 @@ function cardHTML(t) {
     ? { text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商业" }
     : { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
   const catLabel = labels[t.cat] || t.cat;
-  const featured = t.featured ? `<span class="featured-badge">${currentLang === "zh" ? "推荐" : "Featured"}</span>` : "";
+  const featured = t.featured
+    ? `<span class="directory-featured">${currentLang === "zh" ? "推荐" : "Featured"}</span>`
+    : "";
+  const name = t.name?.[currentLang] || t.name?.en || "AI Tool";
+  const description = t.short_desc?.[currentLang] || t.short_desc?.en || "";
   return `
-    ${featured}
-    <div class="tool-icon"><i class="fas ${t.icon || "fa-robot"}"></i></div>
-    <h3>${t.name[currentLang]}</h3>
-    <p>${t.short_desc[currentLang]}</p>
-    <div class="tool-tag">${catLabel}</div>
+    <div class="directory-tool-head">
+      <span class="directory-tool-icon"><i class="fas ${t.icon || "fa-robot"}"></i></span>
+      ${featured}
+    </div>
+    <h3>${name}</h3>
+    <p>${description}</p>
+    <div class="directory-tool-bottom">
+      <span>${catLabel}</span>
+      <span>${currentLang === "zh" ? "查看详情" : "View details"} <i class="fas fa-arrow-right"></i></span>
+    </div>
   `;
 }
 
@@ -78,17 +89,19 @@ function renderTools() {
     return matchCat && matchSearch;
   });
   entries.sort((a, b) => (b[1].featured ? 1 : 0) - (a[1].featured ? 1 : 0));
-  const SHOW = 10;
+  const SHOW = 12;
   const isSearch = q.length > 0;
   const show = isSearch ? entries : entries.slice(0, SHOW);
   const rest = entries.length - show.length;
-  grid.innerHTML = show.map(([id, t]) => `<a class="tool-card" href="/tool/${id}/">${cardHTML(t)}</a>`).join("");
+  const more = document.getElementById("tool-grid-more");
+  grid.innerHTML = show.map(([id, t]) => `<a class="directory-tool-card" href="/tool/${id}/">${cardHTML(t)}</a>`).join("");
+  if (more) more.innerHTML = "";
   if (entries.length === 0) {
-    grid.innerHTML = `<p style="grid-column:1/-1;text-align:center;color:var(--text-mute);padding:40px 0;">${currentLang === "zh" ? "暂时没有找到相关的 AI 工具..." : "No AI tools found..."}</p>`;
+    grid.innerHTML = `<p class="directory-empty">${currentLang === "zh" ? "暂时没有找到相关的 AI 工具..." : "No AI tools found..."}</p>`;
   } else if (rest > 0 && !isSearch) {
     const link = cat !== "all" ? `/best/${cat}/` : "/best/students/";
     const btnText = currentLang === "zh" ? "浏览全部 " + entries.length + " 个工具" : "Browse all " + entries.length + " tools";
-    grid.insertAdjacentHTML("afterend", '<div style="text-align:center;padding:32px 0;"><a href="' + link + '" style="display:inline-block;background:var(--accent-color);color:#fff;padding:14px 32px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px;">' + btnText + ' &rarr;</a></div>');
+    if (more) more.innerHTML = `<a href="${link}">${btnText} <span aria-hidden="true">→</span></a>`;
   }
 }
 
@@ -115,27 +128,35 @@ function bindHomeEvents() {
       if (grid) grid.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
-  document.querySelectorAll(".cat-hero-card").forEach(card => {
-    card.addEventListener("click", () => {
-      const cat = card.dataset.category;
-      if (!cat) return;
-      document.querySelectorAll(".cat-btn").forEach(b => b.classList.toggle("active", b.dataset.category === cat));
-      renderTools();
-      const grid = document.getElementById("tool-grid");
-      if (grid) grid.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  });
-  const browse = document.getElementById("cta-browse");
-  if (browse) {
-    browse.addEventListener("click", e => {
-      e.preventDefault();
-      const grid = document.getElementById("tool-grid");
-      if (grid) grid.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  }
 }
 
 function bindGlobalEvents() {
+  const navToggle = document.getElementById("nav-toggle");
+  const navigation = document.getElementById("site-navigation");
+  if (navToggle && navigation) {
+    const closeNavigation = () => {
+      navigation.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      const icon = navToggle.querySelector("i");
+      if (icon) icon.className = "fas fa-bars";
+    };
+    navToggle.addEventListener("click", () => {
+      const isOpen = navigation.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+      const icon = navToggle.querySelector("i");
+      if (icon) icon.className = isOpen ? "fas fa-times" : "fas fa-bars";
+    });
+    navigation.addEventListener("click", event => {
+      if (event.target.closest("a")) closeNavigation();
+    });
+    document.addEventListener("click", event => {
+      if (!navigation.contains(event.target) && !navToggle.contains(event.target)) closeNavigation();
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1279) closeNavigation();
+    });
+  }
+
   const langSelect = document.getElementById("lang-select");
   if (langSelect) {
     langSelect.value = currentLang;
@@ -145,8 +166,8 @@ function bindGlobalEvents() {
       applyI18n();
       if (document.getElementById("tool-grid")) {
         renderTools();
-        renderRec();
       }
+      window.dispatchEvent(new CustomEvent("site-language-change", { detail: { lang: currentLang } }));
     });
   }
   const themeBtn = document.getElementById("theme-toggle");
@@ -167,6 +188,5 @@ window.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("tool-grid")) {
     bindHomeEvents();
     renderTools();
-    renderRec();
   }
 });

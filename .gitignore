@@ -3,9 +3,39 @@ node_modules/
 dist/
 .DS_Store
 *.log
+log.txt
+*.local
+MIGRATION_GUIDE.md
 scripts/.baidu-token
 
 # Baidu push tracking
 scripts/.baidu-pushed
 scripts/.baidu-token
 scripts/baidu-push-log.txt
+
+# Development scratch files
+*.bak
+*.backup
+*.test
+src/pages/*.txt
+!src/pages/**/*.astro
+
+# Development screenshots
+home-redesign-*.png
+home-desktop.png
+home-mobile*.png
+tool-*-desktop.png
+
+# Legacy migration scripts (superseded)
+update_index*.ps1
+update_index*.py
+update_popular_tools.py
+update_section.py
+deploy-redesign.ps1
+
+# Design reference (kept locally only)
+/UI/
+
+# Old CSS/JS artifacts (superseded by src/styles + public/js/main.js)
+public/styles.css
+public/script.js

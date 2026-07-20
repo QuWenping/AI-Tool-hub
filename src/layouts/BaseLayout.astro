@@ -1,11 +1,14 @@
----
+﻿---
 import toolsData from "../data/tools.json";
 import categoriesData from "../data/categories.json";
 import Newsletter from "../components/Newsletter.astro";
 import CookieConsent from "../components/CookieConsent.astro";
-const { title, description, keywords, canonical, lang = "en" } = Astro.props;
+import "../styles/global.css";
+const { title, description, keywords, canonical, lang = "en", fullWidth = false } = Astro.props;
 const siteUrl = "https://thebestaitoolsreview.com";
-const fullTitle = title ? title + " | AI Tool Hub" : "AI Tool Hub | Best AI Tools Directory";
+const fullTitle = title
+  ? (/\|\s*AI Tool Hub\s*$/i.test(title) ? title : title + " | AI Tool Hub")
+  : "AI Tool Hub | Best AI Tools Directory";
 const desc = description || "Explore curated AI tools for writing, coding, image generation, video, audio and productivity.";
 const kw = keywords || "AI tools, best AI tools, AI writing, AI coding, AI image generators";
 const url = canonical || siteUrl + Astro.url.pathname;
@@ -35,6 +38,17 @@ const ogImage = siteUrl + "/og-image.svg";
   <meta name="publisher" content="AI Tool Hub">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#3b82f6">
+  <script is:inline>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("theme"); } catch (e) {}
+      var theme = saved === "light" || saved === "dark"
+        ? saved
+        : (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.style.colorScheme = theme;
+    })();
+  </script>
   <meta name="application-name" content="AI Tool Hub">
   <meta name="apple-mobile-web-app-title" content="AI Tool Hub">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -73,7 +87,6 @@ const ogImage = siteUrl + "/og-image.svg";
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap"></noscript>
-  <link rel="preload" href="/src/styles/tokens.css" as="style"><link rel="stylesheet" href="/src/styles/tokens.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
@@ -185,7 +198,7 @@ const ogImage = siteUrl + "/og-image.svg";
   <header>
     <div class="container">
       <div class="logo"><a href="/" class="logo-link">AI Tool <span>Hub</span></a></div>
-      <ul class="nav-links">
+      <ul id="site-navigation" class="nav-links">
         <li><a href="/">Home</a></li>
         <li><a href="/best/students/">Categories</a></li>
         <li><a href="/workflows/">Workflows</a></li><li><a href="/solutions/">Solutions</a></li><li><a href="/prompts/">Prompts</a></li><li><a href="/blog/">Blog</a></li>
@@ -199,11 +212,14 @@ const ogImage = siteUrl + "/og-image.svg";
             <option value="en">English</option>
           </select>
           <button id="theme-toggle" aria-label="Toggle theme"><i id="theme-icon" class="fas fa-moon"></i></button>
+          <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="site-navigation" aria-expanded="false">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
     </div>
   </header>
-  <main class="container">
+  <main class:list={["container", { "full-width-main": fullWidth }]}>
     <slot />
   </main>
   <section style="padding: 40px 0; background: var(--bg-color);">
@@ -223,6 +239,45 @@ const ogImage = siteUrl + "/og-image.svg";
     </div>
   </footer>
   <script src="/js/main.js" defer></script>
+  {isHome && <script src="/js/stack-builder.js" defer></script>}
+
+
+<script defer>
+  // Override language switch to redirect to localized version
+  window.addEventListener('DOMContentLoaded', () => {
+    const langSelect = document.getElementById('lang-select');
+    if (!langSelect) return;
+    const currentLang = localStorage.getItem('lang') || 'zh';
+    langSelect.value = currentLang;
+    langSelect.addEventListener('change', e => {
+      const newLang = e.target.value;
+      localStorage.setItem('lang', newLang);
+      const path = window.location.pathname;
+      let normalized = path;
+      // Remove existing language prefix
+      if (normalized.startsWith('/zh/')) {
+        normalized = normalized.substring(3);
+      } else if (normalized.startsWith('/en/')) {
+        normalized = normalized.substring(4);
+      }
+      // Ensure leading slash
+      if (!normalized.startsWith('/')) {
+        normalized = '/' + normalized;
+      }
+      const targetPath = newLang === 'zh' ? '/zh' + normalized : normalized;
+      if (targetPath !== path) {
+        window.location.href = targetPath;
+      } else {
+        // If same path, just update UI (call existing functions if available)
+        if (typeof applyI18n === 'function') applyI18n();
+        if (typeof renderTools === 'function' && document.getElementById('tool-grid')) {
+          renderTools();
+        }
+        window.dispatchEvent(new CustomEvent('site-language-change', { detail: { lang: newLang } }));
+      }
+    });
+  });
+</script>
 <CookieConsent />
 <script is:inline>
 // Lazy load images without loading attribute
