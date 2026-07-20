@@ -32,10 +32,16 @@ try {
 step("2) Git state");
 const git = (cmd) => { try { return execSync("git " + cmd, { cwd: ROOT }).toString().trim(); } catch { return null; } };
 const status = git("status --porcelain") || "";
+// Parallel-work aware: content-data files are Claude's domain (WIP there must
+// not block an engineering push). Only uncommitted ENGINEERING files block.
+const contentData = /tool-editorial\.json|\/tools\.json|\/matchups\.json|\/categories\.json|\/solutions\.json|\/posts\.json|\/prompts\.json|\/workflows\.json|\/templates\.json/;
 const uncommittedTracked = status.split("\n").filter(l => l && !/^\?\?/.test(l));
-report(uncommittedTracked.length === 0, uncommittedTracked.length
-  ? "uncommitted tracked changes:\n" + uncommittedTracked.join("\n")
-  : "no uncommitted tracked changes");
+const engUncommitted = uncommittedTracked.filter(l => !contentData.test(l));
+const contentUncommitted = uncommittedTracked.filter(l => contentData.test(l));
+report(engUncommitted.length === 0, engUncommitted.length
+  ? "uncommitted ENGINEERING changes (commit or stash before push):\n" + engUncommitted.join("\n")
+  : "no uncommitted engineering changes");
+if (contentUncommitted.length) console.log("  (content-data WIP, not blocking — content side's domain): " + contentUncommitted.join(" "));
 const untracked = status.split("\n").filter(l => /^\?\?/.test(l));
 if (untracked.length) console.log("  (untracked, do not block push): " + untracked.join(" "));
 const counts = (git("rev-list --left-right --count origin/main...HEAD") || "0\t0").split("\t");
