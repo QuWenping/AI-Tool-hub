@@ -2053,5 +2053,1654 @@
       "Replit",
       "GitHub Copilot"
     ]
+  },
+  {
+    "slug": "ai-for-mechanical-engineers",
+    "industry": "Mechanical Engineering",
+    "title": "AI Tools for Mechanical Engineers: HVAC, Thermal & Fluid Systems",
+    "title_zh": "机械工程师 AI 工具指南：暖通、热力与流体系统",
+    "description": "Practical AI stack for mechanical engineers working on HVAC design, thermal analysis, fluid dynamics, and manufacturing systems.",
+    "desc_zh": "面向暖通设计、热力分析、流体力学与制造系统的机械工程师实用 AI 工具栈。",
+    "icon": "fa-cogs",
+    "faq": [
+      {
+        "q": "Can AI help with HVAC load calculations?",
+        "a": "AI can assist with preliminary load calculations by referencing ASHRAE standards and generating templates. Manual Heating & Cooling Load Calculations (ACCA Manual J) and final design must be verified by a licensed mechanical engineer."
+      },
+      {
+        "q": "Best AI tools for mechanical engineers?",
+        "a": "Claude for reading ASHRAE standards and technical specs, ChatGPT for calculation templates, Dify for building a code knowledge base, n8n for document automation."
+      },
+      {
+        "q": "Can AI generate Revit MEP content?",
+        "a": "AI can draft families and schedules via n8n + Revit API scripting. Cursor and GitHub Copilot help write the C#/Python code for Dynamo and Revit add-ins."
+      },
+      {
+        "q": "How to use AI for CFD or FEA work?",
+        "a": "AI assists with mesh generation, boundary condition setup, and result interpretation. Always run the simulation in your solver of choice (ANSYS, STAR-CCM+, OpenFOAM)."
+      },
+      {
+        "q": "Is AI useful for pipe sizing and duct design?",
+        "a": "AI can generate initial sizing based on flow rates and pressure drops. Verify against ASHRAE handbooks and your firm standard detail library."
+      },
+      {
+        "q": "Can AI help with commissioning reports?",
+        "a": "Yes. ChatGPT or Claude can draft commissioning checklists, test forms, and reports from site notes. A commissioning agent must review and approve."
+      },
+      {
+        "q": "How do I keep proprietary MEP designs safe?",
+        "a": "Use enterprise plans with data training turned off, or self-host Dify. Avoid uploading proprietary schedules and control sequences to free consumer AI products."
+      },
+      {
+        "q": "What is the best AI for reading mechanical codes?",
+        "a": "Load ASHRAE 90.1, IMC, and local amendments into Dify or Claude Projects. Always verify AI citations against the actual code section."
+      },
+      {
+        "q": "Can AI automate MEP submittal review?",
+        "a": "Claude reads equipment submittals and checks against specs. n8n routes the review and tracks status. A licensed engineer makes the final approval decision."
+      },
+      {
+        "q": "What is a minimum AI stack for a small MEP firm?",
+        "a": "Claude Pro or ChatGPT Plus for code research and drafting, n8n for transmittals, Notion AI for internal knowledge management and meeting notes."
+      }
+    ],
+    "updatedAt": "2026-07-21",
+    "industryTags": [
+      "engineering"
+    ],
+    "audience": {
+      "en": "Practicing engineers and technical professionals in this discipline.",
+      "zh": "该领域的工程师与技术专业人员。"
+    },
+    "toolIds": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "perplexity",
+      "dify",
+      "n8n",
+      "notion-ai",
+      "cursor",
+      "github-copilot"
+    ],
+    "stackRoles": {
+      "claude": {
+        "en": "Long documents & code review",
+        "zh": "长文档与代码评审"
+      },
+      "chatgpt": {
+        "en": "Draft calculations & correspondence",
+        "zh": "起草计算说明与沟通函件"
+      },
+      "gemini": {
+        "en": "Data & drawing multimodal analysis",
+        "zh": "数据与图纸多模态分析"
+      },
+      "perplexity": {
+        "en": "Standards & vendor research",
+        "zh": "规范与厂商调研"
+      },
+      "dify": {
+        "en": "Standards knowledge base (RAG)",
+        "zh": "规范知识库（RAG）"
+      },
+      "n8n": {
+        "en": "RFI / submittal / report automation",
+        "zh": "RFI / 提交物 / 报告自动化"
+      },
+      "notion-ai": {
+        "en": "Project workspace & notes",
+        "zh": "项目知识库与会议纪要"
+      },
+      "cursor": {
+        "en": "Scripts & analysis code",
+        "zh": "脚本与分析代码"
+      },
+      "github-copilot": {
+        "en": "Code generation & review",
+        "zh": "代码生成与评审"
+      }
+    },
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-webhook-automation",
+      "n8n-api-monitor"
+    ],
+    "relatedSolutionSlugs": [
+      "ai-for-engineers",
+      "ai-for-construction",
+      "ai-for-architecture"
+    ],
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Perplexity",
+      "Dify",
+      "n8n",
+      "Notion AI",
+      "Cursor",
+      "GitHub Copilot"
+    ],
+    "sections": [
+      {
+        "heading": "Load calculations & system sizing",
+        "content": "Use ChatGPT or Claude to draft HVAC load calculations, duct sizing, pipe sizing, and equipment selection templates from project parameters. All calculations must be verified with ASHRAE standards and your engineering software.",
+        "recommendedToolIds": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "heading": "Code research & standards compliance",
+        "content": "Load ASHRAE 90.1, IMC, and local amendments into Dify or Claude Projects. Ask specific questions about system requirements, efficiency targets, and compliance pathways.",
+        "recommendedToolIds": [
+          "dify",
+          "claude",
+          "perplexity"
+        ]
+      },
+      {
+        "heading": "Specifications, reports & submittal automation",
+        "content": "Claude drafts MEP specifications, commissioning reports, and submittal responses. n8n automates the review workflow and document routing. Notion AI keeps the project knowledge base.",
+        "recommendedToolIds": [
+          "claude",
+          "n8n",
+          "notion-ai"
+        ]
+      },
+      {
+        "heading": "Scripting & BIM automation",
+        "content": "Cursor and GitHub Copilot help write C#/Python scripts for Revit MEP, Dynamo, and analysis tools that support your mechanical design workflow.",
+        "recommendedToolIds": [
+          "cursor",
+          "github-copilot"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-electrical-engineers",
+    "industry": "Electrical Engineering",
+    "title": "AI Tools for Electrical Engineers: Power, Controls & Systems",
+    "title_zh": "电气工程师 AI 工具指南：电力、控制与系统",
+    "description": "AI stack for electrical engineers doing power systems, lighting design, controls, and building electrical systems.",
+    "desc_zh": "面向电力系统、照明设计、控制与建筑电气系统的电气工程师AI工具栈。",
+    "icon": "fa-bolt",
+    "faq": [
+      {
+        "q": "Can AI size electrical equipment?",
+        "a": "AI can help with initial sizing based on known loads and code requirements. Final sizing must be verified by a licensed electrical engineer using dedicated software."
+      },
+      {
+        "q": "Best AI tools for electrical engineers?",
+        "a": "Claude for NEC code research, ChatGPT for calculation templates, Dify for building a code reference database, n8n for panel schedule automation."
+      },
+      {
+        "q": "Can AI help with NEC code compliance?",
+        "a": "Load NEC chapters into Dify RAG or Claude Projects. Ask specific questions about conductor sizing, overcurrent protection, and grounding with citations."
+      },
+      {
+        "q": "How to use AI for lighting design?",
+        "a": "AI can generate initial layouts based on room geometry and Illuminating Engineering Society (IES) recommendations. Verify with AGi32 or similar software."
+      },
+      {
+        "q": "Can AI help with arc flash analysis?",
+        "a": "AI can assist with data collection, label templates, and report drafting. Run the actual analysis in SKM, ETAP, or EasyPower with verified system data."
+      },
+      {
+        "q": "Is AI useful for one-line diagram drafting?",
+        "a": "AI can generate draft one-lines from equipment schedules. Review and correct connectivity, protective device coordination, and safety labeling."
+      },
+      {
+        "q": "How to use AI for motor control center design?",
+        "a": "ChatGPT can generate MCC schedules from motor lists, n8n can automate data transfer between spreadsheets and CAD/BIM tools."
+      },
+      {
+        "q": "Can AI help with renewable energy system design?",
+        "a": "AI assists with solar layout, battery sizing, and preliminary energy modeling. Use PVsyst, Helioscope, or your tool of record for final design."
+      },
+      {
+        "q": "What is the best AI for electrical calculations?",
+        "a": "ChatGPT for voltage drop, conduit fill, and load calculation templates. Always verify with your calculation software or by hand."
+      },
+      {
+        "q": "How to automate electrical submittal review?",
+        "a": "Claude reads equipment cut sheets against specifications. n8n routes reviews and tracks status. Always verify compliance with the contract documents."
+      }
+    ],
+    "updatedAt": "2026-07-21",
+    "industryTags": [
+      "engineering"
+    ],
+    "audience": {
+      "en": "Practicing engineers and technical professionals in this discipline.",
+      "zh": "该领域的工程师与技术专业人员。"
+    },
+    "toolIds": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "perplexity",
+      "dify",
+      "n8n",
+      "notion-ai",
+      "cursor",
+      "github-copilot"
+    ],
+    "stackRoles": {
+      "claude": {
+        "en": "Long documents & code review",
+        "zh": "长文档与代码评审"
+      },
+      "chatgpt": {
+        "en": "Draft calculations & correspondence",
+        "zh": "起草计算说明与沟通函件"
+      },
+      "gemini": {
+        "en": "Data & drawing multimodal analysis",
+        "zh": "数据与图纸多模态分析"
+      },
+      "perplexity": {
+        "en": "Standards & vendor research",
+        "zh": "规范与厂商调研"
+      },
+      "dify": {
+        "en": "Standards knowledge base (RAG)",
+        "zh": "规范知识库（RAG）"
+      },
+      "n8n": {
+        "en": "RFI / submittal / report automation",
+        "zh": "RFI / 提交物 / 报告自动化"
+      },
+      "notion-ai": {
+        "en": "Project workspace & notes",
+        "zh": "项目知识库与会议纪要"
+      },
+      "cursor": {
+        "en": "Scripts & analysis code",
+        "zh": "脚本与分析代码"
+      },
+      "github-copilot": {
+        "en": "Code generation & review",
+        "zh": "代码生成与评审"
+      }
+    },
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-webhook-automation",
+      "n8n-api-monitor"
+    ],
+    "relatedSolutionSlugs": [
+      "ai-for-engineers",
+      "ai-for-construction",
+      "ai-for-architecture"
+    ],
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Perplexity",
+      "Dify",
+      "n8n",
+      "Notion AI",
+      "Cursor",
+      "GitHub Copilot"
+    ],
+    "sections": [
+      {
+        "heading": "Electrical calculations & sizing",
+        "content": "ChatGPT generates voltage drop, conduit fill, load calculation, and equipment sizing templates. Verify against NEC and your design software.",
+        "recommendedToolIds": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "heading": "Code research & NEC compliance",
+        "content": "Load NEC chapters into Dify or Claude Projects. Ask specific questions about conductor sizing, overcurrent protection, and grounding requirements.",
+        "recommendedToolIds": [
+          "dify",
+          "claude",
+          "perplexity"
+        ]
+      },
+      {
+        "heading": "Panel schedules, lighting & submittals",
+        "content": "Claude drafts panel schedules, lighting fixture schedules, and submittal responses. n8n automates the review and distribution workflow.",
+        "recommendedToolIds": [
+          "claude",
+          "n8n",
+          "notion-ai"
+        ]
+      },
+      {
+        "heading": "Scripting, arc flash & coordination",
+        "content": "Cursor and GitHub Copilot assist with scripts for power system analysis, arc flash data collection, and BIM coordination.",
+        "recommendedToolIds": [
+          "cursor",
+          "github-copilot"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-mep-engineers",
+    "industry": "MEP Engineering",
+    "title": "AI Tools for MEP Engineers: Integrated Mechanical, Electrical & Plumbing",
+    "title_zh": "MEP 工程师 AI 工具指南：机电一体化",
+    "description": "Integrated AI stack for mechanical, electrical, and plumbing (MEP) engineers coordinating across building systems.",
+    "desc_zh": "面向机电一体化工程师的 AI 工具栈，覆盖机械、电气与给排水协调。",
+    "icon": "fa-drafting-compass",
+    "faq": [
+      {
+        "q": "Can AI help with MEP coordination?",
+        "a": "Yes. AI can detect clashes from issue logs and suggest routing alternatives. Claude reviews coordination meeting minutes and generates action items."
+      },
+      {
+        "q": "Best AI tools for MEP coordination?",
+        "a": "Claude for clash resolution analysis, ChatGPT for RFI drafts, n8n for automated routing, Dify for shared code research across the team."
+      },
+      {
+        "q": "How to use AI for MEP load calculations?",
+        "a": "ChatGPT generates heating/cooling/electrical/plumbing fixture calculation templates from building program data. Verify with your standard software."
+      },
+      {
+        "q": "Can AI automate MEP schedules?",
+        "a": "Yes. n8n connects Revit or Excel output to schedule templates. AI populates room data sheets, fixture schedules, and panel schedules."
+      },
+      {
+        "q": "How to use AI for MEP specification review?",
+        "a": "Claude reads long spec sections and checks for conflicts, omissions, or outdated references. A licensed engineer reviews and signs off."
+      },
+      {
+        "q": "Can AI help with energy code compliance?",
+        "a": "Load ASHRAE 90.1, IECC, and local amendments into Dify. Ask compliance questions on envelope, lighting, HVAC, and service water heating."
+      },
+      {
+        "q": "Is AI useful for MEP cost estimating?",
+        "a": "AI generates preliminary estimates from quantity take-offs. Use RSMeans or your cost database for final pricing. n8n automates the data flow between models and estimates."
+      },
+      {
+        "q": "How to use AI for plumbing design?",
+        "a": "ChatGPT generates fixture unit calculations, pipe sizing, and pump head estimates. Verify against IPC/UPC and your standard details."
+      },
+      {
+        "q": "Can AI help with fire protection design?",
+        "a": "AI assists with sprinkler layout, hydraulic calculations, and code research. Final design must be stamped by a licensed fire protection engineer."
+      },
+      {
+        "q": "What is the best AI stack for an MEP team?",
+        "a": "Claude Pro for specs and RFIs, ChatGPT for calculations, n8n for automation, Dify for shared code knowledge base, and Notion AI for project documentation."
+      }
+    ],
+    "updatedAt": "2026-07-21",
+    "industryTags": [
+      "engineering"
+    ],
+    "audience": {
+      "en": "Practicing engineers and technical professionals in this discipline.",
+      "zh": "该领域的工程师与技术专业人员。"
+    },
+    "toolIds": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "perplexity",
+      "dify",
+      "n8n",
+      "notion-ai",
+      "cursor",
+      "github-copilot"
+    ],
+    "stackRoles": {
+      "claude": {
+        "en": "Long documents & code review",
+        "zh": "长文档与代码评审"
+      },
+      "chatgpt": {
+        "en": "Draft calculations & correspondence",
+        "zh": "起草计算说明与沟通函件"
+      },
+      "gemini": {
+        "en": "Data & drawing multimodal analysis",
+        "zh": "数据与图纸多模态分析"
+      },
+      "perplexity": {
+        "en": "Standards & vendor research",
+        "zh": "规范与厂商调研"
+      },
+      "dify": {
+        "en": "Standards knowledge base (RAG)",
+        "zh": "规范知识库（RAG）"
+      },
+      "n8n": {
+        "en": "RFI / submittal / report automation",
+        "zh": "RFI / 提交物 / 报告自动化"
+      },
+      "notion-ai": {
+        "en": "Project workspace & notes",
+        "zh": "项目知识库与会议纪要"
+      },
+      "cursor": {
+        "en": "Scripts & analysis code",
+        "zh": "脚本与分析代码"
+      },
+      "github-copilot": {
+        "en": "Code generation & review",
+        "zh": "代码生成与评审"
+      }
+    },
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-webhook-automation",
+      "n8n-api-monitor"
+    ],
+    "relatedSolutionSlugs": [
+      "ai-for-engineers",
+      "ai-for-construction",
+      "ai-for-architecture"
+    ],
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Perplexity",
+      "Dify",
+      "n8n",
+      "Notion AI",
+      "Cursor",
+      "GitHub Copilot"
+    ],
+    "sections": [
+      {
+        "heading": "Integrated MEP coordination",
+        "content": "Claude reviews clash reports and suggests routing alternatives. ChatGPT drafts coordination meeting minutes and action items. n8n tracks issue resolution.",
+        "recommendedToolIds": [
+          "claude",
+          "chatgpt",
+          "n8n"
+        ]
+      },
+      {
+        "heading": "Cross-discipline code research",
+        "content": "Build a shared Dify knowledge base with IMC, IPC, NEC, ASHRAE, and local amendments. The whole MEP team queries the same source of truth.",
+        "recommendedToolIds": [
+          "dify",
+          "claude"
+        ]
+      },
+      {
+        "heading": "MEP schedules & documentation",
+        "content": "n8n connects Revit data to schedule templates; ChatGPT populates room data sheets, fixture schedules, and panel schedules from model exports.",
+        "recommendedToolIds": [
+          "chatgpt",
+          "n8n",
+          "notion-ai"
+        ]
+      },
+      {
+        "heading": "Energy modeling & compliance",
+        "content": "Claude reads energy code requirements and generates preliminary compliance pathways. Use your energy modeling software for final analysis.",
+        "recommendedToolIds": [
+          "claude",
+          "gemini"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-bridge-engineers",
+    "industry": "Bridge Engineering",
+    "title": "AI Tools for Bridge Engineers: Design, Analysis & Inspection",
+    "title_zh": "桥梁工程师 AI 工具指南：设计、分析与检测",
+    "description": "AI stack for bridge engineers focused on structural analysis, load rating, inspection documentation, and rehabilitation design.",
+    "desc_zh": "面向桥梁工程师的 AI 工具栈，用于结构分析、荷载评定、检测文档与加固设计。",
+    "icon": "fa-road",
+    "faq": [
+      {
+        "q": "Can AI help with bridge load rating?",
+        "a": "AI assists with data collection, template generation, and report drafting. Run actual load rating in BridgeLIVE, AASHTOWare, or your standard software."
+      },
+      {
+        "q": "Best AI tools for bridge engineers?",
+        "a": "Claude for AASHTO LRFD code research, ChatGPT for calculation narratives, Perplexity for research on new materials and methods, n8n for inspection report automation."
+      },
+      {
+        "q": "Can AI help with bridge inspection reports?",
+        "a": "ChatGPT or Claude generates draft inspection reports from field notes and photos. A licensed bridge inspector reviews and signs."
+      },
+      {
+        "q": "How to use AI for bridge design calculations?",
+        "a": "AI generates preliminary girder sizing, load distribution, and prestress losses. Verify with Leap Bridge, midas Civil, or your analysis software."
+      },
+      {
+        "q": "Is AI useful for scour analysis?",
+        "a": "AI assists with data collection and template reports. Run HEC-18 and HEC-RAS for final scour analysis. A licensed engineer stamps the findings."
+      },
+      {
+        "q": "How to use AI for seismic bridge analysis?",
+        "a": "Claude processes AASHTO Guide Specifications for seismic design and generates preliminary analysis templates. Use your FEA software for final design."
+      },
+      {
+        "q": "Can AI automate bridge rehabilitation documents?",
+        "a": "Yes. n8n connects inspection data to repair recommendation templates. Claude drafts specs and notes from engineer observations."
+      },
+      {
+        "q": "What is the best AI for AASHTO code research?",
+        "a": "Load AASHTO LRFD Bridge Design Specifications into Dify or Claude Projects. Ask questions about specific articles and get citations to verify."
+      },
+      {
+        "q": "How to use AI for constructability review?",
+        "a": "Claude can review construction sequences and staged analysis assumptions. Must be verified by an experienced bridge engineer."
+      },
+      {
+        "q": "What is a minimum AI stack for a bridge team?",
+        "a": "Claude Pro for code research, ChatGPT for calculations, n8n for inspection report automation, and Perplexity for staying current on research."
+      }
+    ],
+    "updatedAt": "2026-07-21",
+    "industryTags": [
+      "engineering"
+    ],
+    "audience": {
+      "en": "Practicing engineers and technical professionals in this discipline.",
+      "zh": "该领域的工程师与技术专业人员。"
+    },
+    "toolIds": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "perplexity",
+      "dify",
+      "n8n",
+      "notion-ai",
+      "cursor",
+      "github-copilot"
+    ],
+    "stackRoles": {
+      "claude": {
+        "en": "Long documents & code review",
+        "zh": "长文档与代码评审"
+      },
+      "chatgpt": {
+        "en": "Draft calculations & correspondence",
+        "zh": "起草计算说明与沟通函件"
+      },
+      "gemini": {
+        "en": "Data & drawing multimodal analysis",
+        "zh": "数据与图纸多模态分析"
+      },
+      "perplexity": {
+        "en": "Standards & vendor research",
+        "zh": "规范与厂商调研"
+      },
+      "dify": {
+        "en": "Standards knowledge base (RAG)",
+        "zh": "规范知识库（RAG）"
+      },
+      "n8n": {
+        "en": "RFI / submittal / report automation",
+        "zh": "RFI / 提交物 / 报告自动化"
+      },
+      "notion-ai": {
+        "en": "Project workspace & notes",
+        "zh": "项目知识库与会议纪要"
+      },
+      "cursor": {
+        "en": "Scripts & analysis code",
+        "zh": "脚本与分析代码"
+      },
+      "github-copilot": {
+        "en": "Code generation & review",
+        "zh": "代码生成与评审"
+      }
+    },
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-webhook-automation",
+      "n8n-api-monitor"
+    ],
+    "relatedSolutionSlugs": [
+      "ai-for-engineers",
+      "ai-for-construction",
+      "ai-for-architecture"
+    ],
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Perplexity",
+      "Dify",
+      "n8n",
+      "Notion AI",
+      "Cursor",
+      "GitHub Copilot"
+    ],
+    "sections": [
+      {
+        "heading": "Bridge load rating & analysis",
+        "content": "ChatGPT and Claude draft preliminary load rating calculations, distribution factors, and analysis templates. Run the final rating in your analysis software.",
+        "recommendedToolIds": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "heading": "AASHTO LRFD code research",
+        "content": "Load AASHTO LRFD Bridge Design Specifications into Dify or Claude Projects. Ask specific questions about design provisions and get citations.",
+        "recommendedToolIds": [
+          "dify",
+          "claude",
+          "perplexity"
+        ]
+      },
+      {
+        "heading": "Inspection reports & rehabilitation",
+        "content": "Claude drafts inspection reports from field notes. n8n automates inspection scheduling and report distribution. Notion AI tracks findings and repair recommendations.",
+        "recommendedToolIds": [
+          "claude",
+          "n8n",
+          "notion-ai"
+        ]
+      },
+      {
+        "heading": "Seismic & constructability review",
+        "content": "Claude processes seismic design provisions and generates preliminary analysis templates. ChatGPT reviews construction sequences and staged analysis assumptions.",
+        "recommendedToolIds": [
+          "claude",
+          "chatgpt"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-steel-detailers",
+    "industry": "Steel Detailing",
+    "title": "AI Tools for Steel Detailers: Modeling, Detailing & Connection Design",
+    "title_zh": "钢结构详图设计师 AI 工具指南：建模、详图与节点设计",
+    "description": "AI stack for steel detailers working on connection design, shop drawing production, and model coordination.",
+    "desc_zh": "面向钢结构详图设计师的 AI 工具栈，用于节点设计、加工图生产与模型协调。",
+    "icon": "fa-hard-hat",
+    "faq": [
+      {
+        "q": "Can AI generate steel connection designs?",
+        "a": "AI can suggest preliminary connection types based on loads and AISC/CSA standards. Final connection design requires a licensed structural engineer."
+      },
+      {
+        "q": "Best AI tools for steel detailers?",
+        "a": "Claude for connection code research, ChatGPT for bolt/weld calculation templates, n8n for shop drawing transmittal automation, Cursor for Tekla API scripts."
+      },
+      {
+        "q": "Can AI help with material optimization?",
+        "a": "ChatGPT can suggest member nesting strategies and waste reduction approaches. Use dedicated nesting software for final cut plans."
+      },
+      {
+        "q": "How to use AI for shop drawing review?",
+        "a": "Claude checks drawing notes for consistency and flag common errors. Submit to the engineer of record for final approval."
+      },
+      {
+        "q": "Is AI useful for BIM coordination?",
+        "a": "Yes. AI flags coordination issues from clash reports and suggests routing solutions. n8n automates the distribution of coordination meeting minutes."
+      },
+      {
+        "q": "Can AI help with Tekla or Revit scripting?",
+        "a": "Cursor and GitHub Copilot assist with writing C# and Python scripts for BIM automation, custom component creation, and data extraction."
+      },
+      {
+        "q": "How to use AI for connection design?",
+        "a": "ChatGPT generates preliminary bolt group, weld, and gusset plate calculations. Verify with AISC Manual, IDEA StatiCa, or your standard design software."
+      },
+      {
+        "q": "What is the best AI for AISC code research?",
+        "a": "Load AISC 360 and AISC Manual into Dify or Claude Projects. Ask specific questions about section properties, connection design, and member capacity."
+      },
+      {
+        "q": "Can AI automate RFI responses for steel projects?",
+        "a": "Claude drafts RFI responses from project specs and drawings. A detailer or engineer reviews before submittal. n8n tracks the RFI lifecycle."
+      },
+      {
+        "q": "What is a minimum AI stack for a detailing firm?",
+        "a": "Claude Pro for code research, ChatGPT for calculations, Cursor for custom scripts, and n8n for document control and transmittal automation."
+      }
+    ],
+    "updatedAt": "2026-07-21",
+    "industryTags": [
+      "engineering"
+    ],
+    "audience": {
+      "en": "Practicing engineers and technical professionals in this discipline.",
+      "zh": "该领域的工程师与技术专业人员。"
+    },
+    "toolIds": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "perplexity",
+      "dify",
+      "n8n",
+      "notion-ai",
+      "cursor",
+      "github-copilot"
+    ],
+    "stackRoles": {
+      "claude": {
+        "en": "Long documents & code review",
+        "zh": "长文档与代码评审"
+      },
+      "chatgpt": {
+        "en": "Draft calculations & correspondence",
+        "zh": "起草计算说明与沟通函件"
+      },
+      "gemini": {
+        "en": "Data & drawing multimodal analysis",
+        "zh": "数据与图纸多模态分析"
+      },
+      "perplexity": {
+        "en": "Standards & vendor research",
+        "zh": "规范与厂商调研"
+      },
+      "dify": {
+        "en": "Standards knowledge base (RAG)",
+        "zh": "规范知识库（RAG）"
+      },
+      "n8n": {
+        "en": "RFI / submittal / report automation",
+        "zh": "RFI / 提交物 / 报告自动化"
+      },
+      "notion-ai": {
+        "en": "Project workspace & notes",
+        "zh": "项目知识库与会议纪要"
+      },
+      "cursor": {
+        "en": "Scripts & analysis code",
+        "zh": "脚本与分析代码"
+      },
+      "github-copilot": {
+        "en": "Code generation & review",
+        "zh": "代码生成与评审"
+      }
+    },
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-webhook-automation",
+      "n8n-api-monitor"
+    ],
+    "relatedSolutionSlugs": [
+      "ai-for-engineers",
+      "ai-for-construction",
+      "ai-for-architecture"
+    ],
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Perplexity",
+      "Dify",
+      "n8n",
+      "Notion AI",
+      "Cursor",
+      "GitHub Copilot"
+    ],
+    "sections": [
+      {
+        "heading": "Connection design & calculations",
+        "content": "ChatGPT generates preliminary bolt, weld, and gusset plate calculations. Verify against AISC Manual and your design software.",
+        "recommendedToolIds": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "heading": "AISC code research",
+        "content": "Load AISC 360 and AISC Manual into Dify or Claude Projects. Ask specific questions about connection design, member capacity, and detailing requirements.",
+        "recommendedToolIds": [
+          "dify",
+          "claude"
+        ]
+      },
+      {
+        "heading": "Shop drawing & BIM automation",
+        "content": "n8n automates shop drawing transmittal and revision tracking. Cursor and GitHub Copilot help with Tekla API and Revit scripting for custom components.",
+        "recommendedToolIds": [
+          "n8n",
+          "cursor",
+          "github-copilot"
+        ]
+      },
+      {
+        "heading": "Material optimization & coordination",
+        "content": "ChatGPT suggests nesting strategies and waste reduction approaches. Clash detection and coordination issues tracked with AI-assisted routing suggestions.",
+        "recommendedToolIds": [
+          "chatgpt",
+          "claude",
+          "n8n"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-surveyors",
+    "industry": "Surveying",
+    "title": "AI Tools for Surveyors: Data Collection, Processing & Mapping",
+    "title_zh": "测量师 AI 工具指南：数据采集、处理与制图",
+    "description": "AI stack for surveyors working on field data collection, point cloud processing, boundary analysis, and GIS mapping.",
+    "desc_zh": "面向测量师的 AI 工具栈，用于外业数据采集、点云处理、边界分析与 GIS 制图。",
+    "icon": "fa-ruler-combined",
+    "faq": [
+      {
+        "q": "Can AI process LiDAR point clouds?",
+        "a": "AI can classify ground points, identify features, and generate preliminary contours. Use Trimble Business Center, Cyclone, or your standard software for final processing."
+      },
+      {
+        "q": "Best AI tools for surveyors?",
+        "a": "ChatGPT for field note templates, Gemini for drawing analysis, Perplexity for regulations research, n8n for data processing automation."
+      },
+      {
+        "q": "Can AI help with boundary determination?",
+        "a": "AI assists with deed research and drafting preliminary boundary descriptions. Only a licensed surveyor can establish the legal boundary."
+      },
+      {
+        "q": "How to use AI for ALTA surveys?",
+        "a": "AI can draft the table of encumbrances and preliminary notes from title commitment. Verify against the recorded documents."
+      },
+      {
+        "q": "Is AI useful for topographic mapping?",
+        "a": "AI classifies raw survey data and generates preliminary contours. Trimble Business Center or Civil 3D for final surface and map production."
+      },
+      {
+        "q": "Can AI automate construction staking calculations?",
+        "a": "ChatGPT can generate stakeout coordinate sets from design files. Verify with your data collector software before going to the field."
+      },
+      {
+        "q": "How to use AI for GPS data processing?",
+        "a": "AI assists with baseline processing logs and quality control reports. Use OPUS, Trimble Business Center, or your GNSS processing software for final adjustments."
+      },
+      {
+        "q": "What is the best AI for regulations research?",
+        "a": "Perplexity for current surveying regulations and standards. Claude for detailed analysis of state-specific surveying laws."
+      },
+      {
+        "q": "Can AI help with floodplain determination?",
+        "a": "AI generates preliminary floodplain maps from topographic data. Use FEMA-approved methods and software for official floodplain determinations."
+      },
+      {
+        "q": "What is a minimum AI stack for a surveying firm?",
+        "a": "ChatGPT for templates, Perplexity for research, n8n for data processing automation, and Notion AI for project documentation."
+      }
+    ],
+    "updatedAt": "2026-07-21",
+    "industryTags": [
+      "engineering"
+    ],
+    "audience": {
+      "en": "Practicing engineers and technical professionals in this discipline.",
+      "zh": "该领域的工程师与技术专业人员。"
+    },
+    "toolIds": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "perplexity",
+      "dify",
+      "n8n",
+      "notion-ai",
+      "cursor",
+      "github-copilot"
+    ],
+    "stackRoles": {
+      "claude": {
+        "en": "Long documents & code review",
+        "zh": "长文档与代码评审"
+      },
+      "chatgpt": {
+        "en": "Draft calculations & correspondence",
+        "zh": "起草计算说明与沟通函件"
+      },
+      "gemini": {
+        "en": "Data & drawing multimodal analysis",
+        "zh": "数据与图纸多模态分析"
+      },
+      "perplexity": {
+        "en": "Standards & vendor research",
+        "zh": "规范与厂商调研"
+      },
+      "dify": {
+        "en": "Standards knowledge base (RAG)",
+        "zh": "规范知识库（RAG）"
+      },
+      "n8n": {
+        "en": "RFI / submittal / report automation",
+        "zh": "RFI / 提交物 / 报告自动化"
+      },
+      "notion-ai": {
+        "en": "Project workspace & notes",
+        "zh": "项目知识库与会议纪要"
+      },
+      "cursor": {
+        "en": "Scripts & analysis code",
+        "zh": "脚本与分析代码"
+      },
+      "github-copilot": {
+        "en": "Code generation & review",
+        "zh": "代码生成与评审"
+      }
+    },
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-webhook-automation",
+      "n8n-api-monitor"
+    ],
+    "relatedSolutionSlugs": [
+      "ai-for-engineers",
+      "ai-for-construction",
+      "ai-for-architecture"
+    ],
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Perplexity",
+      "Dify",
+      "n8n",
+      "Notion AI",
+      "Cursor",
+      "GitHub Copilot"
+    ],
+    "sections": [
+      {
+        "heading": "Field data processing & point clouds",
+        "content": "ChatGPT documents field procedures and data collection workflows. Gemini or Claude analyzes point cloud data for feature classification.",
+        "recommendedToolIds": [
+          "chatgpt",
+          "gemini",
+          "claude"
+        ]
+      },
+      {
+        "heading": "Boundary & ALTA research",
+        "content": "Claude reviews deed descriptions and title commitments. Perplexity researches current regulations and standards.",
+        "recommendedToolIds": [
+          "claude",
+          "perplexity"
+        ]
+      },
+      {
+        "heading": "Topographic mapping & construction staking",
+        "content": "ChatGPT generates stakeout coordinate sets from design files. n8n automates data transfer between field collectors and office software.",
+        "recommendedToolIds": [
+          "chatgpt",
+          "n8n"
+        ]
+      },
+      {
+        "heading": "GNSS data processing & quality control",
+        "content": "AI assists with baseline processing logs and quality control reports. Use your GNSS processing software for final adjustments.",
+        "recommendedToolIds": [
+          "claude",
+          "gemini"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-quantity-surveyors",
+    "industry": "Quantity Surveying",
+    "title": "AI Tools for Quantity Surveyors: Estimating, Cost Planning & Procurement",
+    "title_zh": "工料测量师 AI 工具指南：估算、成本规划与采购",
+    "description": "AI stack for quantity surveyors working on cost estimation, bill of quantities, procurement, and contract administration.",
+    "desc_zh": "面向工料测量师的 AI 工具栈，用于成本估算、工程量清单、采购与合同管理。",
+    "icon": "fa-calculator",
+    "faq": [
+      {
+        "q": "Can AI generate Bills of Quantities?",
+        "a": "AI can generate preliminary BOQs from design documents. Verify against the standard method of measurement (NRM, CESMM, SMM7) and your organization standard."
+      },
+      {
+        "q": "Best AI tools for quantity surveyors?",
+        "a": "Claude for contract document analysis, ChatGPT for cost estimate templates, n8n for procurement workflow automation, Perplexity for market pricing research."
+      },
+      {
+        "q": "Can AI help with cost estimation?",
+        "a": "AI generates preliminary estimates from project parameters. Use RSMeans, BCIS, or your cost database for final pricing."
+      },
+      {
+        "q": "How to use AI for contract administration?",
+        "a": "Claude reviews contract conditions, tracks change orders, and drafts variations. n8n automates the document workflow and approvals."
+      },
+      {
+        "q": "Is AI useful for value engineering?",
+        "a": "AI can suggest alternative materials, methods, and systems based on cost and performance data. A QS and design team evaluate the VE proposals."
+      },
+      {
+        "q": "Can AI automate procurement documentation?",
+        "a": "Yes. ChatGPT drafts tender documents, RFQ packages, and bid tabs. n8n manages the procurement workflow from invitation to award."
+      },
+      {
+        "q": "How to use AI for progress payment applications?",
+        "a": "AI generates draft payment applications from site progress data. The QS reviews and certifies the amounts."
+      },
+      {
+        "q": "What is the best AI for contract analysis?",
+        "a": "Claude reads long contract documents, identifies key clauses, and flags risk areas. Always review AI findings with your legal team."
+      },
+      {
+        "q": "Can AI help with claims analysis?",
+        "a": "AI organizes delay, disruption, and cost data. Claude drafts claim narratives. Submit to the contract administrator with your full evidence package."
+      },
+      {
+        "q": "What is a minimum AI stack for a QS team?",
+        "a": "Claude Pro for contract analysis, ChatGPT for estimate templates, n8n for procurement automation, and Perplexity for market research."
+      }
+    ],
+    "updatedAt": "2026-07-21",
+    "industryTags": [
+      "engineering"
+    ],
+    "audience": {
+      "en": "Practicing engineers and technical professionals in this discipline.",
+      "zh": "该领域的工程师与技术专业人员。"
+    },
+    "toolIds": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "perplexity",
+      "dify",
+      "n8n",
+      "notion-ai",
+      "cursor",
+      "github-copilot"
+    ],
+    "stackRoles": {
+      "claude": {
+        "en": "Long documents & code review",
+        "zh": "长文档与代码评审"
+      },
+      "chatgpt": {
+        "en": "Draft calculations & correspondence",
+        "zh": "起草计算说明与沟通函件"
+      },
+      "gemini": {
+        "en": "Data & drawing multimodal analysis",
+        "zh": "数据与图纸多模态分析"
+      },
+      "perplexity": {
+        "en": "Standards & vendor research",
+        "zh": "规范与厂商调研"
+      },
+      "dify": {
+        "en": "Standards knowledge base (RAG)",
+        "zh": "规范知识库（RAG）"
+      },
+      "n8n": {
+        "en": "RFI / submittal / report automation",
+        "zh": "RFI / 提交物 / 报告自动化"
+      },
+      "notion-ai": {
+        "en": "Project workspace & notes",
+        "zh": "项目知识库与会议纪要"
+      },
+      "cursor": {
+        "en": "Scripts & analysis code",
+        "zh": "脚本与分析代码"
+      },
+      "github-copilot": {
+        "en": "Code generation & review",
+        "zh": "代码生成与评审"
+      }
+    },
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-webhook-automation",
+      "n8n-api-monitor"
+    ],
+    "relatedSolutionSlugs": [
+      "ai-for-engineers",
+      "ai-for-construction",
+      "ai-for-architecture"
+    ],
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Perplexity",
+      "Dify",
+      "n8n",
+      "Notion AI",
+      "Cursor",
+      "GitHub Copilot"
+    ],
+    "sections": [
+      {
+        "heading": "Cost estimation & BOQ generation",
+        "content": "ChatGPT generates preliminary Bills of Quantities and cost estimates from design documents. Use your cost database for final pricing.",
+        "recommendedToolIds": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "heading": "Contract document analysis",
+        "content": "Claude reads long contract conditions, identifies key clauses, and flags risk areas. Perplexity researches market pricing and cost data.",
+        "recommendedToolIds": [
+          "claude",
+          "perplexity"
+        ]
+      },
+      {
+        "heading": "Procurement & tender management",
+        "content": "ChatGPT drafts tender documents, RFQ packages, and bid tabs. n8n manages the procurement workflow from invitation to award.",
+        "recommendedToolIds": [
+          "chatgpt",
+          "n8n",
+          "notion-ai"
+        ]
+      },
+      {
+        "heading": "Progress claims & variation management",
+        "content": "AI generates draft progress payment applications and variation orders from site data. The QS reviews and certifies before submission.",
+        "recommendedToolIds": [
+          "chatgpt",
+          "claude",
+          "n8n"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-fire-protection-engineers",
+    "industry": "Fire Protection Engineering",
+    "title": "AI Tools for Fire Protection Engineers: Sprinklers, Detection & Life Safety",
+    "title_zh": "消防工程师 AI 工具指南：喷淋、探测与生命安全",
+    "description": "AI stack for fire protection engineers designing sprinkler systems, fire alarm, smoke control, and life safety systems.",
+    "desc_zh": "面向消防工程师的 AI 工具栈，用于喷淋系统、火灾报警、防排烟与生命安全系统设计。",
+    "icon": "fa-fire-extinguisher",
+    "faq": [
+      {
+        "q": "Can AI design sprinkler systems?",
+        "a": "AI can assist with preliminary layout using NFPA 13 rules. Final design requires hydraulic calculations in your standard software and a licensed engineer stamp."
+      },
+      {
+        "q": "Best AI tools for fire protection engineers?",
+        "a": "Claude for NFPA code research, ChatGPT for hydraulic calculation templates, Dify for building a code reference database, n8n for submittal automation."
+      },
+      {
+        "q": "Can AI help with NFPA compliance?",
+        "a": "Load NFPA 13, 72, 101 into Dify or Claude Projects. Ask compliance questions about specific occupancy, hazard classification, and system requirements."
+      },
+      {
+        "q": "How to use AI for fire alarm design?",
+        "a": "AI generates notification appliance calculations, device schedules, and battery sizing. Verify with your design software and local code requirements."
+      },
+      {
+        "q": "Is AI useful for smoke control design?",
+        "a": "AI assists with preliminary zone layout and fan sizing. Use CONTAM, FDS, or your modeling software for final smoke control analysis."
+      },
+      {
+        "q": "Can AI help with life safety plans?",
+        "a": "AI generates draft egress plans, occupant load calculations, and exit width checks. Verify against IBC or NFPA 101 requirements."
+      },
+      {
+        "q": "How to use AI for fire pump room design?",
+        "a": "ChatGPT generates pump sizing calculations, room layout guidelines, and code requirements. Verify with NFPA 20 and your standard details."
+      },
+      {
+        "q": "What is the best AI for fire code research?",
+        "a": "Claude for detailed NFPA analysis, Perplexity for quick code questions, Dify for building an organization-specific code knowledge base."
+      },
+      {
+        "q": "Can AI automate fire protection submittals?",
+        "a": "Yes. n8n routes submittals, Claude reviews compliance, and a licensed engineer makes the final approval."
+      },
+      {
+        "q": "What is a minimum AI stack for a fire protection firm?",
+        "a": "Claude Pro for code research, ChatGPT for calculations, n8n for submittal workflow, and Dify for a shared code knowledge base."
+      }
+    ],
+    "updatedAt": "2026-07-21",
+    "industryTags": [
+      "engineering"
+    ],
+    "audience": {
+      "en": "Practicing engineers and technical professionals in this discipline.",
+      "zh": "该领域的工程师与技术专业人员。"
+    },
+    "toolIds": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "perplexity",
+      "dify",
+      "n8n",
+      "notion-ai",
+      "cursor",
+      "github-copilot"
+    ],
+    "stackRoles": {
+      "claude": {
+        "en": "Long documents & code review",
+        "zh": "长文档与代码评审"
+      },
+      "chatgpt": {
+        "en": "Draft calculations & correspondence",
+        "zh": "起草计算说明与沟通函件"
+      },
+      "gemini": {
+        "en": "Data & drawing multimodal analysis",
+        "zh": "数据与图纸多模态分析"
+      },
+      "perplexity": {
+        "en": "Standards & vendor research",
+        "zh": "规范与厂商调研"
+      },
+      "dify": {
+        "en": "Standards knowledge base (RAG)",
+        "zh": "规范知识库（RAG）"
+      },
+      "n8n": {
+        "en": "RFI / submittal / report automation",
+        "zh": "RFI / 提交物 / 报告自动化"
+      },
+      "notion-ai": {
+        "en": "Project workspace & notes",
+        "zh": "项目知识库与会议纪要"
+      },
+      "cursor": {
+        "en": "Scripts & analysis code",
+        "zh": "脚本与分析代码"
+      },
+      "github-copilot": {
+        "en": "Code generation & review",
+        "zh": "代码生成与评审"
+      }
+    },
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-webhook-automation",
+      "n8n-api-monitor"
+    ],
+    "relatedSolutionSlugs": [
+      "ai-for-engineers",
+      "ai-for-construction",
+      "ai-for-architecture"
+    ],
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Perplexity",
+      "Dify",
+      "n8n",
+      "Notion AI",
+      "Cursor",
+      "GitHub Copilot"
+    ],
+    "sections": [
+      {
+        "heading": "Sprinkler & suppression system design",
+        "content": "ChatGPT generates preliminary hydraulic calculations, pipe schedules, and hazard classifications. Verify against NFPA 13 in your design software.",
+        "recommendedToolIds": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "heading": "NFPA code research",
+        "content": "Load NFPA 13, 72, 101 into Dify or Claude Projects. Ask specific questions about occupancy, hazard classification, and system requirements.",
+        "recommendedToolIds": [
+          "dify",
+          "claude"
+        ]
+      },
+      {
+        "heading": "Fire alarm & detection design",
+        "content": "AI generates notification appliance calculations, device schedules, and battery sizing. Verify with your design software and local code requirements.",
+        "recommendedToolIds": [
+          "chatgpt",
+          "claude",
+          "n8n"
+        ]
+      },
+      {
+        "heading": "Smoke control & life safety",
+        "content": "Claude performs preliminary egress analysis and smoke control zone layout. Use your modeling software for final analysis.",
+        "recommendedToolIds": [
+          "claude",
+          "gemini"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-plumbing-engineers",
+    "industry": "Plumbing Engineering",
+    "title": "AI Tools for Plumbing Engineers: Design, Fixtures & Systems",
+    "title_zh": "给排水工程师 AI 工具指南：设计、卫生器具与系统",
+    "description": "AI stack for plumbing engineers designing sanitary, storm, domestic water, and gas systems for buildings.",
+    "desc_zh": "面向给排水工程师的 AI 工具栈，用于污水、雨水、给水和燃气系统设计。",
+    "icon": "fa-faucet",
+    "faq": [
+      {
+        "q": "Can AI design plumbing systems?",
+        "a": "AI assists with fixture unit counts, pipe sizing, and pump selection. Final design must be verified by a licensed engineer against IPC/UPC and local codes."
+      },
+      {
+        "q": "Best AI tools for plumbing engineers?",
+        "a": "Claude for code research, ChatGPT for fixture unit calculations, Dify for building a code reference database, n8n for schedule automation."
+      },
+      {
+        "q": "Can AI help with IPC/UPC compliance?",
+        "a": "Load IPC or UPC into Dify or Claude Projects. Ask specific questions about trap sizing, venting, and fixture requirements."
+      },
+      {
+        "q": "How to use AI for stormwater design?",
+        "a": "AI generates preliminary drainage calculations, detention sizing, and stormwater reports. Use your hydrology software for final design."
+      },
+      {
+        "q": "Is AI useful for domestic water sizing?",
+        "a": "ChatGPT generates water demand calculations based on fixture units. Verify with ASPE or your standard design manual."
+      },
+      {
+        "q": "Can AI help with plumbing cost estimating?",
+        "a": "AI generates preliminary fixture counts and pipe quantities from design documents. Use your cost database for final pricing."
+      },
+      {
+        "q": "How to use AI for gas system design?",
+        "a": "AI generates gas load calculations, pipe sizing, and pressure drop analysis. Verify against NFPA 54 or your local fuel gas code."
+      },
+      {
+        "q": "What is the best AI for plumbing code research?",
+        "a": "Claude for detailed code analysis, Perplexity for quick code questions, Dify for building a shared plumbing code knowledge base."
+      },
+      {
+        "q": "Can AI automate plumbing schedules?",
+        "a": "Yes. ChatGPT generates fixture, equipment, and valve schedules from your design data. n8n connects Revit or Excel to schedule templates."
+      },
+      {
+        "q": "What is a minimum AI stack for a plumbing engineer?",
+        "a": "Claude Pro for code research, ChatGPT for calculations, n8n for schedule automation, and Notion AI for project documentation."
+      }
+    ],
+    "updatedAt": "2026-07-21",
+    "industryTags": [
+      "engineering"
+    ],
+    "audience": {
+      "en": "Practicing engineers and technical professionals in this discipline.",
+      "zh": "该领域的工程师与技术专业人员。"
+    },
+    "toolIds": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "perplexity",
+      "dify",
+      "n8n",
+      "notion-ai",
+      "cursor",
+      "github-copilot"
+    ],
+    "stackRoles": {
+      "claude": {
+        "en": "Long documents & code review",
+        "zh": "长文档与代码评审"
+      },
+      "chatgpt": {
+        "en": "Draft calculations & correspondence",
+        "zh": "起草计算说明与沟通函件"
+      },
+      "gemini": {
+        "en": "Data & drawing multimodal analysis",
+        "zh": "数据与图纸多模态分析"
+      },
+      "perplexity": {
+        "en": "Standards & vendor research",
+        "zh": "规范与厂商调研"
+      },
+      "dify": {
+        "en": "Standards knowledge base (RAG)",
+        "zh": "规范知识库（RAG）"
+      },
+      "n8n": {
+        "en": "RFI / submittal / report automation",
+        "zh": "RFI / 提交物 / 报告自动化"
+      },
+      "notion-ai": {
+        "en": "Project workspace & notes",
+        "zh": "项目知识库与会议纪要"
+      },
+      "cursor": {
+        "en": "Scripts & analysis code",
+        "zh": "脚本与分析代码"
+      },
+      "github-copilot": {
+        "en": "Code generation & review",
+        "zh": "代码生成与评审"
+      }
+    },
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-webhook-automation",
+      "n8n-api-monitor"
+    ],
+    "relatedSolutionSlugs": [
+      "ai-for-engineers",
+      "ai-for-construction",
+      "ai-for-architecture"
+    ],
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Perplexity",
+      "Dify",
+      "n8n",
+      "Notion AI",
+      "Cursor",
+      "GitHub Copilot"
+    ],
+    "sections": [
+      {
+        "heading": "Plumbing system sizing",
+        "content": "ChatGPT generates fixture unit counts, water demand calculations, pipe sizing, and pump head estimates. Verify against IPC/UPC and your standard details.",
+        "recommendedToolIds": [
+          "chatgpt",
+          "claude"
+        ]
+      },
+      {
+        "heading": "Code research & compliance",
+        "content": "Load IPC or UPC into Dify or Claude Projects. Ask specific questions about trap sizing, venting, and fixture requirements.",
+        "recommendedToolIds": [
+          "dify",
+          "claude",
+          "perplexity"
+        ]
+      },
+      {
+        "heading": "Schedule generation & documentation",
+        "content": "ChatGPT generates fixture, equipment, and valve schedules from design data. n8n connects Revit or Excel to schedule templates.",
+        "recommendedToolIds": [
+          "chatgpt",
+          "n8n",
+          "notion-ai"
+        ]
+      },
+      {
+        "heading": "Stormwater & gas system design",
+        "content": "AI generates preliminary drainage calculations and gas load sizing. Use your hydrology software for final stormwater design.",
+        "recommendedToolIds": [
+          "chatgpt",
+          "claude"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "ai-for-project-engineers",
+    "industry": "Project Engineering",
+    "title": "AI Tools for Project Engineers: Planning, Coordination & Delivery",
+    "title_zh": "项目工程师 AI 工具指南：规划、协调与交付",
+    "description": "AI stack for project engineers managing technical coordination, document control, schedule tracking, and cross-discipline communication.",
+    "desc_zh": "面向项目工程师的 AI 工具栈，用于技术协调、文档管理、进度跟踪与跨专业沟通。",
+    "icon": "fa-tasks",
+    "faq": [
+      {
+        "q": "Can AI help with project schedule management?",
+        "a": "AI drafts preliminary schedules from scope documents. Use Primavera P6, MS Project, or your scheduling software for the baseline. n8n automates schedule updates."
+      },
+      {
+        "q": "Best AI tools for project engineers?",
+        "a": "Claude for RFI responses, ChatGPT for correspondence, n8n for workflow automation, Notion AI for meeting notes and action items, Fireflies for call transcripts."
+      },
+      {
+        "q": "Can AI help with RFI management?",
+        "a": "Claude drafts RFI responses from project specs and drawings. n8n routes RFIs, tracks status, and alerts the team. The project engineer reviews and signs."
+      },
+      {
+        "q": "How to use AI for meeting minutes?",
+        "a": "Fireflies or Otter records meetings and generates transcripts. ChatGPT summarizes the transcript into action items, with owners and due dates."
+      },
+      {
+        "q": "Is AI useful for submittal tracking?",
+        "a": "Yes. n8n automates submittal routing, Claude reviews for compliance, and the project engineer logs the approval status."
+      },
+      {
+        "q": "Can AI help with progress reporting?",
+        "a": "ChatGPT generates daily and weekly reports from site notes, photos, and weather data. The project engineer reviews before distribution."
+      },
+      {
+        "q": "How to use AI for change order management?",
+        "a": "Claude reviews change scope, estimates cost and schedule impact, and drafts the change order. n8n routes it for approval signatures."
+      },
+      {
+        "q": "What is the best AI for engineering correspondence?",
+        "a": "ChatGPT for professional email drafts, Claude for technically detailed letters, and Notion for organizing correspondence logs."
+      },
+      {
+        "q": "Can AI automate QA/QC documentation?",
+        "a": "Yes. n8n connects inspection checklists, test reports, and punch lists. AI generates the QA/QC summary report."
+      },
+      {
+        "q": "What is a minimum AI stack for a project engineer?",
+        "a": "ChatGPT Plus or Claude Pro for correspondence, Fireflies for meeting notes, n8n for workflow automation, and Notion AI for project documentation."
+      }
+    ],
+    "updatedAt": "2026-07-21",
+    "industryTags": [
+      "engineering"
+    ],
+    "audience": {
+      "en": "Practicing engineers and technical professionals in this discipline.",
+      "zh": "该领域的工程师与技术专业人员。"
+    },
+    "toolIds": [
+      "claude",
+      "chatgpt",
+      "gemini",
+      "perplexity",
+      "dify",
+      "n8n",
+      "notion-ai",
+      "cursor",
+      "github-copilot"
+    ],
+    "stackRoles": {
+      "claude": {
+        "en": "Long documents & code review",
+        "zh": "长文档与代码评审"
+      },
+      "chatgpt": {
+        "en": "Draft calculations & correspondence",
+        "zh": "起草计算说明与沟通函件"
+      },
+      "gemini": {
+        "en": "Data & drawing multimodal analysis",
+        "zh": "数据与图纸多模态分析"
+      },
+      "perplexity": {
+        "en": "Standards & vendor research",
+        "zh": "规范与厂商调研"
+      },
+      "dify": {
+        "en": "Standards knowledge base (RAG)",
+        "zh": "规范知识库（RAG）"
+      },
+      "n8n": {
+        "en": "RFI / submittal / report automation",
+        "zh": "RFI / 提交物 / 报告自动化"
+      },
+      "notion-ai": {
+        "en": "Project workspace & notes",
+        "zh": "项目知识库与会议纪要"
+      },
+      "cursor": {
+        "en": "Scripts & analysis code",
+        "zh": "脚本与分析代码"
+      },
+      "github-copilot": {
+        "en": "Code generation & review",
+        "zh": "代码生成与评审"
+      }
+    },
+    "workflows": [
+      "dify-rag-document-qna",
+      "n8n-webhook-automation",
+      "n8n-api-monitor"
+    ],
+    "relatedSolutionSlugs": [
+      "ai-for-engineers",
+      "ai-for-construction",
+      "ai-for-architecture"
+    ],
+    "tools": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Perplexity",
+      "Dify",
+      "n8n",
+      "Notion AI",
+      "Cursor",
+      "GitHub Copilot"
+    ],
+    "sections": [
+      {
+        "heading": "RFI & submittal management",
+        "content": "Claude drafts RFI responses from project specs. n8n routes submissions, tracks status, and alerts the team. The project engineer reviews and signs off.",
+        "recommendedToolIds": [
+          "claude",
+          "n8n"
+        ]
+      },
+      {
+        "heading": "Meeting minutes & correspondence",
+        "content": "Fireflies or Otter records meetings and generates transcripts. ChatGPT summarizes the transcript into action items with owners and due dates.",
+        "recommendedToolIds": [
+          "fireflies",
+          "chatgpt",
+          "notion-ai"
+        ]
+      },
+      {
+        "heading": "Schedule coordination & QA/QC",
+        "content": "ChatGPT generates daily and weekly reports from site notes. n8n connects inspection checklists and test reports for QA/QC documentation.",
+        "recommendedToolIds": [
+          "chatgpt",
+          "n8n",
+          "claude"
+        ]
+      },
+      {
+        "heading": "Change order & progress tracking",
+        "content": "Claude reviews change scope, estimates impact, and drafts change orders. n8n routes for approval. Notion AI keeps the project documentation organized.",
+        "recommendedToolIds": [
+          "claude",
+          "n8n",
+          "notion-ai"
+        ]
+      }
+    ]
   }
 ]
