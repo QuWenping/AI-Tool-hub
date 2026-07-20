@@ -52,7 +52,7 @@ status: active
 
 ## Design System 基础
 
-- [ ] P0-3 组件化重构现存页面（消除 100+ 页面 inline style / hard-coded 颜色） ⚙️ 博客块完成（46 篇统一，~380 个 page-level inline style 清零）；非博客 cosmetic 块完成（29 文件 / 140 个，round 3 step 1）；剩余：34 个含结构性 inline style 的非博客文件（11 个交互式 tools/*.astro + about/team/contact/newsletter/submit-*/best-ai-agents/prompts·templates·workflows 动态模板及 zh 镜像）需逐个把结构性 style 转成 class；组件级 inline style（Feedback/Chart）另算 @Codex 2026-07-20
+- [ ] P0-3 组件化重构现存页面（消除 100+ 页面 inline style / hard-coded 颜色） ⚙️ 博客块完成（46 篇统一）；非博客 cosmetic 块完成（29 文件/140 个，round 3 step 1）；动态内容模板块完成（prompts/templates/workflows [slug] 3 模板→683 页，round 3 step 2，新增 .code-card/.copy-btn/.tag-row/.info-card/.step-list 等工具类）；全站邮箱占位替换为真实邮箱。剩余：静态结构性页（about/team/contact/newsletter/submit-*/best-ai-agents/prompts·templates·workflows index + zh 镜像）、11 个交互式 tools/*.astro、组件级 inline style（Feedback/Chart） @Codex 2026-07-20
 - [ ] P0-7 Lighthouse 全站达标（Performance ≥95、SEO 100）
 - [x] P0-8 图片规范（WebP/AVIF + Lightbox + Lazy Load） @Codex 2026-07-20
 - [x] P0-9 Grid System 统一（Article 760 / TOC 280 / Sidebar 320） @Codex 2026-07-20
@@ -173,6 +173,11 @@ status: active
 
 # ✅ 已完成里程碑（记录 & 归档）
 
+- [x] **Sprint 6（2026-07-21）P0-3 round 3 step 2：动态内容模板去 inline style（prompts/templates/workflows [slug]）** @Codex 2026-07-21
+  - 3 个动态模板全部 inline style → 工具类，惠及 683 个生成页（prompts 639 + templates 19 + workflows 25）
+  - 新增公共工具类（public/css/style.css）：`.code-card`/`.copy-btn`/`.prompt-code`（代码卡+复制按钮）、`.tag-row`/`.tag-pill`(+diff-beginner/intermediate/advanced)/`.tag-chip`/`.meta-text`、`.info-card`(+amber/blue)/`.qa-box`、`.step-list`/`.step-item`/`.step-icon`、`.back-link`
+  - workflows 难度徽章由动态 inline background 改为语义 class；移除无用 diffColors 常量
+  - 3 模板各 0 inline style；Playwright 6 检查全绿（200、0 error、无溢出、code-card/step-item 在位、复制按钮可点）；构建 2142 页；门禁全绿；已推送
 - [x] **Sprint 6（2026-07-21）P0-3 round 3 step 1：非博客 cosmetic inline style 清理** @Codex 2026-07-21
   - 审计全部非博客 .astro 页面：805 个 inline style / 63 文件；按是否含结构性（display/grid/flex/position）拆分
   - 29 个 cosmetic-only 文件批量剥离 140 个 inline style：methodology(76)、case-studies、glossary、sponsor、press-kit、alternatives/[slug]、use-case-for-*(4)、deep-dive-*(9)、index、9 个 zh 镜像页
