@@ -22,6 +22,9 @@ related:
 
 ## 🚀 最近里程碑
 
+- **Sprint 6（2026-07-21）step 6（round 3 step 3）**：listing index 页去 inline style
+  - prompts/templates/workflows 三个 index 页全部 inline style → listing 工具类（.page-container/.list-card/.card-grid/.card-head/.tool-pill/.prompt-preview 等）
+  - 3 页各 0 inline style；Playwright 6 检查全绿（cards 639/19/25）；构建 2142 页；门禁全绿；已推送
 - **Sprint 6（2026-07-21）step 5（round 3 step 2）**：动态内容模板去 inline style
   - prompts/templates/workflows [slug] 3 模板全部 inline style → 工具类，惠及 683 生成页
   - 新增公共工具类：.code-card/.copy-btn/.prompt-code、.tag-row/.tag-pill(+diff-*)/.tag-chip/.meta-text、.info-card(+amber/blue)/.qa-box、.step-list/.step-item/.step-icon、.back-link
