@@ -197,6 +197,25 @@ const breadcrumbSchema = {
     { "@type": "ListItem", position: 3, name: tNameEn, item: pageUrl }
   ]
 };
+
+const tocSections = [
+  { id: "overview", label: "What is " + tNameEn + "?" },
+  { id: "our-take", label: "Our take" },
+  screenshotImages.length > 0 && { id: "screenshots", label: "Screenshots" },
+  { id: "test-status-heading", label: "Real test data" },
+  featureRowsEn.length > 0 && { id: "features", label: "Key features" },
+  tUseEn.length > 0 && { id: "use-cases", label: "Use cases" },
+  tScenesEn.length > 0 && { id: "best-for", label: "Best for" },
+  tAudienceEn.length > 0 && { id: "audience", label: "Target audience" },
+  { id: "pricing", label: "Pricing" },
+  (tProsEn.length + tConsEn.length > 0) && { id: "pros-cons", label: "Pros & Cons" },
+  tExampleEn && { id: "example", label: "Example" },
+  { id: "verdict", label: "Our verdict" },
+  toolMatchups.length > 0 && { id: "comparisons", label: "Comparisons" },
+  alternatives.length > 0 && { id: "alternatives", label: "Alternatives" },
+  faqItems.length > 0 && { id: "tool-faq-heading", label: "FAQ" },
+  relatedCategories.length > 0 && { id: "related", label: "Related categories" }
+].filter(Boolean);
 ---
 <BaseLayout
   title={seoTitle}
@@ -208,6 +227,8 @@ const breadcrumbSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
   </Fragment>
   <article class="tool-detail">
+  <div class="article-grid">
+    <div class="article-main">
     <nav class="breadcrumbs" aria-label="Breadcrumb">
       <a href="/">Home</a> &rsaquo;
       <a href={"/best/" + tCat + "/"}>Best {catLabelEn}</a> &rsaquo;
@@ -263,7 +284,7 @@ const breadcrumbSchema = {
     </section>
 
     <section class="detail-section">
-      <h2><i class="fas fa-user-edit" aria-hidden="true"></i> Our take</h2>
+      <h2 id="our-take"><i class="fas fa-user-edit" aria-hidden="true"></i> Our take</h2>
       <p>{ourIntro}</p>
     </section>
 
@@ -278,14 +299,14 @@ const breadcrumbSchema = {
 
     {featureRowsEn.length > 0 && (
       <section class="detail-section">
-        <h2><i class="fas fa-star" aria-hidden="true"></i> Key features</h2>
+        <h2 id="features"><i class="fas fa-star" aria-hidden="true"></i> Key features</h2>
         <FeatureTable rows={featureRowsEn} />
       </section>
     )}
 
     {tUseEn.length > 0 && (
       <section class="detail-section">
-        <h2><i class="fas fa-rocket" aria-hidden="true"></i> Use cases that actually work</h2>
+        <h2 id="use-cases"><i class="fas fa-rocket" aria-hidden="true"></i> Use cases that actually work</h2>
         <ul class="pros-list" data-i18n-en-rich={JSON.stringify(tUseEn)} data-i18n-zh-rich={JSON.stringify(tUseZh)}>
           {tUseEn.map(u => <li>{u}</li>)}
         </ul>
@@ -294,7 +315,7 @@ const breadcrumbSchema = {
 
     {tScenesEn.length > 0 && (
       <section class="detail-section">
-        <h2><i class="fas fa-bullseye" aria-hidden="true"></i> Best for</h2>
+        <h2 id="best-for"><i class="fas fa-bullseye" aria-hidden="true"></i> Best for</h2>
         <ul class="pros-list" data-i18n-en-rich={JSON.stringify(tScenesEn)} data-i18n-zh-rich={JSON.stringify(tScenesZh)}>
           {tScenesEn.map(s => <li>{s}</li>)}
         </ul>
@@ -303,7 +324,7 @@ const breadcrumbSchema = {
 
     {tAudienceEn.length > 0 && (
       <section class="detail-section">
-        <h2><i class="fas fa-users" aria-hidden="true"></i> Target audience</h2>
+        <h2 id="audience"><i class="fas fa-users" aria-hidden="true"></i> Target audience</h2>
         <div class="audience-tags" data-i18n-en-rich={JSON.stringify(tAudienceEn)} data-i18n-zh-rich={JSON.stringify(tAudienceZh)}>
           {tAudienceEn.map(a => <span class="audience-tag">{a}</span>)}
         </div>
@@ -320,20 +341,20 @@ const breadcrumbSchema = {
 
     {tProsEn.length + tConsEn.length > 0 && (
       <section class="detail-section">
-        <h2><i class="fas fa-balance-scale" aria-hidden="true"></i> Pros &amp; Cons</h2>
+        <h2 id="pros-cons"><i class="fas fa-balance-scale" aria-hidden="true"></i> Pros &amp; Cons</h2>
         <ProsCons pros={tProsEn} cons={tConsEn} />
       </section>
     )}
 
     {tExampleEn && (
       <section class="detail-section">
-        <h2><i class="fas fa-terminal" aria-hidden="true"></i> Example</h2>
+        <h2 id="example"><i class="fas fa-terminal" aria-hidden="true"></i> Example</h2>
         <div class="example-box" data-i18n-en={tExampleEn} data-i18n-zh={tExampleZh}>{tExampleEn}</div>
       </section>
     )}
 
     <section class="detail-section verdict-block">
-      <h2><i class="fas fa-gavel" aria-hidden="true"></i> Our verdict</h2>
+      <h2 id="verdict"><i class="fas fa-gavel" aria-hidden="true"></i> Our verdict</h2>
       <p><strong>Pick {tNameEn} if:</strong> {ourVerdict.best}</p>
       <p><strong>Skip {tNameEn} if:</strong> {ourVerdict.avoid}</p>
     </section>
@@ -360,7 +381,7 @@ const breadcrumbSchema = {
 
     {alternatives.length > 0 && (
       <section class="detail-section">
-        <h2><i class="fas fa-exchange-alt" aria-hidden="true"></i> Alternatives to {tNameEn}</h2>
+        <h2 id="alternatives"><i class="fas fa-exchange-alt" aria-hidden="true"></i> Alternatives to {tNameEn}</h2>
         <div class="tool-grid">
           {alternatives.map(([k, t]) => (
             <a class="tool-card" href={"/tool/" + k + "/"}>
@@ -378,7 +399,7 @@ const breadcrumbSchema = {
 
     {relatedCategories.length > 0 && (
       <section class="detail-section related">
-        <h2><i class="fas fa-folder-open" aria-hidden="true"></i> Related categories</h2>
+        <h2 id="related"><i class="fas fa-folder-open" aria-hidden="true"></i> Related categories</h2>
         <div class="related-grid">
           {relatedCategories.map(c => (
             <a class="related-card" href={"/best/" + c.slug + "/"}>
@@ -400,5 +421,13 @@ const breadcrumbSchema = {
         <p>This page is an AI-catalogued summary based on public information. Our editorial team has not yet completed a hands-on review; benchmark, pricing and verdict updates will be published after real testing.</p>
       )}
     </section>
-  </article>
+    </div>
+    <aside class="article-toc" aria-label="Table of contents">
+      <div class="toc-title">On this page</div>
+      <ol>
+        {tocSections.map(s => <li><a href={"#" + s.id}>{s.label}</a></li>)}
+      </ol>
+    </aside>
+  </div>
+</article>
 </BaseLayout>
