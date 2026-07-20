@@ -46,18 +46,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <section>
       <h2>Send us a message</h2>
       <p>For anything that does not fit the categories above, use the form below. We read every message and respond within 2-3 business days.</p>
-      <form action="mailto:quwenping2020@163.com" method="post" enctype="text/plain" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 32px; margin: 24px 0;">
-        <div style="margin-bottom: 16px;">
-          <label for="name" style="display: block; font-weight: 600; margin-bottom: 6px;">Your name</label>
-          <input type="text" id="name" name="name" required style="width: 100%; padding: 10px 14px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-color); color: var(--text-main); font-size: 15px;" placeholder="Your name" />
+      <form action="mailto:quwenping2020@163.com" method="post" enctype="text/plain" class="form-card">
+        <div class="form-row">
+          <label for="name" class="form-label">Your name</label>
+          <input type="text" id="name" name="name" required class="form-input" placeholder="Your name" />
         </div>
-        <div style="margin-bottom: 16px;">
-          <label for="email" style="display: block; font-weight: 600; margin-bottom: 6px;">Your email</label>
-          <input type="email" id="email" name="email" required style="width: 100%; padding: 10px 14px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-color); color: var(--text-main); font-size: 15px;" placeholder="you@example.com" />
+        <div class="form-row">
+          <label for="email" class="form-label">Your email</label>
+          <input type="email" id="email" name="email" required class="form-input" placeholder="you@example.com" />
         </div>
-        <div style="margin-bottom: 16px;">
-          <label for="subject" style="display: block; font-weight: 600; margin-bottom: 6px;">Subject</label>
-          <select id="subject" name="subject" style="width: 100%; padding: 10px 14px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-color); color: var(--text-main); font-size: 15px;">
+        <div class="form-row">
+          <label for="subject" class="form-label">Subject</label>
+          <select id="subject" name="subject" class="form-input">
             <option value="general">General question</option>
             <option value="submission">Tool submission</option>
             <option value="correction">Error report</option>
@@ -66,12 +66,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <option value="other">Other</option>
           </select>
         </div>
-        <div style="margin-bottom: 16px;">
-          <label for="message" style="display: block; font-weight: 600; margin-bottom: 6px;">Message</label>
-          <textarea id="message" name="message" rows="6" required style="width: 100%; padding: 10px 14px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-color); color: var(--text-main); font-size: 15px; resize: vertical;" placeholder="Tell us what is on your mind..."></textarea>
+        <div class="form-row">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" name="message" rows="6" required class="form-input" placeholder="Tell us what is on your mind..."></textarea>
         </div>
-        <button type="submit" class="cta-primary" style="border: none; cursor: pointer; font-size: 15px; font-weight: 600;">Send message</button>
-        <p style="font-size: 12px; color: var(--text-mute); margin-top: 12px;">Submitting opens your default mail client. We do not collect or store form data on our servers.</p>
+        <button type="submit" class="cta-primary">Send message</button>
+        <p class="form-hint">Submitting opens your default mail client. We do not collect or store form data on our servers.</p>
       </form>
     </section>
 

@@ -38,37 +38,37 @@ const team = [
     <section>
       <h2>Meet the team</h2>
       {team.map(person => (
-        <article class="team-member-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 20px; padding: 32px; margin: 32px 0;">
-          <div style="display: grid; grid-template-columns: 120px 1fr; gap: 32px; align-items: start;">
+        <article class="team-member-card">
+          <div class="member-grid">
             <div>
-              <div style={`width: 120px; height: 120px; border-radius: 24px; background: ${person.color}; display: flex; align-items: center; justify-content: center; font-size: 48px; font-weight: 800; color: white; font-family: system-ui, sans-serif;`}>
+              <div class="team-avatar" style={`background: ${person.color}`}>
                 {person.initials}
               </div>
-              <p style="text-align: center; color: var(--text-mute); font-size: 13px; margin-top: 12px;">{person.location}</p>
+              <p class="avatar-caption">{person.location}</p>
             </div>
             <div>
-              <h2 style="margin-top: 0; font-size: 28px;">{person.name}</h2>
-              <p style="color: var(--accent-color); font-size: 15px; font-weight: 600; margin-bottom: 16px;">{person.role}</p>
-              <p style="font-size: 16px; line-height: 1.7; color: var(--text-main); margin-bottom: 16px;">{person.bio}</p>
-              <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; margin-bottom: 16px;">
-                <p style="margin: 0 0 8px; font-weight: 600; font-size: 14px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.5px;">Education and Background</p>
-                <p style="margin: 0; font-size: 14px;">{person.education}</p>
+              <h2 class="member-name">{person.name}</h2>
+              <p class="member-role">{person.role}</p>
+              <p class="member-bio">{person.bio}</p>
+              <div class="info-card">
+                <p class="field-label">Education and Background</p>
+                <p class="field-value">{person.education}</p>
               </div>
-              <div style="margin-bottom: 16px;">
-                <p style="font-weight: 600; font-size: 14px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Expertise</p>
+              <div class="member-section">
+                <p class="field-label">Expertise</p>
                 <div class="audience-tags">{person.expertise.map(skill => <span class="audience-tag">{skill}</span>)}</div>
               </div>
-              <div style="margin-bottom: 16px;">
-                <p style="font-weight: 600; font-size: 14px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Reviews authored</p>
-                <ul style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.7;">{person.reviews.map(r => <li>{r}</li>)}</ul>
+              <div class="member-section">
+                <p class="field-label">Reviews authored</p>
+                <ul class="field-list">{person.reviews.map(r => <li>{r}</li>)}</ul>
               </div>
-              <div style="margin-bottom: 16px;">
-                <p style="font-weight: 600; font-size: 14px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Articles authored</p>
-                <ul style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.7;">{person.articles.map(a => <li>{a}</li>)}</ul>
+              <div class="member-section">
+                <p class="field-label">Articles authored</p>
+                <ul class="field-list">{person.articles.map(a => <li>{a}</li>)}</ul>
               </div>
-              <div style="display: flex; gap: 24px; flex-wrap: wrap; align-items: center; padding-top: 8px; border-top: 1px solid var(--border-color);">
-                <p style="margin: 0; font-size: 14px;"><strong>Email:</strong> <a href={`mailto:${person.contact}`}>{person.contact}</a></p>
-                {person.socials.map(s => <p style="margin: 0; font-size: 14px;"><strong>{s.split(":")[0]}:</strong> {s.split(":")[1].trim()}</p>)}
+              <div class="member-socials">
+                <p class="field-value"><strong>Email:</strong> <a href={`mailto:${person.contact}`}>{person.contact}</a></p>
+                {person.socials.map(s => <p class="field-value"><strong>{s.split(":")[0]}:</strong> {s.split(":")[1].trim()}</p>)}
               </div>
             </div>
           </div>
