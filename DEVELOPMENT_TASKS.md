@@ -52,11 +52,11 @@ status: active
 
 ## Design System 基础
 
-- [ ] P0-3 组件化重构现存页面（消除 100+ 页面 inline style / hard-coded 颜色） ⚙️ Sprint 5 完成 round 1：best/vs/blog 三大动态模板 + 11 篇 .article 博客已落地 article-grid+prose；站点 header 作用域修复；剩余 ~33 篇 .legal-page 博客与零散 inline style 待后续 round
+- [ ] P0-3 组件化重构现存页面（消除 100+ 页面 inline style / hard-coded 颜色） ⚙️ Sprint 5 完成 round 1：best/vs/blog 三大动态模板 + 11 篇 .article 博客已落地 article-grid+prose；站点 header 作用域修复；剩余 ~33 篇 .legal-page 博客与零散 inline style 待后续 round @Codex 2026-07-20
 - [ ] P0-7 Lighthouse 全站达标（Performance ≥95、SEO 100）
-- [x] P0-8 图片规范（WebP/AVIF + Lightbox + Lazy Load） @Claude 2026-07-20
-- [x] P0-9 Grid System 统一（Article 760 / TOC 280 / Sidebar 320） @Claude 2026-07-20
-- [x] P0-10 Typography 全站统一（H1 64 / H2 42 / 正文 20） @Claude 2026-07-20
+- [x] P0-8 图片规范（WebP/AVIF + Lightbox + Lazy Load） @Codex 2026-07-20
+- [x] P0-9 Grid System 统一（Article 760 / TOC 280 / Sidebar 320） @Codex 2026-07-20
+- [x] P0-10 Typography 全站统一（H1 64 / H2 42 / 正文 20） @Codex 2026-07-20
 
 ## AI 决策平台核心
 
@@ -72,9 +72,9 @@ status: active
 
 ## SEO 内容启动
 
-- [ ] P0-11 首批 50 个 SEO 页面上线（10 工具 + 5 vs + 5 场景 + 4 趋势 + 26 补齐）
+- [ ] P0-11 首批 50 个 SEO 页面上线（10 工具 + 5 vs + 5 场景 + 4 趋势 + 26 补齐） ⚙️ 归 Claude 内容运营
 - [x] P0-13 tools.json 增加 `industry_tags` 字段（Architecture / Engineering / Construction / BIM / Industrial + 教育 / 营销 / 软件） @Claude 2026-07-20
-- [x] P0-14 URL 结构规范化决策（`/tools/{slug}` vs `/tool/{slug}`；`/compare/A-vs-B` vs `/vs/{slug}`） @Claude 2026-07-20
+- [x] P0-14 URL 结构规范化决策（`/tools/{slug}` vs `/tool/{slug}`；`/compare/A-vs-B` vs `/vs/{slug}`） @Codex 2026-07-20
 - [x] P0-15 场景页新增 5 篇（Architects / Engineers / Construction / Small Business / Students） @Claude 2026-07-20
 
 ---
@@ -173,16 +173,16 @@ status: active
 
 # ✅ 已完成里程碑（记录 & 归档）
 
-- [x] **Sprint 5（2026-07-20）P0-3 round 1：best/vs/blog 模板套用 article-grid+prose + 站点 header 作用域修复** @Claude 2026-07-20
+- [x] **Sprint 5（2026-07-20）P0-3 round 1：best/vs/blog 模板套用 article-grid+prose + 站点 header 作用域修复** @Codex 2026-07-20
   - `vs/[slug].astro`（103 页）：套 `.article-grid`（760+280 TOC，5 项）+ 新 `ArticleToc.astro` 组件；移除 hero/at-a-glance/This Page Answers 的 inline style → `.vs-hero` / `.detail-section`
   - `best/[slug].astro`（~11 页）：套 `.article-grid`（760+280 TOC，7 项）+ 7 个 h2 补 id；inline updated-badge → `.updated-badge` class
   - `blog`（46 篇）：CSS 升级 `.article-header h1` / `.article-body h2/h3` / `.lede` 到规范尺寸（自动覆盖所有 .article 博客）；11 篇移除冗余 inline `max-width:760px`
   - **根因修复**：`BaseLayout` `<header>` → `<header class="site-header">`，`public/css/style.css` 把 `header{}` / `header .container` / `header .nav-links` 全部作用域到 `.site-header`——之前全局 `header{display:flex;height:64px;position:sticky}` 误伤所有内容 `<header>`（`.cat-hero`/`.article-header`/`.tool-detail-header`/`.vs-hero`），导致内容头被压成 64px+sticky，并在 best/blog 移动端横向溢出。修复后内容头恢复 auto 高度 + static，站点导航保持 64px sticky
   - Playwright 验证 7 路由 × 2 视口（home/tool/vs/best/blog-howto/blog-article/solutions @1440/390）：全 200、0 console error、无横向溢出；站点导航 64px sticky、内容头 static auto-height
   - 构建 2142 页；pre-deploy-check 全绿；已推送 origin/main（Vercel 自动上线）
-- [x] **P0-14 URL 结构规范化决策** — `docs/URL-STRUCTURE.md`：保留 `/tool/{slug}/`、`/vs/{slug}/`、`/best/{cat}/`；`/tools/`（复数）留给免费在线工具；不做大规模 301 迁移 @Claude 2026-07-20
-- [x] **P0-9 + P0-10 Article Grid + Prose Typography 系统** — `global.css` 新增 `.article-grid`（760 文章 + 280 sticky TOC + 可选 320 sidebar）与 `.prose` 响应式排版（H1 64 / H2 42 / H3 32 / 正文 20，clamp 响应式）；`tool/[slug].astro` 重构为参考实现（760+280 双栏 + 16 项自动 TOC）；`.tool-detail-header h1`、`.lede`、`.detail-section h2/p/li` 升级到规范尺寸 @Claude 2026-07-20
-- [x] **P0-8 图片 Lightbox + Lazy Load** — `public/js/lightbox.js`（无依赖、渐进增强、Esc/方向键、上一张/下一张、caption、计数）+ `.lb-overlay` 样式；`ScreenshotGallery.astro` 加 `data-lightbox`；`BaseLayout` 引入脚本；截图 `<img>` 已 `loading=lazy` + `decoding=async` @Claude 2026-07-20
+- [x] **P0-14 URL 结构规范化决策** — `docs/URL-STRUCTURE.md`：保留 `/tool/{slug}/`、`/vs/{slug}/`、`/best/{cat}/`；`/tools/`（复数）留给免费在线工具；不做大规模 301 迁移 @Codex 2026-07-20
+- [x] **P0-9 + P0-10 Article Grid + Prose Typography 系统** — `global.css` 新增 `.article-grid`（760 文章 + 280 sticky TOC + 可选 320 sidebar）与 `.prose` 响应式排版（H1 64 / H2 42 / H3 32 / 正文 20，clamp 响应式）；`tool/[slug].astro` 重构为参考实现（760+280 双栏 + 16 项自动 TOC）；`.tool-detail-header h1`、`.lede`、`.detail-section h2/p/li` 升级到规范尺寸 @Codex 2026-07-20
+- [x] **P0-8 图片 Lightbox + Lazy Load** — `public/js/lightbox.js`（无依赖、渐进增强、Esc/方向键、上一张/下一张、caption、计数）+ `.lb-overlay` 样式；`ScreenshotGallery.astro` 加 `data-lightbox`；`BaseLayout` 引入脚本；截图 `<img>` 已 `loading=lazy` + `decoding=async` @Codex 2026-07-20
 - [x] **P0-13 industry_tags 分类体系落地** — 11 项分类 + 43 款工具打标 + `industry-taxonomy.json` @Claude 2026-07-20
 - [x] **P0-15 五个行业场景页上线** — Architects / Engineers / Construction / Small Business / Students（每页 9-11 工具 + 10 FAQ + 完整 JSON-LD） @Claude 2026-07-20
 - [x] **P0-4 Tool Detail 模板重构（基础）** — Quick Facts / TestStatus / FeatureTable / ToolFAQ / SEO Schema 全部到位，17 家旗舰工具补齐编辑元数据 @Claude 2026-07-20
