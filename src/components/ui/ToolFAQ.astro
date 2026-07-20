@@ -1,0 +1,26 @@
+---
+import FAQSchema from "../FAQSchema.astro";
+const { faqs = [], heading = "Frequently asked questions" } = Astro.props;
+const items = (faqs || []).filter(f => f && (f.q_en || f.q) && (f.a_en || f.a));
+const schemaData = items.map(f => ({ q: f.q_en || f.q, a: f.a_en || f.a }));
+---
+{items.length > 0 && (
+  <section class="tool-faq" aria-labelledby="tool-faq-heading">
+    <h2 id="tool-faq-heading"><i class="fas fa-circle-question" aria-hidden="true"></i> {heading}</h2>
+    <div class="tool-faq-list">
+      {items.map((f, i) => (
+        <details class="tool-faq-item" open={i === 0}>
+          <summary
+            data-i18n-en={f.q_en || f.q}
+            data-i18n-zh={f.q_zh || f.q_en || f.q}
+          >{f.q_en || f.q}</summary>
+          <p
+            data-i18n-en={f.a_en || f.a}
+            data-i18n-zh={f.a_zh || f.a_en || f.a}
+          >{f.a_en || f.a}</p>
+        </details>
+      ))}
+    </div>
+    <FAQSchema faqs={schemaData} />
+  </section>
+)}

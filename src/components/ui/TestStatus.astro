@@ -1,0 +1,32 @@
+---
+const { data, toolName = "This tool", reviewed = false, testedVersion } = Astro.props;
+const hasData = data && data.prompt && Array.isArray(data.metrics) && data.metrics.length > 0;
+---
+<section class="test-status" aria-labelledby="test-status-heading">
+  <h2 id="test-status-heading"><i class="fas fa-flask" aria-hidden="true"></i> Real test data</h2>
+  {hasData ? (
+    <>
+      <p class="test-prompt"><strong>Prompt tested:</strong> "{data.prompt}"</p>
+      <div class="test-metrics">
+        {data.metrics.map(m => (
+          <div class="test-metric">
+            <span class="test-metric-label">{m.label}</span>
+            <strong class="test-metric-value">{m.value}</strong>
+          </div>
+        ))}
+      </div>
+      {data.notes && <p class="test-notes">{data.notes}</p>}
+      <p class="test-footnote">Same prompt tested across comparable tools. Tested {data.testedAt || "recently"}.</p>
+    </>
+  ) : (
+    <div class="test-pending">
+      <span class="status-badge status-badge--pending"><i class="fas fa-hourglass-half" aria-hidden="true"></i> Benchmark pending</span>
+      <p>
+        {reviewed
+          ? `${toolName} is editorially reviewed${testedVersion ? ` (tested version: ${testedVersion})` : ""}. Our standardized real-test data will be published here once the shared benchmark suite completes.`
+          : `${toolName} has been catalogued but not yet hands-on tested. We only publish speed, token, cost and accuracy numbers after running our standardized benchmark.`}
+      </p>
+      <p class="test-footnote">We do not display fabricated or vendor-supplied benchmark numbers.</p>
+    </div>
+  )}
+</section>

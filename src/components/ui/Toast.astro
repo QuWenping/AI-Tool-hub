@@ -1,0 +1,62 @@
+---
+const { message = '', type = 'info', timeout = 3000, onClose } = Astro.props;
+const typeClass = type switch {
+  'success' => 'toast-success',
+  'error' => 'toast-error',
+  'warning' => 'toast-warning',
+  _ => 'toast-info'
+};
+---
+<div class:toast={true} class:type={typeClass} role="alert" aria-live="polite" aria-atomic="true">
+  <div class="toast-content">
+    {message}
+  </div>
+  {onClose && <button class="toast-close" on:click={onClose} aria-label="Close">&times;</button>}
+</div>
+<style>
+.toast {
+  position: fixed;
+  bottom: var(--s-6);
+  right: var(--s-6);
+  min-width: 250px;
+  padding: var(--s-4) var(--s-6);
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s-3);
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  transform: translateX(110%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+}
+.toast.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+.toast-success { border-left: 4px solid var(--green); background: var(--green-bg); }
+.toast-error { border-left: 4px solid var(--red); background: var(--red-bg); }
+.toast-warning { border-left: 4px solid var(--amber); background: var(--amber-bg); }
+.toast-info { border-left: 4px solid var(--brand); background: var(--brand-bg); }
+.toast-content {
+  flex: 1;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+.toast-close {
+  background: none;
+  border: none;
+  font-size: var(--fs-lg);
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 0;
+}
+.toast-close:hover {
+  color: var(--text);
+}
+</style>

@@ -1,0 +1,18 @@
+---
+const { items = [] } = Astro.props;
+const visible = (items || []).filter(i => i && i.label && (i.value || i.href));
+---
+{visible.length > 0 && (
+  <dl class="quick-facts">
+    {visible.map(item => (
+      <div class="quick-facts-row">
+        <dt>{item.label}</dt>
+        <dd>
+          {item.href
+            ? <a href={item.href} rel={item.rel} target={item.external ? "_blank" : undefined}>{item.value}</a>
+            : <span>{item.value}</span>}
+        </dd>
+      </div>
+    ))}
+  </dl>
+)}

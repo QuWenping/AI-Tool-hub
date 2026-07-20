@@ -1,0 +1,215 @@
+{
+  "chatgpt": {
+    "reviewed": true,
+    "updatedAt": "2026-07-19",
+    "testedVersion": "GPT-5 / GPT-4o (Plus)",
+    "score": 9.2,
+    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Web","iOS","Android","Desktop"] },
+    "pricingSummary": { "en": "Free tier with GPT-4o mini · Plus $20/mo unlocks GPT-5, image generation, voice mode.", "zh": "免费版含 GPT-4o mini；Plus 20 美元/月解锁 GPT-5、图像、语音。" },
+    "faq": [
+      { "q_en": "Is ChatGPT free to use?", "q_zh": "ChatGPT 免费吗？", "a_en": "Yes. The free tier ships GPT-4o mini. The $20/month Plus plan adds GPT-5, image generation, and voice mode.", "a_zh": "免费版包含 GPT-4o mini。Plus（20 美元/月）解锁 GPT-5、图像生成和语音模式。" },
+      { "q_en": "What is ChatGPT best for?", "q_zh": "ChatGPT 最适合什么？", "a_en": "General thinking, drafting, and quick research. It is the strongest all-round assistant we tested for daily productivity.", "a_zh": "通用思考、写作草稿和快速研究。是我们实测中最全能的日常助手。" },
+      { "q_en": "How does ChatGPT compare with Claude?", "q_zh": "ChatGPT 和 Claude 有什么区别？", "a_en": "ChatGPT is more well-rounded with voice, image and plugins; Claude produces more natural long-form writing and handles longer documents.", "a_zh": "ChatGPT 更全能（语音、图像、插件），Claude 长文写作更自然、长文档能力更强。" },
+      { "q_en": "Does ChatGPT have an API?", "q_zh": "ChatGPT 有 API 吗？", "a_en": "Yes. OpenAI exposes GPT models via the OpenAI API with usage-based pricing.", "a_zh": "有。OpenAI 通过按量计费的 OpenAI API 提供 GPT 模型。" }
+    ]
+  },
+  "claude": {
+    "reviewed": true,
+    "updatedAt": "2026-07-19",
+    "testedVersion": "Claude 3.5 Sonnet / Opus",
+    "score": 9.0,
+    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Web","iOS","Android","Desktop"] },
+    "pricingSummary": { "en": "Free tier with limits · Pro $20/mo unlocks larger context and Artifacts.", "zh": "免费版有额度限制；Pro 20 美元/月解锁更大上下文和 Artifacts。" },
+    "faq": [
+      { "q_en": "What context length does Claude support?", "q_zh": "Claude 支持多长上下文？", "a_en": "Claude Pro supports a 200K-token context window, enough for a 100+ page document in one prompt.", "a_zh": "Claude Pro 支持 200K token 上下文，可一次处理 100 页以上文档。" },
+      { "q_en": "Is Claude better than ChatGPT for writing?", "q_zh": "Claude 写作比 ChatGPT 更好吗？", "a_en": "For long-form English writing with a natural voice, Claude is our top pick.", "a_zh": "在自然风格的长文英文写作上，Claude 是我们的首选。" },
+      { "q_en": "Does Claude connect to the web?", "q_zh": "Claude 能联网吗？", "a_en": "Native web browsing is limited today; use Perplexity or Gemini when live search is critical.", "a_zh": "原生联网较弱；需要实时联网请选 Perplexity 或 Gemini。" },
+      { "q_en": "Is Claude available worldwide?", "q_zh": "Claude 全球可用吗？", "a_en": "Availability varies by region. Anthropic publishes an up-to-date list of supported countries.", "a_zh": "可用地区因国家而异，请以 Anthropic 官方列表为准。" }
+    ]
+  },
+  "gemini": {
+    "reviewed": true,
+    "updatedAt": "2026-07-19",
+    "testedVersion": "Gemini 2.5 Pro",
+    "score": 8.6,
+    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Web","iOS","Android"] },
+    "pricingSummary": { "en": "Generous free tier · Gemini Advanced $20/mo unlocks 2M context and Gemini Live.", "zh": "免费额度较慷慨；Gemini Advanced 20 美元/月解锁 2M 上下文和 Gemini Live。" },
+    "faq": [
+      { "q_en": "What can Gemini do that ChatGPT cannot?", "q_zh": "Gemini 有哪些优势？", "a_en": "Native video understanding, a 2-million-token context window, and deep Google Search integration.", "a_zh": "原生视频理解、200 万 token 上下文和最深的 Google 搜索集成。" },
+      { "q_en": "Does Gemini support voice?", "q_zh": "Gemini 支持语音吗？", "a_en": "Yes. Gemini Live offers real-time voice conversations with natural intonation.", "a_zh": "支持。Gemini Live 提供自然语音对话。" },
+      { "q_en": "Is Gemini free?", "q_zh": "Gemini 免费吗？", "a_en": "Base Gemini is free. Gemini Advanced costs $20/month for higher limits and features.", "a_zh": "基础版免费；Advanced 20 美元/月解锁更高额度和功能。" }
+    ]
+  },
+  "github-copilot": {
+    "reviewed": true,
+    "updatedAt": "2026-07-19",
+    "testedVersion": "GitHub Copilot (2026)",
+    "score": 8.4,
+    "quickFacts": { "freeTier": true, "hasApi": false, "platforms": ["VS Code","JetBrains","Neovim","Visual Studio"] },
+    "pricingSummary": { "en": "Free for verified students · Individual $10/mo · Business $19/mo.", "zh": "学生免费；个人版 10 美元/月，团队版 19 美元/月。" },
+    "faq": [
+      { "q_en": "Is GitHub Copilot free?", "q_zh": "GitHub Copilot 免费吗？", "a_en": "Free for verified students, open-source maintainers, and teachers. Others start at $10/month.", "a_zh": "学生、开源维护者和教师免费；其他用户 10 美元/月起。" },
+      { "q_en": "Does Copilot support multi-file editing?", "q_zh": "Copilot 支持多文件编辑吗？", "a_en": "Copilot Chat handles some multi-file edits; for repo-wide agent work Cursor is more capable.", "a_zh": "Copilot Chat 支持部分多文件编辑；仓库级 Agent 场景 Cursor 更强。" },
+      { "q_en": "Which languages does Copilot support?", "q_zh": "Copilot 支持哪些语言？", "a_en": "30+ languages including Python, JavaScript/TypeScript, Go, Rust, Java and C#.", "a_zh": "30+ 语言，涵盖 Python、JavaScript/TypeScript、Go、Rust、Java、C# 等。" }
+    ]
+  },
+  "cursor": {
+    "reviewed": true,
+    "updatedAt": "2026-07-19",
+    "testedVersion": "Cursor 2026 (Agent Mode)",
+    "score": 9.0,
+    "quickFacts": { "freeTier": true, "hasApi": false, "platforms": ["macOS","Windows","Linux"] },
+    "pricingSummary": { "en": "Hobby tier is free · Pro $20/mo unlocks larger models and Agent mode.", "zh": "免费版可用；Pro 20 美元/月解锁大模型与 Agent 模式。" },
+    "faq": [
+      { "q_en": "How is Cursor different from VS Code?", "q_zh": "Cursor 与 VS Code 有什么不同？", "a_en": "Cursor is a VS Code fork with GPT-4-level AI, codebase chat, and multi-file agent mode built in.", "a_zh": "Cursor 是 VS Code 分支，内置 GPT-4 级 AI、代码库对话和多文件 Agent 模式。" },
+      { "q_en": "Is Cursor worth $20/month?", "q_zh": "Cursor 值 20 美元/月吗？", "a_en": "For full-time developers refactoring code daily, it usually pays back within the first week.", "a_zh": "对每天重构代码的全职开发者，通常一周内就能回本。" },
+      { "q_en": "Can Cursor read my entire codebase?", "q_zh": "Cursor 可以阅读整个代码库吗？", "a_en": "Yes. It indexes your project and lets you chat with the full codebase context.", "a_zh": "可以。Cursor 会索引项目并允许你基于整仓上下文对话。" }
+    ]
+  },
+  "midjourney": {
+    "reviewed": true,
+    "updatedAt": "2026-07-19",
+    "testedVersion": "Midjourney v7",
+    "score": 9.0,
+    "quickFacts": { "freeTier": false, "hasApi": false, "platforms": ["Web","Discord"] },
+    "pricingSummary": { "en": "Basic $10/mo · Standard $30/mo · Pro $60/mo · Mega $120/mo.", "zh": "基础版 10 美元/月；标准 30；Pro 60；Mega 120 美元/月。" },
+    "faq": [
+      { "q_en": "Does Midjourney offer a free tier?", "q_zh": "Midjourney 有免费额度吗？", "a_en": "No. Paid subscriptions start at $10/month.", "a_zh": "没有免费额度，10 美元/月起。" },
+      { "q_en": "Where do I generate images?", "q_zh": "如何生成图像？", "a_en": "The web app and the Discord bot both work; the web app is the recommended default in 2026.", "a_zh": "支持网页版和 Discord；2026 年推荐使用网页版。" },
+      { "q_en": "Can I use Midjourney commercially?", "q_zh": "Midjourney 可以商用吗？", "a_en": "Standard and higher plans grant commercial usage rights.", "a_zh": "标准版及以上支持商用。" }
+    ]
+  },
+  "stable-diffusion": {
+    "reviewed": true,
+    "updatedAt": "2026-07-19",
+    "testedVersion": "Stable Diffusion 3.5",
+    "score": 8.0,
+    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Self-hosted","Web (cloud)","API"] },
+    "pricingSummary": { "en": "Open source and free to self-host · Cloud hosts charge per generation.", "zh": "开源可自部署；云服务按次收费。" },
+    "faq": [
+      { "q_en": "Do I need a GPU for Stable Diffusion?", "q_zh": "Stable Diffusion 需要 GPU 吗？", "a_en": "Yes for local runs; cloud hosts (RunDiffusion, ThinkDiffusion) work without local hardware.", "a_zh": "本地运行需要 GPU；也可用 RunDiffusion、ThinkDiffusion 等云服务。" },
+      { "q_en": "How does SD compare with Midjourney?", "q_zh": "SD 和 Midjourney 有什么区别？", "a_en": "SD offers more control (LoRA, ControlNet, ComfyUI) but a steeper learning curve; Midjourney is easier for stylish output.", "a_zh": "SD 可控性更强（LoRA、ControlNet、ComfyUI），学习曲线陡；Midjourney 更适合快速出美感。" },
+      { "q_en": "Is commercial use allowed?", "q_zh": "商用允许吗？", "a_en": "Yes, subject to the Stability AI community license.", "a_zh": "允许，须遵守 Stability AI 社区许可证。" }
+    ]
+  },
+  "leonardo": {
+    "reviewed": true,
+    "updatedAt": "2026-07-19",
+    "testedVersion": "Leonardo.AI 2026",
+    "score": 8.2,
+    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Web"] },
+    "pricingSummary": { "en": "Free daily credits · Apprentice $12/mo · Artisan $30/mo · Maestro $60/mo.", "zh": "每日免费额度；Apprentice 12；Artisan 30；Maestro 60 美元/月。" },
+    "faq": [
+      { "q_en": "What is Leonardo best for?", "q_zh": "Leonardo 最适合什么？", "a_en": "Game art, character design and concept art; Alchemy mode keeps style consistency across generations.", "a_zh": "游戏美术、角色设计和概念图；Alchemy 模式保持风格一致。" },
+      { "q_en": "Is there a free plan?", "q_zh": "有免费版吗？", "a_en": "Yes, with daily credits refreshed automatically.", "a_zh": "有，每天自动刷新额度。" }
+    ]
+  },
+  "sora": {
+    "reviewed": true,
+    "updatedAt": "2026-07-19",
+    "testedVersion": "Sora 2 (2026)",
+    "score": 8.2,
+    "quickFacts": { "freeTier": false, "hasApi": false, "platforms": ["Web"] },
+    "pricingSummary": { "en": "ChatGPT Plus $20/mo includes limited access · Pro tiers scale to $200/mo.", "zh": "包含在 ChatGPT Plus（20 美元/月）中限量访问；Pro 版最高 200 美元/月。" },
+    "faq": [
+      { "q_en": "Is Sora available to everyone?", "q_zh": "Sora 全球可用吗？", "a_en": "Availability depends on region and OpenAI’s rollout; check the official announcement.", "a_zh": "可用性受地区和 OpenAI 推出节奏影响，请以官方公告为准。" },
+      { "q_en": "What clip length does Sora support?", "q_zh": "Sora 单段时长多长？", "a_en": "Up to 20 seconds per clip with strong character/physics consistency.", "a_zh": "最长 20 秒/段，角色与物理一致性表现出色。" }
+    ]
+  },
+  "runway": {
+    "reviewed": true,
+    "updatedAt": "2026-07-19",
+    "testedVersion": "Runway Gen-3 Alpha",
+    "score": 8.8,
+    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Web","API"] },
+    "pricingSummary": { "en": "Free tier with limited credits · Standard $15/mo · Pro $35/mo · Unlimited $95/mo.", "zh": "免费额度有限；标准 15；Pro 35；Unlimited 95 美元/月。" },
+    "faq": [
+      { "q_en": "Which Runway plan should I pick?", "q_zh": "Runway 应该选哪一档？", "a_en": "The $35/month Pro plan is the sweet spot for creators shipping regular content.", "a_zh": "常规创作者建议选 35 美元/月的 Pro 版。" },
+      { "q_en": "Does Runway offer editing tools?", "q_zh": "Runway 是否有剪辑工具？", "a_en": "Yes — motion brush, inpainting, storyboard, and Gen-3 upscale ship in the app.", "a_zh": "内置运动笔刷、图像补全、故事板和 Gen-3 放大。" }
+    ]
+  },
+  "elevenlabs": {
+    "reviewed": true,
+    "updatedAt": "2026-07-19",
+    "testedVersion": "ElevenLabs v3",
+    "score": 9.0,
+    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Web","API"] },
+    "pricingSummary": { "en": "Starter $5/mo · Creator $22/mo · Pro $99/mo · Scale $330/mo.", "zh": "Starter 5；Creator 22；Pro 99；Scale 330 美元/月。" },
+    "faq": [
+      { "q_en": "Can ElevenLabs clone my voice?", "q_zh": "ElevenLabs 能克隆我的声音吗？", "a_en": "Yes. Instant voice cloning requires only a short reference sample; professional cloning improves quality.", "a_zh": "支持。即时克隆只需少量样本；专业克隆效果更佳。" },
+      { "q_en": "How many languages are supported?", "q_zh": "支持多少语言？", "a_en": "29 languages with natural intonation, including Chinese.", "a_zh": "29 种语言（含中文）语音自然。" }
+    ]
+  },
+  "suno": {
+    "reviewed": true,
+    "updatedAt": "2026-07-19",
+    "testedVersion": "Suno v4",
+    "score": 8.4,
+    "quickFacts": { "freeTier": true, "hasApi": false, "platforms": ["Web","iOS"] },
+    "pricingSummary": { "en": "Free daily credits · Pro $10/mo · Premier $30/mo.", "zh": "每日免费额度；Pro 10；Premier 30 美元/月。" },
+    "faq": [
+      { "q_en": "Can I use Suno tracks commercially?", "q_zh": "Suno 生成的音乐可以商用吗？", "a_en": "Paid plans grant commercial usage rights.", "a_zh": "付费版本支持商用。" },
+      { "q_en": "Does Suno work in Chinese?", "q_zh": "Suno 支持中文吗？", "a_en": "Yes. Chinese lyrics generate cleanly in Suno v4.", "a_zh": "支持。Suno v4 生成中文歌词效果良好。" }
+    ]
+  },
+  "descript": {
+    "reviewed": true,
+    "updatedAt": "2026-07-19",
+    "testedVersion": "Descript 2026",
+    "score": 8.6,
+    "quickFacts": { "freeTier": true, "hasApi": false, "platforms": ["macOS","Windows","Web"] },
+    "pricingSummary": { "en": "Free tier · Hobbyist $24/mo · Pro $33/mo.", "zh": "免费版；Hobbyist 24；Pro 33 美元/月。" },
+    "faq": [
+      { "q_en": "What is transcript-based editing?", "q_zh": "什么是转写驱动的剪辑？", "a_en": "You edit the transcript and Descript trims the audio/video to match.", "a_zh": "编辑文字稿即可自动裁剪对应音视频。" },
+      { "q_en": "Does Descript remove filler words?", "q_zh": "Descript 能自动去掉口头禅吗？", "a_en": "Yes. Filler word removal is built in and works on speech in real time.", "a_zh": "支持自动去除口头禅，实时生效。" }
+    ]
+  },
+  "notion-ai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-19",
+    "testedVersion": "Notion AI 2026",
+    "score": 8.2,
+    "quickFacts": { "freeTier": false, "hasApi": false, "platforms": ["Web","macOS","Windows","iOS","Android"] },
+    "pricingSummary": { "en": "$10/user/month add-on to any Notion plan.", "zh": "作为 Notion 附加组件，10 美元/用户/月。" },
+    "faq": [
+      { "q_en": "Do I need Notion to use Notion AI?", "q_zh": "使用 Notion AI 必须先用 Notion 吗？", "a_en": "Yes. Notion AI is an add-on inside the Notion workspace.", "a_zh": "是。Notion AI 是 Notion 工作区中的附加组件。" },
+      { "q_en": "Is Notion AI worth it?", "q_zh": "Notion AI 值得开通吗？", "a_en": "For teams already using Notion for docs, yes — it summarizes and drafts inside your existing knowledge base.", "a_zh": "已经在用 Notion 写文档的团队值得开通，可直接在知识库内总结和起草。" }
+    ]
+  },
+  "perplexity": {
+    "reviewed": true,
+    "updatedAt": "2026-07-19",
+    "testedVersion": "Perplexity 2026",
+    "score": 8.8,
+    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Web","iOS","Android"] },
+    "pricingSummary": { "en": "Free tier · Pro $20/mo unlocks unlimited Pro Search and file upload.", "zh": "免费版；Pro 20 美元/月解锁无限 Pro Search 和文件上传。" },
+    "faq": [
+      { "q_en": "Is Perplexity a search engine or a chatbot?", "q_zh": "Perplexity 是搜索还是聊天？", "a_en": "Both. It answers like a chatbot but cites live sources for every claim.", "a_zh": "两者兼具：像聊天一样答复，同时逐条引用可查证的来源。" },
+      { "q_en": "Does Perplexity replace Google?", "q_zh": "Perplexity 能取代 Google 吗？", "a_en": "For research and product comparison it is often faster; for navigational search Google is still preferred.", "a_zh": "研究和产品对比更快；导航式搜索仍以 Google 为主。" }
+    ]
+  },
+  "jasper": {
+    "reviewed": true,
+    "updatedAt": "2026-07-19",
+    "testedVersion": "Jasper 2026",
+    "score": 6.8,
+    "quickFacts": { "freeTier": false, "hasApi": true, "platforms": ["Web","API"] },
+    "pricingSummary": { "en": "Creator $49/mo · Teams $125/mo · Business custom.", "zh": "Creator 49；Teams 125；Business 定制。" },
+    "faq": [
+      { "q_en": "Who is Jasper built for?", "q_zh": "Jasper 面向什么用户？", "a_en": "Marketing teams that need brand voice consistency across many writers.", "a_zh": "需要在多位作者间保持品牌语调的营销团队。" },
+      { "q_en": "Is Jasper worth it for individuals?", "q_zh": "个人使用 Jasper 值吗？", "a_en": "For individuals, Claude Pro or ChatGPT Plus deliver similar output at lower cost.", "a_zh": "个人使用建议改用 Claude Pro 或 ChatGPT Plus，性价比更高。" }
+    ]
+  },
+  "hostinger": {
+    "reviewed": true,
+    "updatedAt": "2026-07-19",
+    "testedVersion": "Hostinger 2026",
+    "score": 7.8,
+    "quickFacts": { "freeTier": false, "hasApi": false, "platforms": ["Web dashboard"] },
+    "pricingSummary": { "en": "Premium $2.99/mo · Business $3.99/mo · Cloud $9.99/mo (introductory).", "zh": "Premium 2.99；Business 3.99；Cloud 9.99 美元/月（首年优惠）。" },
+    "faq": [
+      { "q_en": "Is Hostinger suitable for high-traffic sites?", "q_zh": "Hostinger 能扛住大流量吗？", "a_en": "Entry-level plans have shared resource caps; scale up to Cloud or use a CDN when traffic grows.", "a_zh": "低价套餐资源受限；高流量请升级 Cloud 或叠加 CDN。" },
+      { "q_en": "Does Hostinger include a free domain?", "q_zh": "Hostinger 是否赠送域名？", "a_en": "Yes, annual Business+ plans include a free first-year domain and SSL.", "a_zh": "年付 Business 及以上版本赠首年域名和 SSL。" }
+    ]
+  }
+}

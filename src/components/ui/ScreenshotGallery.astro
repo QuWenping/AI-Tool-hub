@@ -1,0 +1,21 @@
+---
+const { images = [], columns = 3 } = Astro.props;
+const list = (images || []).filter(img => img && img.src);
+---
+{list.length > 0 && (
+  <div class="screenshot-gallery" style={`--gallery-columns:${columns}`}>
+    {list.map(img => (
+      <figure class="screenshot-item">
+        <img
+          src={img.src}
+          alt={img.alt || "Screenshot"}
+          loading="lazy"
+          decoding="async"
+          width={img.width || 1200}
+          height={img.height || 700}
+        />
+        {img.caption && <figcaption>{img.caption}</figcaption>}
+      </figure>
+    ))}
+  </div>
+)}

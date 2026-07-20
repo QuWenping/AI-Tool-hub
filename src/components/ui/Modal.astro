@@ -1,0 +1,64 @@
+---
+const { children, isOpen = false, onClose } = Astro.props;
+---
+{:if(isOpen)}
+<div class="modal-backdrop" on:click={onClickOutside}>
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-head">
+    <div class="modal-header">
+      <h2 id="modal-head" class="modal-title">{/* title? we could accept title prop */}</h2>
+      <button class="modal-close" on:click={onClose} aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body">
+      {children}
+    </div>
+  </div>
+</div>
+{/if}
+<style>
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: var(--bg-card);
+  border-radius: var(--r-lg);
+  width: 90%;
+  max-width: 500px;
+  max-height: 85vh;
+  overflow: auto;
+  position: relative;
+  box-shadow: var(--shadow-xl);
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--s-4) var(--s-6);
+  border-bottom: 1px solid var(--border);
+}
+.modal-title {
+  margin: 0;
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  color: var(--text);
+}
+.modal-close {
+  background: none;
+  border: none;
+  font-size: var(--fs-h3);
+  line-height: 1;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 0;
+}
+.modal-close:hover { color: var(--text); }
+.modal-body {
+  padding: var(--s-6);
+  color: var(--text);
+}
+</style>
