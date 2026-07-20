@@ -52,7 +52,7 @@ status: active
 
 ## Design System 基础
 
-- [ ] P0-3 组件化重构现存页面（消除 100+ 页面 inline style / hard-coded 颜色） ⚙️ 博客块已完成（46 篇全部统一：32 篇迁移 BlogPostLayout + 12 篇 .article 去 inline style，共去 ~380 个 inline style）；best/vs/blog 动态模板 + 站点 header 作用域已修；剩余：~13 篇 .article 博客可再迁 BlogPostLayout 求统一（可选）、组件级 inline style（Feedback/Chart 等）、prompts/workflows/templates/solutions/alternatives/zh 镜像等非博客页面的 inline style 清理 @Codex 2026-07-20
+- [ ] P0-3 组件化重构现存页面（消除 100+ 页面 inline style / hard-coded 颜色） ⚙️ 博客块完成（46 篇统一，~380 个 page-level inline style 清零）；非博客 cosmetic 块完成（29 文件 / 140 个，round 3 step 1）；剩余：34 个含结构性 inline style 的非博客文件（11 个交互式 tools/*.astro + about/team/contact/newsletter/submit-*/best-ai-agents/prompts·templates·workflows 动态模板及 zh 镜像）需逐个把结构性 style 转成 class；组件级 inline style（Feedback/Chart）另算 @Codex 2026-07-20
 - [ ] P0-7 Lighthouse 全站达标（Performance ≥95、SEO 100）
 - [x] P0-8 图片规范（WebP/AVIF + Lightbox + Lazy Load） @Codex 2026-07-20
 - [x] P0-9 Grid System 统一（Article 760 / TOC 280 / Sidebar 320） @Codex 2026-07-20
@@ -173,6 +173,11 @@ status: active
 
 # ✅ 已完成里程碑（记录 & 归档）
 
+- [x] **Sprint 6（2026-07-21）P0-3 round 3 step 1：非博客 cosmetic inline style 清理** @Codex 2026-07-21
+  - 审计全部非博客 .astro 页面：805 个 inline style / 63 文件；按是否含结构性（display/grid/flex/position）拆分
+  - 29 个 cosmetic-only 文件批量剥离 140 个 inline style：methodology(76)、case-studies、glossary、sponsor、press-kit、alternatives/[slug]、use-case-for-*(4)、deep-dive-*(9)、index、9 个 zh 镜像页
+  - 34 个含结构性 inline style 的文件（含 11 个交互式 tools/*.astro）留下一节点逐个把结构性 style 转 class
+  - Playwright 12 路由 × 2 视角 = 24 检查全绿（200、0 page error、无溢出）；构建 2142 页；门禁全绿；已推送
 - [x] **Sprint 6（2026-07-21）P0-3 round 2 step 2+3：博客全量统一到 BlogPostLayout / 去 inline style** @Codex 2026-07-21
   - step 2：批量迁移 31 篇 `.legal-page blog-post` 到 `BlogPostLayout`（best-ai-* 11 / how-to-* 13 / vs 5 / meetily / apple-speechanalyzer）；3 篇特殊处理（apple 无 BlogJsonLd+div meta、2 篇带 scoped `<style>`）；全部移除 `<section class=blog-content>` 包装与死 scoped style；剥离全部 inline style（审计确认 0 结构性 inline style，244 个全为装饰性）
   - step 3：12 篇 `.article` 博客剥离 136 个 inline style；agnes 2 个结构性 grid style 转 `.grid-2`/`.grid-stack` class

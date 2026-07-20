@@ -22,6 +22,10 @@ related:
 
 ## 🚀 最近里程碑
 
+- **Sprint 6（2026-07-21）step 4（round 3 step 1）**：P0-3 非博客 cosmetic inline style 清理
+  - 审计非博客页面：805 inline style / 63 文件；29 个 cosmetic-only 文件批量剥离 140 个（methodology 76、deep-dive-* 9、use-case-for-* 4、zh 镜像 9 等）
+  - 34 个含结构性 inline style 的文件（含 11 交互式 tools/*.astro）待下一节点逐个转 class
+  - Playwright 24 检查全绿；构建 2142 页；门禁全绿；已推送
 - **Sprint 6（2026-07-21）step 2+3**：P0-3 博客块全量统一
   - step 2：31 篇 `.legal-page blog-post` 批量迁移到 `BlogPostLayout`（去包装/死 scoped style/全部 inline style，244 个装饰性 style 属性清零）
   - step 3：12 篇 `.article` 博客剥离 136 个 inline style；agnes 2 个结构性 grid 转 `.grid-2`/`.grid-stack`
