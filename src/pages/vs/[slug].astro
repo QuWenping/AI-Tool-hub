@@ -5,6 +5,7 @@ import toolsData from "../../data/tools.json";
 import Chart from "../../components/Chart.astro";
 import TLDR from "../../components/ui/TLDR.astro";
 import AdSlot from "../../components/ui/AdSlot.astro";
+import ArticleToc from "../../components/ui/ArticleToc.astro";
 export async function getStaticPaths() {
   return matchups.map(function(m){return {params:{slug:m.slug},props:{m:m}}});
 }
@@ -77,6 +78,14 @@ const faqSchema = {
     "acceptedAnswer": { "@type": "Answer", "text": f.a }
   }))
 };
+const tocSections = [
+  { id: "at-a-glance", label: "At a glance" },
+  { id: "pros-cons", label: "Pros & cons" },
+  { id: "verdict", label: "Verdict" },
+  { id: "related", label: "Related" },
+  { id: "this-page-answers", label: "This page answers" }
+];
+
 ---
 <BaseLayout title={m.title_en} description={"Side-by-side comparison of " + aName + " vs " + bName}>
   <Fragment slot="head">
@@ -84,18 +93,19 @@ const faqSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
   </Fragment>
-  <div class="tool-detail">
+  <div class="article-grid">
+    <div class="article-main">
     <nav class="breadcrumbs">
       <a href="/">Home</a> &rsaquo;
       <a href={"/best/" + aCat + "/"}>{(categoryLabels[aCat] || aCat) + " tools"}</a> &rsaquo;
       <span>{m.title_en}</span>
     </nav>
 
-    <div style="text-align: center; padding: 24px 0 0;">
-      <span class="eyebrow" style="color: var(--accent-color); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">Tool comparison</span>
-      <h1 style="font-size: 36px; font-weight: 700; letter-spacing: -0.5px; line-height: 1.2; margin: 12px 0;">{m.title_en}</h1>
-      <p style="color: var(--text-soft); max-width: 720px; margin: 0 auto; font-size: 16px; line-height: 1.55;">We tested both <strong>{aName}</strong> and <strong>{bName}</strong> side by side for two weeks.</p>
-    </div>
+    <header class="vs-hero">
+      <span class="eyebrow">Tool comparison</span>
+      <h1>{m.title_en}</h1>
+      <p class="lede">We tested both <strong>{aName}</strong> and <strong>{bName}</strong> side by side for two weeks.</p>
+    </header>
       <TLDR items={[
         aName + " vs " + bName + ": " + (aName + " excels at " + aFirstPro.toLowerCase() + ", " + bName + " excels at " + bFirstPro.toLowerCase()),
         "Pricing: " + aName + " (" + ((a && a.pricing && a.pricing.en) || "various") + ") vs " + bName + " (" + ((b && b.pricing && b.pricing.en) || "various") + ")",
@@ -124,8 +134,8 @@ const faqSchema = {
       </a>
     </div>
 
-    <section>
-      <h2 style="font-size: 22px; font-weight: 700; margin: 32px 0 12px; letter-spacing: -0.3px;">At-a-glance comparison</h2>
+    <section id="at-a-glance">
+      <h2>At-a-glance comparison</h2>
       <table class="sortable-table ranking">
         <thead><tr><th>Feature</th><th>{aName}</th><th>{bName}</th></tr></thead>
         <tbody>
@@ -143,7 +153,7 @@ const faqSchema = {
       </table>
     </section>
 
-    <div class="grid-2">
+    <div class="grid-2" id="pros-cons">
       <section class="detail-section">
         <h2>{aName}: what we liked</h2>
         <ul class="pros-list">{aPros.map(function(p){return (<li>{p}</li>)})}</ul>
@@ -165,13 +175,13 @@ const faqSchema = {
       </section>
     </div>
 
-    <section class="verdict-box">
+    <section class="verdict-box" id="verdict">
       <h2><i class="fas fa-gavel"></i> Verdict</h2>
       <p><strong>Pick {aName}</strong> if you need {aUse.toLowerCase()}.</p>
       <p><strong>Pick {bName}</strong> if you need {bUse.toLowerCase()}.</p>
     </section>
 
-    <section class="related">
+    <section class="related" id="related">
       <div class="section-title">Related</div>
       <div class="related-grid">
         <a class="related-card" href={"/tool/" + m.a + "/"}>
@@ -191,9 +201,9 @@ const faqSchema = {
       </div>
     </section>
 
-    <section style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:20px;margin-top:24px;">
-      <h2 style="font-size:18px;font-weight:700;margin-bottom:12px;">This Page Answers</h2>
-      <ul style="margin:0;padding-left:20px;font-size:14px;color:var(--text-soft);line-height:1.8;">
+    <section class="detail-section" id="this-page-answers">
+      <h2>This Page Answers</h2>
+      <ul class="pros-list">
         <li>What is the difference between {m.tool_a} and {m.tool_b}?</li>
         <li>Which is better: {m.tool_a} or {m.tool_b}?</li>
         <li>How do {m.tool_a} and {m.tool_b} compare on price?</li>
@@ -201,8 +211,14 @@ const faqSchema = {
         <li>Which tool should I choose for my use case?</li>
       </ul>
     </section>
+    </div>
+    <ArticleToc sections={tocSections} />
   </div>
 <style>
+  .vs-hero { text-align: center; padding: 24px 0 0; }
+  .vs-hero .eyebrow { color: var(--brand); font-size: var(--fs-xs); font-weight: var(--fw-bold); text-transform: uppercase; letter-spacing: 0.08em; }
+  .vs-hero h1 { font-size: clamp(34px, 4.5vw + 0.8rem, var(--fs-h1-d)); font-weight: var(--fw-h1); letter-spacing: -0.02em; line-height: var(--lh-heading); margin: var(--s-3) 0; color: var(--text-soft); }
+  .vs-hero .lede { color: var(--text-soft); max-width: 720px; margin: 0 auto; font-size: var(--fs-body); line-height: var(--lh-body); }
   .sortable-table th { cursor: pointer; user-select: none; }
   .sortable-table th:hover { color: var(--accent-color); }
   .sortable-table th::after { content: " ↕"; font-size: 10px; opacity: 0.5; }

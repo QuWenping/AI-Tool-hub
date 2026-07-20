@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import categories from "../../data/categories.json";
 import toolsData from "../../data/tools.json";
+import ArticleToc from "../../components/ui/ArticleToc.astro";
 export async function getStaticPaths() {
   return categories.map(function(cat){return {params:{slug:cat.slug},props:{cat:cat}}});
 }
@@ -131,6 +132,16 @@ const faqSchema = {
     "acceptedAnswer": { "@type": "Answer", "text": f.a }
   }))
 };
+const tocSections = [
+  { id: "top-3", label: "Top 3 picks" },
+  { id: "how-to-choose", label: "How to choose" },
+  { id: "full-list", label: "Full ranked list" },
+  { id: "detailed-reviews", label: "Detailed reviews" },
+  { id: "common-mistakes", label: "Common mistakes" },
+  { id: "faq", label: "FAQ" },
+  { id: "related", label: "Related categories" }
+];
+
 ---
 <BaseLayout title={"Best " + cat.title_en + " in 2026 (Regularly Updated)"} description={cat.desc_en + " Tested with the latest information. Real reviews, real pros and cons, no pay-to-play rankings."} keywords={"best " + cat.title_en + ", " + cat.slug + " AI tools, " + cat.title_en.toLowerCase()}>
   <Fragment slot="head">
@@ -139,13 +150,15 @@ const faqSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
   </Fragment>
   <article class="legal-page">
+    <div class="article-grid">
+      <div class="article-main">
     <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/">Best AI Tools</a> &rsaquo; <span>{cat.title_en}</span></nav>
     <header class="cat-hero">
       <span class="eyebrow" data-i18n="eyebrow_best">Best of 2026</span>
       <h1 data-i18n="best_h1_template">{cat.title_en}</h1>
       <p class="lede">{cat.desc_en}</p>
       <p class="update-note"><em data-i18n="last_updated">Last updated</em>: July 2026 &middot; <span data-i18n="we_tested">{`We tested ${total} tools with the latest information.`}</span></p>
-      <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:6px;padding:4px 12px;margin-top:8px;font-size:13px;font-weight:600;color:#22c55e;"><i class="fas fa-check-circle"></i> Updated &middot; Updated July 2026</div>
+      <div class="updated-badge"><i class="fas fa-check-circle"></i> Updated &middot; Updated July 2026</div>
     </header>
 
     <section class="intro-section">
@@ -153,7 +166,7 @@ const faqSchema = {
     </section>
 
     <section>
-      <h2 data-i18n="top_3_picks">Top 3 Picks</h2>
+      <h2 id="top-3" data-i18n="top_3_picks">Top 3 Picks</h2>
       <div class="tool-grid">
         {matchedTools.slice(0, 3).map(function(t, i){return (
           <a class="tool-card" href={"/tool/" + t.id + "/"}>
@@ -168,12 +181,12 @@ const faqSchema = {
     </section>
 
     <section class="how-to-choose">
-      <h2>How to choose the right {cat.title_en.toLowerCase()} for you</h2>
+      <h2 id="how-to-choose">How to choose the right {cat.title_en.toLowerCase()} for you</h2>
       <p>{howtoText}</p>
     </section>
 
     <section>
-      <h2>Full list: all {total} tools ranked</h2>
+      <h2 id="full-list">Full list: all {total} tools ranked</h2>
       <table class="ranking">
         <thead><tr><th>Rank</th><th>Tool</th><th>Best for</th><th>Category</th></tr></thead>
         <tbody>
@@ -190,7 +203,7 @@ const faqSchema = {
     </section>
 
     <section>
-      <h2 data-i18n="detailed_reviews">Detailed reviews</h2>
+      <h2 id="detailed-reviews" data-i18n="detailed_reviews">Detailed reviews</h2>
       {matchedTools.map(function(t){return (
         <article class="tool-review" id={t.id}>
           <header class="tool-review-head">
@@ -212,7 +225,7 @@ const faqSchema = {
     </section>
 
     <section class="common-mistakes">
-      <h2>Common mistakes when picking {cat.title_en.toLowerCase()}</h2>
+      <h2 id="common-mistakes">Common mistakes when picking {cat.title_en.toLowerCase()}</h2>
       <ul>
         <li><strong>Picking the most popular tool without testing the alternatives.</strong> Popularity is not quality. The tool everyone talks about may not be the best for your specific use case. Always test 2-3 options before committing.</li>
         <li><strong>Paying for a tool without using the free tier first.</strong> Every tool on this list has a free tier or trial. Use it for a week before paying. If you do not reach for it daily after the trial, you will not reach for it after you pay either.</li>
@@ -223,7 +236,7 @@ const faqSchema = {
     </section>
 
     <section>
-      <h2 data-i18n="faq_title">Frequently asked questions</h2>
+      <h2 id="faq" data-i18n="faq_title">Frequently asked questions</h2>
       <div class="faq-section">
         {faqList.map(function(f){return (
           <details>
@@ -235,7 +248,7 @@ const faqSchema = {
     </section>
 
     <section class="related">
-      <h2 data-i18n="related_categories">Related categories</h2>
+      <h2 id="related" data-i18n="related_categories">Related categories</h2>
       <div class="related-grid">
         {relatedCategories.map(function(c){return (
           <a class="related-card" href={"/best/" + c.slug + "/"}>
@@ -248,6 +261,9 @@ const faqSchema = {
         )})}
       </div>
     </section>
+      </div>
+      <ArticleToc sections={tocSections} />
+    </div>
   </article>
 </BaseLayout>
 

@@ -1,0 +1,14 @@
+---
+/* Reusable sticky Table of Contents for article-grid pages.
+   Props: sections = [{ id, label }, ...] (already filtered to what renders). */
+const { sections = [] } = Astro.props;
+const items = (sections || []).filter(s => s && s.id && s.label);
+---
+{items.length > 0 && (
+  <aside class="article-toc" aria-label="Table of contents">
+    <div class="toc-title">On this page</div>
+    <ol>
+      {items.map(s => <li><a href={"#" + s.id}>{s.label}</a></li>)}
+    </ol>
+  </aside>
+)}
