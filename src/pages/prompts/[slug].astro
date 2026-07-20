@@ -12,7 +12,7 @@ const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":page
 ---
 <BaseLayout title={prompt.title + " | AI Prompt Library"} description={"Copy-paste prompt: " + prompt.prompt.substring(0, 120)} keywords={prompt.tags.join(", ")}>
   <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script></Fragment>
-  <div class="article" style="max-width:760px;margin:0 auto;padding:48px 0;">
+  <div class="article">
     <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/prompts/">Prompt Library</a> &rsaquo; <span>{prompt.title}</span></nav>
     <header class="article-header"><span class="eyebrow">{prompt.category} - {prompt.tool}</span><h1>{prompt.title}</h1></header>
     <section class="article-body">
@@ -24,13 +24,13 @@ const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":page
       "Tags: " + prompt.tags.join(", ")
     ]} />
 
-      <div style="position:relative;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:20px;margin:24px 0;">
-        <button id="cp" style="position:absolute;top:12px;right:12px;background:var(--accent-color);color:#fff;border:none;border-radius:6px;padding:6px 14px;font-size:12px;font-weight:600;cursor:pointer;">Copy</button>
-        <pre id="pt" style="white-space:pre-wrap;word-break:break-word;font-size:14px;color:var(--text-soft);line-height:1.7;font-family:monospace;padding-right:80px;">{prompt.prompt}</pre>
+      <div class="code-card">
+        <button id="cp" class="copy-btn">Copy</button>
+        <pre id="pt" class="prompt-code">{prompt.prompt}</pre>
       </div>
       <h2>How to use</h2>
-      <ol style="margin:12px 0 12px 24px;line-height:1.8;"><li>Copy the prompt above</li><li>Open {prompt.tool} or your AI assistant</li><li>Replace [PLACEHOLDER] text with your needs</li><li>Review and edit the AI output</li></ol>
-      <p style="text-align:center;margin-top:32px;"><a href="/prompts/" style="color:var(--accent-color);font-weight:600;">Back to Prompt Library</a></p>
+      <ol><li>Copy the prompt above</li><li>Open {prompt.tool} or your AI assistant</li><li>Replace [PLACEHOLDER] text with your needs</li><li>Review and edit the AI output</li></ol>
+      <p class="back-link"><a href="/prompts/">Back to Prompt Library</a></p>
     </section>
   </div>
 </BaseLayout>

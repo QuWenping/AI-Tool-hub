@@ -18,7 +18,6 @@ const faqItems = [
 const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
 const howToSchema = { "@context":"https://schema.org","@type":"HowTo","name":workflow.title,"description":workflow.description,"tool":workflow.tool,"step":workflow.steps.map((s, i) => ({ "@type":"HowToStep","position":i+1,"name":s.title,"text":s.detail})), "totalTime":"PT30M" };
 const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Workflow Library","item":siteUrl+"/workflows/"},{"@type":"ListItem","position":3,"name":workflow.title,"item":pageUrl}] };
-const diffColors = { "Beginner": "#22c55e", "Intermediate": "#f59e0b", "Advanced": "#ef4444" };
 ---
 <BaseLayout title={workflow.title + " | AI Workflow Library"} description={workflow.description} keywords={workflow.tags.join(", ")}>
   <Fragment slot="head">
@@ -26,18 +25,18 @@ const diffColors = { "Beginner": "#22c55e", "Intermediate": "#f59e0b", "Advanced
     <script type="application/ld+json" set:html={JSON.stringify(howToSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
   </Fragment>
-  <div class="article" style="max-width:800px;margin:0 auto;padding:48px 0;">
+  <div class="article">
     <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/workflows/">Workflow Library</a> &rsaquo; <span>{workflow.title}</span></nav>
     <header class="article-header">
       <span class="eyebrow">{workflow.category} - {workflow.tool}</span>
       <h1>{workflow.title}</h1>
-      <div style="display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;">
-        <span style="font-size:13px;font-weight:600;color:#fff;background:{diffColors[workflow.difficulty] || '#6b7280'};padding:3px 12px;border-radius:999px;">{workflow.difficulty}</span>
-        <span style="font-size:13px;color:var(--text-mute);">{workflow.steps.length} steps</span>
+      <div class="tag-row">
+        <span class={`tag-pill diff-${(workflow.difficulty||'').toLowerCase()}`}>{workflow.difficulty}</span>
+        <span class="meta-text">{workflow.steps.length} steps</span>
       </div>
     </header>
     <section class="article-body">
-      <p style="font-size:16px;color:var(--text-soft);line-height:1.7;">{workflow.summary}</p>
+      <p>{workflow.summary}</p>
     <TLDR items={[
       workflow.title + " — " + (workflow.difficulty || "intermediate") + " level",
       "Tool: " + workflow.tool,
@@ -48,17 +47,17 @@ const diffColors = { "Beginner": "#22c55e", "Intermediate": "#f59e0b", "Advanced
     <AdSlot format="banner" />
 
 
-      <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:20px;margin:24px 0;">
-        <h3 style="font-size:14px;font-weight:600;margin-bottom:12px;">Use Case</h3>
-        <p style="font-size:14px;color:var(--text-soft);margin:0;">{workflow.useCase}</p>
+      <div class="info-card">
+        <h3>Use Case</h3>
+        <p>{workflow.useCase}</p>
       </div>
 
-      <div style="background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.2);border-radius:12px;padding:16px;margin:24px 0;">
-        <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;color:#f59e0b;">Prerequisites</h3>
-        <p style="font-size:14px;color:var(--text-soft);margin:0;">{workflow.prerequisites}</p>
+      <div class="info-card amber">
+        <h3>Prerequisites</h3>
+        <p>{workflow.prerequisites}</p>
       </div>
 
-      <h2 style="margin-top:32px;">Workflow Diagram</h2>
+      <h2>Workflow Diagram</h2>
     <Chart type="flowchart" title={workflow.title} data={{
       steps: workflow.steps.map((s, i) => ({
         label: s.title,
@@ -66,32 +65,32 @@ const diffColors = { "Beginner": "#22c55e", "Intermediate": "#f59e0b", "Advanced
       }))
     }} />
 
-      <h2 style="margin-top:32px;">Step-by-Step Guide</h2>
-      <ol style="margin:0;padding-left:0;list-style:none;">
+      <h2>Step-by-Step Guide</h2>
+      <ol class="step-list">
         {workflow.steps.map((step, i) => (
-          <li style="margin-bottom:24px;padding-left:48px;position:relative;">
-            <span style="position:absolute;left:0;top:0;width:32px;height:32px;background:var(--accent-color);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">{i+1}</span>
-            <h3 style="font-size:16px;font-weight:600;margin-bottom:6px;">{step.title}</h3>
-            <p style="font-size:14px;color:var(--text-soft);line-height:1.6;margin:0;">{step.detail}</p>
+          <li class="step-item">
+            <span class="step-icon">{i+1}</span>
+            <h3>{step.title}</h3>
+            <p>{step.detail}</p>
           </li>
         ))}
       </ol>
 
-      <h2 style="margin-top:32px;">Tags</h2>
-      <div style="display:flex;gap:6px;flex-wrap:wrap;">
-        {workflow.tags.map(t => <span style="font-size:12px;color:var(--text-mute);background:var(--bg-color);padding:4px 10px;border-radius:5px;">#{t}</span>)}
+      <h2>Tags</h2>
+      <div class="tag-row">
+        {workflow.tags.map(t => <span class="tag-chip">#{t}</span>)}
       </div>
 
-      <div style="margin-top:32px;padding:20px;background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;">
-        <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;">This workflow answers:</h3>
-        <ul style="margin:0;padding-left:20px;font-size:13px;color:var(--text-soft);line-height:1.8;">
+      <div class="qa-box">
+        <h3>This workflow answers:</h3>
+        <ul>
           <li>How to set up {workflow.title.toLowerCase()}</li>
           <li>What tools and access you need</li>
           <li>How to troubleshoot common issues</li>
         </ul>
       </div>
 
-      <p style="text-align:center;margin-top:32px;"><a href="/workflows/" style="color:var(--accent-color);font-weight:600;">Back to Workflow Library</a></p>
+      <p class="back-link"><a href="/workflows/">Back to Workflow Library</a></p>
     </section>
   </div>
 </BaseLayout>
