@@ -1,25 +1,21 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import Chart from "../../components/Chart.astro";
 ---
-<BaseLayout title="Claude vs Gemini vs ChatGPT (2026): The Big Three Compared" description="We paid for Claude Pro, Gemini Advanced, and ChatGPT Plus for a month and used them on the same set of work tasks. Here is who wins each one." keywords="Claude vs Gemini vs ChatGPT, AI assistant comparison, Claude Pro, ChatGPT Plus, Gemini Advanced, best AI 2026">
-  <BlogJsonLd slot="head" title="Claude vs Gemini vs ChatGPT (2026): The Big Three Compared" description="We paid for Claude Pro, Gemini Advanced, and ChatGPT Plus for a month and used them on the same set of work tasks. Here is who wins each one." slug="claude-vs-gemini-vs-chatgpt-2026" date="2026-06-02" author="AI Tool Hub Editorial" category="Comparison" keywords="Claude vs Gemini vs ChatGPT, AI assistant comparison, Claude Pro, ChatGPT Plus, Gemini Advanced, best AI 2026" tags={["claude","gemini","chatgpt","comparison","ai-assistants"]} />
-  <article class="legal-page blog-post">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>Claude vs Gemini vs ChatGPT (2026)</span></nav>
-    <header class="article-header">
-      <span class="eyebrow">Comparison</span>
-      <h1>Claude vs Gemini vs ChatGPT (2026): The Big Three Compared</h1>
-      <p class="lede">We paid for Claude Pro ($20), Gemini Advanced ($20), and ChatGPT Plus ($20) for a month and used all three on the same set of work tasks — writing, coding, research, data analysis, image generation, voice, and real-time info. Here is who wins each one.</p>
-      <div class="article-meta">
-        <span class="meta-item"><i class="far fa-calendar"></i> 2026-06-02</span>
-        <span class="meta-item"><i class="far fa-clock"></i> 10 min read</span>
-        <span class="meta-item"><i class="far fa-user"></i> AI Tool Hub Editorial</span>
-      </div>
-    </header>
-      <img src="/images/blog/claude-vs-gemini-vs-chatgpt-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/claude-vs-gemini-vs-chatgpt-2026/hero.jpg'" alt="Claude vs Gemini vs ChatGPT (2026): The Big Three Compared" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
-
-    <section class="blog-content">
+<BlogPostLayout
+  title="Claude vs Gemini vs ChatGPT (2026): The Big Three Compared"
+  description="We paid for Claude Pro, Gemini Advanced, and ChatGPT Plus for a month and used them on the same set of work tasks. Here is who wins each one."
+  keywords="Claude vs Gemini vs ChatGPT, AI assistant comparison, Claude Pro, ChatGPT Plus, Gemini Advanced, best AI 2026"
+  eyebrow="Comparison"
+  date="2026-06-02"
+  readTime="10 min read"
+  author="AI Tool Hub Editorial"
+  tags={["claude","gemini","chatgpt","comparison","ai-assistants"]}
+  slug="claude-vs-gemini-vs-chatgpt-2026"
+  category="Comparison"
+  breadcrumb="Claude vs Gemini vs ChatGPT (2026)"
+>
+      <img src="/images/blog/claude-vs-gemini-vs-chatgpt-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/claude-vs-gemini-vs-chatgpt-2026/hero.jpg'" alt="Claude vs Gemini vs ChatGPT (2026): The Big Three Compared" loading="eager" />
       <p>If you only pay for one AI assistant in 2026, the choice is one of these three. They are all $20/month, all "general purpose," and all genuinely good. The differences are real, but they are not the differences most reviews tell you about. The biggest gap is not raw quality (they are within 5-10% of each other on most tasks) — it is the surrounding ecosystem, the model selection inside each tool, and how well the AI handles the specific kind of work you do.</p>
 
       <p>This is the comparison we wished existed when we were choosing. 30 days, three tools, seven task categories, one verdict per category.</p>
@@ -36,7 +32,7 @@ import Chart from "../../components/Chart.astro";
       }} />
 
 <h2>The TL;DR per category</h2>
-      <img src="/images/blog/claude-vs-gemini-vs-chatgpt-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/claude-vs-gemini-vs-chatgpt-2026/inline-1.jpg'" alt="The TL;DR per category" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/claude-vs-gemini-vs-chatgpt-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/claude-vs-gemini-vs-chatgpt-2026/inline-1.jpg'" alt="The TL;DR per category" loading="lazy" />
       <ul>
         <li><strong>Long-form writing</strong> — Claude</li>
         <li><strong>Coding &amp; debugging</strong> — ChatGPT</li>
@@ -48,11 +44,11 @@ import Chart from "../../components/Chart.astro";
       </ul>
 
       <h2>How we tested</h2>
-      <img src="/images/blog/claude-vs-gemini-vs-chatgpt-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/claude-vs-gemini-vs-chatgpt-2026/inline-2.jpg'" alt="How we tested" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/claude-vs-gemini-vs-chatgpt-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/claude-vs-gemini-vs-chatgpt-2026/inline-2.jpg'" alt="How we tested" loading="lazy" />
       <p>For 30 days, three of us used all three tools on the same 7 task categories. We scored each tool on: output quality, speed, follow-up needed, ecosystem/integrations, and how often we reached for it first.</p>
 
       <h2>Round 1: Long-form writing</h2>
-      <img src="/images/blog/claude-vs-gemini-vs-chatgpt-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/claude-vs-gemini-vs-chatgpt-2026/inline-3.jpg'" alt="Round 1: Long-form writing" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/claude-vs-gemini-vs-chatgpt-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/claude-vs-gemini-vs-chatgpt-2026/inline-3.jpg'" alt="Round 1: Long-form writing" loading="lazy" />
       <p><strong>Winner: Claude.</strong></p>
       <p>Claude has been the writing quality leader since Claude 3 in 2024, and Claude 4.5 in 2026 is still the leader. On a 1,500-word blog post test, Claude's first draft needed the least editing, had the most natural voice, and least resembled the "AI slop" pattern of three-bullet-then-emoji. The "Artifacts" feature also makes the iteration loop much better — you can edit a section and ask the AI to refine just that section, not the whole draft.</p>
       <p>ChatGPT is a close second. Gemini is third on long-form English — the output is competent but the voice is more "generic AI assistant" than the other two.</p>
@@ -122,7 +118,7 @@ import Chart from "../../components/Chart.astro";
       </div>
     </section>
 
-    <section style="margin-top: 40px;">
+    <section>
       <h3>Tags</h3>
       <div class="audience-tags">
         <span class="audience-tag">#claude</span>
@@ -133,8 +129,7 @@ import Chart from "../../components/Chart.astro";
       </div>
     </section>
 
-    <section style="margin-top: 40px; text-align: center;">
-      <p style="color: var(--text-mute);">Want us to compare two other assistants? <a href="/contact/">Suggest a topic</a>.</p>
-    </section>
-  </article>
-</BaseLayout>
+    <section>
+      <p>Want us to compare two other assistants? <a href="/contact/">Suggest a topic</a>.</p>
+
+</BlogPostLayout>

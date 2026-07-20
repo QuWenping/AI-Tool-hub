@@ -1,25 +1,21 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import Chart from "../../components/Chart.astro";
 ---
-<BaseLayout title="How to Use AI for Education in 2026 (Students and Teachers)" description="A practical guide to using AI for education in 2026. The 6 best tools for students, the 6 best tools for teachers, the 8 workflows, and the 5 things to avoid." keywords="AI for education, AI for students, AI for teachers, AI tutoring, AI in classroom">
-  <BlogJsonLd slot="head" title="How to Use AI for Education in 2026 (Students and Teachers)" description="A practical guide to using AI for education in 2026. The 6 best tools for students, the 6 best tools for teachers, the 8 workflows, and the 5 things to avoid." slug="how-to-use-ai-for-education-2026" date="2026-06-18" author="Lin Chen, Lead Reviewer" category="Tutorial" keywords="AI for education, AI for students, AI for teachers, AI tutoring, AI in classroom" tags={[]} />
-  <article class="legal-page blog-post">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>AI for Education</span></nav>
-    <header class="article-header">
-      <span class="eyebrow">Tutorial</span>
-      <h1>How to Use AI for Education in 2026 (Students and Teachers)</h1>
-      <p class="lede">A practical guide to using AI for education in 2026. The 6 best tools for students, the 6 best tools for teachers, the 8 workflows, and the 5 things to avoid. Used by 1M+ students and 50,000+ teachers.</p>
-      <div class="article-meta">
-        <span class="meta-item"><i class="far fa-calendar"></i> 2026-06-18</span>
-        <span class="meta-item"><i class="far fa-clock"></i> 15 min read</span>
-        <span class="meta-item"><i class="far fa-user"></i> Lin Chen, Lead Reviewer</span>
-      </div>
-    </header>
-      <img src="/images/blog/how-to-use-ai-for-education-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-education-2026/hero.jpg'" alt="How to Use AI for Education in 2026 (Students and Teachers)" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
-
-    <section class="blog-content">
+<BlogPostLayout
+  title="How to Use AI for Education in 2026 (Students and Teachers)"
+  description="A practical guide to using AI for education in 2026. The 6 best tools for students, the 6 best tools for teachers, the 8 workflows, and the 5 things to avoid."
+  keywords="AI for education, AI for students, AI for teachers, AI tutoring, AI in classroom"
+  eyebrow="Tutorial"
+  date="2026-06-18"
+  readTime="15 min read"
+  author="Lin Chen, Lead Reviewer"
+  tags={[]}
+  slug="how-to-use-ai-for-education-2026"
+  category="Tutorial"
+  breadcrumb="AI for Education"
+>
+      <img src="/images/blog/how-to-use-ai-for-education-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-education-2026/hero.jpg'" alt="How to Use AI for Education in 2026 (Students and Teachers)" loading="eager" />
       <p>AI has transformed education. The students and teachers using AI well in 2026 are learning faster, teaching better, and getting better results. The students and teachers using AI poorly are cutting corners and missing the deeper learning. This guide is for students and teachers who want to be in the first group.</p>
 
       <p>We have worked with 50+ schools, 200+ teachers, and surveyed 1,000+ students on AI use in education. This is the consolidated guide - the 12 best tools, 8 workflows, and 5 things to avoid.</p>
@@ -33,7 +29,7 @@ import Chart from "../../components/Chart.astro";
       ]} />
 
 <h2>For students: The 6 best AI tools</h2>
-      <img src="/images/blog/how-to-use-ai-for-education-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-education-2026/inline-1.jpg'" alt="For students: The 6 best AI tools" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-ai-for-education-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-education-2026/inline-1.jpg'" alt="For students: The 6 best AI tools" loading="lazy" />
 
       <h3>Tool 1: ChatGPT Free ($0)</h3>
       <p>The starting point. Use for: explaining concepts, brainstorming essay ideas, getting unstuck on homework. The right pick if: you are a student, you are new to AI, you need a free tool.</p>
@@ -56,7 +52,7 @@ import Chart from "../../components/Chart.astro";
       <p><strong>Total cost for students: $7/month for the full stack.</strong> Most students can get by with the 4 free tools. The paid tools are worth it for serious study.</p>
 
       <h2>For teachers: The 6 best AI tools</h2>
-      <img src="/images/blog/how-to-use-ai-for-education-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-education-2026/inline-2.jpg'" alt="For teachers: The 6 best AI tools" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-ai-for-education-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-education-2026/inline-2.jpg'" alt="For teachers: The 6 best AI tools" loading="lazy" />
 
       <h3>Tool 1: MagicSchool AI ($0 - $99/month)</h3>
       <p>The teacher-specific option. 60+ AI tools for teachers: lesson plans, IEPs, rubric generation, parent emails, differentiation. The right pick if: you are a K-12 teacher, you want teacher-specific AI, you need to save time.</p>
@@ -79,7 +75,7 @@ import Chart from "../../components/Chart.astro";
       <p><strong>Total cost for teachers: $50-200/month depending on tools and class size.</strong> Many schools provide MagicSchool or SchoolAI for free. Check with your district.</p>
 
       <h2>The 8 workflows that work</h2>
-      <img src="/images/blog/how-to-use-ai-for-education-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-education-2026/inline-3.jpg'" alt="The 8 workflows that work" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-ai-for-education-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-education-2026/inline-3.jpg'" alt="The 8 workflows that work" loading="lazy" />
 
       <h3>For students</h3>
 
@@ -192,11 +188,10 @@ import Chart from "../../components/Chart.astro";
       <p>AI has changed education. The students and teachers who use AI well learn faster, teach better, and get better results. The students and teachers who do not adapt are falling behind. The 12 tools, 8 workflows, and 5 things to avoid in this guide are the playbook for the first group.</p>
 
       <p>The future of education is not "AI replaces teachers" or "AI does the homework." It is "AI is a tutor for every student, an assistant for every teacher." The students and teachers who get this right will learn and teach better than ever before. The playbook above is how to get it right.</p>
-    </section>
 
-    <footer style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border);">
-      <p style="color: var(--text-mute); font-size: 14px;">Published by Lin Chen, Lead Reviewer. Last updated: 2026-06-18.</p>
+
+    <footer class="article-footer" class="article-footer">
+      <p>Published by Lin Chen, Lead Reviewer. Last updated: 2026-06-18.</p>
       <p><a href="/best-free-ai-tools-for-students-2026/">Best free AI tools for students</a> &middot; <a href="/glossary/">AI glossary</a> &middot; <a href="/methodology/">Methodology</a></p>
     </footer>
-  </article>
-</BaseLayout>
+</BlogPostLayout>

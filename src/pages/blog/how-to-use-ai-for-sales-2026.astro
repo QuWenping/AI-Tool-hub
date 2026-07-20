@@ -1,25 +1,21 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import Chart from "../../components/Chart.astro";
 ---
-<BaseLayout title="How to Use AI for Sales in 2026 (Real Examples)" description="A practical guide to using AI for sales in 2026. The 5 best tools, the 6 workflows, the 4 use cases, and the 3 things to avoid. Real examples for SDRs, AEs, and sales leaders." keywords="AI for sales, sales AI, AI SDR, sales automation, AI sales tools">
-  <BlogJsonLd slot="head" title="How to Use AI for Sales in 2026 (Real Examples)" description="A practical guide to using AI for sales in 2026. The 5 best tools, the 6 workflows, the 4 use cases, and the 3 things to avoid. Real examples for SDRs, AEs, and sales leaders." slug="how-to-use-ai-for-sales-2026" date="2026-06-17" author="Daniel Park, Marketing Lead" category="Tutorial" keywords="AI for sales, sales AI, AI SDR, sales automation, AI sales tools" tags={[]} />
-  <article class="legal-page blog-post">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>AI for Sales</span></nav>
-    <header class="article-header">
-      <span class="eyebrow">Tutorial</span>
-      <h1>How to Use AI for Sales in 2026 (Real Examples)</h1>
-      <p class="lede">A practical guide to using AI for sales in 2026. The 5 best tools, the 6 workflows, the 4 use cases, and the 3 things to avoid. Real examples for SDRs, AEs, and sales leaders.</p>
-      <div class="article-meta">
-        <span class="meta-item"><i class="far fa-calendar"></i> 2026-06-17</span>
-        <span class="meta-item"><i class="far fa-clock"></i> 14 min read</span>
-        <span class="meta-item"><i class="far fa-user"></i> Daniel Park, Marketing Lead</span>
-      </div>
-    </header>
-      <img src="/images/blog/how-to-use-ai-for-sales-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-sales-2026/hero.jpg'" alt="How to Use AI for Sales in 2026 (Real Examples)" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
-
-    <section class="blog-content">
+<BlogPostLayout
+  title="How to Use AI for Sales in 2026 (Real Examples)"
+  description="A practical guide to using AI for sales in 2026. The 5 best tools, the 6 workflows, the 4 use cases, and the 3 things to avoid. Real examples for SDRs, AEs, and sales leaders."
+  keywords="AI for sales, sales AI, AI SDR, sales automation, AI sales tools"
+  eyebrow="Tutorial"
+  date="2026-06-17"
+  readTime="14 min read"
+  author="Daniel Park, Marketing Lead"
+  tags={[]}
+  slug="how-to-use-ai-for-sales-2026"
+  category="Tutorial"
+  breadcrumb="AI for Sales"
+>
+      <img src="/images/blog/how-to-use-ai-for-sales-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-sales-2026/hero.jpg'" alt="How to Use AI for Sales in 2026 (Real Examples)" loading="eager" />
       <p>AI has transformed sales. The sales teams using AI well in 2026 are 2-3x more productive, with 30% higher close rates and 50% shorter sales cycles. The teams using AI poorly are spamming prospects with bad AI-generated emails and losing trust. This guide is for sales leaders who want to be in the first group.</p>
 
       
@@ -31,7 +27,7 @@ import Chart from "../../components/Chart.astro";
       ]} />
 
 <h2>The 5 best AI sales tools in 2026</h2>
-      <img src="/images/blog/how-to-use-ai-for-sales-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-sales-2026/inline-1.jpg'" alt="The 5 best AI sales tools in 2026" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-ai-for-sales-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-sales-2026/inline-1.jpg'" alt="The 5 best AI sales tools in 2026" loading="lazy" />
 
       <h3>Tool 1: Clay ($149/month)</h3>
       <p>The data enrichment + AI outreach tool. Best-in-class for prospecting. The right pick if: you do outbound sales, you need enriched lead data, you want AI-personalized outreach at scale.</p>
@@ -49,7 +45,7 @@ import Chart from "../../components/Chart.astro";
       <p>The DIY option. Use ChatGPT for: cold email drafts, call summaries, prospect research, proposal writing. The right pick if: you have a small team, you are budget-conscious, you are willing to build the workflows yourself.</p>
 
       <h2>The 6 workflows that actually work</h2>
-      <img src="/images/blog/how-to-use-ai-for-sales-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-sales-2026/inline-2.jpg'" alt="The 6 workflows that actually work" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-ai-for-sales-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-sales-2026/inline-2.jpg'" alt="The 6 workflows that actually work" loading="lazy" />
 
       <h3>Workflow 1: Lead enrichment and qualification (5-10 min per lead)</h3>
       <p><strong>Setup:</strong> Connect Clay to your lead source (website form, event list, cold list).</p>
@@ -121,7 +117,7 @@ import Chart from "../../components/Chart.astro";
       <p><strong>Value:</strong> Better competitive positioning, faster response to competitor moves, higher win rates.</p>
 
       <h2>The 4 use cases (with example scenarios)</h2>
-      <img src="/images/blog/how-to-use-ai-for-sales-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-sales-2026/inline-3.jpg'" alt="The 4 use cases (with example scenarios)" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-ai-for-sales-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-sales-2026/inline-3.jpg'" alt="The 4 use cases (with example scenarios)" loading="lazy" />
 
       <h3>Use case 1: SDR (outbound)</h3>
       <p><strong>Best tools:</strong> Clay, Lavender, ChatGPT.</p>
@@ -158,11 +154,10 @@ import Chart from "../../components/Chart.astro";
       <p>AI has changed sales. The teams that use AI well are 2-3x more productive with 30% higher close rates. The teams that do not use AI are falling behind. The 5 tools, 6 workflows, and 3 things to avoid in this guide are the playbook for sales leaders who want to be in the first group.</p>
 
       <p>The future of sales is not "AI replaces salespeople." It is "AI does the production work, salespeople focus on relationships and closing." The teams that get this right will outperform the teams that do not. The playbook above is how to get it right.</p>
-    </section>
 
-    <footer style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border);">
-      <p style="color: var(--text-mute); font-size: 14px;">Published by Daniel Park, Marketing Lead. Last updated: 2026-06-17.</p>
+
+    <footer class="article-footer" class="article-footer">
+      <p>Published by Daniel Park, Marketing Lead. Last updated: 2026-06-17.</p>
       <p><a href="/case-studies/">Case studies</a> &middot; <a href="/use-case-for-marketers/">AI for marketers</a> &middot; <a href="/methodology/">Methodology</a></p>
     </footer>
-  </article>
-</BaseLayout>
+</BlogPostLayout>

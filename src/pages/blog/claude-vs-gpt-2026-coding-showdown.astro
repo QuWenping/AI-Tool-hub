@@ -1,25 +1,21 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import Chart from "../../components/Chart.astro";
 ---
-<BaseLayout title="Claude 4.5 vs GPT-5 for Coding (2026): The Real-World Test" description="We built the same production app twice - once with Claude 4.5, once with GPT-5. Here is the honest verdict on accuracy, speed, cost, and the cases where one clearly beats the other." keywords="claude, chatgpt, coding, comparison, llm">
-  <BlogJsonLd slot="head" title="Claude 4.5 vs GPT-5 for Coding (2026): The Real-World Test" description="We built the same production app twice - once with Claude 4.5, once with GPT-5. Here is the honest verdict on accuracy, speed, cost, and the cases where one clearly beats the other." slug="claude-vs-gpt-2026-coding-showdown" date="2026-06-22" author="Marcus Webb" category="comparison" keywords="claude, chatgpt, coding, comparison, llm" tags={["claude","chatgpt","coding","comparison","llm"]} />
-  <article class="legal-page blog-post">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>Claude 4.5 vs GPT-5 for Coding (2026): The Real-World Test</span></nav>
-    <header class="article-header">
-      <span class="eyebrow">comparison</span>
-      <h1>Claude 4.5 vs GPT-5 for Coding (2026): The Real-World Test</h1>
-      <p class="lede">We built the same production app twice - once with Claude 4.5, once with GPT-5. Here is the honest verdict on accuracy, speed, cost, and the cases where one clearly beats the other.</p>
-      <div class="article-meta">
-        <span class="meta-item"><i class="far fa-calendar"></i> 2026-06-22</span>
-        <span class="meta-item"><i class="far fa-clock"></i> 12 min</span>
-        <span class="meta-item"><i class="far fa-user"></i> Marcus Webb</span>
-      </div>
-    </header>
-      <img src="/images/blog/claude-vs-gpt-2026-coding-showdown/hero.webp" onerror="this.onerror=null;this.src='/images/blog/claude-vs-gpt-2026-coding-showdown/hero.jpg'" alt="Claude 4.5 vs GPT-5 for Coding (2026): The Real-World Test" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
-
-    <section class="blog-content">
+<BlogPostLayout
+  title="Claude 4.5 vs GPT-5 for Coding (2026): The Real-World Test"
+  description="We built the same production app twice - once with Claude 4.5, once with GPT-5. Here is the honest verdict on accuracy, speed, cost, and the cases where one clearly beats the other."
+  keywords="claude, chatgpt, coding, comparison, llm"
+  eyebrow="comparison"
+  date="2026-06-22"
+  readTime="12 min"
+  author="Marcus Webb"
+  tags={["claude","chatgpt","coding","comparison","llm"]}
+  slug="claude-vs-gpt-2026-coding-showdown"
+  category="comparison"
+  breadcrumb="Claude 4.5 vs GPT-5 for Coding (2026): The Real-World Test"
+>
+      <img src="/images/blog/claude-vs-gpt-2026-coding-showdown/hero.webp" onerror="this.onerror=null;this.src='/images/blog/claude-vs-gpt-2026-coding-showdown/hero.jpg'" alt="Claude 4.5 vs GPT-5 for Coding (2026): The Real-World Test" loading="eager" />
 <p>The most common question we get from developers in 2026: should I use Claude 4.5 or GPT-5 for coding? The short answer: it depends. The long answer: this guide.</p>
       <Chart type="comparison" title="Feature Comparison" data={{
         columns: ["Option A", "Option B"],
@@ -32,12 +28,12 @@ import Chart from "../../components/Chart.astro";
       }} />
 
 <h2>The test setup</h2>
-      <img src="/images/blog/claude-vs-gpt-2026-coding-showdown/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/claude-vs-gpt-2026-coding-showdown/inline-1.jpg'" alt="The test setup" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" /><p>We built the same production app twice - a TypeScript + React + PostgreSQL customer dashboard with auth, CRUD operations, and a billing integration. Same requirements, same environment, same human reviewer. The only variable: the AI model.</p><h2>The 6 evaluation criteria</h2>
-      <img src="/images/blog/claude-vs-gpt-2026-coding-showdown/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/claude-vs-gpt-2026-coding-showdown/inline-2.jpg'" alt="The 6 evaluation criteria" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" /><p>We scored each model on 6 criteria: code accuracy, code style, debugging ability, context handling, cost, and speed. Each scored 1-10.</p><p><strong>Code accuracy (Claude: 9, GPT-5: 8):</strong> Both models produced working code on first try for ~80% of the requirements.</p><p><strong>Code style (Claude: 9, GPT-5: 7):</strong> Claude code was more consistent and idiomatic.</p><p><strong>Debugging ability (Claude: 8, GPT-5: 8):</strong> Tie.</p><p><strong>Context handling (Claude: 10, GPT-5: 8):</strong> Claude 200K context window is meaningfully larger.</p><p><strong>Cost (Claude: 7, GPT-5: 9):</strong> GPT-5 is 30% cheaper per token.</p><p><strong>Speed (Claude: 7, GPT-5: 9):</strong> GPT-5 is noticeably faster.</p><h2>When to use Claude 4.5</h2>
-      <img src="/images/blog/claude-vs-gpt-2026-coding-showdown/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/claude-vs-gpt-2026-coding-showdown/inline-3.jpg'" alt="When to use Claude 4.5" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" /><p>Use Claude for: large codebases (50K+ lines), complex refactoring, nuanced code review, projects where consistency matters more than speed.</p><h2>When to use GPT-5</h2><p>Use GPT-5 for: small to medium projects, fast iteration, cost-sensitive workloads, greenfield development.</p><h2>Bottom line</h2><p>Both models are excellent. Pick based on your priority. Use both if you can afford it.</p>
+      <img src="/images/blog/claude-vs-gpt-2026-coding-showdown/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/claude-vs-gpt-2026-coding-showdown/inline-1.jpg'" alt="The test setup" loading="lazy" /><p>We built the same production app twice - a TypeScript + React + PostgreSQL customer dashboard with auth, CRUD operations, and a billing integration. Same requirements, same environment, same human reviewer. The only variable: the AI model.</p><h2>The 6 evaluation criteria</h2>
+      <img src="/images/blog/claude-vs-gpt-2026-coding-showdown/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/claude-vs-gpt-2026-coding-showdown/inline-2.jpg'" alt="The 6 evaluation criteria" loading="lazy" /><p>We scored each model on 6 criteria: code accuracy, code style, debugging ability, context handling, cost, and speed. Each scored 1-10.</p><p><strong>Code accuracy (Claude: 9, GPT-5: 8):</strong> Both models produced working code on first try for ~80% of the requirements.</p><p><strong>Code style (Claude: 9, GPT-5: 7):</strong> Claude code was more consistent and idiomatic.</p><p><strong>Debugging ability (Claude: 8, GPT-5: 8):</strong> Tie.</p><p><strong>Context handling (Claude: 10, GPT-5: 8):</strong> Claude 200K context window is meaningfully larger.</p><p><strong>Cost (Claude: 7, GPT-5: 9):</strong> GPT-5 is 30% cheaper per token.</p><p><strong>Speed (Claude: 7, GPT-5: 9):</strong> GPT-5 is noticeably faster.</p><h2>When to use Claude 4.5</h2>
+      <img src="/images/blog/claude-vs-gpt-2026-coding-showdown/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/claude-vs-gpt-2026-coding-showdown/inline-3.jpg'" alt="When to use Claude 4.5" loading="lazy" /><p>Use Claude for: large codebases (50K+ lines), complex refactoring, nuanced code review, projects where consistency matters more than speed.</p><h2>When to use GPT-5</h2><p>Use GPT-5 for: small to medium projects, fast iteration, cost-sensitive workloads, greenfield development.</p><h2>Bottom line</h2><p>Both models are excellent. Pick based on your priority. Use both if you can afford it.</p>
     </section>
 
-    <section style="margin-top: 40px;">
+    <section>
       <h3>Tags</h3>
       <div class="audience-tags">
         <span class="audience-tag">#claude</span>
@@ -48,8 +44,7 @@ import Chart from "../../components/Chart.astro";
       </div>
     </section>
 
-    <section style="margin-top: 40px; text-align: center;">
-      <p style="color: var(--text-mute);">Want us to review a specific tool? <a href="/contact/">Suggest a topic</a>.</p>
-    </section>
-  </article>
-</BaseLayout>
+    <section>
+      <p>Want us to review a specific tool? <a href="/contact/">Suggest a topic</a>.</p>
+
+</BlogPostLayout>

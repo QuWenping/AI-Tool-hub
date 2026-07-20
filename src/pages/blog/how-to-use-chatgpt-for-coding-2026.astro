@@ -1,25 +1,21 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import Chart from "../../components/Chart.astro";
 ---
-<BaseLayout title="How to Use ChatGPT for Coding in 2026 (Step-by-Step Tutorial)" description="A practical 15-minute walkthrough of how to use ChatGPT for real coding work - from setup to debugging to code review. With 8 real examples." keywords="ChatGPT coding, AI programming tutorial, ChatGPT for developers, AI code review, ChatGPT debugging">
-  <BlogJsonLd slot="head" title="How to Use ChatGPT for Coding in 2026 (Step-by-Step Tutorial)" description="A practical 15-minute walkthrough of how to use ChatGPT for real coding work - from setup to debugging to code review. With 8 real examples." slug="how-to-use-chatgpt-for-coding-2026" date="2026-06-08" author="Marcus Webb, Senior Engineer" category="Tutorial" keywords="ChatGPT coding, AI programming tutorial, ChatGPT for developers, AI code review, ChatGPT debugging" tags={["chatgpt","coding","tutorial","how-to","prompts"]} />
-  <article class="legal-page blog-post">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>How to Use ChatGPT for Coding</span></nav>
-    <header class="article-header">
-      <span class="eyebrow">Tutorial</span>
-      <h1>How to Use ChatGPT for Coding in 2026 (Step-by-Step Tutorial)</h1>
-      <p class="lede">A practical 15-minute walkthrough of how to use ChatGPT for real coding work. From setup to debugging to code review, with 8 real examples you can copy and paste.</p>
-      <div class="article-meta">
-        <span class="meta-item"><i class="far fa-calendar"></i> 2026-06-08</span>
-        <span class="meta-item"><i class="far fa-clock"></i> 15 min read</span>
-        <span class="meta-item"><i class="far fa-user"></i> Marcus Webb, Senior Engineer</span>
-      </div>
-    </header>
-      <img src="/images/blog/how-to-use-chatgpt-for-coding-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-chatgpt-for-coding-2026/hero.jpg'" alt="How to Use ChatGPT for Coding in 2026 (Step-by-Step Tutorial)" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
-
-    <section class="blog-content">
+<BlogPostLayout
+  title="How to Use ChatGPT for Coding in 2026 (Step-by-Step Tutorial)"
+  description="A practical 15-minute walkthrough of how to use ChatGPT for real coding work - from setup to debugging to code review. With 8 real examples."
+  keywords="ChatGPT coding, AI programming tutorial, ChatGPT for developers, AI code review, ChatGPT debugging"
+  eyebrow="Tutorial"
+  date="2026-06-08"
+  readTime="15 min read"
+  author="Marcus Webb, Senior Engineer"
+  tags={["chatgpt","coding","tutorial","how-to","prompts"]}
+  slug="how-to-use-chatgpt-for-coding-2026"
+  category="Tutorial"
+  breadcrumb="How to Use ChatGPT for Coding"
+>
+      <img src="/images/blog/how-to-use-chatgpt-for-coding-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-chatgpt-for-coding-2026/hero.jpg'" alt="How to Use ChatGPT for Coding in 2026 (Step-by-Step Tutorial)" loading="eager" />
       <p>ChatGPT in 2026 is not the autocomplete toy of 2023. It is now a full coding partner that can scaffold a feature, debug a race condition, write tests, review a PR, and explain a 200-line function in plain English. The catch: most developers use 20% of what it can do. This tutorial covers the 80% that matters, in the order you should learn it.</p>
 
       
@@ -31,12 +27,12 @@ import Chart from "../../components/Chart.astro";
       ]} />
 
 <h2>Step 1: Set up ChatGPT for coding (2 minutes)</h2>
-      <img src="/images/blog/how-to-use-chatgpt-for-coding-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-chatgpt-for-coding-2026/inline-1.jpg'" alt="Step 1: Set up ChatGPT for coding (2 minutes)" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-chatgpt-for-coding-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-chatgpt-for-coding-2026/inline-1.jpg'" alt="Step 1: Set up ChatGPT for coding (2 minutes)" loading="lazy" />
       <p>Go to chatgpt.com and sign up. For coding, the Plus plan at $20/month is the right pick - it gives you GPT-5 with advanced data analysis, image input for screenshots, and the custom GPTs feature. If you are a student, verify your student email and get 2 months free.</p>
       <p><strong>Pro tip:</strong> Go to Settings > Custom Instructions and set two things: who you are (a developer working in [your language/framework]) and how you want responses formatted (concise, with code blocks). This alone improves output quality 20%.</p>
 
       <h2>Step 2: Use Custom GPTs for your stack (5 minutes)</h2>
-      <img src="/images/blog/how-to-use-chatgpt-for-coding-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-chatgpt-for-coding-2026/inline-2.jpg'" alt="Step 2: Use Custom GPTs for your stack (5 minutes)" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-chatgpt-for-coding-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-chatgpt-for-coding-2026/inline-2.jpg'" alt="Step 2: Use Custom GPTs for your stack (5 minutes)" loading="lazy" />
       <p>Custom GPTs are pre-configured ChatGPTs tuned for specific tasks. For coding, the most useful ones are:</p>
       <ul>
         <li><strong>Code Reviewer GPT</strong> - paste a PR diff, get line-by-line feedback</li>
@@ -47,7 +43,7 @@ import Chart from "../../components/Chart.astro";
       <p>To find them, click "Explore GPTs" in the left sidebar. The official OpenAI ones are best, but there are also great community ones (search for your specific language).</p>
 
       <h2>Step 3: The 3 prompt patterns that actually work (5 minutes)</h2>
-      <img src="/images/blog/how-to-use-chatgpt-for-coding-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-chatgpt-for-coding-2026/inline-3.jpg'" alt="Step 3: The 3 prompt patterns that actually work (5 minutes)" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-chatgpt-for-coding-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-chatgpt-for-coding-2026/inline-3.jpg'" alt="Step 3: The 3 prompt patterns that actually work (5 minutes)" loading="lazy" />
       <p>Most ChatGPT coding failures are bad prompt failures, not model failures. The 3 patterns that consistently produce usable code:</p>
       <p><strong>Pattern A: The complete-spec prompt.</strong> Instead of "write a function to validate email", say "Write a Python function `is_valid_email(email: str) -> bool` that handles the standard pattern (local@domain.tld), rejects spaces, returns False for empty/None, raises TypeError for non-string input. Include 5 pytest tests." The complete spec is 80% of the work.</p>
       <p><strong>Pattern B: The example-first prompt.</strong> Paste 1-2 examples of code you like, then ask for a new one. "Here is how I wrote a JWT validator. Write a similar one for OAuth state tokens." The model matches your style and conventions much better with examples than with instructions.</p>
@@ -103,7 +99,7 @@ import Chart from "../../components/Chart.astro";
       <p>Have a workflow that works for you? <a href="/contact/">Send it to us</a> and we will feature the best ones in a future update.</p>
     </section>
 
-    <section style="margin-top: 40px;">
+    <section>
       <h3>Tags</h3>
       <div class="audience-tags">
         <span class="audience-tag">#chatgpt</span>
@@ -112,6 +108,5 @@ import Chart from "../../components/Chart.astro";
         <span class="audience-tag">#how-to</span>
         <span class="audience-tag">#prompts</span>
       </div>
-    </section>
-  </article>
-</BaseLayout>
+
+</BlogPostLayout>

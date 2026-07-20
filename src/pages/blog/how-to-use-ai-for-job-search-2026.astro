@@ -1,25 +1,21 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import Chart from "../../components/Chart.astro";
 ---
-<BaseLayout title="How to Use AI for Job Search in 2026 (Resume, Interview, Negotiation)" description="A practical guide to using AI for job search in 2026. The 5 best tools, the 6 workflows (resume, cover letter, interview, networking, negotiation), and the 3 things to avoid." keywords="AI for job search, AI resume, AI interview, AI cover letter, AI job hunt">
-  <BlogJsonLd slot="head" title="How to Use AI for Job Search in 2026 (Resume, Interview, Negotiation)" description="A practical guide to using AI for job search in 2026. The 5 best tools, the 6 workflows (resume, cover letter, interview, networking, negotiation), and the 3 things to avoid." slug="how-to-use-ai-for-job-search-2026" date="2026-06-20" author="Lin Chen, Lead Reviewer" category="Tutorial" keywords="AI for job search, AI resume, AI interview, AI cover letter, AI job hunt" tags={[]} />
-  <article class="legal-page blog-post">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>AI for Job Search</span></nav>
-    <header class="article-header">
-      <span class="eyebrow">Tutorial</span>
-      <h1>How to Use AI for Job Search in 2026 (Resume, Interview, Negotiation)</h1>
-      <p class="lede">A practical guide to using AI for job search in 2026. The 5 best tools, the 6 workflows (resume, cover letter, interview prep, networking, negotiation, offer evaluation), and the 3 things to avoid.</p>
-      <div class="article-meta">
-        <span class="meta-item"><i class="far fa-calendar"></i> 2026-06-20</span>
-        <span class="meta-item"><i class="far fa-clock"></i> 13 min read</span>
-        <span class="meta-item"><i class="far fa-user"></i> Lin Chen, Lead Reviewer</span>
-      </div>
-    </header>
-      <img src="/images/blog/how-to-use-ai-for-job-search-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-job-search-2026/hero.jpg'" alt="How to Use AI for Job Search in 2026 (Resume, Interview, Negotiation)" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
-
-    <section class="blog-content">
+<BlogPostLayout
+  title="How to Use AI for Job Search in 2026 (Resume, Interview, Negotiation)"
+  description="A practical guide to using AI for job search in 2026. The 5 best tools, the 6 workflows (resume, cover letter, interview, networking, negotiation), and the 3 things to avoid."
+  keywords="AI for job search, AI resume, AI interview, AI cover letter, AI job hunt"
+  eyebrow="Tutorial"
+  date="2026-06-20"
+  readTime="13 min read"
+  author="Lin Chen, Lead Reviewer"
+  tags={[]}
+  slug="how-to-use-ai-for-job-search-2026"
+  category="Tutorial"
+  breadcrumb="AI for Job Search"
+>
+      <img src="/images/blog/how-to-use-ai-for-job-search-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-job-search-2026/hero.jpg'" alt="How to Use AI for Job Search in 2026 (Resume, Interview, Negotiation)" loading="eager" />
       <p>AI has transformed job search. The job seekers using AI well in 2026 are landing interviews 2-3x faster, with better resumes, better interview performance, and higher offer rates. The job seekers using AI poorly are sending generic AI resumes that all look the same and missing out. This guide is for job seekers who want to be in the first group.</p>
 
       
@@ -31,7 +27,7 @@ import Chart from "../../components/Chart.astro";
       ]} />
 
 <h2>The 5 best AI job search tools in 2026</h2>
-      <img src="/images/blog/how-to-use-ai-for-job-search-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-job-search-2026/inline-1.jpg'" alt="The 5 best AI job search tools in 2026" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-ai-for-job-search-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-job-search-2026/inline-1.jpg'" alt="The 5 best AI job search tools in 2026" loading="lazy" />
 
       <h3>Tool 1: ChatGPT Plus ($20/month)</h3>
       <p>The general-purpose option. Use for: resume drafting, cover letter writing, interview prep, salary research, networking emails. The right pick if: you want flexibility, you are comfortable with AI, you want a single tool for everything.</p>
@@ -49,7 +45,7 @@ import Chart from "../../components/Chart.astro";
       <p>The networking option. AI profile optimization, InMail credits, "Open to Work" boost. The right pick if: you are actively networking, you want AI-optimized LinkedIn profile, you are in a competitive field.</p>
 
       <h2>The 6 workflows that actually work</h2>
-      <img src="/images/blog/how-to-use-ai-for-job-search-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-job-search-2026/inline-2.jpg'" alt="The 6 workflows that actually work" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-ai-for-job-search-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-job-search-2026/inline-2.jpg'" alt="The 6 workflows that actually work" loading="lazy" />
 
       <h3>Workflow 1: Resume optimization for a specific job (30-45 min per application)</h3>
       <p><strong>Setup:</strong> Get the job description. Open ChatGPT or Claude.</p>
@@ -125,7 +121,7 @@ import Chart from "../../components/Chart.astro";
       <p><strong>Result:</strong> 10-20% higher offer on average. Better terms (PTO, remote, title).</p>
 
       <h2>The 3 things to avoid</h2>
-      <img src="/images/blog/how-to-use-ai-for-job-search-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-job-search-2026/inline-3.jpg'" alt="The 3 things to avoid" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-ai-for-job-search-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-job-search-2026/inline-3.jpg'" alt="The 3 things to avoid" loading="lazy" />
 
       <h3>Avoid 1: Generic AI output</h3>
       <p>The biggest mistake job seekers make: sending AI-generated resumes and cover letters that all sound the same. Recruiters can tell. The right approach: use AI for the first draft, then add specific, memorable details - a specific project, a specific metric, a specific reason you want this job. The "last 20%" is what gets you the interview.</p>
@@ -149,11 +145,10 @@ import Chart from "../../components/Chart.astro";
       <p>AI has changed job search. The job seekers who use AI well land interviews 2-3x faster with 30-50% better outcomes. The job seekers who do not use AI are falling behind. The 5 tools, 6 workflows, and 3 things to avoid in this guide are the playbook for the first group.</p>
 
       <p>The future of job search is not "AI applies for jobs for you." It is "AI helps you articulate your experience better, prepare more thoroughly, and negotiate more confidently." The job seekers who get this right will land better jobs, faster. The playbook above is how to get it right.</p>
-    </section>
 
-    <footer style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border);">
-      <p style="color: var(--text-mute); font-size: 14px;">Published by Lin Chen, Lead Reviewer. Last updated: 2026-06-20.</p>
+
+    <footer class="article-footer" class="article-footer">
+      <p>Published by Lin Chen, Lead Reviewer. Last updated: 2026-06-20.</p>
       <p><a href="/use-case-for-writers/">AI for writers</a> &middot; <a href="/glossary/">AI glossary</a> &middot; <a href="/methodology/">Methodology</a></p>
     </footer>
-  </article>
-</BaseLayout>
+</BlogPostLayout>

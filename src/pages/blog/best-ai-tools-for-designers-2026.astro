@@ -1,25 +1,21 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import Chart from "../../components/Chart.astro";
 ---
-<BaseLayout title="Best AI Tools for Designers in 2026: UI, UX, Branding, and Motion" description="Three product designers tested 18 AI design tools in 2026. Here are the 7 that actually fit into a real design workflow." keywords="AI design tools, AI for designers, UI AI, UX AI, AI branding, AI for Figma">
-  <BlogJsonLd slot="head" title="Best AI Tools for Designers in 2026: UI, UX, Branding, and Motion" description="Three product designers tested 18 AI design tools in 2026. Here are the 7 that actually fit into a real design workflow." slug="best-ai-tools-for-designers-2026" date="2026-06-05" author="AI Tool Hub Editorial" category="Design" keywords="AI design tools, AI for designers, UI AI, UX AI, AI branding, AI for Figma" tags={["design","ui","ux","figma","branding"]} />
-  <article class="legal-page blog-post">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>Best AI Tools for Designers (2026)</span></nav>
-    <header class="article-header">
-      <span class="eyebrow">Design</span>
-      <h1>Best AI Tools for Designers in 2026: UI, UX, Branding, and Motion</h1>
-      <p class="lede">Three of our product designers tested 18 AI design tools in 2026 — for UI, UX, branding, motion, and asset generation. Here are the 7 that actually fit into a real design workflow. The TL;DR: most "AI design" tools are toys. These 7 are real tools.</p>
-      <div class="article-meta">
-        <span class="meta-item"><i class="far fa-calendar"></i> 2026-06-05</span>
-        <span class="meta-item"><i class="far fa-clock"></i> 10 min read</span>
-        <span class="meta-item"><i class="far fa-user"></i> AI Tool Hub Editorial</span>
-      </div>
-    </header>
-      <img src="/images/blog/best-ai-tools-for-designers-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-tools-for-designers-2026/hero.jpg'" alt="Best AI Tools for Designers in 2026: UI, UX, Branding, and Motion" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
-
-    <section class="blog-content">
+<BlogPostLayout
+  title="Best AI Tools for Designers in 2026: UI, UX, Branding, and Motion"
+  description="Three product designers tested 18 AI design tools in 2026. Here are the 7 that actually fit into a real design workflow."
+  keywords="AI design tools, AI for designers, UI AI, UX AI, AI branding, AI for Figma"
+  eyebrow="Design"
+  date="2026-06-05"
+  readTime="10 min read"
+  author="AI Tool Hub Editorial"
+  tags={["design","ui","ux","figma","branding"]}
+  slug="best-ai-tools-for-designers-2026"
+  category="Design"
+  breadcrumb="Best AI Tools for Designers (2026)"
+>
+      <img src="/images/blog/best-ai-tools-for-designers-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-tools-for-designers-2026/hero.jpg'" alt="Best AI Tools for Designers in 2026: UI, UX, Branding, and Motion" loading="eager" />
       <p>The "AI design tool" category in 2026 is the new "crypto project" of design — every week a new tool launches with a slick demo, a $20/month price, and a Twitter thread that goes viral. Most of them disappear in 3 months because they are toys: impressive demos, no real workflow integration, and output that looks "AI" the moment you look closely.</p>
 
       <p>This list is the tools that survived 30+ days of real use on paying client work. Three of our product designers tested 18 tools, kept 7, and dropped 11. The 7 below are the ones we actually open during the workday.</p>
@@ -34,7 +30,7 @@ import Chart from "../../components/Chart.astro";
       ]} />
 
 <h2>The 7 tools, ranked by use frequency</h2>
-      <img src="/images/blog/best-ai-tools-for-designers-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-tools-for-designers-2026/inline-1.jpg'" alt="The 7 tools, ranked by use frequency" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/best-ai-tools-for-designers-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-tools-for-designers-2026/inline-1.jpg'" alt="The 7 tools, ranked by use frequency" loading="lazy" />
       <ol>
         <li><strong>Figma AI (free with Figma, Pro features $15/month)</strong> — best for UI/UX workflow</li>
         <li><strong>Midjourney v7 ($30/month)</strong> — best for visual exploration and mood boards</li>
@@ -46,14 +42,14 @@ import Chart from "../../components/Chart.astro";
       </ol>
 
       <h2>1. Figma AI — best for UI/UX workflow</h2>
-      <img src="/images/blog/best-ai-tools-for-designers-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-tools-for-designers-2026/inline-2.jpg'" alt="1. Figma AI — best for UI/UX workflow" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/best-ai-tools-for-designers-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-tools-for-designers-2026/inline-2.jpg'" alt="1. Figma AI — best for UI/UX workflow" loading="lazy" />
       <p><strong>Cost:</strong> Free with Figma. Pro AI features in the $15/month Figma Professional plan.</p>
       <p>Figma AI is the only "AI design tool" that lives where you actually design. The features are modest — auto-generate a UI from a text prompt, rename layers intelligently, suggest component variations, auto-layout from a sketch — but the workflow integration is what makes it essential. You do not have to leave Figma, export, import, or context-switch.</p>
       <p>The standout feature is "Make Designs" — type "a pricing page for a SaaS with 3 tiers, monthly/yearly toggle, and a feature comparison table" and it produces a fully editable Figma frame with real components, real text, and real layout. The output is 70% of the way to a design that would take a designer 2 hours to mock up. You still need to refine it, but the starting point is real.</p>
       <p><strong>Pro tip:</strong> use "Make Designs" to generate 3-4 rough variations of a page in 5 minutes, then pick the best and refine. It is the new "thumbnail sketch on a napkin" step, but digital and instant.</p>
 
       <h2>2. Midjourney v7 — best for visual exploration</h2>
-      <img src="/images/blog/best-ai-tools-for-designers-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-tools-for-designers-2026/inline-3.jpg'" alt="2. Midjourney v7 — best for visual exploration" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/best-ai-tools-for-designers-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-tools-for-designers-2026/inline-3.jpg'" alt="2. Midjourney v7 — best for visual exploration" loading="lazy" />
       <p><strong>Cost:</strong> $30/month Standard.</p>
       <p>Midjourney is the best tool for the early "what if it looked like this" phase of a design project. The output quality is unmatched, the iteration speed is fast, and the diversity of styles is the deepest in any image model.</p>
       <p>The real workflow: at the start of a brand or product project, spend 1-2 hours in Midjourney generating 50-100 visual explorations. Pull the best 10 into a mood board. Use the mood board to align with the client on visual direction before any pixels are pushed in Figma. The 1-2 hours of Midjourney exploration saves 10-20 hours of "are we going in the right direction" feedback cycles later.</p>
@@ -125,7 +121,7 @@ import Chart from "../../components/Chart.astro";
       </div>
     </section>
 
-    <section style="margin-top: 40px;">
+    <section>
       <h3>Tags</h3>
       <div class="audience-tags">
         <span class="audience-tag">#design</span>
@@ -136,8 +132,7 @@ import Chart from "../../components/Chart.astro";
       </div>
     </section>
 
-    <section style="margin-top: 40px; text-align: center;">
-      <p style="color: var(--text-mute);">Want us to break down a specific design workflow? <a href="/contact/">Suggest a topic</a>.</p>
-    </section>
-  </article>
-</BaseLayout>
+    <section>
+      <p>Want us to break down a specific design workflow? <a href="/contact/">Suggest a topic</a>.</p>
+
+</BlogPostLayout>

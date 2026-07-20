@@ -1,26 +1,22 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import Chart from "../../components/Chart.astro";
 ---
-<BaseLayout title="Meetily Review: The Best Local AI Meeting Assistant in 2026?" description="Meetily is a Rust-based, privacy-first AI meeting assistant that runs 100% locally. We tested its live transcription, summarization, and how it stacks up against Otter and Fireflies." keywords="ai-meeting-assistant, open-source, local-first, self-hosted, productivity, rust">
-  <BlogJsonLd slot="head" title="Meetily Review: The Best Local AI Meeting Assistant in 2026?" description="Meetily is a Rust-based, privacy-first AI meeting assistant that runs 100% locally. We tested its live transcription, summarization, and how it stacks up against Otter and Fireflies." slug="meetily-review-best-local-ai-meeting-assistant-2026" date="" author="" category="productivity" keywords="ai-meeting-assistant, open-source, local-first, self-hosted, productivity, rust" tags={["ai-meeting-assistant","open-source","local-first","self-hosted","productivity","rust"]} />
-  <article class="legal-page blog-post">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>Meetily Review: The Best Local AI Meeting Assistant in 2026?</span></nav>
-    <header class="article-header">
-      <span class="eyebrow">productivity</span>
-      <h1>Meetily Review: The Best Local AI Meeting Assistant in 2026?</h1>
-      <p class="lede">Meetily is a Rust-based, privacy-first AI meeting assistant that runs 100% locally. We tested its live transcription, summarization, and how it stacks up against Otter and Fireflies.</p>
-      <div class="article-meta">
-        <div class="meta-item"><i class="far fa-calendar"></i> <span>2026-07-12</span></div>
-        <div class="meta-item"><i class="far fa-clock"></i> <span>9 min read</span></div>
-        <div class="meta-item"><i class="far fa-user"></i> <span>AI Tool Hub Editorial</span></div>
-        <div class="meta-item reviewer"><i class="fas fa-user-check"></i> <span>Reviewed by <strong>Lin Chen</strong>, Lead Reviewer (5+ years testing AI tools)</span></div>
-      </div>
-    </header>
-      <img src="/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/hero.jpg'" alt="Meetily Review: The Best Local AI Meeting Assistant in 2026?" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
-
-    <section class="blog-content">
+<BlogPostLayout
+  title="Meetily Review: The Best Local AI Meeting Assistant in 2026?"
+  description="Meetily is a Rust-based, privacy-first AI meeting assistant that runs 100% locally. We tested its live transcription, summarization, and how it stacks up against Otter and Fireflies."
+  keywords="ai-meeting-assistant, open-source, local-first, self-hosted, productivity, rust"
+  eyebrow="productivity"
+  date=""
+  readTime=""
+  author=""
+  tags={["ai-meeting-assistant","open-source","local-first","self-hosted","productivity","rust"]}
+  slug="meetily-review-best-local-ai-meeting-assistant-2026"
+  category="productivity"
+  breadcrumb="Meetily Review: The Best Local AI Meeting Assistant in 2026?"
+  reviewer="Lin Chen"
+>
+      <img src="/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/hero.jpg'" alt="Meetily Review: The Best Local AI Meeting Assistant in 2026?" loading="eager" />
 <p>If you have hesitated to invite Otter or Fireflies into a sensitive sales call, investor update, or therapy appointment because you do not know where the recording ends up, you are not alone. Meetily, a new Rust-based open-source AI meeting assistant that transcribes and summarizes conversations entirely on your own machine, is quickly climbing GitHub’s trending charts as the privacy-first alternative everyone has been waiting for.</p>
 
       <Chart type="comparison" title="Feature Comparison" data={{
@@ -34,11 +30,11 @@ import Chart from "../../components/Chart.astro";
       }} />
 
 <h2>What Is Meetily?</h2>
-      <img src="/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/inline-1.jpg'" alt="What Is Meetily?" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/inline-1.jpg'" alt="What Is Meetily?" loading="lazy" />
 <p>Meetily is an open-source AI meeting note-taker built in Rust that promises live transcription, speaker diarization, and summarization without sending a single byte to the cloud. It hit the top of GitHub Trending in early July 2026 with more than 8,500 stars in a few days, a signal that developers and knowledge workers are ready for a local-first option in a category long dominated by cloud-only SaaS.</p>
 <p>Unlike browser extensions or cloud bots that join your calls as a virtual attendee, Meetily runs as a native desktop application on macOS and Windows. It captures audio directly from your microphone and system output, feeds it through either Nvidia’s Parakeet or OpenAI’s Whisper ASR models (the project claims a 4x speedup over baseline Whisper), and then hands the transcript to a local large language model via Ollama for summarization and action-item extraction.</p>
 <h2>Why Local-First AI Matters in 2026</h2>
-      <img src="/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/inline-2.jpg'" alt="Why Local-First AI Matters in 2026" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/inline-2.jpg'" alt="Why Local-First AI Matters in 2026" loading="lazy" />
 <p>Three big shifts are pushing meeting transcription off the cloud and onto your laptop.</p>
 <ul>
 <li><strong>Privacy regulation is tightening.</strong> The EU AI Act and updated state-level privacy laws in the U.S. now require explicit consent before recording conversations in many business contexts, and organizations face steep fines for leaking customer data from third-party SaaS logs.</li>
@@ -47,7 +43,7 @@ import Chart from "../../components/Chart.astro";
 </ul>
 <p>That combination is why we are seeing a wave of “runs on your machine” AI tools, from image generators to coding assistants, and Meetily is the first meeting assistant that feels like a finished product rather than a weekend project.</p>
 <h2>Hands-On: How Meetily Performs</h2>
-      <img src="/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/inline-3.jpg'" alt="Hands-On: How Meetily Performs" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/meetily-review-best-local-ai-meeting-assistant-2026/inline-3.jpg'" alt="Hands-On: How Meetily Performs" loading="lazy" />
 <h3>Setup and Installation</h3>
 <p>We downloaded the latest macOS build from the official website on an M3 MacBook Pro with 16 GB of RAM. Installation was a standard drag-to-Applications affair. On first launch, Meetily prompts you to download its default ASR model (Parakeet, around 1.2 GB) and a summarization model through Ollama; the whole setup took about seven minutes on a 100 Mbps connection.</p>
 <p>Windows installation is similar, and the project publishes signed binaries for both platforms. If you want to run on Linux, you will have to build from source for now, but contributors tell us official Linux packages are on the roadmap for late 2026.</p>
@@ -171,13 +167,13 @@ import Chart from "../../components/Chart.astro";
 <p>Have you tried Meetily or another local-first AI meeting assistant? Drop a comment below and tell us what you are using, and sign up for the AI Tool Hub newsletter for hands-on reviews of the best new AI tools every week.</p>
     </section>
 
-    <section style="margin-top: 40px;"><h3>Frequently Asked Questions</h3>
+    <section><h3>Frequently Asked Questions</h3>
       <details><summary>Is Meetily completely free to use?</summary><p>Yes, Meetily is free and open-source software. You can download the macOS or Windows builds at no cost, or self-host the code on your own hardware.</p></details>
       <details><summary>How accurate is Meetily’s local transcription compared to cloud tools?</summary><p>In our testing, Meetily’s Parakeet and Whisper models delivered near-cloud accuracy for clear English speech, though it still trails the very best cloud services on heavy accents, crosstalk, and niche jargon.</p></details>
       <details><summary>Does Meetily work with Zoom, Google Meet, and Microsoft Teams?</summary><p>Yes. Meetily captures system audio and microphone input, so it works with any video-call app running on your desktop, including Zoom, Google Meet, Teams, and Slack huddles.</p></details>
     </section>
 
-    <section style="margin-top: 40px;">
+    <section>
       <h3>Tags</h3>
       <div class="audience-tags">
         <span class="audience-tag">#ai-meeting-assistant</span>
@@ -189,9 +185,7 @@ import Chart from "../../components/Chart.astro";
       </div>
     </section>
 
-    <section style="margin-top: 40px; text-align: center;">
-      <p style="color: var(--text-mute);">Want us to review a specific tool? <a href="/contact/">Suggest a topic</a>.</p>
-    </section>
-  </article>
-</BaseLayout>
+    <section>
+      <p>Want us to review a specific tool? <a href="/contact/">Suggest a topic</a>.</p>
 
+</BlogPostLayout>

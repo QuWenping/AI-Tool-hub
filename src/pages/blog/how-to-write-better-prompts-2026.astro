@@ -1,25 +1,21 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import Chart from "../../components/Chart.astro";
 ---
-<BaseLayout title="How to Write Better AI Prompts in 2026 (Real Examples, Not Theory)" description="We A/B tested 200+ prompt variations across ChatGPT, Claude, and Midjourney. Here are the 9 patterns that consistently produced better outputs." keywords="AI prompt engineering, prompt writing, better prompts, ChatGPT prompts, Claude prompts, Midjourney prompts">
-  <BlogJsonLd slot="head" title="How to Write Better AI Prompts in 2026 (Real Examples, Not Theory)" description="We A/B tested 200+ prompt variations across ChatGPT, Claude, and Midjourney. Here are the 9 patterns that consistently produced better outputs." slug="how-to-write-better-prompts-2026" date="2026-06-06" author="AI Tool Hub Editorial" category="Guide" keywords="AI prompt engineering, prompt writing, better prompts, ChatGPT prompts, Claude prompts, Midjourney prompts" tags={["prompts","guide","writing","tutorial"]} />
-  <article class="legal-page blog-post">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>How to Write Better AI Prompts (2026)</span></nav>
-    <header class="article-header">
-      <span class="eyebrow">Guide</span>
-      <h1>How to Write Better AI Prompts in 2026 (Real Examples, Not Theory)</h1>
-      <p class="lede">We A/B tested 200+ prompt variations across ChatGPT, Claude, Midjourney, and Stable Diffusion. Here are the 9 patterns that consistently produced better outputs — with real before/after examples, not theory.</p>
-      <div class="article-meta">
-        <span class="meta-item"><i class="far fa-calendar"></i> 2026-06-06</span>
-        <span class="meta-item"><i class="far fa-clock"></i> 8 min read</span>
-        <span class="meta-item"><i class="far fa-user"></i> AI Tool Hub Editorial</span>
-      </div>
-    </header>
-      <img src="/images/blog/how-to-write-better-prompts-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-write-better-prompts-2026/hero.jpg'" alt="How to Write Better AI Prompts in 2026 (Real Examples, Not Theory)" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
-
-    <section class="blog-content">
+<BlogPostLayout
+  title="How to Write Better AI Prompts in 2026 (Real Examples, Not Theory)"
+  description="We A/B tested 200+ prompt variations across ChatGPT, Claude, and Midjourney. Here are the 9 patterns that consistently produced better outputs."
+  keywords="AI prompt engineering, prompt writing, better prompts, ChatGPT prompts, Claude prompts, Midjourney prompts"
+  eyebrow="Guide"
+  date="2026-06-06"
+  readTime="8 min read"
+  author="AI Tool Hub Editorial"
+  tags={["prompts","guide","writing","tutorial"]}
+  slug="how-to-write-better-prompts-2026"
+  category="Guide"
+  breadcrumb="How to Write Better AI Prompts (2026)"
+>
+      <img src="/images/blog/how-to-write-better-prompts-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-write-better-prompts-2026/hero.jpg'" alt="How to Write Better AI Prompts in 2026 (Real Examples, Not Theory)" loading="eager" />
       <p>Most prompt engineering content is either too basic ("be specific!") or too academic ("chain-of-thought! few-shot!"). This is neither. We A/B tested 200+ prompt variations across real work tasks — drafting emails, writing code, generating images, summarizing documents — and the patterns below are the ones that consistently moved the needle.</p>
 
       <p>None of these are magic. They are the patterns that survive contact with the real world. Apply them and the output quality jumps 30-50% in our testing.</p>
@@ -33,14 +29,14 @@ import Chart from "../../components/Chart.astro";
       ]} />
 
 <h2>Pattern 1: Set the role, not the task</h2>
-      <img src="/images/blog/how-to-write-better-prompts-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-write-better-prompts-2026/inline-1.jpg'" alt="Pattern 1: Set the role, not the task" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-write-better-prompts-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-write-better-prompts-2026/inline-1.jpg'" alt="Pattern 1: Set the role, not the task" loading="lazy" />
       <p><strong>Weak prompt:</strong> "Write me a marketing email for a SaaS product."</p>
       <p><strong>Strong prompt:</strong> "You are a senior B2B SaaS copywriter with 10 years of experience writing for early-stage startups. Write a marketing email for [product] targeting [ICP]. The email should be under 150 words, conversational, and end with a single clear CTA."</p>
       <p><strong>Why it works:</strong> the role sets the model's priors. "Senior B2B SaaS copywriter" activates a different distribution of training examples than "write a marketing email." The output immediately sounds more on-brief.</p>
       <p><strong>Applies to:</strong> writing, analysis, planning, advice. Less useful for pure factual questions.</p>
 
       <h2>Pattern 2: Give 2-3 examples of the output you want</h2>
-      <img src="/images/blog/how-to-write-better-prompts-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-write-better-prompts-2026/inline-2.jpg'" alt="Pattern 2: Give 2-3 examples of the output you want" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-write-better-prompts-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-write-better-prompts-2026/inline-2.jpg'" alt="Pattern 2: Give 2-3 examples of the output you want" loading="lazy" />
       <p><strong>Weak prompt:</strong> "Write a tweet announcing our new feature."</p>
       <p><strong>Strong prompt:</strong> "Write 5 tweets announcing our new feature. Match the style of these examples:</p>
       <p>Tweet 1 example: [paste a tweet that performed well]</p>
@@ -51,7 +47,7 @@ import Chart from "../../components/Chart.astro";
       <p><strong>Applies to:</strong> anything where style matters — writing, code (show example patterns), images (reference images), data formats.</p>
 
       <h2>Pattern 3: Specify the output format explicitly</h2>
-      <img src="/images/blog/how-to-write-better-prompts-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-write-better-prompts-2026/inline-3.jpg'" alt="Pattern 3: Specify the output format explicitly" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-write-better-prompts-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-write-better-prompts-2026/inline-3.jpg'" alt="Pattern 3: Specify the output format explicitly" loading="lazy" />
       <p><strong>Weak prompt:</strong> "Compare ChatGPT and Claude."</p>
       <p><strong>Strong prompt:</strong> "Compare ChatGPT and Claude. Return the result as a markdown table with columns: Feature, ChatGPT, Claude, Winner. Include exactly 5 rows for the 5 most important differences. Be specific and avoid hedging."</p>
       <p><strong>Why it works:</strong> specifying the format forces the model to organize its thinking. "Be specific" is a vibe; "a table with 5 rows" is a constraint. The output is also immediately usable — no rewriting needed.</p>
@@ -123,7 +119,7 @@ import Chart from "../../components/Chart.astro";
       </div>
     </section>
 
-    <section style="margin-top: 40px;">
+    <section>
       <h3>Tags</h3>
       <div class="audience-tags">
         <span class="audience-tag">#prompts</span>
@@ -133,8 +129,7 @@ import Chart from "../../components/Chart.astro";
       </div>
     </section>
 
-    <section style="margin-top: 40px; text-align: center;">
-      <p style="color: var(--text-mute);">Want us to cover another prompt pattern? <a href="/contact/">Suggest a topic</a>.</p>
-    </section>
-  </article>
-</BaseLayout>
+    <section>
+      <p>Want us to cover another prompt pattern? <a href="/contact/">Suggest a topic</a>.</p>
+
+</BlogPostLayout>

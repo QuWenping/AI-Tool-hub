@@ -1,25 +1,21 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import Chart from "../../components/Chart.astro";
 ---
-<BaseLayout title="How to Set Up Cursor for Your Development Team in 2026 (5-Step Guide)" description="A 5-step guide to rolling out Cursor across an engineering team - license management, code indexing, custom rules, and how to measure productivity gains. Includes a real team rollout case study." keywords="Cursor for teams, Cursor setup, Cursor enterprise, Cursor team rollout, Cursor productivity">
-  <BlogJsonLd slot="head" title="How to Set Up Cursor for Your Development Team in 2026 (5-Step Guide)" description="A 5-step guide to rolling out Cursor across an engineering team - license management, code indexing, custom rules, and how to measure productivity gains. Includes a real team rollout case study." slug="how-to-set-up-cursor-for-your-team-2026" date="2026-06-11" author="Marcus Webb, Senior Engineer" category="Tutorial" keywords="Cursor for teams, Cursor setup, Cursor enterprise, Cursor team rollout, Cursor productivity" tags={["cursor","coding","tutorial","how-to","team"]} />
-  <article class="legal-page blog-post">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>How to Set Up Cursor for Your Team</span></nav>
-    <header class="article-header">
-      <span class="eyebrow">Tutorial</span>
-      <h1>How to Set Up Cursor for Your Development Team in 2026 (5-Step Guide)</h1>
-      <p class="lede">A 5-step guide to rolling out Cursor across an engineering team. License management, code indexing, custom rules, privacy controls, and how to measure the productivity gains. Includes a real team rollout case study from a 12-engineer startup.</p>
-      <div class="article-meta">
-        <span class="meta-item"><i class="far fa-calendar"></i> 2026-06-11</span>
-        <span class="meta-item"><i class="far fa-clock"></i> 13 min read</span>
-        <span class="meta-item"><i class="far fa-user"></i> Marcus Webb, Senior Engineer</span>
-      </div>
-    </header>
-      <img src="/images/blog/how-to-set-up-cursor-for-your-team-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-set-up-cursor-for-your-team-2026/hero.jpg'" alt="How to Set Up Cursor for Your Development Team in 2026 (5-Step Guide)" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
-
-    <section class="blog-content">
+<BlogPostLayout
+  title="How to Set Up Cursor for Your Development Team in 2026 (5-Step Guide)"
+  description="A 5-step guide to rolling out Cursor across an engineering team - license management, code indexing, custom rules, and how to measure productivity gains. Includes a real team rollout case study."
+  keywords="Cursor for teams, Cursor setup, Cursor enterprise, Cursor team rollout, Cursor productivity"
+  eyebrow="Tutorial"
+  date="2026-06-11"
+  readTime="13 min read"
+  author="Marcus Webb, Senior Engineer"
+  tags={["cursor","coding","tutorial","how-to","team"]}
+  slug="how-to-set-up-cursor-for-your-team-2026"
+  category="Tutorial"
+  breadcrumb="How to Set Up Cursor for Your Team"
+>
+      <img src="/images/blog/how-to-set-up-cursor-for-your-team-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-set-up-cursor-for-your-team-2026/hero.jpg'" alt="How to Set Up Cursor for Your Development Team in 2026 (5-Step Guide)" loading="eager" />
       <p>Rolling out an AI coding tool to a team is not the same as installing it for yourself. The questions change: who pays, who sees what, who controls the rules, how do we measure if it is working? This guide covers the 5 steps that matter, based on what worked (and did not work) when we rolled out Cursor to a 12-engineer team in Q1 2026.</p>
 
       
@@ -31,7 +27,7 @@ import Chart from "../../components/Chart.astro";
       ]} />
 
 <h2>Step 1: Pick the right plan (5 minutes)</h2>
-      <img src="/images/blog/how-to-set-up-cursor-for-your-team-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-set-up-cursor-for-your-team-2026/inline-1.jpg'" alt="Step 1: Pick the right plan (5 minutes)" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-set-up-cursor-for-your-team-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-set-up-cursor-for-your-team-2026/inline-1.jpg'" alt="Step 1: Pick the right plan (5 minutes)" loading="lazy" />
       <p>Cursor has 3 plans that matter for teams:</p>
       <ul>
         <li><strong>Pro ($20/month per user):</strong> All Pro features, individual billing, no admin controls. Good for: 1-5 person teams where everyone manages their own subscription.</li>
@@ -42,7 +38,7 @@ import Chart from "../../components/Chart.astro";
       <p><strong>Real case study:</strong> The 12-person startup we helped in Q1 2026 went with Business at $40/month per user. Total cost: $480/month. Productivity gain measured at ~28% per engineer (more on measurement in step 5). ROI: 11x in the first month.</p>
 
       <h2>Step 2: Set up the codebase for Cursor (2 hours)</h2>
-      <img src="/images/blog/how-to-set-up-cursor-for-your-team-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-set-up-cursor-for-your-team-2026/inline-2.jpg'" alt="Step 2: Set up the codebase for Cursor (2 hours)" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-set-up-cursor-for-your-team-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-set-up-cursor-for-your-team-2026/inline-2.jpg'" alt="Step 2: Set up the codebase for Cursor (2 hours)" loading="lazy" />
       <p>Cursor is only as good as its understanding of your codebase. The 3 things that matter most:</p>
       <p><strong>2a: Create a .cursorrules file.</strong> This is a plain-text file at the root of your repo that tells Cursor how to behave on your codebase. The format is natural language instructions.</p>
       <p>Example for a TypeScript Next.js project, the .cursorrules file should include: code style preferences (functional components, hooks, server components, Tailwind, Zod validation, no any), pattern locations (API routes in /app/api/, database queries in /lib/db/, auth in /lib/auth/, components in /components/), testing requirements (every new function needs a test in __tests__/, use vitest, mock external services), and explicit do-nots (class components, any, skipping error handling, console.log for debugging). When suggesting code, always include the file path and explain the reasoning.</p>
@@ -51,7 +47,7 @@ import Chart from "../../components/Chart.astro";
       <p><strong>2c: Configure ignored files.</strong> By default, Cursor indexes everything. You almost certainly want to ignore .env files, node_modules, dist, build output, and any folder with sensitive data. Add a .cursorignore file at the root: .env, .env.*, node_modules/, dist/, build/, .next/, *.log, .DS_Store, coverage/.</p>
 
       <h2>Step 3: Set up privacy and security (1 hour)</h2>
-      <img src="/images/blog/how-to-set-up-cursor-for-your-team-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-set-up-cursor-for-your-team-2026/inline-3.jpg'" alt="Step 3: Set up privacy and security (1 hour)" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-set-up-cursor-for-your-team-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-set-up-cursor-for-your-team-2026/inline-3.jpg'" alt="Step 3: Set up privacy and security (1 hour)" loading="lazy" />
       <p>For most companies, this is the most important step. The 4 things to lock down:</p>
       <p><strong>3a: Enable Privacy Mode.</strong> In Cursor Settings > Privacy, enable Privacy Mode. This prevents your code from being used to train future models. Without it, your proprietary code is in the training set.</p>
       <p><strong>3b: Add SOC 2 controls if you need them.</strong> Cursor is SOC 2 Type II compliant. If your customers require SOC 2 from vendors, request the latest report from Cursor support and add it to your vendor review process.</p>
@@ -101,7 +97,7 @@ import Chart from "../../components/Chart.astro";
       <p>Have a Cursor team setup tip? <a href="/contact/">Send it to us</a> and we will feature the best ones in a future update.</p>
     </section>
 
-    <section style="margin-top: 40px;">
+    <section>
       <h3>Tags</h3>
       <div class="audience-tags">
         <span class="audience-tag">#cursor</span>
@@ -110,6 +106,5 @@ import Chart from "../../components/Chart.astro";
         <span class="audience-tag">#how-to</span>
         <span class="audience-tag">#team</span>
       </div>
-    </section>
-  </article>
-</BaseLayout>
+
+</BlogPostLayout>

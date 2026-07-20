@@ -1,25 +1,21 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import Chart from "../../components/Chart.astro";
 ---
-<BaseLayout title="How to Use Claude for Long Documents in 2026 (200K Context Window Tutorial)" description="A practical guide to using Claude 4.5's 200K context window for real work - book analysis, legal contracts, research papers, and code review. With 6 worked examples." keywords="Claude long documents, 200K context window, Claude tutorial, Claude for PDFs, Claude document analysis">
-  <BlogJsonLd slot="head" title="How to Use Claude for Long Documents in 2026 (200K Context Window Tutorial)" description="A practical guide to using Claude 4.5's 200K context window for real work - book analysis, legal contracts, research papers, and code review. With 6 worked examples." slug="how-to-use-claude-for-long-documents-2026" date="2026-06-09" author="Aisha Patel, Academic Reviewer" category="Tutorial" keywords="Claude long documents, 200K context window, Claude tutorial, Claude for PDFs, Claude document analysis" tags={["claude","long-documents","tutorial","how-to","200k"]} />
-  <article class="legal-page blog-post">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>How to Use Claude for Long Documents</span></nav>
-    <header class="article-header">
-      <span class="eyebrow">Tutorial</span>
-      <h1>How to Use Claude for Long Documents in 2026 (200K Context Window Tutorial)</h1>
-      <p class="lede">A practical guide to using Claude 4.5's 200K context window for real work. Book analysis, legal contracts, research papers, and code review - with 6 worked examples you can adapt today.</p>
-      <div class="article-meta">
-        <span class="meta-item"><i class="far fa-calendar"></i> 2026-06-09</span>
-        <span class="meta-item"><i class="far fa-clock"></i> 12 min read</span>
-        <span class="meta-item"><i class="far fa-user"></i> Aisha Patel, Academic Reviewer</span>
-      </div>
-    </header>
-      <img src="/images/blog/how-to-use-claude-for-long-documents-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-claude-for-long-documents-2026/hero.jpg'" alt="How to Use Claude for Long Documents in 2026 (200K Context Window Tutorial)" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
-
-    <section class="blog-content">
+<BlogPostLayout
+  title="How to Use Claude for Long Documents in 2026 (200K Context Window Tutorial)"
+  description="A practical guide to using Claude 4.5's 200K context window for real work - book analysis, legal contracts, research papers, and code review. With 6 worked examples."
+  keywords="Claude long documents, 200K context window, Claude tutorial, Claude for PDFs, Claude document analysis"
+  eyebrow="Tutorial"
+  date="2026-06-09"
+  readTime="12 min read"
+  author="Aisha Patel, Academic Reviewer"
+  tags={["claude","long-documents","tutorial","how-to","200k"]}
+  slug="how-to-use-claude-for-long-documents-2026"
+  category="Tutorial"
+  breadcrumb="How to Use Claude for Long Documents"
+>
+      <img src="/images/blog/how-to-use-claude-for-long-documents-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-claude-for-long-documents-2026/hero.jpg'" alt="How to Use Claude for Long Documents in 2026 (200K Context Window Tutorial)" loading="eager" />
       <p>Claude 4.5's 200K token context window (about 500 pages of text) is the killer feature in 2026. It is the difference between "summarize this article for me" and "read this 300-page book and tell me which chapters support my thesis." This tutorial covers the 6 real-world use cases that justify the Pro subscription on its own.</p>
 
       
@@ -31,7 +27,7 @@ import Chart from "../../components/Chart.astro";
       ]} />
 
 <h2>What 200K tokens actually means</h2>
-      <img src="/images/blog/how-to-use-claude-for-long-documents-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-claude-for-long-documents-2026/inline-1.jpg'" alt="What 200K tokens actually means" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-claude-for-long-documents-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-claude-for-long-documents-2026/inline-1.jpg'" alt="What 200K tokens actually means" loading="lazy" />
       <p>200K tokens is roughly 150,000 words, or about 500 pages of single-spaced text. To put that in perspective:</p>
       <ul>
         <li>Most novels: 80,000-100,000 words (fits easily)</li>
@@ -43,14 +39,14 @@ import Chart from "../../components/Chart.astro";
       <p>The "fits" part is what matters: you can paste an entire book and ask Claude to do something with it, in one shot. No chunking, no embeddings, no RAG setup. Just paste and ask.</p>
 
       <h2>Use case 1: Read a 300-page book in 10 minutes</h2>
-      <img src="/images/blog/how-to-use-claude-for-long-documents-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-claude-for-long-documents-2026/inline-2.jpg'" alt="Use case 1: Read a 300-page book in 10 minutes" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-claude-for-long-documents-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-claude-for-long-documents-2026/inline-2.jpg'" alt="Use case 1: Read a 300-page book in 10 minutes" loading="lazy" />
       <p><strong>Scenario:</strong> You are writing a blog post or a paper and need to engage with a 300-page book you do not have time to read in full.</p>
       <p><strong>The prompt that works:</strong> "I have pasted [Book Title] by [Author] below. Do three things: (1) Summarize the book in 500 words, focusing on the main argument and the evidence. (2) Identify the 5 most important ideas with page references if possible. (3) List 3 criticisms of the argument that the author does not fully address. After your summary, I will ask you specific questions about chapters."</p>
       <p><strong>What you get:</strong> A real summary in 30 seconds, the 5 key ideas with chapter references, and 3 critical points you can engage with. Then you can ask follow-ups like "On page 142, what did the author mean by '...'?" and Claude will answer with the surrounding context.</p>
       <p><strong>Pro tip:</strong> Paste the book in the first message, then use follow-up questions in the same chat. Do not start a new chat for each question - the model needs the book context loaded.</p>
 
       <h2>Use case 2: Analyze a legal contract before signing</h2>
-      <img src="/images/blog/how-to-use-claude-for-long-documents-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-claude-for-long-documents-2026/inline-3.jpg'" alt="Use case 2: Analyze a legal contract before signing" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-claude-for-long-documents-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-claude-for-long-documents-2026/inline-3.jpg'" alt="Use case 2: Analyze a legal contract before signing" loading="lazy" />
       <p><strong>Scenario:</strong> You received a 20-page contract (employment, NDA, vendor agreement) and want to understand the obligations and risks before signing.</p>
       <p><strong>The prompt that works:</strong> "I have pasted a legal contract below. I am not a lawyer - this is for my own understanding before I sign. Do the following: (1) Summarize the contract in plain English. (2) List all my obligations and the deadlines for each. (3) List all their obligations and the deadlines. (4) Identify any unusual clauses (non-compete, non-solicitation, IP assignment, termination penalties). (5) List 3 things I should ask a lawyer about before signing."</p>
       <p><strong>What you get:</strong> A 5-section summary in 1 minute. The "unusual clauses" section is the highest-value part - Claude is good at flagging things like "this auto-renews unless you cancel 60 days before" or "this assigns all your pre-existing IP to them."</p>
@@ -103,7 +99,7 @@ import Chart from "../../components/Chart.astro";
       <p>Have a long-document workflow that works for you? <a href="/contact/">Send it to us</a> and we will feature the best ones.</p>
     </section>
 
-    <section style="margin-top: 40px;">
+    <section>
       <h3>Tags</h3>
       <div class="audience-tags">
         <span class="audience-tag">#claude</span>
@@ -112,6 +108,5 @@ import Chart from "../../components/Chart.astro";
         <span class="audience-tag">#how-to</span>
         <span class="audience-tag">#200k</span>
       </div>
-    </section>
-  </article>
-</BaseLayout>
+
+</BlogPostLayout>

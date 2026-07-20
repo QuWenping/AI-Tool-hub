@@ -1,25 +1,21 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import Chart from "../../components/Chart.astro";
 ---
-<BaseLayout title="Best AI Video Generators in 2026: Sora, Runway, Pika, Kling Compared" description="We generated 50+ short videos on every major AI video model in 2026. Here is what each one is good at, where they break, and which is worth your money." keywords="best AI video generator, Sora, Runway, Pika, Kling, text to video, AI video 2026">
-  <BlogJsonLd slot="head" title="Best AI Video Generators in 2026: Sora, Runway, Pika, Kling Compared" description="We generated 50+ short videos on every major AI video model in 2026. Here is what each one is good at, where they break, and which is worth your money." slug="best-ai-video-generators-2026" date="2026-07-08" author="AI Tool Hub Editorial" category="Video generation" keywords="best AI video generator, Sora, Runway, Pika, Kling, text to video, AI video 2026" tags={["sora","runway","pika","kling","video-generation"]} />
-  <article class="legal-page blog-post">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>Best AI Video Generators (2026)</span></nav>
-    <header class="article-header">
-      <span class="eyebrow">Video generation</span>
-      <h1>Best AI Video Generators in 2026: Sora, Runway, Pika, Kling Compared</h1>
-      <p class="lede">We generated 50+ short videos on every major AI video model in 2026 — Sora 2, Runway Gen-3 Alpha, Pika 2.0, Kling 1.6, Luma Dream Machine, and Hailuo. Here is what each one is genuinely good at, where they break, and which is worth your money.</p>
-      <div class="article-meta">
-        <span class="meta-item"><i class="far fa-calendar"></i> 2026-07-08</span>
-        <span class="meta-item"><i class="far fa-clock"></i> 13 min read</span>
-        <span class="meta-item"><i class="far fa-user"></i> AI Tool Hub Editorial</span>
-      </div>
-    </header>
-      <img src="/images/blog/best-ai-video-generators-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-video-generators-2026/hero.jpg'" alt="Best AI Video Generators in 2026: Sora, Runway, Pika, Kling Compared" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
-
-    <section class="blog-content">
+<BlogPostLayout
+  title="Best AI Video Generators in 2026: Sora, Runway, Pika, Kling Compared"
+  description="We generated 50+ short videos on every major AI video model in 2026. Here is what each one is good at, where they break, and which is worth your money."
+  keywords="best AI video generator, Sora, Runway, Pika, Kling, text to video, AI video 2026"
+  eyebrow="Video generation"
+  date="2026-07-08"
+  readTime="13 min read"
+  author="AI Tool Hub Editorial"
+  tags={["sora","runway","pika","kling","video-generation"]}
+  slug="best-ai-video-generators-2026"
+  category="Video generation"
+  breadcrumb="Best AI Video Generators (2026)"
+>
+      <img src="/images/blog/best-ai-video-generators-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-video-generators-2026/hero.jpg'" alt="Best AI Video Generators in 2026: Sora, Runway, Pika, Kling Compared" loading="eager" />
       <p>AI video generation in 2026 is where image generation was in early 2023: exciting, fast-moving, full of "wow that is good" and "wow that is broken," and genuinely useful for a small but growing set of use cases. We are not at "make me a 30-minute feature film" yet, but we are well past "this looks like a deepfake of a video game cutscene."</p>
 
       <p>This guide covers the six tools that are actually worth paying for in 2026. We skipped the dozens of "AI video" wrapper apps that just call one of these models under the hood — the value is in the underlying models, not the wrappers.</p>
@@ -34,7 +30,7 @@ import Chart from "../../components/Chart.astro";
       ]} />
 
 <h2>The short version</h2>
-      <img src="/images/blog/best-ai-video-generators-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-video-generators-2026/inline-1.jpg'" alt="The short version" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/best-ai-video-generators-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-video-generators-2026/inline-1.jpg'" alt="The short version" loading="lazy" />
       <ul>
         <li><strong>Sora 2 (OpenAI)</strong> — best overall quality and physics, longest clips (20s), most expensive ($20-200/mo).</li>
         <li><strong>Runway Gen-3 Alpha</strong> — best control and editing tools, best for production workflows, 10s clips, $15-95/mo.</li>
@@ -45,7 +41,7 @@ import Chart from "../../components/Chart.astro";
       </ul>
 
       <h2>How we tested</h2>
-      <img src="/images/blog/best-ai-video-generators-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-video-generators-2026/inline-2.jpg'" alt="How we tested" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/best-ai-video-generators-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-video-generators-2026/inline-2.jpg'" alt="How we tested" loading="lazy" />
       <p>We generated 50+ clips across each model using a fixed prompt set designed to stress-test the common failure modes:</p>
       <ul>
         <li><strong>Human motion</strong> — walking, running, dancing, facial expressions (the historically hardest category)</li>
@@ -59,7 +55,7 @@ import Chart from "../../components/Chart.astro";
       <p>We scored each on: visual quality, motion realism, prompt adherence, length, speed, and price per usable clip.</p>
 
       <h2>1. Sora 2 (OpenAI) — the quality leader</h2>
-      <img src="/images/blog/best-ai-video-generators-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-video-generators-2026/inline-3.jpg'" alt="1. Sora 2 (OpenAI) — the quality leader" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/best-ai-video-generators-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-video-generators-2026/inline-3.jpg'" alt="1. Sora 2 (OpenAI) — the quality leader" loading="lazy" />
       <p><strong>Best for:</strong> highest-quality output, longest clips, projects where you can pay for it.</p>
       <p><strong>Pricing:</strong> $20/month Plus (50 priority videos of 5s, 720p), $200/month Pro (500 videos, 1080p, 20s clips).</p>
       <p>Sora 2 (released late 2025) is the first AI video model that consistently produces footage you can use in a real project without significant cleanup. The physics are noticeably better than the original Sora — water flows, fabric moves, smoke rises, and human motion is the best in class. A 10-20s clip of a person walking through a coffee shop looks like a real shot from a phone video, with the right grain and color.</p>
@@ -108,22 +104,22 @@ import Chart from "../../components/Chart.astro";
       <p><strong>Honest take:</strong> if you are budget-conscious and want Sora-quality output without Sora pricing, Hailuo is the best value in 2026.</p>
 
       <h2>Head-to-head: who wins what</h2>
-      <table style="width: 100%; border-collapse: collapse; margin: 24px 0;">
+      <table>
         <thead>
-          <tr style="background: var(--bg-color);">
-            <th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--border-color);">Use case</th>
-            <th style="padding: 12px; text-align: left; border-bottom: 1px solid var(--border-color);">Winner</th>
+          <tr>
+            <th>Use case</th>
+            <th>Winner</th>
           </tr>
         </thead>
         <tbody>
-          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Highest overall quality</td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Sora 2</td></tr>
-          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Best editing &amp; control tools</td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Runway Gen-3</td></tr>
-          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Best free tier</td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Kling 1.6</td></tr>
-          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Best for social clips</td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Pika 2.0</td></tr>
-          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Best image-to-video</td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Luma Dream Machine</td></tr>
-          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Best value</td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Hailuo</td></tr>
-          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Best for human motion</td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Sora 2 / Kling 1.6</td></tr>
-          <tr><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Longest clips</td><td style="padding: 12px; border-bottom: 1px solid var(--border-color);">Sora 2 (20s)</td></tr>
+          <tr><td>Highest overall quality</td><td>Sora 2</td></tr>
+          <tr><td>Best editing &amp; control tools</td><td>Runway Gen-3</td></tr>
+          <tr><td>Best free tier</td><td>Kling 1.6</td></tr>
+          <tr><td>Best for social clips</td><td>Pika 2.0</td></tr>
+          <tr><td>Best image-to-video</td><td>Luma Dream Machine</td></tr>
+          <tr><td>Best value</td><td>Hailuo</td></tr>
+          <tr><td>Best for human motion</td><td>Sora 2 / Kling 1.6</td></tr>
+          <tr><td>Longest clips</td><td>Sora 2 (20s)</td></tr>
         </tbody>
       </table>
 
@@ -147,7 +143,7 @@ import Chart from "../../components/Chart.astro";
       </div>
     </section>
 
-    <section style="margin-top: 40px;">
+    <section>
       <h3>Tags</h3>
       <div class="audience-tags">
         <span class="audience-tag">#sora</span>
@@ -158,8 +154,7 @@ import Chart from "../../components/Chart.astro";
       </div>
     </section>
 
-    <section style="margin-top: 40px; text-align: center;">
-      <p style="color: var(--text-mute);">Want us to compare two other video tools? <a href="/contact/">Suggest a topic</a>.</p>
-    </section>
-  </article>
-</BaseLayout>
+    <section>
+      <p>Want us to compare two other video tools? <a href="/contact/">Suggest a topic</a>.</p>
+
+</BlogPostLayout>

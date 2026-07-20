@@ -1,25 +1,21 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import Chart from "../../components/Chart.astro";
 ---
-<BaseLayout title="Best AI Tools for Product Managers in 2026 (Tested by PMs)" description="We surveyed 50 product managers on the AI tools they actually use daily in 2026. Here are the 8 that consistently save 5+ hours per week, ranked by impact." keywords="product-management, productivity, writing, research">
-  <BlogJsonLd slot="head" title="Best AI Tools for Product Managers in 2026 (Tested by PMs)" description="We surveyed 50 product managers on the AI tools they actually use daily in 2026. Here are the 8 that consistently save 5+ hours per week, ranked by impact." slug="best-ai-tools-for-product-managers-2026" date="2026-06-23" author="Daniel Park" category="product-management" keywords="product-management, productivity, writing, research" tags={["product-management","productivity","writing","research"]} />
-  <article class="legal-page blog-post">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>Best AI Tools for Product Managers in 2026 (Tested by PMs)</span></nav>
-    <header class="article-header">
-      <span class="eyebrow">product-management</span>
-      <h1>Best AI Tools for Product Managers in 2026 (Tested by PMs)</h1>
-      <p class="lede">We surveyed 50 product managers on the AI tools they actually use daily in 2026. Here are the 8 that consistently save 5+ hours per week, ranked by impact.</p>
-      <div class="article-meta">
-        <span class="meta-item"><i class="far fa-calendar"></i> 2026-06-23</span>
-        <span class="meta-item"><i class="far fa-clock"></i> 11 min</span>
-        <span class="meta-item"><i class="far fa-user"></i> Daniel Park</span>
-      </div>
-    </header>
-      <img src="/images/blog/best-ai-tools-for-product-managers-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-tools-for-product-managers-2026/hero.jpg'" alt="Best AI Tools for Product Managers in 2026 (Tested by PMs)" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
-
-    <section class="blog-content">
+<BlogPostLayout
+  title="Best AI Tools for Product Managers in 2026 (Tested by PMs)"
+  description="We surveyed 50 product managers on the AI tools they actually use daily in 2026. Here are the 8 that consistently save 5+ hours per week, ranked by impact."
+  keywords="product-management, productivity, writing, research"
+  eyebrow="product-management"
+  date="2026-06-23"
+  readTime="11 min"
+  author="Daniel Park"
+  tags={["product-management","productivity","writing","research"]}
+  slug="best-ai-tools-for-product-managers-2026"
+  category="product-management"
+  breadcrumb="Best AI Tools for Product Managers in 2026 (Tested by PMs)"
+>
+      <img src="/images/blog/best-ai-tools-for-product-managers-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-tools-for-product-managers-2026/hero.jpg'" alt="Best AI Tools for Product Managers in 2026 (Tested by PMs)" loading="eager" />
 <p>Product managers are among the highest-leverage users of AI tools. The PMs using AI well in 2026 are saving 5-10 hours per week, shipping faster, and making better decisions.</p>
       <Chart type="bar" title="Top Tools Compared" data={[
         {label: "ChatGPT", value: 9.3},
@@ -30,12 +26,12 @@ import Chart from "../../components/Chart.astro";
       ]} />
 
 <h2>How we picked the 8 tools</h2>
-      <img src="/images/blog/best-ai-tools-for-product-managers-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-tools-for-product-managers-2026/inline-1.jpg'" alt="How we picked the 8 tools" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" /><p>We surveyed 50 product managers across 30 companies, asking: which AI tools do you use daily, which save the most time, and which would you pay for out of pocket?</p><h2>Tool 1: ChatGPT Team (\/user/month)</h2>
-      <img src="/images/blog/best-ai-tools-for-product-managers-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-tools-for-product-managers-2026/inline-2.jpg'" alt="Tool 1: ChatGPT Team (\/user/month)" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" /><p>The workhorse. 90% of the PMs we surveyed use ChatGPT daily.</p><h2>Tool 2: Claude Pro (\/month)</h2>
-      <img src="/images/blog/best-ai-tools-for-product-managers-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-tools-for-product-managers-2026/inline-3.jpg'" alt="Tool 2: Claude Pro (\/month)" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" /><p>The reasoning engine. 70% of PMs use Claude weekly.</p><h2>Tool 3: Perplexity Pro (\/month)</h2><p>The research tool. 60% of PMs use Perplexity weekly.</p><h2>Tool 4: Notion AI (\/month)</h2><p>The workspace AI. 50% of PMs use Notion AI daily.</p><h2>Tool 5: Miro AI (\/month add-on)</h2><p>The whiteboard AI. 40% of PMs use Miro AI weekly.</p><h2>Tool 6: Loom AI (\/month)</h2><p>The async video tool. 30% of PMs use Loom AI daily.</p><h2>Tool 7: Dovetail (\/month)</h2><p>The research repository. 25% of PMs use Dovetail weekly.</p><h2>Tool 8: Productboard AI (\/month)</h2><p>The roadmap tool. 20% of PMs use Productboard AI weekly.</p><h2>The 5 workflows that work</h2><p>Workflow 1: PRD writing (60% faster). Workflow 2: Customer interview synthesis (75% faster). Workflow 3: Competitive analysis (50% faster). Workflow 4: Meeting summaries (90% faster). Workflow 5: Stakeholder updates (70% faster).</p><h2>Bottom line</h2><p>Start with ChatGPT + Claude + Notion AI (\/month total) and add the rest as needed.</p>
+      <img src="/images/blog/best-ai-tools-for-product-managers-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-tools-for-product-managers-2026/inline-1.jpg'" alt="How we picked the 8 tools" loading="lazy" /><p>We surveyed 50 product managers across 30 companies, asking: which AI tools do you use daily, which save the most time, and which would you pay for out of pocket?</p><h2>Tool 1: ChatGPT Team (\/user/month)</h2>
+      <img src="/images/blog/best-ai-tools-for-product-managers-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-tools-for-product-managers-2026/inline-2.jpg'" alt="Tool 1: ChatGPT Team (\/user/month)" loading="lazy" /><p>The workhorse. 90% of the PMs we surveyed use ChatGPT daily.</p><h2>Tool 2: Claude Pro (\/month)</h2>
+      <img src="/images/blog/best-ai-tools-for-product-managers-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/best-ai-tools-for-product-managers-2026/inline-3.jpg'" alt="Tool 2: Claude Pro (\/month)" loading="lazy" /><p>The reasoning engine. 70% of PMs use Claude weekly.</p><h2>Tool 3: Perplexity Pro (\/month)</h2><p>The research tool. 60% of PMs use Perplexity weekly.</p><h2>Tool 4: Notion AI (\/month)</h2><p>The workspace AI. 50% of PMs use Notion AI daily.</p><h2>Tool 5: Miro AI (\/month add-on)</h2><p>The whiteboard AI. 40% of PMs use Miro AI weekly.</p><h2>Tool 6: Loom AI (\/month)</h2><p>The async video tool. 30% of PMs use Loom AI daily.</p><h2>Tool 7: Dovetail (\/month)</h2><p>The research repository. 25% of PMs use Dovetail weekly.</p><h2>Tool 8: Productboard AI (\/month)</h2><p>The roadmap tool. 20% of PMs use Productboard AI weekly.</p><h2>The 5 workflows that work</h2><p>Workflow 1: PRD writing (60% faster). Workflow 2: Customer interview synthesis (75% faster). Workflow 3: Competitive analysis (50% faster). Workflow 4: Meeting summaries (90% faster). Workflow 5: Stakeholder updates (70% faster).</p><h2>Bottom line</h2><p>Start with ChatGPT + Claude + Notion AI (\/month total) and add the rest as needed.</p>
     </section>
 
-    <section style="margin-top: 40px;">
+    <section>
       <h3>Tags</h3>
       <div class="audience-tags">
         <span class="audience-tag">#product-management</span>
@@ -45,9 +41,7 @@ import Chart from "../../components/Chart.astro";
       </div>
     </section>
 
-    <section style="margin-top: 40px; text-align: center;">
-      <p style="color: var(--text-mute);">Want us to review a specific tool? <a href="/contact/">Suggest a topic</a>.</p>
-    </section>
-  </article>
-</BaseLayout>
+    <section>
+      <p>Want us to review a specific tool? <a href="/contact/">Suggest a topic</a>.</p>
 
+</BlogPostLayout>

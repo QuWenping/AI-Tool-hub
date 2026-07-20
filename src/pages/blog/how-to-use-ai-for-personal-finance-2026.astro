@@ -1,25 +1,21 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import Chart from "../../components/Chart.astro";
 ---
-<BaseLayout title="How to Use AI for Personal Finance in 2026 (Practical Guide)" description="A practical guide to using AI for personal finance in 2026. The 5 best tools, the 6 workflows (budgeting, investing, taxes, etc.), the 4 use cases, and the 3 things to avoid." keywords="AI for personal finance, AI budgeting, AI investing, AI tax, AI money management">
-  <BlogJsonLd slot="head" title="How to Use AI for Personal Finance in 2026 (Practical Guide)" description="A practical guide to using AI for personal finance in 2026. The 5 best tools, the 6 workflows (budgeting, investing, taxes, etc.), the 4 use cases, and the 3 things to avoid." slug="how-to-use-ai-for-personal-finance-2026" date="2026-06-19" author="Aisha Patel, Research Lead" category="Tutorial" keywords="AI for personal finance, AI budgeting, AI investing, AI tax, AI money management" tags={[]} />
-  <article class="legal-page blog-post">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>AI for Personal Finance</span></nav>
-    <header class="article-header">
-      <span class="eyebrow">Tutorial</span>
-      <h1>How to Use AI for Personal Finance in 2026 (Practical Guide)</h1>
-      <p class="lede">A practical guide to using AI for personal finance in 2026. The 5 best tools, the 6 workflows (budgeting, investing, taxes, debt, retirement, estate planning), the 4 use cases, and the 3 things to avoid.</p>
-      <div class="article-meta">
-        <span class="meta-item"><i class="far fa-calendar"></i> 2026-06-19</span>
-        <span class="meta-item"><i class="far fa-clock"></i> 13 min read</span>
-        <span class="meta-item"><i class="far fa-user"></i> Aisha Patel, Research Lead</span>
-      </div>
-    </header>
-      <img src="/images/blog/how-to-use-ai-for-personal-finance-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-personal-finance-2026/hero.jpg'" alt="How to Use AI for Personal Finance in 2026 (Practical Guide)" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
-
-    <section class="blog-content">
+<BlogPostLayout
+  title="How to Use AI for Personal Finance in 2026 (Practical Guide)"
+  description="A practical guide to using AI for personal finance in 2026. The 5 best tools, the 6 workflows (budgeting, investing, taxes, etc.), the 4 use cases, and the 3 things to avoid."
+  keywords="AI for personal finance, AI budgeting, AI investing, AI tax, AI money management"
+  eyebrow="Tutorial"
+  date="2026-06-19"
+  readTime="13 min read"
+  author="Aisha Patel, Research Lead"
+  tags={[]}
+  slug="how-to-use-ai-for-personal-finance-2026"
+  category="Tutorial"
+  breadcrumb="AI for Personal Finance"
+>
+      <img src="/images/blog/how-to-use-ai-for-personal-finance-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-personal-finance-2026/hero.jpg'" alt="How to Use AI for Personal Finance in 2026 (Practical Guide)" loading="eager" />
       <p>AI has changed personal finance. The people using AI well in 2026 are saving 2-3 hours per month on financial tasks, making better investment decisions, and paying less in taxes. The people using AI poorly are getting bad advice and making costly mistakes. This guide is for individuals who want to be in the first group.</p>
 
       <p><strong>Important disclaimer:</strong> This guide is for educational purposes only. It is not financial advice. For personal financial decisions, consult a qualified financial advisor, tax professional, or estate planning attorney.</p>
@@ -33,7 +29,7 @@ import Chart from "../../components/Chart.astro";
       ]} />
 
 <h2>The 5 best AI personal finance tools in 2026</h2>
-      <img src="/images/blog/how-to-use-ai-for-personal-finance-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-personal-finance-2026/inline-1.jpg'" alt="The 5 best AI personal finance tools in 2026" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-ai-for-personal-finance-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-personal-finance-2026/inline-1.jpg'" alt="The 5 best AI personal finance tools in 2026" loading="lazy" />
 
       <h3>Tool 1: ChatGPT Plus ($20/month)</h3>
       <p>The general-purpose option. Use for: explaining financial concepts, drafting emails to your financial advisor, analyzing your budget. The right pick if: you want a flexible, conversational tool.</p>
@@ -51,7 +47,7 @@ import Chart from "../../components/Chart.astro";
       <p>The tax preparation tool. AI-assisted tax prep, access to human CPAs and tax attorneys. The right pick if: you file US taxes, you have complex returns, you want human verification.</p>
 
       <h2>The 6 workflows that actually work</h2>
-      <img src="/images/blog/how-to-use-ai-for-personal-finance-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-personal-finance-2026/inline-2.jpg'" alt="The 6 workflows that actually work" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-ai-for-personal-finance-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-personal-finance-2026/inline-2.jpg'" alt="The 6 workflows that actually work" loading="lazy" />
 
       <h3>Workflow 1: Budgeting and expense tracking (passive + 30 min/month review)</h3>
       <p><strong>Setup:</strong> Connect Monarch Money or Cleo to your bank accounts and credit cards.</p>
@@ -115,7 +111,7 @@ import Chart from "../../components/Chart.astro";
       <p><strong>Time savings:</strong> 15-30 min per email. Better questions, more professional communication.</p>
 
       <h2>The 4 use cases (with example scenarios)</h2>
-      <img src="/images/blog/how-to-use-ai-for-personal-finance-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-personal-finance-2026/inline-3.jpg'" alt="The 4 use cases (with example scenarios)" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-ai-for-personal-finance-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-personal-finance-2026/inline-3.jpg'" alt="The 4 use cases (with example scenarios)" loading="lazy" />
 
       <h3>Use case 1: Early-career professional (25-35, building wealth)</h3>
       <p><strong>Best tools:</strong> Cleo, Wealthfront, ChatGPT.</p>
@@ -152,11 +148,10 @@ import Chart from "../../components/Chart.astro";
       <p>AI has changed personal finance. The people who use AI well are saving 2-3 hours per month, making better decisions, and paying less in taxes. The people who do not use AI are falling behind. The 5 tools, 6 workflows, and 3 things to avoid in this guide are the playbook for individuals who want to be in the first group.</p>
 
       <p>The future of personal finance is not "AI replaces financial advisors." It is "AI is a research assistant and scenario modeler, humans make the final decisions." The people who get this right will have better outcomes with less effort. The playbook above is how to get it right - always with the caveat that major financial decisions should involve qualified human professionals.</p>
-    </section>
 
-    <footer style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border);">
-      <p style="color: var(--text-mute); font-size: 14px;">Published by Aisha Patel, Research Lead. Last updated: 2026-06-19.</p>
+
+    <footer class="article-footer" class="article-footer">
+      <p>Published by Aisha Patel, Research Lead. Last updated: 2026-06-19.</p>
       <p><a href="/glossary/">AI glossary</a> &middot; <a href="/case-studies/">Case studies</a> &middot; <a href="/methodology/">Methodology</a></p>
     </footer>
-  </article>
-</BaseLayout>
+</BlogPostLayout>

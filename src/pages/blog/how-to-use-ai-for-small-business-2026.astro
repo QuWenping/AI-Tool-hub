@@ -1,25 +1,21 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogJsonLd from "../../components/BlogJsonLd.astro";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
 import Chart from "../../components/Chart.astro";
 ---
-<BaseLayout title="How to Use AI for Small Business in 2026 (Practical Guide)" description="A practical guide to using AI for small business in 2026. The 8 best tools, the 10 workflows, the 5 use cases (marketing, sales, support, ops, finance), and the 5 things to avoid." keywords="AI for small business, AI for SMB, small business AI tools, AI automation, AI for entrepreneurs">
-  <BlogJsonLd slot="head" title="How to Use AI for Small Business in 2026 (Practical Guide)" description="A practical guide to using AI for small business in 2026. The 8 best tools, the 10 workflows, the 5 use cases (marketing, sales, support, ops, finance), and the 5 things to avoid." slug="how-to-use-ai-for-small-business-2026" date="2026-06-21" author="Daniel Park, Marketing Lead" category="Tutorial" keywords="AI for small business, AI for SMB, small business AI tools, AI automation, AI for entrepreneurs" tags={[]} />
-  <article class="legal-page blog-post">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/blog/">Blog</a> &rsaquo; <span>AI for Small Business</span></nav>
-    <header class="article-header">
-      <span class="eyebrow">Tutorial</span>
-      <h1>How to Use AI for Small Business in 2026 (Practical Guide)</h1>
-      <p class="lede">A practical guide to using AI for small business in 2026. The 8 best tools, the 10 workflows, the 5 use cases (marketing, sales, support, operations, finance), and the 5 things to avoid. Built for the 1-10 person team.</p>
-      <div class="article-meta">
-        <span class="meta-item"><i class="far fa-calendar"></i> 2026-06-21</span>
-        <span class="meta-item"><i class="far fa-clock"></i> 15 min read</span>
-        <span class="meta-item"><i class="far fa-user"></i> Daniel Park, Marketing Lead</span>
-      </div>
-    </header>
-      <img src="/images/blog/how-to-use-ai-for-small-business-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-small-business-2026/hero.jpg'" alt="How to Use AI for Small Business in 2026 (Practical Guide)" style="width:100%;border-radius:12px;margin:24px 0;" loading="eager" />
-
-    <section class="blog-content">
+<BlogPostLayout
+  title="How to Use AI for Small Business in 2026 (Practical Guide)"
+  description="A practical guide to using AI for small business in 2026. The 8 best tools, the 10 workflows, the 5 use cases (marketing, sales, support, ops, finance), and the 5 things to avoid."
+  keywords="AI for small business, AI for SMB, small business AI tools, AI automation, AI for entrepreneurs"
+  eyebrow="Tutorial"
+  date="2026-06-21"
+  readTime="15 min read"
+  author="Daniel Park, Marketing Lead"
+  tags={[]}
+  slug="how-to-use-ai-for-small-business-2026"
+  category="Tutorial"
+  breadcrumb="AI for Small Business"
+>
+      <img src="/images/blog/how-to-use-ai-for-small-business-2026/hero.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-small-business-2026/hero.jpg'" alt="How to Use AI for Small Business in 2026 (Practical Guide)" loading="eager" />
       <p>AI has leveled the playing field for small business. The small businesses using AI well in 2026 are competing with companies 10x their size. The small businesses not using AI are falling behind. This guide is for the 1-10 person team that wants to punch above its weight.</p>
 
       <p>We have worked with 30+ small businesses on AI adoption in 2026. This is the consolidated guide - the 8 best tools, 10 workflows, 5 use cases, and 5 things to avoid.</p>
@@ -33,7 +29,7 @@ import Chart from "../../components/Chart.astro";
       ]} />
 
 <h2>The 8 best AI tools for small business in 2026</h2>
-      <img src="/images/blog/how-to-use-ai-for-small-business-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-small-business-2026/inline-1.jpg'" alt="The 8 best AI tools for small business in 2026" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-ai-for-small-business-2026/inline-1.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-small-business-2026/inline-1.jpg'" alt="The 8 best AI tools for small business in 2026" loading="lazy" />
       <p>These are the 8 tools that cover 90% of small business use cases. The list is intentionally short - the goal is to use a few tools well, not many tools poorly.</p>
 
       <p><strong>Tool 1: ChatGPT Team ($25/user/month).</strong> The general-purpose AI for the whole team. Use for: drafting, brainstorming, customer research, internal docs. The right pick if: you have 2+ people on the team.</p>
@@ -55,7 +51,7 @@ import Chart from "../../components/Chart.astro";
       <p><strong>Total cost: ~$120-200/month for the full stack.</strong> The cost is significant for a small business, but the productivity gain is 2-3x. The ROI is positive for any team producing 20+ pieces of content or handling 100+ customer interactions per month.</p>
 
       <h2>The 10 workflows that actually work</h2>
-      <img src="/images/blog/how-to-use-ai-for-small-business-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-small-business-2026/inline-2.jpg'" alt="The 10 workflows that actually work" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-ai-for-small-business-2026/inline-2.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-small-business-2026/inline-2.jpg'" alt="The 10 workflows that actually work" loading="lazy" />
 
       <h3>Marketing workflows</h3>
 
@@ -98,7 +94,7 @@ import Chart from "../../components/Chart.astro";
       <p>Use ChatGPT Advanced Data Analysis to analyze your books, flag unusual expenses, generate reports. Result: 1 hour per month vs 4-6 hours.</p>
 
       <h2>The 5 use cases (with example scenarios)</h2>
-      <img src="/images/blog/how-to-use-ai-for-small-business-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-small-business-2026/inline-3.jpg'" alt="The 5 use cases (with example scenarios)" style="width:100%;border-radius:12px;margin:20px 0;" loading="lazy" />
+      <img src="/images/blog/how-to-use-ai-for-small-business-2026/inline-3.webp" onerror="this.onerror=null;this.src='/images/blog/how-to-use-ai-for-small-business-2026/inline-3.jpg'" alt="The 5 use cases (with example scenarios)" loading="lazy" />
 
       <h3>Use case 1: Local services business (plumber, electrician, salon)</h3>
       <p><strong>Best tools:</strong> ChatGPT Team, Buffer, Midjourney, Zapier.</p>
@@ -151,11 +147,10 @@ import Chart from "../../components/Chart.astro";
       <p>AI has leveled the playing field for small business. The small businesses that use AI well are competing with companies 10x their size, with 2-3x productivity gains and 30-50% lower costs. The small businesses that do not use AI are falling behind. The 8 tools, 10 workflows, and 5 things to avoid in this guide are the playbook for small business owners who want to punch above their weight.</p>
 
       <p>The future of small business is not "AI replaces employees." It is "AI amplifies small teams, makes them compete with big teams." The small businesses that get this right will thrive. The ones that do not will struggle. The playbook above is how to get it right.</p>
-    </section>
 
-    <footer style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border);">
-      <p style="color: var(--text-mute); font-size: 14px;">Published by Daniel Park, Marketing Lead. Last updated: 2026-06-21.</p>
+
+    <footer class="article-footer" class="article-footer">
+      <p>Published by Daniel Park, Marketing Lead. Last updated: 2026-06-21.</p>
       <p><a href="/best-ai-tools-for-small-business-2026/">Best AI tools for small business</a> &middot; <a href="/case-studies/">Case studies</a> &middot; <a href="/methodology/">Methodology</a></p>
     </footer>
-  </article>
-</BaseLayout>
+</BlogPostLayout>
