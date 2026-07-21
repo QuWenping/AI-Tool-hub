@@ -22,6 +22,8 @@ related:
 
 ## 🚀 最近里程碑
 
+- **Sprint 7 step 5（P1-12）**：My AI Library Phase 1（客户端 localStorage 收藏，SaveButton + /my-library 页 + 导航）；构建 2614 页；已推送
+
 - **Sprint 7 step 4（P1-6）**：AI Tool Score™ 5 维度评分 + ScoreCard 组件 + 27 reviewed 工具 scoreBreakdown；⚠️ 5 个 Claude 新博文语法错误临时禁用；构建 2613 页；已推送
 
 - **Sprint 7 step 3（P1-3）**：matchups 103→267（top 8/category 自动生成），+328 vs 页，构建 2522；已推送

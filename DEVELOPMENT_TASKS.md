@@ -109,7 +109,7 @@ status: active
 ## 停留时间与用户资产
 
 - [ ] P1-11 视频 / GIF 内容（30/60/90 秒 + 关键操作 GIF）
-- [ ] P1-12 用户账号系统 + 收藏 / My AI Library
+- [x] P1-12 用户账号系统 + 收藏 / My AI Library（Phase 1：localStorage 客户端收藏，无后端）@Codex 2026-07-21 — SaveButton + /my-library 页 + 导航链接；Phase 2 待 Supabase
 - [ ] P1-13 页面 inline style / hard-coded 颜色全部消除
 
 ---
@@ -172,6 +172,8 @@ status: active
 ---
 
 # ✅ 已完成里程碑（记录 & 归档）
+
+- [x] **Sprint 7（2026-07-21）P1-12：My AI Library（Phase 1 客户端收藏）** @Codex 2026-07-21 — SaveButton 组件（tool 页 Save/Saved 切换 + localStorage）+ /my-library 页（渲染已收藏工具卡片 + Remove + 空状态 CTA）+ 导航链接；Playwright 端到端验证（Save→Library→Remove 全流程 0 error）；已推送
 
 - [x] **Sprint 7（2026-07-21）P1-6：AI Tool Score™ 评分算法** @Codex 2026-07-21 — 5 维度评分（User 30% + Capability 25% + Price 20% + Growth 15% + Trust 10%）+ ScoreCard 组件（可视化分数条）+ 27 个 reviewed 工具 scoreBreakdown + tool/[slug] 集成；⚠️ 5 个 Claude 新博文语法错误已临时禁用（_temp_disabled）；Playwright 验证通过；已推送
 
