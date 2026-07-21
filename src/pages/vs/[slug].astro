@@ -36,6 +36,10 @@ const aFirstCon = aCons[0] || "some limitations";
 const isOpenSource_a = aPricing.toLowerCase().includes("open source") || aPricing.toLowerCase().includes("free");
 const isOpenSource_b = bPricing.toLowerCase().includes("open source") || bPricing.toLowerCase().includes("free");
 const bFirstPro = bPros[0] || "versatile";
+const aFeatures = (a && a.features && a.features.en) || [];
+const bFeatures = (b && b.features && b.features.en) || [];
+const aLongDesc = (a && a.long_desc && a.long_desc.en) || (a && a.short_desc && a.short_desc.en) || "";
+const bLongDesc = (b && b.long_desc && b.long_desc.en) || (b && b.short_desc && b.short_desc.en) || "";
 const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
 const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/vs/" + m.slug + "/";
@@ -79,7 +83,11 @@ const faqSchema = {
   }))
 };
 const tocSections = [
+  { id: "overview", label: "Overview" },
   { id: "at-a-glance", label: "At a glance" },
+  { id: "features", label: "Features" },
+  { id: "pricing", label: "Pricing" },
+  { id: "best-for", label: "Best for" },
   { id: "pros-cons", label: "Pros & cons" },
   { id: "verdict", label: "Verdict" },
   { id: "related", label: "Related" },
@@ -153,7 +161,60 @@ const tocSections = [
       </table>
     </section>
 
-    <div class="grid-2" id="pros-cons">
+
+    <section class="detail-section" id="overview">
+      <h2>Overview</h2>
+      <p><strong>{aName}</strong> — {aLongDesc}</p>
+      <p><strong>{bName}</strong> — {bLongDesc}</p>
+    </section>
+
+    {aFeatures.length > 0 && bFeatures.length > 0 && (
+      <section class="detail-section" id="features">
+        <h2>Feature comparison</h2>
+        <div class="card-grid">
+          <div class="info-card">
+            <h3>{aName}</h3>
+            <ul class="field-list">{aFeatures.map(f => <li>{f}</li>)}</ul>
+          </div>
+          <div class="info-card">
+            <h3>{bName}</h3>
+            <ul class="field-list">{bFeatures.map(f => <li>{f}</li>)}</ul>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <section class="detail-section" id="pricing">
+      <h2>Pricing comparison</h2>
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>{aName}</h3>
+          <p>{aPricing}</p>
+          {aUrl && <a class="tool-pill" href={aUrl} target="_blank" rel="nofollow noopener">Visit pricing →</a>}
+        </div>
+        <div class="info-card">
+          <h3>{bName}</h3>
+          <p>{bPricing}</p>
+          {bUrl && <a class="tool-pill" href={bUrl} target="_blank" rel="nofollow noopener">Visit pricing →</a>}
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-section" id="best-for">
+      <h2>Best for</h2>
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>{aName} is best for</h3>
+          <ul class="field-list">{aScenes.map(s => <li>{s}</li>)}</ul>
+        </div>
+        <div class="info-card">
+          <h3>{bName} is best for</h3>
+          <ul class="field-list">{bScenes.map(s => <li>{s}</li>)}</ul>
+        </div>
+      </div>
+    </section>
+
+        <div class="grid-2" id="pros-cons">
       <section class="detail-section">
         <h2>{aName}: what we liked</h2>
         <ul class="pros-list">{aPros.map(function(p){return (<li>{p}</li>)})}</ul>
