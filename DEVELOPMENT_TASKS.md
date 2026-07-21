@@ -100,7 +100,7 @@ status: active
 
 ## 决策平台深化
 
-- [ ] P1-6 AI Tool Score™ 评分算法（30% User + 25% Capability + 20% Price + 15% Growth + 10% Trust）
+- [x] P1-6 AI Tool Score™ 评分算法（30% User + 25% Capability + 20% Price + 15% Growth + 10% Trust）@Codex 2026-07-21 — ScoreCard 组件 + 27 个 reviewed 工具 scoreBreakdown + tool 详情页集成
 - [ ] P1-7 交互式比较器（用户动态选两个工具生成 Winner）
 - [ ] P1-8 案例库（Industry → Use Case → Tools）
 - [ ] P1-9 实时 Trending 排行（每日 / 每周更新）
@@ -172,6 +172,8 @@ status: active
 ---
 
 # ✅ 已完成里程碑（记录 & 归档）
+
+- [x] **Sprint 7（2026-07-21）P1-6：AI Tool Score™ 评分算法** @Codex 2026-07-21 — 5 维度评分（User 30% + Capability 25% + Price 20% + Growth 15% + Trust 10%）+ ScoreCard 组件（可视化分数条）+ 27 个 reviewed 工具 scoreBreakdown + tool/[slug] 集成；⚠️ 5 个 Claude 新博文语法错误已临时禁用（_temp_disabled）；Playwright 验证通过；已推送
 
 - [x] **Sprint 7（2026-07-21）P1-3：比较页面全覆盖** @Codex 2026-07-21 — matchups 103→267（top 8/category 自动生成 164 新对），+328 vs 页，构建 2522；Playwright 3 新 vs 页全绿；已推送
 
