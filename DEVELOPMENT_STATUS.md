@@ -22,6 +22,8 @@ related:
 
 ## 🚀 最近里程碑
 
+- **Sprint 6 step 10（round 3 step 7）**：55 个 zh 镜像文件全部 0 inline style（含 zh/blog 44 + zh 结构页 11）；Playwright 28 全绿；构建 2162；已推送
+
 - **Sprint 6 step 9（round 3 step 6）**：3 表单页（submit-tool/submit-prompt/newsletter）去 inline style，保留 JS 成功提示交互；Playwright 6 全绿；构建 2162；已推送
 
 - **Sprint 6 step 8（round 3 step 5）**：team(20→0)+contact(15→0) 去 inline style；新增 form 类 + 增强 cta-primary；Playwright 6 全绿；已推送

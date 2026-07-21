@@ -52,7 +52,7 @@ status: active
 
 ## Design System 基础
 
-- [ ] P0-3 组件化重构现存页面（消除 100+ 页面 inline style / hard-coded 颜色） ⚙️ 博客块完成（46 篇统一）；非博客 cosmetic 块完成（29 文件/140 个，round 3 step 1）；动态内容模板块完成（prompts/templates/workflows [slug] 3 模板→683 页，round 3 step 2，新增 .code-card/.copy-btn/.tag-row/.info-card/.step-list 等工具类）；全站邮箱占位替换为真实邮箱。剩余：zh 镜像（zh/index、zh/team、zh/best/ai-agents、zh/solutions/index、zh/tool/[slug]、zh/workflows/[slug]、zh/workflows/index）、11 个交互式 tools/*.astro、组件级 inline style（Feedback/Chart） @Codex 2026-07-20
+- [ ] P0-3 组件化重构现存页面（消除 100+ 页面 inline style / hard-coded 颜色） ⚙️ 博客块完成（46 篇统一）；非博客 cosmetic 块完成（29 文件/140 个，round 3 step 1）；动态内容模板块完成（prompts/templates/workflows [slug] 3 模板→683 页，round 3 step 2，新增 .code-card/.copy-btn/.tag-row/.info-card/.step-list 等工具类）；全站邮箱占位替换为真实邮箱。剩余：11 个交互式 tools/*.astro、组件级 inline style（Feedback/Chart） @Codex 2026-07-20
 - [ ] P0-7 Lighthouse 全站达标（Performance ≥95、SEO 100）
 - [x] P0-8 图片规范（WebP/AVIF + Lightbox + Lazy Load） @Codex 2026-07-20
 - [x] P0-9 Grid System 统一（Article 760 / TOC 280 / Sidebar 320） @Codex 2026-07-20
@@ -173,6 +173,11 @@ status: active
 
 # ✅ 已完成里程碑（记录 & 归档）
 
+- [x] **Sprint 6（2026-07-21）P0-3 round 3 step 7：全 zh 镜像去 inline style** @Codex 2026-07-21
+  - 55 个 zh 文件全部 inline style → class（zh blog 44 + zh 结构页 8 + zh/solutions/index + zh/index）
+  - 动态难度徽章 → .tag-pill.diff-* class；移除无用 diffColors；新增 .stats-bar/.stat-number/.stat-label CSS
+  - .list-card 加 overflow:hidden（修复 zh/tool 截图容器溢出）
+  - Playwright 28 检查全绿（9 zh 路由 × 2 视角 + 5 复验）；构建 2162 页；门禁全绿；已推送
 - [x] **Sprint 6（2026-07-21）P0-3 round 3 step 6：表单页 submit-tool/submit-prompt/newsletter 去 inline style** @Codex 2026-07-21
   - 3 个表单页全部 inline style → class，且保留 JS 交互（成功提示 `display:none` 由 class 控制，JS `style.display='block'` 覆盖显示）
   - submit-tool(40→0)：绿色条件框→.info-card green、表单→.form-grid、labels/inputs→.form-label/.form-input、按钮→.cta-primary、#submit-msg→.form-success、FAQ→.info-card/.card-grid
