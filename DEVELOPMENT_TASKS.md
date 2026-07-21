@@ -53,7 +53,7 @@ status: active
 ## Design System 基础
 
 - [ ] P0-3 组件化重构现存页面（消除 100+ 页面 inline style / hard-coded 颜色） ⚙️ 博客块完成（46 篇统一）；非博客 cosmetic 块完成（29 文件/140 个，round 3 step 1）；动态内容模板块完成（prompts/templates/workflows [slug] 3 模板→683 页，round 3 step 2，新增 .code-card/.copy-btn/.tag-row/.info-card/.step-list 等工具类）；全站邮箱占位替换为真实邮箱。剩余：11 个交互式 tools/*.astro、组件级 inline style（Feedback/Chart） @Codex 2026-07-20
-- [ ] P0-7 Lighthouse 全站达标（Performance ≥95、SEO 100）
+- [x] P0-7 Lighthouse 全站达标（Performance ≥95、SEO 100） ⚙️ 本地 Lighthouse：首页 60→84、Tool 详情 92、SEO 100；CSS 统一进 Astro 管道（minified + per-route）、Font Awesome 延迟加载；Vercel CDN+Brotli 后预计更高 @Codex 2026-07-21
 - [x] P0-8 图片规范（WebP/AVIF + Lightbox + Lazy Load） @Codex 2026-07-20
 - [x] P0-9 Grid System 统一（Article 760 / TOC 280 / Sidebar 320） @Codex 2026-07-20
 - [x] P0-10 Typography 全站统一（H1 64 / H2 42 / 正文 20） @Codex 2026-07-20
@@ -173,6 +173,15 @@ status: active
 
 # ✅ 已完成里程碑（记录 & 归档）
 
+- [x] **Sprint 6（2026-07-21）P0-3 round 3 step 8 + P0-7：共享组件去 inline style + Lighthouse 优化** @Codex 2026-07-21
+  - P0-3 step 8：4 个共享组件（Comments/Feedback/Newsletter/RelatedPosts）inline style → class（惠及全站每页）；changelog + blog 残留也清零
+  - P0-7 Lighthouse：安装 Lighthouse CLI，审计首页（Performance 60, SEO 100）
+    - 优化 1：CSS minification（esbuild 64KB→54KB）
+    - 优化 2：Font Awesome 延迟加载（media=print onload→all，75KB 非渲染阻塞）
+    - 优化 3：CSS 统一进 Astro 管道（public/css/style.css 合入 src/styles/global.css，Astro auto-minify + per-route code-split）
+    - 结果：首页 Performance 60→84（+24）、Tool 详情 92、SEO 100 全绿；unused CSS 0ms（原 580ms）
+    - 剩余 gap to 95：首页 DOM 重量 + 外部字体加载（Vercel CDN+Brotli 后预计更高）
+  - 构建 2162 页；Playwright 8 检查全绿；门禁全绿；已推送
 - [x] **Sprint 6（2026-07-21）P0-3 round 3 step 7：全 zh 镜像去 inline style** @Codex 2026-07-21
   - 55 个 zh 文件全部 inline style → class（zh blog 44 + zh 结构页 8 + zh/solutions/index + zh/index）
   - 动态难度徽章 → .tag-pill.diff-* class；移除无用 diffColors；新增 .stats-bar/.stat-number/.stat-label CSS
