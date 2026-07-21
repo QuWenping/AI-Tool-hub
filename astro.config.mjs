@@ -23,7 +23,7 @@ export default defineConfig({
         !page.includes('/robots.txt'),
       changefreq: 'weekly',
       priority: 0.7,
-      lastmod: new Date('2026-07-07'),
+      lastmod: new Date(),
     }),
   ],
 });
