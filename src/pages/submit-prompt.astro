@@ -4,18 +4,18 @@ const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/submit-prompt/";
 ---
 <BaseLayout title="Submit a Prompt | AI Tool Hub Prompt Library" description="Share your AI prompts with the community. Submit a prompt to be featured in our Prompt Library. Free, attributed to you." keywords="submit prompt, AI prompt submission, prompt library, share prompt, prompt community">
-  <div class="article" style="max-width:680px;margin:0 auto;padding:48px 0;">
+  <div class="article">
     <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/prompts/">Prompt Library</a> &rsaquo; <span>Submit</span></nav>
     <header class="article-header">
       <span class="eyebrow">Contribute</span>
       <h1>Submit a Prompt</h1>
     </header>
     <section class="article-body">
-      <p style="font-size:16px;color:var(--text-soft);line-height:1.7;">Share your best AI prompts with the community. Approved prompts will be added to our <a href="/prompts/" style="color:var(--accent-color);">Prompt Library</a> with attribution to you. <strong>Free, no account needed.</strong></p>
+      <p>Share your best AI prompts with the community. Approved prompts will be added to our <a href="/prompts/">Prompt Library</a> with attribution to you. <strong>Free, no account needed.</strong></p>
 
-      <div style="background:rgba(59,130,246,0.05);border:1px solid rgba(59,130,246,0.2);border-radius:10px;padding:16px;margin:20px 0;">
-        <h3 style="font-size:14px;font-weight:600;margin-bottom:6px;">What makes a good prompt?</h3>
-        <ul style="margin:0;padding-left:18px;font-size:13px;color:var(--text-soft);line-height:1.7;">
+      <div class="info-card blue">
+        <h3>What makes a good prompt?</h3>
+        <ul>
           <li>Uses [PLACEHOLDER] markers for customizable parts</li>
           <li>Clear instructions that work with the specified tool</li>
           <li>Produces consistent, high-quality results</li>
@@ -23,18 +23,18 @@ const pageUrl = siteUrl + "/submit-prompt/";
         </ul>
       </div>
 
-      <form id="prompt-form" style="display:grid;gap:16px;margin-top:24px;">
+      <form id="prompt-form" class="form-grid">
         <div>
-          <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Prompt Title *</label>
-          <input type="text" id="p-title" required placeholder="e.g. ChatGPT Code Review Prompt" style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;" />
+          <label class="form-label">Prompt Title *</label>
+          <input type="text" id="p-title" required placeholder="e.g. ChatGPT Code Review Prompt" class="form-input" />
         </div>
         <div>
-          <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Target Tool *</label>
-          <input type="text" id="p-tool" required placeholder="e.g. ChatGPT, Claude, Midjourney..." style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;" />
+          <label class="form-label">Target Tool *</label>
+          <input type="text" id="p-tool" required placeholder="e.g. ChatGPT, Claude, Midjourney..." class="form-input" />
         </div>
         <div>
-          <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Category *</label>
-          <select id="p-category" required style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;">
+          <label class="form-label">Category *</label>
+          <select id="p-category" required class="form-input">
             <option value="">Select category...</option>
             <option>Coding</option>
             <option>Writing</option>
@@ -50,29 +50,29 @@ const pageUrl = siteUrl + "/submit-prompt/";
           </select>
         </div>
         <div>
-          <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">The Prompt *</label>
-          <textarea id="p-prompt" required rows="6" placeholder="Paste your prompt here. Use [PLACEHOLDER] for customizable parts." style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;resize:vertical;font-family:monospace;"></textarea>
+          <label class="form-label">The Prompt *</label>
+          <textarea id="p-prompt" required rows="6" placeholder="Paste your prompt here. Use [PLACEHOLDER] for customizable parts." class="form-input mono"></textarea>
         </div>
         <div>
-          <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Tags (comma-separated)</label>
-          <input type="text" id="p-tags" placeholder="e.g. code, review, debug" style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;" />
+          <label class="form-label">Tags (comma-separated)</label>
+          <input type="text" id="p-tags" placeholder="e.g. code, review, debug" class="form-input" />
         </div>
         <div>
-          <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Your Name (for attribution) *</label>
-          <input type="text" id="p-author" required placeholder="Your name or username" style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;" />
+          <label class="form-label">Your Name (for attribution) *</label>
+          <input type="text" id="p-author" required placeholder="Your name or username" class="form-input" />
         </div>
         <div>
-          <label style="display:block;font-size:14px;font-weight:600;margin-bottom:6px;">Your Email *</label>
-          <input type="email" id="p-email" required placeholder="your@email.com" style="width:100%;padding:12px 16px;border:1px solid var(--border-color);border-radius:8px;font-size:14px;background:var(--bg-color);color:var(--text-color);box-sizing:border-box;" />
+          <label class="form-label">Your Email *</label>
+          <input type="email" id="p-email" required placeholder="your@email.com" class="form-input" />
         </div>
-        <button type="submit" style="padding:14px 32px;background:var(--accent-color);color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:600;cursor:pointer;justify-self:start;">Submit Prompt</button>
+        <button type="submit" class="cta-primary">Submit Prompt</button>
       </form>
-      <div id="prompt-msg" style="display:none;margin-top:16px;padding:16px;background:rgba(34,197,94,0.05);border:1px solid rgba(34,197,94,0.2);border-radius:10px;">
-        <p style="font-size:14px;color:#22c55e;margin:0;font-weight:600;">Thank you! Your prompt has been submitted.</p>
-        <p style="font-size:13px;color:var(--text-mute);margin:8px 0 0 0;">We will review it within 2-3 business days and add it to the Prompt Library with attribution to you.</p>
+      <div id="prompt-msg" class="form-success">
+        <p>Thank you! Your prompt has been submitted.</p>
+        <p>We will review it within 2-3 business days and add it to the Prompt Library with attribution to you.</p>
       </div>
 
-      <p style="text-align:center;margin-top:32px;"><a href="/submit-tool/" style="color:var(--accent-color);font-weight:600;">Submit a Tool</a> &nbsp;|&nbsp; <a href="/prompts/" style="color:var(--accent-color);font-weight:600;">Browse Prompts</a></p>
+      <p class="back-link"><a href="/submit-tool/">Submit a Tool</a> &nbsp;|&nbsp; <a href="/prompts/">Browse Prompts</a></p>
     </section>
   </div>
 </BaseLayout>
