@@ -1,0 +1,44 @@
+---
+/* SaveButton.astro — "Save to My Library" toggle (P1-12)
+   Client-side only (localStorage). No backend needed.
+   Props: toolId, toolName */
+const { toolId, toolName = "this tool" } = Astro.props;
+---
+<button class="save-btn" data-tool-id={toolId} data-tool-name={toolName} aria-label={`Save ${toolName} to My Library`}>
+  <i class="far fa-bookmark" aria-hidden="true"></i>
+  <span class="save-label">Save</span>
+</button>
+<script is:inline>
+(function() {
+  var KEY = "ai-tool-hub-library";
+  function getSaved() { try { return JSON.parse(localStorage.getItem(KEY) || "[]"); } catch(e) { return []; } }
+  function setSaved(arr) { localStorage.setItem(KEY, JSON.stringify(arr)); }
+  document.querySelectorAll(".save-btn").forEach(function(btn) {
+    var id = btn.getAttribute("data-tool-id");
+    var saved = getSaved();
+    if (saved.indexOf(id) !== -1) {
+      btn.classList.add("saved");
+      btn.querySelector(".save-label").textContent = "Saved";
+      btn.querySelector("i").className = "fas fa-bookmark";
+    }
+    btn.addEventListener("click", function() {
+      var saved = getSaved();
+      var idx = saved.indexOf(id);
+      if (idx === -1) {
+        saved.push(id);
+        btn.classList.add("saved");
+        btn.querySelector(".save-label").textContent = "Saved";
+        btn.querySelector("i").className = "fas fa-bookmark";
+      } else {
+        saved.splice(idx, 1);
+        btn.classList.remove("saved");
+        btn.querySelector(".save-label").textContent = "Save";
+        btn.querySelector("i").className = "far fa-bookmark";
+      }
+      setSaved(saved);
+      var evt = new CustomEvent("library-updated", { detail: { count: saved.length } });
+      document.dispatchEvent(evt);
+    });
+  });
+})();
+</script>

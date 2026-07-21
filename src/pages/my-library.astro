@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import toolsData from "../data/tools.json";
+const compactTools = Object.entries(toolsData)
+  .filter(([id, t]) => id !== "codewords" && t && t.name && !t.hidden)
+  .map(([id, t]) => ({
+    id,
+    name: t.name?.en || id,
+    desc: t.short_desc?.en || "",
+    cat: t.cat || "ai",
+    icon: t.icon || "fa-robot",
+    url: t.url || "",
+    pricing: t.pricing?.en || "Various"
+  }));
+const categoryLabels = { text: "Writing", image: "Image", code: "Coding", video: "Video", audio: "Audio", productivity: "Productivity" };
+---
+<BaseLayout title="My AI Library — Saved Tools" description="Your saved AI tools. Bookmark tools you want to try and revisit them here." keywords="my AI library, saved AI tools, bookmark AI tools">
+  <div class="page-container">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <span>My AI Library</span></nav>
+    <h1 class="page-title">My AI Library</h1>
+    <p class="page-lede" id="library-desc">Tools you bookmark will appear here. Your library is stored in your browser — no account needed.</p>
+
+    <div id="library-count" class="library-count" style="display:none;">
+      <span id="library-count-text"></span>
+      <a href="/" class="tool-pill">Browse more tools →</a>
+    </div>
+
+    <div id="library-grid" class="card-grid"></div>
+
+    <div id="library-empty" class="library-empty">
+      <i class="far fa-bookmark" aria-hidden="true"></i>
+      <h2>No saved tools yet</h2>
+      <p>Click the "Save" button on any tool page to add it to your library.</p>
+      <a href="/" class="cta-primary">Browse AI Tools</a>
+    </div>
+  </div>
+
+  <script type="application/json" id="tools-data" set:html={JSON.stringify(compactTools)}></script>
+  <script is:inline>
+  (function() {
+    var KEY = "ai-tool-hub-library";
+    var catLabels = { text: "Writing", image: "Image", code: "Coding", video: "Video", audio: "Audio", productivity: "Productivity" };
+    var tools = JSON.parse(document.getElementById("tools-data").textContent);
+    var toolMap = {};
+    tools.forEach(function(t) { toolMap[t.id] = t; });
+
+    function getSaved() { try { return JSON.parse(localStorage.getItem(KEY) || "[]"); } catch(e) { return []; } }
+
+    function render() {
+      var saved = getSaved();
+      var grid = document.getElementById("library-grid");
+      var empty = document.getElementById("library-empty");
+      var countDiv = document.getElementById("library-count");
+      var countText = document.getElementById("library-count-text");
+
+      if (saved.length === 0) {
+        grid.innerHTML = "";
+        empty.style.display = "block";
+        countDiv.style.display = "none";
+        return;
+      }
+
+      empty.style.display = "none";
+      countDiv.style.display = "flex";
+      countText.textContent = saved.length + " tool" + (saved.length > 1 ? "s" : "") + " saved";
+
+      var html = saved.map(function(id) {
+        var t = toolMap[id];
+        if (!t) return "";
+        var cat = catLabels[t.cat] || t.cat || "AI";
+        return '<a class="list-card" href="/tool/' + t.id + '/">' +
+          '<div class="card-head"><h3><i class="fas ' + t.icon + '"></i> ' + t.name + '</h3>' +
+          '<span class="tag-pill">' + cat + '</span></div>' +
+          '<p class="card-desc">' + t.desc + '</p>' +
+          '<div class="tag-row"><span class="tool-pill">' + t.pricing + '</span>' +
+          '<button class="save-btn saved" data-tool-id="' + t.id + '" onclick="removeTool(\'' + t.id + '\')"><i class="fas fa-bookmark"></i> Remove</button>' +
+          '</div></a>';
+      }).join("");
+      grid.innerHTML = html;
+    }
+
+    window.removeTool = function(id) {
+      var saved = getSaved();
+      var idx = saved.indexOf(id);
+      if (idx !== -1) { saved.splice(idx, 1); localStorage.setItem(KEY, JSON.stringify(saved)); }
+      render();
+      var evt = new CustomEvent("library-updated", { detail: { count: saved.length } });
+      document.dispatchEvent(evt);
+    };
+
+    document.addEventListener("library-updated", render);
+    render();
+  })();
+  </script>
+</BaseLayout>

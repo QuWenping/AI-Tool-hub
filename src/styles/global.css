@@ -362,6 +362,18 @@ textarea.form-input { resize: vertical; }
 .score-green { color: var(--green); background: var(--green); }
 .score-amber { color: var(--amber); background: var(--amber); }
 .score-red { color: var(--red); background: var(--red); }
+/* ---- SaveButton + My Library (P1-12) ---- */
+.save-btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border: 1px solid var(--border); border-radius: var(--r-sm); background: var(--bg); color: var(--text); cursor: pointer; font-size: var(--fs-small); font-weight: var(--fw-bold); transition: all var(--t-hover); }
+.save-btn:hover { border-color: var(--brand); color: var(--brand); }
+.save-btn.saved { background: var(--brand); color: #fff; border-color: var(--brand); }
+.save-btn.saved:hover { filter: brightness(1.1); }
+.save-btn i { font-size: var(--fs-small); }
+.library-count { display: flex; align-items: center; gap: var(--s-4); margin-bottom: var(--s-6); font-size: var(--fs-body); font-weight: var(--fw-bold); color: var(--text-soft); }
+.library-empty { text-align: center; padding: var(--s-24) var(--s-6); }
+.library-empty i { font-size: 48px; color: var(--text-secondary); margin-bottom: var(--s-4); }
+.library-empty h2 { font-size: var(--fs-h3); margin-bottom: var(--s-3); }
+.library-empty p { color: var(--text-secondary); margin-bottom: var(--s-6); }
+.library-empty .cta-primary { display: inline-block; }
 /* ---- Shared component classes (P0-3) ---- */
 .comments-section { margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border); }
 .comments-section h2 { font-size: 22px; margin-bottom: var(--s-4); color: var(--text-soft); }

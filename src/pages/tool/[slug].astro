@@ -14,6 +14,7 @@ import TestStatus from "../../components/ui/TestStatus.astro";
 import ToolFAQ from "../../components/ui/ToolFAQ.astro";
 import ScreenshotGallery from "../../components/ui/ScreenshotGallery.astro";
 import ScoreCard from "../../components/ui/ScoreCard.astro";
+import SaveButton from "../../components/ui/SaveButton.astro";
 
 export async function getStaticPaths() {
   return Object.entries(toolsData)
@@ -262,6 +263,7 @@ const tocSections = [
           <i class="fas fa-external-link-alt" aria-hidden="true"></i> Visit {tNameEn}
         </a>
         <a class="alt" href={"/alternatives/" + id + "/"}>Alternatives</a>
+        <SaveButton toolId={id} toolName={tNameEn} />
       </div>
     </header>
 
