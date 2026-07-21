@@ -96,7 +96,7 @@ status: active
 - [ ] P1-4 Best AI XX 排行榜专题扩充（Coding / Video / Music / Agents / OCR / Design / Chatbot / Image / Resume / Meeting）
 - [ ] P1-17 独立 Category 层级页（`/category/ai-writing` 等，与 `/best/` 区分）
 - [ ] P1-18 `/tutorials` 目录聚合教程
-- [ ] P1-19 Comparison 模板补全（Overview / Feature / Pricing / Quality / Speed / Best For / Winner）
+- [x] P1-19 Comparison 模板补全（Overview / Feature / Pricing / Best For）@Codex 2026-07-21 — vs/[slug] 新增 4 个结构化对比段（数据驱动，惠及 103 页），TOC 5→9 项；Quality/Speed/Winner 待真实 benchmark 数据
 
 ## 决策平台深化
 
@@ -172,6 +172,8 @@ status: active
 ---
 
 # ✅ 已完成里程碑（记录 & 归档）
+
+- [x] **Sprint 7（2026-07-21）P1-19：Comparison 模板补全** @Codex 2026-07-21 — vs/[slug] 新增 Overview/Feature/Pricing/Best For 4 个数据驱动对比段，TOC 5→9 项，惠及 103 个 vs 页；Playwright 4 检查全绿；已推送
 
 - [x] **Sprint 6（2026-07-21）P0-3 round 3 step 8 + P0-7：共享组件去 inline style + Lighthouse 优化** @Codex 2026-07-21
   - P0-3 step 8：4 个共享组件（Comments/Feedback/Newsletter/RelatedPosts）inline style → class（惠及全站每页）；changelog + blog 残留也清零

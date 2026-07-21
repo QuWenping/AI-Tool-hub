@@ -22,6 +22,8 @@ related:
 
 ## 🚀 最近里程碑
 
+- **Sprint 7 step 1（P1-19）**：vs/[slug] 模板新增 Overview/Features/Pricing/Best For 4 个数据驱动对比段（103 页），TOC 5→9；Playwright 4 全绿；已推送
+
 - **Sprint 6 step 11（P0-3 step8 + P0-7）**：4 共享组件 0 inline style + Lighthouse 优化（首页 60→84、Tool 92、SEO 100；CSS 统一进 Astro 管道 + Font Awesome 延迟）；已推送
 
 - **Sprint 6 step 10（round 3 step 7）**：55 个 zh 镜像文件全部 0 inline style（含 zh/blog 44 + zh 结构页 11）；Playwright 28 全绿；构建 2162；已推送
