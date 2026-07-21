@@ -98,14 +98,14 @@ const breadcrumbSchema = {
         <h1>{tNameZh}</h1>
         <span class="detail-tag">{catLabelZh}</span>
         {isHandReviewed && (
-          <div class="tool-rating" style="display:flex;align-items:center;gap:6px;margin-top:6px;font-size:14px;color:var(--text-soft);">
-            <i class="fas fa-star" style="color:#f59e0b"></i>
-            <strong>{rating.toFixed(1)}</strong><span style="color:var(--text-mute);">/10</span>
-            <span style="color:var(--text-mute);font-size:12px;">编辑评分</span>
+          <div class="tool-rating">
+            <i class="fas fa-star"></i>
+            <strong>{rating.toFixed(1)}</strong><span class="meta-text">/10</span>
+            <span class="meta-text">编辑评分</span>
           </div>
         )}
         {!isHandReviewed && (
-          <div class="tool-rating" style="margin-top:6px;font-size:12px;color:var(--text-mute);">
+          <div class="tool-rating" class="meta-text">
             <i class="fas fa-info-circle"></i> AI 汇总信息 — 待人工实测
           </div>
         )}
@@ -124,17 +124,17 @@ const breadcrumbSchema = {
     {hasScreenshots && (
       <section class="detail-section">
         <h2><i class="fas fa-images"></i> 工具截图</h2>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:16px;">
+        <div class="card-grid">
           {screenshotFiles.map((sf, i) => (
-            <div style="border-radius:12px;overflow:hidden;border:1px solid var(--border-color);">
-              <img src={`/images/tools/${id}/${sf}`} alt={`${tNameEn} screenshot ${i+1}`} style="width:100%;display:block;" loading="lazy" />
+            <div class="list-card">
+              <img src={`/images/tools/${id}/${sf}`} alt={`${tNameEn} screenshot ${i+1}`} loading="lazy" />
             </div>
           ))}
         </div>
       </section>
     )}
 
-    <p style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; margin: 24px 0;">
+    <p class="info-card">
       <strong>语言说明：</strong>完整评测内容在<a href={"/tool/" + id + "/"}>英文原版</a>。本页提供 {tNameZh} 的核心要点和结论摘要。
     </p>
 
@@ -157,13 +157,13 @@ const breadcrumbSchema = {
 
     <div class="detail-grid-2">
       <section class="detail-section">
-        <h2><i class="fas fa-thumbs-up" style="color:#10b981;"></i> <span>优点</span></h2>
+        <h2><i class="fas fa-thumbs-up"></i> <span>优点</span></h2>
         <ul class="pro-list">
           {tProsZh.map(p => <li>{p}</li>)}
         </ul>
       </section>
       <section class="detail-section">
-        <h2><i class="fas fa-thumbs-down" style="color:#ef4444;"></i> <span>缺点</span></h2>
+        <h2><i class="fas fa-thumbs-down"></i> <span>缺点</span></h2>
         <ul class="con-list">
           {tConsZh.map(c => <li>{c}</li>)}
         </ul>
@@ -225,7 +225,7 @@ const breadcrumbSchema = {
             </a>
           ))}
         </div>
-        <p style="margin-top: 16px;">想看更深入的对比？请阅读我们的 <a href={"/zh/alternatives/" + id + "/"}>{tNameZh} 完整替代品清单</a>。</p>
+        <p>想看更深入的对比？请阅读我们的 <a href={"/zh/alternatives/" + id + "/"}>{tNameZh} 完整替代品清单</a>。</p>
       </section>
     )}
 
@@ -247,7 +247,7 @@ const breadcrumbSchema = {
     )}
 
     <section class="detail-section author-bio">
-      <p style="font-size: 14px; color: var(--text-mute); font-style: italic; text-align: center; margin: 0;">
+      <p class="meta-text">
         本文中文版为自动摘要，详细评测请参考 <a href={"/tool/" + id + "/"}>英文原版</a>。最后更新：2026 年 7 月。
       </p>
     </section>

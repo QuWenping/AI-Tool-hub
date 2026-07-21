@@ -284,7 +284,7 @@ header.site-header .container { display: flex; justify-content: space-between; a
 .list-section { margin-bottom: 40px; }
 .list-section-title { font-size: 20px; font-weight: var(--fw-bold); margin-bottom: var(--s-4); padding-bottom: var(--s-2); border-bottom: 1px solid var(--border); color: var(--text-soft); }
 .card-grid { display: grid; gap: var(--s-4); }
-.list-card { display: block; text-decoration: none; color: inherit; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-md); padding: var(--s-6); transition: border-color var(--t-hover); }
+.list-card { display: block; text-decoration: none; color: inherit; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-md); padding: var(--s-6); transition: border-color var(--t-hover); overflow: hidden; }
 .list-card:hover { border-color: var(--brand); }
 .list-card h3 { font-size: var(--fs-body); font-weight: var(--fw-bold); margin: 0; }
 .card-head { display: flex; justify-content: space-between; align-items: start; gap: var(--s-3); margin-bottom: var(--s-2); }
@@ -339,6 +339,9 @@ textarea.form-input { resize: vertical; }
 .nl-form { display: flex; gap: var(--s-2); max-width: 420px; margin: 0 auto; flex-wrap: wrap; justify-content: center; }
 .nl-email { flex: 1; min-width: 200px; padding: 12px 16px; border: 1px solid var(--border); border-radius: var(--r-sm); font-size: var(--fs-small); background: var(--bg); color: var(--text); font-family: inherit; }
 .form-msg-inline { display: none; margin-top: var(--s-3); color: var(--green); font-size: var(--fs-small); }
+.stats-bar { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--r-lg); padding: var(--s-6) var(--s-8); margin: var(--s-8) 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: var(--s-6); text-align: center; }
+.stat-number { font-size: 28px; font-weight: var(--fw-bold); color: var(--brand); }
+.stat-label { font-size: var(--fs-small); color: var(--text-secondary); margin-top: 4px; }
 .form-success { display: none; margin-top: var(--s-4); padding: var(--s-4); background: var(--green-bg); border: 1px solid var(--green-border); border-radius: var(--r-sm); color: var(--text-soft); font-size: var(--fs-small); }
 .tag-row { display: flex; gap: var(--s-2); align-items: center; flex-wrap: wrap; margin-top: var(--s-3); }
 .tag-pill { display: inline-block; font-size: var(--fs-small); font-weight: var(--fw-bold); color: #fff; background: var(--brand); padding: 3px 12px; border-radius: var(--r-full); }

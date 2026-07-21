@@ -90,7 +90,7 @@ const faqSchema = {
     </header>
 
     <section class="article-body">
-      <p style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; margin-bottom: 24px;">
+      <p class="info-card">
         <strong>语言说明：</strong>这是英文原文 <em>{post.title_en}</em> 的中文摘要页面。完整内容请参考 <a href={"/blog/" + post.slug + "/"}>英文原版</a>。
       </p>
 
@@ -128,17 +128,17 @@ const faqSchema = {
 
       <h2>完整内容</h2>
       <p>本文的完整深度评测请阅读英文原版：</p>
-      <p style="text-align: center; margin: 24px 0;">
+      <p class="back-link">
         <a class="cta-btn cta-primary" href={"/blog/" + post.slug + "/"}>阅读完整英文原版 →</a>
       </p>
 
-      <p style="background: var(--card-bg); border-left: 4px solid var(--accent-color); padding: 16px; border-radius: 8px; margin-top: 24px;">
+      <p class="callout">
         <strong>关于翻译：</strong>由于内容深度和篇幅，我们优先发布英文完整版。中文页面提供核心要点和建议，帮助你快速判断该文章是否值得深入阅读。
       </p>
     </section>
 
     {post.tags && post.tags.length > 0 && (
-      <section style="margin-top: 32px;">
+      <section class="section-mt">
         <h3>标签</h3>
         <div class="audience-tags">
           {post.tags.map(t => <span class="audience-tag">#{t}</span>)}
@@ -146,8 +146,8 @@ const faqSchema = {
       </section>
     )}
 
-    <section style="margin-top: 32px; text-align: center;">
-      <p style="color: var(--text-mute); font-size: 14px;">想让我们评测某个工具？<a href="/zh/contact/">推荐选题</a>。</p>
+    <section class="section-mt back-link">
+      <p>想让我们评测某个工具？<a href="/zh/contact/">推荐选题</a>。</p>
     </section>
 
     <Feedback slug={post.slug} lang="zh" />

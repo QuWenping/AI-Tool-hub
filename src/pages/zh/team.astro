@@ -16,7 +16,7 @@ const team = [
       <h1>团队介绍</h1>
       <p class="lede">AI Tool Hub 由 5 位每天用 AI 工具做本职工作的从业者运营。每篇评测都由真人撰写、人工实测、署名发布。下面是我们是谁、做什么、如何联系到每个人。</p>
     </header>
-    <p style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; margin: 24px 0;"><strong>语言说明：</strong>完整内容（含每位成员的全部评测与文章清单）见<a href="/team/">英文原版</a>。本页提供核心要点。</p>
+    <p class="info-card"><strong>语言说明：</strong>完整内容（含每位成员的全部评测与文章清单）见<a href="/team/">英文原版</a>。本页提供核心要点。</p>
 
     <section>
       <h2>用一段话介绍我们</h2>
@@ -39,25 +39,25 @@ const team = [
     <section>
       <h2>团队成员</h2>
       {team.map(person => (
-        <article class="team-member-card" style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 20px; padding: 32px; margin: 32px 0;">
-          <div style="display: grid; grid-template-columns: 120px 1fr; gap: 32px; align-items: start;">
+        <article class="team-member-card">
+          <div class="member-grid">
             <div>
               <div style={`width: 120px; height: 120px; border-radius: 24px; background: ${person.color}; display: flex; align-items: center; justify-content: center; font-size: 48px; font-weight: 800; color: white; font-family: system-ui, sans-serif;`}>{person.initials}</div>
-              <p style="text-align: center; color: var(--text-mute); font-size: 13px; margin-top: 12px;">{person.location}</p>
+              <p class="avatar-caption">{person.location}</p>
             </div>
             <div>
-              <h2 style="margin-top: 0; font-size: 28px;">{person.name}</h2>
-              <p style="color: var(--accent-color); font-size: 15px; font-weight: 600; margin-bottom: 16px;">{person.role}</p>
-              <p style="font-size: 16px; line-height: 1.7; color: var(--text-main); margin-bottom: 16px;">{person.bio}</p>
-              <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: 12px; padding: 16px; margin-bottom: 16px;">
-                <p style="margin: 0 0 8px; font-weight: 600; font-size: 14px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.5px;">教育背景</p>
-                <p style="margin: 0; font-size: 14px;">{person.edu}</p>
+              <h2 class="member-name">{person.name}</h2>
+              <p class="member-role">{person.role}</p>
+              <p class="member-bio">{person.bio}</p>
+              <div class="info-card">
+                <p class="field-label">教育背景</p>
+                <p class="field-value">{person.edu}</p>
               </div>
-              <div style="margin-bottom: 16px;">
-                <p style="font-weight: 600; font-size: 14px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">专长</p>
+              <div class="member-section">
+                <p class="field-label">专长</p>
                 <div class="audience-tags">{person.expertise.map(skill => <span class="audience-tag">{skill}</span>)}</div>
               </div>
-              <p style="margin: 0; font-size: 14px;"><strong>邮箱：</strong> <a href={`mailto:${person.email}`}>{person.email}</a></p>
+              <p class="field-value"><strong>邮箱：</strong> <a href={`mailto:${person.email}`}>{person.email}</a></p>
             </div>
           </div>
         </article>

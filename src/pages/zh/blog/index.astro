@@ -20,7 +20,7 @@ const sortedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date));
             <div>
               <h3>{p.title_zh}</h3>
               <p>{p.desc_zh}</p>
-              <p style="font-size: 12px; color: var(--text-mute); margin-top: 6px;">
+              <p class="meta-text">
                 <i class="far fa-calendar"></i> {p.date} &middot; <i class="far fa-clock"></i> {p.read_time}
               </p>
             </div>
@@ -29,8 +29,8 @@ const sortedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date));
       </div>
     </section>
 
-    <section style="margin-top: 40px; text-align: center;">
-      <p style="color: var(--text-mute);">更多文章即将推出。有选题建议？<a href="/zh/contact/">告诉我们</a>。</p>
+    <section class="section-mt back-link">
+      <p class="meta-text">更多文章即将推出。有选题建议？<a href="/zh/contact/">告诉我们</a>。</p>
     </section>
   </article>
 </BaseLayout>

@@ -25,61 +25,61 @@ const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":page
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
   </Fragment>
-  <div class="article" style="max-width:860px;margin:0 auto;padding:48px 0;">
+  <div class="article">
     <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/best/students/">分类</a> &rsaquo; <span>AI Agent</span></nav>
     <header class="article-header">
       <span class="eyebrow">AI Agent 平台</span>
       <h1>2026 年最佳 AI Agent 平台</h1>
-      <p style="color:var(--text-mute);font-size:15px;margin-top:8px;">14 个工具，4 大类别：代码框架、可视化平台、浏览器 Agent、自主目标 Agent。</p>
+      <p>14 个工具，4 大类别：代码框架、可视化平台、浏览器 Agent、自主目标 Agent。</p>
     </header>
     <section class="article-body">
-      <p style="font-size:16px;color:var(--text-soft);line-height:1.8;">AI Agent 是 AI 工具的下一个进化方向——不只是回答问题，而是自主规划和执行多步骤任务。无论你需要自动化数据采集、搭建客服机器人，还是构建复杂的多 Agent 系统，都有适合你的平台。</p>
+      <p>AI Agent 是 AI 工具的下一个进化方向——不只是回答问题，而是自主规划和执行多步骤任务。无论你需要自动化数据采集、搭建客服机器人，还是构建复杂的多 Agent 系统，都有适合你的平台。</p>
 
-      <h2 style="margin-top:32px;">Agent 工具分类</h2>
+      <h2 class="section-mt">Agent 工具分类</h2>
       {frameworkTypes.map(ft => (
-        <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:12px;padding:20px;margin:16px 0;">
-          <h3 style="font-size:17px;font-weight:600;margin-bottom:8px;">{ft.name}</h3>
-          <p style="font-size:14px;color:var(--text-soft);margin-bottom:12px;line-height:1.6;">{ft.desc}</p>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <div class="info-card">
+          <h3>{ft.name}</h3>
+          <p>{ft.desc}</p>
+          <div class="tag-row">
             {ft.tools.map(tid => {
               const tool = tools.find(t => t.id === tid);
               return tool ? (
-                <a href={"/zh/tool/" + tid + "/"} style="font-size:13px;color:var(--accent-color);background:rgba(59,130,246,0.08);padding:4px 12px;border-radius:6px;text-decoration:none;font-weight:500;">{tool.name.en}</a>
+                <a href={"/zh/tool/" + tid + "/"} class="tool-pill">{tool.name.en}</a>
               ) : null
             })}
           </div>
         </div>
       ))}
 
-      <h2 style="margin-top:40px;">Agent 工作流教程</h2>
-      <div style="display:grid;gap:12px;margin-top:16px;">
+      <h2 class="section-mt">Agent 工作流教程</h2>
+      <div class="card-grid">
         {agentWorkflows.map(w => (
-          <a href={"/zh/workflows/" + w.slug + "/"} style="text-decoration:none;color:inherit;display:block;background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;">
-            <h3 style="font-size:15px;font-weight:600;margin:0 0 4px 0;">{w.title_zh || w.title}</h3>
-            <p style="font-size:12px;color:var(--text-mute);margin:0;">{w.tool} - {w.steps.length} 步骤</p>
+          <a href={"/zh/workflows/" + w.slug + "/"} class="list-card">
+            <h3>{w.title_zh || w.title}</h3>
+            <p class="meta-text">{w.tool} - {w.steps.length} 步骤</p>
           </a>
         ))}
       </div>
 
-      <h2 style="margin-top:40px;">如何选择 AI Agent 平台</h2>
-      <ol style="margin:12px 0 12px 24px;line-height:1.8;font-size:15px;color:var(--text-soft);">
+      <h2 class="section-mt">如何选择 AI Agent 平台</h2>
+      <ol>
         <li><strong>你是开发者？</strong> 用 LangGraph 或 CrewAI 获得最大灵活性。AutoGen 适合研究。LlamaIndex 适合数据密集型应用。</li>
         <li><strong>非技术或偏好可视化？</strong> 从 n8n 开始（最佳全能）或 Dify（AI 专用工作流）。</li>
         <li><strong>需要浏览器自动化？</strong> Browser Use（开源、灵活）或 MultiOn（托管、简单）。</li>
         <li><strong>想体验自主 Agent？</strong> AutoGPT 或 AgentGPT（实用性有限但适合学习）。</li>
       </ol>
 
-      <h2 style="margin-top:32px;">常见问题</h2>
-      <div style="display:grid;gap:16px;">
+      <h2 class="section-mt">常见问题</h2>
+      <div class="card-grid">
         {faqItems.map(f => (
-          <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:10px;padding:16px;">
-            <h3 style="font-size:15px;font-weight:600;margin-bottom:8px;">{f.q}</h3>
-            <p style="font-size:14px;color:var(--text-soft);line-height:1.6;margin:0;">{f.a}</p>
+          <div class="info-card">
+            <h3>{f.q}</h3>
+            <p>{f.a}</p>
           </div>
         ))}
       </div>
 
-      <p style="text-align:center;margin-top:32px;"><a href="/zh/workflows/" style="color:var(--accent-color);font-weight:600;">浏览工作流教程</a> &nbsp;|&nbsp; <a href="/zh/solutions/" style="color:var(--accent-color);font-weight:600;">行业方案</a></p>
+      <p class="back-link"><a href="/zh/workflows/">浏览工作流教程</a> &nbsp;|&nbsp; <a href="/zh/solutions/">行业方案</a></p>
     </section>
   </div>
 </BaseLayout>
