@@ -22,6 +22,8 @@ related:
 
 ## 🚀 最近里程碑
 
+- **Sprint 7 step 2（P1-17）**：/category/ 浏览页上线（31 页 + index），与 /best/ 排名区分；构建 2194 页；Playwright 8 全绿；已推送
+
 - **Sprint 7 step 1（P1-19）**：vs/[slug] 模板新增 Overview/Features/Pricing/Best For 4 个数据驱动对比段（103 页），TOC 5→9；Playwright 4 全绿；已推送
 
 - **Sprint 6 step 11（P0-3 step8 + P0-7）**：4 共享组件 0 inline style + Lighthouse 优化（首页 60→84、Tool 92、SEO 100；CSS 统一进 Astro 管道 + Font Awesome 延迟）；已推送

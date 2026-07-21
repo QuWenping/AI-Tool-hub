@@ -94,7 +94,7 @@ status: active
 
 - [ ] P1-3 比较页面全覆盖（热门 A vs B 组合自动生成）
 - [ ] P1-4 Best AI XX 排行榜专题扩充（Coding / Video / Music / Agents / OCR / Design / Chatbot / Image / Resume / Meeting）
-- [ ] P1-17 独立 Category 层级页（`/category/ai-writing` 等，与 `/best/` 区分）
+- [x] P1-17 独立 Category 层级页（`/category/{slug}` + index，31 个浏览页，与 `/best/` 排名区分）@Codex 2026-07-21
 - [ ] P1-18 `/tutorials` 目录聚合教程
 - [x] P1-19 Comparison 模板补全（Overview / Feature / Pricing / Best For）@Codex 2026-07-21 — vs/[slug] 新增 4 个结构化对比段（数据驱动，惠及 103 页），TOC 5→9 项；Quality/Speed/Winner 待真实 benchmark 数据
 
@@ -172,6 +172,8 @@ status: active
 ---
 
 # ✅ 已完成里程碑（记录 & 归档）
+
+- [x] **Sprint 7（2026-07-21）P1-17：独立 Category 浏览页** @Codex 2026-07-21 — 新 /category/index + /category/[slug]（31 页），浏览意图 vs /best/ 排名意图；ItemList + Breadcrumb JSON-LD；构建 2194 页；Playwright 8 全绿；已推送
 
 - [x] **Sprint 7（2026-07-21）P1-19：Comparison 模板补全** @Codex 2026-07-21 — vs/[slug] 新增 Overview/Feature/Pricing/Best For 4 个数据驱动对比段，TOC 5→9 项，惠及 103 个 vs 页；Playwright 4 检查全绿；已推送
 
