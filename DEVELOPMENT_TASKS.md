@@ -92,7 +92,7 @@ status: active
 
 ## SEO 内容矩阵
 
-- [ ] P1-3 比较页面全覆盖（热门 A vs B 组合自动生成）
+- [x] P1-3 比较页面全覆盖（热门 A vs B 组合自动生成）@Codex 2026-07-21 — 103→267 matchups（top 8/category auto-gen），+328 vs 页，构建 2522 页
 - [ ] P1-4 Best AI XX 排行榜专题扩充（Coding / Video / Music / Agents / OCR / Design / Chatbot / Image / Resume / Meeting）
 - [x] P1-17 独立 Category 层级页（`/category/{slug}` + index，31 个浏览页，与 `/best/` 排名区分）@Codex 2026-07-21
 - [ ] P1-18 `/tutorials` 目录聚合教程
@@ -172,6 +172,8 @@ status: active
 ---
 
 # ✅ 已完成里程碑（记录 & 归档）
+
+- [x] **Sprint 7（2026-07-21）P1-3：比较页面全覆盖** @Codex 2026-07-21 — matchups 103→267（top 8/category 自动生成 164 新对），+328 vs 页，构建 2522；Playwright 3 新 vs 页全绿；已推送
 
 - [x] **Sprint 7（2026-07-21）P1-17：独立 Category 浏览页** @Codex 2026-07-21 — 新 /category/index + /category/[slug]（31 页），浏览意图 vs /best/ 排名意图；ItemList + Breadcrumb JSON-LD；构建 2194 页；Playwright 8 全绿；已推送
 

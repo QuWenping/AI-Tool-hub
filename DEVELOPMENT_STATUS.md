@@ -22,6 +22,8 @@ related:
 
 ## 🚀 最近里程碑
 
+- **Sprint 7 step 3（P1-3）**：matchups 103→267（top 8/category 自动生成），+328 vs 页，构建 2522；已推送
+
 - **Sprint 7 step 2（P1-17）**：/category/ 浏览页上线（31 页 + index），与 /best/ 排名区分；构建 2194 页；Playwright 8 全绿；已推送
 
 - **Sprint 7 step 1（P1-19）**：vs/[slug] 模板新增 Overview/Features/Pricing/Best For 4 个数据驱动对比段（103 页），TOC 5→9；Playwright 4 全绿；已推送
