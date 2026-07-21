@@ -719,5 +719,1153 @@
     "b": "cursor",
     "title_en": "SonarQube vs Cursor (2026): Which is Better?",
     "title_zh": "SonarQube vs Cursor (2026): 哪个更好?"
+  },
+  {
+    "slug": "claude-vs-jasper",
+    "a": "claude",
+    "b": "jasper",
+    "title_en": "Claude vs Jasper (2026): Which is Better?",
+    "title_zh": "Claude vs Jasper (2026): 哪个更好?"
+  },
+  {
+    "slug": "claude-vs-copy-ai",
+    "a": "claude",
+    "b": "copy-ai",
+    "title_en": "Claude vs Copy.ai (2026): Which is Better?",
+    "title_zh": "Claude vs Copy.ai (2026): 哪个更好?"
+  },
+  {
+    "slug": "claude-vs-quillbot",
+    "a": "claude",
+    "b": "quillbot",
+    "title_en": "Claude vs QuillBot (2026): Which is Better?",
+    "title_zh": "Claude vs QuillBot (2026): 哪个更好?"
+  },
+  {
+    "slug": "claude-vs-phind",
+    "a": "claude",
+    "b": "phind",
+    "title_en": "Claude vs Phind (2026): Which is Better?",
+    "title_zh": "Claude vs Phind (2026): 哪个更好?"
+  },
+  {
+    "slug": "gemini-vs-jasper",
+    "a": "gemini",
+    "b": "jasper",
+    "title_en": "Gemini vs Jasper (2026): Which is Better?",
+    "title_zh": "Gemini vs Jasper (2026): 哪个更好?"
+  },
+  {
+    "slug": "gemini-vs-deepseek",
+    "a": "gemini",
+    "b": "deepseek",
+    "title_en": "Gemini vs DeepSeek (2026): Which is Better?",
+    "title_zh": "Gemini vs DeepSeek (2026): 哪个更好?"
+  },
+  {
+    "slug": "gemini-vs-copy-ai",
+    "a": "gemini",
+    "b": "copy-ai",
+    "title_en": "Gemini vs Copy.ai (2026): Which is Better?",
+    "title_zh": "Gemini vs Copy.ai (2026): 哪个更好?"
+  },
+  {
+    "slug": "gemini-vs-quillbot",
+    "a": "gemini",
+    "b": "quillbot",
+    "title_en": "Gemini vs QuillBot (2026): Which is Better?",
+    "title_zh": "Gemini vs QuillBot (2026): 哪个更好?"
+  },
+  {
+    "slug": "gemini-vs-phind",
+    "a": "gemini",
+    "b": "phind",
+    "title_en": "Gemini vs Phind (2026): Which is Better?",
+    "title_zh": "Gemini vs Phind (2026): 哪个更好?"
+  },
+  {
+    "slug": "jasper-vs-chatgpt",
+    "a": "jasper",
+    "b": "chatgpt",
+    "title_en": "Jasper vs ChatGPT (2026): Which is Better?",
+    "title_zh": "Jasper vs ChatGPT (2026): 哪个更好?"
+  },
+  {
+    "slug": "jasper-vs-deepseek",
+    "a": "jasper",
+    "b": "deepseek",
+    "title_en": "Jasper vs DeepSeek (2026): Which is Better?",
+    "title_zh": "Jasper vs DeepSeek (2026): 哪个更好?"
+  },
+  {
+    "slug": "jasper-vs-quillbot",
+    "a": "jasper",
+    "b": "quillbot",
+    "title_en": "Jasper vs QuillBot (2026): Which is Better?",
+    "title_zh": "Jasper vs QuillBot (2026): 哪个更好?"
+  },
+  {
+    "slug": "jasper-vs-phind",
+    "a": "jasper",
+    "b": "phind",
+    "title_en": "Jasper vs Phind (2026): Which is Better?",
+    "title_zh": "Jasper vs Phind (2026): 哪个更好?"
+  },
+  {
+    "slug": "chatgpt-vs-copy-ai",
+    "a": "chatgpt",
+    "b": "copy-ai",
+    "title_en": "ChatGPT vs Copy.ai (2026): Which is Better?",
+    "title_zh": "ChatGPT vs Copy.ai (2026): 哪个更好?"
+  },
+  {
+    "slug": "chatgpt-vs-quillbot",
+    "a": "chatgpt",
+    "b": "quillbot",
+    "title_en": "ChatGPT vs QuillBot (2026): Which is Better?",
+    "title_zh": "ChatGPT vs QuillBot (2026): 哪个更好?"
+  },
+  {
+    "slug": "chatgpt-vs-phind",
+    "a": "chatgpt",
+    "b": "phind",
+    "title_en": "ChatGPT vs Phind (2026): Which is Better?",
+    "title_zh": "ChatGPT vs Phind (2026): 哪个更好?"
+  },
+  {
+    "slug": "deepseek-vs-copy-ai",
+    "a": "deepseek",
+    "b": "copy-ai",
+    "title_en": "DeepSeek vs Copy.ai (2026): Which is Better?",
+    "title_zh": "DeepSeek vs Copy.ai (2026): 哪个更好?"
+  },
+  {
+    "slug": "deepseek-vs-quillbot",
+    "a": "deepseek",
+    "b": "quillbot",
+    "title_en": "DeepSeek vs QuillBot (2026): Which is Better?",
+    "title_zh": "DeepSeek vs QuillBot (2026): 哪个更好?"
+  },
+  {
+    "slug": "deepseek-vs-phind",
+    "a": "deepseek",
+    "b": "phind",
+    "title_en": "DeepSeek vs Phind (2026): Which is Better?",
+    "title_zh": "DeepSeek vs Phind (2026): 哪个更好?"
+  },
+  {
+    "slug": "copy-ai-vs-quillbot",
+    "a": "copy-ai",
+    "b": "quillbot",
+    "title_en": "Copy.ai vs QuillBot (2026): Which is Better?",
+    "title_zh": "Copy.ai vs QuillBot (2026): 哪个更好?"
+  },
+  {
+    "slug": "copy-ai-vs-phind",
+    "a": "copy-ai",
+    "b": "phind",
+    "title_en": "Copy.ai vs Phind (2026): Which is Better?",
+    "title_zh": "Copy.ai vs Phind (2026): 哪个更好?"
+  },
+  {
+    "slug": "quillbot-vs-phind",
+    "a": "quillbot",
+    "b": "phind",
+    "title_en": "QuillBot vs Phind (2026): Which is Better?",
+    "title_zh": "QuillBot vs Phind (2026): 哪个更好?"
+  },
+  {
+    "slug": "github-copilot-vs-cline",
+    "a": "github-copilot",
+    "b": "cline",
+    "title_en": "GitHub Copilot vs Cline (2026): Which is Better?",
+    "title_zh": "GitHub Copilot vs Cline (2026): 哪个更好?"
+  },
+  {
+    "slug": "github-copilot-vs-aider",
+    "a": "github-copilot",
+    "b": "aider",
+    "title_en": "GitHub Copilot vs Aider (2026): Which is Better?",
+    "title_zh": "GitHub Copilot vs Aider (2026): 哪个更好?"
+  },
+  {
+    "slug": "github-copilot-vs-replit",
+    "a": "github-copilot",
+    "b": "replit",
+    "title_en": "GitHub Copilot vs Replit (2026): Which is Better?",
+    "title_zh": "GitHub Copilot vs Replit (2026): 哪个更好?"
+  },
+  {
+    "slug": "github-copilot-vs-v0",
+    "a": "github-copilot",
+    "b": "v0",
+    "title_en": "GitHub Copilot vs v0 (2026): Which is Better?",
+    "title_zh": "GitHub Copilot vs v0 (2026): 哪个更好?"
+  },
+  {
+    "slug": "cursor-vs-aider",
+    "a": "cursor",
+    "b": "aider",
+    "title_en": "Cursor vs Aider (2026): Which is Better?",
+    "title_zh": "Cursor vs Aider (2026): 哪个更好?"
+  },
+  {
+    "slug": "cursor-vs-codeium",
+    "a": "cursor",
+    "b": "codeium",
+    "title_en": "Cursor vs Codeium (2026): Which is Better?",
+    "title_zh": "Cursor vs Codeium (2026): 哪个更好?"
+  },
+  {
+    "slug": "cursor-vs-v0",
+    "a": "cursor",
+    "b": "v0",
+    "title_en": "Cursor vs v0 (2026): Which is Better?",
+    "title_zh": "Cursor vs v0 (2026): 哪个更好?"
+  },
+  {
+    "slug": "cline-vs-windsurf",
+    "a": "cline",
+    "b": "windsurf",
+    "title_en": "Cline vs Windsurf (2026): Which is Better?",
+    "title_zh": "Cline vs Windsurf (2026): 哪个更好?"
+  },
+  {
+    "slug": "cline-vs-codeium",
+    "a": "cline",
+    "b": "codeium",
+    "title_en": "Cline vs Codeium (2026): Which is Better?",
+    "title_zh": "Cline vs Codeium (2026): 哪个更好?"
+  },
+  {
+    "slug": "cline-vs-replit",
+    "a": "cline",
+    "b": "replit",
+    "title_en": "Cline vs Replit (2026): Which is Better?",
+    "title_zh": "Cline vs Replit (2026): 哪个更好?"
+  },
+  {
+    "slug": "cline-vs-v0",
+    "a": "cline",
+    "b": "v0",
+    "title_en": "Cline vs v0 (2026): Which is Better?",
+    "title_zh": "Cline vs v0 (2026): 哪个更好?"
+  },
+  {
+    "slug": "windsurf-vs-aider",
+    "a": "windsurf",
+    "b": "aider",
+    "title_en": "Windsurf vs Aider (2026): Which is Better?",
+    "title_zh": "Windsurf vs Aider (2026): 哪个更好?"
+  },
+  {
+    "slug": "windsurf-vs-codeium",
+    "a": "windsurf",
+    "b": "codeium",
+    "title_en": "Windsurf vs Codeium (2026): Which is Better?",
+    "title_zh": "Windsurf vs Codeium (2026): 哪个更好?"
+  },
+  {
+    "slug": "windsurf-vs-replit",
+    "a": "windsurf",
+    "b": "replit",
+    "title_en": "Windsurf vs Replit (2026): Which is Better?",
+    "title_zh": "Windsurf vs Replit (2026): 哪个更好?"
+  },
+  {
+    "slug": "windsurf-vs-v0",
+    "a": "windsurf",
+    "b": "v0",
+    "title_en": "Windsurf vs v0 (2026): Which is Better?",
+    "title_zh": "Windsurf vs v0 (2026): 哪个更好?"
+  },
+  {
+    "slug": "aider-vs-codeium",
+    "a": "aider",
+    "b": "codeium",
+    "title_en": "Aider vs Codeium (2026): Which is Better?",
+    "title_zh": "Aider vs Codeium (2026): 哪个更好?"
+  },
+  {
+    "slug": "aider-vs-replit",
+    "a": "aider",
+    "b": "replit",
+    "title_en": "Aider vs Replit (2026): Which is Better?",
+    "title_zh": "Aider vs Replit (2026): 哪个更好?"
+  },
+  {
+    "slug": "aider-vs-v0",
+    "a": "aider",
+    "b": "v0",
+    "title_en": "Aider vs v0 (2026): Which is Better?",
+    "title_zh": "Aider vs v0 (2026): 哪个更好?"
+  },
+  {
+    "slug": "codeium-vs-replit",
+    "a": "codeium",
+    "b": "replit",
+    "title_en": "Codeium vs Replit (2026): Which is Better?",
+    "title_zh": "Codeium vs Replit (2026): 哪个更好?"
+  },
+  {
+    "slug": "codeium-vs-v0",
+    "a": "codeium",
+    "b": "v0",
+    "title_en": "Codeium vs v0 (2026): Which is Better?",
+    "title_zh": "Codeium vs v0 (2026): 哪个更好?"
+  },
+  {
+    "slug": "replit-vs-v0",
+    "a": "replit",
+    "b": "v0",
+    "title_en": "Replit vs v0 (2026): Which is Better?",
+    "title_zh": "Replit vs v0 (2026): 哪个更好?"
+  },
+  {
+    "slug": "sora-vs-pika",
+    "a": "sora",
+    "b": "pika",
+    "title_en": "Sora vs Pika (2026): Which is Better?",
+    "title_zh": "Sora vs Pika (2026): 哪个更好?"
+  },
+  {
+    "slug": "sora-vs-luma",
+    "a": "sora",
+    "b": "luma",
+    "title_en": "Sora vs Luma (2026): Which is Better?",
+    "title_zh": "Sora vs Luma (2026): 哪个更好?"
+  },
+  {
+    "slug": "sora-vs-hailuo",
+    "a": "sora",
+    "b": "hailuo",
+    "title_en": "Sora vs Hailuo (2026): Which is Better?",
+    "title_zh": "Sora vs Hailuo (2026): 哪个更好?"
+  },
+  {
+    "slug": "sora-vs-synthesia",
+    "a": "sora",
+    "b": "synthesia",
+    "title_en": "Sora vs Synthesia (2026): Which is Better?",
+    "title_zh": "Sora vs Synthesia (2026): 哪个更好?"
+  },
+  {
+    "slug": "sora-vs-heygen",
+    "a": "sora",
+    "b": "heygen",
+    "title_en": "Sora vs HeyGen (2026): Which is Better?",
+    "title_zh": "Sora vs HeyGen (2026): 哪个更好?"
+  },
+  {
+    "slug": "runway-vs-kling",
+    "a": "runway",
+    "b": "kling",
+    "title_en": "Runway vs Kling (2026): Which is Better?",
+    "title_zh": "Runway vs Kling (2026): 哪个更好?"
+  },
+  {
+    "slug": "runway-vs-synthesia",
+    "a": "runway",
+    "b": "synthesia",
+    "title_en": "Runway vs Synthesia (2026): Which is Better?",
+    "title_zh": "Runway vs Synthesia (2026): 哪个更好?"
+  },
+  {
+    "slug": "runway-vs-heygen",
+    "a": "runway",
+    "b": "heygen",
+    "title_en": "Runway vs HeyGen (2026): Which is Better?",
+    "title_zh": "Runway vs HeyGen (2026): 哪个更好?"
+  },
+  {
+    "slug": "pika-vs-luma",
+    "a": "pika",
+    "b": "luma",
+    "title_en": "Pika vs Luma (2026): Which is Better?",
+    "title_zh": "Pika vs Luma (2026): 哪个更好?"
+  },
+  {
+    "slug": "pika-vs-hailuo",
+    "a": "pika",
+    "b": "hailuo",
+    "title_en": "Pika vs Hailuo (2026): Which is Better?",
+    "title_zh": "Pika vs Hailuo (2026): 哪个更好?"
+  },
+  {
+    "slug": "pika-vs-synthesia",
+    "a": "pika",
+    "b": "synthesia",
+    "title_en": "Pika vs Synthesia (2026): Which is Better?",
+    "title_zh": "Pika vs Synthesia (2026): 哪个更好?"
+  },
+  {
+    "slug": "pika-vs-heygen",
+    "a": "pika",
+    "b": "heygen",
+    "title_en": "Pika vs HeyGen (2026): Which is Better?",
+    "title_zh": "Pika vs HeyGen (2026): 哪个更好?"
+  },
+  {
+    "slug": "luma-vs-kling",
+    "a": "luma",
+    "b": "kling",
+    "title_en": "Luma vs Kling (2026): Which is Better?",
+    "title_zh": "Luma vs Kling (2026): 哪个更好?"
+  },
+  {
+    "slug": "luma-vs-hailuo",
+    "a": "luma",
+    "b": "hailuo",
+    "title_en": "Luma vs Hailuo (2026): Which is Better?",
+    "title_zh": "Luma vs Hailuo (2026): 哪个更好?"
+  },
+  {
+    "slug": "luma-vs-synthesia",
+    "a": "luma",
+    "b": "synthesia",
+    "title_en": "Luma vs Synthesia (2026): Which is Better?",
+    "title_zh": "Luma vs Synthesia (2026): 哪个更好?"
+  },
+  {
+    "slug": "luma-vs-heygen",
+    "a": "luma",
+    "b": "heygen",
+    "title_en": "Luma vs HeyGen (2026): Which is Better?",
+    "title_zh": "Luma vs HeyGen (2026): 哪个更好?"
+  },
+  {
+    "slug": "kling-vs-hailuo",
+    "a": "kling",
+    "b": "hailuo",
+    "title_en": "Kling vs Hailuo (2026): Which is Better?",
+    "title_zh": "Kling vs Hailuo (2026): 哪个更好?"
+  },
+  {
+    "slug": "kling-vs-synthesia",
+    "a": "kling",
+    "b": "synthesia",
+    "title_en": "Kling vs Synthesia (2026): Which is Better?",
+    "title_zh": "Kling vs Synthesia (2026): 哪个更好?"
+  },
+  {
+    "slug": "kling-vs-heygen",
+    "a": "kling",
+    "b": "heygen",
+    "title_en": "Kling vs HeyGen (2026): Which is Better?",
+    "title_zh": "Kling vs HeyGen (2026): 哪个更好?"
+  },
+  {
+    "slug": "hailuo-vs-synthesia",
+    "a": "hailuo",
+    "b": "synthesia",
+    "title_en": "Hailuo vs Synthesia (2026): Which is Better?",
+    "title_zh": "Hailuo vs Synthesia (2026): 哪个更好?"
+  },
+  {
+    "slug": "hailuo-vs-heygen",
+    "a": "hailuo",
+    "b": "heygen",
+    "title_en": "Hailuo vs HeyGen (2026): Which is Better?",
+    "title_zh": "Hailuo vs HeyGen (2026): 哪个更好?"
+  },
+  {
+    "slug": "midjourney-vs-canva-ai",
+    "a": "midjourney",
+    "b": "canva-ai",
+    "title_en": "Midjourney vs Canva AI (2026): Which is Better?",
+    "title_zh": "Midjourney vs Canva AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "midjourney-vs-uizard",
+    "a": "midjourney",
+    "b": "uizard",
+    "title_en": "Midjourney vs Uizard (2026): Which is Better?",
+    "title_zh": "Midjourney vs Uizard (2026): 哪个更好?"
+  },
+  {
+    "slug": "stable-diffusion-vs-leonardo",
+    "a": "stable-diffusion",
+    "b": "leonardo",
+    "title_en": "Stable Diffusion vs Leonardo.AI (2026): Which is Better?",
+    "title_zh": "Stable Diffusion vs Leonardo.AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "stable-diffusion-vs-ideogram",
+    "a": "stable-diffusion",
+    "b": "ideogram",
+    "title_en": "Stable Diffusion vs Ideogram (2026): Which is Better?",
+    "title_zh": "Stable Diffusion vs Ideogram (2026): 哪个更好?"
+  },
+  {
+    "slug": "stable-diffusion-vs-krea",
+    "a": "stable-diffusion",
+    "b": "krea",
+    "title_en": "Stable Diffusion vs Krea (2026): Which is Better?",
+    "title_zh": "Stable Diffusion vs Krea (2026): 哪个更好?"
+  },
+  {
+    "slug": "stable-diffusion-vs-flux",
+    "a": "stable-diffusion",
+    "b": "flux",
+    "title_en": "Stable Diffusion vs Flux (2026): Which is Better?",
+    "title_zh": "Stable Diffusion vs Flux (2026): 哪个更好?"
+  },
+  {
+    "slug": "stable-diffusion-vs-canva-ai",
+    "a": "stable-diffusion",
+    "b": "canva-ai",
+    "title_en": "Stable Diffusion vs Canva AI (2026): Which is Better?",
+    "title_zh": "Stable Diffusion vs Canva AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "stable-diffusion-vs-uizard",
+    "a": "stable-diffusion",
+    "b": "uizard",
+    "title_en": "Stable Diffusion vs Uizard (2026): Which is Better?",
+    "title_zh": "Stable Diffusion vs Uizard (2026): 哪个更好?"
+  },
+  {
+    "slug": "leonardo-vs-ideogram",
+    "a": "leonardo",
+    "b": "ideogram",
+    "title_en": "Leonardo.AI vs Ideogram (2026): Which is Better?",
+    "title_zh": "Leonardo.AI vs Ideogram (2026): 哪个更好?"
+  },
+  {
+    "slug": "leonardo-vs-krea",
+    "a": "leonardo",
+    "b": "krea",
+    "title_en": "Leonardo.AI vs Krea (2026): Which is Better?",
+    "title_zh": "Leonardo.AI vs Krea (2026): 哪个更好?"
+  },
+  {
+    "slug": "leonardo-vs-flux",
+    "a": "leonardo",
+    "b": "flux",
+    "title_en": "Leonardo.AI vs Flux (2026): Which is Better?",
+    "title_zh": "Leonardo.AI vs Flux (2026): 哪个更好?"
+  },
+  {
+    "slug": "leonardo-vs-canva-ai",
+    "a": "leonardo",
+    "b": "canva-ai",
+    "title_en": "Leonardo.AI vs Canva AI (2026): Which is Better?",
+    "title_zh": "Leonardo.AI vs Canva AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "leonardo-vs-uizard",
+    "a": "leonardo",
+    "b": "uizard",
+    "title_en": "Leonardo.AI vs Uizard (2026): Which is Better?",
+    "title_zh": "Leonardo.AI vs Uizard (2026): 哪个更好?"
+  },
+  {
+    "slug": "ideogram-vs-krea",
+    "a": "ideogram",
+    "b": "krea",
+    "title_en": "Ideogram vs Krea (2026): Which is Better?",
+    "title_zh": "Ideogram vs Krea (2026): 哪个更好?"
+  },
+  {
+    "slug": "ideogram-vs-flux",
+    "a": "ideogram",
+    "b": "flux",
+    "title_en": "Ideogram vs Flux (2026): Which is Better?",
+    "title_zh": "Ideogram vs Flux (2026): 哪个更好?"
+  },
+  {
+    "slug": "ideogram-vs-canva-ai",
+    "a": "ideogram",
+    "b": "canva-ai",
+    "title_en": "Ideogram vs Canva AI (2026): Which is Better?",
+    "title_zh": "Ideogram vs Canva AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "ideogram-vs-uizard",
+    "a": "ideogram",
+    "b": "uizard",
+    "title_en": "Ideogram vs Uizard (2026): Which is Better?",
+    "title_zh": "Ideogram vs Uizard (2026): 哪个更好?"
+  },
+  {
+    "slug": "krea-vs-flux",
+    "a": "krea",
+    "b": "flux",
+    "title_en": "Krea vs Flux (2026): Which is Better?",
+    "title_zh": "Krea vs Flux (2026): 哪个更好?"
+  },
+  {
+    "slug": "krea-vs-canva-ai",
+    "a": "krea",
+    "b": "canva-ai",
+    "title_en": "Krea vs Canva AI (2026): Which is Better?",
+    "title_zh": "Krea vs Canva AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "krea-vs-uizard",
+    "a": "krea",
+    "b": "uizard",
+    "title_en": "Krea vs Uizard (2026): Which is Better?",
+    "title_zh": "Krea vs Uizard (2026): 哪个更好?"
+  },
+  {
+    "slug": "flux-vs-canva-ai",
+    "a": "flux",
+    "b": "canva-ai",
+    "title_en": "Flux vs Canva AI (2026): Which is Better?",
+    "title_zh": "Flux vs Canva AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "flux-vs-uizard",
+    "a": "flux",
+    "b": "uizard",
+    "title_en": "Flux vs Uizard (2026): Which is Better?",
+    "title_zh": "Flux vs Uizard (2026): 哪个更好?"
+  },
+  {
+    "slug": "canva-ai-vs-uizard",
+    "a": "canva-ai",
+    "b": "uizard",
+    "title_en": "Canva AI vs Uizard (2026): Which is Better?",
+    "title_zh": "Canva AI vs Uizard (2026): 哪个更好?"
+  },
+  {
+    "slug": "elevenlabs-vs-descript",
+    "a": "elevenlabs",
+    "b": "descript",
+    "title_en": "ElevenLabs vs Descript (2026): Which is Better?",
+    "title_zh": "ElevenLabs vs Descript (2026): 哪个更好?"
+  },
+  {
+    "slug": "elevenlabs-vs-otter",
+    "a": "elevenlabs",
+    "b": "otter",
+    "title_en": "ElevenLabs vs Otter (2026): Which is Better?",
+    "title_zh": "ElevenLabs vs Otter (2026): 哪个更好?"
+  },
+  {
+    "slug": "elevenlabs-vs-fireflies",
+    "a": "elevenlabs",
+    "b": "fireflies",
+    "title_en": "ElevenLabs vs Fireflies (2026): Which is Better?",
+    "title_zh": "ElevenLabs vs Fireflies (2026): 哪个更好?"
+  },
+  {
+    "slug": "elevenlabs-vs-udio",
+    "a": "elevenlabs",
+    "b": "udio",
+    "title_en": "ElevenLabs vs Udio (2026): Which is Better?",
+    "title_zh": "ElevenLabs vs Udio (2026): 哪个更好?"
+  },
+  {
+    "slug": "suno-vs-descript",
+    "a": "suno",
+    "b": "descript",
+    "title_en": "Suno vs Descript (2026): Which is Better?",
+    "title_zh": "Suno vs Descript (2026): 哪个更好?"
+  },
+  {
+    "slug": "suno-vs-play-ht",
+    "a": "suno",
+    "b": "play-ht",
+    "title_en": "Suno vs PlayHT (2026): Which is Better?",
+    "title_zh": "Suno vs PlayHT (2026): 哪个更好?"
+  },
+  {
+    "slug": "suno-vs-murf",
+    "a": "suno",
+    "b": "murf",
+    "title_en": "Suno vs Murf (2026): Which is Better?",
+    "title_zh": "Suno vs Murf (2026): 哪个更好?"
+  },
+  {
+    "slug": "suno-vs-otter",
+    "a": "suno",
+    "b": "otter",
+    "title_en": "Suno vs Otter (2026): Which is Better?",
+    "title_zh": "Suno vs Otter (2026): 哪个更好?"
+  },
+  {
+    "slug": "suno-vs-fireflies",
+    "a": "suno",
+    "b": "fireflies",
+    "title_en": "Suno vs Fireflies (2026): Which is Better?",
+    "title_zh": "Suno vs Fireflies (2026): 哪个更好?"
+  },
+  {
+    "slug": "descript-vs-play-ht",
+    "a": "descript",
+    "b": "play-ht",
+    "title_en": "Descript vs PlayHT (2026): Which is Better?",
+    "title_zh": "Descript vs PlayHT (2026): 哪个更好?"
+  },
+  {
+    "slug": "descript-vs-murf",
+    "a": "descript",
+    "b": "murf",
+    "title_en": "Descript vs Murf (2026): Which is Better?",
+    "title_zh": "Descript vs Murf (2026): 哪个更好?"
+  },
+  {
+    "slug": "descript-vs-otter",
+    "a": "descript",
+    "b": "otter",
+    "title_en": "Descript vs Otter (2026): Which is Better?",
+    "title_zh": "Descript vs Otter (2026): 哪个更好?"
+  },
+  {
+    "slug": "descript-vs-fireflies",
+    "a": "descript",
+    "b": "fireflies",
+    "title_en": "Descript vs Fireflies (2026): Which is Better?",
+    "title_zh": "Descript vs Fireflies (2026): 哪个更好?"
+  },
+  {
+    "slug": "descript-vs-udio",
+    "a": "descript",
+    "b": "udio",
+    "title_en": "Descript vs Udio (2026): Which is Better?",
+    "title_zh": "Descript vs Udio (2026): 哪个更好?"
+  },
+  {
+    "slug": "play-ht-vs-murf",
+    "a": "play-ht",
+    "b": "murf",
+    "title_en": "PlayHT vs Murf (2026): Which is Better?",
+    "title_zh": "PlayHT vs Murf (2026): 哪个更好?"
+  },
+  {
+    "slug": "play-ht-vs-otter",
+    "a": "play-ht",
+    "b": "otter",
+    "title_en": "PlayHT vs Otter (2026): Which is Better?",
+    "title_zh": "PlayHT vs Otter (2026): 哪个更好?"
+  },
+  {
+    "slug": "play-ht-vs-fireflies",
+    "a": "play-ht",
+    "b": "fireflies",
+    "title_en": "PlayHT vs Fireflies (2026): Which is Better?",
+    "title_zh": "PlayHT vs Fireflies (2026): 哪个更好?"
+  },
+  {
+    "slug": "play-ht-vs-udio",
+    "a": "play-ht",
+    "b": "udio",
+    "title_en": "PlayHT vs Udio (2026): Which is Better?",
+    "title_zh": "PlayHT vs Udio (2026): 哪个更好?"
+  },
+  {
+    "slug": "murf-vs-otter",
+    "a": "murf",
+    "b": "otter",
+    "title_en": "Murf vs Otter (2026): Which is Better?",
+    "title_zh": "Murf vs Otter (2026): 哪个更好?"
+  },
+  {
+    "slug": "murf-vs-fireflies",
+    "a": "murf",
+    "b": "fireflies",
+    "title_en": "Murf vs Fireflies (2026): Which is Better?",
+    "title_zh": "Murf vs Fireflies (2026): 哪个更好?"
+  },
+  {
+    "slug": "murf-vs-udio",
+    "a": "murf",
+    "b": "udio",
+    "title_en": "Murf vs Udio (2026): Which is Better?",
+    "title_zh": "Murf vs Udio (2026): 哪个更好?"
+  },
+  {
+    "slug": "otter-vs-udio",
+    "a": "otter",
+    "b": "udio",
+    "title_en": "Otter vs Udio (2026): Which is Better?",
+    "title_zh": "Otter vs Udio (2026): 哪个更好?"
+  },
+  {
+    "slug": "fireflies-vs-udio",
+    "a": "fireflies",
+    "b": "udio",
+    "title_en": "Fireflies vs Udio (2026): Which is Better?",
+    "title_zh": "Fireflies vs Udio (2026): 哪个更好?"
+  },
+  {
+    "slug": "notion-ai-vs-perplexity",
+    "a": "notion-ai",
+    "b": "perplexity",
+    "title_en": "Notion AI vs Perplexity (2026): Which is Better?",
+    "title_zh": "Notion AI vs Perplexity (2026): 哪个更好?"
+  },
+  {
+    "slug": "notion-ai-vs-elicit",
+    "a": "notion-ai",
+    "b": "elicit",
+    "title_en": "Notion AI vs Elicit (2026): Which is Better?",
+    "title_zh": "Notion AI vs Elicit (2026): 哪个更好?"
+  },
+  {
+    "slug": "notion-ai-vs-taskade",
+    "a": "notion-ai",
+    "b": "taskade",
+    "title_en": "Notion AI vs Taskade (2026): Which is Better?",
+    "title_zh": "Notion AI vs Taskade (2026): 哪个更好?"
+  },
+  {
+    "slug": "notion-ai-vs-read-ai",
+    "a": "notion-ai",
+    "b": "read-ai",
+    "title_en": "Notion AI vs Read AI (2026): Which is Better?",
+    "title_zh": "Notion AI vs Read AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "notion-ai-vs-consensus",
+    "a": "notion-ai",
+    "b": "consensus",
+    "title_en": "Notion AI vs Consensus (2026): Which is Better?",
+    "title_zh": "Notion AI vs Consensus (2026): 哪个更好?"
+  },
+  {
+    "slug": "notion-ai-vs-coda-ai",
+    "a": "notion-ai",
+    "b": "coda-ai",
+    "title_en": "Notion AI vs Coda AI (2026): Which is Better?",
+    "title_zh": "Notion AI vs Coda AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "perplexity-vs-gamma",
+    "a": "perplexity",
+    "b": "gamma",
+    "title_en": "Perplexity vs Gamma (2026): Which is Better?",
+    "title_zh": "Perplexity vs Gamma (2026): 哪个更好?"
+  },
+  {
+    "slug": "perplexity-vs-elicit",
+    "a": "perplexity",
+    "b": "elicit",
+    "title_en": "Perplexity vs Elicit (2026): Which is Better?",
+    "title_zh": "Perplexity vs Elicit (2026): 哪个更好?"
+  },
+  {
+    "slug": "perplexity-vs-taskade",
+    "a": "perplexity",
+    "b": "taskade",
+    "title_en": "Perplexity vs Taskade (2026): Which is Better?",
+    "title_zh": "Perplexity vs Taskade (2026): 哪个更好?"
+  },
+  {
+    "slug": "perplexity-vs-read-ai",
+    "a": "perplexity",
+    "b": "read-ai",
+    "title_en": "Perplexity vs Read AI (2026): Which is Better?",
+    "title_zh": "Perplexity vs Read AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "perplexity-vs-consensus",
+    "a": "perplexity",
+    "b": "consensus",
+    "title_en": "Perplexity vs Consensus (2026): Which is Better?",
+    "title_zh": "Perplexity vs Consensus (2026): 哪个更好?"
+  },
+  {
+    "slug": "perplexity-vs-coda-ai",
+    "a": "perplexity",
+    "b": "coda-ai",
+    "title_en": "Perplexity vs Coda AI (2026): Which is Better?",
+    "title_zh": "Perplexity vs Coda AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "gamma-vs-elicit",
+    "a": "gamma",
+    "b": "elicit",
+    "title_en": "Gamma vs Elicit (2026): Which is Better?",
+    "title_zh": "Gamma vs Elicit (2026): 哪个更好?"
+  },
+  {
+    "slug": "gamma-vs-taskade",
+    "a": "gamma",
+    "b": "taskade",
+    "title_en": "Gamma vs Taskade (2026): Which is Better?",
+    "title_zh": "Gamma vs Taskade (2026): 哪个更好?"
+  },
+  {
+    "slug": "gamma-vs-read-ai",
+    "a": "gamma",
+    "b": "read-ai",
+    "title_en": "Gamma vs Read AI (2026): Which is Better?",
+    "title_zh": "Gamma vs Read AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "gamma-vs-consensus",
+    "a": "gamma",
+    "b": "consensus",
+    "title_en": "Gamma vs Consensus (2026): Which is Better?",
+    "title_zh": "Gamma vs Consensus (2026): 哪个更好?"
+  },
+  {
+    "slug": "gamma-vs-coda-ai",
+    "a": "gamma",
+    "b": "coda-ai",
+    "title_en": "Gamma vs Coda AI (2026): Which is Better?",
+    "title_zh": "Gamma vs Coda AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "elicit-vs-taskade",
+    "a": "elicit",
+    "b": "taskade",
+    "title_en": "Elicit vs Taskade (2026): Which is Better?",
+    "title_zh": "Elicit vs Taskade (2026): 哪个更好?"
+  },
+  {
+    "slug": "elicit-vs-read-ai",
+    "a": "elicit",
+    "b": "read-ai",
+    "title_en": "Elicit vs Read AI (2026): Which is Better?",
+    "title_zh": "Elicit vs Read AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "elicit-vs-coda-ai",
+    "a": "elicit",
+    "b": "coda-ai",
+    "title_en": "Elicit vs Coda AI (2026): Which is Better?",
+    "title_zh": "Elicit vs Coda AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "taskade-vs-read-ai",
+    "a": "taskade",
+    "b": "read-ai",
+    "title_en": "Taskade vs Read AI (2026): Which is Better?",
+    "title_zh": "Taskade vs Read AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "taskade-vs-consensus",
+    "a": "taskade",
+    "b": "consensus",
+    "title_en": "Taskade vs Consensus (2026): Which is Better?",
+    "title_zh": "Taskade vs Consensus (2026): 哪个更好?"
+  },
+  {
+    "slug": "taskade-vs-coda-ai",
+    "a": "taskade",
+    "b": "coda-ai",
+    "title_en": "Taskade vs Coda AI (2026): Which is Better?",
+    "title_zh": "Taskade vs Coda AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "read-ai-vs-consensus",
+    "a": "read-ai",
+    "b": "consensus",
+    "title_en": "Read AI vs Consensus (2026): Which is Better?",
+    "title_zh": "Read AI vs Consensus (2026): 哪个更好?"
+  },
+  {
+    "slug": "read-ai-vs-coda-ai",
+    "a": "read-ai",
+    "b": "coda-ai",
+    "title_en": "Read AI vs Coda AI (2026): Which is Better?",
+    "title_zh": "Read AI vs Coda AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "consensus-vs-coda-ai",
+    "a": "consensus",
+    "b": "coda-ai",
+    "title_en": "Consensus vs Coda AI (2026): Which is Better?",
+    "title_zh": "Consensus vs Coda AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "consensus-pro-vs-scite-ai",
+    "a": "consensus-pro",
+    "b": "scite-ai",
+    "title_en": "Consensus Pro vs Scite (2026): Which is Better?",
+    "title_zh": "Consensus Pro vs Scite (2026): 哪个更好?"
+  },
+  {
+    "slug": "consensus-pro-vs-inciteful",
+    "a": "consensus-pro",
+    "b": "inciteful",
+    "title_en": "Consensus Pro vs Inciteful (2026): Which is Better?",
+    "title_zh": "Consensus Pro vs Inciteful (2026): 哪个更好?"
+  },
+  {
+    "slug": "consensus-pro-vs-scholarcy",
+    "a": "consensus-pro",
+    "b": "scholarcy",
+    "title_en": "Consensus Pro vs Scholarcy (2026): Which is Better?",
+    "title_zh": "Consensus Pro vs Scholarcy (2026): 哪个更好?"
+  },
+  {
+    "slug": "consensus-pro-vs-paperpile",
+    "a": "consensus-pro",
+    "b": "paperpile",
+    "title_en": "Consensus Pro vs Paperpile (2026): Which is Better?",
+    "title_zh": "Consensus Pro vs Paperpile (2026): 哪个更好?"
+  },
+  {
+    "slug": "consensus-pro-vs-zotero-ai",
+    "a": "consensus-pro",
+    "b": "zotero-ai",
+    "title_en": "Consensus Pro vs Zotero AI (2026): Which is Better?",
+    "title_zh": "Consensus Pro vs Zotero AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "consensus-pro-vs-researchrabbit",
+    "a": "consensus-pro",
+    "b": "researchrabbit",
+    "title_en": "Consensus Pro vs Research Rabbit (2026): Which is Better?",
+    "title_zh": "Consensus Pro vs Research Rabbit (2026): 哪个更好?"
+  },
+  {
+    "slug": "consensus-pro-vs-connected-papers",
+    "a": "consensus-pro",
+    "b": "connected-papers",
+    "title_en": "Consensus Pro vs Connected Papers (2026): Which is Better?",
+    "title_zh": "Consensus Pro vs Connected Papers (2026): 哪个更好?"
+  },
+  {
+    "slug": "scite-ai-vs-inciteful",
+    "a": "scite-ai",
+    "b": "inciteful",
+    "title_en": "Scite vs Inciteful (2026): Which is Better?",
+    "title_zh": "Scite vs Inciteful (2026): 哪个更好?"
+  },
+  {
+    "slug": "scite-ai-vs-scholarcy",
+    "a": "scite-ai",
+    "b": "scholarcy",
+    "title_en": "Scite vs Scholarcy (2026): Which is Better?",
+    "title_zh": "Scite vs Scholarcy (2026): 哪个更好?"
+  },
+  {
+    "slug": "scite-ai-vs-paperpile",
+    "a": "scite-ai",
+    "b": "paperpile",
+    "title_en": "Scite vs Paperpile (2026): Which is Better?",
+    "title_zh": "Scite vs Paperpile (2026): 哪个更好?"
+  },
+  {
+    "slug": "scite-ai-vs-zotero-ai",
+    "a": "scite-ai",
+    "b": "zotero-ai",
+    "title_en": "Scite vs Zotero AI (2026): Which is Better?",
+    "title_zh": "Scite vs Zotero AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "scite-ai-vs-researchrabbit",
+    "a": "scite-ai",
+    "b": "researchrabbit",
+    "title_en": "Scite vs Research Rabbit (2026): Which is Better?",
+    "title_zh": "Scite vs Research Rabbit (2026): 哪个更好?"
+  },
+  {
+    "slug": "scite-ai-vs-connected-papers",
+    "a": "scite-ai",
+    "b": "connected-papers",
+    "title_en": "Scite vs Connected Papers (2026): Which is Better?",
+    "title_zh": "Scite vs Connected Papers (2026): 哪个更好?"
+  },
+  {
+    "slug": "inciteful-vs-scholarcy",
+    "a": "inciteful",
+    "b": "scholarcy",
+    "title_en": "Inciteful vs Scholarcy (2026): Which is Better?",
+    "title_zh": "Inciteful vs Scholarcy (2026): 哪个更好?"
+  },
+  {
+    "slug": "inciteful-vs-paperpile",
+    "a": "inciteful",
+    "b": "paperpile",
+    "title_en": "Inciteful vs Paperpile (2026): Which is Better?",
+    "title_zh": "Inciteful vs Paperpile (2026): 哪个更好?"
+  },
+  {
+    "slug": "inciteful-vs-zotero-ai",
+    "a": "inciteful",
+    "b": "zotero-ai",
+    "title_en": "Inciteful vs Zotero AI (2026): Which is Better?",
+    "title_zh": "Inciteful vs Zotero AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "inciteful-vs-researchrabbit",
+    "a": "inciteful",
+    "b": "researchrabbit",
+    "title_en": "Inciteful vs Research Rabbit (2026): Which is Better?",
+    "title_zh": "Inciteful vs Research Rabbit (2026): 哪个更好?"
+  },
+  {
+    "slug": "inciteful-vs-connected-papers",
+    "a": "inciteful",
+    "b": "connected-papers",
+    "title_en": "Inciteful vs Connected Papers (2026): Which is Better?",
+    "title_zh": "Inciteful vs Connected Papers (2026): 哪个更好?"
+  },
+  {
+    "slug": "scholarcy-vs-paperpile",
+    "a": "scholarcy",
+    "b": "paperpile",
+    "title_en": "Scholarcy vs Paperpile (2026): Which is Better?",
+    "title_zh": "Scholarcy vs Paperpile (2026): 哪个更好?"
+  },
+  {
+    "slug": "scholarcy-vs-zotero-ai",
+    "a": "scholarcy",
+    "b": "zotero-ai",
+    "title_en": "Scholarcy vs Zotero AI (2026): Which is Better?",
+    "title_zh": "Scholarcy vs Zotero AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "scholarcy-vs-researchrabbit",
+    "a": "scholarcy",
+    "b": "researchrabbit",
+    "title_en": "Scholarcy vs Research Rabbit (2026): Which is Better?",
+    "title_zh": "Scholarcy vs Research Rabbit (2026): 哪个更好?"
+  },
+  {
+    "slug": "scholarcy-vs-connected-papers",
+    "a": "scholarcy",
+    "b": "connected-papers",
+    "title_en": "Scholarcy vs Connected Papers (2026): Which is Better?",
+    "title_zh": "Scholarcy vs Connected Papers (2026): 哪个更好?"
+  },
+  {
+    "slug": "paperpile-vs-zotero-ai",
+    "a": "paperpile",
+    "b": "zotero-ai",
+    "title_en": "Paperpile vs Zotero AI (2026): Which is Better?",
+    "title_zh": "Paperpile vs Zotero AI (2026): 哪个更好?"
+  },
+  {
+    "slug": "paperpile-vs-researchrabbit",
+    "a": "paperpile",
+    "b": "researchrabbit",
+    "title_en": "Paperpile vs Research Rabbit (2026): Which is Better?",
+    "title_zh": "Paperpile vs Research Rabbit (2026): 哪个更好?"
+  },
+  {
+    "slug": "paperpile-vs-connected-papers",
+    "a": "paperpile",
+    "b": "connected-papers",
+    "title_en": "Paperpile vs Connected Papers (2026): Which is Better?",
+    "title_zh": "Paperpile vs Connected Papers (2026): 哪个更好?"
+  },
+  {
+    "slug": "zotero-ai-vs-researchrabbit",
+    "a": "zotero-ai",
+    "b": "researchrabbit",
+    "title_en": "Zotero AI vs Research Rabbit (2026): Which is Better?",
+    "title_zh": "Zotero AI vs Research Rabbit (2026): 哪个更好?"
+  },
+  {
+    "slug": "zotero-ai-vs-connected-papers",
+    "a": "zotero-ai",
+    "b": "connected-papers",
+    "title_en": "Zotero AI vs Connected Papers (2026): Which is Better?",
+    "title_zh": "Zotero AI vs Connected Papers (2026): 哪个更好?"
+  },
+  {
+    "slug": "researchrabbit-vs-connected-papers",
+    "a": "researchrabbit",
+    "b": "connected-papers",
+    "title_en": "Research Rabbit vs Connected Papers (2026): Which is Better?",
+    "title_zh": "Research Rabbit vs Connected Papers (2026): 哪个更好?"
   }
 ]
