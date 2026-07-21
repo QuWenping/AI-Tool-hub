@@ -13,6 +13,7 @@ import FeatureTable from "../../components/ui/FeatureTable.astro";
 import TestStatus from "../../components/ui/TestStatus.astro";
 import ToolFAQ from "../../components/ui/ToolFAQ.astro";
 import ScreenshotGallery from "../../components/ui/ScreenshotGallery.astro";
+import ScoreCard from "../../components/ui/ScoreCard.astro";
 
 export async function getStaticPaths() {
   return Object.entries(toolsData)
@@ -87,6 +88,7 @@ const appCategory = appCategoryMap[tCat] || "MultimediaApplication";
 // Rating: prefer editorial score, fallback for reviewed tools
 const editorialScore = editorial?.score;
 const rating = editorialScore || null;
+const scoreBreakdown = editorial?.scoreBreakdown || null;
 
 // Pricing: prefer editorial pricingSummary, fall back to catalog pricing field
 const pricingSummaryEn = editorial?.pricingSummary?.en
@@ -266,6 +268,10 @@ const tocSections = [
     <p class="lede">{tShortEn}</p>
 
     <QuickFacts items={quickFactsEn} />
+
+    {isReviewed && rating && scoreBreakdown && (
+      <ScoreCard score={rating} breakdown={scoreBreakdown} toolName={tNameEn} />
+    )}
 
     <TLDR items={[
       `${tNameEn} is a ${catLabelEn.toLowerCase()} AI tool: ${tShortEn || tLongEn || "an AI-powered helper"}.`,

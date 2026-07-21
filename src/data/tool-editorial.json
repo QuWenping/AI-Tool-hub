@@ -4,412 +4,1609 @@
     "updatedAt": "2026-07-19",
     "testedVersion": "GPT-5 / GPT-4o (Plus)",
     "score": 9.2,
-    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Web","iOS","Android","Desktop"] },
-    "pricingSummary": { "en": "Free tier with GPT-4o mini · Plus $20/mo unlocks GPT-5, image generation, voice mode.", "zh": "免费版含 GPT-4o mini；Plus 20 美元/月解锁 GPT-5、图像、语音。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "iOS",
+        "Android",
+        "Desktop"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with GPT-4o mini · Plus $20/mo unlocks GPT-5, image generation, voice mode.",
+      "zh": "免费版含 GPT-4o mini；Plus 20 美元/月解锁 GPT-5、图像、语音。"
+    },
     "faq": [
-      { "q_en": "Is ChatGPT free to use?", "q_zh": "ChatGPT 免费吗？", "a_en": "Yes. The free tier ships GPT-4o mini. The $20/month Plus plan adds GPT-5, image generation, and voice mode.", "a_zh": "免费版包含 GPT-4o mini。Plus（20 美元/月）解锁 GPT-5、图像生成和语音模式。" },
-      { "q_en": "What is ChatGPT best for?", "q_zh": "ChatGPT 最适合什么？", "a_en": "General thinking, drafting, and quick research. It is the strongest all-round assistant we tested for daily productivity.", "a_zh": "通用思考、写作草稿和快速研究。是我们实测中最全能的日常助手。" },
-      { "q_en": "How does ChatGPT compare with Claude?", "q_zh": "ChatGPT 和 Claude 有什么区别？", "a_en": "ChatGPT is more well-rounded with voice, image and plugins; Claude produces more natural long-form writing and handles longer documents.", "a_zh": "ChatGPT 更全能（语音、图像、插件），Claude 长文写作更自然、长文档能力更强。" },
-      { "q_en": "Does ChatGPT have an API?", "q_zh": "ChatGPT 有 API 吗？", "a_en": "Yes. OpenAI exposes GPT models via the OpenAI API with usage-based pricing.", "a_zh": "有。OpenAI 通过按量计费的 OpenAI API 提供 GPT 模型。" }
-    ]
+      {
+        "q_en": "Is ChatGPT free to use?",
+        "q_zh": "ChatGPT 免费吗？",
+        "a_en": "Yes. The free tier ships GPT-4o mini. The $20/month Plus plan adds GPT-5, image generation, and voice mode.",
+        "a_zh": "免费版包含 GPT-4o mini。Plus（20 美元/月）解锁 GPT-5、图像生成和语音模式。"
+      },
+      {
+        "q_en": "What is ChatGPT best for?",
+        "q_zh": "ChatGPT 最适合什么？",
+        "a_en": "General thinking, drafting, and quick research. It is the strongest all-round assistant we tested for daily productivity.",
+        "a_zh": "通用思考、写作草稿和快速研究。是我们实测中最全能的日常助手。"
+      },
+      {
+        "q_en": "How does ChatGPT compare with Claude?",
+        "q_zh": "ChatGPT 和 Claude 有什么区别？",
+        "a_en": "ChatGPT is more well-rounded with voice, image and plugins; Claude produces more natural long-form writing and handles longer documents.",
+        "a_zh": "ChatGPT 更全能（语音、图像、插件），Claude 长文写作更自然、长文档能力更强。"
+      },
+      {
+        "q_en": "Does ChatGPT have an API?",
+        "q_zh": "ChatGPT 有 API 吗？",
+        "a_en": "Yes. OpenAI exposes GPT models via the OpenAI API with usage-based pricing.",
+        "a_zh": "有。OpenAI 通过按量计费的 OpenAI API 提供 GPT 模型。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 9.2,
+      "capability": 7,
+      "price": 10,
+      "growth": 8,
+      "trust": 8
+    }
   },
   "claude": {
     "reviewed": true,
     "updatedAt": "2026-07-19",
     "testedVersion": "Claude 3.5 Sonnet / Opus",
-    "score": 9.0,
-    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Web","iOS","Android","Desktop"] },
-    "pricingSummary": { "en": "Free tier with limits · Pro $20/mo unlocks larger context and Artifacts.", "zh": "免费版有额度限制；Pro 20 美元/月解锁更大上下文和 Artifacts。" },
+    "score": 9,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "iOS",
+        "Android",
+        "Desktop"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with limits · Pro $20/mo unlocks larger context and Artifacts.",
+      "zh": "免费版有额度限制；Pro 20 美元/月解锁更大上下文和 Artifacts。"
+    },
     "faq": [
-      { "q_en": "What context length does Claude support?", "q_zh": "Claude 支持多长上下文？", "a_en": "Claude Pro supports a 200K-token context window, enough for a 100+ page document in one prompt.", "a_zh": "Claude Pro 支持 200K token 上下文，可一次处理 100 页以上文档。" },
-      { "q_en": "Is Claude better than ChatGPT for writing?", "q_zh": "Claude 写作比 ChatGPT 更好吗？", "a_en": "For long-form English writing with a natural voice, Claude is our top pick.", "a_zh": "在自然风格的长文英文写作上，Claude 是我们的首选。" },
-      { "q_en": "Does Claude connect to the web?", "q_zh": "Claude 能联网吗？", "a_en": "Native web browsing is limited today; use Perplexity or Gemini when live search is critical.", "a_zh": "原生联网较弱；需要实时联网请选 Perplexity 或 Gemini。" },
-      { "q_en": "Is Claude available worldwide?", "q_zh": "Claude 全球可用吗？", "a_en": "Availability varies by region. Anthropic publishes an up-to-date list of supported countries.", "a_zh": "可用地区因国家而异，请以 Anthropic 官方列表为准。" }
-    ]
+      {
+        "q_en": "What context length does Claude support?",
+        "q_zh": "Claude 支持多长上下文？",
+        "a_en": "Claude Pro supports a 200K-token context window, enough for a 100+ page document in one prompt.",
+        "a_zh": "Claude Pro 支持 200K token 上下文，可一次处理 100 页以上文档。"
+      },
+      {
+        "q_en": "Is Claude better than ChatGPT for writing?",
+        "q_zh": "Claude 写作比 ChatGPT 更好吗？",
+        "a_en": "For long-form English writing with a natural voice, Claude is our top pick.",
+        "a_zh": "在自然风格的长文英文写作上，Claude 是我们的首选。"
+      },
+      {
+        "q_en": "Does Claude connect to the web?",
+        "q_zh": "Claude 能联网吗？",
+        "a_en": "Native web browsing is limited today; use Perplexity or Gemini when live search is critical.",
+        "a_zh": "原生联网较弱；需要实时联网请选 Perplexity 或 Gemini。"
+      },
+      {
+        "q_en": "Is Claude available worldwide?",
+        "q_zh": "Claude 全球可用吗？",
+        "a_en": "Availability varies by region. Anthropic publishes an up-to-date list of supported countries.",
+        "a_zh": "可用地区因国家而异，请以 Anthropic 官方列表为准。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 9,
+      "capability": 7,
+      "price": 10,
+      "growth": 8,
+      "trust": 8
+    }
   },
   "gemini": {
     "reviewed": true,
     "updatedAt": "2026-07-19",
     "testedVersion": "Gemini 2.5 Pro",
     "score": 8.6,
-    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Web","iOS","Android"] },
-    "pricingSummary": { "en": "Generous free tier · Gemini Advanced $20/mo unlocks 2M context and Gemini Live.", "zh": "免费额度较慷慨；Gemini Advanced 20 美元/月解锁 2M 上下文和 Gemini Live。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "iOS",
+        "Android"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Generous free tier · Gemini Advanced $20/mo unlocks 2M context and Gemini Live.",
+      "zh": "免费额度较慷慨；Gemini Advanced 20 美元/月解锁 2M 上下文和 Gemini Live。"
+    },
     "faq": [
-      { "q_en": "What can Gemini do that ChatGPT cannot?", "q_zh": "Gemini 有哪些优势？", "a_en": "Native video understanding, a 2-million-token context window, and deep Google Search integration.", "a_zh": "原生视频理解、200 万 token 上下文和最深的 Google 搜索集成。" },
-      { "q_en": "Does Gemini support voice?", "q_zh": "Gemini 支持语音吗？", "a_en": "Yes. Gemini Live offers real-time voice conversations with natural intonation.", "a_zh": "支持。Gemini Live 提供自然语音对话。" },
-      { "q_en": "Is Gemini free?", "q_zh": "Gemini 免费吗？", "a_en": "Base Gemini is free. Gemini Advanced costs $20/month for higher limits and features.", "a_zh": "基础版免费；Advanced 20 美元/月解锁更高额度和功能。" }
-    ]
+      {
+        "q_en": "What can Gemini do that ChatGPT cannot?",
+        "q_zh": "Gemini 有哪些优势？",
+        "a_en": "Native video understanding, a 2-million-token context window, and deep Google Search integration.",
+        "a_zh": "原生视频理解、200 万 token 上下文和最深的 Google 搜索集成。"
+      },
+      {
+        "q_en": "Does Gemini support voice?",
+        "q_zh": "Gemini 支持语音吗？",
+        "a_en": "Yes. Gemini Live offers real-time voice conversations with natural intonation.",
+        "a_zh": "支持。Gemini Live 提供自然语音对话。"
+      },
+      {
+        "q_en": "Is Gemini free?",
+        "q_zh": "Gemini 免费吗？",
+        "a_en": "Base Gemini is free. Gemini Advanced costs $20/month for higher limits and features.",
+        "a_zh": "基础版免费；Advanced 20 美元/月解锁更高额度和功能。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.6,
+      "capability": 7,
+      "price": 10,
+      "growth": 7,
+      "trust": 8
+    }
   },
   "github-copilot": {
     "reviewed": true,
     "updatedAt": "2026-07-19",
     "testedVersion": "GitHub Copilot (2026)",
     "score": 8.4,
-    "quickFacts": { "freeTier": true, "hasApi": false, "platforms": ["VS Code","JetBrains","Neovim","Visual Studio"] },
-    "pricingSummary": { "en": "Free for verified students · Individual $10/mo · Business $19/mo.", "zh": "学生免费；个人版 10 美元/月，团队版 19 美元/月。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "VS Code",
+        "JetBrains",
+        "Neovim",
+        "Visual Studio"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free for verified students · Individual $10/mo · Business $19/mo.",
+      "zh": "学生免费；个人版 10 美元/月，团队版 19 美元/月。"
+    },
     "faq": [
-      { "q_en": "Is GitHub Copilot free?", "q_zh": "GitHub Copilot 免费吗？", "a_en": "Free for verified students, open-source maintainers, and teachers. Others start at $10/month.", "a_zh": "学生、开源维护者和教师免费；其他用户 10 美元/月起。" },
-      { "q_en": "Does Copilot support multi-file editing?", "q_zh": "Copilot 支持多文件编辑吗？", "a_en": "Copilot Chat handles some multi-file edits; for repo-wide agent work Cursor is more capable.", "a_zh": "Copilot Chat 支持部分多文件编辑；仓库级 Agent 场景 Cursor 更强。" },
-      { "q_en": "Which languages does Copilot support?", "q_zh": "Copilot 支持哪些语言？", "a_en": "30+ languages including Python, JavaScript/TypeScript, Go, Rust, Java and C#.", "a_zh": "30+ 语言，涵盖 Python、JavaScript/TypeScript、Go、Rust、Java、C# 等。" }
-    ]
+      {
+        "q_en": "Is GitHub Copilot free?",
+        "q_zh": "GitHub Copilot 免费吗？",
+        "a_en": "Free for verified students, open-source maintainers, and teachers. Others start at $10/month.",
+        "a_zh": "学生、开源维护者和教师免费；其他用户 10 美元/月起。"
+      },
+      {
+        "q_en": "Does Copilot support multi-file editing?",
+        "q_zh": "Copilot 支持多文件编辑吗？",
+        "a_en": "Copilot Chat handles some multi-file edits; for repo-wide agent work Cursor is more capable.",
+        "a_zh": "Copilot Chat 支持部分多文件编辑；仓库级 Agent 场景 Cursor 更强。"
+      },
+      {
+        "q_en": "Which languages does Copilot support?",
+        "q_zh": "Copilot 支持哪些语言？",
+        "a_en": "30+ languages including Python, JavaScript/TypeScript, Go, Rust, Java and C#.",
+        "a_zh": "30+ 语言，涵盖 Python、JavaScript/TypeScript、Go、Rust、Java、C# 等。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.4,
+      "capability": 7,
+      "price": 10,
+      "growth": 6,
+      "trust": 8
+    }
   },
   "cursor": {
     "reviewed": true,
     "updatedAt": "2026-07-19",
     "testedVersion": "Cursor 2026 (Agent Mode)",
-    "score": 9.0,
-    "quickFacts": { "freeTier": true, "hasApi": false, "platforms": ["macOS","Windows","Linux"] },
-    "pricingSummary": { "en": "Hobby tier is free · Pro $20/mo unlocks larger models and Agent mode.", "zh": "免费版可用；Pro 20 美元/月解锁大模型与 Agent 模式。" },
+    "score": 9,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Hobby tier is free · Pro $20/mo unlocks larger models and Agent mode.",
+      "zh": "免费版可用；Pro 20 美元/月解锁大模型与 Agent 模式。"
+    },
     "faq": [
-      { "q_en": "How is Cursor different from VS Code?", "q_zh": "Cursor 与 VS Code 有什么不同？", "a_en": "Cursor is a VS Code fork with GPT-4-level AI, codebase chat, and multi-file agent mode built in.", "a_zh": "Cursor 是 VS Code 分支，内置 GPT-4 级 AI、代码库对话和多文件 Agent 模式。" },
-      { "q_en": "Is Cursor worth $20/month?", "q_zh": "Cursor 值 20 美元/月吗？", "a_en": "For full-time developers refactoring code daily, it usually pays back within the first week.", "a_zh": "对每天重构代码的全职开发者，通常一周内就能回本。" },
-      { "q_en": "Can Cursor read my entire codebase?", "q_zh": "Cursor 可以阅读整个代码库吗？", "a_en": "Yes. It indexes your project and lets you chat with the full codebase context.", "a_zh": "可以。Cursor 会索引项目并允许你基于整仓上下文对话。" }
-    ]
+      {
+        "q_en": "How is Cursor different from VS Code?",
+        "q_zh": "Cursor 与 VS Code 有什么不同？",
+        "a_en": "Cursor is a VS Code fork with GPT-4-level AI, codebase chat, and multi-file agent mode built in.",
+        "a_zh": "Cursor 是 VS Code 分支，内置 GPT-4 级 AI、代码库对话和多文件 Agent 模式。"
+      },
+      {
+        "q_en": "Is Cursor worth $20/month?",
+        "q_zh": "Cursor 值 20 美元/月吗？",
+        "a_en": "For full-time developers refactoring code daily, it usually pays back within the first week.",
+        "a_zh": "对每天重构代码的全职开发者，通常一周内就能回本。"
+      },
+      {
+        "q_en": "Can Cursor read my entire codebase?",
+        "q_zh": "Cursor 可以阅读整个代码库吗？",
+        "a_en": "Yes. It indexes your project and lets you chat with the full codebase context.",
+        "a_zh": "可以。Cursor 会索引项目并允许你基于整仓上下文对话。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 9,
+      "capability": 7,
+      "price": 10,
+      "growth": 5,
+      "trust": 8
+    }
   },
   "midjourney": {
     "reviewed": true,
     "updatedAt": "2026-07-19",
     "testedVersion": "Midjourney v7",
-    "score": 9.0,
-    "quickFacts": { "freeTier": false, "hasApi": false, "platforms": ["Web","Discord"] },
-    "pricingSummary": { "en": "Basic $10/mo · Standard $30/mo · Pro $60/mo · Mega $120/mo.", "zh": "基础版 10 美元/月；标准 30；Pro 60；Mega 120 美元/月。" },
+    "score": 9,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web",
+        "Discord"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Basic $10/mo · Standard $30/mo · Pro $60/mo · Mega $120/mo.",
+      "zh": "基础版 10 美元/月；标准 30；Pro 60；Mega 120 美元/月。"
+    },
     "faq": [
-      { "q_en": "Does Midjourney offer a free tier?", "q_zh": "Midjourney 有免费额度吗？", "a_en": "No. Paid subscriptions start at $10/month.", "a_zh": "没有免费额度，10 美元/月起。" },
-      { "q_en": "Where do I generate images?", "q_zh": "如何生成图像？", "a_en": "The web app and the Discord bot both work; the web app is the recommended default in 2026.", "a_zh": "支持网页版和 Discord；2026 年推荐使用网页版。" },
-      { "q_en": "Can I use Midjourney commercially?", "q_zh": "Midjourney 可以商用吗？", "a_en": "Standard and higher plans grant commercial usage rights.", "a_zh": "标准版及以上支持商用。" }
-    ]
+      {
+        "q_en": "Does Midjourney offer a free tier?",
+        "q_zh": "Midjourney 有免费额度吗？",
+        "a_en": "No. Paid subscriptions start at $10/month.",
+        "a_zh": "没有免费额度，10 美元/月起。"
+      },
+      {
+        "q_en": "Where do I generate images?",
+        "q_zh": "如何生成图像？",
+        "a_en": "The web app and the Discord bot both work; the web app is the recommended default in 2026.",
+        "a_zh": "支持网页版和 Discord；2026 年推荐使用网页版。"
+      },
+      {
+        "q_en": "Can I use Midjourney commercially?",
+        "q_zh": "Midjourney 可以商用吗？",
+        "a_en": "Standard and higher plans grant commercial usage rights.",
+        "a_zh": "标准版及以上支持商用。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 9,
+      "capability": 7,
+      "price": 5,
+      "growth": 5,
+      "trust": 8
+    }
   },
   "stable-diffusion": {
     "reviewed": true,
     "updatedAt": "2026-07-19",
     "testedVersion": "Stable Diffusion 3.5",
-    "score": 8.0,
-    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Self-hosted","Web (cloud)","API"] },
-    "pricingSummary": { "en": "Open source and free to self-host · Cloud hosts charge per generation.", "zh": "开源可自部署；云服务按次收费。" },
+    "score": 8,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Self-hosted",
+        "Web (cloud)",
+        "API"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Open source and free to self-host · Cloud hosts charge per generation.",
+      "zh": "开源可自部署；云服务按次收费。"
+    },
     "faq": [
-      { "q_en": "Do I need a GPU for Stable Diffusion?", "q_zh": "Stable Diffusion 需要 GPU 吗？", "a_en": "Yes for local runs; cloud hosts (RunDiffusion, ThinkDiffusion) work without local hardware.", "a_zh": "本地运行需要 GPU；也可用 RunDiffusion、ThinkDiffusion 等云服务。" },
-      { "q_en": "How does SD compare with Midjourney?", "q_zh": "SD 和 Midjourney 有什么区别？", "a_en": "SD offers more control (LoRA, ControlNet, ComfyUI) but a steeper learning curve; Midjourney is easier for stylish output.", "a_zh": "SD 可控性更强（LoRA、ControlNet、ComfyUI），学习曲线陡；Midjourney 更适合快速出美感。" },
-      { "q_en": "Is commercial use allowed?", "q_zh": "商用允许吗？", "a_en": "Yes, subject to the Stability AI community license.", "a_zh": "允许，须遵守 Stability AI 社区许可证。" }
-    ]
+      {
+        "q_en": "Do I need a GPU for Stable Diffusion?",
+        "q_zh": "Stable Diffusion 需要 GPU 吗？",
+        "a_en": "Yes for local runs; cloud hosts (RunDiffusion, ThinkDiffusion) work without local hardware.",
+        "a_zh": "本地运行需要 GPU；也可用 RunDiffusion、ThinkDiffusion 等云服务。"
+      },
+      {
+        "q_en": "How does SD compare with Midjourney?",
+        "q_zh": "SD 和 Midjourney 有什么区别？",
+        "a_en": "SD offers more control (LoRA, ControlNet, ComfyUI) but a steeper learning curve; Midjourney is easier for stylish output.",
+        "a_zh": "SD 可控性更强（LoRA、ControlNet、ComfyUI），学习曲线陡；Midjourney 更适合快速出美感。"
+      },
+      {
+        "q_en": "Is commercial use allowed?",
+        "q_zh": "商用允许吗？",
+        "a_en": "Yes, subject to the Stability AI community license.",
+        "a_zh": "允许，须遵守 Stability AI 社区许可证。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8,
+      "capability": 7,
+      "price": 10,
+      "growth": 7,
+      "trust": 8
+    }
   },
   "leonardo": {
     "reviewed": true,
     "updatedAt": "2026-07-19",
     "testedVersion": "Leonardo.AI 2026",
     "score": 8.2,
-    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Web"] },
-    "pricingSummary": { "en": "Free daily credits · Apprentice $12/mo · Artisan $30/mo · Maestro $60/mo.", "zh": "每日免费额度；Apprentice 12；Artisan 30；Maestro 60 美元/月。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free daily credits · Apprentice $12/mo · Artisan $30/mo · Maestro $60/mo.",
+      "zh": "每日免费额度；Apprentice 12；Artisan 30；Maestro 60 美元/月。"
+    },
     "faq": [
-      { "q_en": "What is Leonardo best for?", "q_zh": "Leonardo 最适合什么？", "a_en": "Game art, character design and concept art; Alchemy mode keeps style consistency across generations.", "a_zh": "游戏美术、角色设计和概念图；Alchemy 模式保持风格一致。" },
-      { "q_en": "Is there a free plan?", "q_zh": "有免费版吗？", "a_en": "Yes, with daily credits refreshed automatically.", "a_zh": "有，每天自动刷新额度。" }
-    ]
+      {
+        "q_en": "What is Leonardo best for?",
+        "q_zh": "Leonardo 最适合什么？",
+        "a_en": "Game art, character design and concept art; Alchemy mode keeps style consistency across generations.",
+        "a_zh": "游戏美术、角色设计和概念图；Alchemy 模式保持风格一致。"
+      },
+      {
+        "q_en": "Is there a free plan?",
+        "q_zh": "有免费版吗？",
+        "a_en": "Yes, with daily credits refreshed automatically.",
+        "a_zh": "有，每天自动刷新额度。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.2,
+      "capability": 7,
+      "price": 10,
+      "growth": 7,
+      "trust": 8
+    }
   },
   "sora": {
     "reviewed": true,
     "updatedAt": "2026-07-19",
     "testedVersion": "Sora 2 (2026)",
     "score": 8.2,
-    "quickFacts": { "freeTier": false, "hasApi": false, "platforms": ["Web"] },
-    "pricingSummary": { "en": "ChatGPT Plus $20/mo includes limited access · Pro tiers scale to $200/mo.", "zh": "包含在 ChatGPT Plus（20 美元/月）中限量访问；Pro 版最高 200 美元/月。" },
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "ChatGPT Plus $20/mo includes limited access · Pro tiers scale to $200/mo.",
+      "zh": "包含在 ChatGPT Plus（20 美元/月）中限量访问；Pro 版最高 200 美元/月。"
+    },
     "faq": [
-      { "q_en": "Is Sora available to everyone?", "q_zh": "Sora 全球可用吗？", "a_en": "Availability depends on region and OpenAI’s rollout; check the official announcement.", "a_zh": "可用性受地区和 OpenAI 推出节奏影响，请以官方公告为准。" },
-      { "q_en": "What clip length does Sora support?", "q_zh": "Sora 单段时长多长？", "a_en": "Up to 20 seconds per clip with strong character/physics consistency.", "a_zh": "最长 20 秒/段，角色与物理一致性表现出色。" }
-    ]
+      {
+        "q_en": "Is Sora available to everyone?",
+        "q_zh": "Sora 全球可用吗？",
+        "a_en": "Availability depends on region and OpenAI’s rollout; check the official announcement.",
+        "a_zh": "可用性受地区和 OpenAI 推出节奏影响，请以官方公告为准。"
+      },
+      {
+        "q_en": "What clip length does Sora support?",
+        "q_zh": "Sora 单段时长多长？",
+        "a_en": "Up to 20 seconds per clip with strong character/physics consistency.",
+        "a_zh": "最长 20 秒/段，角色与物理一致性表现出色。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.2,
+      "capability": 7,
+      "price": 5,
+      "growth": 5,
+      "trust": 8
+    }
   },
   "runway": {
     "reviewed": true,
     "updatedAt": "2026-07-19",
     "testedVersion": "Runway Gen-3 Alpha",
     "score": 8.8,
-    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Web","API"] },
-    "pricingSummary": { "en": "Free tier with limited credits · Standard $15/mo · Pro $35/mo · Unlimited $95/mo.", "zh": "免费额度有限；标准 15；Pro 35；Unlimited 95 美元/月。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "API"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with limited credits · Standard $15/mo · Pro $35/mo · Unlimited $95/mo.",
+      "zh": "免费额度有限；标准 15；Pro 35；Unlimited 95 美元/月。"
+    },
     "faq": [
-      { "q_en": "Which Runway plan should I pick?", "q_zh": "Runway 应该选哪一档？", "a_en": "The $35/month Pro plan is the sweet spot for creators shipping regular content.", "a_zh": "常规创作者建议选 35 美元/月的 Pro 版。" },
-      { "q_en": "Does Runway offer editing tools?", "q_zh": "Runway 是否有剪辑工具？", "a_en": "Yes — motion brush, inpainting, storyboard, and Gen-3 upscale ship in the app.", "a_zh": "内置运动笔刷、图像补全、故事板和 Gen-3 放大。" }
-    ]
+      {
+        "q_en": "Which Runway plan should I pick?",
+        "q_zh": "Runway 应该选哪一档？",
+        "a_en": "The $35/month Pro plan is the sweet spot for creators shipping regular content.",
+        "a_zh": "常规创作者建议选 35 美元/月的 Pro 版。"
+      },
+      {
+        "q_en": "Does Runway offer editing tools?",
+        "q_zh": "Runway 是否有剪辑工具？",
+        "a_en": "Yes — motion brush, inpainting, storyboard, and Gen-3 upscale ship in the app.",
+        "a_zh": "内置运动笔刷、图像补全、故事板和 Gen-3 放大。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.8,
+      "capability": 7,
+      "price": 10,
+      "growth": 7,
+      "trust": 8
+    }
   },
   "elevenlabs": {
     "reviewed": true,
     "updatedAt": "2026-07-19",
     "testedVersion": "ElevenLabs v3",
-    "score": 9.0,
-    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Web","API"] },
-    "pricingSummary": { "en": "Starter $5/mo · Creator $22/mo · Pro $99/mo · Scale $330/mo.", "zh": "Starter 5；Creator 22；Pro 99；Scale 330 美元/月。" },
+    "score": 9,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "API"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starter $5/mo · Creator $22/mo · Pro $99/mo · Scale $330/mo.",
+      "zh": "Starter 5；Creator 22；Pro 99；Scale 330 美元/月。"
+    },
     "faq": [
-      { "q_en": "Can ElevenLabs clone my voice?", "q_zh": "ElevenLabs 能克隆我的声音吗？", "a_en": "Yes. Instant voice cloning requires only a short reference sample; professional cloning improves quality.", "a_zh": "支持。即时克隆只需少量样本；专业克隆效果更佳。" },
-      { "q_en": "How many languages are supported?", "q_zh": "支持多少语言？", "a_en": "29 languages with natural intonation, including Chinese.", "a_zh": "29 种语言（含中文）语音自然。" }
-    ]
+      {
+        "q_en": "Can ElevenLabs clone my voice?",
+        "q_zh": "ElevenLabs 能克隆我的声音吗？",
+        "a_en": "Yes. Instant voice cloning requires only a short reference sample; professional cloning improves quality.",
+        "a_zh": "支持。即时克隆只需少量样本；专业克隆效果更佳。"
+      },
+      {
+        "q_en": "How many languages are supported?",
+        "q_zh": "支持多少语言？",
+        "a_en": "29 languages with natural intonation, including Chinese.",
+        "a_zh": "29 种语言（含中文）语音自然。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 9,
+      "capability": 7,
+      "price": 10,
+      "growth": 7,
+      "trust": 8
+    }
   },
   "suno": {
     "reviewed": true,
     "updatedAt": "2026-07-19",
     "testedVersion": "Suno v4",
     "score": 8.4,
-    "quickFacts": { "freeTier": true, "hasApi": false, "platforms": ["Web","iOS"] },
-    "pricingSummary": { "en": "Free daily credits · Pro $10/mo · Premier $30/mo.", "zh": "每日免费额度；Pro 10；Premier 30 美元/月。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web",
+        "iOS"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free daily credits · Pro $10/mo · Premier $30/mo.",
+      "zh": "每日免费额度；Pro 10；Premier 30 美元/月。"
+    },
     "faq": [
-      { "q_en": "Can I use Suno tracks commercially?", "q_zh": "Suno 生成的音乐可以商用吗？", "a_en": "Paid plans grant commercial usage rights.", "a_zh": "付费版本支持商用。" },
-      { "q_en": "Does Suno work in Chinese?", "q_zh": "Suno 支持中文吗？", "a_en": "Yes. Chinese lyrics generate cleanly in Suno v4.", "a_zh": "支持。Suno v4 生成中文歌词效果良好。" }
-    ]
+      {
+        "q_en": "Can I use Suno tracks commercially?",
+        "q_zh": "Suno 生成的音乐可以商用吗？",
+        "a_en": "Paid plans grant commercial usage rights.",
+        "a_zh": "付费版本支持商用。"
+      },
+      {
+        "q_en": "Does Suno work in Chinese?",
+        "q_zh": "Suno 支持中文吗？",
+        "a_en": "Yes. Chinese lyrics generate cleanly in Suno v4.",
+        "a_zh": "支持。Suno v4 生成中文歌词效果良好。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.4,
+      "capability": 7,
+      "price": 10,
+      "growth": 5,
+      "trust": 8
+    }
   },
   "descript": {
     "reviewed": true,
     "updatedAt": "2026-07-19",
     "testedVersion": "Descript 2026",
     "score": 8.6,
-    "quickFacts": { "freeTier": true, "hasApi": false, "platforms": ["macOS","Windows","Web"] },
-    "pricingSummary": { "en": "Free tier · Hobbyist $24/mo · Pro $33/mo.", "zh": "免费版；Hobbyist 24；Pro 33 美元/月。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier · Hobbyist $24/mo · Pro $33/mo.",
+      "zh": "免费版；Hobbyist 24；Pro 33 美元/月。"
+    },
     "faq": [
-      { "q_en": "What is transcript-based editing?", "q_zh": "什么是转写驱动的剪辑？", "a_en": "You edit the transcript and Descript trims the audio/video to match.", "a_zh": "编辑文字稿即可自动裁剪对应音视频。" },
-      { "q_en": "Does Descript remove filler words?", "q_zh": "Descript 能自动去掉口头禅吗？", "a_en": "Yes. Filler word removal is built in and works on speech in real time.", "a_zh": "支持自动去除口头禅，实时生效。" }
-    ]
+      {
+        "q_en": "What is transcript-based editing?",
+        "q_zh": "什么是转写驱动的剪辑？",
+        "a_en": "You edit the transcript and Descript trims the audio/video to match.",
+        "a_zh": "编辑文字稿即可自动裁剪对应音视频。"
+      },
+      {
+        "q_en": "Does Descript remove filler words?",
+        "q_zh": "Descript 能自动去掉口头禅吗？",
+        "a_en": "Yes. Filler word removal is built in and works on speech in real time.",
+        "a_zh": "支持自动去除口头禅，实时生效。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.6,
+      "capability": 7,
+      "price": 10,
+      "growth": 5,
+      "trust": 8
+    }
   },
   "notion-ai": {
     "reviewed": true,
     "updatedAt": "2026-07-19",
     "testedVersion": "Notion AI 2026",
     "score": 8.2,
-    "quickFacts": { "freeTier": false, "hasApi": false, "platforms": ["Web","macOS","Windows","iOS","Android"] },
-    "pricingSummary": { "en": "$10/user/month add-on to any Notion plan.", "zh": "作为 Notion 附加组件，10 美元/用户/月。" },
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web",
+        "macOS",
+        "Windows",
+        "iOS",
+        "Android"
+      ]
+    },
+    "pricingSummary": {
+      "en": "$10/user/month add-on to any Notion plan.",
+      "zh": "作为 Notion 附加组件，10 美元/用户/月。"
+    },
     "faq": [
-      { "q_en": "Do I need Notion to use Notion AI?", "q_zh": "使用 Notion AI 必须先用 Notion 吗？", "a_en": "Yes. Notion AI is an add-on inside the Notion workspace.", "a_zh": "是。Notion AI 是 Notion 工作区中的附加组件。" },
-      { "q_en": "Is Notion AI worth it?", "q_zh": "Notion AI 值得开通吗？", "a_en": "For teams already using Notion for docs, yes — it summarizes and drafts inside your existing knowledge base.", "a_zh": "已经在用 Notion 写文档的团队值得开通，可直接在知识库内总结和起草。" }
-    ]
+      {
+        "q_en": "Do I need Notion to use Notion AI?",
+        "q_zh": "使用 Notion AI 必须先用 Notion 吗？",
+        "a_en": "Yes. Notion AI is an add-on inside the Notion workspace.",
+        "a_zh": "是。Notion AI 是 Notion 工作区中的附加组件。"
+      },
+      {
+        "q_en": "Is Notion AI worth it?",
+        "q_zh": "Notion AI 值得开通吗？",
+        "a_en": "For teams already using Notion for docs, yes — it summarizes and drafts inside your existing knowledge base.",
+        "a_zh": "已经在用 Notion 写文档的团队值得开通，可直接在知识库内总结和起草。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.2,
+      "capability": 7,
+      "price": 5,
+      "growth": 6,
+      "trust": 8
+    }
   },
   "perplexity": {
     "reviewed": true,
     "updatedAt": "2026-07-19",
     "testedVersion": "Perplexity 2026",
     "score": 8.8,
-    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Web","iOS","Android"] },
-    "pricingSummary": { "en": "Free tier · Pro $20/mo unlocks unlimited Pro Search and file upload.", "zh": "免费版；Pro 20 美元/月解锁无限 Pro Search 和文件上传。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "iOS",
+        "Android"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier · Pro $20/mo unlocks unlimited Pro Search and file upload.",
+      "zh": "免费版；Pro 20 美元/月解锁无限 Pro Search 和文件上传。"
+    },
     "faq": [
-      { "q_en": "Is Perplexity a search engine or a chatbot?", "q_zh": "Perplexity 是搜索还是聊天？", "a_en": "Both. It answers like a chatbot but cites live sources for every claim.", "a_zh": "两者兼具：像聊天一样答复，同时逐条引用可查证的来源。" },
-      { "q_en": "Does Perplexity replace Google?", "q_zh": "Perplexity 能取代 Google 吗？", "a_en": "For research and product comparison it is often faster; for navigational search Google is still preferred.", "a_zh": "研究和产品对比更快；导航式搜索仍以 Google 为主。" }
-    ]
+      {
+        "q_en": "Is Perplexity a search engine or a chatbot?",
+        "q_zh": "Perplexity 是搜索还是聊天？",
+        "a_en": "Both. It answers like a chatbot but cites live sources for every claim.",
+        "a_zh": "两者兼具：像聊天一样答复，同时逐条引用可查证的来源。"
+      },
+      {
+        "q_en": "Does Perplexity replace Google?",
+        "q_zh": "Perplexity 能取代 Google 吗？",
+        "a_en": "For research and product comparison it is often faster; for navigational search Google is still preferred.",
+        "a_zh": "研究和产品对比更快；导航式搜索仍以 Google 为主。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.8,
+      "capability": 7,
+      "price": 10,
+      "growth": 7,
+      "trust": 8
+    }
   },
   "jasper": {
     "reviewed": true,
     "updatedAt": "2026-07-19",
     "testedVersion": "Jasper 2026",
     "score": 6.8,
-    "quickFacts": { "freeTier": false, "hasApi": true, "platforms": ["Web","API"] },
-    "pricingSummary": { "en": "Creator $49/mo · Teams $125/mo · Business custom.", "zh": "Creator 49；Teams 125；Business 定制。" },
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "API"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Creator $49/mo · Teams $125/mo · Business custom.",
+      "zh": "Creator 49；Teams 125；Business 定制。"
+    },
     "faq": [
-      { "q_en": "Who is Jasper built for?", "q_zh": "Jasper 面向什么用户？", "a_en": "Marketing teams that need brand voice consistency across many writers.", "a_zh": "需要在多位作者间保持品牌语调的营销团队。" },
-      { "q_en": "Is Jasper worth it for individuals?", "q_zh": "个人使用 Jasper 值吗？", "a_en": "For individuals, Claude Pro or ChatGPT Plus deliver similar output at lower cost.", "a_zh": "个人使用建议改用 Claude Pro 或 ChatGPT Plus，性价比更高。" }
-    ]
+      {
+        "q_en": "Who is Jasper built for?",
+        "q_zh": "Jasper 面向什么用户？",
+        "a_en": "Marketing teams that need brand voice consistency across many writers.",
+        "a_zh": "需要在多位作者间保持品牌语调的营销团队。"
+      },
+      {
+        "q_en": "Is Jasper worth it for individuals?",
+        "q_zh": "个人使用 Jasper 值吗？",
+        "a_en": "For individuals, Claude Pro or ChatGPT Plus deliver similar output at lower cost.",
+        "a_zh": "个人使用建议改用 Claude Pro 或 ChatGPT Plus，性价比更高。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 6.8,
+      "capability": 7,
+      "price": 5,
+      "growth": 7,
+      "trust": 8
+    }
   },
   "hostinger": {
     "reviewed": true,
     "updatedAt": "2026-07-19",
     "testedVersion": "Hostinger 2026",
     "score": 7.8,
-    "quickFacts": { "freeTier": false, "hasApi": false, "platforms": ["Web dashboard"] },
-    "pricingSummary": { "en": "Premium $2.99/mo · Business $3.99/mo · Cloud $9.99/mo (introductory).", "zh": "Premium 2.99；Business 3.99；Cloud 9.99 美元/月（首年优惠）。" },
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web dashboard"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Premium $2.99/mo · Business $3.99/mo · Cloud $9.99/mo (introductory).",
+      "zh": "Premium 2.99；Business 3.99；Cloud 9.99 美元/月（首年优惠）。"
+    },
     "faq": [
-      { "q_en": "Is Hostinger suitable for high-traffic sites?", "q_zh": "Hostinger 能扛住大流量吗？", "a_en": "Entry-level plans have shared resource caps; scale up to Cloud or use a CDN when traffic grows.", "a_zh": "低价套餐资源受限；高流量请升级 Cloud 或叠加 CDN。" },
-      { "q_en": "Does Hostinger include a free domain?", "q_zh": "Hostinger 是否赠送域名？", "a_en": "Yes, annual Business+ plans include a free first-year domain and SSL.", "a_zh": "年付 Business 及以上版本赠首年域名和 SSL。" }
-    ]
+      {
+        "q_en": "Is Hostinger suitable for high-traffic sites?",
+        "q_zh": "Hostinger 能扛住大流量吗？",
+        "a_en": "Entry-level plans have shared resource caps; scale up to Cloud or use a CDN when traffic grows.",
+        "a_zh": "低价套餐资源受限；高流量请升级 Cloud 或叠加 CDN。"
+      },
+      {
+        "q_en": "Does Hostinger include a free domain?",
+        "q_zh": "Hostinger 是否赠送域名？",
+        "a_en": "Yes, annual Business+ plans include a free first-year domain and SSL.",
+        "a_zh": "年付 Business 及以上版本赠首年域名和 SSL。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 5,
+      "growth": 5,
+      "trust": 8
+    }
   },
   "deepseek": {
     "reviewed": true,
     "updatedAt": "2026-07-21",
     "testedVersion": "DeepSeek-V3 / DeepSeek-R1 (2026)",
     "score": 8.6,
-    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Web","iOS","Android","API","Self-hosted"] },
-    "pricingSummary": { "en": "Free web/app chat · API $0.14/M input, $0.28/M output for V3 · R1 reasoning at $0.55/M input, $2.19/M output · Weights open-source for self-hosting.", "zh": "网页/APP 免费使用；V3 API 输入 $0.14/M、输出 $0.28/M；R1 推理输入 $0.55/M、输出 $2.19/M；开源权重可自部署。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "iOS",
+        "Android",
+        "API",
+        "Self-hosted"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free web/app chat · API $0.14/M input, $0.28/M output for V3 · R1 reasoning at $0.55/M input, $2.19/M output · Weights open-source for self-hosting.",
+      "zh": "网页/APP 免费使用；V3 API 输入 $0.14/M、输出 $0.28/M；R1 推理输入 $0.55/M、输出 $2.19/M；开源权重可自部署。"
+    },
     "faq": [
-      { "q_en": "Is DeepSeek free to use?", "q_zh": "DeepSeek 免费吗？", "a_en": "Yes — the web app and mobile app are free. Paid usage only kicks in when you call the API or self-host on your own GPUs.", "a_zh": "网页版和 App 免费使用。只有调用 API 或自托管 GPU 部署时才产生费用。" },
-      { "q_en": "How is DeepSeek so much cheaper than GPT-5 or Claude?", "q_zh": "DeepSeek 为什么比 GPT-5 和 Claude 便宜这么多？", "a_en": "DeepSeek trained a Mixture-of-Experts (MoE) model that activates only ~37B of its 671B parameters per token, so inference cost is a fraction of dense frontier models. Public weights let cloud vendors compete on price.", "a_zh": "DeepSeek 用 MoE 架构，每个 token 只激活 671B 中的约 37B 参数，推理成本大幅低于稠密前沿模型；开源权重让云厂商充分竞争，进一步压价。" },
-      { "q_en": "What is DeepSeek-R1 and how is it different from V3?", "q_zh": "DeepSeek-R1 和 V3 有什么区别？", "a_en": "V3 is the general-purpose chat/coding model. R1 is the reasoning model with visible chain-of-thought; use R1 for math, code review, planning and hard reasoning, use V3 for everything else.", "a_zh": "V3 是通用对话/编程模型；R1 是推理模型，会输出显式思维链，适合数学、代码审查、复杂规划；日常任务用 V3 更划算。" },
-      { "q_en": "How does DeepSeek compare to ChatGPT for Chinese content?", "q_zh": "中文内容上 DeepSeek 和 ChatGPT 谁更强？", "a_en": "DeepSeek's Chinese writing and reasoning are noticeably more natural than ChatGPT on native mainland-Chinese prompts. For English long-form writing, Claude still leads.", "a_zh": "在中国大陆语境的中文提示上，DeepSeek 的表达自然度和推理能力优于 ChatGPT；英文长文写作仍以 Claude 最佳。" },
-      { "q_en": "Can I self-host DeepSeek?", "q_zh": "DeepSeek 可以自部署吗？", "a_en": "Yes. Full weights are released under an MIT-style license. Practical self-hosting requires 8×H100 or equivalent for the full V3/R1; distilled variants run on a single 24 GB GPU.", "a_zh": "可以，权重按 MIT 类协议开放。完整 V3/R1 需 8×H100 或等效算力；蒸馏版可在单卡 24 GB 上运行。" },
-      { "q_en": "Is DeepSeek safe for enterprise data?", "q_zh": "企业用 DeepSeek 数据安全吗？", "a_en": "The hosted API stores prompts and may use them for service improvement unless you opt out. For sensitive data, deploy the open-source weights on your own infrastructure or use a private cloud (Azure, AWS, Volcano Engine) that offers DeepSeek without data retention.", "a_zh": "官方 API 默认会保留提示、用于改进服务，除非申请退出。敏感数据建议自部署开源权重，或选择 Azure、AWS、火山引擎等提供 DeepSeek 且不留存数据的私有云。" },
-      { "q_en": "How good is DeepSeek at coding?", "q_zh": "DeepSeek 写代码能力如何？", "a_en": "V3 is competitive with Claude 3.5 Sonnet on HumanEval and beats GPT-4o on many benchmarks. R1 excels at multi-file refactor reasoning. Cursor and Cline both support DeepSeek as the underlying model.", "a_zh": "V3 在 HumanEval 上接近 Claude 3.5 Sonnet，多数基准优于 GPT-4o；R1 在多文件重构推理上表现出色。Cursor 与 Cline 均支持将 DeepSeek 作为底层模型。" },
-      { "q_en": "Does DeepSeek support image and voice input?", "q_zh": "DeepSeek 支持图像和语音输入吗？", "a_en": "V3 has limited multimodal support; DeepSeek-VL handles vision separately. For serious multimodal work, Gemini 2.5 Pro or GPT-5 remain stronger choices in 2026.", "a_zh": "V3 多模态能力有限，DeepSeek-VL 单独处理视觉输入；2026 年需要重度多模态时仍建议 Gemini 2.5 Pro 或 GPT-5。" },
-      { "q_en": "Are there censorship or topic restrictions?", "q_zh": "有内容审查或话题限制吗？", "a_en": "The hosted DeepSeek service filters politically sensitive Chinese topics. The open-source weights on your own hardware do not carry the same filter but still reflect training-data bias.", "a_zh": "官方托管服务对政治敏感中文话题存在过滤；自部署开源权重没有相同过滤层，但仍受训练数据影响。" },
-      { "q_en": "Who should not use DeepSeek?", "q_zh": "什么用户不适合用 DeepSeek？", "a_en": "Teams needing tightly integrated voice, image and plugin ecosystems (ChatGPT Plus wins) or the most natural English long-form writing (Claude wins). For everyone else it is the best price/performance model in 2026.", "a_zh": "需要深度整合语音、图像和插件生态的团队（选 ChatGPT Plus）、追求最自然英文长文的团队（选 Claude）；其他场景 DeepSeek 是 2026 年性价比最高的选择。" }
-    ]
+      {
+        "q_en": "Is DeepSeek free to use?",
+        "q_zh": "DeepSeek 免费吗？",
+        "a_en": "Yes — the web app and mobile app are free. Paid usage only kicks in when you call the API or self-host on your own GPUs.",
+        "a_zh": "网页版和 App 免费使用。只有调用 API 或自托管 GPU 部署时才产生费用。"
+      },
+      {
+        "q_en": "How is DeepSeek so much cheaper than GPT-5 or Claude?",
+        "q_zh": "DeepSeek 为什么比 GPT-5 和 Claude 便宜这么多？",
+        "a_en": "DeepSeek trained a Mixture-of-Experts (MoE) model that activates only ~37B of its 671B parameters per token, so inference cost is a fraction of dense frontier models. Public weights let cloud vendors compete on price.",
+        "a_zh": "DeepSeek 用 MoE 架构，每个 token 只激活 671B 中的约 37B 参数，推理成本大幅低于稠密前沿模型；开源权重让云厂商充分竞争，进一步压价。"
+      },
+      {
+        "q_en": "What is DeepSeek-R1 and how is it different from V3?",
+        "q_zh": "DeepSeek-R1 和 V3 有什么区别？",
+        "a_en": "V3 is the general-purpose chat/coding model. R1 is the reasoning model with visible chain-of-thought; use R1 for math, code review, planning and hard reasoning, use V3 for everything else.",
+        "a_zh": "V3 是通用对话/编程模型；R1 是推理模型，会输出显式思维链，适合数学、代码审查、复杂规划；日常任务用 V3 更划算。"
+      },
+      {
+        "q_en": "How does DeepSeek compare to ChatGPT for Chinese content?",
+        "q_zh": "中文内容上 DeepSeek 和 ChatGPT 谁更强？",
+        "a_en": "DeepSeek's Chinese writing and reasoning are noticeably more natural than ChatGPT on native mainland-Chinese prompts. For English long-form writing, Claude still leads.",
+        "a_zh": "在中国大陆语境的中文提示上，DeepSeek 的表达自然度和推理能力优于 ChatGPT；英文长文写作仍以 Claude 最佳。"
+      },
+      {
+        "q_en": "Can I self-host DeepSeek?",
+        "q_zh": "DeepSeek 可以自部署吗？",
+        "a_en": "Yes. Full weights are released under an MIT-style license. Practical self-hosting requires 8×H100 or equivalent for the full V3/R1; distilled variants run on a single 24 GB GPU.",
+        "a_zh": "可以，权重按 MIT 类协议开放。完整 V3/R1 需 8×H100 或等效算力；蒸馏版可在单卡 24 GB 上运行。"
+      },
+      {
+        "q_en": "Is DeepSeek safe for enterprise data?",
+        "q_zh": "企业用 DeepSeek 数据安全吗？",
+        "a_en": "The hosted API stores prompts and may use them for service improvement unless you opt out. For sensitive data, deploy the open-source weights on your own infrastructure or use a private cloud (Azure, AWS, Volcano Engine) that offers DeepSeek without data retention.",
+        "a_zh": "官方 API 默认会保留提示、用于改进服务，除非申请退出。敏感数据建议自部署开源权重，或选择 Azure、AWS、火山引擎等提供 DeepSeek 且不留存数据的私有云。"
+      },
+      {
+        "q_en": "How good is DeepSeek at coding?",
+        "q_zh": "DeepSeek 写代码能力如何？",
+        "a_en": "V3 is competitive with Claude 3.5 Sonnet on HumanEval and beats GPT-4o on many benchmarks. R1 excels at multi-file refactor reasoning. Cursor and Cline both support DeepSeek as the underlying model.",
+        "a_zh": "V3 在 HumanEval 上接近 Claude 3.5 Sonnet，多数基准优于 GPT-4o；R1 在多文件重构推理上表现出色。Cursor 与 Cline 均支持将 DeepSeek 作为底层模型。"
+      },
+      {
+        "q_en": "Does DeepSeek support image and voice input?",
+        "q_zh": "DeepSeek 支持图像和语音输入吗？",
+        "a_en": "V3 has limited multimodal support; DeepSeek-VL handles vision separately. For serious multimodal work, Gemini 2.5 Pro or GPT-5 remain stronger choices in 2026.",
+        "a_zh": "V3 多模态能力有限，DeepSeek-VL 单独处理视觉输入；2026 年需要重度多模态时仍建议 Gemini 2.5 Pro 或 GPT-5。"
+      },
+      {
+        "q_en": "Are there censorship or topic restrictions?",
+        "q_zh": "有内容审查或话题限制吗？",
+        "a_en": "The hosted DeepSeek service filters politically sensitive Chinese topics. The open-source weights on your own hardware do not carry the same filter but still reflect training-data bias.",
+        "a_zh": "官方托管服务对政治敏感中文话题存在过滤；自部署开源权重没有相同过滤层，但仍受训练数据影响。"
+      },
+      {
+        "q_en": "Who should not use DeepSeek?",
+        "q_zh": "什么用户不适合用 DeepSeek？",
+        "a_en": "Teams needing tightly integrated voice, image and plugin ecosystems (ChatGPT Plus wins) or the most natural English long-form writing (Claude wins). For everyone else it is the best price/performance model in 2026.",
+        "a_zh": "需要深度整合语音、图像和插件生态的团队（选 ChatGPT Plus）、追求最自然英文长文的团队（选 Claude）；其他场景 DeepSeek 是 2026 年性价比最高的选择。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.6,
+      "capability": 7,
+      "price": 10,
+      "growth": 8,
+      "trust": 8
+    }
   },
   "windsurf": {
     "reviewed": true,
     "updatedAt": "2026-07-21",
     "testedVersion": "Windsurf 2026 (Cascade Agent)",
     "score": 8.8,
-    "quickFacts": { "freeTier": true, "hasApi": false, "platforms": ["macOS","Windows","Linux"] },
-    "pricingSummary": { "en": "Free tier with generous prompt credits · Pro $15/mo (500 prompt credits) · Ultimate $60/mo (unlimited fast credits and premium models).", "zh": "免费版含较慷慨的调用额度；Pro 15 美元/月（500 次 prompt 额度）；Ultimate 60 美元/月（无限快速额度 + 高级模型）。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "macOS",
+        "Windows",
+        "Linux"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with generous prompt credits · Pro $15/mo (500 prompt credits) · Ultimate $60/mo (unlimited fast credits and premium models).",
+      "zh": "免费版含较慷慨的调用额度；Pro 15 美元/月（500 次 prompt 额度）；Ultimate 60 美元/月（无限快速额度 + 高级模型）。"
+    },
     "faq": [
-      { "q_en": "Is Windsurf free to use?", "q_zh": "Windsurf 免费吗？", "a_en": "Yes. The free tier ships Cascade agent and autocomplete with a monthly credit cap. Pro at $15/month unlocks 500 prompt credits and higher-tier models.", "a_zh": "免费版即可使用 Cascade Agent 与代码补全，每月有额度上限；Pro（15 美元/月）解锁 500 次 prompt 额度和更高等级模型。" },
-      { "q_en": "How does Windsurf compare to Cursor?", "q_zh": "Windsurf 与 Cursor 有什么区别？", "a_en": "Cursor emphasizes hand-guided edits and codebase chat; Windsurf's Cascade agent leans more autonomous, executes commands and iterates until tests pass. Windsurf's free tier is more generous; Cursor's plugin ecosystem is bigger.", "a_zh": "Cursor 更偏手动引导的编辑与代码库对话；Windsurf 的 Cascade Agent 更自主，能执行命令并自动迭代到测试通过；Windsurf 免费额度更慷慨，Cursor 插件生态更大。" },
-      { "q_en": "What is Cascade Agent?", "q_zh": "Cascade Agent 是什么？", "a_en": "Cascade is Windsurf's autonomous coding agent that reads the whole workspace, plans multi-step tasks, runs commands, edits multiple files and can retry until objectives are met — all inside the IDE.", "a_zh": "Cascade 是 Windsurf 内置的自主编码 Agent，读取整个工作区、规划多步任务、执行命令并跨文件修改，可自动重试直到达成目标。" },
-      { "q_en": "Can Windsurf run against my own model?", "q_zh": "Windsurf 可以接入自有模型吗？", "a_en": "Yes. Team and Enterprise plans support custom endpoints for OpenAI-compatible APIs, Azure OpenAI, and self-hosted models via LiteLLM-style proxies.", "a_zh": "支持。Team 和 Enterprise 计划允许接入自定义端点，包括 OpenAI 兼容 API、Azure OpenAI，以及通过 LiteLLM 类代理接入自托管模型。" },
-      { "q_en": "Is Windsurf a VS Code fork?", "q_zh": "Windsurf 是 VS Code 分支吗？", "a_en": "Yes. It is built on the VS Code open-source base, so most VS Code extensions and keybindings work. Codeium plans a JetBrains variant on the same agent runtime.", "a_zh": "是。基于 VS Code 开源版构建，绝大多数 VS Code 插件和快捷键可直接使用；Codeium 计划推出 JetBrains 版本，共用同一 Agent 运行时。" },
-      { "q_en": "How good is Windsurf for large codebases?", "q_zh": "Windsurf 处理大型代码库表现如何？", "a_en": "Cascade indexes the workspace and maintains long-term context per branch. In our testing it handles repos up to a few hundred thousand lines cleanly; beyond that you should scope work with folder filters.", "a_zh": "Cascade 会索引工作区并按分支维护长期上下文；实测数十万行仓库表现稳定，更大规模建议用文件夹过滤缩小范围。" },
-      { "q_en": "Does Windsurf work offline?", "q_zh": "Windsurf 可以离线使用吗？", "a_en": "Autocomplete works with local models via Windsurf's on-device inference; agentic and chat features require a network connection to the Codeium or your enterprise endpoint.", "a_zh": "代码补全可通过本地模型离线运行；Agent 与对话功能仍需要网络连接到 Codeium 服务或企业自建端点。" },
-      { "q_en": "Is Windsurf safe for proprietary code?", "q_zh": "Windsurf 用于自有代码安全吗？", "a_en": "Enterprise plans include zero-data-retention agreements, on-prem deployment and audit logging. On the free/Pro plans, code snippets sent for inference follow Codeium's public data policy — review it before uploading trade secrets.", "a_zh": "Enterprise 版提供零数据保留协议、私有化部署和审计日志；免费版和 Pro 版发送的代码片段遵循 Codeium 公开的数据政策，涉及商业机密前请先审阅条款。" },
-      { "q_en": "What language and framework support does Windsurf have?", "q_zh": "Windsurf 支持哪些语言和框架？", "a_en": "70+ languages including Python, TypeScript/JavaScript, Go, Rust, Java, C#, PHP, Kotlin and Swift. Cascade is stronger on TypeScript/Python/Go than niche languages like OCaml or Erlang.", "a_zh": "70+ 语言，包括 Python、TypeScript/JavaScript、Go、Rust、Java、C#、PHP、Kotlin、Swift；Cascade 在 TS/Python/Go 上表现最好，OCaml/Erlang 等冷门语言相对弱。" },
-      { "q_en": "Is Windsurf worth switching from Cursor or Copilot?", "q_zh": "Cursor 或 Copilot 用户值得切到 Windsurf 吗？", "a_en": "Try it side-by-side for a week. Windsurf wins if you rely on autonomous multi-step agent runs and want a generous free tier; Cursor wins if you prefer manual precision and richer plugins; Copilot wins if you never want to leave your existing IDE.", "a_zh": "先并行试用一周：偏好自主多步 Agent + 慷慨免费额度选 Windsurf；偏好手动精度和更丰富插件选 Cursor；不想换编辑器选 Copilot。" }
-    ]
+      {
+        "q_en": "Is Windsurf free to use?",
+        "q_zh": "Windsurf 免费吗？",
+        "a_en": "Yes. The free tier ships Cascade agent and autocomplete with a monthly credit cap. Pro at $15/month unlocks 500 prompt credits and higher-tier models.",
+        "a_zh": "免费版即可使用 Cascade Agent 与代码补全，每月有额度上限；Pro（15 美元/月）解锁 500 次 prompt 额度和更高等级模型。"
+      },
+      {
+        "q_en": "How does Windsurf compare to Cursor?",
+        "q_zh": "Windsurf 与 Cursor 有什么区别？",
+        "a_en": "Cursor emphasizes hand-guided edits and codebase chat; Windsurf's Cascade agent leans more autonomous, executes commands and iterates until tests pass. Windsurf's free tier is more generous; Cursor's plugin ecosystem is bigger.",
+        "a_zh": "Cursor 更偏手动引导的编辑与代码库对话；Windsurf 的 Cascade Agent 更自主，能执行命令并自动迭代到测试通过；Windsurf 免费额度更慷慨，Cursor 插件生态更大。"
+      },
+      {
+        "q_en": "What is Cascade Agent?",
+        "q_zh": "Cascade Agent 是什么？",
+        "a_en": "Cascade is Windsurf's autonomous coding agent that reads the whole workspace, plans multi-step tasks, runs commands, edits multiple files and can retry until objectives are met — all inside the IDE.",
+        "a_zh": "Cascade 是 Windsurf 内置的自主编码 Agent，读取整个工作区、规划多步任务、执行命令并跨文件修改，可自动重试直到达成目标。"
+      },
+      {
+        "q_en": "Can Windsurf run against my own model?",
+        "q_zh": "Windsurf 可以接入自有模型吗？",
+        "a_en": "Yes. Team and Enterprise plans support custom endpoints for OpenAI-compatible APIs, Azure OpenAI, and self-hosted models via LiteLLM-style proxies.",
+        "a_zh": "支持。Team 和 Enterprise 计划允许接入自定义端点，包括 OpenAI 兼容 API、Azure OpenAI，以及通过 LiteLLM 类代理接入自托管模型。"
+      },
+      {
+        "q_en": "Is Windsurf a VS Code fork?",
+        "q_zh": "Windsurf 是 VS Code 分支吗？",
+        "a_en": "Yes. It is built on the VS Code open-source base, so most VS Code extensions and keybindings work. Codeium plans a JetBrains variant on the same agent runtime.",
+        "a_zh": "是。基于 VS Code 开源版构建，绝大多数 VS Code 插件和快捷键可直接使用；Codeium 计划推出 JetBrains 版本，共用同一 Agent 运行时。"
+      },
+      {
+        "q_en": "How good is Windsurf for large codebases?",
+        "q_zh": "Windsurf 处理大型代码库表现如何？",
+        "a_en": "Cascade indexes the workspace and maintains long-term context per branch. In our testing it handles repos up to a few hundred thousand lines cleanly; beyond that you should scope work with folder filters.",
+        "a_zh": "Cascade 会索引工作区并按分支维护长期上下文；实测数十万行仓库表现稳定，更大规模建议用文件夹过滤缩小范围。"
+      },
+      {
+        "q_en": "Does Windsurf work offline?",
+        "q_zh": "Windsurf 可以离线使用吗？",
+        "a_en": "Autocomplete works with local models via Windsurf's on-device inference; agentic and chat features require a network connection to the Codeium or your enterprise endpoint.",
+        "a_zh": "代码补全可通过本地模型离线运行；Agent 与对话功能仍需要网络连接到 Codeium 服务或企业自建端点。"
+      },
+      {
+        "q_en": "Is Windsurf safe for proprietary code?",
+        "q_zh": "Windsurf 用于自有代码安全吗？",
+        "a_en": "Enterprise plans include zero-data-retention agreements, on-prem deployment and audit logging. On the free/Pro plans, code snippets sent for inference follow Codeium's public data policy — review it before uploading trade secrets.",
+        "a_zh": "Enterprise 版提供零数据保留协议、私有化部署和审计日志；免费版和 Pro 版发送的代码片段遵循 Codeium 公开的数据政策，涉及商业机密前请先审阅条款。"
+      },
+      {
+        "q_en": "What language and framework support does Windsurf have?",
+        "q_zh": "Windsurf 支持哪些语言和框架？",
+        "a_en": "70+ languages including Python, TypeScript/JavaScript, Go, Rust, Java, C#, PHP, Kotlin and Swift. Cascade is stronger on TypeScript/Python/Go than niche languages like OCaml or Erlang.",
+        "a_zh": "70+ 语言，包括 Python、TypeScript/JavaScript、Go、Rust、Java、C#、PHP、Kotlin、Swift；Cascade 在 TS/Python/Go 上表现最好，OCaml/Erlang 等冷门语言相对弱。"
+      },
+      {
+        "q_en": "Is Windsurf worth switching from Cursor or Copilot?",
+        "q_zh": "Cursor 或 Copilot 用户值得切到 Windsurf 吗？",
+        "a_en": "Try it side-by-side for a week. Windsurf wins if you rely on autonomous multi-step agent runs and want a generous free tier; Cursor wins if you prefer manual precision and richer plugins; Copilot wins if you never want to leave your existing IDE.",
+        "a_zh": "先并行试用一周：偏好自主多步 Agent + 慷慨免费额度选 Windsurf；偏好手动精度和更丰富插件选 Cursor；不想换编辑器选 Copilot。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.8,
+      "capability": 7,
+      "price": 10,
+      "growth": 5,
+      "trust": 8
+    }
   },
   "cline": {
     "reviewed": true,
     "updatedAt": "2026-07-21",
     "testedVersion": "Cline 3.x (2026)",
     "score": 8.4,
-    "quickFacts": { "freeTier": true, "hasApi": false, "platforms": ["VS Code","Cursor","Windsurf","JetBrains (via Roo Code fork)"] },
-    "pricingSummary": { "en": "Extension itself is free and open-source; you pay only for the model API you choose (Claude Sonnet 4/OpenRouter/DeepSeek/local via Ollama). Typical Sonnet 4 spend: $5–40/mo per developer.", "zh": "扩展本身开源免费；只按你选用的模型 API 付费（Claude Sonnet 4/OpenRouter/DeepSeek/本地 Ollama 等）。使用 Sonnet 4 时开发者每月典型花费 5–40 美元。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "VS Code",
+        "Cursor",
+        "Windsurf",
+        "JetBrains (via Roo Code fork)"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Extension itself is free and open-source; you pay only for the model API you choose (Claude Sonnet 4/OpenRouter/DeepSeek/local via Ollama). Typical Sonnet 4 spend: $5–40/mo per developer.",
+      "zh": "扩展本身开源免费；只按你选用的模型 API 付费（Claude Sonnet 4/OpenRouter/DeepSeek/本地 Ollama 等）。使用 Sonnet 4 时开发者每月典型花费 5–40 美元。"
+    },
     "faq": [
-      { "q_en": "What exactly is Cline?", "q_zh": "Cline 到底是什么？", "a_en": "A free, open-source VS Code extension that turns any LLM into an autonomous coding agent — it reads your workspace, proposes edits, runs terminal commands and pauses for your approval at each risky step.", "a_zh": "一个免费、开源的 VS Code 扩展，将任意 LLM 转化为自主编码 Agent —— 读取工作区、提出修改、执行终端命令，并在关键步骤等待你审批。" },
-      { "q_en": "Does Cline require paying for a model?", "q_zh": "使用 Cline 必须为模型付费吗？", "a_en": "Yes for hosted models. You bring your own API key (Anthropic, OpenAI, Google, DeepSeek, OpenRouter). It also supports local models via Ollama or LM Studio for zero-cost inference.", "a_zh": "调用托管模型需付费。你需要自备 API Key（Anthropic、OpenAI、Google、DeepSeek、OpenRouter 等）；也支持通过 Ollama 或 LM Studio 使用本地模型免费推理。" },
-      { "q_en": "How does Cline compare to Cursor and Windsurf?", "q_zh": "Cline 与 Cursor、Windsurf 有什么区别？", "a_en": "Cursor and Windsurf are polished commercial IDE forks with bundled models; Cline is a free extension you drop into your existing editor with a model of your choice. Cline is cheaper and more transparent; Cursor/Windsurf have smoother multi-file editing UX.", "a_zh": "Cursor 与 Windsurf 是打包模型的商业化 IDE 分支，体验更精致；Cline 是免费扩展，插入现有编辑器并自选模型，成本更低、更透明；跨文件编辑的 UX 略逊于前两者。" },
-      { "q_en": "Is Cline safe to run against my repo?", "q_zh": "Cline 直接跑我的仓库安全吗？", "a_en": "Cline pauses before every terminal command and file write and asks for approval. Enable auto-approval only for scoped read-only or test commands. Never point it at production credentials.", "a_zh": "Cline 在执行每条终端命令和写文件前都会暂停请求批准；仅对只读或测试命令启用自动批准；生产凭据绝不放在其可访问的环境。" },
-      { "q_en": "What models work best in Cline?", "q_zh": "在 Cline 中哪种模型效果最好？", "a_en": "Claude Sonnet 4 remains the default for planning and multi-file edits. DeepSeek-V3 is the cheapest workable option. Local Qwen2.5-Coder or Llama-3.1-70B work for offline use if you have enough VRAM.", "a_zh": "规划与跨文件编辑首选 Claude Sonnet 4；DeepSeek-V3 是最便宜的可用选项；显存充足时可离线使用本地 Qwen2.5-Coder 或 Llama-3.1-70B。" },
-      { "q_en": "Can Cline read my whole codebase?", "q_zh": "Cline 可以读取整个代码库吗？", "a_en": "It selectively reads files based on task context rather than indexing the whole repo. Provide focus paths in the prompt or use its file-tree view to guide attention on large monorepos.", "a_zh": "Cline 根据任务上下文有选择地读取文件，而非全库索引；大 monorepo 请在提示中指定关注目录，或用其文件树视图引导。" },
-      { "q_en": "Does Cline work in JetBrains?", "q_zh": "Cline 支持 JetBrains 吗？", "a_en": "Cline officially targets VS Code, Cursor and Windsurf (all VS Code forks). The community Roo Code fork exposes similar capability to JetBrains and Zed via a bridge.", "a_zh": "Cline 官方支持 VS Code、Cursor 和 Windsurf（都是 VS Code 分支）；社区 Roo Code 分支通过桥接让 JetBrains 和 Zed 用户也能获得类似能力。" },
-      { "q_en": "Is the token bill really high?", "q_zh": "Token 消费真的高吗？", "a_en": "Autonomous agents re-read files and re-plan each iteration, so token spend is 3–10× a single-shot completion. Use DeepSeek or prompt caching in Anthropic to keep monthly cost under $40 for individual use.", "a_zh": "自主 Agent 每一轮都会重读文件、重新规划，Token 消耗是单次补全的 3–10 倍；改用 DeepSeek 或 Anthropic prompt cache 可将个人月度成本控制在 40 美元内。" },
-      { "q_en": "Who is Cline best for?", "q_zh": "Cline 最适合谁？", "a_en": "Developers who want autonomous agents but refuse to switch editors or lock into a bundled model, plus teams that need transparent, auditable open-source tooling for compliance.", "a_zh": "想用自主 Agent 但不愿换编辑器、也不想被单一模型绑定的开发者；以及需要透明可审计开源工具满足合规要求的团队。" },
-      { "q_en": "How is Cline different from Aider?", "q_zh": "Cline 与 Aider 有何不同？", "a_en": "Aider is a terminal-first pair-programming tool with tight Git integration. Cline lives inside VS Code and can drive the terminal too but keeps the diff/preview UI. Aider is minimalist; Cline is more agentic and visual.", "a_zh": "Aider 以终端为中心，深度整合 Git，更精简；Cline 驻留在 VS Code 内并可控制终端，同时保留 diff 与预览界面，交互更 Agent 化、更可视化。" }
-    ]
+      {
+        "q_en": "What exactly is Cline?",
+        "q_zh": "Cline 到底是什么？",
+        "a_en": "A free, open-source VS Code extension that turns any LLM into an autonomous coding agent — it reads your workspace, proposes edits, runs terminal commands and pauses for your approval at each risky step.",
+        "a_zh": "一个免费、开源的 VS Code 扩展，将任意 LLM 转化为自主编码 Agent —— 读取工作区、提出修改、执行终端命令，并在关键步骤等待你审批。"
+      },
+      {
+        "q_en": "Does Cline require paying for a model?",
+        "q_zh": "使用 Cline 必须为模型付费吗？",
+        "a_en": "Yes for hosted models. You bring your own API key (Anthropic, OpenAI, Google, DeepSeek, OpenRouter). It also supports local models via Ollama or LM Studio for zero-cost inference.",
+        "a_zh": "调用托管模型需付费。你需要自备 API Key（Anthropic、OpenAI、Google、DeepSeek、OpenRouter 等）；也支持通过 Ollama 或 LM Studio 使用本地模型免费推理。"
+      },
+      {
+        "q_en": "How does Cline compare to Cursor and Windsurf?",
+        "q_zh": "Cline 与 Cursor、Windsurf 有什么区别？",
+        "a_en": "Cursor and Windsurf are polished commercial IDE forks with bundled models; Cline is a free extension you drop into your existing editor with a model of your choice. Cline is cheaper and more transparent; Cursor/Windsurf have smoother multi-file editing UX.",
+        "a_zh": "Cursor 与 Windsurf 是打包模型的商业化 IDE 分支，体验更精致；Cline 是免费扩展，插入现有编辑器并自选模型，成本更低、更透明；跨文件编辑的 UX 略逊于前两者。"
+      },
+      {
+        "q_en": "Is Cline safe to run against my repo?",
+        "q_zh": "Cline 直接跑我的仓库安全吗？",
+        "a_en": "Cline pauses before every terminal command and file write and asks for approval. Enable auto-approval only for scoped read-only or test commands. Never point it at production credentials.",
+        "a_zh": "Cline 在执行每条终端命令和写文件前都会暂停请求批准；仅对只读或测试命令启用自动批准；生产凭据绝不放在其可访问的环境。"
+      },
+      {
+        "q_en": "What models work best in Cline?",
+        "q_zh": "在 Cline 中哪种模型效果最好？",
+        "a_en": "Claude Sonnet 4 remains the default for planning and multi-file edits. DeepSeek-V3 is the cheapest workable option. Local Qwen2.5-Coder or Llama-3.1-70B work for offline use if you have enough VRAM.",
+        "a_zh": "规划与跨文件编辑首选 Claude Sonnet 4；DeepSeek-V3 是最便宜的可用选项；显存充足时可离线使用本地 Qwen2.5-Coder 或 Llama-3.1-70B。"
+      },
+      {
+        "q_en": "Can Cline read my whole codebase?",
+        "q_zh": "Cline 可以读取整个代码库吗？",
+        "a_en": "It selectively reads files based on task context rather than indexing the whole repo. Provide focus paths in the prompt or use its file-tree view to guide attention on large monorepos.",
+        "a_zh": "Cline 根据任务上下文有选择地读取文件，而非全库索引；大 monorepo 请在提示中指定关注目录，或用其文件树视图引导。"
+      },
+      {
+        "q_en": "Does Cline work in JetBrains?",
+        "q_zh": "Cline 支持 JetBrains 吗？",
+        "a_en": "Cline officially targets VS Code, Cursor and Windsurf (all VS Code forks). The community Roo Code fork exposes similar capability to JetBrains and Zed via a bridge.",
+        "a_zh": "Cline 官方支持 VS Code、Cursor 和 Windsurf（都是 VS Code 分支）；社区 Roo Code 分支通过桥接让 JetBrains 和 Zed 用户也能获得类似能力。"
+      },
+      {
+        "q_en": "Is the token bill really high?",
+        "q_zh": "Token 消费真的高吗？",
+        "a_en": "Autonomous agents re-read files and re-plan each iteration, so token spend is 3–10× a single-shot completion. Use DeepSeek or prompt caching in Anthropic to keep monthly cost under $40 for individual use.",
+        "a_zh": "自主 Agent 每一轮都会重读文件、重新规划，Token 消耗是单次补全的 3–10 倍；改用 DeepSeek 或 Anthropic prompt cache 可将个人月度成本控制在 40 美元内。"
+      },
+      {
+        "q_en": "Who is Cline best for?",
+        "q_zh": "Cline 最适合谁？",
+        "a_en": "Developers who want autonomous agents but refuse to switch editors or lock into a bundled model, plus teams that need transparent, auditable open-source tooling for compliance.",
+        "a_zh": "想用自主 Agent 但不愿换编辑器、也不想被单一模型绑定的开发者；以及需要透明可审计开源工具满足合规要求的团队。"
+      },
+      {
+        "q_en": "How is Cline different from Aider?",
+        "q_zh": "Cline 与 Aider 有何不同？",
+        "a_en": "Aider is a terminal-first pair-programming tool with tight Git integration. Cline lives inside VS Code and can drive the terminal too but keeps the diff/preview UI. Aider is minimalist; Cline is more agentic and visual.",
+        "a_zh": "Aider 以终端为中心，深度整合 Git，更精简；Cline 驻留在 VS Code 内并可控制终端，同时保留 diff 与预览界面，交互更 Agent 化、更可视化。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.4,
+      "capability": 7,
+      "price": 10,
+      "growth": 6,
+      "trust": 8
+    }
   },
   "codeium": {
     "reviewed": true,
     "updatedAt": "2026-07-21",
     "testedVersion": "Codeium 2026 (Individual Free)",
     "score": 8.2,
-    "quickFacts": { "freeTier": true, "hasApi": false, "platforms": ["VS Code","JetBrains","Neovim","Vim","Emacs","Sublime","Xcode","Chrome DevTools","Cursor","Windsurf"] },
-    "pricingSummary": { "en": "Individual completion + chat: free forever · Teams $12/seat/mo (SSO + shared context) · Enterprise custom (self-hosted, air-gapped).", "zh": "个人版补全 + 聊天永久免费；Teams 12 美元/席/月（含 SSO 与共享上下文）；Enterprise 支持自部署与内网隔离，价格定制。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "VS Code",
+        "JetBrains",
+        "Neovim",
+        "Vim",
+        "Emacs",
+        "Sublime",
+        "Xcode",
+        "Chrome DevTools",
+        "Cursor",
+        "Windsurf"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Individual completion + chat: free forever · Teams $12/seat/mo (SSO + shared context) · Enterprise custom (self-hosted, air-gapped).",
+      "zh": "个人版补全 + 聊天永久免费；Teams 12 美元/席/月（含 SSO 与共享上下文）；Enterprise 支持自部署与内网隔离，价格定制。"
+    },
     "faq": [
-      { "q_en": "Is Codeium really free?", "q_zh": "Codeium 真的免费吗？", "a_en": "Yes for individuals. Unlimited code completion and chat with no credit card. Team collaboration, SSO, and shared context libraries move to the $12/seat/month plan.", "a_zh": "对个人用户完全免费——无限量代码补全与聊天，无需信用卡；团队协作、SSO 与共享上下文库需 12 美元/席/月的 Team 版。" },
-      { "q_en": "How does Codeium make money if it is free?", "q_zh": "Codeium 免费如何盈利？", "a_en": "Enterprise deals: self-hosted deployments for banks, defense, healthcare and other regulated industries. The Windsurf IDE also monetizes power users on top of the same Codeium core.", "a_zh": "主要靠企业业务：为金融、国防、医疗等受监管行业提供自部署服务；同一 Codeium 内核之上还有 Windsurf IDE 面向重度用户变现。" },
-      { "q_en": "How does Codeium compare with GitHub Copilot?", "q_zh": "Codeium 与 GitHub Copilot 相比如何？", "a_en": "Autocomplete quality is close in 2026. Codeium wins on price (free vs $10/month), language breadth and IDE coverage (10+ IDEs). Copilot has richer chat and multi-file features and deeper GitHub integration.", "a_zh": "2026 年补全质量已接近；Codeium 胜在价格（免费 vs 10 美元/月）、语言广度和 IDE 覆盖（10+ IDE）；Copilot 拥有更丰富的聊天、多文件功能和更深的 GitHub 集成。" },
-      { "q_en": "Does Codeium train on my code?", "q_zh": "Codeium 会用我的代码训练模型吗？", "a_en": "By default no — telemetry only. Enterprise plans add contractual zero-data-retention and on-prem deployment for teams that cannot send code to the public cloud.", "a_zh": "默认不使用你的代码训练，仅收集遥测数据；Enterprise 版通过合同承诺零数据保留，并支持内网自部署。" },
-      { "q_en": "Which IDEs does Codeium support?", "q_zh": "Codeium 支持哪些 IDE？", "a_en": "VS Code, JetBrains suite, Neovim, Vim, Emacs, Sublime, Xcode, Android Studio, Eclipse and Chrome DevTools. Codeium's Windsurf editor is a full VS Code fork built on the same engine.", "a_zh": "VS Code、JetBrains 全家桶、Neovim、Vim、Emacs、Sublime、Xcode、Android Studio、Eclipse 与 Chrome DevTools；Codeium 同源打造的 Windsurf 是完整的 VS Code 分支。" },
-      { "q_en": "Can Codeium do multi-file refactor like Cursor?", "q_zh": "Codeium 能像 Cursor 一样跨文件重构吗？", "a_en": "The free extension focuses on completion + single-file chat. For repo-wide agentic edits, upgrade to Codeium's Windsurf IDE, which unlocks Cascade multi-file agent runs.", "a_zh": "免费扩展主打补全与单文件对话；如需仓库级 Agent 编辑，可升级到 Codeium 同源的 Windsurf IDE，解锁 Cascade 多文件 Agent。" },
-      { "q_en": "How many languages does Codeium support?", "q_zh": "Codeium 支持多少种语言？", "a_en": "Officially 70+, including Python, TypeScript/JavaScript, Go, Rust, Java, C#, C/C++, Kotlin, Swift, PHP, Ruby, Elixir, Lua, and shell dialects. Quality is highest on the top 20 languages.", "a_zh": "官方 70+，涵盖 Python、TypeScript/JavaScript、Go、Rust、Java、C#、C/C++、Kotlin、Swift、PHP、Ruby、Elixir、Lua 以及各类 Shell；Top 20 语言质量最佳。" },
-      { "q_en": "Is Codeium good for students?", "q_zh": "Codeium 适合学生吗？", "a_en": "Yes — the free tier is one of the best deals in AI coding right now. No credit card, unlimited completion, works in VS Code and JetBrains which most CS courses already use.", "a_zh": "非常适合——免费版是当前 AI 编程最具性价比的选择之一，无需信用卡、无限补全、覆盖大多数计算机课程使用的 VS Code 与 JetBrains。" },
-      { "q_en": "Can Codeium run offline?", "q_zh": "Codeium 能离线使用吗？", "a_en": "Individual plans require the cloud service. Enterprise plans offer on-prem servers so the entire completion pipeline can run inside your VPC or fully air-gapped network.", "a_zh": "个人版依赖云服务；Enterprise 版支持将整个补全服务部署到你的 VPC 或完全离线网络中。" },
-      { "q_en": "Is Codeium the same as Windsurf?", "q_zh": "Codeium 和 Windsurf 是同一个产品吗？", "a_en": "Same company, different products. Codeium is the free IDE extension focused on completion and chat. Windsurf is the paid AI-native IDE with agentic Cascade workflows built on top of Codeium's engine.", "a_zh": "同一公司，不同产品：Codeium 是免费的 IDE 扩展，专注补全与对话；Windsurf 是付费的 AI 原生 IDE，在 Codeium 引擎之上叠加 Cascade Agent 工作流。" }
-    ]
+      {
+        "q_en": "Is Codeium really free?",
+        "q_zh": "Codeium 真的免费吗？",
+        "a_en": "Yes for individuals. Unlimited code completion and chat with no credit card. Team collaboration, SSO, and shared context libraries move to the $12/seat/month plan.",
+        "a_zh": "对个人用户完全免费——无限量代码补全与聊天，无需信用卡；团队协作、SSO 与共享上下文库需 12 美元/席/月的 Team 版。"
+      },
+      {
+        "q_en": "How does Codeium make money if it is free?",
+        "q_zh": "Codeium 免费如何盈利？",
+        "a_en": "Enterprise deals: self-hosted deployments for banks, defense, healthcare and other regulated industries. The Windsurf IDE also monetizes power users on top of the same Codeium core.",
+        "a_zh": "主要靠企业业务：为金融、国防、医疗等受监管行业提供自部署服务；同一 Codeium 内核之上还有 Windsurf IDE 面向重度用户变现。"
+      },
+      {
+        "q_en": "How does Codeium compare with GitHub Copilot?",
+        "q_zh": "Codeium 与 GitHub Copilot 相比如何？",
+        "a_en": "Autocomplete quality is close in 2026. Codeium wins on price (free vs $10/month), language breadth and IDE coverage (10+ IDEs). Copilot has richer chat and multi-file features and deeper GitHub integration.",
+        "a_zh": "2026 年补全质量已接近；Codeium 胜在价格（免费 vs 10 美元/月）、语言广度和 IDE 覆盖（10+ IDE）；Copilot 拥有更丰富的聊天、多文件功能和更深的 GitHub 集成。"
+      },
+      {
+        "q_en": "Does Codeium train on my code?",
+        "q_zh": "Codeium 会用我的代码训练模型吗？",
+        "a_en": "By default no — telemetry only. Enterprise plans add contractual zero-data-retention and on-prem deployment for teams that cannot send code to the public cloud.",
+        "a_zh": "默认不使用你的代码训练，仅收集遥测数据；Enterprise 版通过合同承诺零数据保留，并支持内网自部署。"
+      },
+      {
+        "q_en": "Which IDEs does Codeium support?",
+        "q_zh": "Codeium 支持哪些 IDE？",
+        "a_en": "VS Code, JetBrains suite, Neovim, Vim, Emacs, Sublime, Xcode, Android Studio, Eclipse and Chrome DevTools. Codeium's Windsurf editor is a full VS Code fork built on the same engine.",
+        "a_zh": "VS Code、JetBrains 全家桶、Neovim、Vim、Emacs、Sublime、Xcode、Android Studio、Eclipse 与 Chrome DevTools；Codeium 同源打造的 Windsurf 是完整的 VS Code 分支。"
+      },
+      {
+        "q_en": "Can Codeium do multi-file refactor like Cursor?",
+        "q_zh": "Codeium 能像 Cursor 一样跨文件重构吗？",
+        "a_en": "The free extension focuses on completion + single-file chat. For repo-wide agentic edits, upgrade to Codeium's Windsurf IDE, which unlocks Cascade multi-file agent runs.",
+        "a_zh": "免费扩展主打补全与单文件对话；如需仓库级 Agent 编辑，可升级到 Codeium 同源的 Windsurf IDE，解锁 Cascade 多文件 Agent。"
+      },
+      {
+        "q_en": "How many languages does Codeium support?",
+        "q_zh": "Codeium 支持多少种语言？",
+        "a_en": "Officially 70+, including Python, TypeScript/JavaScript, Go, Rust, Java, C#, C/C++, Kotlin, Swift, PHP, Ruby, Elixir, Lua, and shell dialects. Quality is highest on the top 20 languages.",
+        "a_zh": "官方 70+，涵盖 Python、TypeScript/JavaScript、Go、Rust、Java、C#、C/C++、Kotlin、Swift、PHP、Ruby、Elixir、Lua 以及各类 Shell；Top 20 语言质量最佳。"
+      },
+      {
+        "q_en": "Is Codeium good for students?",
+        "q_zh": "Codeium 适合学生吗？",
+        "a_en": "Yes — the free tier is one of the best deals in AI coding right now. No credit card, unlimited completion, works in VS Code and JetBrains which most CS courses already use.",
+        "a_zh": "非常适合——免费版是当前 AI 编程最具性价比的选择之一，无需信用卡、无限补全、覆盖大多数计算机课程使用的 VS Code 与 JetBrains。"
+      },
+      {
+        "q_en": "Can Codeium run offline?",
+        "q_zh": "Codeium 能离线使用吗？",
+        "a_en": "Individual plans require the cloud service. Enterprise plans offer on-prem servers so the entire completion pipeline can run inside your VPC or fully air-gapped network.",
+        "a_zh": "个人版依赖云服务；Enterprise 版支持将整个补全服务部署到你的 VPC 或完全离线网络中。"
+      },
+      {
+        "q_en": "Is Codeium the same as Windsurf?",
+        "q_zh": "Codeium 和 Windsurf 是同一个产品吗？",
+        "a_en": "Same company, different products. Codeium is the free IDE extension focused on completion and chat. Windsurf is the paid AI-native IDE with agentic Cascade workflows built on top of Codeium's engine.",
+        "a_zh": "同一公司，不同产品：Codeium 是免费的 IDE 扩展，专注补全与对话；Windsurf 是付费的 AI 原生 IDE，在 Codeium 引擎之上叠加 Cascade Agent 工作流。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.2,
+      "capability": 7,
+      "price": 10,
+      "growth": 6,
+      "trust": 8
+    }
   },
   "agnes-ai": {
     "reviewed": true,
     "updatedAt": "2026-07-21",
     "testedVersion": "Agnes AI API 2026",
     "score": 8.5,
-    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["API","Web Dashboard"] },
-    "pricingSummary": { "en": "Entirely free: text, image, and video generation via a single API. No credit card required. Open-source client SDKs available on GitHub.", "zh": "完全免费：通过单一 API 调用文本、图像和视频生成。无需信用卡。开源 SDK 可在 GitHub 上获取。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "API",
+        "Web Dashboard"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Entirely free: text, image, and video generation via a single API. No credit card required. Open-source client SDKs available on GitHub.",
+      "zh": "完全免费：通过单一 API 调用文本、图像和视频生成。无需信用卡。开源 SDK 可在 GitHub 上获取。"
+    },
     "faq": [
-      { "q_en": "Is Agnes AI really free?", "q_zh": "Agnes AI 真的免费吗？", "a_en": "Yes. The entire API platform is free to use — no credit card, no usage limits for the core modalities. The project is open-source and community-driven.", "a_zh": "完全免费——无需信用卡，核心功能没有使用限制。项目开源且由社区驱动。" },
-      { "q_en": "What modalities does Agnes AI support?", "q_zh": "Agnes AI 支持什么模型？", "a_en": "Text generation, image generation, and video generation — all through a single API endpoint. Additional models are added regularly.", "a_zh": "文本生成、图像生成和视频生成——全部通过单一 API 端点。新模型持续添加中。" },
-      { "q_en": "How good is Agnes AI compared to GPT-5 or Claude?", "q_zh": "Agnes AI 与 GPT-5 或 Claude 相比如何？", "a_en": "The individual models do not yet match the quality of frontier models like GPT-5 or Claude Sonnet for complex tasks. The value is in the free omni-modal access, not the ceiling quality.", "a_zh": "单个模型在复杂任务上尚不及 GPT-5 或 Claude Sonnet 等前沿模型。其价值在于免费的任意模态访问，而非天花板质量。" },
-      { "q_en": "Is Agnes AI suitable for production use?", "q_zh": "Agnes AI 适合生产环境吗？", "a_en": "The API is stable and the open-source SDKs are well-documented, but uptime is not guaranteed by a commercial SLA. Best suited for prototyping, side projects, and learning.", "a_zh": "API 稳定、开源 SDK 文档完善，但无商业 SLA 保障。最适合原型开发、个人项目和学习的场景。" },
-      { "q_en": "Does Agnes AI have an API key?", "q_zh": "Agnes AI 需要 API Key 吗？", "a_en": "Yes. Register on the website for a free API key. The key works across all text, image, and video endpoints with no separate billing.", "a_zh": "在官网注册即可获得免费 API Key，一套 Key 适用于所有文本、图像和视频端点，无需单独计费。" },
-      { "q_en": "What is the image quality like?", "q_zh": "图像生成质量如何？", "a_en": "Comparable to Midjourney v5 for general prompts. Lags behind Midjourney v7, Flux, and Ideogram for fine details, text rendering, and photorealism.", "a_zh": "通用提示词下接近 Midjourney v5 水平；细节、文字渲染和照片级写实上落后于 Midjourney v7、Flux 和 Ideogram。" },
-      { "q_en": "Is Agnes AI open-source?", "q_zh": "Agnes AI 是开源的吗？", "a_en": "The client SDKs and some model infrastructure are open-source on GitHub. The core API server is proprietary but freely accessible.", "a_zh": "客户端 SDK 和部分模型基础设施在 GitHub 开源；核心 API 服务器闭源但可免费使用。" },
-      { "q_en": "Can I use Agnes AI for commercial projects?", "q_zh": "Agnes AI 可以商用吗？", "a_en": "Yes, the free tier permits commercial use. Check the latest license on GitHub for any restrictions on derivative models or redistribution.", "a_zh": "免费版允许商用。具体限制请查阅 GitHub 上的最新许可证——特别是关于衍生模型和再分发部分。" },
-      { "q_en": "What is the best alternative to Agnes AI?", "q_zh": "Agnes AI 的最佳替代品是什么？", "a_en": "If you need higher quality at low cost: DeepSeek (text) + Flux (images) + Kling (video). If you need a single paid provider: OpenAI GPT-5 with its built-in image and voice capabilities.", "a_zh": "需要更高的质量且预算有限：DeepSeek（文本）+ Flux（图像）+ Kling（视频）；需要单一付费提供商：OpenAI GPT-5（内置图像和语音能力）。" },
-      { "q_en": "Who should use Agnes AI?", "q_zh": "Agnes AI 适合谁？", "a_en": "Developers prototyping multi-modal apps on a zero budget, students learning API integration, and hobbyists exploring AI-generated content without financial commitment.", "a_zh": "零预算开发多模态应用原型的开发者、学习 API 集成的学生、以及不希望投入资金探索 AI 生成内容的爱好者。" }
-    ]
+      {
+        "q_en": "Is Agnes AI really free?",
+        "q_zh": "Agnes AI 真的免费吗？",
+        "a_en": "Yes. The entire API platform is free to use — no credit card, no usage limits for the core modalities. The project is open-source and community-driven.",
+        "a_zh": "完全免费——无需信用卡，核心功能没有使用限制。项目开源且由社区驱动。"
+      },
+      {
+        "q_en": "What modalities does Agnes AI support?",
+        "q_zh": "Agnes AI 支持什么模型？",
+        "a_en": "Text generation, image generation, and video generation — all through a single API endpoint. Additional models are added regularly.",
+        "a_zh": "文本生成、图像生成和视频生成——全部通过单一 API 端点。新模型持续添加中。"
+      },
+      {
+        "q_en": "How good is Agnes AI compared to GPT-5 or Claude?",
+        "q_zh": "Agnes AI 与 GPT-5 或 Claude 相比如何？",
+        "a_en": "The individual models do not yet match the quality of frontier models like GPT-5 or Claude Sonnet for complex tasks. The value is in the free omni-modal access, not the ceiling quality.",
+        "a_zh": "单个模型在复杂任务上尚不及 GPT-5 或 Claude Sonnet 等前沿模型。其价值在于免费的任意模态访问，而非天花板质量。"
+      },
+      {
+        "q_en": "Is Agnes AI suitable for production use?",
+        "q_zh": "Agnes AI 适合生产环境吗？",
+        "a_en": "The API is stable and the open-source SDKs are well-documented, but uptime is not guaranteed by a commercial SLA. Best suited for prototyping, side projects, and learning.",
+        "a_zh": "API 稳定、开源 SDK 文档完善，但无商业 SLA 保障。最适合原型开发、个人项目和学习的场景。"
+      },
+      {
+        "q_en": "Does Agnes AI have an API key?",
+        "q_zh": "Agnes AI 需要 API Key 吗？",
+        "a_en": "Yes. Register on the website for a free API key. The key works across all text, image, and video endpoints with no separate billing.",
+        "a_zh": "在官网注册即可获得免费 API Key，一套 Key 适用于所有文本、图像和视频端点，无需单独计费。"
+      },
+      {
+        "q_en": "What is the image quality like?",
+        "q_zh": "图像生成质量如何？",
+        "a_en": "Comparable to Midjourney v5 for general prompts. Lags behind Midjourney v7, Flux, and Ideogram for fine details, text rendering, and photorealism.",
+        "a_zh": "通用提示词下接近 Midjourney v5 水平；细节、文字渲染和照片级写实上落后于 Midjourney v7、Flux 和 Ideogram。"
+      },
+      {
+        "q_en": "Is Agnes AI open-source?",
+        "q_zh": "Agnes AI 是开源的吗？",
+        "a_en": "The client SDKs and some model infrastructure are open-source on GitHub. The core API server is proprietary but freely accessible.",
+        "a_zh": "客户端 SDK 和部分模型基础设施在 GitHub 开源；核心 API 服务器闭源但可免费使用。"
+      },
+      {
+        "q_en": "Can I use Agnes AI for commercial projects?",
+        "q_zh": "Agnes AI 可以商用吗？",
+        "a_en": "Yes, the free tier permits commercial use. Check the latest license on GitHub for any restrictions on derivative models or redistribution.",
+        "a_zh": "免费版允许商用。具体限制请查阅 GitHub 上的最新许可证——特别是关于衍生模型和再分发部分。"
+      },
+      {
+        "q_en": "What is the best alternative to Agnes AI?",
+        "q_zh": "Agnes AI 的最佳替代品是什么？",
+        "a_en": "If you need higher quality at low cost: DeepSeek (text) + Flux (images) + Kling (video). If you need a single paid provider: OpenAI GPT-5 with its built-in image and voice capabilities.",
+        "a_zh": "需要更高的质量且预算有限：DeepSeek（文本）+ Flux（图像）+ Kling（视频）；需要单一付费提供商：OpenAI GPT-5（内置图像和语音能力）。"
+      },
+      {
+        "q_en": "Who should use Agnes AI?",
+        "q_zh": "Agnes AI 适合谁？",
+        "a_en": "Developers prototyping multi-modal apps on a zero budget, students learning API integration, and hobbyists exploring AI-generated content without financial commitment.",
+        "a_zh": "零预算开发多模态应用原型的开发者、学习 API 集成的学生、以及不希望投入资金探索 AI 生成内容的爱好者。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.5,
+      "capability": 5,
+      "price": 10,
+      "growth": 7,
+      "trust": 8
+    }
   },
   "assembly-ai": {
     "reviewed": true,
     "updatedAt": "2026-07-21",
     "testedVersion": "AssemblyAI API 2026",
     "score": 8.4,
-    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["API","Web Dashboard"] },
-    "pricingSummary": { "en": "Pay-as-you-go: Speech-to-Text $0.015/min (real-time $0.024/min) · LeMUR (LLM) $0.002 × 1k chars · Annual volume discounts available.", "zh": "按量计费：语音转文字 $0.015/分钟（实时 $0.024/分钟）；LeMUR（LLM）$0.002/千字符；年付有折扣。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "API",
+        "Web Dashboard"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Pay-as-you-go: Speech-to-Text $0.015/min (real-time $0.024/min) · LeMUR (LLM) $0.002 × 1k chars · Annual volume discounts available.",
+      "zh": "按量计费：语音转文字 $0.015/分钟（实时 $0.024/分钟）；LeMUR（LLM）$0.002/千字符；年付有折扣。"
+    },
     "faq": [
-      { "q_en": "Is AssemblyAI free to use?", "q_zh": "AssemblyAI 免费吗？", "a_en": "The API has a free tier (limited hours per month). After that, pay-as-you-go pricing starts at $0.015 per minute for speech-to-text.", "a_zh": "API 有免费额度（每月有限时长），超出后按量计费，语音转文字 $0.015/分钟起。" },
-      { "q_en": "What is LeMUR?", "q_zh": "什么是 LeMUR？", "a_en": "LeMUR is AssemblyAI's framework for applying LLMs to transcribed audio. You can ask questions, generate summaries, extract action items, and classify content from your audio files.", "a_zh": "LeMUR 是 AssemblyAI 的框架，用于对转写后的音频应用 LLM —— 可提问、生成摘要、提取行动项、分类内容。" },
-      { "q_en": "What languages does AssemblyAI support?", "q_zh": "AssemblyAI 支持哪些语言？", "a_en": "100+ languages for speech-to-text. Best accuracy on English, Spanish, French, German, Italian, Portuguese, Japanese, Korean, Mandarin Chinese.", "a_zh": "100+ 语言语音转文字，英/西/法/德/意/葡/日/韩/中文普通话准确率最高。" },
-      { "q_en": "Does AssemblyAI support real-time transcription?", "q_zh": "AssemblyAI 支持实时转写吗？", "a_en": "Yes. Real-time streaming endpoint with speaker diarization, interim results, and final transcripts. Slightly higher pricing at $0.024/min.", "a_zh": "支持实时流式端点，含说话人分离、中间结果和最终转写。价格稍高为 $0.024/分钟。" },
-      { "q_en": "How accurate is AssemblyAI?", "q_zh": "AssemblyAI 准确率如何？", "a_en": "Industry-leading for English with word error rate (WER) under 5% on clean audio. Accuracy drops on heavy accents, background noise, or overlapping speech.", "a_zh": "英文 WER 低于 5%，行业领先；重口音、背景噪音或多人交叠时准确率下降。" },
-      { "q_en": "Can AssemblyAI identify multiple speakers?", "q_zh": "AssemblyAI 能区分多个说话人吗？", "a_en": "Yes. Speaker diarization is built in and configurable. It labels each segment with a speaker ID and supports up to 10+ speakers per audio file.", "a_zh": "支持。说话人分离功能内置且可配置，每段标注 speaker ID，支持 10+ 个说话人。" },
-      { "q_en": "Does AssemblyAI support custom vocabulary?", "q_zh": "AssemblyAI 支持自定义词汇吗？", "a_en": "Yes. You can provide a custom vocabulary with domain-specific terms, product names, acronyms, and proper nouns to improve accuracy.", "a_zh": "支持。可提交自定义词汇表，包含行业术语、产品名、缩写和专有名词来提升准确率。" },
-      { "q_en": "How does AssemblyAI compare to Deepgram?", "q_zh": "AssemblyAI 与 Deepgram 相比如何？", "a_en": "AssemblyAI offers richer post-processing features (LeMUR LLM, content moderation, summarization). Deepgram has lower latency and stronger custom model options. Both are best-in-class API providers.", "a_zh": "AssemblyAI 的后处理功能更丰富（LeMUR LLM、内容审核、摘要）；Deepgram 延迟更低、自定义模型更强。两者都是行业顶尖的 API 服务商。" },
-      { "q_en": "Is AssemblyAI secure for enterprise use?", "q_zh": "AssemblyAI 企业使用安全吗？", "a_en": "Yes. SOC 2 Type II certified, HIPAA compliance available on Enterprise plan, data encryption at rest and in transit, and data retention policies you can configure.", "a_zh": "SOC 2 Type II 认证；Enterprise 版支持 HIPAA 合规；传输和静态数据加密；可配置数据保留策略。" },
-      { "q_en": "What is the best use case for AssemblyAI?", "q_zh": "AssemblyAI 最适合什么场景？", "a_en": "Building speech-to-text into your own product: call center analytics, meeting transcription, video captioning, podcast indexing, and voice agent pipelines.", "a_zh": "将语音转文字集成到自己的产品中：呼叫中心分析、会议转写、视频字幕、播客索引、语音 Agent 管线。" }
-    ]
+      {
+        "q_en": "Is AssemblyAI free to use?",
+        "q_zh": "AssemblyAI 免费吗？",
+        "a_en": "The API has a free tier (limited hours per month). After that, pay-as-you-go pricing starts at $0.015 per minute for speech-to-text.",
+        "a_zh": "API 有免费额度（每月有限时长），超出后按量计费，语音转文字 $0.015/分钟起。"
+      },
+      {
+        "q_en": "What is LeMUR?",
+        "q_zh": "什么是 LeMUR？",
+        "a_en": "LeMUR is AssemblyAI's framework for applying LLMs to transcribed audio. You can ask questions, generate summaries, extract action items, and classify content from your audio files.",
+        "a_zh": "LeMUR 是 AssemblyAI 的框架，用于对转写后的音频应用 LLM —— 可提问、生成摘要、提取行动项、分类内容。"
+      },
+      {
+        "q_en": "What languages does AssemblyAI support?",
+        "q_zh": "AssemblyAI 支持哪些语言？",
+        "a_en": "100+ languages for speech-to-text. Best accuracy on English, Spanish, French, German, Italian, Portuguese, Japanese, Korean, Mandarin Chinese.",
+        "a_zh": "100+ 语言语音转文字，英/西/法/德/意/葡/日/韩/中文普通话准确率最高。"
+      },
+      {
+        "q_en": "Does AssemblyAI support real-time transcription?",
+        "q_zh": "AssemblyAI 支持实时转写吗？",
+        "a_en": "Yes. Real-time streaming endpoint with speaker diarization, interim results, and final transcripts. Slightly higher pricing at $0.024/min.",
+        "a_zh": "支持实时流式端点，含说话人分离、中间结果和最终转写。价格稍高为 $0.024/分钟。"
+      },
+      {
+        "q_en": "How accurate is AssemblyAI?",
+        "q_zh": "AssemblyAI 准确率如何？",
+        "a_en": "Industry-leading for English with word error rate (WER) under 5% on clean audio. Accuracy drops on heavy accents, background noise, or overlapping speech.",
+        "a_zh": "英文 WER 低于 5%，行业领先；重口音、背景噪音或多人交叠时准确率下降。"
+      },
+      {
+        "q_en": "Can AssemblyAI identify multiple speakers?",
+        "q_zh": "AssemblyAI 能区分多个说话人吗？",
+        "a_en": "Yes. Speaker diarization is built in and configurable. It labels each segment with a speaker ID and supports up to 10+ speakers per audio file.",
+        "a_zh": "支持。说话人分离功能内置且可配置，每段标注 speaker ID，支持 10+ 个说话人。"
+      },
+      {
+        "q_en": "Does AssemblyAI support custom vocabulary?",
+        "q_zh": "AssemblyAI 支持自定义词汇吗？",
+        "a_en": "Yes. You can provide a custom vocabulary with domain-specific terms, product names, acronyms, and proper nouns to improve accuracy.",
+        "a_zh": "支持。可提交自定义词汇表，包含行业术语、产品名、缩写和专有名词来提升准确率。"
+      },
+      {
+        "q_en": "How does AssemblyAI compare to Deepgram?",
+        "q_zh": "AssemblyAI 与 Deepgram 相比如何？",
+        "a_en": "AssemblyAI offers richer post-processing features (LeMUR LLM, content moderation, summarization). Deepgram has lower latency and stronger custom model options. Both are best-in-class API providers.",
+        "a_zh": "AssemblyAI 的后处理功能更丰富（LeMUR LLM、内容审核、摘要）；Deepgram 延迟更低、自定义模型更强。两者都是行业顶尖的 API 服务商。"
+      },
+      {
+        "q_en": "Is AssemblyAI secure for enterprise use?",
+        "q_zh": "AssemblyAI 企业使用安全吗？",
+        "a_en": "Yes. SOC 2 Type II certified, HIPAA compliance available on Enterprise plan, data encryption at rest and in transit, and data retention policies you can configure.",
+        "a_zh": "SOC 2 Type II 认证；Enterprise 版支持 HIPAA 合规；传输和静态数据加密；可配置数据保留策略。"
+      },
+      {
+        "q_en": "What is the best use case for AssemblyAI?",
+        "q_zh": "AssemblyAI 最适合什么场景？",
+        "a_en": "Building speech-to-text into your own product: call center analytics, meeting transcription, video captioning, podcast indexing, and voice agent pipelines.",
+        "a_zh": "将语音转文字集成到自己的产品中：呼叫中心分析、会议转写、视频字幕、播客索引、语音 Agent 管线。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.4,
+      "capability": 5,
+      "price": 10,
+      "growth": 7,
+      "trust": 8
+    }
   },
   "bolt": {
     "reviewed": true,
     "updatedAt": "2026-07-21",
     "testedVersion": "Bolt 2026 (WebContainer)",
     "score": 8.6,
-    "quickFacts": { "freeTier": true, "hasApi": false, "platforms": ["Web Browser"] },
-    "pricingSummary": { "en": "Free tier with limited daily tokens · Pro $20/mo (2x faster AI, larger context) · Enterprise for teams.", "zh": "免费版每日额度有限；Pro 20 美元/月（2 倍速度、更大上下文）；企业版可按需定制。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web Browser"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with limited daily tokens · Pro $20/mo (2x faster AI, larger context) · Enterprise for teams.",
+      "zh": "免费版每日额度有限；Pro 20 美元/月（2 倍速度、更大上下文）；企业版可按需定制。"
+    },
     "faq": [
-      { "q_en": "Is Bolt free to use?", "q_zh": "Bolt 免费吗？", "a_en": "Yes, with a daily token limit. Pro at $20/month removes the cap and gives faster inference.", "a_zh": "免费版有每日额度限制；Pro 20 美元/月解除限制并提供更快的推理速度。" },
-      { "q_en": "Can Bolt build production apps?", "q_zh": "Bolt 能构建生产级应用吗？", "a_en": "Best for MVPs, prototypes, and internal tools. Complex production apps with many dependencies may hit the WebContainer sandbox limits. Bolt is excellent for quick validation.", "a_zh": "最适合 MVP、原型和内部工具。复杂生产应用可能触及 WebContainer 沙箱限制。Bolt 在快速验证 idea 方面表现出色。" },
-      { "q_en": "How does Bolt compare to Lovable?", "q_zh": "Bolt 与 Lovable 相比如何？", "a_en": "Bolt runs in a browser-based WebContainer and is better for React/Node.js stacks. Lovable integrates with Supabase out of the box and is better for full-stack apps with databases.", "a_zh": "Bolt 基于浏览器 WebContainer 运行，更适合 React/Node.js 技术栈；Lovable 内置 Supabase 集成，更适合带数据库的全栈应用。" },
-      { "q_en": "Does Bolt support GitHub integration?", "q_zh": "Bolt 支持 GitHub 集成吗？", "a_en": "Yes. You can push directly to a GitHub repository from the Bolt editor. One-click deploy to Vercel or Netlify is also available.", "a_zh": "支持。可直接从 Bolt 编辑器推送到 GitHub 仓库，也支持一键部署到 Vercel 或 Netlify。" },
-      { "q_en": "What tech stacks does Bolt support?", "q_zh": "Bolt 支持哪些技术栈？", "a_en": "React, Next.js, Vue, Svelte, Node.js, Express, Python (FastAPI), and most npm packages. The WebContainer sandbox has some limitations on native OS calls.", "a_zh": "React、Next.js、Vue、Svelte、Node.js、Express、Python (FastAPI) 以及大多数 npm 包。WebContainer 沙箱对原生 OS 调用有一定限制。" },
-      { "q_en": "Can Bolt generate APIs?", "q_zh": "Bolt 能生成 API 吗？", "a_en": "Yes. Bolt can scaffold REST and GraphQL APIs with Node.js or Python. For production API hosting, you will want to move the code to a dedicated server.", "a_zh": "可以。Bolt 能用 Node.js 或 Python 搭建 REST 和 GraphQL API 的脚手架。生产环境建议将代码迁移到专用服务器。" },
-      { "q_en": "Is Bolt suitable for learning to code?", "q_zh": "Bolt 适合学习编程吗？", "a_en": "Very. The zero-config environment and browser-based IDE let beginners build real apps immediately without worrying about setup.", "a_zh": "非常适合。零配置环境和浏览器 IDE 让初学者直接从构建真实应用入门，无需担心环境配置。" },
-      { "q_en": "What are the main alternatives to Bolt?", "q_zh": "Bolt 的主要替代品是什么？", "a_en": "Lovable (Supabase + full-stack), v0 (Vercel UI), Replit (cloud IDE), and Cursor (local IDE). Each has a different strength.", "a_zh": "Lovable（Supabase + 全栈）、v0（Vercel UI）、Replit（云端 IDE）、Cursor（本地 IDE），各有侧重。" },
-      { "q_en": "Can Bolt work offline?", "q_zh": "Bolt 可以离线使用吗？", "a_en": "No. Bolt runs entirely in the browser and requires a network connection for both the AI and the WebContainer runtime.", "a_zh": "不能。Bolt 完全在浏览器中运行，AI 和 WebContainer 运行环境都需要网络连接。" },
-      { "q_en": "Who should use Bolt?", "q_zh": "Bolt 适合谁？", "a_en": "Founders building MVPs, developers prototyping ideas quickly, and anyone who wants to go from idea to working app in minutes.", "a_zh": "想快速搭建 MVP 的创业者、快速验证想法的开发者、以及想要从 idea 到可运行应用在几分钟内完成的任何人。" }
-    ]
+      {
+        "q_en": "Is Bolt free to use?",
+        "q_zh": "Bolt 免费吗？",
+        "a_en": "Yes, with a daily token limit. Pro at $20/month removes the cap and gives faster inference.",
+        "a_zh": "免费版有每日额度限制；Pro 20 美元/月解除限制并提供更快的推理速度。"
+      },
+      {
+        "q_en": "Can Bolt build production apps?",
+        "q_zh": "Bolt 能构建生产级应用吗？",
+        "a_en": "Best for MVPs, prototypes, and internal tools. Complex production apps with many dependencies may hit the WebContainer sandbox limits. Bolt is excellent for quick validation.",
+        "a_zh": "最适合 MVP、原型和内部工具。复杂生产应用可能触及 WebContainer 沙箱限制。Bolt 在快速验证 idea 方面表现出色。"
+      },
+      {
+        "q_en": "How does Bolt compare to Lovable?",
+        "q_zh": "Bolt 与 Lovable 相比如何？",
+        "a_en": "Bolt runs in a browser-based WebContainer and is better for React/Node.js stacks. Lovable integrates with Supabase out of the box and is better for full-stack apps with databases.",
+        "a_zh": "Bolt 基于浏览器 WebContainer 运行，更适合 React/Node.js 技术栈；Lovable 内置 Supabase 集成，更适合带数据库的全栈应用。"
+      },
+      {
+        "q_en": "Does Bolt support GitHub integration?",
+        "q_zh": "Bolt 支持 GitHub 集成吗？",
+        "a_en": "Yes. You can push directly to a GitHub repository from the Bolt editor. One-click deploy to Vercel or Netlify is also available.",
+        "a_zh": "支持。可直接从 Bolt 编辑器推送到 GitHub 仓库，也支持一键部署到 Vercel 或 Netlify。"
+      },
+      {
+        "q_en": "What tech stacks does Bolt support?",
+        "q_zh": "Bolt 支持哪些技术栈？",
+        "a_en": "React, Next.js, Vue, Svelte, Node.js, Express, Python (FastAPI), and most npm packages. The WebContainer sandbox has some limitations on native OS calls.",
+        "a_zh": "React、Next.js、Vue、Svelte、Node.js、Express、Python (FastAPI) 以及大多数 npm 包。WebContainer 沙箱对原生 OS 调用有一定限制。"
+      },
+      {
+        "q_en": "Can Bolt generate APIs?",
+        "q_zh": "Bolt 能生成 API 吗？",
+        "a_en": "Yes. Bolt can scaffold REST and GraphQL APIs with Node.js or Python. For production API hosting, you will want to move the code to a dedicated server.",
+        "a_zh": "可以。Bolt 能用 Node.js 或 Python 搭建 REST 和 GraphQL API 的脚手架。生产环境建议将代码迁移到专用服务器。"
+      },
+      {
+        "q_en": "Is Bolt suitable for learning to code?",
+        "q_zh": "Bolt 适合学习编程吗？",
+        "a_en": "Very. The zero-config environment and browser-based IDE let beginners build real apps immediately without worrying about setup.",
+        "a_zh": "非常适合。零配置环境和浏览器 IDE 让初学者直接从构建真实应用入门，无需担心环境配置。"
+      },
+      {
+        "q_en": "What are the main alternatives to Bolt?",
+        "q_zh": "Bolt 的主要替代品是什么？",
+        "a_en": "Lovable (Supabase + full-stack), v0 (Vercel UI), Replit (cloud IDE), and Cursor (local IDE). Each has a different strength.",
+        "a_zh": "Lovable（Supabase + 全栈）、v0（Vercel UI）、Replit（云端 IDE）、Cursor（本地 IDE），各有侧重。"
+      },
+      {
+        "q_en": "Can Bolt work offline?",
+        "q_zh": "Bolt 可以离线使用吗？",
+        "a_en": "No. Bolt runs entirely in the browser and requires a network connection for both the AI and the WebContainer runtime.",
+        "a_zh": "不能。Bolt 完全在浏览器中运行，AI 和 WebContainer 运行环境都需要网络连接。"
+      },
+      {
+        "q_en": "Who should use Bolt?",
+        "q_zh": "Bolt 适合谁？",
+        "a_en": "Founders building MVPs, developers prototyping ideas quickly, and anyone who wants to go from idea to working app in minutes.",
+        "a_zh": "想快速搭建 MVP 的创业者、快速验证想法的开发者、以及想要从 idea 到可运行应用在几分钟内完成的任何人。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.6,
+      "capability": 7,
+      "price": 10,
+      "growth": 5,
+      "trust": 8
+    }
   },
   "v0": {
     "reviewed": true,
     "updatedAt": "2026-07-21",
     "testedVersion": "v0 2026",
     "score": 8.4,
-    "quickFacts": { "freeTier": true, "hasApi": true, "platforms": ["Web Browser"] },
-    "pricingSummary": { "en": "Free tier (limited prompt credits) · Pro $20/mo · Team $40/seat/mo · Enterprise custom.", "zh": "免费版有额度限制；Pro 20 美元/月；Team 40 美元/席/月；Enterprise 定制。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web Browser"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier (limited prompt credits) · Pro $20/mo · Team $40/seat/mo · Enterprise custom.",
+      "zh": "免费版有额度限制；Pro 20 美元/月；Team 40 美元/席/月；Enterprise 定制。"
+    },
     "faq": [
-      { "q_en": "What is v0?", "q_zh": "v0 是什么？", "a_en": "Vercel's AI-powered UI generator. Describe a component or page in natural language, and v0 generates production-ready React + Tailwind code with one-click deploy.", "a_zh": "Vercel 推出的 AI UI 生成器。用自然语言描述组件或页面，v0 生成可直接部署的 React + Tailwind 代码。" },
-      { "q_en": "Is v0 free?", "q_zh": "v0 免费吗？", "a_en": "Free tier with limited monthly credits. Pro at $20/month adds more credits and priority access.", "a_zh": "免费版每月有额度限制；Pro 20 美元/月增加额度并享有优先访问。" },
-      { "q_en": "What frameworks does v0 support?", "q_zh": "v0 支持哪些框架？", "a_en": "React, Next.js, and Vue with Tailwind CSS. Generated components are production-ready and follow accessibility best practices.", "a_zh": "React、Next.js 和 Vue（搭配 Tailwind CSS）。生成的组件可直接用于生产环境，遵循无障碍最佳实践。" },
-      { "q_en": "Can v0 generate entire pages?", "q_zh": "v0 能生成完整页面吗？", "a_en": "Yes. Describe a landing page, dashboard, or form, and v0 generates the full layout with responsive design. You can iterate on specific sections.", "a_zh": "可以。描述落地页、仪表盘或表单，v0 会生成完整布局并响应式。你还可以针对特定部分迭代。" },
-      { "q_en": "How does v0 compare to Bolt?", "q_zh": "v0 与 Bolt 相比如何？", "a_en": "v0 specializes in UI generation (React + Tailwind, one-click deploy to Vercel). Bolt is a full-stack app builder with a WebContainer runtime. Use v0 for UI, Bolt for full apps.", "a_zh": "v0 专注于 UI 生成（React + Tailwind，一键部署到 Vercel）；Bolt 是全栈应用构建器，内置 WebContainer 运行环境。做 UI 用 v0，做完整应用用 Bolt。" },
-      { "q_en": "Does v0 have an API?", "q_zh": "v0 有 API 吗？", "a_en": "Yes. The v0 API allows you to generate UI components programmatically, making it possible to integrate into your design-to-code pipeline.", "a_zh": "有。v0 API 支持以编程方式生成 UI 组件，可集成到你的设计到代码工作流中。" },
-      { "q_en": "Can v0 generate images?", "q_zh": "v0 能生成图像吗？", "a_en": "No. v0 generates UI code only. For images, use Midjourney, Flux, or DALL-E. For icons, use the bundled Lucide icon library.", "a_zh": "不能。v0 只生成 UI 代码；图像请用 Midjourney、Flux 或 DALL-E；图标使用内置的 Lucide 图标库。" },
-      { "q_en": "Is v0 good for design systems?", "q_zh": "v0 适合搭建设计系统吗？", "a_en": "Yes. You can describe your design tokens, components, and variants, and v0 generates a consistent component library that matches your brand.", "a_zh": "适合。描述你的设计 Token、组件和变体后，v0 会生成与品牌一致的一致组件库。" },
-      { "q_en": "Can I edit v0 output in VS Code?", "q_zh": "v0 生成的代码可以在 VS Code 中编辑吗？", "a_en": "Yes. Export the generated code and open it in any editor. The code is standard React/Vue + Tailwind with no proprietary lock-in.", "a_zh": "可以。导出生成的代码即可在任何编辑器中打开。代码是标准的 React/Vue + Tailwind，无供应商锁定。" },
-      { "q_en": "Who should use v0?", "q_zh": "v0 适合谁？", "a_en": "Frontend developers who want to ship UI faster, designers who want to turn mockups into code, and full-stack devs who want to skip the boilerplate.", "a_zh": "希望更快交付 UI 的前端开发者、想将设计稿转为代码的设计师、想跳过样板代码的全栈开发者。" }
-    ]
+      {
+        "q_en": "What is v0?",
+        "q_zh": "v0 是什么？",
+        "a_en": "Vercel's AI-powered UI generator. Describe a component or page in natural language, and v0 generates production-ready React + Tailwind code with one-click deploy.",
+        "a_zh": "Vercel 推出的 AI UI 生成器。用自然语言描述组件或页面，v0 生成可直接部署的 React + Tailwind 代码。"
+      },
+      {
+        "q_en": "Is v0 free?",
+        "q_zh": "v0 免费吗？",
+        "a_en": "Free tier with limited monthly credits. Pro at $20/month adds more credits and priority access.",
+        "a_zh": "免费版每月有额度限制；Pro 20 美元/月增加额度并享有优先访问。"
+      },
+      {
+        "q_en": "What frameworks does v0 support?",
+        "q_zh": "v0 支持哪些框架？",
+        "a_en": "React, Next.js, and Vue with Tailwind CSS. Generated components are production-ready and follow accessibility best practices.",
+        "a_zh": "React、Next.js 和 Vue（搭配 Tailwind CSS）。生成的组件可直接用于生产环境，遵循无障碍最佳实践。"
+      },
+      {
+        "q_en": "Can v0 generate entire pages?",
+        "q_zh": "v0 能生成完整页面吗？",
+        "a_en": "Yes. Describe a landing page, dashboard, or form, and v0 generates the full layout with responsive design. You can iterate on specific sections.",
+        "a_zh": "可以。描述落地页、仪表盘或表单，v0 会生成完整布局并响应式。你还可以针对特定部分迭代。"
+      },
+      {
+        "q_en": "How does v0 compare to Bolt?",
+        "q_zh": "v0 与 Bolt 相比如何？",
+        "a_en": "v0 specializes in UI generation (React + Tailwind, one-click deploy to Vercel). Bolt is a full-stack app builder with a WebContainer runtime. Use v0 for UI, Bolt for full apps.",
+        "a_zh": "v0 专注于 UI 生成（React + Tailwind，一键部署到 Vercel）；Bolt 是全栈应用构建器，内置 WebContainer 运行环境。做 UI 用 v0，做完整应用用 Bolt。"
+      },
+      {
+        "q_en": "Does v0 have an API?",
+        "q_zh": "v0 有 API 吗？",
+        "a_en": "Yes. The v0 API allows you to generate UI components programmatically, making it possible to integrate into your design-to-code pipeline.",
+        "a_zh": "有。v0 API 支持以编程方式生成 UI 组件，可集成到你的设计到代码工作流中。"
+      },
+      {
+        "q_en": "Can v0 generate images?",
+        "q_zh": "v0 能生成图像吗？",
+        "a_en": "No. v0 generates UI code only. For images, use Midjourney, Flux, or DALL-E. For icons, use the bundled Lucide icon library.",
+        "a_zh": "不能。v0 只生成 UI 代码；图像请用 Midjourney、Flux 或 DALL-E；图标使用内置的 Lucide 图标库。"
+      },
+      {
+        "q_en": "Is v0 good for design systems?",
+        "q_zh": "v0 适合搭建设计系统吗？",
+        "a_en": "Yes. You can describe your design tokens, components, and variants, and v0 generates a consistent component library that matches your brand.",
+        "a_zh": "适合。描述你的设计 Token、组件和变体后，v0 会生成与品牌一致的一致组件库。"
+      },
+      {
+        "q_en": "Can I edit v0 output in VS Code?",
+        "q_zh": "v0 生成的代码可以在 VS Code 中编辑吗？",
+        "a_en": "Yes. Export the generated code and open it in any editor. The code is standard React/Vue + Tailwind with no proprietary lock-in.",
+        "a_zh": "可以。导出生成的代码即可在任何编辑器中打开。代码是标准的 React/Vue + Tailwind，无供应商锁定。"
+      },
+      {
+        "q_en": "Who should use v0?",
+        "q_zh": "v0 适合谁？",
+        "a_en": "Frontend developers who want to ship UI faster, designers who want to turn mockups into code, and full-stack devs who want to skip the boilerplate.",
+        "a_zh": "希望更快交付 UI 的前端开发者、想将设计稿转为代码的设计师、想跳过样板代码的全栈开发者。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.4,
+      "capability": 7,
+      "price": 10,
+      "growth": 7,
+      "trust": 8
+    }
   },
   "lovable": {
     "reviewed": true,
     "updatedAt": "2026-07-21",
     "testedVersion": "Lovable 2026",
     "score": 8.3,
-    "quickFacts": { "freeTier": true, "hasApi": false, "platforms": ["Web Browser"] },
-    "pricingSummary": { "en": "Free tier (limited) · Starter $20/mo · Launch $50/mo · Scale $100/mo.", "zh": "免费版有限制；Starter 20 美元/月；Launch 50 美元/月；Scale 100 美元/月。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web Browser"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier (limited) · Starter $20/mo · Launch $50/mo · Scale $100/mo.",
+      "zh": "免费版有限制；Starter 20 美元/月；Launch 50 美元/月；Scale 100 美元/月。"
+    },
     "faq": [
-      { "q_en": "What makes Lovable different from Bolt?", "q_zh": "Lovable 与 Bolt 有什么不同？", "a_en": "Lovable is built around Supabase, so user auth, database, and storage are included from the start. Bolt is better for Node.js/React apps without a database. Lovable is stronger for SaaS MVPs.", "a_zh": "Lovable 围绕 Supabase 构建，从第一步就包含用户认证、数据库和存储；Bolt 更适合无需数据库的 Node.js/React 应用。Lovable 在 SaaS MVP 方面更强。" },
-      { "q_en": "Can non-technical founders use Lovable?", "q_zh": "非技术背景的创业者能用 Lovable 吗？", "a_en": "Yes. The chat-to-app interface lets you describe your idea in plain English. Lovable generates the full stack, deploys it, and gives you a live URL.", "a_zh": "可以。通过对话式界面，用日常语言描述你的想法，Lovable 会生成完整应用、部署并给你一个可访问的 URL。" },
-      { "q_en": "Does Lovable support custom domains?", "q_zh": "Lovable 支持自定义域名吗？", "a_en": "Yes. Paid plans support custom domains. The free tier gives you a lovable.app subdomain.", "a_zh": "付费版支持自定义域名；免费版提供 lovable.app 子域名。" },
-      { "q_en": "Can I export the code from Lovable?", "q_zh": "Lovable 的代码可以导出吗？", "a_en": "Yes. You can export the full project to a GitHub repository and continue developing locally or with your team.", "a_zh": "可以。将完整项目导出到 GitHub 仓库即可在本地或与团队继续开发。" },
-      { "q_en": "What tech stack does Lovable use?", "q_zh": "Lovable 使用什么技术栈？", "a_en": "React + TypeScript frontend, Supabase for backend (PostgreSQL, auth, storage), and Tailwind CSS. Deployed on Lovable's hosting infrastructure.", "a_zh": "React + TypeScript 前端，Supabase 后端（PostgreSQL、认证、存储），Tailwind CSS 样式。部署在 Lovable 的托管基础设施上。" },
-      { "q_en": "Is Lovable good for internal tools?", "q_zh": "Lovable 适合做内部工具吗？", "a_en": "Yes. With Supabase's built-in auth and row-level security, you can build internal dashboards, admin panels, and CRUD apps quickly.", "a_zh": "适合。借助 Supabase 内置的认证和行级安全，可以快速搭建内部仪表盘、管理面板和 CRUD 应用。" },
-      { "q_en": "How does Lovable pricing compare to Bolt?", "q_zh": "Lovable 的定价与 Bolt 相比如何？", "a_en": "Starter at $20/mo is similar to Bolt Pro. Launch at $50/mo adds more generous limits. Both are comparable for MVP development.", "a_zh": "Starter 20 美元/月与 Bolt Pro 相当；Launch 50 美元/月提供更宽松的额度。两者在 MVP 开发上各有优势。" },
-      { "q_en": "Can Lovable handle complex logic?", "q_zh": "Lovable 能处理复杂逻辑吗？", "a_en": "It handles CRUD, auth flows, and basic business logic well. For complex algorithms or custom API integrations, you may need to extend the generated code.", "a_zh": "CRUD、认证流程和基础业务逻辑处理良好；复杂算法或自定义 API 集成可能需要扩展生成的代码。" },
-      { "q_en": "Does Lovable have a mobile app?", "q_zh": "Lovable 有移动端 App 吗？", "a_en": "No. Lovable generates web apps that are responsive and mobile-friendly. For native mobile apps, consider React Native or Flutter.", "a_zh": "Lovable 生成的是响应式 Web 应用；原生移动端 App 建议使用 React Native 或 Flutter。" },
-      { "q_en": "Who should use Lovable?", "q_zh": "Lovable 适合谁？", "a_en": "Non-technical founders building SaaS MVPs, product teams prototyping with real data, and anyone who needs a full-stack app with a database without writing backend code.", "a_zh": "构建 SaaS MVP 的非技术创业者、用真实数据做原型的产品团队、以及需要带数据库的全栈应用但不想写后端代码的人。" }
-    ]
+      {
+        "q_en": "What makes Lovable different from Bolt?",
+        "q_zh": "Lovable 与 Bolt 有什么不同？",
+        "a_en": "Lovable is built around Supabase, so user auth, database, and storage are included from the start. Bolt is better for Node.js/React apps without a database. Lovable is stronger for SaaS MVPs.",
+        "a_zh": "Lovable 围绕 Supabase 构建，从第一步就包含用户认证、数据库和存储；Bolt 更适合无需数据库的 Node.js/React 应用。Lovable 在 SaaS MVP 方面更强。"
+      },
+      {
+        "q_en": "Can non-technical founders use Lovable?",
+        "q_zh": "非技术背景的创业者能用 Lovable 吗？",
+        "a_en": "Yes. The chat-to-app interface lets you describe your idea in plain English. Lovable generates the full stack, deploys it, and gives you a live URL.",
+        "a_zh": "可以。通过对话式界面，用日常语言描述你的想法，Lovable 会生成完整应用、部署并给你一个可访问的 URL。"
+      },
+      {
+        "q_en": "Does Lovable support custom domains?",
+        "q_zh": "Lovable 支持自定义域名吗？",
+        "a_en": "Yes. Paid plans support custom domains. The free tier gives you a lovable.app subdomain.",
+        "a_zh": "付费版支持自定义域名；免费版提供 lovable.app 子域名。"
+      },
+      {
+        "q_en": "Can I export the code from Lovable?",
+        "q_zh": "Lovable 的代码可以导出吗？",
+        "a_en": "Yes. You can export the full project to a GitHub repository and continue developing locally or with your team.",
+        "a_zh": "可以。将完整项目导出到 GitHub 仓库即可在本地或与团队继续开发。"
+      },
+      {
+        "q_en": "What tech stack does Lovable use?",
+        "q_zh": "Lovable 使用什么技术栈？",
+        "a_en": "React + TypeScript frontend, Supabase for backend (PostgreSQL, auth, storage), and Tailwind CSS. Deployed on Lovable's hosting infrastructure.",
+        "a_zh": "React + TypeScript 前端，Supabase 后端（PostgreSQL、认证、存储），Tailwind CSS 样式。部署在 Lovable 的托管基础设施上。"
+      },
+      {
+        "q_en": "Is Lovable good for internal tools?",
+        "q_zh": "Lovable 适合做内部工具吗？",
+        "a_en": "Yes. With Supabase's built-in auth and row-level security, you can build internal dashboards, admin panels, and CRUD apps quickly.",
+        "a_zh": "适合。借助 Supabase 内置的认证和行级安全，可以快速搭建内部仪表盘、管理面板和 CRUD 应用。"
+      },
+      {
+        "q_en": "How does Lovable pricing compare to Bolt?",
+        "q_zh": "Lovable 的定价与 Bolt 相比如何？",
+        "a_en": "Starter at $20/mo is similar to Bolt Pro. Launch at $50/mo adds more generous limits. Both are comparable for MVP development.",
+        "a_zh": "Starter 20 美元/月与 Bolt Pro 相当；Launch 50 美元/月提供更宽松的额度。两者在 MVP 开发上各有优势。"
+      },
+      {
+        "q_en": "Can Lovable handle complex logic?",
+        "q_zh": "Lovable 能处理复杂逻辑吗？",
+        "a_en": "It handles CRUD, auth flows, and basic business logic well. For complex algorithms or custom API integrations, you may need to extend the generated code.",
+        "a_zh": "CRUD、认证流程和基础业务逻辑处理良好；复杂算法或自定义 API 集成可能需要扩展生成的代码。"
+      },
+      {
+        "q_en": "Does Lovable have a mobile app?",
+        "q_zh": "Lovable 有移动端 App 吗？",
+        "a_en": "No. Lovable generates web apps that are responsive and mobile-friendly. For native mobile apps, consider React Native or Flutter.",
+        "a_zh": "Lovable 生成的是响应式 Web 应用；原生移动端 App 建议使用 React Native 或 Flutter。"
+      },
+      {
+        "q_en": "Who should use Lovable?",
+        "q_zh": "Lovable 适合谁？",
+        "a_en": "Non-technical founders building SaaS MVPs, product teams prototyping with real data, and anyone who needs a full-stack app with a database without writing backend code.",
+        "a_zh": "构建 SaaS MVP 的非技术创业者、用真实数据做原型的产品团队、以及需要带数据库的全栈应用但不想写后端代码的人。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.3,
+      "capability": 7,
+      "price": 10,
+      "growth": 5,
+      "trust": 8
+    }
   },
   "replit": {
     "reviewed": true,
     "updatedAt": "2026-07-21",
     "testedVersion": "Replit 2026 (Agent Mode)",
     "score": 8.6,
-    "quickFacts": { "freeTier": true, "hasApi": false, "platforms": ["Web Browser","iOS","Android"] },
-    "pricingSummary": { "en": "Free tier (limited compute + AI) · Core $20/mo (unlimited compute + AI agent) · Teams $40/seat/mo.", "zh": "免费版有计算和 AI 额度限制；Core 20 美元/月（无限计算 + AI Agent）；Teams 40 美元/席/月。" },
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web Browser",
+        "iOS",
+        "Android"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier (limited compute + AI) · Core $20/mo (unlimited compute + AI agent) · Teams $40/seat/mo.",
+      "zh": "免费版有计算和 AI 额度限制；Core 20 美元/月（无限计算 + AI Agent）；Teams 40 美元/席/月。"
+    },
     "faq": [
-      { "q_en": "What is Replit?", "q_zh": "Replit 是什么？", "a_en": "A browser-based cloud IDE with built-in AI. You can code, run, and deploy apps without installing anything. The 2026 Agent mode can build entire features from a description.", "a_zh": "基于浏览器的云端 IDE，内置 AI 助手。无需安装即可编码、运行和部署应用。2026 年的 Agent 模式可根据描述自动构建完整功能。" },
-      { "q_en": "Is Replit free?", "q_zh": "Replit 免费吗？", "a_en": "Free tier includes limited compute and AI credits. Core at $20/month removes the limits and adds the AI agent with full context.", "a_zh": "免费版有计算和 AI 额度限制；Core 20 美元/月解除限制并添加全上下文 AI Agent。" },
-      { "q_en": "Can Replit deploy apps?", "q_zh": "Replit 可以部署应用吗？", "a_en": "Yes. One-click deploy with a generated URL. Static sites, Node.js, Python, and Go apps are supported. Custom domains on paid plans.", "a_zh": "支持一键部署并生成 URL；支持静态网站、Node.js、Python 和 Go 应用；付费版可绑定自定义域名。" },
-      { "q_en": "Is Replit good for learning to code?", "q_zh": "Replit 适合学习编程吗？", "a_en": "Yes. Zero setup, browser-based, and the AI agent explains code as it generates it. Widely used in CS education programs.", "a_zh": "非常适合。零配置、基于浏览器，AI Agent 在生成代码的同时会解释原理。广泛用于计算机科学教育。" },
-      { "q_en": "How does Replit compare to Cursor?", "q_zh": "Replit 与 Cursor 相比如何？", "a_en": "Replit is browser-based and requires no setup — ideal for quick prototypes and learning. Cursor is a local IDE with deeper codebase understanding and better for large projects.", "a_zh": "Replit 基于浏览器、无需配置——适合快速原型和学习；Cursor 是本地 IDE，代码库理解更深、更适合大型项目。" },
-      { "q_en": "What languages does Replit support?", "q_zh": "Replit 支持哪些语言？", "a_en": "50+ languages including Python, JavaScript, TypeScript, Go, Rust, C++, Java, HTML/CSS, Bash, and SQL. Python and JavaScript have the best AI support.", "a_zh": "50+ 语言，包括 Python、JavaScript、TypeScript、Go、Rust、C++、Java、HTML/CSS、Bash 和 SQL；Python 和 JavaScript 的 AI 支持最好。" },
-      { "q_en": "Can teams collaborate on Replit?", "q_zh": "Replit 支持团队协作吗？", "a_en": "Yes. Teams plan includes multiplayer editing, shared secrets, and team workspaces. Multiple developers can edit the same repl simultaneously.", "a_zh": "支持。Teams 版包含多人实时编辑、共享密钥和团队工作区。多位开发者可同时编辑同一个 Repl。" },
-      { "q_en": "Is Replit's Agent mode worth the upgrade?", "q_zh": "Replit 的 Agent 模式值得升级吗？", "a_en": "If you build features frequently, yes. The Agent can scaffold, debug, and deploy autonomously — saving hours per feature. The free tier is good for occasional use.", "a_zh": "如果经常构建功能，值得。Agent 能自主完成脚手架搭建、调试和部署——每个功能节省数小时。偶尔使用免费版即可。" },
-      { "q_en": "Can Replit run scheduled tasks?", "q_zh": "Replit 能运行定时任务吗？", "a_en": "Yes, with the Always-On feature (paid plans). You can keep a web server running or schedule cron jobs. The free tier sleeps after inactivity.", "a_zh": "付费版支持 Always-On 功能，可保持 Web 服务器运行或设置定时任务；免费版闲置后会休眠。" },
-      { "q_en": "Who should use Replit?", "q_zh": "Replit 适合谁？", "a_en": "Students learning to code, developers prototyping quickly, educators teaching programming, and anyone who wants to code from any device without setup.", "a_zh": "学习编程的学生、快速原型的开发者、教授编程的教育者、以及任何想在任何设备上无需配置直接编码的人。" }
-    ]
+      {
+        "q_en": "What is Replit?",
+        "q_zh": "Replit 是什么？",
+        "a_en": "A browser-based cloud IDE with built-in AI. You can code, run, and deploy apps without installing anything. The 2026 Agent mode can build entire features from a description.",
+        "a_zh": "基于浏览器的云端 IDE，内置 AI 助手。无需安装即可编码、运行和部署应用。2026 年的 Agent 模式可根据描述自动构建完整功能。"
+      },
+      {
+        "q_en": "Is Replit free?",
+        "q_zh": "Replit 免费吗？",
+        "a_en": "Free tier includes limited compute and AI credits. Core at $20/month removes the limits and adds the AI agent with full context.",
+        "a_zh": "免费版有计算和 AI 额度限制；Core 20 美元/月解除限制并添加全上下文 AI Agent。"
+      },
+      {
+        "q_en": "Can Replit deploy apps?",
+        "q_zh": "Replit 可以部署应用吗？",
+        "a_en": "Yes. One-click deploy with a generated URL. Static sites, Node.js, Python, and Go apps are supported. Custom domains on paid plans.",
+        "a_zh": "支持一键部署并生成 URL；支持静态网站、Node.js、Python 和 Go 应用；付费版可绑定自定义域名。"
+      },
+      {
+        "q_en": "Is Replit good for learning to code?",
+        "q_zh": "Replit 适合学习编程吗？",
+        "a_en": "Yes. Zero setup, browser-based, and the AI agent explains code as it generates it. Widely used in CS education programs.",
+        "a_zh": "非常适合。零配置、基于浏览器，AI Agent 在生成代码的同时会解释原理。广泛用于计算机科学教育。"
+      },
+      {
+        "q_en": "How does Replit compare to Cursor?",
+        "q_zh": "Replit 与 Cursor 相比如何？",
+        "a_en": "Replit is browser-based and requires no setup — ideal for quick prototypes and learning. Cursor is a local IDE with deeper codebase understanding and better for large projects.",
+        "a_zh": "Replit 基于浏览器、无需配置——适合快速原型和学习；Cursor 是本地 IDE，代码库理解更深、更适合大型项目。"
+      },
+      {
+        "q_en": "What languages does Replit support?",
+        "q_zh": "Replit 支持哪些语言？",
+        "a_en": "50+ languages including Python, JavaScript, TypeScript, Go, Rust, C++, Java, HTML/CSS, Bash, and SQL. Python and JavaScript have the best AI support.",
+        "a_zh": "50+ 语言，包括 Python、JavaScript、TypeScript、Go、Rust、C++、Java、HTML/CSS、Bash 和 SQL；Python 和 JavaScript 的 AI 支持最好。"
+      },
+      {
+        "q_en": "Can teams collaborate on Replit?",
+        "q_zh": "Replit 支持团队协作吗？",
+        "a_en": "Yes. Teams plan includes multiplayer editing, shared secrets, and team workspaces. Multiple developers can edit the same repl simultaneously.",
+        "a_zh": "支持。Teams 版包含多人实时编辑、共享密钥和团队工作区。多位开发者可同时编辑同一个 Repl。"
+      },
+      {
+        "q_en": "Is Replit's Agent mode worth the upgrade?",
+        "q_zh": "Replit 的 Agent 模式值得升级吗？",
+        "a_en": "If you build features frequently, yes. The Agent can scaffold, debug, and deploy autonomously — saving hours per feature. The free tier is good for occasional use.",
+        "a_zh": "如果经常构建功能，值得。Agent 能自主完成脚手架搭建、调试和部署——每个功能节省数小时。偶尔使用免费版即可。"
+      },
+      {
+        "q_en": "Can Replit run scheduled tasks?",
+        "q_zh": "Replit 能运行定时任务吗？",
+        "a_en": "Yes, with the Always-On feature (paid plans). You can keep a web server running or schedule cron jobs. The free tier sleeps after inactivity.",
+        "a_zh": "付费版支持 Always-On 功能，可保持 Web 服务器运行或设置定时任务；免费版闲置后会休眠。"
+      },
+      {
+        "q_en": "Who should use Replit?",
+        "q_zh": "Replit 适合谁？",
+        "a_en": "Students learning to code, developers prototyping quickly, educators teaching programming, and anyone who wants to code from any device without setup.",
+        "a_zh": "学习编程的学生、快速原型的开发者、教授编程的教育者、以及任何想在任何设备上无需配置直接编码的人。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.6,
+      "capability": 7,
+      "price": 10,
+      "growth": 5,
+      "trust": 8
+    }
   }
 }

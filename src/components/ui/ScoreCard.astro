@@ -1,0 +1,41 @@
+---
+const { score, breakdown = {}, toolName = "This tool" } = Astro.props;
+const dims = [
+  { key: "user", label: "User Satisfaction", weight: 30 },
+  { key: "capability", label: "Capability", weight: 25 },
+  { key: "price", label: "Value and Pricing", weight: 20 },
+  { key: "growth", label: "Growth and Momentum", weight: 15 },
+  { key: "trust", label: "Trust and Privacy", weight: 10 },
+];
+const overall = score;
+const hasBreakdown = breakdown && breakdown.user != null;
+---
+{overall != null && (
+  <div class="score-card">
+    <div class="score-overall">
+      <span class="score-number">{overall.toFixed(1)}</span>
+      <span class="score-max">/ 10</span>
+      <span class="score-label">AI Tool Score</span>
+    </div>
+    {hasBreakdown && (
+      <div class="score-breakdown">
+        {dims.map(function(d) {
+          const v = breakdown[d.key] || 0;
+          const pct = Math.round(v * 10);
+          return (
+            <div class="score-dim">
+              <div class="score-dim-header">
+                <span class="score-dim-label">{d.label}</span>
+                <span class="score-dim-weight">{d.weight + "%"}</span>
+              </div>
+              <div class="score-dim-bar">
+                <div class="score-dim-fill" style={"width: " + pct + "%"}></div>
+              </div>
+              <span class="score-dim-value">{v.toFixed(1)}</span>
+            </div>
+          );
+        })}
+      </div>
+    )}
+  </div>
+)}
