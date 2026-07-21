@@ -22,6 +22,8 @@ related:
 
 ## 🚀 最近里程碑
 
+- **Sprint 6 step 9（round 3 step 6）**：3 表单页（submit-tool/submit-prompt/newsletter）去 inline style，保留 JS 成功提示交互；Playwright 6 全绿；构建 2162；已推送
+
 - **Sprint 6 step 8（round 3 step 5）**：team(20→0)+contact(15→0) 去 inline style；新增 form 类 + 增强 cta-primary；Playwright 6 全绿；已推送
 
 - **Sprint 6（2026-07-21）step 7（round 3 step 4）**：静态结构性页 best-ai-agents/about/zh-solutions 去 inline style + zh-solutions 防御化
