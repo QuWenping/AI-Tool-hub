@@ -37,9 +37,9 @@ const giscusConfig = {
   async: ""
 };
 ---
-<section class="comments-section" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-color);">
-  <h2 style="font-size: 22px; margin-bottom: 16px;" data-i18n-en="Comments" data-i18n-zh="评论">Comments</h2>
-  <p style="color: var(--text-mute); font-size: 14px; margin-bottom: 24px;" data-i18n-en="Discuss this article. Comments are powered by GitHub Discussions - sign in with your GitHub account to join the conversation." data-i18n-zh="讨论这篇文章。评论由 GitHub Discussions 提供支持 - 使用你的 GitHub 账号登录即可参与。">Discuss this article. Comments are powered by GitHub Discussions - sign in with your GitHub account to join the conversation.</p>
+<section class="comments-section">
+  <h2 data-i18n-en="Comments" data-i18n-zh="评论">Comments</h2>
+  <p class="comments-desc" data-i18n-en="Discuss this article. Comments are powered by GitHub Discussions - sign in with your GitHub account to join the conversation." data-i18n-zh="讨论这篇文章。评论由 GitHub Discussions 提供支持 - 使用你的 GitHub 账号登录即可参与。">Discuss this article. Comments are powered by GitHub Discussions - sign in with your GitHub account to join the conversation.</p>
   <script
     src="https://giscus.app/client.js"
     data-repo={giscusConfig["data-repo"]}
@@ -58,7 +58,7 @@ const giscusConfig = {
     async={giscusConfig.async}
   ></script>
   <noscript>
-    <p style="text-align: center; color: var(--text-mute); padding: 20px; background: var(--card-bg); border-radius: 8px;" data-i18n-en="Please enable JavaScript to view comments." data-i18n-zh="请启用 JavaScript 查看评论。">Please enable JavaScript to view comments.</p>
+    <p class="comments-fallback" data-i18n-en="Please enable JavaScript to view comments." data-i18n-zh="请启用 JavaScript 查看评论。">Please enable JavaScript to view comments.</p>
   </noscript>
 </section>
 

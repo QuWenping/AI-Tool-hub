@@ -6,33 +6,33 @@
  */
 const { slug, lang = "en" } = Astro.props;
 ---
-<section class="feedback-section" style="margin-top: 40px; padding: 24px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; text-align: center;">
-  <p style="margin: 0 0 16px; color: var(--text-main); font-weight: 500;" data-i18n-en="Was this article helpful?" data-i18n-zh="这篇文章对你有帮助吗？">Was this article helpful?</p>
-  <div style="display: flex; gap: 12px; justify-content: center; align-items: center;" id={`feedback-${slug}`}>
+<section class="feedback-section">
+  <p data-i18n-en="Was this article helpful?" data-i18n-zh="这篇文章对你有帮助吗？">Was this article helpful?</p>
+  <div class="feedback-buttons" id={`feedback-${slug}`}>
     <button
       class="feedback-btn"
       data-vote="up"
       data-slug={slug}
-      style="padding: 10px 20px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-color); color: var(--text-main); cursor: pointer; font-size: 16px; transition: all 0.2s;"
+      class="feedback-btn"
       aria-label="Helpful"
     >
       <i class="far fa-thumbs-up"></i>
       <span data-i18n-en="Yes" data-i18n-zh="有用">Yes</span>
-      <span class="feedback-count" data-type="up" style="margin-left: 6px; color: var(--text-mute); font-size: 13px;"></span>
+      <span class="feedback-count" data-type="up" class="feedback-count"></span>
     </button>
     <button
       class="feedback-btn"
       data-vote="down"
       data-slug={slug}
-      style="padding: 10px 20px; border: 1px solid var(--border-color); border-radius: 8px; background: var(--bg-color); color: var(--text-main); cursor: pointer; font-size: 16px; transition: all 0.2s;"
+      class="feedback-btn"
       aria-label="Not helpful"
     >
       <i class="far fa-thumbs-down"></i>
       <span data-i18n-en="No" data-i18n-zh="没用">No</span>
-      <span class="feedback-count" data-type="down" style="margin-left: 6px; color: var(--text-mute); font-size: 13px;"></span>
+      <span class="feedback-count" data-type="down" class="feedback-count"></span>
     </button>
   </div>
-  <p class="feedback-thanks" style="display: none; margin-top: 16px; color: var(--accent-color); font-size: 14px;" data-i18n-en="Thanks for your feedback!" data-i18n-zh="感谢你的反馈！">Thanks for your feedback!</p>
+  <p class="feedback-thanks" data-i18n-en="Thanks for your feedback!" data-i18n-zh="感谢你的反馈！">Thanks for your feedback!</p>
 </section>
 
 <script is:inline define:vars={{ slug }}>

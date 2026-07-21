@@ -42,16 +42,16 @@ const entries = [
     <section>
       <h2>Full changelog</h2>
       {entries.map((entry, idx) => (
-        <article style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 24px; margin: 24px 0;">
-          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 12px;">
-            <span style="background: var(--accent-color); color: white; padding: 4px 12px; border-radius: 6px; font-size: 13px; font-weight: 700;">v{entry.version}</span>
-            <span style="color: var(--text-mute); font-size: 14px; font-weight: 600;">{entry.date}</span>
-            {idx === 0 && <span style="background: #10b981; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase;">Latest</span>}
+        <article class="info-card">
+          <div class="tag-row">
+            <span class="tag-pill">v{entry.version}</span>
+            <span class="meta-text">{entry.date}</span>
+            {idx === 0 && <span class="tag-pill diff-beginner">Latest</span>}
           </div>
-          <h2 style="margin-top: 0; font-size: 22px;">{entry.title}</h2>
-          <p style="color: var(--text-mute); font-size: 15px; margin-bottom: 16px;">{entry.desc}</p>
-          <p style="font-weight: 600; font-size: 13px; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Changes:</p>
-          <ul style="margin: 0; padding-left: 20px; font-size: 14px; line-height: 1.7;">
+          <h2>{entry.title}</h2>
+          <p>{entry.desc}</p>
+          <p class="field-label">Changes:</p>
+          <ul class="field-list">
             {entry.changes.map(c => <li>{c}</li>)}
           </ul>
         </article>

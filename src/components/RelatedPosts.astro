@@ -21,19 +21,19 @@ const scoredPosts = posts
   .slice(0, limit);
 ---
 {scoredPosts.length > 0 && (
-  <section class="related-posts" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-color);">
-    <h3 style="font-size: 20px; margin-bottom: 24px;" data-i18n-en="Related articles" data-i18n-zh="相关文章">Related articles</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
+  <section class="related-posts">
+    <h3 data-i18n-en="Related articles" data-i18n-zh="相关文章">Related articles</h3>
+    <div class="related-grid">
       {scoredPosts.map(p => (
         <a
           href={`/blog/${p.slug}/`}
-          style="display: block; padding: 20px; background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s;"
+          class="related-post-card"
           onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';"
           onmouseout="this.style.transform=''; this.style.boxShadow='';"
         >
-          <h4 style="margin: 0 0 8px; font-size: 16px; line-height: 1.4;">{p.title_en}</h4>
-          <p style="color: var(--text-mute); font-size: 13px; margin: 0; line-height: 1.5;">{p.desc_en}</p>
-          <p style="font-size: 11px; color: var(--text-mute); margin-top: 12px; margin-bottom: 0;">
+          <h4>{p.title_en}</h4>
+          <p>{p.desc_en}</p>
+          <p class="related-post-meta">
             <i class="far fa-calendar"></i> {p.date} · {p.read_time}
           </p>
         </a>
