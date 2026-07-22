@@ -1,0 +1,267 @@
+{
+  "generatedAt": "2026-07-22T07:52:17.672Z",
+  "total": 31,
+  "update": 30,
+  "create": 1,
+  "results": [
+    {
+      "keyword": "crewai enterprise pricing",
+      "recommendedURL": "/tool/crewai/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing tool page (not reviewed) matches 'crewai'",
+      "entityType": "tool",
+      "toolId": "crewai",
+      "isReviewed": false,
+      "suggestedContent": "Add editorial review + pricing FAQ"
+    },
+    {
+      "keyword": "clickup ai features",
+      "recommendedURL": "/tool/-clickup-ai/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing tool page (not reviewed) matches 'clickup ai'",
+      "entityType": "tool",
+      "toolId": "-clickup-ai",
+      "isReviewed": false,
+      "suggestedContent": "Add editorial review + pricing FAQ"
+    },
+    {
+      "keyword": "consensus ai",
+      "recommendedURL": "/tool/consensus-pro/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing tool page (not reviewed) matches 'consensus'",
+      "entityType": "tool",
+      "toolId": "consensus-pro",
+      "isReviewed": false,
+      "suggestedContent": "Add editorial review + pricing FAQ"
+    },
+    {
+      "keyword": "ai tools in civil engineering",
+      "recommendedURL": "/solutions/ai-for-civil-engineers/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing solution page matches 'civil engineering'",
+      "entityType": "solution",
+      "solutionSlug": "ai-for-civil-engineers"
+    },
+    {
+      "keyword": "ai tools for marketing",
+      "recommendedURL": "/best/marketing/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'marketing'",
+      "entityType": "category",
+      "categorySlug": "marketing"
+    },
+    {
+      "keyword": "ai tools for seo",
+      "recommendedURL": "/blog/best-ai-tools-for-content-writers-2026/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing blog post matches 'tools'",
+      "entityType": "blog",
+      "postSlug": "best-ai-tools-for-content-writers-2026"
+    },
+    {
+      "keyword": "ai tools for small business",
+      "recommendedURL": "/best/small-business/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'small business'",
+      "entityType": "category",
+      "categorySlug": "small-business"
+    },
+    {
+      "keyword": "ai tools for podcasters",
+      "recommendedURL": "/best/podcasters/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'podcasters'",
+      "entityType": "category",
+      "categorySlug": "podcasters"
+    },
+    {
+      "keyword": "ai tools for designers",
+      "recommendedURL": "/best/designers/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'designers'",
+      "entityType": "category",
+      "categorySlug": "designers"
+    },
+    {
+      "keyword": "ai video generation tools",
+      "recommendedURL": "/best/video/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'video'",
+      "entityType": "category",
+      "categorySlug": "video"
+    },
+    {
+      "keyword": "ai image generation tools",
+      "recommendedURL": "/best/image/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'image'",
+      "entityType": "category",
+      "categorySlug": "image"
+    },
+    {
+      "keyword": "ai music generation tools",
+      "recommendedURL": "/blog/best-ai-tools-for-content-writers-2026/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing blog post matches 'tools'",
+      "entityType": "blog",
+      "postSlug": "best-ai-tools-for-content-writers-2026"
+    },
+    {
+      "keyword": "ai code review tools",
+      "recommendedURL": "/best/code/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'code'",
+      "entityType": "category",
+      "categorySlug": "code"
+    },
+    {
+      "keyword": "ai writing tools",
+      "recommendedURL": "/best/text/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'ai writing tools'",
+      "entityType": "category",
+      "categorySlug": "text"
+    },
+    {
+      "keyword": "ai productivity tools",
+      "recommendedURL": "/best/productivity/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'ai productivity tools'",
+      "entityType": "category",
+      "categorySlug": "productivity"
+    },
+    {
+      "keyword": "free ai tools",
+      "recommendedURL": "/best/free/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'free'",
+      "entityType": "category",
+      "categorySlug": "free"
+    },
+    {
+      "keyword": "best ai tools for students",
+      "recommendedURL": "/best/students/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'students'",
+      "entityType": "category",
+      "categorySlug": "students"
+    },
+    {
+      "keyword": "ai tools for research",
+      "recommendedURL": "/tool/researchrabbit/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing tool page (not reviewed) matches 'research'",
+      "entityType": "tool",
+      "toolId": "researchrabbit",
+      "isReviewed": false,
+      "suggestedContent": "Add editorial review + pricing FAQ"
+    },
+    {
+      "keyword": "ai tools for email",
+      "recommendedURL": "/best/email/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'email'",
+      "entityType": "category",
+      "categorySlug": "email"
+    },
+    {
+      "keyword": "ai tools for social media",
+      "recommendedURL": "/best/social-media/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'social media'",
+      "entityType": "category",
+      "categorySlug": "social-media"
+    },
+    {
+      "keyword": "ai tools for ecommerce",
+      "recommendedURL": "/best/ecommerce/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'ecommerce'",
+      "entityType": "category",
+      "categorySlug": "ecommerce"
+    },
+    {
+      "keyword": "ai tools for hr",
+      "recommendedURL": "/blog/best-ai-tools-for-content-writers-2026/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing blog post matches 'tools'",
+      "entityType": "blog",
+      "postSlug": "best-ai-tools-for-content-writers-2026"
+    },
+    {
+      "keyword": "ai agent platforms",
+      "recommendedURL": "/best/ai-agents/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'ai agent platforms'",
+      "entityType": "category",
+      "categorySlug": "ai-agents"
+    },
+    {
+      "keyword": "ai tools for teachers",
+      "recommendedURL": "/best/ai-for-teachers/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'teachers'",
+      "entityType": "category",
+      "categorySlug": "ai-for-teachers"
+    },
+    {
+      "keyword": "ai tools for lawyers",
+      "recommendedURL": "/best/ai-for-lawyers/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'lawyers'",
+      "entityType": "category",
+      "categorySlug": "ai-for-lawyers"
+    },
+    {
+      "keyword": "ai tools for healthcare",
+      "recommendedURL": "/blog/best-ai-tools-for-content-writers-2026/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing blog post matches 'tools'",
+      "entityType": "blog",
+      "postSlug": "best-ai-tools-for-content-writers-2026"
+    },
+    {
+      "keyword": "ai tools for architects",
+      "recommendedURL": "/best/ai-for-architects/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'architects'",
+      "entityType": "category",
+      "categorySlug": "ai-for-architects"
+    },
+    {
+      "keyword": "ai tools for sales teams",
+      "recommendedURL": "/best/ai-for-sales-teams/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing category page matches 'sales teams'",
+      "entityType": "category",
+      "categorySlug": "ai-for-sales-teams"
+    },
+    {
+      "keyword": "cursor ai code review",
+      "recommendedURL": "/tool/cursor/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing reviewed tool page matches 'cursor'",
+      "entityType": "tool",
+      "toolId": "cursor",
+      "isReviewed": true,
+      "suggestedContent": "Add pricing FAQ to editorial FAQ"
+    },
+    {
+      "keyword": "reflect app",
+      "recommendedURL": "/tool/reflect-notes/",
+      "action": "UPDATE EXISTING PAGE",
+      "reason": "Existing tool page (not reviewed) matches 'reflect'",
+      "entityType": "tool",
+      "toolId": "reflect-notes",
+      "isReviewed": false,
+      "suggestedContent": "Add editorial review + pricing FAQ"
+    },
+    {
+      "keyword": "免费 ai 图片生成工具 2026",
+      "recommendedURL": "/blog/ai-2026/",
+      "action": "CREATE NEW PAGE",
+      "reason": "No existing page matches",
+      "entityType": "blog"
+    }
+  ]
+}
