@@ -1,0 +1,100 @@
+---
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
+import TLDR from "../../components/ui/TLDR.astro";
+---
+<BlogPostLayout
+  title="Best AI Tools for Mechanical Engineers in 2026: HVAC & Thermal"
+  description="AI stack for mechanical engineers — HVAC load calcs, ASHRAE reference, Revit MEP scripting, and CFD prep. Where AI helps and where the engineer still leads."
+  keywords="ai-for-mechanical-engineers, mechanical-engineering, hvac, ashrae, revit-mep, ai-tools"
+  eyebrow="Industry Guide"
+  date="2026-07-21"
+  readTime="9 min read"
+  author="AI Tool Hub Editorial"
+  reviewer="Mechanical Engineering Desk"
+  tags={["mechanical-engineering", "ai-tools", "hvac", "ashrae", "revit-mep"]}
+  slug="ai-tools-for-mechanical-engineers-2026"
+  category="Guide"
+>
+  <TLDR items={[
+    "Use Claude for ASHRAE standard lookup; verify each cited paragraph against the printed standard",
+    "Use ChatGPT to draft ACCA Manual J / Manual S calculation templates; final sizing in your HVAC software",
+    "Use Cursor or GitHub Copilot to write Dynamo and Revit API scripts; Dify for an in-house code knowledge base",
+    "AI assists CFD/FEA setup; the actual simulation stays in ANSYS, STAR-CCM+, or OpenFOAM"
+  ]} />
+
+  <h2>Where AI helps in mechanical engineering</h2>
+  <p>Mechanical engineers use AI for <strong>code lookup</strong>, <strong>calculation templates</strong>, <strong>Revit MEP scripting</strong>, and <strong>document drafting</strong>. AI is not a substitute for your solver of record (Trace, HAP, Revit, ANSYS, STAR-CCM+, OpenFOAM) and the engineer's seal still covers the design. Used at the front of the workflow, however, it removes a meaningful amount of routine drafting from senior engineers' plates.</p>
+
+  <p><em>Official references:</em> <a href="https://www.ashrae.org/technical-resources/standards-and-guidelines" rel="nofollow noopener" target="_blank">ASHRAE Standards</a> · <a href="https://www.acca.org/standards" rel="nofollow noopener" target="_blank">ACCA Manuals (J, S, D, T)</a> · <a href="https://www.revit.city/" rel="nofollow noopener" target="_blank">Revit API documentation</a></p>
+
+  <p><img src="/images/blog/ai-tools-for-mechanical-engineers-2026/workflow.svg" alt="Mechanical engineering AI workflow: ASHRAE lookup, calc templates, Revit scripting" loading="lazy" decoding="async" /></p>
+
+  <p>For a cross-discipline view, see the <a href="/solutions/ai-for-engineers/">AI tools for engineers</a> hub and the <a href="/solutions/ai-for-mechanical-engineers/">mechanical engineering solutions</a> page. The <a href="/solutions/ai-for-hvac-engineers/">AI for HVAC engineers</a> and <a href="/solutions/ai-for-mep-engineers/">AI for MEP engineers</a> pages cover related specialties.</p>
+
+  <h2>ASHRAE and ACCA reference</h2>
+  <p>Mechanical reference lookup is the highest-leverage use of AI in the discipline. The trick is to ground the model in your actual standards, not its training data.</p>
+  <ol>
+    <li>Load ASHRAE 90.1, 62.1, and 55, plus the relevant ACCA manuals, into a <a href="/tool/dify/">Dify</a> RAG, chunked by chapter with citations.</li>
+    <li>Ask narrow questions: "Ventilation rate for a 200-sf private office, occupancy 5 people/hr."</li>
+    <li>Read the cited paragraphs back. If the citation does not point to a real section, treat the answer as a draft.</li>
+  </ol>
+  <p>The <a href="/workflows/dify-rag-document-qna/">Dify RAG for document Q&amp;A</a> workflow has the setup steps. For general drafting where citations are less critical, <a href="/tool/claude/">Claude</a> and <a href="/tool/chatgpt/">ChatGPT</a> both work well — see the <a href="/vs/chatgpt-vs-claude/">ChatGPT vs Claude</a> comparison for the trade-off.</p>
+
+  <h2>HVAC load calculations and equipment sizing</h2>
+  <p>For preliminary design, AI generates useful first-pass calculation templates that the engineer runs in their tool of record:</p>
+  <ul>
+    <li>Use <a href="/tool/chatgpt/">ChatGPT</a> to draft the load calculation worksheet for ACCA Manual J. Final loads run in Right-Suite, Trane TRACE, or Carrier HAP.</li>
+    <li>Use <a href="/tool/claude/">Claude</a> to read the long mechanical equipment schedules and surface missing entries, unusual loads, or specification conflicts.</li>
+    <li>For duct and pipe sizing, AI generates initial sizes based on flow and pressure drop. Verify against the ASHRAE handbooks and your firm's standard details.</li>
+  </ul>
+  <p>For a broader LLM comparison, the <a href="/vs/claude-vs-gemini/">Claude vs Gemini</a> page covers which model is stronger for technical long-form reading.</p>
+
+  <h2>Revit MEP, Dynamo, and the Revit API</h2>
+  <p>Mechanical teams do some of the most useful scripting work in the industry, and AI coding assistants have moved that work into a much faster lane:</p>
+  <ul>
+    <li><a href="/tool/cursor/">Cursor</a> and <a href="/tool/github-copilot/">GitHub Copilot</a> are the most-used AI coding assistants for C# and Python Dynamo scripts.</li>
+    <li>Use <a href="/tool/cursor/">Cursor</a> with the Revit API documentation in context to author families, schedules, and panel/schedule automation.</li>
+    <li>For batch MEP tasks (renaming, parameter fill, clash reports), wire <a href="/tool/n8n/">n8n</a> to your shared parameter library and dispatch scripts on schedule.</li>
+  </ul>
+  <p>See the <a href="/vs/cursor-vs-github-copilot/">Cursor vs GitHub Copilot</a> and <a href="/vs/cursor-vs-windsurf/">Cursor vs Windsurf</a> pages for the editor comparison. The <a href="/workflows/n8n-webhook-automation/">n8n webhook automation</a> workflow is the right pattern for nightly MEP QA tasks.</p>
+
+  <h2>CFD and FEA setup</h2>
+  <p>AI is most useful for setup and post-processing, not for the simulation itself:</p>
+  <ul>
+    <li>Use <a href="/tool/chatgpt/">ChatGPT</a> or <a href="/tool/claude/">Claude</a> to draft the meshing strategy, boundary conditions, and solver settings based on the geometry and the physics you care about.</li>
+    <li>Run the actual simulation in ANSYS Fluent, ANSYS Mechanical, STAR-CCM+, or OpenFOAM.</li>
+    <li>Use AI to summarise the results, draft the engineering report, and convert plots into the right format for the deliverable.</li>
+  </ul>
+
+  <h2>What AI will not do for you</h2>
+  <ul>
+    <li><strong>Sealed load calcs and equipment schedules.</strong> The PE seal covers the final design and the equipment selection, and that means the engineer has personally run and verified the calculation.</li>
+    <li><strong>Code citations as a fact.</strong> Always look up the actual paragraph in the printed standard.</li>
+    <li><strong>Final duct and pipe routing in Revit.</strong> AI can suggest routes, but routing decisions on a coordinated model are an engineer and BIM-coordination task.</li>
+  </ul>
+
+  <h2>Recommended 30-day rollout</h2>
+  <ol>
+    <li><strong>Week 1:</strong> Stand up a Dify RAG over ASHRAE 90.1, 62.1, and the relevant ACCA manuals. Pilot on one project.</li>
+    <li><strong>Week 2:</strong> Add Claude for long-form report summarisation and ChatGPT for load calc templates. Lock a "no final numbers in chat" rule.</li>
+    <li><strong>Week 3:</strong> Pilot Cursor or GitHub Copilot for Dynamo scripts on a real task (e.g., automatic duct sizing from a flow schedule).</li>
+    <li><strong>Week 4:</strong> Document the working stack, train junior staff, and update QA/QC to call out which AI outputs require a PE's review.</li>
+  </ol>
+  <p>For a sector view, our <a href="/best/ai-for-engineering/">best AI tools for engineering</a> ranking and the <a href="/solutions/ai-for-mechanical-engineers/">mechanical engineering solutions</a> page are the two starting points.</p>
+
+  <h2>FAQ</h2>
+  <h3>Can AI replace my HVAC load calculation software?</h3>
+  <p>No. AI can draft the calculation worksheet, summarise the results, and explain ASHRAE provisions, but the Right-Suite / TRACE / HAP run is the engineer's record of design and must be performed by the engineer of record.</p>
+
+  <h3>What is the best AI tool for ASHRAE reference?</h3>
+  <p>A <a href="/tool/dify/">Dify</a> RAG over ASHRAE 90.1, 62.1, and 55, plus the relevant ACCA manuals, is the most useful setup because the model can answer with citations. <a href="/tool/claude/">Claude</a> is the strongest general-purpose LLM for long ASHRAE documents.</p>
+
+  <h3>Can AI help with Revit MEP content?</h3>
+  <p>Yes. <a href="/tool/cursor/">Cursor</a> and <a href="/tool/github-copilot/">GitHub Copilot</a> write C# and Python Dynamo scripts for families, schedules, and parameter automation. The <a href="/vs/cursor-vs-github-copilot/">Cursor vs GitHub Copilot</a> page is the most useful comparison for picking an editor.</p>
+
+  <h3>How accurate is AI at pipe and duct sizing?</h3>
+  <p>AI generates useful first-pass sizes based on flow rate and pressure drop. Final sizing must come from a licensed engineer's calc per the ASHRAE handbooks and the firm's standards.</p>
+
+  <h3>Where can I see a worked example?</h3>
+  <p>The <a href="/solutions/ai-for-mechanical-engineers/">mechanical engineering solutions</a> page walks through five concrete workflows: load calculations, ASHRAE lookup, Revit scripting, CFD setup, and commissioning reports.</p>
+</BlogPostLayout>

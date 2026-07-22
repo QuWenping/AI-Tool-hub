@@ -1608,5 +1608,1067 @@
       "growth": 5,
       "trust": 8
     }
+  },
+  "aider": {
+    "reviewed": true,
+    "updatedAt": "2026-07-21",
+    "testedVersion": "Latest stable (2026)",
+    "score": 8.0,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "CLI",
+        "Self-hosted"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Open source under Apache 2.0. Pay only the underlying LLM API (DeepSeek, OpenAI, Anthropic, etc.); free if you use a local model.",
+      "zh": "Apache 2.0 开源。LLM API 费用自理（DeepSeek / OpenAI / Anthropic 等）；用本地模型则完全免费。"
+    },
+    "faq": [
+      {
+        "q_en": "What is Aider?",
+        "q_zh": "Aider 是什么？",
+        "a_en": "Aider is an open-source AI pair-programming tool that runs in your terminal. It edits files in your repo and auto-commits each change to Git.",
+        "a_zh": "Aider 是跑在终端里的开源 AI 结对编程工具，直接编辑仓库文件并自动为每次修改创建 Git commit。"
+      },
+      {
+        "q_en": "Is Aider free?",
+        "q_zh": "Aider 免费吗？",
+        "a_en": "Yes. Aider itself is free and open source (Apache 2.0). You only pay for the LLM API you point it at, or run it free with a local model.",
+        "a_zh": "免费。Aider 本身是 Apache 2.0 开源；只需为它调用的 LLM API 付费，或者用本地模型即可完全免费。"
+      },
+      {
+        "q_en": "Which models does Aider support?",
+        "q_zh": "Aider 支持哪些模型？",
+        "a_en": "Aider works with most frontier LLMs through API keys or local servers: DeepSeek, Claude, GPT, Gemini, Llama, Qwen, and Ollama-served models.",
+        "a_zh": "Aider 通过 API key 或本地服务器对接主流前沿模型：DeepSeek、Claude、GPT、Gemini、Llama、Qwen 以及 Ollama 本地模型。"
+      },
+      {
+        "q_en": "How is Aider different from Cursor or Windsurf?",
+        "q_zh": "Aider 和 Cursor、Windsurf 有什么不同？",
+        "a_en": "Aider is purely a command-line tool with no GUI; it integrates with any editor via your terminal. Cursor and Windsurf are full IDEs with graphical UIs.",
+        "a_zh": "Aider 是纯命令行工具，没有 GUI，通过终端与任意编辑器配合；Cursor 和 Windsurf 是带图形界面的完整 IDE。"
+      },
+      {
+        "q_en": "Does Aider create Git commits?",
+        "q_zh": "Aider 会自动创建 Git 提交吗？",
+        "a_en": "Yes. Every accepted change is committed with a descriptive message you can review with /undo.",
+        "a_zh": "会。每次接受的修改都会以可读消息提交，可用 /undo 撤销。"
+      },
+      {
+        "q_en": "What languages does Aider work with?",
+        "q_zh": "Aider 支持哪些语言？",
+        "a_en": "Aider handles Python, JavaScript, TypeScript, Go, Rust, Java, C/C++, Ruby, PHP and most other popular languages. It uses tree-sitter to map edits to existing code structure.",
+        "a_zh": "Aider 支持 Python / JavaScript / TypeScript / Go / Rust / Java / C/C++ / Ruby / PHP 等主流语言，用 tree-sitter 把改动映射到既有代码结构。"
+      },
+      {
+        "q_en": "Can Aider work on a whole repository?",
+        "q_zh": "Aider 能处理整个代码库吗？",
+        "a_en": "Yes. Aider builds a repo map of your codebase so the model can reason across files, useful for multi-file refactors.",
+        "a_zh": "可以。Aider 会构建代码库映射图，让模型跨文件推理，适合多文件重构。"
+      },
+      {
+        "q_en": "Does Aider need a code editor extension?",
+        "q_zh": "Aider 需要编辑器插件吗？",
+        "a_en": "No. Aider runs in a terminal and works alongside any editor (VS Code, Neovim, JetBrains, etc.) as a side process.",
+        "a_zh": "不需要。Aider 在终端运行，可与任意编辑器（VS Code / Neovim / JetBrains 等）并行。"
+      },
+      {
+        "q_en": "How does Aider handle voice?",
+        "q_zh": "Aider 支持语音输入吗？",
+        "a_en": "Voice is not built in. You can pipe any system voice-to-text tool (Whisper, Mac Dictation) into Aider's input.",
+        "a_zh": "没有内置语音。可用系统语音转文字工具（Whisper、Mac Dictation 等）作为 Aider 的输入。"
+      },
+      {
+        "q_en": "Who should use Aider?",
+        "q_zh": "谁应该用 Aider？",
+        "a_en": "Terminal-native developers who want fine-grained control, prefer open source, and already use Git heavily.",
+        "a_zh": "终端原生派、喜欢开源、深度使用 Git 的开发者。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.0,
+      "capability": 7.0,
+      "price": 9,
+      "growth": 8,
+      "trust": 8
+    },
+    "sourceUrl": "https://aider.chat"
+  },
+  "flux": {
+    "reviewed": true,
+    "updatedAt": "2026-07-21",
+    "testedVersion": "Latest stable (2026)",
+    "score": 8.7,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "API"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Black Forest Labs API: Pro ~$0.05 per image at 1MP. Free credits on signup; otherwise usage-based.",
+      "zh": "Black Forest Labs API：Pro 版每张 1MP 图约 $0.05。新用户有免费额度，之后按调用量计费。"
+    },
+    "faq": [
+      {
+        "q_en": "What is Flux?",
+        "q_zh": "Flux 是什么？",
+        "a_en": "Flux is a family of image generation models from Black Forest Labs, the team behind Stable Diffusion. Flux.1 ships in Pro, Dev, and Schnell variants.",
+        "a_zh": "Flux 是来自 Stable Diffusion 原班人马 Black Forest Labs 的图像生成模型家族，分 Pro / Dev / Schnell 三档。"
+      },
+      {
+        "q_en": "Is Flux better than Midjourney?",
+        "q_zh": "Flux 比 Midjourney 强吗？",
+        "a_en": "Flux.1 Pro produces competitive photorealism and excellent prompt adherence; Midjourney still leads in painterly aesthetics. Choose by use case.",
+        "a_zh": "Flux.1 Pro 在照片写实与提示词忠实度上很有竞争力；Midjourney 在绘画风格上仍占优。按场景选择。"
+      },
+      {
+        "q_en": "How much does Flux cost?",
+        "q_zh": "Flux 怎么收费？",
+        "a_en": "Flux is usage-based via the Black Forest Labs API. Flux.1 Pro is roughly $0.05 per 1MP image; Schnell (faster) is cheaper.",
+        "a_zh": "通过 Black Forest Labs API 按用量计费，Flux.1 Pro 每张 1MP 图约 $0.05，Schnell（更快）更便宜。"
+      },
+      {
+        "q_en": "Does Flux have a free tier?",
+        "q_zh": "Flux 有免费版吗？",
+        "a_en": "Sign-up credits are available, after which it is paid. The open-weight Schnell and Dev variants can be self-hosted for free on your own GPUs.",
+        "a_zh": "注册时赠送额度，之后收费。Schnell 和 Dev 的开源权重可自行部署在自有 GPU 上完全免费。"
+      },
+      {
+        "q_en": "Can I self-host Flux?",
+        "q_zh": "Flux 可以自部署吗？",
+        "a_en": "Yes. The non-commercial FLUX.1 [schnell] and FLUX.1 [dev] weights are released under Apache 2.0 / FLUX.1-dev Non-Commercial License respectively.",
+        "a_zh": "可以。FLUX.1 [schnell] 用 Apache 2.0；FLUX.1 [dev] 用 FLUX.1-dev 非商用许可。"
+      },
+      {
+        "q_en": "What integrations support Flux?",
+        "q_zh": "Flux 有哪些集成？",
+        "a_en": "Flux is available on Replicate, fal.ai, Together AI, and through ComfyUI, with new integrations shipping monthly.",
+        "a_zh": "Flux 可在 Replicate、fal.ai、Together AI 上调用，也支持 ComfyUI；新集成持续增加。"
+      },
+      {
+        "q_en": "Is Flux good for typography in images?",
+        "q_zh": "Flux 处理图像里的文字效果好吗？",
+        "a_en": "Flux.1 is markedly better at rendering legible text in images than earlier open models, but Ideogram still leads at very long or multilingual strings.",
+        "a_zh": "Flux.1 在图像内文字渲染清晰度上明显优于早期开源模型，但长文本或多语种文字仍以 Ideogram 最强。"
+      },
+      {
+        "q_en": "How big is Flux's model?",
+        "q_zh": "Flux 模型有多大？",
+        "a_en": "FLUX.1 [pro] is a 12B parameter rectified flow transformer. Dev and Schnell are similar scale with different training recipes.",
+        "a_zh": "FLUX.1 [pro] 是 12B 参数的 rectified flow transformer。Dev 和 Schnell 同等规模，训练方式不同。"
+      },
+      {
+        "q_en": "Does Flux support LoRA and ControlNet?",
+        "q_zh": "Flux 支持 LoRA 和 ControlNet 吗？",
+        "a_en": "The open-weight Dev variant supports LoRA training and ControlNet-style conditioning through ComfyUI and diffusers.",
+        "a_zh": "开源的 Dev 版本支持 LoRA 训练和 ControlNet 风格条件控制，可通过 ComfyUI 与 diffusers 使用。"
+      },
+      {
+        "q_en": "Who should use Flux?",
+        "q_zh": "谁应该用 Flux？",
+        "a_en": "Teams that need a flexible image model with both an API and self-hosting path, especially if text-in-image accuracy matters.",
+        "a_zh": "既需要 API 又希望自部署、且在意图像内文字准确度的团队。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.7,
+      "capability": 7.699999999999999,
+      "price": 7,
+      "growth": 8,
+      "trust": 8
+    },
+    "sourceUrl": "https://blackforestlabs.ai"
+  },
+  "ideogram": {
+    "reviewed": true,
+    "updatedAt": "2026-07-21",
+    "testedVersion": "Latest stable (2026)",
+    "score": 8.4,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "iOS",
+        "API"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with daily generations · Basic $8/mo, Plus $16/mo, Pro $48/mo unlock more generations, private mode, and higher resolution.",
+      "zh": "免费版含每日生成额度；Basic 8 美元/月、Plus 16 美元/月、Pro 48 美元/月，解锁更多生成、私密模式与更高分辨率。"
+    },
+    "faq": [
+      {
+        "q_en": "What is Ideogram?",
+        "q_zh": "Ideogram 是什么？",
+        "a_en": "Ideogram is an AI image generator from a Toronto-based team of ex-Google researchers, focused on accurate text rendering inside images.",
+        "a_zh": "Ideogram 是多伦多团队（前 Google 研究员）做的 AI 图像生成器，专注图像内文字渲染。"
+      },
+      {
+        "q_en": "Is Ideogram free?",
+        "q_zh": "Ideogram 免费吗？",
+        "a_en": "Yes. The free plan allows a daily quota of generations; paid plans start at $8/month.",
+        "a_zh": "免费版有每日生成额度；付费版从 8 美元/月起。"
+      },
+      {
+        "q_en": "Why is Ideogram good at text in images?",
+        "q_zh": "Ideogram 为什么擅长处理图像里的文字？",
+        "a_en": "Ideogram's architecture and training data are optimized for typographic accuracy, which is the hardest problem for most diffusion models.",
+        "a_zh": "Ideogram 的架构与训练数据专门针对排版准确度优化，而这正是大多数扩散模型最难的部分。"
+      },
+      {
+        "q_en": "How does Ideogram compare to Midjourney?",
+        "q_zh": "Ideogram 和 Midjourney 怎么比？",
+        "a_en": "Midjourney produces more aesthetic imagery; Ideogram wins for posters, logos, mockups, and any image that contains real text.",
+        "a_zh": "Midjourney 风格化更强；Ideogram 在海报、Logo、Mockup 等含真实文字的场景占优。"
+      },
+      {
+        "q_en": "Does Ideogram have an API?",
+        "q_zh": "Ideogram 有 API 吗？",
+        "a_en": "Yes. The Ideogram API exposes image generation, inpainting, and style references for paid users.",
+        "a_zh": "有。付费用户可使用 Ideogram API 接入图像生成、局部重绘和风格参考。"
+      },
+      {
+        "q_en": "What is Ideogram Canvas?",
+        "q_zh": "Ideogram Canvas 是什么？",
+        "a_en": "Canvas is Ideogram's in-browser editor for extending, inpainting, and re-styling generated images.",
+        "a_zh": "Canvas 是 Ideogram 的浏览器内编辑器，用于扩展、局部重绘和风格化重做。"
+      },
+      {
+        "q_en": "Can I use Ideogram images commercially?",
+        "q_zh": "Ideogram 生成的图商用合法吗？",
+        "a_en": "Paid plans include commercial usage rights; the free plan is for personal use. Always check the latest terms on Ideogram's site.",
+        "a_zh": "付费版含商用许可；免费版仅供个人使用。最新条款以 Ideogram 官网为准。"
+      },
+      {
+        "q_en": "What aspect ratios does Ideogram support?",
+        "q_zh": "Ideogram 支持哪些画幅？",
+        "a_en": "Ideogram supports square, portrait, landscape and several print/social aspect ratios up to high resolutions on paid plans.",
+        "a_zh": "Ideogram 支持方形、竖版、横版以及多种印刷/社交画幅，付费版支持更高分辨率。"
+      },
+      {
+        "q_en": "Does Ideogram support styles and references?",
+        "q_zh": "Ideogram 支持风格和参考图吗？",
+        "a_en": "Yes. You can upload a style or character reference to maintain visual consistency across generations.",
+        "a_zh": "支持。可上传风格或角色参考图，在多次生成间保持视觉一致性。"
+      },
+      {
+        "q_en": "Who should use Ideogram?",
+        "q_zh": "谁应该用 Ideogram？",
+        "a_en": "Designers, marketers, and indie founders who need on-brand visuals with real text inside them.",
+        "a_zh": "需要带真实文字、又符合品牌调性视觉的设计师、营销人和独立创始人。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.4,
+      "capability": 7.4,
+      "price": 9,
+      "growth": 8,
+      "trust": 8
+    },
+    "sourceUrl": "https://ideogram.ai"
+  },
+  "krea": {
+    "reviewed": true,
+    "updatedAt": "2026-07-21",
+    "testedVersion": "Latest stable (2026)",
+    "score": 8.1,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with slow queue · Basic $10/mo, Pro $30/mo unlock real-time generation, higher resolution, and faster queue.",
+      "zh": "免费版排队较慢；Basic 10 美元/月、Pro 30 美元/月，解锁实时生成、更高分辨率与更快队列。"
+    },
+    "faq": [
+      {
+        "q_en": "What is Krea?",
+        "q_zh": "Krea 是什么？",
+        "a_en": "Krea is an AI image and video tool focused on real-time generation — you paint or sketch and the model updates the canvas live.",
+        "a_zh": "Krea 是主打实时生成的 AI 图像/视频工具：你边画/边涂，模型同步更新画面。"
+      },
+      {
+        "q_en": "Is Krea free?",
+        "q_zh": "Krea 免费吗？",
+        "a_en": "Yes. There is a free plan with a slow queue; paid plans start at $10/month for faster real-time output.",
+        "a_zh": "免费版有，但排队较慢；付费版从 10 美元/月起，速度更快。"
+      },
+      {
+        "q_en": "How does Krea's real-time generation work?",
+        "q_zh": "Krea 实时生成怎么实现？",
+        "a_en": "Krea streams a small diffusion model that re-generates the canvas continuously as you sketch, achieving sub-second feedback.",
+        "a_zh": "Krea 跑的是小型扩散模型流，边画边持续重绘画面，反馈延迟低于 1 秒。"
+      },
+      {
+        "q_en": "Does Krea support video?",
+        "q_zh": "Krea 支持视频吗？",
+        "a_en": "Yes. Krea Video extends the same real-time UI to short video clips and keyframe animation.",
+        "a_zh": "支持。Krea Video 把同一实时交互延伸到短视频片段和关键帧动画。"
+      },
+      {
+        "q_en": "Can I use Krea for logos?",
+        "q_zh": "Krea 适合做 Logo 吗？",
+        "a_en": "Krea is great for ideation but final logo work usually needs a vector tool (Figma, Illustrator) and a dedicated typography model.",
+        "a_zh": "Krea 适合做前期概念；最终 Logo 通常要在矢量工具（Figma / Illustrator）和专业字体模型中完成。"
+      },
+      {
+        "q_en": "Does Krea have an API?",
+        "q_zh": "Krea 有 API 吗？",
+        "a_en": "Krea is web-app only today; an API has been teased but is not generally available as of mid-2026.",
+        "a_zh": "目前只有 Web 版；API 已有预告，截至 2026 年中尚未正式开放。"
+      },
+      {
+        "q_en": "What is Krea Diffusion?",
+        "q_zh": "Krea Diffusion 是什么？",
+        "a_en": "Krea Diffusion is the company's text-to-image model that is also available through partner platforms like Replicate.",
+        "a_zh": "Krea Diffusion 是该公司的文生图模型，也通过 Replicate 等平台开放。"
+      },
+      {
+        "q_en": "How good is Krea for product mockups?",
+        "q_zh": "Krea 做产品 Mockup 效果好吗？",
+        "a_en": "Krea is strong for stylised mockups and concept art; for photoreal product shots, Flux Pro or Midjourney still lead.",
+        "a_zh": "Krea 在风格化 Mockup 和概念图上很强；写实产品图仍以 Flux Pro 或 Midjourney 为佳。"
+      },
+      {
+        "q_en": "Can I bring my own LoRA to Krea?",
+        "q_zh": "Krea 支持导入自定义 LoRA 吗？",
+        "a_en": "Paid plans allow private LoRAs trained on Krea, useful for consistent character or product looks.",
+        "a_zh": "付费版支持训练私有 LoRA，用于角色或产品的视觉一致性。"
+      },
+      {
+        "q_en": "Who should use Krea?",
+        "q_zh": "谁应该用 Krea？",
+        "a_en": "Designers, concept artists, and creative directors who iterate visually and want immediate feedback.",
+        "a_zh": "需要快速视觉迭代的设计师、概念艺术家和创意总监。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.1,
+      "capability": 7.1,
+      "price": 9,
+      "growth": 8,
+      "trust": 8
+    },
+    "sourceUrl": "https://krea.ai"
+  },
+  "canva-ai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-21",
+    "testedVersion": "Latest stable (2026)",
+    "score": 8.2,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web",
+        "iOS",
+        "Android",
+        "Desktop"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with Magic Studio basics · Pro $13/mo, Teams $30/mo (5 seats) unlock Magic Studio, Brand Kit, background remover, and full template library.",
+      "zh": "免费版含 Magic Studio 基础功能；Pro 13 美元/月、Teams 30 美元/月（5 席）解锁 Magic Studio、品牌工具箱、抠图与全模板库。"
+    },
+    "faq": [
+      {
+        "q_en": "What is Canva AI?",
+        "q_zh": "Canva AI 是什么？",
+        "a_en": "Canva AI is the AI feature set inside Canva (Magic Write, Magic Design, Magic Edit, Magic Animate) that helps non-designers create on-brand visuals.",
+        "a_zh": "Canva AI 是 Canva 内置的 AI 功能集（Magic Write、Magic Design、Magic Edit、Magic Animate），帮助非设计师产出符合品牌调性的视觉。"
+      },
+      {
+        "q_en": "Is Canva free?",
+        "q_zh": "Canva 免费吗？",
+        "a_en": "Yes. The free plan is generous; Pro ($13/mo) unlocks Magic Studio and the full template library.",
+        "a_zh": "免费版已够用；Pro 13 美元/月解锁 Magic Studio 与全模板库。"
+      },
+      {
+        "q_en": "Do I need design skills to use Canva AI?",
+        "q_zh": "用 Canva AI 需要设计基础吗？",
+        "a_en": "No. Canva is built for non-designers; Magic Design can produce a complete layout from a text prompt or a single image.",
+        "a_zh": "不需要。Canva 面向非设计师；Magic Design 可以从一段文字或一张图直接生成完整版式。"
+      },
+      {
+        "q_en": "How good is Canva AI at generating images?",
+        "q_zh": "Canva AI 生成图像效果如何？",
+        "a_en": "Canva's image generation is convenient and on-brand but not state-of-the-art; for hero art, designers still prefer Midjourney or Flux Pro.",
+        "a_zh": "Canva 的图像生成好用且符合品牌，但并非最强；高质量主视觉设计师仍多选 Midjourney 或 Flux Pro。"
+      },
+      {
+        "q_en": "Does Canva AI support brand consistency?",
+        "q_zh": "Canva AI 支持品牌一致性吗？",
+        "a_en": "Yes. Brand Kit (Pro and above) lets Magic Studio pull colors, fonts, and logos so every generated asset stays on-brand.",
+        "a_zh": "支持。Pro 及以上的 Brand Kit 让 Magic Studio 自动应用品牌色、字体和 Logo，生成物保持品牌一致。"
+      },
+      {
+        "q_en": "Can I use Canva AI to make presentations?",
+        "q_zh": "Canva AI 能做演示文稿吗？",
+        "a_en": "Yes. Magic Design for Presentations generates full decks from a topic or document; teams can also use AI to summarise existing slides.",
+        "a_zh": "可以。Magic Design for Presentations 能根据主题或文档生成完整 PPT；也能用 AI 总结已有幻灯片。"
+      },
+      {
+        "q_en": "Does Canva have an API?",
+        "q_zh": "Canva 有 API 吗？",
+        "a_en": "Canva exposes a Connect API for assets, exports, and design automation; full AI features are not yet available via API.",
+        "a_zh": "Canva 提供 Connect API 用于素材、导出和设计自动化；完整 AI 功能尚未通过 API 开放。"
+      },
+      {
+        "q_en": "Can Canva AI remove backgrounds?",
+        "q_zh": "Canva AI 能抠图吗？",
+        "a_en": "Yes. The background remover is one of the most popular tools, included on Pro plans and above.",
+        "a_zh": "可以。抠图是 Pro 及以上最受欢迎的功能之一。"
+      },
+      {
+        "q_en": "Is Canva suitable for print?",
+        "q_zh": "Canva 适合做印刷品吗？",
+        "a_en": "Yes. Pro unlocks CMYK export and high-resolution PNG/PDF suitable for print, including business cards, posters, and merch.",
+        "a_zh": "可以。Pro 解锁 CMYK 导出和高分辨率 PNG/PDF，可用于名片、海报和周边印刷。"
+      },
+      {
+        "q_en": "Who should use Canva AI?",
+        "q_zh": "谁应该用 Canva AI？",
+        "a_en": "Small business owners, marketers, teachers, and anyone who needs polished visuals without learning Photoshop.",
+        "a_zh": "中小企业主、营销人、教师，以及不想学 Photoshop 又需要出图的人。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.2,
+      "capability": 7.199999999999999,
+      "price": 9,
+      "growth": 8,
+      "trust": 8
+    },
+    "sourceUrl": "https://www.canva.com"
+  },
+  "pika": {
+    "reviewed": true,
+    "updatedAt": "2026-07-21",
+    "testedVersion": "Latest stable (2026)",
+    "score": 8.2,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with watermark · Standard $10/mo, Pro $35/mo, Premier $95/mo unlock more credits, higher resolution, and no watermark.",
+      "zh": "免费版带水印；Standard 10 美元/月、Pro 35 美元/月、Premier 95 美元/月，解锁更多积分、更高分辨率、去水印。"
+    },
+    "faq": [
+      {
+        "q_en": "What is Pika?",
+        "q_zh": "Pika 是什么？",
+        "a_en": "Pika is an AI video generation platform that turns text, image, and video prompts into short cinematic clips, with strong motion and camera controls.",
+        "a_zh": "Pika 是 AI 视频生成平台，能把文字、图像和视频提示生成短视频片段，运动和镜头控制是其强项。"
+      },
+      {
+        "q_en": "Is Pika free?",
+        "q_zh": "Pika 免费吗？",
+        "a_en": "Yes. The free plan produces watermarked clips; paid plans start at $10/month for higher resolution and no watermark.",
+        "a_zh": "免费版会带水印；付费版从 10 美元/月起，去水印且分辨率更高。"
+      },
+      {
+        "q_en": "How long can Pika videos be?",
+        "q_zh": "Pika 视频最长能生成多久？",
+        "a_en": "Pika generates clips up to 10 seconds per generation on paid plans, which can be chained using Pikaffects or extended in the timeline.",
+        "a_zh": "付费版每次生成最长约 10 秒，可通过 Pikaffects 或时间线串联延长。"
+      },
+      {
+        "q_en": "How does Pika compare to Sora?",
+        "q_zh": "Pika 和 Sora 怎么比？",
+        "a_en": "Pika emphasizes controllability — Pikaffects, motion strength, camera direction — while Sora leans on raw realism. Pika is faster and cheaper for iterative work.",
+        "a_zh": "Pika 强调可控性（Pikaffects、运动强度、镜头方向），Sora 偏重真实感。Pika 在迭代速度和成本上更友好。"
+      },
+      {
+        "q_en": "Does Pika support image-to-video?",
+        "q_zh": "Pika 支持图生视频吗？",
+        "a_en": "Yes. Image-to-video is one of Pika's strongest features: upload a still and Pika animates it with motion and camera prompts.",
+        "a_zh": "支持。图生视频是 Pika 强项：上传静态图，配上运动和镜头提示即可动起来。"
+      },
+      {
+        "q_en": "Can I edit an existing video with Pika?",
+        "q_zh": "Pika 能编辑现有视频吗？",
+        "a_en": "Yes. Pika lets you upload a video and apply Pikaffects to restyle, re-light, or extend it.",
+        "a_zh": "可以。可上传视频并应用 Pikaffects 改风格、改光效或延长。"
+      },
+      {
+        "q_en": "Does Pika have an API?",
+        "q_zh": "Pika 有 API 吗？",
+        "a_en": "Pika offers a developer API for paid accounts, suitable for batch rendering and app integration.",
+        "a_zh": "有。付费账户可使用开发者 API，适合批量渲染和应用集成。"
+      },
+      {
+        "q_en": "What is Pikaffects?",
+        "q_zh": "Pikaffects 是什么？",
+        "a_en": "Pikaffects are one-click video transformations like 'melt', 'inflate', 'crush', 'cake-ify' applied to uploaded clips or images.",
+        "a_zh": "Pikaffects 是一键视频变换效果，如 melt、inflate、crush、cake-ify，可作用在上传的片段或图像上。"
+      },
+      {
+        "q_en": "Can Pika generate sound?",
+        "q_zh": "Pika 能生成声音吗？",
+        "a_en": "Pika focuses on visuals; audio is not generated. Pair with ElevenLabs for voice and Suno for music.",
+        "a_zh": "Pika 专注画面，不生成声音。配音用 ElevenLabs，配乐用 Suno。"
+      },
+      {
+        "q_en": "Who should use Pika?",
+        "q_zh": "谁应该用 Pika？",
+        "a_en": "Creators and marketers producing short social clips, music videos, and stylized content where motion and effects matter more than photorealism.",
+        "a_zh": "做短视频社媒、音乐 MV、风格化内容的创作者和营销人。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.2,
+      "capability": 7.199999999999999,
+      "price": 9,
+      "growth": 8,
+      "trust": 8
+    },
+    "sourceUrl": "https://pika.art"
+  },
+  "luma": {
+    "reviewed": true,
+    "updatedAt": "2026-07-21",
+    "testedVersion": "Latest stable (2026)",
+    "score": 8.5,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "iOS"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with daily generations · Standard $9.99/mo, Pro $29.99/mo, Premier $99.99/mo unlock more generations, higher resolution, and priority queue.",
+      "zh": "免费版含每日生成额度；Standard 9.99 美元/月、Pro 29.99 美元/月、Premier 99.99 美元/月，解锁更多生成、更高分辨率与优先队列。"
+    },
+    "faq": [
+      {
+        "q_en": "What is Luma?",
+        "q_zh": "Luma 是什么？",
+        "a_en": "Luma is an AI video generation company best known for Dream Machine, which turns text and image prompts into realistic short videos.",
+        "a_zh": "Luma 是 AI 视频生成公司，旗下 Dream Machine 可将文字和图像提示生成写实短视频。"
+      },
+      {
+        "q_en": "Is Luma free?",
+        "q_zh": "Luma 免费吗？",
+        "a_en": "Yes. Luma offers a free tier with daily generations; paid plans start at $9.99/month for more generations and higher resolution.",
+        "a_zh": "免费版有每日生成额度；付费版从 9.99 美元/月起，生成数量更多、分辨率更高。"
+      },
+      {
+        "q_en": "How does Luma compare to Sora?",
+        "q_zh": "Luma 和 Sora 怎么比？",
+        "a_en": "Luma's Dream Machine is competitive on realism and faster on iteration; Sora still leads on long-form coherent shots. Pick by workflow speed vs. shot length.",
+        "a_zh": "Dream Machine 在写实度和迭代速度上很强；Sora 在长镜头连贯性上仍占优。按工作流速度 vs 镜头长度选。"
+      },
+      {
+        "q_en": "Does Luma support image-to-video?",
+        "q_zh": "Luma 支持图生视频吗？",
+        "a_en": "Yes. Image-to-video is one of Dream Machine's strongest paths: upload a still, prompt the motion, get a 5-second clip.",
+        "a_zh": "支持。图生视频是 Dream Machine 最佳路径之一：上传静态图，描述运动，生成 5 秒片段。"
+      },
+      {
+        "q_en": "Can I extend Luma videos?",
+        "q_zh": "Luma 视频可以延长吗？",
+        "a_en": "Yes. You can extend a clip by using its last frame as a new keyframe and prompting the next 5 seconds.",
+        "a_zh": "可以。可用片段末帧作为新关键帧，再续 5 秒。"
+      },
+      {
+        "q_en": "What is Luma Ray2?",
+        "q_zh": "Luma Ray2 是什么？",
+        "a_en": "Ray2 is Luma's latest video model, with improved physics, prompt adherence, and human motion quality over Ray1.",
+        "a_zh": "Ray2 是 Luma 最新视频模型，相比 Ray1 物理感、提示词忠实度和人物动作质量都更好。"
+      },
+      {
+        "q_en": "Does Luma have an API?",
+        "q_zh": "Luma 有 API 吗？",
+        "a_en": "Yes. Luma exposes a REST API for Dream Machine and Ray2, useful for batch workflows and app integration.",
+        "a_zh": "有。Luma 提供 Dream Machine 和 Ray2 的 REST API，适合批量工作流与应用集成。"
+      },
+      {
+        "q_en": "Is Luma good for product videos?",
+        "q_zh": "Luma 适合做产品视频吗？",
+        "a_en": "Yes. Many brands use Dream Machine to animate product stills into 5-second looping clips for social ads.",
+        "a_zh": "可以。很多品牌用 Dream Machine 把产品静图做成 5 秒循环短视频用于社交广告。"
+      },
+      {
+        "q_en": "Can Luma generate sound?",
+        "q_zh": "Luma 能生成声音吗？",
+        "a_en": "Luma focuses on visuals. For voiceover, use ElevenLabs; for music, use Suno or Udio.",
+        "a_zh": "Luma 专注画面。配音用 ElevenLabs，配乐用 Suno 或 Udio。"
+      },
+      {
+        "q_en": "Who should use Luma?",
+        "q_zh": "谁应该用 Luma？",
+        "a_en": "Creators who need fast, realistic image-to-video and don't mind short clip lengths that can be chained.",
+        "a_zh": "需要快速、逼真图生视频、不介意短片段可串联的创作者。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.5,
+      "capability": 7.5,
+      "price": 9,
+      "growth": 8,
+      "trust": 8
+    },
+    "sourceUrl": "https://lumalabs.ai"
+  },
+  "kling": {
+    "reviewed": true,
+    "updatedAt": "2026-07-21",
+    "testedVersion": "Latest stable (2026)",
+    "score": 8.3,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "iOS",
+        "Android",
+        "API"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with daily credits · Standard $5.99/mo, Pro $9.99/mo, Premier $29.99/mo unlock more credits, longer clips, and priority queue.",
+      "zh": "免费版有每日积分；Standard 5.99 美元/月、Pro 9.99 美元/月、Premier 29.99 美元/月，解锁更多积分、更长片段与优先队列。"
+    },
+    "faq": [
+      {
+        "q_en": "What is Kling?",
+        "q_zh": "Kling 是什么？",
+        "a_en": "Kling is an AI video generation model from Kuaishou, popular for realistic human motion and competitive image-to-video at low cost.",
+        "a_zh": "Kling 是快手推出的 AI 视频生成模型，以真实人物动作和性价比图生视频著称。"
+      },
+      {
+        "q_en": "Is Kling free?",
+        "q_zh": "Kling 免费吗？",
+        "a_en": "Yes. Free users get daily credits; paid plans start at $5.99/month and offer more credits and longer videos.",
+        "a_zh": "免费用户有每日积分；付费版从 5.99 美元/月起，积分更多、片段更长。"
+      },
+      {
+        "q_en": "How does Kling compare to Sora?",
+        "q_zh": "Kling 和 Sora 怎么比？",
+        "a_en": "Kling is strong on realistic human motion, choreography, and image-to-video at a fraction of Sora's price. Sora still leads on long coherent shots and prompt fidelity.",
+        "a_zh": "Kling 在真实人物动作、舞蹈和图生视频上很强，价格只有 Sora 一小部分。Sora 在长镜头连贯性和提示忠实度上仍占优。"
+      },
+      {
+        "q_en": "How long can Kling videos be?",
+        "q_zh": "Kling 视频最长能生成多久？",
+        "a_en": "Paid plans can generate up to ~10 seconds per clip; clips can be chained in the editor for longer sequences.",
+        "a_zh": "付费版每次生成约 10 秒，可在编辑器中串联成更长的序列。"
+      },
+      {
+        "q_en": "Does Kling support image-to-video?",
+        "q_zh": "Kling 支持图生视频吗？",
+        "a_en": "Yes. Image-to-video is one of Kling's strongest paths and supports both start and end frames for controlled motion.",
+        "a_zh": "支持。图生视频是 Kling 强项之一，支持起止双关键帧，运动控制更准。"
+      },
+      {
+        "q_en": "Does Kling have an API?",
+        "q_zh": "Kling 有 API 吗？",
+        "a_en": "Yes. Kuaishou exposes the Kling API for paid accounts, popular for batch generation in apps.",
+        "a_zh": "有。快手为付费账户开放 Kling API，在应用内做批量生成很常用。"
+      },
+      {
+        "q_en": "How good is Kling at human motion?",
+        "q_zh": "Kling 处理人物动作效果如何？",
+        "a_en": "Kling is widely regarded as the strongest open-platform model for natural human motion, dance, and lip sync in 2026.",
+        "a_zh": "Kling 被广泛认为是 2026 年在自然人物动作、舞蹈和口型同步上最强的开放平台模型。"
+      },
+      {
+        "q_en": "Is Kling available worldwide?",
+        "q_zh": "Kling 全球可用吗？",
+        "a_en": "Kling is available in most regions but pricing and access vary; check the Kuaishou Kling site for your country.",
+        "a_zh": "Kling 多数地区可访问，但价格和可用性因国家不同；请以快手 Kling 官网为准。"
+      },
+      {
+        "q_en": "Can Kling generate sound?",
+        "q_zh": "Kling 能生成声音吗？",
+        "a_en": "Kling focuses on visuals. Voice and music are not generated; pair with ElevenLabs / Suno.",
+        "a_zh": "Kling 专注画面，不生成声音与配乐；用 ElevenLabs / Suno 补。"
+      },
+      {
+        "q_en": "Who should use Kling?",
+        "q_zh": "谁应该用 Kling？",
+        "a_en": "Creators and indie studios producing social videos, dance content, and short ads that rely on realistic human motion.",
+        "a_zh": "需要真实人物动作的短视频、舞蹈内容和广告片的创作者及独立工作室。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.3,
+      "capability": 7.300000000000001,
+      "price": 9,
+      "growth": 8,
+      "trust": 8
+    },
+    "sourceUrl": "https://klingai.com"
+  },
+  "hailuo": {
+    "reviewed": true,
+    "updatedAt": "2026-07-21",
+    "testedVersion": "Latest stable (2026)",
+    "score": 8.1,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with daily generations · Standard $9.90/mo, Pro $29.90/mo, Premier $59.90/mo unlock more credits, longer clips, and higher resolution.",
+      "zh": "免费版含每日生成；Standard 9.90 美元/月、Pro 29.90 美元/月、Premier 59.90 美元/月，解锁更多积分、更长片段与更高分辨率。"
+    },
+    "faq": [
+      {
+        "q_en": "What is Hailuo?",
+        "q_zh": "Hailuo 是什么？",
+        "a_en": "Hailuo AI is MiniMax's text-to-video and image-to-video product, offering competitive quality at very low or zero cost for short clips.",
+        "a_zh": "Hailuo AI 是 MiniMax 的文生视频/图生视频产品，以极低或零成本提供有竞争力的短视频质量。"
+      },
+      {
+        "q_en": "Is Hailuo free?",
+        "q_zh": "Hailuo 免费吗？",
+        "a_en": "Yes. Hailuo offers a generous free tier that has historically been the cheapest credible way to get AI video clips in 2026.",
+        "a_zh": "免费。Hailuo 的免费额度在 2026 年一直是最便宜的可靠 AI 短视频来源之一。"
+      },
+      {
+        "q_en": "How does Hailuo compare to Sora?",
+        "q_zh": "Hailuo 和 Sora 怎么比？",
+        "a_en": "Hailuo delivers competitive realism and human motion at a fraction of the price; Sora still leads on prompt fidelity and longer coherent shots.",
+        "a_zh": "Hailuo 在写实度和人物动作上有竞争力，价格却便宜很多；Sora 在提示忠实度和长镜头连贯性上仍占优。"
+      },
+      {
+        "q_en": "How long can Hailuo videos be?",
+        "q_zh": "Hailuo 视频最长能生成多久？",
+        "a_en": "Hailuo generates clips around 6 seconds per generation; you can extend or stitch them in the editor.",
+        "a_zh": "每次约 6 秒，可在编辑器中延长或拼接。"
+      },
+      {
+        "q_en": "Does Hailuo support image-to-video?",
+        "q_zh": "Hailuo 支持图生视频吗？",
+        "a_en": "Yes. Image-to-video is a core path, popular for animating product photos and portraits.",
+        "a_zh": "支持。图生视频是核心路径，常用于让产品图和人像动起来。"
+      },
+      {
+        "q_en": "Does Hailuo have an API?",
+        "q_zh": "Hailuo 有 API 吗？",
+        "a_en": "An API exists for enterprise partners; consumer API access has been expanding region by region through 2026.",
+        "a_zh": "企业合作伙伴可使用 API；消费级 API 在 2026 年逐步按地区开放。"
+      },
+      {
+        "q_en": "How good is Hailuo at human motion?",
+        "q_zh": "Hailuo 处理人物动作效果如何？",
+        "a_en": "Hailuo is competitive with Kling and Luma on natural motion, especially for portrait and upper-body shots.",
+        "a_zh": "Hailuo 在自然人物动作上与 Kling、Luma 相当，尤其在半身和肖像镜头表现稳定。"
+      },
+      {
+        "q_en": "Can Hailuo make vertical videos?",
+        "q_zh": "Hailuo 能生成竖版视频吗？",
+        "a_en": "Yes. Vertical (9:16) is a first-class aspect ratio in Hailuo, ideal for TikTok, Reels, and Shorts.",
+        "a_zh": "可以。竖版 9:16 是 Hailuo 一级画幅，适合 TikTok、Reels、Shorts。"
+      },
+      {
+        "q_en": "Can Hailuo generate sound?",
+        "q_zh": "Hailuo 能生成声音吗？",
+        "a_en": "Hailuo focuses on visuals; pair with ElevenLabs for voice and Suno for music.",
+        "a_zh": "Hailuo 专注画面；用 ElevenLabs 配音，Suno 配乐。"
+      },
+      {
+        "q_en": "Who should use Hailuo?",
+        "q_zh": "谁应该用 Hailuo？",
+        "a_en": "Creators who want the cheapest credible AI video for social clips, without paying Sora-tier prices.",
+        "a_zh": "想用最便宜的可信 AI 视频做社媒短视频、又不想付 Sora 级价格的创作者。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.1,
+      "capability": 7.1,
+      "price": 9,
+      "growth": 8,
+      "trust": 8
+    },
+    "sourceUrl": "https://hailuoai.video"
+  },
+  "fireflies": {
+    "reviewed": true,
+    "updatedAt": "2026-07-21",
+    "testedVersion": "Latest stable (2026)",
+    "score": 8.5,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "Chrome Extension",
+        "API",
+        "Mobile"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with limited transcripts · Pro $10/seat/mo, Business $19/seat/mo, Enterprise custom unlock unlimited transcripts, AI apps, and CRM sync.",
+      "zh": "免费版转写有限额；Pro 10 美元/席位/月、Business 19 美元/席位/月、Enterprise 定制价，解锁无限转写、AI 应用与 CRM 同步。"
+    },
+    "faq": [
+      {
+        "q_en": "What is Fireflies?",
+        "q_zh": "Fireflies 是什么？",
+        "a_en": "Fireflies.ai is an AI meeting assistant that records, transcribes, and summarises meetings across Zoom, Google Meet, Teams, and Webex.",
+        "a_zh": "Fireflies.ai 是 AI 会议助手，可在 Zoom、Google Meet、Teams、Webex 上录音、转写和总结会议。"
+      },
+      {
+        "q_en": "Is Fireflies free?",
+        "q_zh": "Fireflies 免费吗？",
+        "a_en": "Yes. The free plan includes a limited number of transcription credits; paid plans start at $10/seat/month.",
+        "a_zh": "免费版含有限转写额度；付费版从 10 美元/席位/月起。"
+      },
+      {
+        "q_en": "How accurate is Fireflies transcription?",
+        "q_zh": "Fireflies 转写准确度如何？",
+        "a_en": "Fireflies achieves high accuracy on clear English audio; noisy or accented audio benefits from manual speaker labelling and post-editing.",
+        "a_zh": "Fireflies 在清晰英文音频上准确度较高；噪音或带口音音频建议手动标注说话人并后期校对。"
+      },
+      {
+        "q_en": "Does Fireflies integrate with CRMs?",
+        "q_zh": "Fireflies 支持 CRM 集成吗？",
+        "a_en": "Yes. Native integrations with Salesforce, HubSpot, Pipedrive, Zoho, and others auto-log meeting notes and call summaries to the right record.",
+        "a_zh": "支持。原生集成 Salesforce、HubSpot、Pipedrive、Zoho 等，自动把会议纪要写入对应记录。"
+      },
+      {
+        "q_en": "Can Fireflies answer questions about past meetings?",
+        "q_zh": "Fireflies 能基于历史会议回答问题吗？",
+        "a_en": "Yes. AskFred is Fireflies' chat assistant that can search across your meeting archive and answer questions in natural language.",
+        "a_zh": "可以。AskFred 是 Fireflies 的聊天助手，可跨会议档案自然语言问答。"
+      },
+      {
+        "q_en": "Does Fireflies have an API?",
+        "q_zh": "Fireflies 有 API 吗？",
+        "a_en": "Yes. A REST API and webhooks are available, useful for piping meeting data into custom workflows or data warehouses.",
+        "a_zh": "有。提供 REST API 与 Webhook，可把会议数据接入自定义工作流或数据仓库。"
+      },
+      {
+        "q_en": "Is Fireflies GDPR compliant?",
+        "q_zh": "Fireflies 符合 GDPR 吗？",
+        "a_en": "Yes. Fireflies offers GDPR-compliant data handling, SOC 2 Type II, and configurable data retention policies on Business and above.",
+        "a_zh": "符合。Fireflies 提供 GDPR 合规、SOC 2 Type II 认证，Business 及以上可配置数据保留策略。"
+      },
+      {
+        "q_en": "Can Fireflies detect action items?",
+        "q_zh": "Fireflies 能识别待办事项吗？",
+        "a_en": "Yes. Fireflies auto-detects tasks and decisions in the transcript and surfaces them in the summary and in integrated CRMs.",
+        "a_zh": "可以。Fireflies 自动从转写中识别任务和决定，并在纪要里和集成 CRM 中呈现。"
+      },
+      {
+        "q_en": "Does Fireflies work in Chinese?",
+        "q_zh": "Fireflies 支持中文吗？",
+        "a_en": "Fireflies supports multiple languages including Mandarin, with quality improving for clearly pronounced audio.",
+        "a_zh": "支持，包括普通话，发音清晰的音频效果更好。"
+      },
+      {
+        "q_en": "Who should use Fireflies?",
+        "q_zh": "谁应该用 Fireflies？",
+        "a_en": "Sales teams, customer success, recruiters, and anyone whose calendar is full of meetings they need to remember and act on.",
+        "a_zh": "销售、客户成功、招聘，以及会议密集、又需要记住并跟进的人。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.5,
+      "capability": 7.5,
+      "price": 9,
+      "growth": 8,
+      "trust": 8
+    },
+    "sourceUrl": "https://fireflies.ai"
+  },
+  "otter": {
+    "reviewed": true,
+    "updatedAt": "2026-07-21",
+    "testedVersion": "Latest stable (2026)",
+    "score": 8.4,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "iOS",
+        "Android",
+        "Chrome Extension",
+        "API"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with 300 min/month · Pro $16.99/seat/mo, Business $30/seat/mo unlock more minutes, AI chat, and team features.",
+      "zh": "免费版每月 300 分钟；Pro 16.99 美元/席位/月、Business 30 美元/席位/月，解锁更多时长、AI 问答和团队功能。"
+    },
+    "faq": [
+      {
+        "q_en": "What is Otter?",
+        "q_zh": "Otter 是什么？",
+        "a_en": "Otter.ai is an AI meeting transcription and note-taking service that joins Zoom, Google Meet, and Teams to capture conversations in real time.",
+        "a_zh": "Otter.ai 是 AI 会议转写与笔记服务，可加入 Zoom、Google Meet、Teams 实时记录对话。"
+      },
+      {
+        "q_en": "Is Otter free?",
+        "q_zh": "Otter 免费吗？",
+        "a_en": "Yes. The free plan includes 300 minutes per month; Pro starts at $16.99/seat/month with more minutes and AI features.",
+        "a_zh": "免费版每月 300 分钟；Pro 16.99 美元/席位/月起，含更多时长和 AI 功能。"
+      },
+      {
+        "q_en": "How accurate is Otter?",
+        "q_zh": "Otter 转写准确度如何？",
+        "a_en": "Otter achieves high accuracy on clear English audio and improving accuracy on Mandarin and other major languages.",
+        "a_zh": "Otter 在清晰英文音频上准确度很高，普通话和其它主要语言也在持续提升。"
+      },
+      {
+        "q_en": "Does Otter have an AI chat?",
+        "q_zh": "Otter 有 AI 问答吗？",
+        "a_en": "Yes. Otter AI Chat can answer questions across past meetings, draft follow-up emails, and generate status updates from your meeting archive.",
+        "a_zh": "有。Otter AI Chat 可跨历史会议问答、起草跟进邮件、基于会议档案生成状态更新。"
+      },
+      {
+        "q_en": "Can Otter join meetings automatically?",
+        "q_zh": "Otter 能自动加入会议吗？",
+        "a_en": "Yes. Connect your calendar and Otter auto-joins Zoom, Google Meet, and Microsoft Teams meetings you host or are invited to.",
+        "a_zh": "可以。连接日历后，Otter 会自动加入你主持或受邀的 Zoom、Google Meet、Teams 会议。"
+      },
+      {
+        "q_en": "Does Otter have an API?",
+        "q_zh": "Otter 有 API 吗？",
+        "a_en": "Yes. Otter exposes a REST API and webhooks for paid plans, popular for piping transcripts into CRMs and note apps.",
+        "a_zh": "有。付费版提供 REST API 与 Webhook，常用于把转写接入 CRM 和笔记应用。"
+      },
+      {
+        "q_en": "How is Otter different from Fireflies?",
+        "q_zh": "Otter 和 Fireflies 怎么选？",
+        "a_en": "Otter is a stronger individual note-taker with AI chat; Fireflies is stronger on CRM automation and team-wide search.",
+        "a_zh": "Otter 在个人笔记和 AI 问答上更强；Fireflies 在 CRM 自动化和团队搜索上更强。"
+      },
+      {
+        "q_en": "Does Otter support speaker identification?",
+        "q_zh": "Otter 能识别说话人吗？",
+        "a_en": "Yes. Otter detects and labels different speakers automatically and you can correct labels afterwards.",
+        "a_zh": "可以。Otter 自动检测并标记不同说话人，之后可手动修正。"
+      },
+      {
+        "q_en": "Is Otter suitable for lectures?",
+        "q_zh": "Otter 适合做课堂笔记吗？",
+        "a_en": "Yes. Otter is widely used by students and academics; the free 300 min/month covers most semester workloads.",
+        "a_zh": "可以。Otter 被学生和学者广泛使用；免费版每月 300 分钟基本覆盖整个学期。"
+      },
+      {
+        "q_en": "Who should use Otter?",
+        "q_zh": "谁应该用 Otter？",
+        "a_en": "Students, journalists, researchers, and professionals who need reliable transcripts and searchable meeting history.",
+        "a_zh": "学生、记者、研究者，以及需要可靠转写和可搜索会议记录的专业人士。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.4,
+      "capability": 7.4,
+      "price": 9,
+      "growth": 8,
+      "trust": 8
+    },
+    "sourceUrl": "https://otter.ai"
+  },
+  "gamma": {
+    "reviewed": true,
+    "updatedAt": "2026-07-21",
+    "testedVersion": "Latest stable (2026)",
+    "score": 8.6,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with 400 AI credits · Plus $8/seat/mo, Pro $16/seat/mo unlock more AI credits, custom branding, analytics, and priority queue.",
+      "zh": "免费版 400 AI 积分；Plus 8 美元/席位/月、Pro 16 美元/席位/月，解锁更多积分、自定义品牌、分析与优先队列。"
+    },
+    "faq": [
+      {
+        "q_en": "What is Gamma?",
+        "q_zh": "Gamma 是什么？",
+        "a_en": "Gamma is an AI presentation tool that generates full slide decks from a text prompt, then lets you edit them in a Notion-like interface.",
+        "a_zh": "Gamma 是 AI 演示工具，能根据文字提示生成完整 PPT，并在 Notion 风格界面中编辑。"
+      },
+      {
+        "q_en": "Is Gamma free?",
+        "q_zh": "Gamma 免费吗？",
+        "a_en": "Yes. Free users get 400 AI credits to start; paid plans start at $8/seat/month.",
+        "a_zh": "免费用户有 400 AI 积分；付费版从 8 美元/席位/月起。"
+      },
+      {
+        "q_en": "How does Gamma compare to PowerPoint?",
+        "q_zh": "Gamma 和 PowerPoint 怎么比？",
+        "a_en": "Gamma is faster for first drafts from a prompt; PowerPoint still wins on pixel-perfect control and complex animations for enterprise decks.",
+        "a_zh": "Gamma 在根据提示快速出首稿上更快；企业级精细控制和复杂动画仍以 PowerPoint 为佳。"
+      },
+      {
+        "q_en": "Can I export Gamma decks to PowerPoint?",
+        "q_zh": "Gamma 能导出为 PowerPoint 吗？",
+        "a_en": "Yes. Gamma exports to PPTX and PDF; web links can also be shared as interactive presentations.",
+        "a_zh": "可以。Gamma 可导出为 PPTX 和 PDF；也可以网页链接形式分享互动演示。"
+      },
+      {
+        "q_en": "Does Gamma support custom branding?",
+        "q_zh": "Gamma 支持自定义品牌吗？",
+        "a_en": "Yes. Pro and above let you upload logos, brand colors, and fonts that apply across all generated decks.",
+        "a_zh": "支持。Pro 及以上可上传 Logo、品牌色和字体，应用于所有生成的演示。"
+      },
+      {
+        "q_en": "Can Gamma generate from a document?",
+        "q_zh": "Gamma 能从文档生成演示吗？",
+        "a_en": "Yes. Paste a document or import a URL and Gamma will summarise it into a structured deck.",
+        "a_zh": "可以。粘贴文档或导入 URL，Gamma 会自动总结为结构化演示。"
+      },
+      {
+        "q_en": "Does Gamma have an API?",
+        "q_zh": "Gamma 有 API 吗？",
+        "a_en": "An API is available for paid accounts, useful for embedding Gamma generation inside SaaS workflows.",
+        "a_zh": "付费账户可使用 API，可在 SaaS 工作流中嵌入 Gamma 生成。"
+      },
+      {
+        "q_en": "Is Gamma good for internal updates?",
+        "q_zh": "Gamma 适合做内部汇报吗？",
+        "a_en": "Yes. Many teams use Gamma to turn weekly notes or dashboards into fast status decks; engagement analytics on Pro help track reads.",
+        "a_zh": "适合。很多团队用 Gamma 把周报或数据看板转成快速状态汇报，Pro 的参与度分析还能追踪阅读情况。"
+      },
+      {
+        "q_en": "Does Gamma support collaboration?",
+        "q_zh": "Gamma 支持多人协作吗？",
+        "a_en": "Yes. Real-time co-editing and comments work like in Notion or Google Docs.",
+        "a_zh": "支持。实时协作和评论体验类似 Notion 或 Google Docs。"
+      },
+      {
+        "q_en": "Who should use Gamma?",
+        "q_zh": "谁应该用 Gamma？",
+        "a_en": "Anyone who needs to turn ideas into a polished deck in minutes, not hours — and is willing to trade pixel-perfect control for speed.",
+        "a_zh": "需要把想法在几分钟（而不是几小时）内变成精致 PPT、并愿意用速度换精细控制的人。"
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.6,
+      "capability": 7.6,
+      "price": 9,
+      "growth": 8,
+      "trust": 8
+    },
+    "sourceUrl": "https://gamma.app"
   }
 }
