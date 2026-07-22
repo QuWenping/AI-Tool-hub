@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "crawl": "node scripts/daily-pipeline.mjs",
+    "crawl:ai": "node scripts/daily-pipeline.mjs --ai"
   },
   "dependencies": {
     "@astrojs/sitemap": "3.2.1",
