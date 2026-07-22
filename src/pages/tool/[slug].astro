@@ -118,6 +118,15 @@ const featureRowsEn = tFeaturesEn.map((f, i) => ({
 }));
 
 const faqItems = editorial?.faq || [];
+// Default SEO FAQs for all tool pages (covers "is X free", "X alternatives", "X API" keywords)
+const defaultFaqs = [
+  { q_en: "Is " + tNameEn + " free to use?", q_zh: tNameEn + " 是免费的吗？", a_en: (editorial?.quickFacts?.freeTier ? "Yes, " + tNameEn + " has a free tier. " + (pricingSummaryEn || "Check the official pricing page for details.") : "Check the official " + tNameEn + " pricing page for current plans and free trial availability."), a_zh: (editorial?.quickFacts?.freeTier ? tNameEn + " 有免费版本。" : "请查看 " + tNameEn + " 官方定价页面了解当前计划和免费试用。") },
+  { q_en: "What is " + tNameEn + " best for?", q_zh: tNameEn + " 最适合什么？", a_en: tNameEn + " is best for " + (tUseEn[0] || tScenesEn[0] || "general " + catLabelEn.toLowerCase() + " tasks") + ". " + (tProsEn[0] ? "Its key strength is " + tProsEn[0].toLowerCase() + "." : ""), a_zh: tNameEn + " 最适合" + (tUseZh[0] || tScenesZh[0] || "通用" + catLabelZh + "任务") + "。" },
+  { q_en: "What are the best " + tNameEn + " alternatives?", q_zh: tNameEn + " 的最佳替代品是什么？", a_en: "Top alternatives to " + tNameEn + " include " + (alternatives.length >= 3 ? alternatives.slice(0, 3).map(function(x) { return x[1].name?.en || x[0]; }).join(", ") : "other " + catLabelEn.toLowerCase() + " AI tools") + ". See our alternatives page for a full comparison.", a_zh: tNameEn + " 的顶级替代品包括其他" + catLabelZh + " AI 工具。查看我们的替代品页面获取完整对比。" },
+  { q_en: "Does " + tNameEn + " have an API?", q_zh: tNameEn + " 有 API 吗？", a_en: (editorial?.quickFacts?.hasApi ? "Yes, " + tNameEn + " offers an API for developers. " : "Check the official " + tNameEn + " website for API availability and documentation."), a_zh: (editorial?.quickFacts?.hasApi ? tNameEn + " 提供 API。" : "请查看 " + tNameEn + " 官网了解 API 可用性。") }
+];
+// Use editorial FAQs if available, otherwise use defaults; merge if both exist
+const allFaqs = faqItems.length > 0 ? faqItems : defaultFaqs;
 
 // Editorial narrative
 const ourIntros = {
@@ -403,7 +412,7 @@ const tocSections = [
       </section>
     )}
 
-    <ToolFAQ faqs={faqItems} />
+    <ToolFAQ faqs={allFaqs} />
 
     {relatedCategories.length > 0 && (
       <section class="detail-section related">

@@ -69,14 +69,33 @@ const faq = [
   { q_en: "Is AI Tool Hub free to use?", q_zh: "AI Tool Hub 是免费的吗？", a_en: "Yes. Browsing the directory, reading reviews, and using search are completely free.", a_zh: "是的。浏览工具目录、阅读评测和使用搜索功能完全免费。" },
   { q_en: "How do you choose which AI tools to review?", q_zh: "你们如何选择评测工具？", a_en: "We test tools on real work and evaluate output quality, usability, pricing transparency, support, and privacy.", a_zh: "我们在真实工作中测试工具，并评估输出质量、易用性、价格透明度、支持和隐私。" },
   { q_en: "Do affiliate links influence rankings?", q_zh: "联盟链接会影响排名吗？", a_en: "No. Commercial relationships never determine our scores or rankings.", a_zh: "不会。商业合作关系不会决定我们的评分或排名。" },
-  { q_en: "How often do you re-test tools?", q_zh: "你们多久重新测试一次？", a_en: "Top picks are re-tested regularly and rankings are updated whenever product quality changes.", a_zh: "我们会定期重新测试重点工具，并在产品质量发生变化时更新排名。" }
+  { q_en: "How often do you re-test tools?", q_zh: "你们多久重新测试一次？", a_en: "Top picks are re-tested regularly and rankings are updated whenever product quality changes.", a_zh: "我们会定期重新测试重点工具，并在产品质量发生变化时更新排名。" },
+  { q_en: "What are the best free AI tools in 2026?", q_zh: "2026 年最好的免费 AI 工具有哪些？", a_en: "The best free AI tools in 2026 include ChatGPT (free tier with GPT-4o mini), Claude (free tier), Gemini (free tier with 2M context), Midjourney (free trials), Stable Diffusion (open source), and Cursor (free tier). Browse our free tools category for the full list.", a_zh: "2026 年最好的免费 AI 工具包括 ChatGPT、Claude、Gemini、Midjourney、Stable Diffusion 和 Cursor。查看我们的免费工具分类获取完整列表。" },
+  { q_en: "Which AI tools are best for engineers and construction?", q_zh: "哪些 AI 工具适合工程师和建筑行业？", a_en: "For civil engineers, architects, and construction professionals, AI tools like Claude (for reading technical specs and standards), ChatGPT (for calculations and documentation), and n8n (for automating workflows) are top picks. See our AI for Engineers and AI for Construction guides for detailed recommendations.", a_zh: "对于土木工程师、建筑师和建筑专业人士，Claude（阅读技术规范）、ChatGPT（计算和文档）和 n8n（自动化工作流）是首选。查看我们的工程师和建筑行业 AI 指南获取详细推荐。" },
+  { q_en: "Can AI tools help with code review and software development?", q_zh: "AI 工具能帮助代码审查和软件开发吗？", a_en: "Yes. Cursor and GitHub Copilot are the leading AI coding tools in 2026. Cursor excels at multi-file code review, refactoring, and codebase chat. GitHub Copilot is best for inline autocomplete. For automated code review on pull requests, tools like DeepSeek API combined with GitHub Actions can review diffs automatically.", a_zh: "可以。Cursor 和 GitHub Copilot 是 2026 年领先的 AI 编程工具。Cursor 擅长多文件代码审查、重构和代码库聊天。GitHub Copilot 最适合行内自动补全。对于 PR 自动代码审查，可以使用 DeepSeek API 配合 GitHub Actions。" },
+  { q_en: "What is CrewAI and how much does it cost?", q_zh: "CrewAI 是什么，价格多少？", a_en: "CrewAI is an open-source Python framework for building multi-agent AI systems. The open-source version is free. CrewAI Enterprise offers managed hosting, monitoring, and deployment features with custom pricing based on team size and usage. See our CrewAI review for details.", a_zh: "CrewAI 是一个开源 Python 框架，用于构建多智能体 AI 系统。开源版本免费。CrewAI 企业版提供托管、监控和部署功能，价格根据团队规模和用量定制。查看我们的 CrewAI 评测了解详情。" },
+  { q_en: "What is Consensus AI and how does it work?", q_zh: "Consensus AI 是什么，如何运作？", a_en: "Consensus is an AI-powered academic search engine that finds answers in scientific papers. It uses language models to extract claims from peer-reviewed research, making it ideal for evidence-based research. It offers a free tier with limited searches and a premium plan for unlimited access.", a_zh: "Consensus 是一个 AI 驱动的学术搜索引擎，从科学论文中查找答案。它使用语言模型从同行评审的研究中提取论断，非常适合循证研究。免费版有搜索限制，付费版提供无限访问。" },
+  { q_en: "How do I compare AI tools side by side?", q_zh: "如何并排比较 AI 工具？", a_en: "Use our comparison pages (e.g., ChatGPT vs Claude, Cursor vs GitHub Copilot) for detailed feature, pricing, and pros/cons breakdowns. You can also use the AI Tool Finder on this page to get personalized recommendations based on your use case and budget.", a_zh: "使用我们的对比页面（如 ChatGPT vs Claude、Cursor vs GitHub Copilot）获取详细的功能、价格和优缺点对比。你也可以使用本页的 AI Tool Finder 根据你的使用场景和预算获取个性化推荐。" },
+  { q_en: "Are there AI tools for music and video generation?", q_zh: "有 AI 音乐和视频生成工具吗？", a_en: "Yes. For AI video generation, Sora 2 and Runway are the top picks in 2026. For AI music, Suno v4 produces complete songs from text descriptions. For AI voice, ElevenLabs v3 delivers the most realistic text-to-speech. Browse our video and audio categories for more.", a_zh: "有。AI 视频生成方面，Sora 2 和 Runway 是 2026 年的首选。AI 音乐方面，Suno v4 可以从文字描述生成完整歌曲。AI 语音方面，ElevenLabs v3 提供最逼真的文字转语音。浏览我们的视频和音频分类了解更多。" },
+  { q_en: "What AI tools are best for productivity and project management?", q_zh: "哪些 AI 工具适合效率和项目管理？", a_en: "Notion AI, ClickUp AI, and Reclaim AI are top productivity tools with AI features like task summarization, automated scheduling, and smart notifications. For note-taking, Reflect and Notion AI are excellent. See our productivity category for the full ranked list.", a_zh: "Notion AI、ClickUp AI 和 Reclaim AI 是带有 AI 功能的顶级效率工具，提供任务摘要、自动调度和智能通知等功能。笔记方面，Reflect 和 Notion AI 表现出色。查看我们的效率分类获取完整排名。" }
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faq.map(item => ({
+    "@type": "Question",
+    "name": item.q_en,
+    "acceptedAnswer": { "@type": "Answer", "text": item.a_en }
+  }))
+};
 ---
 <BaseLayout
   title="AI Tool Hub | Find Your Perfect AI Stack"
   description="Discover, compare, and build your ideal AI stack. Explore tested AI tools for writing, coding, images, video, audio, and productivity."
   fullWidth={true}
 >
+  <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script></Fragment>
   <div class="home-page">
     <section class="home-hero">
       <div class="home-shell hero-layout">
