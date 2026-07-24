@@ -39,3 +39,5 @@ deploy-redesign.ps1
 # Old CSS/JS artifacts (superseded by src/styles + public/js/main.js)
 public/styles.css
 public/script.js
+
+.env
