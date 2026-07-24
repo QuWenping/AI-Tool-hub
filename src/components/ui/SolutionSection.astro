@@ -4,7 +4,7 @@ const list = (tools || []).filter(x => x && x.id);
 ---
 <section class="solution-section">
   {heading && <h2 class="solution-section-heading">{heading}</h2>}
-  {content && <p class="solution-section-content">{content}</p>}
+  {content && <p class="solution-section-content" set:html={content}></p>}
   {list.length > 0 && (
     <div class="solution-section-tools">
       <span class="solution-section-tools-label">Recommended tools</span>

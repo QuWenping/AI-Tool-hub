@@ -1,5 +1,5 @@
 // ----- i18n on any page that has data-i18n-en / data-i18n-zh -----
-let currentLang = localStorage.getItem("lang") || "zh";
+let currentLang = localStorage.getItem("lang") || "en";
 let currentTheme = localStorage.getItem("theme") || "dark";
 
 function loadHomeData() {
@@ -13,16 +13,16 @@ function loadHomeData() {
 
 function applyI18n() {
   document.querySelectorAll("[data-i18n-en]").forEach(el => {
-    const v = currentLang === "zh" ? el.getAttribute("data-i18n-zh") : el.getAttribute("data-i18n-en");
+    const v = el.getAttribute("data-i18n-en");
     if (v != null) el.textContent = v;
   });
   document.querySelectorAll("[data-i18n-placeholder-en]").forEach(el => {
-    const v = currentLang === "zh" ? el.getAttribute("data-i18n-placeholder-zh") : el.getAttribute("data-i18n-placeholder-en");
+    const v = el.getAttribute("data-i18n-placeholder-en");
     if (v != null) el.placeholder = v;
   });
   document.querySelectorAll("[data-i18n-en-rich]").forEach(el => {
     let arr = [];
-    try { arr = JSON.parse(currentLang === "zh" ? el.getAttribute("data-i18n-zh-rich") : el.getAttribute("data-i18n-en-rich")) || []; } catch (e) { arr = []; }
+    try { arr = JSON.parse(el.getAttribute("data-i18n-en-rich")) || []; } catch (e) { arr = []; }
     // Preserve <i> icon children (first child) for styled lists
     const hasIconChildren = el.classList.contains("feature-list") || el.classList.contains("use-case-list") || el.classList.contains("scenes-list");
     if (hasIconChildren) {
@@ -50,12 +50,10 @@ function applyTheme(theme) {
 
 // ----- Homepage-only: tool card rendering -----
 function cardHTML(t) {
-  const labels = currentLang === "zh"
-    ? { text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商业" }
-    : { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
+  const labels = { text: "Writing", image: "Image", code: "Coding", video: "Video", audio: "Audio", productivity: "Productivity" };
   const catLabel = labels[t.cat] || t.cat;
   const featured = t.featured
-    ? `<span class="directory-featured">${currentLang === "zh" ? "推荐" : "Featured"}</span>`
+    ? `<span class="directory-featured">Featured</span>`
     : "";
   const name = t.name?.[currentLang] || t.name?.en || "AI Tool";
   const description = t.short_desc?.[currentLang] || t.short_desc?.en || "";
@@ -68,7 +66,7 @@ function cardHTML(t) {
     <p>${description}</p>
     <div class="directory-tool-bottom">
       <span>${catLabel}</span>
-      <span>${currentLang === "zh" ? "查看详情" : "View details"} <i class="fas fa-arrow-right"></i></span>
+      <span>View details <i class="fas fa-arrow-right"></i></span>
     </div>
   `;
 }
@@ -97,10 +95,10 @@ function renderTools() {
   grid.innerHTML = show.map(([id, t]) => `<a class="directory-tool-card" href="/tool/${id}/">${cardHTML(t)}</a>`).join("");
   if (more) more.innerHTML = "";
   if (entries.length === 0) {
-    grid.innerHTML = `<p class="directory-empty">${currentLang === "zh" ? "暂时没有找到相关的 AI 工具..." : "No AI tools found..."}</p>`;
+    grid.innerHTML = `<p class="directory-empty">No AI tools found...</p>`;
   } else if (rest > 0 && !isSearch) {
     const link = cat !== "all" ? `/best/${cat}/` : "/best/students/";
-    const btnText = currentLang === "zh" ? "浏览全部 " + entries.length + " 个工具" : "Browse all " + entries.length + " tools";
+    const btnText = "Browse all " + entries.length + " tools";
     if (more) more.innerHTML = `<a href="${link}">${btnText} <span aria-hidden="true">→</span></a>`;
   }
 }
@@ -190,3 +188,5 @@ window.addEventListener("DOMContentLoaded", () => {
     renderTools();
   }
 });
+
+

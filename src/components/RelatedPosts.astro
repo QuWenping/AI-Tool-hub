@@ -1,28 +1,36 @@
 ---
 /**
- * RelatedPosts.astro - 相关文章推荐
- * 基于 tag 匹配 + 分类匹配
+ * RelatedPosts.astro - Related posts recommendations
+ * Based on tag matching + category matching
  */
 import posts from "../data/posts.json";
-const { currentSlug, currentCategory, currentTags = [], limit = 3 } = Astro.props;
+const { currentSlug, currentCategory, currentTags = [], relatedSlugs = [], limit = 3 } = Astro.props;
 
-// 评分：相同分类 +5，相同 tag 每个 +2
-const scoredPosts = posts
-  .filter(p => p.slug !== currentSlug)
-  .map(p => {
-    let score = 0;
-    if (p.category === currentCategory) score += 5;
-    const sharedTags = (p.tags || []).filter(t => currentTags.includes(t));
-    score += sharedTags.length * 2;
-    return { ...p, score };
-  })
-  .filter(p => p.score > 0)
-  .sort((a, b) => b.score - a.score)
-  .slice(0, limit);
+function getScoredPosts() {
+  const scoredPosts = posts
+    .filter(p => p.slug !== currentSlug)
+    .map(p => {
+      let score = 0;
+      if (p.category === currentCategory) score += 5;
+      const sharedTags = (p.tags || []).filter(t => currentTags.includes(t));
+      score += sharedTags.length * 2;
+      return { ...p, score };
+    })
+    .filter(p => p.score > 0)
+    .sort((a, b) => b.score - a.score);
+  return scoredPosts;
+}
+
+// Prefer score-based matching; fallback to explicit relatedSlugs when empty
+let scoredPosts = getScoredPosts();
+if (scoredPosts.length === 0 && relatedSlugs.length > 0) {
+  const slugSet = new Set(relatedSlugs.slice(0, limit));
+  scoredPosts = posts.filter(p => slugSet.has(p.slug)).map(p => ({ ...p, score: 1 }));
+}
 ---
 {scoredPosts.length > 0 && (
   <section class="related-posts">
-    <h3 data-i18n-en="Related articles" data-i18n-zh="相关文章">Related articles</h3>
+    <h3 data-i18n-en="Related articles">Related articles</h3>
     <div class="related-grid">
       {scoredPosts.map(p => (
         <a

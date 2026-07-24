@@ -5,72 +5,45 @@
   const BUDGETS = ["free", "0-50", "50-200", "enterprise"];
   const STORAGE_KEY = "ai-tool-hub.stack.v1";
 
-  const CAT_LABELS = {
-    en: { text: "Writing", image: "Images", code: "Coding", video: "Video", audio: "Audio", productivity: "Business" },
-    zh: { text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商业" }
-  };
+  const CAT_LABELS = { text: "Writing", image: "Image", code: "Coding", video: "Video", audio: "Audio", productivity: "Productivity" };
 
   const COPY = {
-    progress: {
-      en: (n) => n === 0 ? "0 of 3 answered — pick your role to start"
+    progress: (n) => n === 0 ? "0 of 3 answered — pick your role to start"
                 : n === 1 ? "1 of 3 answered — choose your goal next"
                 : n === 2 ? "2 of 3 answered — one more, choose a budget"
                 : "3 of 3 answered — your stack is ready",
-      zh: (n) => n === 0 ? "已完成 0 / 3 — 请先选择角色"
-                : n === 1 ? "已完成 1 / 3 — 请选择你的目标"
-                : n === 2 ? "已完成 2 / 3 — 再选一个预算即可"
-                : "已完成 3 / 3 — 推荐组合已就绪"
-    },
-    title: {
-      en: (role, goal) => `Your ${labelRole(role, "en")} stack for ${labelGoal(goal, "en")}`,
-      zh: (role, goal) => `${labelRole(role, "zh")}的${labelGoal(goal, "zh")}工具栈`
-    },
-    summary: {
-      en: (role, goal, budget, count) => `${count} complementary tools tuned for ${labelRole(role, "en").toLowerCase()} who want to ${labelGoal(goal, "en").toLowerCase()} on a ${labelBudget(budget, "en")} budget.`,
-      zh: (role, goal, budget, count) => `${count} 款互补 AI 工具，针对希望在${labelBudget(budget, "zh")}预算下${labelGoal(goal, "zh")}的${labelRole(role, "zh")}。`
-    },
-    cost: {
-      en: (val) => val === 0 ? "Free" : `≈$${val}/mo`,
-      zh: (val) => val === 0 ? "免费" : `约 $${val}/月`
-    },
-    hours: {
-      en: (val) => `~${val} hrs/week`,
-      zh: (val) => `每周约 ${val} 小时`
-    },
-    share: {
-      en: { copy: "Copy share link", copied: "Copied!", failed: "Copy failed" },
-      zh: { copy: "复制分享链接", copied: "已复制", failed: "复制失败" }
-    }
+    title: (role, goal) => `Your ${labelRole(role)} stack for ${labelGoal(goal)}`,
+    summary: (role, goal, budget, count) => `${count} complementary tools tuned for ${labelRole(role).toLowerCase()} who want to ${labelGoal(goal).toLowerCase()} on a ${labelBudget(budget)} budget.`,
+    cost: (val) => val === 0 ? "Free" : `≈$${val}/mo`,
+    hours: (val) => `~${val} hrs/week`,
+    share: { copy: "Copy share link", copied: "Copied!", failed: "Copy failed" }
   };
 
   const ROLE_LABEL = {
-    founder: { en: "founders", zh: "创业者" },
-    developer: { en: "developers", zh: "开发者" },
-    designer: { en: "designers", zh: "设计师" },
-    marketer: { en: "marketers", zh: "营销人员" }
+    founder: "founders",
+    developer: "developers",
+    designer: "designers",
+    marketer: "marketers"
   };
   const GOAL_LABEL = {
-    "save-time": { en: "save time", zh: "节省时间" },
-    "automate": { en: "automate tasks", zh: "自动化工作" },
-    "create-content": { en: "create content", zh: "创作内容" },
-    "generate-code": { en: "generate code", zh: "生成代码" }
+    "save-time": "save time",
+    "automate": "automate tasks",
+    "create-content": "create content",
+    "generate-code": "generate code"
   };
   const BUDGET_LABEL = {
-    "free": { en: "free", zh: "免费" },
-    "0-50": { en: "$0–50/mo", zh: "0–50 美元/月" },
-    "50-200": { en: "$50–200/mo", zh: "50–200 美元/月" },
-    "enterprise": { en: "enterprise", zh: "企业级" }
+    "free": "free",
+    "0-50": "$0–50/mo",
+    "50-200": "$50–200/mo",
+    "enterprise": "enterprise"
   };
 
-  function labelRole(k, l) { return (ROLE_LABEL[k] && ROLE_LABEL[k][l]) || k; }
-  function labelGoal(k, l) { return (GOAL_LABEL[k] && GOAL_LABEL[k][l]) || k; }
-  function labelBudget(k, l) { return (BUDGET_LABEL[k] && BUDGET_LABEL[k][l]) || k; }
+  function labelRole(k) { return ROLE_LABEL[k] || k; }
+  function labelGoal(k) { return GOAL_LABEL[k] || k; }
+  function labelBudget(k) { return BUDGET_LABEL[k] || k; }
 
   function currentLang() {
-    try {
-      const v = localStorage.getItem("lang");
-      return v === "en" ? "en" : "zh";
-    } catch (_e) { return "zh"; }
+    return "en";
   }
 
   function loadCatalog() {
@@ -234,7 +207,7 @@
     const bar = root.querySelector("[data-stack-progress-bar]");
     if (bar) bar.style.width = Math.round((answered / 3) * 100) + "%";
     const progressLabel = root.querySelector("[data-stack-progress-label]");
-    if (progressLabel) progressLabel.textContent = COPY.progress[lang](answered);
+    if (progressLabel) progressLabel.textContent = COPY.progress(answered);
 
     const resultEl = root.querySelector("[data-stack-result]");
     const pendingEl = root.querySelector("[data-stack-pending]");
@@ -250,9 +223,9 @@
     if (stack.length === 0) return;
 
     const titleEl = root.querySelector("[data-stack-title]");
-    if (titleEl) titleEl.textContent = COPY.title[lang](state.role, state.goal);
+    if (titleEl) titleEl.textContent = COPY.title(state.role, state.goal);
     const summaryEl = root.querySelector("[data-stack-summary]");
-    if (summaryEl) summaryEl.textContent = COPY.summary[lang](state.role, state.goal, state.budget, stack.length);
+    if (summaryEl) summaryEl.textContent = COPY.summary(state.role, state.goal, state.budget, stack.length);
 
     const listEl = root.querySelector("[data-stack-list]");
     if (listEl) {
@@ -267,16 +240,16 @@
         const info = document.createElement("div");
         info.className = "stack-item-info";
         const strong = document.createElement("strong");
-        strong.textContent = t.name[lang] || t.name.en;
+        strong.textContent = t.name.en;
         const small = document.createElement("small");
-        small.textContent = (t.stackRole[lang] || t.stackRole.en) + " · " + (CAT_LABELS[lang][t.cat] || t.cat);
+        small.textContent = (t.stackRole.en) + " · " + (CAT_LABELS[t.cat] || t.cat);
         info.appendChild(strong);
         info.appendChild(small);
         const price = document.createElement("b");
         price.className = "stack-price";
-        price.textContent = t.freeTier && t.monthlyCost === 0 ? (lang === "zh" ? "免费" : "Free")
-          : t.freeTier ? (lang === "zh" ? "含免费额度" : "Free tier")
-          : "$" + t.monthlyCost + (lang === "zh" ? "/月" : "/mo");
+        price.textContent = t.freeTier && t.monthlyCost === 0 ? "Free"
+          : t.freeTier ? "Free tier"
+          : "$" + t.monthlyCost + "/mo";
         a.appendChild(rank);
         a.appendChild(info);
         a.appendChild(price);
@@ -287,9 +260,9 @@
     const totalCost = stack.reduce((sum, t) => sum + (t.freeTier && state.budget === "free" ? 0 : t.monthlyCost), 0);
     const totalHours = stack.reduce((sum, t) => sum + (t.hoursSaved || 0), 0);
     const costEl = root.querySelector("[data-stack-cost]");
-    if (costEl) costEl.textContent = COPY.cost[lang](totalCost);
+    if (costEl) costEl.textContent = COPY.cost(totalCost);
     const hoursEl = root.querySelector("[data-stack-hours]");
-    if (hoursEl) hoursEl.textContent = COPY.hours[lang](totalHours);
+    if (hoursEl) hoursEl.textContent = COPY.hours(totalHours);
 
     const exploreEl = root.querySelector("[data-stack-explore]");
     if (exploreEl) {
@@ -311,12 +284,12 @@
     const lang = currentLang();
     const url = window.location.origin + window.location.pathname + window.location.search + "#finder";
     const label = btn.querySelector("span");
-    const original = COPY.share[lang].copy;
+    const original = COPY.share.copy;
     if (label) label.textContent = original;
     const done = (ok) => {
       if (!label) return;
-      label.textContent = ok ? COPY.share[lang].copied : COPY.share[lang].failed;
-      setTimeout(() => { label.textContent = COPY.share[currentLang()].copy; }, 1600);
+      label.textContent = ok ? COPY.share.copied : COPY.share.failed;
+      setTimeout(() => { label.textContent = COPY.share.copy; }, 1600);
     };
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(url).then(() => done(true), () => done(false));

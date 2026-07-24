@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import categories from "../../data/categories.json";
 import toolsData from "../../data/tools.json";
+import matchupsData from "../../data/matchups.json";
 import ArticleToc from "../../components/ui/ArticleToc.astro";
 export async function getStaticPaths() {
   return categories.map(function(cat){return {params:{slug:cat.slug},props:{cat:cat}}});
@@ -15,6 +16,7 @@ const firstTool = matchedTools[0];
 const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
 const catLabel = categoryLabels[firstTool?.cat] || (firstTool?.cat || "AI");
 const relatedCategories = categories.filter(function(c){return c.slug !== cat.slug}).slice(0, 6);
+const clusterMatchups = matchupsData.filter(function(m){return m.cluster === cat.slug});
 const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/best/" + cat.slug + "/";
 const articleSchema = {
@@ -139,6 +141,7 @@ const tocSections = [
   { id: "detailed-reviews", label: "Detailed reviews" },
   { id: "common-mistakes", label: "Common mistakes" },
   { id: "faq", label: "FAQ" },
+  { id: "comparisons", label: "Comparisons" },
   { id: "related", label: "Related categories" }
 ];
 
@@ -246,6 +249,26 @@ const tocSections = [
         )})}
       </div>
     </section>
+
+    {clusterMatchups.length > 0 && (
+      <section class="detail-section">
+        <h2 id="comparisons">Head-to-head comparisons</h2>
+        <div class="card-grid">
+          {clusterMatchups.map(m => {
+            const ta = toolsData[m.a];
+            const tb = toolsData[m.b];
+            const na = ta?.name?.en || m.tool_a;
+            const nb = tb?.name?.en || m.tool_b;
+            return (
+              <a class="info-card" href={"/vs/" + m.slug + "/"}>
+                <h3>{na} vs {nb}</h3>
+                <p>{m.title_en}</p>
+              </a>
+            );
+          })}
+        </div>
+      </section>
+    )}
 
     <section class="related">
       <h2 id="related" data-i18n="related_categories">Related categories</h2>

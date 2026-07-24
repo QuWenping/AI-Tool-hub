@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import solutions from "../../data/solutions.json";
-import workflows from "../../data/workflows.json";
 import toolsData from "../../data/tools.json";
 import editorialData from "../../data/tool-editorial.json";
 import taxonomy from "../../data/industry-taxonomy.json";
@@ -9,7 +8,6 @@ import TLDR from "../../components/ui/TLDR.astro";
 import AdSlot from "../../components/ui/AdSlot.astro";
 import IndustryStack from "../../components/ui/IndustryStack.astro";
 import SolutionSection from "../../components/ui/SolutionSection.astro";
-import WorkflowCard from "../../components/ui/WorkflowCard.astro";
 import ToolFAQ from "../../components/ui/ToolFAQ.astro";
 
 export async function getStaticPaths() {
@@ -38,10 +36,7 @@ const stackTools = stackToolIds
   .map(id => normaliseTool(id, solution.stackRoles?.[id]?.en))
   .filter(Boolean);
 
-const workflowMap = new Map(workflows.map(w => [w.slug, w]));
-const relatedWorkflows = (solution.workflows || [])
-  .map(slug => workflowMap.get(slug))
-  .filter(Boolean);
+const relatedWorkflows = [];
 
 const relatedSolutionSlugs = solution.relatedSolutionSlugs || [];
 const relatedSolutions = relatedSolutionSlugs
@@ -58,15 +53,14 @@ const pageUrl = `${siteUrl}/solutions/${solution.slug}/`;
 const updatedAt = solution.updatedAt || "2026-07-20";
 
 const tlDrItems = [
-  solution.audience?.en || `${solution.industry} teams applying AI in real workflows.`,
+  solution.audience?.en || `${solution.industry} teams applying AI.`,
   `Recommended stack: ${stackTools.length} tools (${stackTools.slice(0,3).map(t => t.name).join(", ") || "curated"})`,
-  `Workflow guides: ${relatedWorkflows.length}`,
   `Task areas covered: ${(solution.sections || []).length}`,
   `Last reviewed: ${updatedAt}`
 ];
 
-const seoTitle = `Best AI Tools for ${solution.industry} in 2026: Stack, Workflows & Use Cases`;
-const seoDescription = (solution.description || `Recommended AI stack, workflows and use cases for ${solution.industry.toLowerCase()} in 2026.`).slice(0, 158);
+const seoTitle = `Best AI Tools for ${solution.industry} in 2026: Stack & Use Cases`;
+const seoDescription = (solution.description || `Recommended AI stack and use cases for ${solution.industry.toLowerCase()} in 2026.`).slice(0, 158);
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -178,15 +172,6 @@ const bestRankingHref = {
         <li><strong>Govern.</strong> Store standards, brand voice and safety rules in a shared knowledge base (Notion AI or Dify). Keep a human in the loop for decisions with legal, safety or client impact.</li>
       </ol>
     </section>
-
-    {relatedWorkflows.length > 0 && (
-      <section class="solution-workflows">
-        <h2>Related workflows</h2>
-        <div class="workflow-grid">
-          {relatedWorkflows.map(w => <WorkflowCard workflow={w} />)}
-        </div>
-      </section>
-    )}
 
     <section class="solution-safety">
       <h2>Safety, ethics and disclosure</h2>

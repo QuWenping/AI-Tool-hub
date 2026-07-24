@@ -10,8 +10,13 @@
       "GitHub Copilot",
       "Claude",
       "Codeium",
-      "Tabnine",
-      "Amazon Q"
+      "Windsurf",
+      "Cline",
+      "v0",
+      "Lovable",
+      "Replit",
+      "Bolt",
+      "Aider"
     ],
     "workflows": [
       "mcp-github-code-review"
@@ -34,6 +39,29 @@
         "recommendedToolIds": [
           "claude",
           "cursor",
+          "codeium"
+        ]
+      },
+      {
+        "heading": "AI-Powered App & UI Builders",
+        "content": "Beyond traditional code completion, browser-based AI builders like <a href=\"/tool/v0/\">v0</a>, <a href=\"/tool/lovable/\">Lovable</a>, <a href=\"/tool/replit/\">Replit</a>, and <a href=\"/tool/bolt/\">Bolt</a> enable developers to generate full-stack applications from natural language prompts. v0 by Vercel excels at React/Next.js UI components with production-ready Tailwind code. Lovable focuses on complete web app generation with authentication, database, and deployment built in. Replit provides an online IDE with integrated AI Agent that can build, debug, and deploy apps in any language. Bolt is a rapid prototyping tool that turns ideas into working prototypes in minutes — see our <a href=\"/vs/replit-vs-bolt/\">Replit vs Bolt</a> and <a href=\"/vs/v0-vs-lovable/\">v0 vs Lovable</a> comparisons for a detailed breakdown. For developers who prefer CLI-based workflows, <a href=\"/tool/aider/\">Aider</a> offers powerful terminal-first AI pair programming with git-aware context and multi-model support.",
+        "recommendedTools": "v0 (best for React UI), Lovable (best full-stack), Replit (best online IDE), Bolt (best prototyping), Aider (best CLI agent)",
+        "recommendedToolIds": [
+          "v0",
+          "lovable",
+          "replit",
+          "bolt",
+          "aider"
+        ]
+      },
+      {
+        "heading": "AI Coding Agent Comparison & Selection",
+        "content": "Choosing between AI coding agents depends on your workflow. <a href=\"/tool/cursor/\">Cursor</a>, <a href=\"/tool/windsurf/\">Windsurf</a>, and <a href=\"/tool/cline/\">Cline</a> each take different approaches to IDE integration. Cursor is the most mature all-in-one AI IDE with multi-file context, composer, and terminal integration. Windsurf focuses on flow-state coding with a unique cascade agent that plans before writing. Cline is an open-source VS Code extension that gives developers full control over autonomous agent behavior, while <a href=\"/tool/codeium/\">Codeium</a> remains the strongest free-tier completion engine and <a href=\"/tool/github-copilot/\">GitHub Copilot</a> is the default choice inside VS Code. For head-to-head insights, our detailed comparisons cover <a href=\"/vs/cursor-vs-windsurf/\">Cursor vs Windsurf</a>, <a href=\"/vs/cursor-vs-claude-code/\">Cursor vs Claude Code</a>, <a href=\"/vs/cursor-vs-github-copilot-2026/\">Cursor vs GitHub Copilot</a>, <a href=\"/vs/cursor-vs-aider/\">Cursor vs Aider</a>, <a href=\"/vs/windsurf-vs-cline/\">Windsurf vs Cline</a>, <a href=\"/vs/replit-vs-bolt/\">Replit vs Bolt</a>, and <a href=\"/vs/v0-vs-lovable/\">v0 vs Lovable</a> to help you pick the right tool for your stack.",
+        "recommendedTools": "Cursor (best all-in-one), Windsurf (best for flow), Cline (best open-source), Codeium (best free tier)",
+        "recommendedToolIds": [
+          "cursor",
+          "windsurf",
+          "cline",
           "codeium"
         ]
       },
@@ -71,8 +99,6 @@
         "a": "AI-generated code should always be reviewed and tested before production use. AI tools can produce code with subtle bugs, security issues, or licensing concerns. Use AI as a pair programmer, not an autonomous developer."
       }
     ],
-    "title_zh": "开发者 AI 工具指南：编码、测试与部署",
-    "desc_zh": "软件开发团队如何用 AI 进行代码生成、审查、测试、文档和部署自动化。",
     "industryTags": [
       "software-development"
     ],
@@ -82,7 +108,14 @@
       "claude",
       "codeium",
       "tabnine",
-      "amazon-q"
+      "amazon-q",
+      "windsurf",
+      "cline",
+      "v0",
+      "lovable",
+      "replit",
+      "bolt",
+      "aider"
     ],
     "updatedAt": "2026-07-20"
   },
@@ -168,8 +201,6 @@
         "a": "There is no single best tool. For content: ChatGPT + Claude. For SEO: Surfer SEO. For social: n8n + ChatGPT. For visuals: Midjourney. For presentations: Gamma. The best approach is combining 3-4 tools into an integrated workflow."
       }
     ],
-    "title_zh": "营销 AI 工具指南：内容、SEO 与活动",
-    "desc_zh": "营销团队如何用 AI 进行内容创作、SEO 优化、社媒管理和活动分析。",
     "industryTags": [
       "marketing"
     ],
@@ -260,8 +291,6 @@
         "a": "Students should learn: prompt engineering, AI output evaluation (fact-checking, bias detection), ethical AI use, and when NOT to use AI. These are increasingly essential workplace skills regardless of field."
       }
     ],
-    "title_zh": "教育 AI 工具指南：教学、学习与管理",
-    "desc_zh": "教育工作者如何用 AI 进行课程规划、个性化学习和评分。",
     "industryTags": [
       "education",
       "students"
@@ -350,8 +379,6 @@
         "a": "Trying to automate everything at once. Start with one high-volume, repetitive process. Build, test, measure results for 2 weeks, then expand. Another common mistake: removing human oversight entirely. Always keep a human-in-the-loop for critical decisions."
       }
     ],
-    "title_zh": "企业 AI 工具指南：自动化、分析与增长",
-    "desc_zh": "企业如何用 AI 进行流程自动化、数据分析、客户支持和决策。",
     "industryTags": [
       "small-business"
     ],
@@ -448,8 +475,6 @@
         "a": "For photorealism: Flux and Midjourney v6 lead the field. For product photography specifically, Flux with proper prompting produces commercial-quality results. For artistic work, Midjourney excels at mood and composition. For maximum control, ComfyUI with Stable Diffusion models offers the most customization."
       }
     ],
-    "title_zh": "创意设计 AI 工具指南：图像、视频、音频",
-    "desc_zh": "设计师和创作者如何用 AI 进行图像生成、视频编辑和音乐制作。",
     "industryTags": [
       "industrial-design",
       "marketing"
@@ -470,9 +495,7 @@
     "slug": "ai-for-healthcare",
     "industry": "Healthcare & Medical",
     "title": "AI Tools for Healthcare: Diagnosis, Documentation, and Patient Care",
-    "title_zh": "医疗健康 AI 工具指南：诊断、文档与患者护理",
     "description": "How healthcare professionals use AI for medical imaging, clinical documentation, patient communication, and research.",
-    "desc_zh": "医疗专业人员如何用 AI 进行医学影像、临床文档、患者沟通和研究。",
     "icon": "heartbeat",
     "tools": [
       "ChatGPT",
@@ -558,9 +581,7 @@
     "slug": "ai-for-finance",
     "industry": "Finance & Accounting",
     "title": "AI Tools for Finance: Analysis, Forecasting, and Automation",
-    "title_zh": "金融财务 AI 工具指南：分析、预测与自动化",
     "description": "How finance professionals use AI for data analysis, financial forecasting, report generation, and compliance monitoring.",
-    "desc_zh": "金融专业人员如何用 AI 进行数据分析、财务预测、报告生成和合规监控。",
     "icon": "chart-line",
     "tools": [
       "ChatGPT",
@@ -645,9 +666,7 @@
     "slug": "ai-for-legal",
     "industry": "Legal & Compliance",
     "title": "AI Tools for Legal: Research, Contract Review, and Document Automation",
-    "title_zh": "法律合规 AI 工具指南：研究、合同审查与文档自动化",
     "description": "How legal professionals use AI for legal research, contract analysis, document drafting, and compliance monitoring.",
-    "desc_zh": "法律专业人员如何用 AI 进行法律研究、合同分析、文件起草和合规监控。",
     "icon": "gavel",
     "tools": [
       "Claude",
@@ -732,9 +751,7 @@
     "slug": "ai-for-architecture",
     "industry": "Architecture",
     "title": "AI Tools for Architects in 2026: Design, Visualization & Documentation",
-    "title_zh": "AI Tools for Architects: Design, Visualization, and Documentation",
-    "description": "How architects use AI for concept design, 3D visualization, rendering, code compliance, and documentation.",
-    "desc_zh": "How architects use AI for concept design, 3D visualization, rendering, code compliance, and documentation.",
+    "description": "How architects and design firms use AI tools for architectural concept design, 3D rendering and visualization, building code compliance checking (IBC, ADA, zoning), BIM documentation automation, and client presentation workflows — featuring Midjourney, ComfyUI, Flux, Claude, and n8n.",
     "icon": "fa-drafting-compass",
     "tools": [
       "Midjourney",
@@ -850,55 +867,43 @@
       "dify",
       "n8n"
     ],
-    "updatedAt": "2026-07-20",
+    "updatedAt": "2026-07-23",
     "audience": {
-      "en": "Practicing architects, interior designers and urban designers.",
-      "zh": "建筑师、室内与城市设计师。"
+      "en": "Practicing architects, interior designers and urban designers."
     },
     "stackRoles": {
       "midjourney": {
-        "en": "Concept & atmospheric imagery",
-        "zh": "概念方案与氛围图"
+        "en": "Concept & atmospheric imagery"
       },
       "stable-diffusion": {
-        "en": "Controlled generation with ControlNet",
-        "zh": "ControlNet 可控生成"
+        "en": "Controlled generation with ControlNet"
       },
       "leonardo": {
-        "en": "Iterative visualization",
-        "zh": "方案迭代可视化"
+        "en": "Iterative visualization"
       },
       "flux": {
-        "en": "Photorealistic detailing",
-        "zh": "照片级细节渲染"
+        "en": "Photorealistic detailing"
       },
       "comfyui": {
-        "en": "Automated rendering pipelines",
-        "zh": "自动化渲染流水线"
+        "en": "Automated rendering pipelines"
       },
       "vizcom-ai": {
-        "en": "Sketch to render",
-        "zh": "草图到渲染"
+        "en": "Sketch to render"
       },
       "runway": {
-        "en": "Walkthroughs & motion",
-        "zh": "漫游与动画"
+        "en": "Walkthroughs & motion"
       },
       "chatgpt": {
-        "en": "Narratives & drawing review",
-        "zh": "方案说明与图纸检查"
+        "en": "Narratives & drawing review"
       },
       "claude": {
-        "en": "Long code documents (IBC/ASCE)",
-        "zh": "长规范文档（IBC/ASCE）"
+        "en": "Long code documents (IBC/ASCE)"
       },
       "dify": {
-        "en": "Code compliance Q&A (RAG)",
-        "zh": "规范问答（RAG）"
+        "en": "Code compliance Q&A (RAG)"
       },
       "n8n": {
-        "en": "BIM & documentation automation",
-        "zh": "BIM 与文档自动化"
+        "en": "BIM & documentation automation"
       }
     },
     "relatedSolutionSlugs": [
@@ -906,15 +911,20 @@
       "ai-for-construction",
       "ai-for-bim",
       "ai-for-industrial-design"
+    ],
+    "case_study": "A mid-size architecture firm in Portland, Oregon accelerated concept design for a 12-story mixed-use tower using Midjourney and ComfyUI. The team generated over 200 facade and massing iterations in three days — work that traditionally required two weeks of manual sketching. At the initial client kickoff, they presented five distinct design directions produced with Midjourney (atmosphere) and Flux (photorealistic detailing); the client selected a preferred direction on the spot, compressing a six-week concept phase into ten days. ComfyUI with ControlNet then converted SketchUp massing models directly into polished renderings, eliminating the need for an external visualization consultant and saving approximately $18,000 in rendering costs. The firm now integrates AI rendering into every new project pitch, citing improved client buy-in speed and reduced early-phase visualisation spend.",
+    "use_cases": [
+      "Rapid facade iteration: Generate 50+ facade variations from a single SketchUp or Rhino massing model with ComfyUI + ControlNet. Architects explore material palettes, window proportions, and shadow studies before committing to detailed Revit modelling.",
+      "Code compliance Q&A: Build a Dify RAG knowledge base with IBC, local zoning ordinances, and ADA Standards. Architects query specific provisions (e.g. 'minimum corridor width for Type II-B occupancy above 75 ft') and receive cited answers in seconds instead of manually searching code volumes.",
+      "Client-ready presentation renders: Convert rough screenshots from Rhino or SketchUp into photorealistic marketing visuals with Midjourney or Flux — complete with entourage, landscaping, and atmospheric lighting — without engaging a professional rendering artist.",
+      "Construction document automation: Use n8n to connect Revit schedules with specification templates, auto-generating door schedules, room finish schedules, and drawing index sheets while Claude drafts Division 00/01 specification sections."
     ]
   },
   {
     "slug": "ai-for-construction",
     "industry": "Construction Management",
     "title": "AI Tools for Construction in 2026: Planning, Safety & Documentation",
-    "title_zh": "AI Tools for Construction: Planning, Safety, and Project Management",
     "description": "How construction professionals use AI for project planning, safety monitoring, progress tracking, and quality control.",
-    "desc_zh": "How construction professionals use AI for project planning, safety monitoring, progress tracking, and quality control.",
     "icon": "fa-hard-hat",
     "tools": [
       "ChatGPT",
@@ -1031,53 +1041,41 @@
     ],
     "updatedAt": "2026-07-20",
     "audience": {
-      "en": "GC/CM teams, superintendents, safety and project management professionals.",
-      "zh": "总包/施工经理团队、项目管理与安全管理人员。"
+      "en": "GC/CM teams, superintendents, safety and project management professionals."
     },
     "stackRoles": {
       "chatgpt": {
-        "en": "Reports & correspondence drafts",
-        "zh": "报告与函件起草"
+        "en": "Reports & correspondence drafts"
       },
       "claude": {
-        "en": "RFI & submittal responses",
-        "zh": "RFI 与提交物回复"
+        "en": "RFI & submittal responses"
       },
       "dify": {
-        "en": "Safety & standards Q&A (RAG)",
-        "zh": "安全与规范问答（RAG）"
+        "en": "Safety & standards Q&A (RAG)"
       },
       "n8n": {
-        "en": "Reporting & workflow automation",
-        "zh": "报表与工作流自动化"
+        "en": "Reporting & workflow automation"
       },
       "make-com": {
-        "en": "Cross-app automation",
-        "zh": "跨系统自动化"
+        "en": "Cross-app automation"
       },
       "otter": {
-        "en": "Meeting transcripts",
-        "zh": "会议转写"
+        "en": "Meeting transcripts"
       },
       "fireflies": {
-        "en": "Meeting notes & action items",
-        "zh": "会议纪要与行动项"
+        "en": "Meeting notes & action items"
       },
       "taskade": {
-        "en": "Project workspaces",
-        "zh": "项目协作空间"
+        "en": "Project workspaces"
       },
       "monday-ai": {
-        "en": "Schedule & work tracking",
-        "zh": "进度与工作跟踪"
+        "en": "Schedule & work tracking"
       },
       "height-ai": {
-        "en": "Lightweight task management",
-        "zh": "轻量任务管理"
+        "en": "Lightweight task management"
       },
       "-clickup-ai": {
-        "en": "Team task & doc hub",
-        "zh": "团队任务与文档中心"
+        "en": "Team task & doc hub"
       }
     },
     "relatedSolutionSlugs": [
@@ -1090,9 +1088,7 @@
     "slug": "ai-for-structural-engineers",
     "industry": "Structural Engineering",
     "title": "AI Tools for Structural Engineers: Analysis, Design, and Calculation",
-    "title_zh": "AI Tools for Structural Engineers: Analysis, Design, and Calculation",
     "description": "How structural engineers use AI for structural analysis optimization, load calculations, design verification, and documentation.",
-    "desc_zh": "How structural engineers use AI for structural analysis optimization, load calculations, design verification, and documentation.",
     "icon": "fa-building",
     "tools": [
       "Claude",
@@ -1180,9 +1176,7 @@
     "slug": "ai-for-civil-engineers",
     "industry": "Civil Engineering",
     "title": "AI Tools for Civil Engineers: Site Design, Hydrology, and Infrastructure",
-    "title_zh": "AI Tools for Civil Engineers: Site Design, Hydrology, and Infrastructure",
     "description": "How civil engineers use AI for site analysis, drainage design, earthwork optimization, and infrastructure planning.",
-    "desc_zh": "How civil engineers use AI for site analysis, drainage design, earthwork optimization, and infrastructure planning.",
     "icon": "fa-road",
     "tools": [
       "Claude",
@@ -1269,9 +1263,7 @@
     "slug": "ai-for-hvac-engineers",
     "industry": "HVAC & MEP Engineering",
     "title": "AI Tools for HVAC Engineers: Load Calculations, System Design, and Energy Analysis",
-    "title_zh": "AI Tools for HVAC Engineers: Load Calculations, System Design, and Energy Analysis",
     "description": "How HVAC and MEP engineers use AI for load calculations, equipment selection, energy modeling, and system optimization.",
-    "desc_zh": "How HVAC and MEP engineers use AI for load calculations, equipment selection, energy modeling, and system optimization.",
     "icon": "fa-wind",
     "tools": [
       "Claude",
@@ -1358,9 +1350,7 @@
     "slug": "ai-for-bim",
     "industry": "BIM & Digital Construction",
     "title": "AI Tools for BIM Engineers: Model Management, Automation, and Collaboration",
-    "title_zh": "AI Tools for BIM Engineers: Model Management, Automation, and Collaboration",
     "description": "How BIM engineers and coordinators use AI for model checking, clash detection, parameter automation, and project coordination.",
-    "desc_zh": "How BIM engineers and coordinators use AI for model checking, clash detection, parameter automation, and project coordination.",
     "icon": "fa-cubes",
     "tools": [
       "Claude",
@@ -1449,9 +1439,7 @@
     "slug": "ai-for-industrial-design",
     "industry": "Industrial & Product Design",
     "title": "AI Tools for Industrial Designers: Concept, Prototyping, and Manufacturing",
-    "title_zh": "AI Tools for Industrial Designers: Concept, Prototyping, and Manufacturing",
     "description": "How industrial designers use AI for concept generation, 3D modeling, prototyping, and manufacturing documentation.",
-    "desc_zh": "How industrial designers use AI for concept generation, 3D modeling, prototyping, and manufacturing documentation.",
     "icon": "fa-industry",
     "tools": [
       "Midjourney",
@@ -1539,17 +1527,14 @@
     "slug": "ai-for-engineers",
     "industry": "Engineering",
     "title": "AI Tools for Engineers in 2026: Stack, Workflows & Use Cases",
-    "title_zh": "工程师的 AI 工具指南 2026：工具栈、工作流与使用场景",
     "description": "Practical AI stack, workflows and prompts for structural, civil, HVAC and technical engineers.",
-    "desc_zh": "面向结构、市政、机电和技术工程师的实战 AI 工具、工作流与提示词。",
     "icon": "fa-drafting-compass",
     "updatedAt": "2026-07-20",
     "industryTags": [
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers across structural, civil, MEP/HVAC and software-adjacent technical disciplines.",
-      "zh": "结构、市政、机电以及技术类工程师。"
+      "en": "Practicing engineers across structural, civil, MEP/HVAC and software-adjacent technical disciplines."
     },
     "toolIds": [
       "claude",
@@ -1564,40 +1549,31 @@
     ],
     "stackRoles": {
       "claude": {
-        "en": "Long documents & code review",
-        "zh": "长文档与代码评审"
+        "en": "Long documents & code review"
       },
       "chatgpt": {
-        "en": "Draft calculations & correspondence",
-        "zh": "起草计算说明与沟通函件"
+        "en": "Draft calculations & correspondence"
       },
       "gemini": {
-        "en": "Data & drawing multimodal analysis",
-        "zh": "数据与图纸多模态分析"
+        "en": "Data & drawing multimodal analysis"
       },
       "perplexity": {
-        "en": "Standards & vendor research",
-        "zh": "规范与厂商调研"
+        "en": "Standards & vendor research"
       },
       "dify": {
-        "en": "Standards knowledge base (RAG)",
-        "zh": "规范知识库（RAG）"
+        "en": "Standards knowledge base (RAG)"
       },
       "n8n": {
-        "en": "RFI / submittal / report automation",
-        "zh": "RFI / 提交物 / 报告自动化"
+        "en": "RFI / submittal / report automation"
       },
       "notion-ai": {
-        "en": "Project workspace & notes",
-        "zh": "项目知识库与会议纪要"
+        "en": "Project workspace & notes"
       },
       "github-copilot": {
-        "en": "Scripts & analysis code",
-        "zh": "脚本与分析代码"
+        "en": "Scripts & analysis code"
       },
       "cursor": {
-        "en": "Repository refactor for analysis tools",
-        "zh": "分析工具仓库级重构"
+        "en": "Repository refactor for analysis tools"
       }
     },
     "sections": [
@@ -1708,17 +1684,14 @@
     "slug": "ai-for-small-business",
     "industry": "Small Business",
     "title": "AI Tools for Small Business in 2026: Stack, Workflows & Use Cases",
-    "title_zh": "小企业 AI 工具指南 2026：工具栈、工作流与使用场景",
     "description": "A practical AI stack for owner-operators and lean teams: marketing, sales, support and back-office automation.",
-    "desc_zh": "面向创业者与精益团队的实战 AI 工具栈：营销、销售、客户支持与后台自动化。",
     "icon": "fa-briefcase",
     "updatedAt": "2026-07-20",
     "industryTags": [
       "small-business"
     ],
     "audience": {
-      "en": "Owner-operators, founders and lean teams (1–20 people) doing multiple roles.",
-      "zh": "创业者、创始人和 1–20 人精益团队。"
+      "en": "Owner-operators, founders and lean teams (1–20 people) doing multiple roles."
     },
     "toolIds": [
       "chatgpt",
@@ -1733,40 +1706,31 @@
     ],
     "stackRoles": {
       "chatgpt": {
-        "en": "General assistant & customer replies",
-        "zh": "通用助手与客户回复"
+        "en": "General assistant & customer replies"
       },
       "claude": {
-        "en": "Long-form writing & document analysis",
-        "zh": "长文写作与文档分析"
+        "en": "Long-form writing & document analysis"
       },
       "canva-ai": {
-        "en": "On-brand design & social assets",
-        "zh": "品牌一致的设计与社交素材"
+        "en": "On-brand design & social assets"
       },
       "notion-ai": {
-        "en": "Docs, SOPs & meeting notes",
-        "zh": "文档、SOP 与会议纪要"
+        "en": "Docs, SOPs & meeting notes"
       },
       "make-com": {
-        "en": "Marketing & lead automation",
-        "zh": "营销与线索自动化"
+        "en": "Marketing & lead automation"
       },
       "n8n": {
-        "en": "Self-hosted internal automations",
-        "zh": "自托管的内部自动化"
+        "en": "Self-hosted internal automations"
       },
       "fireflies": {
-        "en": "Meeting notes & action items",
-        "zh": "会议纪要与行动项"
+        "en": "Meeting notes & action items"
       },
       "copy-ai": {
-        "en": "Marketing copy variants",
-        "zh": "营销文案批量生成"
+        "en": "Marketing copy variants"
       },
       "photoroom": {
-        "en": "Product photos & backgrounds",
-        "zh": "产品图与背景处理"
+        "en": "Product photos & backgrounds"
       }
     },
     "sections": [
@@ -1877,9 +1841,7 @@
     "slug": "ai-for-students",
     "industry": "Students & Learners",
     "title": "AI Tools for Students in 2026: Stack, Workflows & Use Cases",
-    "title_zh": "学生 AI 工具指南 2026：工具栈、工作流与使用场景",
     "description": "A responsible AI stack for students: research with citations, note-taking, writing polish, coding help and language study.",
-    "desc_zh": "面向学生的负责任 AI 工具栈：带引用的研究、笔记、写作润色、编程学习和语言练习。",
     "icon": "fa-graduation-cap",
     "updatedAt": "2026-07-20",
     "industryTags": [
@@ -1887,8 +1849,7 @@
       "education"
     ],
     "audience": {
-      "en": "Undergraduate and graduate students, self-learners and language learners.",
-      "zh": "本科生、研究生、自学者与语言学习者。"
+      "en": "Undergraduate and graduate students, self-learners and language learners."
     },
     "toolIds": [
       "chatgpt",
@@ -1905,48 +1866,37 @@
     ],
     "stackRoles": {
       "chatgpt": {
-        "en": "Study help & concept explanations",
-        "zh": "学习辅助与概念解释"
+        "en": "Study help & concept explanations"
       },
       "claude": {
-        "en": "Long readings & essay editing",
-        "zh": "长文阅读与作文修改"
+        "en": "Long readings & essay editing"
       },
       "gemini": {
-        "en": "Multimodal study (video & math)",
-        "zh": "多模态学习（视频与数学）"
+        "en": "Multimodal study (video & math)"
       },
       "perplexity": {
-        "en": "Cited research search",
-        "zh": "带来源的研究搜索"
+        "en": "Cited research search"
       },
       "elicit": {
-        "en": "Literature review",
-        "zh": "文献综述"
+        "en": "Literature review"
       },
       "consensus": {
-        "en": "Peer-reviewed evidence",
-        "zh": "同行评审证据检索"
+        "en": "Peer-reviewed evidence"
       },
       "quillbot": {
-        "en": "Paraphrase & grammar polish",
-        "zh": "改写与语法润色"
+        "en": "Paraphrase & grammar polish"
       },
       "otter": {
-        "en": "Lecture transcripts",
-        "zh": "课堂录音转写"
+        "en": "Lecture transcripts"
       },
       "speechify": {
-        "en": "Text-to-speech for readings",
-        "zh": "读物朗读"
+        "en": "Text-to-speech for readings"
       },
       "replit": {
-        "en": "Coding & sharing projects",
-        "zh": "编程与项目分享"
+        "en": "Coding & sharing projects"
       },
       "github-copilot": {
-        "en": "Coding assistant (free for students)",
-        "zh": "编程助手（学生免费）"
+        "en": "Coding assistant (free for students)"
       }
     },
     "sections": [
@@ -2058,9 +2008,7 @@
     "slug": "ai-for-mechanical-engineers",
     "industry": "Mechanical Engineering",
     "title": "AI Tools for Mechanical Engineers: HVAC, Thermal & Fluid Systems",
-    "title_zh": "机械工程师 AI 工具指南：暖通、热力与流体系统",
     "description": "Practical AI stack for mechanical engineers working on HVAC design, thermal analysis, fluid dynamics, and manufacturing systems.",
-    "desc_zh": "面向暖通设计、热力分析、流体力学与制造系统的机械工程师实用 AI 工具栈。",
     "icon": "fa-cogs",
     "faq": [
       {
@@ -2109,8 +2057,7 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline.",
-      "zh": "该领域的工程师与技术专业人员。"
+      "en": "Practicing engineers and technical professionals in this discipline."
     },
     "toolIds": [
       "claude",
@@ -2125,40 +2072,31 @@
     ],
     "stackRoles": {
       "claude": {
-        "en": "Long documents & code review",
-        "zh": "长文档与代码评审"
+        "en": "Long documents & code review"
       },
       "chatgpt": {
-        "en": "Draft calculations & correspondence",
-        "zh": "起草计算说明与沟通函件"
+        "en": "Draft calculations & correspondence"
       },
       "gemini": {
-        "en": "Data & drawing multimodal analysis",
-        "zh": "数据与图纸多模态分析"
+        "en": "Data & drawing multimodal analysis"
       },
       "perplexity": {
-        "en": "Standards & vendor research",
-        "zh": "规范与厂商调研"
+        "en": "Standards & vendor research"
       },
       "dify": {
-        "en": "Standards knowledge base (RAG)",
-        "zh": "规范知识库（RAG）"
+        "en": "Standards knowledge base (RAG)"
       },
       "n8n": {
-        "en": "RFI / submittal / report automation",
-        "zh": "RFI / 提交物 / 报告自动化"
+        "en": "RFI / submittal / report automation"
       },
       "notion-ai": {
-        "en": "Project workspace & notes",
-        "zh": "项目知识库与会议纪要"
+        "en": "Project workspace & notes"
       },
       "cursor": {
-        "en": "Scripts & analysis code",
-        "zh": "脚本与分析代码"
+        "en": "Scripts & analysis code"
       },
       "github-copilot": {
-        "en": "Code generation & review",
-        "zh": "代码生成与评审"
+        "en": "Code generation & review"
       }
     },
     "workflows": [
@@ -2223,9 +2161,7 @@
     "slug": "ai-for-electrical-engineers",
     "industry": "Electrical Engineering",
     "title": "AI Tools for Electrical Engineers: Power, Controls & Systems",
-    "title_zh": "电气工程师 AI 工具指南：电力、控制与系统",
     "description": "AI stack for electrical engineers doing power systems, lighting design, controls, and building electrical systems.",
-    "desc_zh": "面向电力系统、照明设计、控制与建筑电气系统的电气工程师AI工具栈。",
     "icon": "fa-bolt",
     "faq": [
       {
@@ -2274,8 +2210,7 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline.",
-      "zh": "该领域的工程师与技术专业人员。"
+      "en": "Practicing engineers and technical professionals in this discipline."
     },
     "toolIds": [
       "claude",
@@ -2290,40 +2225,31 @@
     ],
     "stackRoles": {
       "claude": {
-        "en": "Long documents & code review",
-        "zh": "长文档与代码评审"
+        "en": "Long documents & code review"
       },
       "chatgpt": {
-        "en": "Draft calculations & correspondence",
-        "zh": "起草计算说明与沟通函件"
+        "en": "Draft calculations & correspondence"
       },
       "gemini": {
-        "en": "Data & drawing multimodal analysis",
-        "zh": "数据与图纸多模态分析"
+        "en": "Data & drawing multimodal analysis"
       },
       "perplexity": {
-        "en": "Standards & vendor research",
-        "zh": "规范与厂商调研"
+        "en": "Standards & vendor research"
       },
       "dify": {
-        "en": "Standards knowledge base (RAG)",
-        "zh": "规范知识库（RAG）"
+        "en": "Standards knowledge base (RAG)"
       },
       "n8n": {
-        "en": "RFI / submittal / report automation",
-        "zh": "RFI / 提交物 / 报告自动化"
+        "en": "RFI / submittal / report automation"
       },
       "notion-ai": {
-        "en": "Project workspace & notes",
-        "zh": "项目知识库与会议纪要"
+        "en": "Project workspace & notes"
       },
       "cursor": {
-        "en": "Scripts & analysis code",
-        "zh": "脚本与分析代码"
+        "en": "Scripts & analysis code"
       },
       "github-copilot": {
-        "en": "Code generation & review",
-        "zh": "代码生成与评审"
+        "en": "Code generation & review"
       }
     },
     "workflows": [
@@ -2388,9 +2314,7 @@
     "slug": "ai-for-mep-engineers",
     "industry": "MEP Engineering",
     "title": "AI Tools for MEP Engineers: Integrated Mechanical, Electrical & Plumbing",
-    "title_zh": "MEP 工程师 AI 工具指南：机电一体化",
     "description": "Integrated AI stack for mechanical, electrical, and plumbing (MEP) engineers coordinating across building systems.",
-    "desc_zh": "面向机电一体化工程师的 AI 工具栈，覆盖机械、电气与给排水协调。",
     "icon": "fa-drafting-compass",
     "faq": [
       {
@@ -2439,8 +2363,7 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline.",
-      "zh": "该领域的工程师与技术专业人员。"
+      "en": "Practicing engineers and technical professionals in this discipline."
     },
     "toolIds": [
       "claude",
@@ -2455,40 +2378,31 @@
     ],
     "stackRoles": {
       "claude": {
-        "en": "Long documents & code review",
-        "zh": "长文档与代码评审"
+        "en": "Long documents & code review"
       },
       "chatgpt": {
-        "en": "Draft calculations & correspondence",
-        "zh": "起草计算说明与沟通函件"
+        "en": "Draft calculations & correspondence"
       },
       "gemini": {
-        "en": "Data & drawing multimodal analysis",
-        "zh": "数据与图纸多模态分析"
+        "en": "Data & drawing multimodal analysis"
       },
       "perplexity": {
-        "en": "Standards & vendor research",
-        "zh": "规范与厂商调研"
+        "en": "Standards & vendor research"
       },
       "dify": {
-        "en": "Standards knowledge base (RAG)",
-        "zh": "规范知识库（RAG）"
+        "en": "Standards knowledge base (RAG)"
       },
       "n8n": {
-        "en": "RFI / submittal / report automation",
-        "zh": "RFI / 提交物 / 报告自动化"
+        "en": "RFI / submittal / report automation"
       },
       "notion-ai": {
-        "en": "Project workspace & notes",
-        "zh": "项目知识库与会议纪要"
+        "en": "Project workspace & notes"
       },
       "cursor": {
-        "en": "Scripts & analysis code",
-        "zh": "脚本与分析代码"
+        "en": "Scripts & analysis code"
       },
       "github-copilot": {
-        "en": "Code generation & review",
-        "zh": "代码生成与评审"
+        "en": "Code generation & review"
       }
     },
     "workflows": [
@@ -2553,9 +2467,7 @@
     "slug": "ai-for-bridge-engineers",
     "industry": "Bridge Engineering",
     "title": "AI Tools for Bridge Engineers: Design, Analysis & Inspection",
-    "title_zh": "桥梁工程师 AI 工具指南：设计、分析与检测",
     "description": "AI stack for bridge engineers focused on structural analysis, load rating, inspection documentation, and rehabilitation design.",
-    "desc_zh": "面向桥梁工程师的 AI 工具栈，用于结构分析、荷载评定、检测文档与加固设计。",
     "icon": "fa-road",
     "faq": [
       {
@@ -2604,8 +2516,7 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline.",
-      "zh": "该领域的工程师与技术专业人员。"
+      "en": "Practicing engineers and technical professionals in this discipline."
     },
     "toolIds": [
       "claude",
@@ -2620,40 +2531,31 @@
     ],
     "stackRoles": {
       "claude": {
-        "en": "Long documents & code review",
-        "zh": "长文档与代码评审"
+        "en": "Long documents & code review"
       },
       "chatgpt": {
-        "en": "Draft calculations & correspondence",
-        "zh": "起草计算说明与沟通函件"
+        "en": "Draft calculations & correspondence"
       },
       "gemini": {
-        "en": "Data & drawing multimodal analysis",
-        "zh": "数据与图纸多模态分析"
+        "en": "Data & drawing multimodal analysis"
       },
       "perplexity": {
-        "en": "Standards & vendor research",
-        "zh": "规范与厂商调研"
+        "en": "Standards & vendor research"
       },
       "dify": {
-        "en": "Standards knowledge base (RAG)",
-        "zh": "规范知识库（RAG）"
+        "en": "Standards knowledge base (RAG)"
       },
       "n8n": {
-        "en": "RFI / submittal / report automation",
-        "zh": "RFI / 提交物 / 报告自动化"
+        "en": "RFI / submittal / report automation"
       },
       "notion-ai": {
-        "en": "Project workspace & notes",
-        "zh": "项目知识库与会议纪要"
+        "en": "Project workspace & notes"
       },
       "cursor": {
-        "en": "Scripts & analysis code",
-        "zh": "脚本与分析代码"
+        "en": "Scripts & analysis code"
       },
       "github-copilot": {
-        "en": "Code generation & review",
-        "zh": "代码生成与评审"
+        "en": "Code generation & review"
       }
     },
     "workflows": [
@@ -2718,9 +2620,7 @@
     "slug": "ai-for-steel-detailers",
     "industry": "Steel Detailing",
     "title": "AI Tools for Steel Detailers: Modeling, Detailing & Connection Design",
-    "title_zh": "钢结构详图设计师 AI 工具指南：建模、详图与节点设计",
     "description": "AI stack for steel detailers working on connection design, shop drawing production, and model coordination.",
-    "desc_zh": "面向钢结构详图设计师的 AI 工具栈，用于节点设计、加工图生产与模型协调。",
     "icon": "fa-hard-hat",
     "faq": [
       {
@@ -2769,8 +2669,7 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline.",
-      "zh": "该领域的工程师与技术专业人员。"
+      "en": "Practicing engineers and technical professionals in this discipline."
     },
     "toolIds": [
       "claude",
@@ -2785,40 +2684,31 @@
     ],
     "stackRoles": {
       "claude": {
-        "en": "Long documents & code review",
-        "zh": "长文档与代码评审"
+        "en": "Long documents & code review"
       },
       "chatgpt": {
-        "en": "Draft calculations & correspondence",
-        "zh": "起草计算说明与沟通函件"
+        "en": "Draft calculations & correspondence"
       },
       "gemini": {
-        "en": "Data & drawing multimodal analysis",
-        "zh": "数据与图纸多模态分析"
+        "en": "Data & drawing multimodal analysis"
       },
       "perplexity": {
-        "en": "Standards & vendor research",
-        "zh": "规范与厂商调研"
+        "en": "Standards & vendor research"
       },
       "dify": {
-        "en": "Standards knowledge base (RAG)",
-        "zh": "规范知识库（RAG）"
+        "en": "Standards knowledge base (RAG)"
       },
       "n8n": {
-        "en": "RFI / submittal / report automation",
-        "zh": "RFI / 提交物 / 报告自动化"
+        "en": "RFI / submittal / report automation"
       },
       "notion-ai": {
-        "en": "Project workspace & notes",
-        "zh": "项目知识库与会议纪要"
+        "en": "Project workspace & notes"
       },
       "cursor": {
-        "en": "Scripts & analysis code",
-        "zh": "脚本与分析代码"
+        "en": "Scripts & analysis code"
       },
       "github-copilot": {
-        "en": "Code generation & review",
-        "zh": "代码生成与评审"
+        "en": "Code generation & review"
       }
     },
     "workflows": [
@@ -2883,9 +2773,7 @@
     "slug": "ai-for-surveyors",
     "industry": "Surveying",
     "title": "AI Tools for Surveyors: Data Collection, Processing & Mapping",
-    "title_zh": "测量师 AI 工具指南：数据采集、处理与制图",
     "description": "AI stack for surveyors working on field data collection, point cloud processing, boundary analysis, and GIS mapping.",
-    "desc_zh": "面向测量师的 AI 工具栈，用于外业数据采集、点云处理、边界分析与 GIS 制图。",
     "icon": "fa-ruler-combined",
     "faq": [
       {
@@ -2934,8 +2822,7 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline.",
-      "zh": "该领域的工程师与技术专业人员。"
+      "en": "Practicing engineers and technical professionals in this discipline."
     },
     "toolIds": [
       "claude",
@@ -2950,40 +2837,31 @@
     ],
     "stackRoles": {
       "claude": {
-        "en": "Long documents & code review",
-        "zh": "长文档与代码评审"
+        "en": "Long documents & code review"
       },
       "chatgpt": {
-        "en": "Draft calculations & correspondence",
-        "zh": "起草计算说明与沟通函件"
+        "en": "Draft calculations & correspondence"
       },
       "gemini": {
-        "en": "Data & drawing multimodal analysis",
-        "zh": "数据与图纸多模态分析"
+        "en": "Data & drawing multimodal analysis"
       },
       "perplexity": {
-        "en": "Standards & vendor research",
-        "zh": "规范与厂商调研"
+        "en": "Standards & vendor research"
       },
       "dify": {
-        "en": "Standards knowledge base (RAG)",
-        "zh": "规范知识库（RAG）"
+        "en": "Standards knowledge base (RAG)"
       },
       "n8n": {
-        "en": "RFI / submittal / report automation",
-        "zh": "RFI / 提交物 / 报告自动化"
+        "en": "RFI / submittal / report automation"
       },
       "notion-ai": {
-        "en": "Project workspace & notes",
-        "zh": "项目知识库与会议纪要"
+        "en": "Project workspace & notes"
       },
       "cursor": {
-        "en": "Scripts & analysis code",
-        "zh": "脚本与分析代码"
+        "en": "Scripts & analysis code"
       },
       "github-copilot": {
-        "en": "Code generation & review",
-        "zh": "代码生成与评审"
+        "en": "Code generation & review"
       }
     },
     "workflows": [
@@ -3047,9 +2925,7 @@
     "slug": "ai-for-quantity-surveyors",
     "industry": "Quantity Surveying",
     "title": "AI Tools for Quantity Surveyors: Estimating, Cost Planning & Procurement",
-    "title_zh": "工料测量师 AI 工具指南：估算、成本规划与采购",
     "description": "AI stack for quantity surveyors working on cost estimation, bill of quantities, procurement, and contract administration.",
-    "desc_zh": "面向工料测量师的 AI 工具栈，用于成本估算、工程量清单、采购与合同管理。",
     "icon": "fa-calculator",
     "faq": [
       {
@@ -3098,8 +2974,7 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline.",
-      "zh": "该领域的工程师与技术专业人员。"
+      "en": "Practicing engineers and technical professionals in this discipline."
     },
     "toolIds": [
       "claude",
@@ -3114,40 +2989,31 @@
     ],
     "stackRoles": {
       "claude": {
-        "en": "Long documents & code review",
-        "zh": "长文档与代码评审"
+        "en": "Long documents & code review"
       },
       "chatgpt": {
-        "en": "Draft calculations & correspondence",
-        "zh": "起草计算说明与沟通函件"
+        "en": "Draft calculations & correspondence"
       },
       "gemini": {
-        "en": "Data & drawing multimodal analysis",
-        "zh": "数据与图纸多模态分析"
+        "en": "Data & drawing multimodal analysis"
       },
       "perplexity": {
-        "en": "Standards & vendor research",
-        "zh": "规范与厂商调研"
+        "en": "Standards & vendor research"
       },
       "dify": {
-        "en": "Standards knowledge base (RAG)",
-        "zh": "规范知识库（RAG）"
+        "en": "Standards knowledge base (RAG)"
       },
       "n8n": {
-        "en": "RFI / submittal / report automation",
-        "zh": "RFI / 提交物 / 报告自动化"
+        "en": "RFI / submittal / report automation"
       },
       "notion-ai": {
-        "en": "Project workspace & notes",
-        "zh": "项目知识库与会议纪要"
+        "en": "Project workspace & notes"
       },
       "cursor": {
-        "en": "Scripts & analysis code",
-        "zh": "脚本与分析代码"
+        "en": "Scripts & analysis code"
       },
       "github-copilot": {
-        "en": "Code generation & review",
-        "zh": "代码生成与评审"
+        "en": "Code generation & review"
       }
     },
     "workflows": [
@@ -3212,9 +3078,7 @@
     "slug": "ai-for-fire-protection-engineers",
     "industry": "Fire Protection Engineering",
     "title": "AI Tools for Fire Protection Engineers: Sprinklers, Detection & Life Safety",
-    "title_zh": "消防工程师 AI 工具指南：喷淋、探测与生命安全",
     "description": "AI stack for fire protection engineers designing sprinkler systems, fire alarm, smoke control, and life safety systems.",
-    "desc_zh": "面向消防工程师的 AI 工具栈，用于喷淋系统、火灾报警、防排烟与生命安全系统设计。",
     "icon": "fa-fire-extinguisher",
     "faq": [
       {
@@ -3263,8 +3127,7 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline.",
-      "zh": "该领域的工程师与技术专业人员。"
+      "en": "Practicing engineers and technical professionals in this discipline."
     },
     "toolIds": [
       "claude",
@@ -3279,40 +3142,31 @@
     ],
     "stackRoles": {
       "claude": {
-        "en": "Long documents & code review",
-        "zh": "长文档与代码评审"
+        "en": "Long documents & code review"
       },
       "chatgpt": {
-        "en": "Draft calculations & correspondence",
-        "zh": "起草计算说明与沟通函件"
+        "en": "Draft calculations & correspondence"
       },
       "gemini": {
-        "en": "Data & drawing multimodal analysis",
-        "zh": "数据与图纸多模态分析"
+        "en": "Data & drawing multimodal analysis"
       },
       "perplexity": {
-        "en": "Standards & vendor research",
-        "zh": "规范与厂商调研"
+        "en": "Standards & vendor research"
       },
       "dify": {
-        "en": "Standards knowledge base (RAG)",
-        "zh": "规范知识库（RAG）"
+        "en": "Standards knowledge base (RAG)"
       },
       "n8n": {
-        "en": "RFI / submittal / report automation",
-        "zh": "RFI / 提交物 / 报告自动化"
+        "en": "RFI / submittal / report automation"
       },
       "notion-ai": {
-        "en": "Project workspace & notes",
-        "zh": "项目知识库与会议纪要"
+        "en": "Project workspace & notes"
       },
       "cursor": {
-        "en": "Scripts & analysis code",
-        "zh": "脚本与分析代码"
+        "en": "Scripts & analysis code"
       },
       "github-copilot": {
-        "en": "Code generation & review",
-        "zh": "代码生成与评审"
+        "en": "Code generation & review"
       }
     },
     "workflows": [
@@ -3376,9 +3230,7 @@
     "slug": "ai-for-plumbing-engineers",
     "industry": "Plumbing Engineering",
     "title": "AI Tools for Plumbing Engineers: Design, Fixtures & Systems",
-    "title_zh": "给排水工程师 AI 工具指南：设计、卫生器具与系统",
     "description": "AI stack for plumbing engineers designing sanitary, storm, domestic water, and gas systems for buildings.",
-    "desc_zh": "面向给排水工程师的 AI 工具栈，用于污水、雨水、给水和燃气系统设计。",
     "icon": "fa-faucet",
     "faq": [
       {
@@ -3427,8 +3279,7 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline.",
-      "zh": "该领域的工程师与技术专业人员。"
+      "en": "Practicing engineers and technical professionals in this discipline."
     },
     "toolIds": [
       "claude",
@@ -3443,40 +3294,31 @@
     ],
     "stackRoles": {
       "claude": {
-        "en": "Long documents & code review",
-        "zh": "长文档与代码评审"
+        "en": "Long documents & code review"
       },
       "chatgpt": {
-        "en": "Draft calculations & correspondence",
-        "zh": "起草计算说明与沟通函件"
+        "en": "Draft calculations & correspondence"
       },
       "gemini": {
-        "en": "Data & drawing multimodal analysis",
-        "zh": "数据与图纸多模态分析"
+        "en": "Data & drawing multimodal analysis"
       },
       "perplexity": {
-        "en": "Standards & vendor research",
-        "zh": "规范与厂商调研"
+        "en": "Standards & vendor research"
       },
       "dify": {
-        "en": "Standards knowledge base (RAG)",
-        "zh": "规范知识库（RAG）"
+        "en": "Standards knowledge base (RAG)"
       },
       "n8n": {
-        "en": "RFI / submittal / report automation",
-        "zh": "RFI / 提交物 / 报告自动化"
+        "en": "RFI / submittal / report automation"
       },
       "notion-ai": {
-        "en": "Project workspace & notes",
-        "zh": "项目知识库与会议纪要"
+        "en": "Project workspace & notes"
       },
       "cursor": {
-        "en": "Scripts & analysis code",
-        "zh": "脚本与分析代码"
+        "en": "Scripts & analysis code"
       },
       "github-copilot": {
-        "en": "Code generation & review",
-        "zh": "代码生成与评审"
+        "en": "Code generation & review"
       }
     },
     "workflows": [
@@ -3541,9 +3383,7 @@
     "slug": "ai-for-project-engineers",
     "industry": "Project Engineering",
     "title": "AI Tools for Project Engineers: Planning, Coordination & Delivery",
-    "title_zh": "项目工程师 AI 工具指南：规划、协调与交付",
     "description": "AI stack for project engineers managing technical coordination, document control, schedule tracking, and cross-discipline communication.",
-    "desc_zh": "面向项目工程师的 AI 工具栈，用于技术协调、文档管理、进度跟踪与跨专业沟通。",
     "icon": "fa-tasks",
     "faq": [
       {
@@ -3592,8 +3432,7 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline.",
-      "zh": "该领域的工程师与技术专业人员。"
+      "en": "Practicing engineers and technical professionals in this discipline."
     },
     "toolIds": [
       "claude",
@@ -3608,40 +3447,31 @@
     ],
     "stackRoles": {
       "claude": {
-        "en": "Long documents & code review",
-        "zh": "长文档与代码评审"
+        "en": "Long documents & code review"
       },
       "chatgpt": {
-        "en": "Draft calculations & correspondence",
-        "zh": "起草计算说明与沟通函件"
+        "en": "Draft calculations & correspondence"
       },
       "gemini": {
-        "en": "Data & drawing multimodal analysis",
-        "zh": "数据与图纸多模态分析"
+        "en": "Data & drawing multimodal analysis"
       },
       "perplexity": {
-        "en": "Standards & vendor research",
-        "zh": "规范与厂商调研"
+        "en": "Standards & vendor research"
       },
       "dify": {
-        "en": "Standards knowledge base (RAG)",
-        "zh": "规范知识库（RAG）"
+        "en": "Standards knowledge base (RAG)"
       },
       "n8n": {
-        "en": "RFI / submittal / report automation",
-        "zh": "RFI / 提交物 / 报告自动化"
+        "en": "RFI / submittal / report automation"
       },
       "notion-ai": {
-        "en": "Project workspace & notes",
-        "zh": "项目知识库与会议纪要"
+        "en": "Project workspace & notes"
       },
       "cursor": {
-        "en": "Scripts & analysis code",
-        "zh": "脚本与分析代码"
+        "en": "Scripts & analysis code"
       },
       "github-copilot": {
-        "en": "Code generation & review",
-        "zh": "代码生成与评审"
+        "en": "Code generation & review"
       }
     },
     "workflows": [

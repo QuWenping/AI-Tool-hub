@@ -1,34 +1,538 @@
 {
   "tools": [
-    { "toolId": "chatgpt", "roles": ["founder","developer","designer","marketer"], "goals": ["save-time","create-content","generate-code","automate"], "monthlyCost": 20, "freeTier": true, "stackRole": { "en": "General Intelligence", "zh": "通用智能助手" }, "hoursSaved": 8 },
-    { "toolId": "claude", "roles": ["founder","developer","designer","marketer"], "goals": ["create-content","save-time","automate"], "monthlyCost": 20, "freeTier": true, "stackRole": { "en": "Writing & Research", "zh": "写作与研究" }, "hoursSaved": 7, "priority": 1 },
-    { "toolId": "gemini", "roles": ["founder","developer","designer","marketer"], "goals": ["save-time","create-content","automate"], "monthlyCost": 20, "freeTier": true, "stackRole": { "en": "Multimodal Assistant", "zh": "多模态助手" }, "hoursSaved": 6 },
-    { "toolId": "cursor", "roles": ["developer","founder"], "goals": ["generate-code","automate"], "monthlyCost": 20, "freeTier": true, "stackRole": { "en": "AI-Native Coding", "zh": "AI 原生编程" }, "hoursSaved": 10 },
-    { "toolId": "github-copilot", "roles": ["developer"], "goals": ["generate-code"], "monthlyCost": 10, "freeTier": true, "stackRole": { "en": "IDE Autocomplete", "zh": "IDE 自动补全" }, "hoursSaved": 8 },
-    { "toolId": "windsurf", "roles": ["developer","founder"], "goals": ["generate-code","automate"], "monthlyCost": 15, "freeTier": true, "stackRole": { "en": "Agentic Coding", "zh": "智能编程助手" }, "hoursSaved": 9 },
-    { "toolId": "midjourney", "roles": ["designer","marketer","founder"], "goals": ["create-content"], "monthlyCost": 30, "freeTier": false, "stackRole": { "en": "Image Generation", "zh": "图像生成" }, "hoursSaved": 6 },
-    { "toolId": "canva-ai", "roles": ["designer","marketer","founder"], "goals": ["create-content","save-time"], "monthlyCost": 13, "freeTier": true, "stackRole": { "en": "Design Platform", "zh": "设计平台" }, "hoursSaved": 5 },
-    { "toolId": "stable-diffusion", "roles": ["designer","developer"], "goals": ["create-content"], "monthlyCost": 0, "freeTier": true, "stackRole": { "en": "Open-Source Image Gen", "zh": "开源图像生成" }, "hoursSaved": 4 },
-    { "toolId": "elevenlabs", "roles": ["marketer","founder","designer"], "goals": ["create-content","automate"], "monthlyCost": 5, "freeTier": true, "stackRole": { "en": "AI Voice Synthesis", "zh": "AI 语音合成" }, "hoursSaved": 4 },
-    { "toolId": "perplexity", "roles": ["founder","developer","designer","marketer"], "goals": ["save-time","research"], "monthlyCost": 20, "freeTier": true, "stackRole": { "en": "AI Research Engine", "zh": "AI 研究引擎" }, "hoursSaved": 5, "priority": 1 },
-    { "toolId": "notion-ai", "roles": ["founder","marketer","developer"], "goals": ["save-time","automate","create-content"], "monthlyCost": 10, "freeTier": false, "stackRole": { "en": "AI Workspace", "zh": "AI 工作空间" }, "hoursSaved": 6 },
-    { "toolId": "make-com", "roles": ["founder","marketer","developer"], "goals": ["automate"], "monthlyCost": 9, "freeTier": true, "stackRole": { "en": "Workflow Automation", "zh": "工作流自动化" }, "hoursSaved": 8 },
-    { "toolId": "n8n", "roles": ["developer","founder"], "goals": ["automate"], "monthlyCost": 0, "freeTier": true, "stackRole": { "en": "Open-Source Automation", "zh": "开源自动化平台" }, "hoursSaved": 7 },
-    { "toolId": "fireflies", "roles": ["founder","marketer"], "goals": ["save-time","automate"], "monthlyCost": 10, "freeTier": true, "stackRole": { "en": "Meeting Intelligence", "zh": "会议智能" }, "hoursSaved": 4 },
-    { "toolId": "jasper", "roles": ["marketer","founder"], "goals": ["create-content","save-time"], "monthlyCost": 49, "freeTier": false, "stackRole": { "en": "Marketing Copy", "zh": "营销文案" }, "hoursSaved": 6 },
-    { "toolId": "suno", "roles": ["designer","marketer","founder"], "goals": ["create-content"], "monthlyCost": 10, "freeTier": true, "stackRole": { "en": "AI Music Generation", "zh": "AI 音乐生成" }, "hoursSaved": 3 },
-    { "toolId": "descript", "roles": ["marketer","founder","designer"], "goals": ["create-content","save-time"], "monthlyCost": 24, "freeTier": true, "stackRole": { "en": "Audio/Video Editor", "zh": "音视频编辑" }, "hoursSaved": 5 },
-    { "toolId": "runway", "roles": ["designer","marketer","founder"], "goals": ["create-content"], "monthlyCost": 35, "freeTier": true, "stackRole": { "en": "AI Video Production", "zh": "AI 视频制作" }, "hoursSaved": 5 },
-    { "toolId": "v0", "roles": ["developer","founder","designer","marketer"], "goals": ["generate-code","save-time"], "monthlyCost": 20, "freeTier": true, "stackRole": { "en": "AI UI Generator", "zh": "AI 界面生成器" }, "hoursSaved": 7 },
-    { "toolId": "lovable", "roles": ["founder","designer","marketer","developer"], "goals": ["generate-code","save-time"], "monthlyCost": 20, "freeTier": true, "stackRole": { "en": "No-Code App Builder", "zh": "无代码应用构建" }, "hoursSaved": 7 },
-    { "toolId": "bolt", "roles": ["developer","founder","designer"], "goals": ["generate-code","automate"], "monthlyCost": 20, "freeTier": true, "stackRole": { "en": "Full-Stack AI Coding", "zh": "全栈 AI 编程" }, "hoursSaved": 9 },
-    { "toolId": "copy-ai", "roles": ["marketer","founder"], "goals": ["create-content","save-time"], "monthlyCost": 36, "freeTier": true, "stackRole": { "en": "AI Copywriting", "zh": "AI 文案写作" }, "hoursSaved": 5 },
-    { "toolId": "quillbot", "roles": ["marketer","founder","designer"], "goals": ["create-content","save-time"], "monthlyCost": 10, "freeTier": true, "stackRole": { "en": "Paraphrasing & Polish", "zh": "改写与润色" }, "hoursSaved": 3 },
-    { "toolId": "dify", "roles": ["developer","founder"], "goals": ["automate","generate-code"], "monthlyCost": 0, "freeTier": true, "stackRole": { "en": "AI App Builder", "zh": "AI 应用构建" }, "hoursSaved": 6 },
-    { "toolId": "grammarly-ai", "roles": ["marketer","designer","founder","developer"], "goals": ["save-time","create-content"], "monthlyCost": 12, "freeTier": true, "stackRole": { "en": "AI Writing Assistant", "zh": "AI 写作助手" }, "hoursSaved": 4 },
-    { "toolId": "photoroom", "roles": ["designer","marketer","founder"], "goals": ["create-content","save-time"], "monthlyCost": 9, "freeTier": true, "stackRole": { "en": "AI Photo Editor", "zh": "AI 图片编辑" }, "hoursSaved": 3 },
-    { "toolId": "deepseek", "roles": ["developer","founder"], "goals": ["generate-code","save-time"], "monthlyCost": 0, "freeTier": true, "stackRole": { "en": "Reasoning & Coding", "zh": "推理与编程" }, "hoursSaved": 5 },
-    { "toolId": "replit", "roles": ["developer","founder"], "goals": ["generate-code","automate"], "monthlyCost": 25, "freeTier": true, "stackRole": { "en": "Browser IDE + AI", "zh": "浏览器 IDE + AI" }, "hoursSaved": 6 },
-    { "toolId": "zapier", "roles": ["founder","marketer","developer"], "goals": ["automate"], "monthlyCost": 30, "freeTier": true, "stackRole": { "en": "No-Code Automation", "zh": "无代码自动化" }, "hoursSaved": 7 }
+    {
+      "toolId": "chatgpt",
+      "roles": [
+        "founder",
+        "developer",
+        "designer",
+        "marketer"
+      ],
+      "goals": [
+        "save-time",
+        "create-content",
+        "generate-code",
+        "automate"
+      ],
+      "monthlyCost": 20,
+      "freeTier": true,
+      "stackRole": {
+        "en": "General Intelligence"
+      },
+      "hoursSaved": 8
+    },
+    {
+      "toolId": "claude",
+      "roles": [
+        "founder",
+        "developer",
+        "designer",
+        "marketer"
+      ],
+      "goals": [
+        "create-content",
+        "save-time",
+        "automate"
+      ],
+      "monthlyCost": 20,
+      "freeTier": true,
+      "stackRole": {
+        "en": "Writing & Research"
+      },
+      "hoursSaved": 7,
+      "priority": 1
+    },
+    {
+      "toolId": "gemini",
+      "roles": [
+        "founder",
+        "developer",
+        "designer",
+        "marketer"
+      ],
+      "goals": [
+        "save-time",
+        "create-content",
+        "automate"
+      ],
+      "monthlyCost": 20,
+      "freeTier": true,
+      "stackRole": {
+        "en": "Multimodal Assistant"
+      },
+      "hoursSaved": 6
+    },
+    {
+      "toolId": "cursor",
+      "roles": [
+        "developer",
+        "founder"
+      ],
+      "goals": [
+        "generate-code",
+        "automate"
+      ],
+      "monthlyCost": 20,
+      "freeTier": true,
+      "stackRole": {
+        "en": "AI-Native Coding"
+      },
+      "hoursSaved": 10
+    },
+    {
+      "toolId": "github-copilot",
+      "roles": [
+        "developer"
+      ],
+      "goals": [
+        "generate-code"
+      ],
+      "monthlyCost": 10,
+      "freeTier": true,
+      "stackRole": {
+        "en": "IDE Autocomplete"
+      },
+      "hoursSaved": 8
+    },
+    {
+      "toolId": "windsurf",
+      "roles": [
+        "developer",
+        "founder"
+      ],
+      "goals": [
+        "generate-code",
+        "automate"
+      ],
+      "monthlyCost": 15,
+      "freeTier": true,
+      "stackRole": {
+        "en": "Agentic Coding"
+      },
+      "hoursSaved": 9
+    },
+    {
+      "toolId": "midjourney",
+      "roles": [
+        "designer",
+        "marketer",
+        "founder"
+      ],
+      "goals": [
+        "create-content"
+      ],
+      "monthlyCost": 30,
+      "freeTier": false,
+      "stackRole": {
+        "en": "Image Generation"
+      },
+      "hoursSaved": 6
+    },
+    {
+      "toolId": "canva-ai",
+      "roles": [
+        "designer",
+        "marketer",
+        "founder"
+      ],
+      "goals": [
+        "create-content",
+        "save-time"
+      ],
+      "monthlyCost": 13,
+      "freeTier": true,
+      "stackRole": {
+        "en": "Design Platform"
+      },
+      "hoursSaved": 5
+    },
+    {
+      "toolId": "stable-diffusion",
+      "roles": [
+        "designer",
+        "developer"
+      ],
+      "goals": [
+        "create-content"
+      ],
+      "monthlyCost": 0,
+      "freeTier": true,
+      "stackRole": {
+        "en": "Open-Source Image Gen"
+      },
+      "hoursSaved": 4
+    },
+    {
+      "toolId": "elevenlabs",
+      "roles": [
+        "marketer",
+        "founder",
+        "designer"
+      ],
+      "goals": [
+        "create-content",
+        "automate"
+      ],
+      "monthlyCost": 5,
+      "freeTier": true,
+      "stackRole": {
+        "en": "AI Voice Synthesis"
+      },
+      "hoursSaved": 4
+    },
+    {
+      "toolId": "perplexity",
+      "roles": [
+        "founder",
+        "developer",
+        "designer",
+        "marketer"
+      ],
+      "goals": [
+        "save-time",
+        "research"
+      ],
+      "monthlyCost": 20,
+      "freeTier": true,
+      "stackRole": {
+        "en": "AI Research Engine"
+      },
+      "hoursSaved": 5,
+      "priority": 1
+    },
+    {
+      "toolId": "notion-ai",
+      "roles": [
+        "founder",
+        "marketer",
+        "developer"
+      ],
+      "goals": [
+        "save-time",
+        "automate",
+        "create-content"
+      ],
+      "monthlyCost": 10,
+      "freeTier": false,
+      "stackRole": {
+        "en": "AI Workspace"
+      },
+      "hoursSaved": 6
+    },
+    {
+      "toolId": "make-com",
+      "roles": [
+        "founder",
+        "marketer",
+        "developer"
+      ],
+      "goals": [
+        "automate"
+      ],
+      "monthlyCost": 9,
+      "freeTier": true,
+      "stackRole": {
+        "en": "Workflow Automation"
+      },
+      "hoursSaved": 8
+    },
+    {
+      "toolId": "n8n",
+      "roles": [
+        "developer",
+        "founder"
+      ],
+      "goals": [
+        "automate"
+      ],
+      "monthlyCost": 0,
+      "freeTier": true,
+      "stackRole": {
+        "en": "Open-Source Automation"
+      },
+      "hoursSaved": 7
+    },
+    {
+      "toolId": "fireflies",
+      "roles": [
+        "founder",
+        "marketer"
+      ],
+      "goals": [
+        "save-time",
+        "automate"
+      ],
+      "monthlyCost": 10,
+      "freeTier": true,
+      "stackRole": {
+        "en": "Meeting Intelligence"
+      },
+      "hoursSaved": 4
+    },
+    {
+      "toolId": "jasper",
+      "roles": [
+        "marketer",
+        "founder"
+      ],
+      "goals": [
+        "create-content",
+        "save-time"
+      ],
+      "monthlyCost": 49,
+      "freeTier": false,
+      "stackRole": {
+        "en": "Marketing Copy"
+      },
+      "hoursSaved": 6
+    },
+    {
+      "toolId": "suno",
+      "roles": [
+        "designer",
+        "marketer",
+        "founder"
+      ],
+      "goals": [
+        "create-content"
+      ],
+      "monthlyCost": 10,
+      "freeTier": true,
+      "stackRole": {
+        "en": "AI Music Generation"
+      },
+      "hoursSaved": 3
+    },
+    {
+      "toolId": "descript",
+      "roles": [
+        "marketer",
+        "founder",
+        "designer"
+      ],
+      "goals": [
+        "create-content",
+        "save-time"
+      ],
+      "monthlyCost": 24,
+      "freeTier": true,
+      "stackRole": {
+        "en": "Audio/Video Editor"
+      },
+      "hoursSaved": 5
+    },
+    {
+      "toolId": "runway",
+      "roles": [
+        "designer",
+        "marketer",
+        "founder"
+      ],
+      "goals": [
+        "create-content"
+      ],
+      "monthlyCost": 35,
+      "freeTier": true,
+      "stackRole": {
+        "en": "AI Video Production"
+      },
+      "hoursSaved": 5
+    },
+    {
+      "toolId": "v0",
+      "roles": [
+        "developer",
+        "founder",
+        "designer",
+        "marketer"
+      ],
+      "goals": [
+        "generate-code",
+        "save-time"
+      ],
+      "monthlyCost": 20,
+      "freeTier": true,
+      "stackRole": {
+        "en": "AI UI Generator"
+      },
+      "hoursSaved": 7
+    },
+    {
+      "toolId": "lovable",
+      "roles": [
+        "founder",
+        "designer",
+        "marketer",
+        "developer"
+      ],
+      "goals": [
+        "generate-code",
+        "save-time"
+      ],
+      "monthlyCost": 20,
+      "freeTier": true,
+      "stackRole": {
+        "en": "No-Code App Builder"
+      },
+      "hoursSaved": 7
+    },
+    {
+      "toolId": "bolt",
+      "roles": [
+        "developer",
+        "founder",
+        "designer"
+      ],
+      "goals": [
+        "generate-code",
+        "automate"
+      ],
+      "monthlyCost": 20,
+      "freeTier": true,
+      "stackRole": {
+        "en": "Full-Stack AI Coding"
+      },
+      "hoursSaved": 9
+    },
+    {
+      "toolId": "copy-ai",
+      "roles": [
+        "marketer",
+        "founder"
+      ],
+      "goals": [
+        "create-content",
+        "save-time"
+      ],
+      "monthlyCost": 36,
+      "freeTier": true,
+      "stackRole": {
+        "en": "AI Copywriting"
+      },
+      "hoursSaved": 5
+    },
+    {
+      "toolId": "quillbot",
+      "roles": [
+        "marketer",
+        "founder",
+        "designer"
+      ],
+      "goals": [
+        "create-content",
+        "save-time"
+      ],
+      "monthlyCost": 10,
+      "freeTier": true,
+      "stackRole": {
+        "en": "Paraphrasing & Polish"
+      },
+      "hoursSaved": 3
+    },
+    {
+      "toolId": "dify",
+      "roles": [
+        "developer",
+        "founder"
+      ],
+      "goals": [
+        "automate",
+        "generate-code"
+      ],
+      "monthlyCost": 0,
+      "freeTier": true,
+      "stackRole": {
+        "en": "AI App Builder"
+      },
+      "hoursSaved": 6
+    },
+    {
+      "toolId": "grammarly-ai",
+      "roles": [
+        "marketer",
+        "designer",
+        "founder",
+        "developer"
+      ],
+      "goals": [
+        "save-time",
+        "create-content"
+      ],
+      "monthlyCost": 12,
+      "freeTier": true,
+      "stackRole": {
+        "en": "AI Writing Assistant"
+      },
+      "hoursSaved": 4
+    },
+    {
+      "toolId": "photoroom",
+      "roles": [
+        "designer",
+        "marketer",
+        "founder"
+      ],
+      "goals": [
+        "create-content",
+        "save-time"
+      ],
+      "monthlyCost": 9,
+      "freeTier": true,
+      "stackRole": {
+        "en": "AI Photo Editor"
+      },
+      "hoursSaved": 3
+    },
+    {
+      "toolId": "deepseek",
+      "roles": [
+        "developer",
+        "founder"
+      ],
+      "goals": [
+        "generate-code",
+        "save-time"
+      ],
+      "monthlyCost": 0,
+      "freeTier": true,
+      "stackRole": {
+        "en": "Reasoning & Coding"
+      },
+      "hoursSaved": 5
+    },
+    {
+      "toolId": "replit",
+      "roles": [
+        "developer",
+        "founder"
+      ],
+      "goals": [
+        "generate-code",
+        "automate"
+      ],
+      "monthlyCost": 25,
+      "freeTier": true,
+      "stackRole": {
+        "en": "Browser IDE + AI"
+      },
+      "hoursSaved": 6
+    },
+    {
+      "toolId": "zapier",
+      "roles": [
+        "founder",
+        "marketer",
+        "developer"
+      ],
+      "goals": [
+        "automate"
+      ],
+      "monthlyCost": 30,
+      "freeTier": true,
+      "stackRole": {
+        "en": "No-Code Automation"
+      },
+      "hoursSaved": 7
+    }
   ]
 }

@@ -1,0 +1,145 @@
+{
+  "lin-chen": {
+    "slug": "lin-chen",
+    "name": "Lin Chen",
+    "role": "Lead Reviewer and Editor-in-Chief",
+    "title": "AI Productivity Researcher",
+    "location": "San Francisco, CA",
+    "avatar": "/images/authors/lin-chen.jpg",
+    "initials": "LC",
+    "color": "#3b82f6",
+    "bio": "Lin has been testing AI tools hands-on for 5+ years. Before AI Tool Hub, she was a senior product manager at a B2B SaaS company and a freelance technical writer. She has personally tested every tool in our directory. Lin writes the long-form reviews and the editor verdicts.",
+    "bio_full": "Lin Chen is the Lead Reviewer and Editor-in-Chief at AI Tool Hub. She has spent over 5 years evaluating AI tools hands-on, testing more than 200 products across writing, coding, design, marketing, and research categories. Before founding AI Tool Hub, Lin was a senior product manager at a B2B SaaS company where she led the evaluation and procurement of AI tools for a 200-person team. She also spent 3 years as a freelance technical writer for enterprise software publications. Lin's reviews are known for being practical, data-driven, and always signed by name. She leads the editorial process, writes the final verdicts for all reviews, and personally tests every writing and content tool in the directory.",
+    "education": "BA, English, UC Berkeley. MBA, Stanford GSB.",
+    "expertise": ["Writing tools", "Long-form reviews", "Editorial process", "Verdict writing", "Pricing analysis", "AI content tools"],
+    "focus_areas": ["AI writing assistants", "LLM platforms", "Content creation workflows", "AI tool evaluation methodology"],
+    "methodology": "All reviews follow the AI Tool Hub structured evaluation criteria across 5 dimensions: output quality, ease of use, pricing transparency, support quality, and privacy. Every tool is tested hands-on for a minimum of 2 weeks on real work before a review is published.",
+    "reviews_count": 200,
+    "years_experience": 5,
+    "contact": "quwenping2020@163.com",
+    "socials": {
+      "twitter": "@aitoolhub_lin",
+      "github": "@linchen"
+    },
+    "articles": [
+      { "title": "ChatGPT vs Claude", "slug": "chatgpt-vs-claude-2026" },
+      { "title": "Claude vs Gemini vs ChatGPT", "slug": "claude-vs-gemini-vs-chatgpt" },
+      { "title": "Best free AI tools for students", "slug": "best-free-ai-tools-students" },
+      { "title": "Best AI tools for content writers", "slug": "best-ai-content-writers" },
+      { "title": "How to use Claude for long documents", "slug": "how-to-use-claude-long-documents" },
+      { "title": "How to write better prompts", "slug": "how-to-write-better-prompts" }
+    ]
+  },
+  "marcus-webb": {
+    "slug": "marcus-webb",
+    "name": "Marcus Webb",
+    "role": "Senior Engineer and Coding Tools Reviewer",
+    "title": "Senior Software Engineer",
+    "location": "Seattle, WA",
+    "avatar": "/images/authors/marcus-webb.jpg",
+    "initials": "MW",
+    "color": "#8b5cf6",
+    "bio": "Marcus is a senior software engineer with 8 years of experience at companies like Stripe, Lyft, and two early-stage startups. He has shipped production code in TypeScript, Python, Go, and Rust. He reviews the AI coding tools and runs the technical fact-checks on every review.",
+    "bio_full": "Marcus Webb is the Senior Engineer and Coding Tools Reviewer at AI Tool Hub. With 8 years of software engineering experience at Stripe, Lyft, and two early-stage startups, Marcus has shipped production systems used by millions of users. He writes TypeScript, Python, Go, and Rust, and has led engineering teams through multiple AI tool adoptions. Marcus reviews every coding tool in the AI Tool Hub directory and runs the technical fact-checking process for all reviews. He tests each coding tool on real production codebases — not toy examples — and his evaluations focus on practical developer workflow, code quality, and team adoption readiness.",
+    "education": "BS, Computer Science, University of Washington",
+    "expertise": ["Coding tools", "IDE integrations", "Code review", "Developer workflows", "Team rollouts", "AI-assisted development"],
+    "focus_areas": ["AI coding assistants", "Code refactoring tools", "Developer productivity", "Engineering team workflows"],
+    "methodology": "All coding tool reviews are tested on real production codebases with representative scenarios. Evaluations cover multi-file refactoring, debugging, inline completions, and team adoption considerations. Tests run for a minimum of 2 weeks per tool.",
+    "reviews_count": 50,
+    "years_experience": 8,
+    "contact": "quwenping2020@163.com",
+    "socials": {
+      "twitter": "@aitoolhub_marcus",
+      "github": "@marcuswebb"
+    },
+    "articles": [
+      { "title": "Cursor vs GitHub Copilot", "slug": "cursor-vs-github-copilot-2026" },
+      { "title": "How to use ChatGPT for coding", "slug": "how-to-use-chatgpt-coding" },
+      { "title": "How to set up Cursor for your team", "slug": "how-to-set-up-cursor-team" }
+    ]
+  },
+  "sofia-reyes": {
+    "slug": "sofia-reyes",
+    "name": "Sofia Reyes",
+    "role": "Product Designer and Design Tools Reviewer",
+    "title": "Product Designer",
+    "location": "Mexico City, MX",
+    "avatar": "/images/authors/sofia-reyes.jpg",
+    "initials": "SR",
+    "color": "#ec4899",
+    "bio": "Sofia is a product designer who has worked at three startups as lead designer. She reviews AI design tools and leads the visual side of AI Tool Hub reviews.",
+    "bio_full": "Sofia Reyes is the Product Designer and Design Tools Reviewer at AI Tool Hub. She has worked at three startups — two as lead designer, one as founding designer — and specializes in B2B SaaS design. Her products have been used by millions of users. Sofia reviews every AI design tool in the directory, including Midjourney, Figma AI, Adobe Firefly, Runway, and Leonardo.AI. She tests design tools on real client work, evaluating output quality, creative control, and workflow integration.",
+    "education": "BA, Graphic Design, UNAM. MA, Digital Media, Barcelona.",
+    "expertise": ["Design tools", "Visual content", "Image generation", "Brand design", "UI/UX workflows"],
+    "focus_areas": ["AI image generation", "AI video generation", "Design workflow automation", "Brand asset creation"],
+    "methodology": "Design tools are tested on real client projects and evaluated for visual quality, creative control, consistency, and workflow integration. Tests run for a minimum of 2 weeks per tool.",
+    "reviews_count": 40,
+    "years_experience": 6,
+    "contact": "quwenping2020@163.com",
+    "socials": {
+      "twitter": "@aitoolhub_sofia",
+      "instagram": "@sofia.designs"
+    },
+    "articles": [
+      { "title": "Best AI image generators compared", "slug": "best-ai-image-generators" },
+      { "title": "Best AI video generators", "slug": "best-ai-video-generators" },
+      { "title": "Best AI tools for designers", "slug": "best-ai-tools-designers" },
+      { "title": "How to write Midjourney prompts", "slug": "how-to-write-midjourney-prompts" }
+    ]
+  },
+  "daniel-park": {
+    "slug": "daniel-park",
+    "name": "Daniel Park",
+    "role": "Marketing Lead and Marketing Tools Reviewer",
+    "title": "Growth Marketing Lead",
+    "location": "Austin, TX",
+    "avatar": "/images/authors/daniel-park.jpg",
+    "initials": "DP",
+    "color": "#10b981",
+    "bio": "Daniel has been doing growth marketing for 6 years, with a focus on SEO and content marketing for B2B SaaS. He reviews AI marketing tools and runs the marketing workflows.",
+    "bio_full": "Daniel Park is the Marketing Lead and Marketing Tools Reviewer at AI Tool Hub. He has 6 years of growth marketing experience with a focus on SEO and content marketing for B2B SaaS. He has managed marketing budgets of $500K+/year and has worked with tools like Ahrefs, HubSpot, and Webflow. Daniel reviews every AI marketing tool in the directory and has spent over $50K on AI marketing tools in the last 18 months on real campaigns. He tracks the ROI for every recommendation.",
+    "education": "BS, Marketing, UT Austin",
+    "expertise": ["Marketing tools", "SEO", "Content marketing", "Email marketing", "Analytics", "ROI tracking"],
+    "focus_areas": ["AI for SEO", "AI for content marketing", "AI for email automation", "Marketing analytics"],
+    "methodology": "Marketing tools are tested on real campaigns with measurable ROI. Evaluations cover output quality, ease of integration, pricing value, and measurable business impact. Tests run for a minimum of 2 weeks per tool.",
+    "reviews_count": 35,
+    "years_experience": 6,
+    "contact": "quwenping2020@163.com",
+    "socials": {
+      "twitter": "@aitoolhub_daniel",
+      "linkedin": "danielpark-marketing"
+    },
+    "articles": [
+      { "title": "Best AI tools for small business", "slug": "best-ai-small-business" },
+      { "title": "Best AI tools for marketing", "slug": "best-ai-marketing" },
+      { "title": "Best AI tools for SEO", "slug": "best-ai-seo" }
+    ]
+  },
+  "aisha-patel": {
+    "slug": "aisha-patel",
+    "name": "Aisha Patel",
+    "role": "Academic Reviewer and Research Tools Lead",
+    "title": "Computational Linguist & Researcher",
+    "location": "Boston, MA",
+    "avatar": "/images/authors/aisha-patel.jpg",
+    "initials": "AP",
+    "color": "#f59e0b",
+    "bio": "Aisha has a PhD in computational linguistics from MIT and 4 years of postdoctoral research experience. She reviews AI research tools and writes academic workflow guides.",
+    "bio_full": "Aisha Patel is the Academic Reviewer and Research Tools Lead at AI Tool Hub. She holds a PhD in computational linguistics from MIT and completed a postdoctoral fellowship at the Stanford NLP Group, where she published 12 peer-reviewed papers on NLP and language models. Aisha reviews every AI research tool in the directory — including Perplexity, Elicit, Scite, Zotero, and Consensus — and writes the academic workflow guides. She tests research tools on real academic work and validates findings with the research community.",
+    "education": "PhD, Computational Linguistics, MIT. Postdoc, Stanford NLP Group.",
+    "expertise": ["Research tools", "Academic workflows", "Citation management", "Literature reviews", "Data analysis"],
+    "focus_areas": ["AI for academic research", "Literature review automation", "Citation and reference management", "NLP tools"],
+    "methodology": "Research tools are tested on real academic projects and evaluated for accuracy, citation quality, workflow integration, and research integrity. Tests run for a minimum of 2 weeks per tool.",
+    "reviews_count": 30,
+    "years_experience": 4,
+    "contact": "quwenping2020@163.com",
+    "socials": {
+      "twitter": "@aitoolhub_aisha",
+      "google_scholar": "Aisha Patel MIT"
+    },
+    "articles": [
+      { "title": "Best AI research tools", "slug": "best-ai-research-tools" },
+      { "title": "How to use Claude for long documents", "slug": "how-to-use-claude-long-documents" }
+    ]
+  }
+}

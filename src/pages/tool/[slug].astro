@@ -7,7 +7,6 @@ import categories from "../../data/categories.json";
 import editorialData from "../../data/tool-editorial.json";
 import TLDR from "../../components/ui/TLDR.astro";
 import ProsCons from "../../components/ui/ProsCons.astro";
-import AdSlot from "../../components/ui/AdSlot.astro";
 import QuickFacts from "../../components/ui/QuickFacts.astro";
 import FeatureTable from "../../components/ui/FeatureTable.astro";
 import TestStatus from "../../components/ui/TestStatus.astro";
@@ -18,7 +17,7 @@ import SaveButton from "../../components/ui/SaveButton.astro";
 
 export async function getStaticPaths() {
   return Object.entries(toolsData)
-    .filter(([id]) => id !== "codewords")
+    .filter(([id]) => id !== "codewords" && editorialData[id]?.reviewed === true)
     .map(([id, tool]) => ({ params: { slug: id }, props: { id, tool } }));
 }
 
@@ -27,36 +26,28 @@ const editorial = editorialData[id] || null;
 const isReviewed = !!(editorial && editorial.reviewed);
 
 const tNameEn = tool?.name?.en || "AI Tool";
-const tNameZh = tool?.name?.zh || tNameEn;
 const tShortEn = tool?.short_desc?.en || "";
-const tShortZh = tool?.short_desc?.zh || tShortEn;
 const tLongEn = tool?.long_desc?.en || "";
-const tLongZh = tool?.long_desc?.zh || tLongEn;
 const tProsEn = tool?.pros?.en || [];
 const tConsEn = tool?.cons?.en || [];
 const tUseEn = tool?.use_cases?.en || [];
-const tUseZh = tool?.use_cases?.zh || [];
 const tFeaturesEn = tool?.features?.en || [];
-const tFeaturesZh = tool?.features?.zh || [];
 const tScenesEn = tool?.scenes?.en || [];
-const tScenesZh = tool?.scenes?.zh || [];
 const tAudienceEn = tool?.target_audience?.en || [];
-const tAudienceZh = tool?.target_audience?.zh || [];
 const tExampleEn = tool?.example?.en || "";
-const tExampleZh = tool?.example?.zh || "";
 const tCat = tool?.cat || "productivity";
 const tUrl = tool?.url || "#";
 const tIcon = tool?.icon || "fa-robot";
 
 const categoryLabels = { text: "Writing", image: "Image", code: "Coding", video: "Video", audio: "Audio", productivity: "Productivity" };
-const categoryLabelsZh = { text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商业" };
 const catLabelEn = categoryLabels[tCat] || tCat;
-const catLabelZh = categoryLabelsZh[tCat] || tCat;
 
 const relatedCategories = categories.filter(c => c.tools?.includes(id)).slice(0, 4);
 const allTools = Object.entries(toolsData).filter(([k, v]) => k !== "codewords" && !v?.hidden);
 const alternatives = allTools.filter(([k, t]) => k !== id && t.cat === tCat).slice(0, 6);
-const toolMatchups = matchupsData.filter(m => m.a === id || m.b === id).slice(0, 4);
+const directMatchups = matchupsData.filter(m => m.a === id || m.b === id).slice(0, 4);
+const clusterFallbackMatchups = matchupsData.filter(m => m.cluster === tCat && m.a !== id && m.b !== id).slice(0, 4);
+const toolMatchups = directMatchups.length > 0 ? directMatchups : clusterFallbackMatchups;
 
 // Screenshot resolution: prefer WebP over JPG when same basename exists
 const screenshotDir = `public/images/tools/${id}`;
@@ -96,9 +87,6 @@ const pricingSummaryEn = editorial?.pricingSummary?.en
   || (typeof tool?.pricing === "object" && tool?.pricing?.en)
   || (typeof tool?.pricing === "string" ? tool.pricing : "")
   || "";
-const pricingSummaryZh = editorial?.pricingSummary?.zh
-  || (typeof tool?.pricing === "object" && tool?.pricing?.zh)
-  || pricingSummaryEn;
 
 const quickFactsEn = [
   { label: "Category", value: catLabelEn },
@@ -120,10 +108,10 @@ const featureRowsEn = tFeaturesEn.map((f, i) => ({
 const faqItems = editorial?.faq || [];
 // Default SEO FAQs for all tool pages (covers "is X free", "X alternatives", "X API" keywords)
 const defaultFaqs = [
-  { q_en: "Is " + tNameEn + " free to use?", q_zh: tNameEn + " 是免费的吗？", a_en: (editorial?.quickFacts?.freeTier ? "Yes, " + tNameEn + " has a free tier. " + (pricingSummaryEn || "Check the official pricing page for details.") : "Check the official " + tNameEn + " pricing page for current plans and free trial availability."), a_zh: (editorial?.quickFacts?.freeTier ? tNameEn + " 有免费版本。" : "请查看 " + tNameEn + " 官方定价页面了解当前计划和免费试用。") },
-  { q_en: "What is " + tNameEn + " best for?", q_zh: tNameEn + " 最适合什么？", a_en: tNameEn + " is best for " + (tUseEn[0] || tScenesEn[0] || "general " + catLabelEn.toLowerCase() + " tasks") + ". " + (tProsEn[0] ? "Its key strength is " + tProsEn[0].toLowerCase() + "." : ""), a_zh: tNameEn + " 最适合" + (tUseZh[0] || tScenesZh[0] || "通用" + catLabelZh + "任务") + "。" },
-  { q_en: "What are the best " + tNameEn + " alternatives?", q_zh: tNameEn + " 的最佳替代品是什么？", a_en: "Top alternatives to " + tNameEn + " include " + (alternatives.length >= 3 ? alternatives.slice(0, 3).map(function(x) { return x[1].name?.en || x[0]; }).join(", ") : "other " + catLabelEn.toLowerCase() + " AI tools") + ". See our alternatives page for a full comparison.", a_zh: tNameEn + " 的顶级替代品包括其他" + catLabelZh + " AI 工具。查看我们的替代品页面获取完整对比。" },
-  { q_en: "Does " + tNameEn + " have an API?", q_zh: tNameEn + " 有 API 吗？", a_en: (editorial?.quickFacts?.hasApi ? "Yes, " + tNameEn + " offers an API for developers. " : "Check the official " + tNameEn + " website for API availability and documentation."), a_zh: (editorial?.quickFacts?.hasApi ? tNameEn + " 提供 API。" : "请查看 " + tNameEn + " 官网了解 API 可用性。") }
+  { q_en: "Is " + tNameEn + " free to use?", a_en: (editorial?.quickFacts?.freeTier ? "Yes, " + tNameEn + " has a free tier. " + (pricingSummaryEn || "Check the official pricing page for details.") : "Check the official " + tNameEn + " pricing page for current plans and free trial availability.") },
+  { q_en: "What is " + tNameEn + " best for?", a_en: tNameEn + " is best for " + (tUseEn[0] || tScenesEn[0] || "general " + catLabelEn.toLowerCase() + " tasks") + ". " + (tProsEn[0] ? "Its key strength is " + tProsEn[0].toLowerCase() + "." : "") },
+  { q_en: "What are the best " + tNameEn + " alternatives?", a_en: "Top alternatives to " + tNameEn + " include " + (alternatives.length >= 3 ? alternatives.slice(0, 3).map(function(x) { return x[1].name?.en || x[0]; }).join(", ") : "other " + catLabelEn.toLowerCase() + " AI tools") + ". See our alternatives page for a full comparison." },
+  { q_en: "Does " + tNameEn + " have an API?", a_en: (editorial?.quickFacts?.hasApi ? "Yes, " + tNameEn + " offers an API for developers. " : "Check the official " + tNameEn + " website for API availability and documentation.") }
 ];
 // Use editorial FAQs if available, otherwise use defaults; merge if both exist
 const allFaqs = faqItems.length > 0 ? faqItems : defaultFaqs;
@@ -293,11 +281,9 @@ const tocSections = [
         : "Catalogued by AI Tool Hub — full hands-on review pending."
     ]} />
 
-    <AdSlot format="banner" label="Advertisement" />
-
     <section class="detail-section">
       <h2 id="overview"><i class="fas fa-info-circle" aria-hidden="true"></i> What is {tNameEn}?</h2>
-      <p data-i18n-en={tLongEn || tShortEn} data-i18n-zh={tLongZh || tShortZh}>{tLongEn || tShortEn}</p>
+      <p data-i18n-en={tLongEn || tShortEn}>{tLongEn || tShortEn}</p>
     </section>
 
     <section class="detail-section">
@@ -324,7 +310,7 @@ const tocSections = [
     {tUseEn.length > 0 && (
       <section class="detail-section">
         <h2 id="use-cases"><i class="fas fa-rocket" aria-hidden="true"></i> Use cases that actually work</h2>
-        <ul class="pros-list" data-i18n-en-rich={JSON.stringify(tUseEn)} data-i18n-zh-rich={JSON.stringify(tUseZh)}>
+        <ul class="pros-list" data-i18n-en-rich={JSON.stringify(tUseEn)}>
           {tUseEn.map(u => <li>{u}</li>)}
         </ul>
       </section>
@@ -333,7 +319,7 @@ const tocSections = [
     {tScenesEn.length > 0 && (
       <section class="detail-section">
         <h2 id="best-for"><i class="fas fa-bullseye" aria-hidden="true"></i> Best for</h2>
-        <ul class="pros-list" data-i18n-en-rich={JSON.stringify(tScenesEn)} data-i18n-zh-rich={JSON.stringify(tScenesZh)}>
+        <ul class="pros-list" data-i18n-en-rich={JSON.stringify(tScenesEn)}>
           {tScenesEn.map(s => <li>{s}</li>)}
         </ul>
       </section>
@@ -342,7 +328,7 @@ const tocSections = [
     {tAudienceEn.length > 0 && (
       <section class="detail-section">
         <h2 id="audience"><i class="fas fa-users" aria-hidden="true"></i> Target audience</h2>
-        <div class="audience-tags" data-i18n-en-rich={JSON.stringify(tAudienceEn)} data-i18n-zh-rich={JSON.stringify(tAudienceZh)}>
+        <div class="audience-tags" data-i18n-en-rich={JSON.stringify(tAudienceEn)}>
           {tAudienceEn.map(a => <span class="audience-tag">{a}</span>)}
         </div>
       </section>
@@ -351,7 +337,7 @@ const tocSections = [
     <section class="detail-section pricing-section">
       <h2 id="pricing"><i class="fas fa-tag" aria-hidden="true"></i> Pricing</h2>
       {pricingSummaryEn
-        ? <p data-i18n-en={pricingSummaryEn} data-i18n-zh={pricingSummaryZh}>{pricingSummaryEn}</p>
+        ? <p data-i18n-en={pricingSummaryEn}>{pricingSummaryEn}</p>
         : <p><span class="status-badge status-badge--pending"><i class="fas fa-hourglass-half" aria-hidden="true"></i> Pricing verified pending</span> See the official plan page for current pricing.</p>}
       <p class="pricing-note"><a href={tUrl} rel="nofollow noopener" target="_blank">Visit the official {tNameEn} pricing page →</a></p>
     </section>
@@ -366,7 +352,7 @@ const tocSections = [
     {tExampleEn && (
       <section class="detail-section">
         <h2 id="example"><i class="fas fa-terminal" aria-hidden="true"></i> Example</h2>
-        <div class="example-box" data-i18n-en={tExampleEn} data-i18n-zh={tExampleZh}>{tExampleEn}</div>
+        <div class="example-box" data-i18n-en={tExampleEn}>{tExampleEn}</div>
       </section>
     )}
 
@@ -403,8 +389,8 @@ const tocSections = [
           {alternatives.map(([k, t]) => (
             <a class="tool-card" href={"/tool/" + k + "/"}>
               <div class="icon" aria-hidden="true"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
-              <h3 data-i18n-en={t.name?.en || k} data-i18n-zh={t.name?.zh || t.name?.en || k}>{t.name?.en || k}</h3>
-              <p data-i18n-en={t.short_desc?.en || ""} data-i18n-zh={t.short_desc?.zh || t.short_desc?.en || ""}>{t.short_desc?.en || ""}</p>
+              <h3 data-i18n-en={t.name?.en || k}>{t.name?.en || k}</h3>
+              <p data-i18n-en={t.short_desc?.en || ""}>{t.short_desc?.en || ""}</p>
               <span class="tag">{categoryLabels[t.cat] || t.cat}</span>
             </a>
           ))}
@@ -418,6 +404,15 @@ const tocSections = [
       <section class="detail-section related">
         <h2 id="related"><i class="fas fa-folder-open" aria-hidden="true"></i> Related categories</h2>
         <div class="related-grid">
+          {tCat === "code" && (
+            <a class="related-card" href="/solutions/ai-for-developers/">
+              <div class="related-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></div>
+              <div>
+                <h3>AI for Developers</h3>
+                <p>Complete guide to AI-powered development workflow</p>
+              </div>
+            </a>
+          )}
           {relatedCategories.map(c => (
             <a class="related-card" href={"/best/" + c.slug + "/"}>
               <div class="related-icon" aria-hidden="true"><i class="fas fa-folder-open"></i></div>

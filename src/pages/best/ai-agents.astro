@@ -1,10 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import toolsData from "../../data/tools.json";
-import workflows from "../../data/workflows.json";
 const agentTools = ["n8n","dify","crewai","langgraph","autogen","autogpt","agentgpt","llamaindex","browser-use","multion","lindy","bardeen","claude-computer-use","make-com"];
 const tools = agentTools.map(id => ({ id, ...toolsData[id] })).filter(t => t && t.name);
-const agentWorkflows = workflows.filter(w => w.category === "Agent" || w.category === "Automation" || w.tool === "n8n" || w.tool === "Dify" || w.tool === "MCP");
 const frameworkTypes = [
   { name: "Code-First Frameworks", tools: ["langgraph","autogen","crewai","llamaindex"], desc: "Python-based frameworks for developers building custom multi-agent systems. Maximum flexibility, requires coding." },
   { name: "Visual Automation Platforms", tools: ["n8n","dify","make-com","lindy","bardeen"], desc: "No-code or low-code platforms for building automations with visual editors. Best for non-technical users." },
@@ -80,22 +78,6 @@ const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","i
         ))}
       </div>
 
-      <h2>Ready-to-Use Agent Workflows</h2>
-      <p>Step-by-step guides for building real agent workflows:</p>
-      <div class="card-grid">
-        {agentWorkflows.map(w => (
-          <a class="list-card" href={"/workflows/" + w.slug + "/"}>
-            <div class="card-head">
-              <div>
-                <h3>{w.title}</h3>
-                <p class="meta-text">{w.tool} - {w.difficulty} - {w.steps.length} steps</p>
-              </div>
-              <span class="meta-text">&rarr;</span>
-            </div>
-          </a>
-        ))}
-      </div>
-
       <h2>How to Choose an AI Agent Platform</h2>
       <ol>
         <li><strong>Are you a developer?</strong> Use LangGraph or CrewAI for maximum flexibility. AutoGen for research. LlamaIndex for data-heavy applications.</li>
@@ -126,7 +108,7 @@ const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","i
         </ul>
       </div>
 
-      <p class="back-link"><a href="/workflows/">Browse All Workflows</a> &nbsp;|&nbsp; <a href="/solutions/">Industry Solutions</a></p>
+      <p class="back-link"><a href="/solutions/">Industry Solutions</a></p>
     </section>
   </div>
 </BaseLayout>

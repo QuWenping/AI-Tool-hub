@@ -12,6 +12,12 @@ export async function getStaticPaths() {
 const { m } = Astro.props;
 const a = toolsData[m.a];
 const b = toolsData[m.b];
+const clusterSlug = m.cluster || (a && a.cat) || "code";
+const clusterLabelMap = { code: "AI Coding Assistants", image: "AI Image Generators", video: "AI Video Generators", text: "AI Writing Tools", audio: "AI Audio Tools", productivity: "AI Productivity Tools" };
+const clusterLabel = clusterLabelMap[clusterSlug] || "AI Tools";
+const siblingMatchups = matchups.filter(function(x){return x.cluster === clusterSlug && x.slug !== m.slug}).slice(0, 6);
+const pillarHref = clusterSlug === "code" ? "/solutions/ai-for-developers/" : ("/best/" + clusterSlug + "/");
+const pillarLabel = clusterSlug === "code" ? "AI Tools for Developers" : ("Best " + clusterLabel);
 const aName = (a && a.name && a.name.en) || "Tool A";
 const bName = (b && b.name && b.name.en) || "Tool B";
 const aUse = (a && a.use_cases && a.use_cases.en && a.use_cases.en[0]) || "general use";
@@ -245,6 +251,13 @@ const tocSections = [
     <section class="related" id="related">
       <div class="section-title">Related</div>
       <div class="related-grid">
+        <a class="related-card" href={pillarHref}>
+          <div class="related-icon"><i class="fas fa-layer-group"></i></div>
+          <div>
+            <h3>{pillarLabel}</h3>
+            <p>Full ranking of {pillarLabel.toLowerCase()}</p>
+          </div>
+        </a>
         <a class="related-card" href={"/tool/" + m.a + "/"}>
           <div class="related-icon"><i class={`fas ${a.icon || "fa-robot"}`}></i></div>
           <div>
@@ -259,6 +272,21 @@ const tocSections = [
             <p>Full review of {bName}</p>
           </div>
         </a>
+        {siblingMatchups.map(sm => {
+          const sa = toolsData[sm.a];
+          const sb = toolsData[sm.b];
+          const sna = sa?.name?.en || sm.tool_a;
+          const snb = sb?.name?.en || sm.tool_b;
+          return (
+            <a class="related-card" href={"/vs/" + sm.slug + "/"}>
+              <div class="related-icon"><i class="fas fa-code-compare"></i></div>
+              <div>
+                <h3>{sna} vs {snb}</h3>
+                <p>{sm.title_en}</p>
+              </div>
+            </a>
+          );
+        })}
       </div>
     </section>
 

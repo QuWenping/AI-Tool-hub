@@ -1,32 +1,61 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import prompts from "../../data/prompts.json";
-const cats = [...new Set(prompts.map(p => p.category))];
----
-<BaseLayout title="AI Prompt Library | 20+ Copy-Paste Prompts for Every Tool" description="Free AI prompt library. Copy-paste prompts for ChatGPT, Claude, Midjourney, Cursor, Gemini, and more. Categorized by use case." keywords="AI prompts, prompt library, ChatGPT prompts, Claude prompts, Midjourney prompts, copy paste prompts">
-  <div class="page-container">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <span>Prompt Library</span></nav>
-    <h1 class="page-title">AI Prompt Library</h1>
-    <p class="page-lede">{prompts.length} copy-paste prompts for every major AI tool. Free to use.</p>
+import tools from "../../data/tools.json";
 
-    {cats.map(cat => (
-      <section class="list-section">
-        <h2 class="list-section-title">{cat}</h2>
-        <div class="card-grid">
-          {prompts.filter(p => p.category === cat).map(p => (
-            <div class="list-card">
-              <div class="card-head">
-                <h3>{p.title}</h3>
-                <span class="tool-pill">{p.tool}</span>
-              </div>
-              <pre class="prompt-preview">{p.prompt}</pre>
-              <div class="tag-row">
-                {p.tags.map(t => <span class="tag-chip">#{t}</span>)}
-              </div>
-            </div>
-          ))}
+const prompts = [
+  {
+    title: "Blog Post Outline Generator",
+    description: "Generate detailed blog outlines with SEO-friendly headings",
+    tags: ["Writing", "ChatGPT"]
+  },
+  {
+    title: "Code Review Assistant",
+    description: "Get thorough code reviews with security and performance suggestions",
+    tags: ["Coding", "Claude"]
+  },
+  {
+    title: "Cold Email Template",
+    description: "Craft personalized cold outreach emails that get responses",
+    tags: ["Business", "ChatGPT"]
+  },
+  {
+    title: "Meeting Notes Summarizer",
+    description: "Turn raw meeting transcripts into action items and decisions",
+    tags: ["Productivity", "Claude"]
+  },
+  {
+    title: "Social Media Caption Creator",
+    description: "Write engaging captions for Instagram, Twitter, LinkedIn",
+    tags: ["Writing", "ChatGPT"]
+  },
+  {
+    title: "Resume/LinkedIn Optimizer",
+    description: "Optimize your resume and LinkedIn profile for ATS and recruiters",
+    tags: ["Career", "ChatGPT"]
+  }
+];
+---
+
+<BaseLayout
+  title="AI Prompt Library - Battle-Tested Prompts for ChatGPT, Claude & More"
+  description="Battle-tested prompts for ChatGPT, Claude, and other LLMs. Copy, tweak, and get better results."
+>
+  <div class="page-container">
+    <h1 class="page-title">AI Prompt Library</h1>
+    <p class="page-lede">Battle-tested prompts for ChatGPT, Claude, and other LLMs. Copy, tweak, and get better results.</p>
+
+    <div class="card-grid">
+      {prompts.map(p => (
+        <div class="list-card">
+          <div class="card-head">{p.title}</div>
+          <p class="card-desc">{p.description}</p>
+          <div>
+            {p.tags.map(tag => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
         </div>
-      </section>
-    ))}
+      ))}
+    </div>
   </div>
 </BaseLayout>

@@ -2,9 +2,7 @@
   {
     "slug": "text",
     "title_en": "Best AI Writing Tools in 2026",
-    "title_zh": "2026 年最佳 AI 写作工具",
     "desc_en": "AI writing assistants for chat, drafting, editing and brainstorming.",
-    "desc_zh": "用于对话、起草、编辑和头脑风暴的 AI 写作助手。",
     "tools": [
       "chatgpt",
       "claude",
@@ -31,9 +29,7 @@
   {
     "slug": "image",
     "title_en": "Best AI Image Generators in 2026",
-    "title_zh": "2026 年最佳 AI 图像生成器",
     "desc_en": "Text-to-image AI models for designers, artists and creators.",
-    "desc_zh": "面向设计师、艺术家和创作者的文生图 AI 模型。",
     "tools": [
       "midjourney",
       "stable-diffusion",
@@ -56,9 +52,7 @@
   {
     "slug": "code",
     "title_en": "Best AI Coding Assistants in 2026",
-    "title_zh": "2026 年最佳 AI 编码助手",
     "desc_en": "Code completion, refactoring and pair-programming AI.",
-    "desc_zh": "代码补全、重构和结对编程 AI。",
     "tools": [
       "github-copilot",
       "cursor",
@@ -79,9 +73,7 @@
   {
     "slug": "video",
     "title_en": "Best AI Video Generators in 2026",
-    "title_zh": "2026 年最佳 AI 视频生成器",
     "desc_en": "Text-to-video AI tools for filmmakers and marketers.",
-    "desc_zh": "面向电影制作人和营销人员的文生视频 AI 工具。",
     "tools": [
       "sora",
       "runway",
@@ -104,9 +96,7 @@
   {
     "slug": "audio",
     "title_en": "Best AI Audio Tools in 2026",
-    "title_zh": "2026 年最佳 AI 音频工具",
     "desc_en": "AI voice generators, podcasting and music tools.",
-    "desc_zh": "AI 语音生成、播客和音乐工具。",
     "tools": [
       "elevenlabs",
       "play-ht",
@@ -124,9 +114,7 @@
   {
     "slug": "productivity",
     "title_en": "Best AI Productivity Tools in 2026",
-    "title_zh": "2026 年最佳 AI 效率工具",
     "desc_en": "AI tools for note-taking, search and task automation.",
-    "desc_zh": "用于笔记、搜索和任务自动化的 AI 工具。",
     "tools": [
       "notion-ai",
       "perplexity",
@@ -149,424 +137,6 @@
       "multion",
       "crewai",
       "huggingface"
-    ]
-  },
-  {
-    "slug": "students",
-    "title_en": "Best AI Tools for Students in 2026",
-    "title_zh": "2026 年学生最佳 AI 工具",
-    "desc_en": "AI tools that help students with research, writing, studying and exam prep.",
-    "desc_zh": "帮助学生做研究、写作、学习和备考的 AI 工具。",
-    "tools": [
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "notion-ai",
-      "quillbot",
-      "grammarly-ai",
-      "jenni-ai",
-      "speechify"
-    ]
-  },
-  {
-    "slug": "content-writing",
-    "title_en": "Best AI Tools for Content Writing in 2026",
-    "title_zh": "2026 年内容写作最佳 AI 工具",
-    "desc_en": "AI writing assistants for bloggers, copywriters and content marketers.",
-    "desc_zh": "面向博主、文案和内容营销人员的 AI 写作助手。",
-    "tools": [
-      "chatgpt",
-      "claude",
-      "copy-ai",
-      "writesonic",
-      "quillbot",
-      "rytr",
-      "sudowrite",
-      "jenni-ai",
-      "wordtune",
-      "anyword"
-    ]
-  },
-  {
-    "slug": "developers",
-    "title_en": "Best AI Tools for Developers in 2026",
-    "title_zh": "2026 年开发者最佳 AI 工具",
-    "desc_en": "AI coding assistants and code review tools for software engineers.",
-    "desc_zh": "面向软件工程师的 AI 编码助手和代码审查工具。",
-    "tools": [
-      "github-copilot",
-      "cursor",
-      "chatgpt",
-      "claude",
-      "windsurf",
-      "codeium",
-      "replit",
-      "tabnine",
-      "cody",
-      "comfyui",
-      "n8n",
-      "ollama",
-      "huggingface"
-    ]
-  },
-  {
-    "slug": "free",
-    "title_en": "Best Free AI Tools in 2026",
-    "title_zh": "2026 年最佳免费 AI 工具",
-    "desc_en": "Powerful AI tools you can use without paying.",
-    "desc_zh": "无需付费即可使用的强大 AI 工具。",
-    "tools": [
-      "chatgpt",
-      "perplexity",
-      "claude",
-      "codeium",
-      "deepseek",
-      "autogpt",
-      "agentgpt",
-      "n8n",
-      "rytr",
-      "bardeen",
-      "ollama",
-      "huggingface",
-      "capcut"
-    ]
-  },
-  {
-    "slug": "image-generation",
-    "title_en": "Best AI Image Generators in 2026",
-    "title_zh": "2026 年最佳 AI 图像生成器",
-    "desc_en": "Text-to-image AI models for designers, artists and creators.",
-    "desc_zh": "面向设计师、艺术家和创作者的文生图 AI 模型。",
-    "tools": [
-      "midjourney",
-      "stable-diffusion",
-      "ideogram",
-      "krea",
-      "flux",
-      "leonardo",
-      "comfyui",
-      "dalle3",
-      "galileo-ai"
-    ]
-  },
-  {
-    "slug": "video-generation",
-    "title_en": "Best AI Video Generators in 2026",
-    "title_zh": "2026 年最佳 AI 视频生成器",
-    "desc_en": "Text-to-video AI tools for filmmakers and marketers.",
-    "desc_zh": "面向电影制作人和营销人员的文生视频 AI 工具。",
-    "tools": [
-      "sora",
-      "runway",
-      "pika",
-      "luma",
-      "kling",
-      "hailuo",
-      "synthesia",
-      "heygen",
-      "viggle",
-      "vidu",
-      "genmo",
-      "invideo-ai",
-      "fliki",
-      "kapwing",
-      "d-id"
-    ]
-  },
-  {
-    "slug": "marketing",
-    "title_en": "Best AI Tools for Marketing in 2026",
-    "title_zh": "2026 年营销最佳 AI 工具",
-    "desc_en": "AI tools for SEO, ads, social media and email marketing.",
-    "desc_zh": "用于 SEO、广告、社交媒体和邮件营销的 AI 工具。",
-    "tools": [
-      "chatgpt",
-      "perplexity",
-      "notion-ai",
-      "copy-ai",
-      "writesonic",
-      "surfer-seo",
-      "frase",
-      "anyword",
-      "invideo-ai",
-      "fliki"
-    ]
-  },
-  {
-    "slug": "small-business",
-    "title_en": "Best AI Tools for Small Business in 2026",
-    "title_zh": "2026 年小公司最佳 AI 工具",
-    "desc_en": "Affordable AI tools to help small teams automate work.",
-    "desc_zh": "帮助小团队自动化工作的平价 AI 工具。",
-    "tools": [
-      "chatgpt",
-      "notion-ai",
-      "hostinger"
-    ]
-  },
-  {
-    "slug": "designers",
-    "title_en": "Best AI Tools for Designers in 2026",
-    "title_zh": "2026 年设计师最佳 AI 工具",
-    "desc_en": "AI tools for UI/UX, graphic design and creative work.",
-    "desc_zh": "用于 UI/UX、平面设计和创意工作的 AI 工具。",
-    "tools": [
-      "midjourney",
-      "stable-diffusion",
-      "claude",
-      "figma-ai",
-      "galileo-ai",
-      "comfyui",
-      "adobe-firefly"
-    ]
-  },
-  {
-    "slug": "coding-assistant",
-    "title_en": "Best AI Coding Assistants in 2026",
-    "title_zh": "2026 年最佳 AI 编码助手",
-    "desc_en": "Code completion, refactoring and pair-programming AI.",
-    "desc_zh": "代码补全、重构和结对编程 AI。",
-    "tools": [
-      "github-copilot",
-      "cursor",
-      "cline",
-      "windsurf",
-      "codeium",
-      "tabnine",
-      "cody"
-    ]
-  },
-  {
-    "slug": "research",
-    "title_en": "Best AI Tools for Research in 2026",
-    "title_zh": "2026 年研究最佳 AI 工具",
-    "desc_en": "AI for academic research, citations and literature review.",
-    "desc_zh": "用于学术研究、引用和文献综述的 AI。",
-    "tools": [
-      "perplexity",
-      "claude",
-      "chatgpt",
-      "elicit",
-      "consensus",
-      "phind",
-      "huggingface"
-    ]
-  },
-  {
-    "slug": "seo",
-    "title_en": "Best AI Tools for SEO in 2026",
-    "title_zh": "2026 年 SEO 最佳 AI 工具",
-    "desc_en": "AI tools for keyword research, content optimization and rank tracking.",
-    "desc_zh": "用于关键词研究、内容优化和排名跟踪的 AI 工具。",
-    "tools": [
-      "perplexity",
-      "chatgpt",
-      "claude",
-      "writesonic",
-      "surfer-seo",
-      "frase"
-    ]
-  },
-  {
-    "slug": "social-media",
-    "title_en": "Best AI Tools for Social Media in 2026",
-    "title_zh": "2026 年社交媒体最佳 AI 工具",
-    "desc_en": "AI for content creation, scheduling and analytics on social platforms.",
-    "desc_zh": "用于内容创建、排程和社交平台分析的 AI。",
-    "tools": [
-      "chatgpt",
-      "midjourney",
-      "claude",
-      "invideo-ai",
-      "fliki",
-      "viggle",
-      "capcut"
-    ]
-  },
-  {
-    "slug": "ecommerce",
-    "title_en": "Best AI Tools for Ecommerce in 2026",
-    "title_zh": "2026 年电商最佳 AI 工具",
-    "desc_en": "AI for product descriptions, customer service and personalization.",
-    "desc_zh": "用于产品描述、客服和个性化的 AI。",
-    "tools": [
-      "chatgpt",
-      "claude",
-      "elevenlabs",
-      "photoroom",
-      "removebg",
-      "letsenhance"
-    ]
-  },
-  {
-    "slug": "podcasters",
-    "title_en": "Best AI Tools for Podcasters in 2026",
-    "title_zh": "2026 年播客主最佳 AI 工具",
-    "desc_en": "AI for audio editing, transcription and voice generation.",
-    "desc_zh": "用于音频编辑、转录和语音生成的 AI。",
-    "tools": [
-      "elevenlabs",
-      "runway",
-      "speechify",
-      "stable-audio",
-      "riverside"
-    ]
-  },
-  {
-    "slug": "design",
-    "title_en": "Best AI Design Tools in 2026",
-    "title_zh": "2026 年最佳 AI 设计工具",
-    "desc_en": "AI design assistants for visual content and UI/UX.",
-    "desc_zh": "用于视觉内容和 UI/UX 的 AI 设计助手。",
-    "tools": [
-      "midjourney",
-      "stable-diffusion",
-      "claude",
-      "figma-ai",
-      "galileo-ai",
-      "adobe-firefly"
-    ]
-  },
-  {
-    "slug": "email",
-    "title_en": "Best AI Email Tools in 2026",
-    "title_zh": "2026 年最佳 AI 邮件工具",
-    "desc_en": "AI for drafting emails, replies and outreach sequences.",
-    "desc_zh": "用于起草邮件、回复和外联序列的 AI。",
-    "tools": [
-      "chatgpt",
-      "claude"
-    ]
-  },
-  {
-    "slug": "translation",
-    "title_en": "Best AI Translation Tools in 2026",
-    "title_zh": "2026 年最佳 AI 翻译工具",
-    "desc_en": "AI translation and localization tools for global teams.",
-    "desc_zh": "面向全球团队的 AI 翻译和本地化工具。",
-    "tools": [
-      "chatgpt",
-      "claude",
-      "perplexity"
-    ]
-  },
-  {
-    "slug": "ai-agents",
-    "title_en": "Best AI Agent Platforms in 2026",
-    "title_zh": "2026 年最佳 AI Agent 平台",
-    "desc_en": "AI agent frameworks and platforms for building autonomous agents, multi-agent systems, and workflow automation. Compare n8n, Dify, CrewAI, LangGraph, AutoGen, and more.",
-    "desc_zh": "用于构建自主 Agent、多 Agent 系统和工作流自动化的 AI Agent 框架和平台。对比 n8n、Dify、CrewAI、LangGraph、AutoGen 等。",
-    "tools": [
-      "n8n",
-      "dify",
-      "crewai",
-      "langgraph",
-      "autogen",
-      "autogpt",
-      "agentgpt",
-      "llamaindex",
-      "browser-use",
-      "multion",
-      "lindy",
-      "bardeen",
-      "claude-computer-use",
-      "make-com"
-    ]
-  },
-  {
-    "slug": "ai-for-teachers",
-    "title_en": "Best AI Tools for Teachers in 2026",
-    "title_zh": "2026 年教师 AI 工具",
-    "desc_en": "AI tools for lesson planning, grading, content creation, and student engagement.",
-    "desc_zh": "教师 AI 工具：课程规划、评分、内容创建。",
-    "tools": [
-      "claude",
-      "gemini",
-      "notion-ai",
-      "perplexity",
-      "jasper",
-      "chatgpt",
-      "hostinger",
-      "gamma"
-    ]
-  },
-  {
-    "slug": "ai-for-lawyers",
-    "title_en": "Best AI Tools for Lawyers in 2026",
-    "title_zh": "2026 年律师 AI 工具",
-    "desc_en": "AI tools for legal research, contract review, document drafting, and compliance.",
-    "desc_zh": "律师 AI 工具：法律研究、合同审查、文件起草。",
-    "tools": [
-      "claude",
-      "gemini",
-      "jasper",
-      "chatgpt",
-      "deepseek",
-      "copy-ai"
-    ]
-  },
-  {
-    "slug": "ai-for-doctors",
-    "title_en": "Best AI Tools for Healthcare Professionals in 2026",
-    "title_zh": "2026 年医疗 AI 工具",
-    "desc_en": "AI tools for clinical documentation, patient communication, and medical research.",
-    "desc_zh": "医疗 AI 工具：临床文档、患者沟通、医学研究。",
-    "tools": [
-      "claude",
-      "gemini",
-      "notion-ai",
-      "perplexity",
-      "jasper",
-      "chatgpt"
-    ]
-  },
-  {
-    "slug": "ai-for-architects",
-    "title_en": "Best AI Tools for Architects in 2026",
-    "title_zh": "2026 年建筑师 AI 工具",
-    "desc_en": "AI tools for architectural design, rendering, code compliance, and documentation.",
-    "desc_zh": "建筑师 AI 工具：建筑设计、渲染、规范审查。",
-    "tools": [
-      "midjourney",
-      "stable-diffusion",
-      "leonardo",
-      "ideogram",
-      "krea",
-      "flux",
-      "canva-ai",
-      "uizard"
-    ]
-  },
-  {
-    "slug": "ai-for-sales-teams",
-    "title_en": "Best AI Tools for Sales Teams in 2026",
-    "title_zh": "2026 年销售 AI 工具",
-    "desc_en": "AI tools for lead generation, cold outreach, CRM automation, and sales analytics.",
-    "desc_zh": "销售 AI 工具：线索生成、冷拓、CRM 自动化。",
-    "tools": [
-      "claude",
-      "gemini",
-      "notion-ai",
-      "perplexity",
-      "jasper",
-      "chatgpt",
-      "hostinger",
-      "gamma"
-    ]
-  },
-  {
-    "slug": "ai-for-hr-teams",
-    "title_en": "Best AI Tools for HR Teams in 2026",
-    "title_zh": "2026 年 HR AI 工具",
-    "desc_en": "AI tools for recruitment, onboarding, performance review, and employee engagement.",
-    "desc_zh": "HR AI 工具：招聘、入职、绩效评估。",
-    "tools": [
-      "notion-ai",
-      "perplexity",
-      "hostinger",
-      "gamma",
-      "elicit",
-      "taskade"
     ]
   }
 ]

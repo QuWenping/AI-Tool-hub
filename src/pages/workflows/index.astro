@@ -1,38 +1,57 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import workflows from "../../data/workflows.json";
-const cats = [...new Set(workflows.map(w => w.category))];
+import tools from "../../data/tools.json";
+
+const workflows = [
+  {
+    title: "Content Repurposing Pipeline",
+    description: "Turn one blog post into social posts, newsletter, and video script using Claude + ChatGPT + ElevenLabs",
+    toolCount: 3
+  },
+  {
+    title: "SEO Content Engine",
+    description: "Keyword research → outline → draft → optimize using ChatGPT + SurferSEO + Grammarly",
+    toolCount: 3
+  },
+  {
+    title: "Design-to-Code Handoff",
+    description: "Figma mockup → AI code generation → review using Midjourney + Cursor + ChatGPT",
+    toolCount: 3
+  },
+  {
+    title: "Customer Support Automation",
+    description: "Ticket triage → draft response → human review using ChatGPT + Claude + Make",
+    toolCount: 3
+  },
+  {
+    title: "Data Analysis Pipeline",
+    description: "Raw data → clean → visualize → report using ChatGPT Code Interpreter + Claude",
+    toolCount: 2
+  },
+  {
+    title: "Video Production Suite",
+    description: "Script → voiceover → edit → captions using Claude + ElevenLabs + Runway + Descript",
+    toolCount: 4
+  }
+];
 ---
-<BaseLayout title="AI Workflow Library | n8n, Dify, ComfyUI, MCP Tutorials" description="Step-by-step AI workflow tutorials for n8n, Dify, ComfyUI, and MCP. Automate content generation, customer support, data analysis, and more with detailed setup guides." keywords="AI workflows, n8n workflows, Dify workflows, ComfyUI workflows, MCP tutorials, automation, AI agent">
+
+<BaseLayout
+  title="AI Workflows - Pre-built Multi-Tool Automation Workflows"
+  description="Pre-built multi-tool workflows to automate your daily tasks. Combine ChatGPT, Claude, Midjourney, ElevenLabs and more."
+>
   <div class="page-container">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <span>Workflow Library</span></nav>
-    <h1 class="page-title">AI Workflow Library</h1>
-    <p class="page-lede">{workflows.length} step-by-step workflow tutorials for n8n, Dify, ComfyUI, and MCP. From beginner to advanced.</p>
+    <h1 class="page-title">AI Workflows</h1>
+    <p class="page-lede">Pre-built multi-tool workflows to automate your daily tasks.</p>
 
-    {cats.map(cat => (
-      <section class="list-section">
-        <h2 class="list-section-title">{cat}</h2>
-        <div class="card-grid">
-          {workflows.filter(w => w.category === cat).map(w => (
-            <a class="list-card" href={"/workflows/" + w.slug + "/"}>
-              <div class="card-head">
-                <h3>{w.title}</h3>
-                <span class={`tag-pill diff-${(w.difficulty||"").toLowerCase()}`}>{w.difficulty}</span>
-              </div>
-              <p class="card-desc">{w.description}</p>
-              <div class="tag-row">
-                <span class="tool-pill">{w.tool}</span>
-                {w.tags.slice(0, 3).map(t => <span class="tag-chip">#{t}</span>)}
-                <span class="meta-count">{w.steps.length} steps</span>
-              </div>
-            </a>
-          ))}
+    <div class="card-grid">
+      {workflows.map(w => (
+        <div class="list-card">
+          <div class="card-head">{w.title}</div>
+          <p class="card-desc">{w.description}</p>
+          <span>{w.toolCount} tools</span>
         </div>
-      </section>
-    ))}
-
-    <div class="list-footer">
-      <p>More workflows coming soon. Have a request? <a href="/contact/">Let us know</a>.</p>
+      ))}
     </div>
   </div>
 </BaseLayout>

@@ -1,0 +1,137 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import authors from "../../data/authors.json";
+
+export async function getStaticPaths() {
+  return Object.values(authors).map(a => ({
+    params: { slug: a.slug },
+    props: { author: a }
+  }));
+}
+
+const { author } = Astro.props;
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/author/" + author.slug + "/";
+
+const authorSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": author.name,
+  "url": pageUrl,
+  "jobTitle": author.role,
+  "description": author.bio,
+  "affiliation": {
+    "@type": "Organization",
+    "name": "AI Tool Hub",
+    "url": siteUrl
+  },
+  "knowsAbout": author.expertise,
+  "alumniOf": author.education?.split(",").map(s => s.trim()).filter(Boolean) || [],
+  "workLocation": { "@type": "Place", "address": { "@type": "PostalAddress", "addressLocality": author.location?.split(",")[0]?.trim() || "" } }
+};
+---
+
+<BaseLayout
+  title={`${author.name} | ${author.role} — AI Tool Hub`}
+  description={author.bio}
+  keywords={`${author.name}, ${author.role}, AI Tool Hub author, AI tools reviewer, ${author.expertise?.slice(0, 5).join(", ")}`}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(authorSchema)}></script>
+  </Fragment>
+
+  <article class="legal-page">
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> &rsaquo;
+      <a href="/team/">Meet the Team</a> &rsaquo;
+      <span>{author.name}</span>
+    </nav>
+
+    <header class="page-hero">
+      <span class="eyebrow">{author.role}</span>
+      <h1>{author.name}</h1>
+      <p class="lede">{author.title} &middot; {author.location} &middot; {author.years_experience}+ years of experience</p>
+    </header>
+
+    <section>
+      <h2>About {author.name}</h2>
+      <p>{author.bio_full}</p>
+
+      <div class="info-card" style="margin-top: var(--s-6);">
+        <p class="field-label">Education and Background</p>
+        <p class="field-value">{author.education}</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Areas of Expertise</h2>
+      <div class="audience-tags">
+        {author.expertise.map(skill => <span class="audience-tag">{skill}</span>)}
+      </div>
+    </section>
+
+    <section>
+      <h2>Review Focus Areas</h2>
+      <p>{author.name} specializes in evaluating these categories of AI tools:</p>
+      <ul>
+        {author.focus_areas.map(area => <li>{area}</li>)}
+      </ul>
+    </section>
+
+    <section>
+      <h2>Review Methodology</h2>
+      <p>{author.methodology}</p>
+      <p><strong>Reviews completed:</strong> {author.reviews_count}+ tools tested and evaluated</p>
+    </section>
+
+    {author.articles && author.articles.length > 0 && (
+      <section>
+        <h2>Articles by {author.name}</h2>
+        <ul class="article-list">
+          {author.articles.map(a => (
+            <li>
+              <a href={`/blog/${a.slug}/`}>{a.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <section>
+      <h2>Contact {author.name}</h2>
+      <ul>
+        <li><strong>Email:</strong> <a href={`mailto:${author.contact}`}>{author.contact}</a></li>
+        {Object.entries(author.socials).map(([platform, handle]) => (
+          <li><strong>{platform.charAt(0).toUpperCase() + platform.slice(1)}:</strong> {handle}</li>
+        ))}
+      </ul>
+      <p style="margin-top: var(--s-4);">For topic-specific questions, reach {author.name} directly. For general inquiries, use the <a href="/contact/">contact form</a>.</p>
+    </section>
+
+    <section class="back-link">
+      <p class="meta-text">
+        <a href="/team/">Meet the full team</a> &middot;
+        <a href="/editorial-guidelines/">Read our editorial guidelines</a> &middot;
+        <a href="/methodology/">See our scoring methodology</a>
+      </p>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+.article-list {
+  list-style: none;
+  padding: 0;
+}
+.article-list li {
+  padding: var(--s-2) 0;
+  border-bottom: 1px solid var(--border);
+}
+.article-list li:last-child {
+  border-bottom: none;
+}
+.article-list a {
+  font-weight: var(--fw-medium);
+}
+</style>

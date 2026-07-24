@@ -1,13 +1,13 @@
 ---
 /**
- * Feedback.astro - "这篇文章有帮助吗？"反馈按钮
- * 数据存到 localStorage（简单版）
- * 生产环境建议接入后端 API
+ * Feedback.astro - "Was this helpful?" feedback buttons
+ * Data stored in localStorage (simple version)
+ * Production: consider connecting to a backend API
  */
 const { slug, lang = "en" } = Astro.props;
 ---
 <section class="feedback-section">
-  <p data-i18n-en="Was this article helpful?" data-i18n-zh="这篇文章对你有帮助吗？">Was this article helpful?</p>
+  <p data-i18n-en="Was this article helpful?">Was this article helpful?</p>
   <div class="feedback-buttons" id={`feedback-${slug}`}>
     <button
       class="feedback-btn"
@@ -17,7 +17,7 @@ const { slug, lang = "en" } = Astro.props;
       aria-label="Helpful"
     >
       <i class="far fa-thumbs-up"></i>
-      <span data-i18n-en="Yes" data-i18n-zh="有用">Yes</span>
+      <span data-i18n-en="Yes">Yes</span>
       <span class="feedback-count" data-type="up" class="feedback-count"></span>
     </button>
     <button
@@ -28,11 +28,11 @@ const { slug, lang = "en" } = Astro.props;
       aria-label="Not helpful"
     >
       <i class="far fa-thumbs-down"></i>
-      <span data-i18n-en="No" data-i18n-zh="没用">No</span>
+      <span data-i18n-en="No">No</span>
       <span class="feedback-count" data-type="down" class="feedback-count"></span>
     </button>
   </div>
-  <p class="feedback-thanks" data-i18n-en="Thanks for your feedback!" data-i18n-zh="感谢你的反馈！">Thanks for your feedback!</p>
+  <p class="feedback-thanks" data-i18n-en="Thanks for your feedback!">Thanks for your feedback!</p>
 </section>
 
 <script is:inline define:vars={{ slug }}>

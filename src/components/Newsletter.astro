@@ -1,10 +1,10 @@
 ---
 /**
- * Newsletter.astro - Newsletter 订阅组件
- * 支持 Mailchimp / ConvertKit / Buttondown
+ * Newsletter.astro - Newsletter subscription component
+ * Supports Mailchimp / ConvertKit / Buttondown
  *
- * 当前使用 Buttondown（最简单，无品牌）
- * 替换 formAction 为你的服务地址即可
+ * Currently using Buttondown (simplest, no branding)
+ * Replace formAction with your service URL
  */
 const { variant = "default", lang = "en" } = Astro.props;
 ---
@@ -16,15 +16,15 @@ const { variant = "default", lang = "en" } = Astro.props;
   style={variant === "compact" ? "" : "background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 32px; max-width: 500px; margin: 24px auto;"}
 >
   {variant === "default" && (
-    <h3 data-i18n-en="Get the directory in your inbox" data-i18n-zh="把目录收到你的邮箱">Get the directory in your inbox</h3>
+    <h3 data-i18n-en="Get the directory in your inbox">Get the directory in your inbox</h3>
   )}
-  <p data-i18n-en="We send a short, no-spam email every month with our top picks, hidden gems, and what is new in the AI tool world." data-i18n-zh="我们每月发送一封简短、无垃圾邮件的邮件，分享本月精选工具、隐藏神器以及 AI 工具世界的新动向。">We send a short, no-spam email every month with our top picks, hidden gems, and what is new in the AI tool world.</p>
+  <p data-i18n-en="We send a short, no-spam email every month with our top picks, hidden gems, and what is new in the AI tool world.">We send a short, no-spam email every month with our top picks, hidden gems, and what is new in the AI tool world.</p>
 
   <div class="newsletter-form">
     <input
       type="email"
       name="email"
-      placeholder={lang === "zh" ? "你的邮箱地址" : "your@email.com"}
+      placeholder="your@email.com"
       required
       class="newsletter-input"
     />
@@ -32,9 +32,9 @@ const { variant = "default", lang = "en" } = Astro.props;
       type="submit"
       class="cta-btn cta-primary"
       class="newsletter-btn"
-      data-i18n-en="Subscribe" data-i18n-zh="订阅"
+      data-i18n-en="Subscribe"
     >Subscribe</button>
   </div>
 
-  <p class="newsletter-hint" data-i18n-en="No spam. Unsubscribe anytime. We never share your email." data-i18n-zh="无垃圾邮件。随时退订。我们绝不分享你的邮箱。">No spam. Unsubscribe anytime. We never share your email.</p>
+  <p class="newsletter-hint" data-i18n-en="No spam. Unsubscribe anytime. We never share your email.">No spam. Unsubscribe anytime. We never share your email.</p>
 </form>

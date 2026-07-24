@@ -10,7 +10,9 @@
     "crawl:ai": "node scripts/daily-pipeline.mjs --ai"
   },
   "dependencies": {
+    "@astrojs/node": "^8.3.4",
     "@astrojs/sitemap": "3.2.1",
+    "@supabase/supabase-js": "^2.110.8",
     "astro": "^4.16.0",
     "playwright": "^1.61.1"
   },

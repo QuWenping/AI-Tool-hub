@@ -1,25 +1,25 @@
 ---
 /**
- * Comments.astro - Giscus 评论系统组件
- * 基于 GitHub Discussions，零成本、自动同步、无需服务器
+ * Comments.astro - Giscus comment system component
+ * Based on GitHub Discussions - zero cost, auto-sync, serverless
  *
- * 配置步骤：
- * 1. 在 https://github.com/settings/apps 中安装 Giscus app
- * 2. 在 https://giscus.app/zh-CN 配置获取 data-* 属性
- * 3. 替换下方的 repo / repoId / category / categoryId
+ * Setup steps:
+ * 1. Install Giscus app at https://github.com/settings/apps
+ * 2. Configure at https://giscus.app to get data-* attributes
+ * 3. Replace repo / repoId / category / categoryId below
  */
 const { lang = "en" } = Astro.props;
 
-// 主题根据当前主题自动切换
+// Theme auto-switches based on current theme
 const lightTheme = "light";
 const darkTheme = "dark_dimmed";
-const giscusTheme = "no";  // 占位，JS 会动态切换
+const giscusTheme = "no";  // Placeholder, JS will switch dynamically
 
-// Giscus 配置（生产环境需要替换为真实值）
-// 在 Giscus 官网配置：https://giscus.app/zh-CN
-// 1. 输入仓库：QuWenping/AI-Tool-hub
-// 2. Discussion 分类：Comments
-// 3. 复制 data-repo-id 和 data-category-id
+// Giscus config (replace with real values in production)
+// Configure at https://giscus.app
+// 1. Enter repo: QuWenping/AI-Tool-hub
+// 2. Discussion category: Comments
+// 3. Copy data-repo-id and data-category-id
 const giscusConfig = {
   "data-repo": "QuWenping/AI-Tool-hub",
   "data-repo-id": "R_kgDOSPanaQ",
@@ -38,8 +38,8 @@ const giscusConfig = {
 };
 ---
 <section class="comments-section">
-  <h2 data-i18n-en="Comments" data-i18n-zh="评论">Comments</h2>
-  <p class="comments-desc" data-i18n-en="Discuss this article. Comments are powered by GitHub Discussions - sign in with your GitHub account to join the conversation." data-i18n-zh="讨论这篇文章。评论由 GitHub Discussions 提供支持 - 使用你的 GitHub 账号登录即可参与。">Discuss this article. Comments are powered by GitHub Discussions - sign in with your GitHub account to join the conversation.</p>
+  <h2 data-i18n-en="Comments">Comments</h2>
+  <p class="comments-desc" data-i18n-en="Discuss this article. Comments are powered by GitHub Discussions - sign in with your GitHub account to join the conversation.">Discuss this article. Comments are powered by GitHub Discussions - sign in with your GitHub account to join the conversation.</p>
   <script
     src="https://giscus.app/client.js"
     data-repo={giscusConfig["data-repo"]}
@@ -58,7 +58,7 @@ const giscusConfig = {
     async={giscusConfig.async}
   ></script>
   <noscript>
-    <p class="comments-fallback" data-i18n-en="Please enable JavaScript to view comments." data-i18n-zh="请启用 JavaScript 查看评论。">Please enable JavaScript to view comments.</p>
+    <p class="comments-fallback" data-i18n-en="Please enable JavaScript to view comments.">Please enable JavaScript to view comments.</p>
   </noscript>
 </section>
 

@@ -78,6 +78,139 @@ header.site-header .container { display: flex; justify-content: space-between; a
 .nav-toggle:hover { border-color: var(--accent-color); color: var(--accent-color); }
 .nav-toggle { display: none; }
 
+/* Sign-in button */
+.signin-btn {
+  background: var(--accent-color, #3b82f6);
+  color: #fff;
+  border: none;
+  padding: 7px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.signin-btn:hover { opacity: 0.88; }
+
+/* Sign-in modal */
+.signin-modal {
+  position: fixed; inset: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: center;
+}
+.signin-modal[hidden] { display: none; }
+.signin-modal-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+.signin-modal-content {
+  position: relative;
+  background: var(--card-bg, #1a1f2e);
+  border: 1px solid var(--border-color, #2e3348);
+  border-radius: 16px;
+  padding: 40px 36px;
+  max-width: 420px; width: 90%;
+  text-align: center;
+  z-index: 201;
+}
+.signin-modal-close {
+  position: absolute; top: 14px; right: 18px;
+  background: none; border: none;
+  font-size: 24px; color: var(--text-mute, #9ca3af);
+  cursor: pointer; line-height: 1;
+}
+.signin-modal-close:hover { color: var(--text-main, #f0f2f5); }
+.signin-modal-content h2 {
+  font-size: 22px; font-weight: 700;
+  color: var(--headline-color, #f0f2f5);
+  margin-bottom: 8px;
+}
+.signin-modal-content > p {
+  font-size: 14px; color: var(--text-mute, #9ca3af);
+  margin-bottom: 28px; line-height: 1.5;
+}
+.signin-providers {
+  display: flex; flex-direction: column; gap: 12px;
+  margin-bottom: 24px;
+}
+.signin-provider {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 12px 20px;
+  border: 1px solid var(--border-color, #2e3348);
+  border-radius: 10px;
+  background: var(--bg-color, #0f1117);
+  color: var(--text-main, #f0f2f5);
+  font-size: 15px; font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.signin-provider:hover {
+  border-color: var(--accent-color, #3b82f6);
+  background: rgba(59,130,246,0.08);
+}
+.signin-provider i { font-size: 18px; }
+.signin-provider.github i { color: #f0f2f5; }
+
+/* Sign-in divider */
+.signin-divider {
+  display: flex; align-items: center; gap: 12px;
+  margin: 20px 0; color: var(--text-mute, #6b7280);
+  font-size: 13px;
+}
+.signin-divider::before,
+.signin-divider::after {
+  content: ''; flex: 1; height: 1px;
+  background: var(--border-color, #2e3348);
+}
+
+/* Email sign-in form */
+.signin-email-form { display: flex; flex-direction: column; gap: 14px; margin-bottom: 16px; }
+.signin-field { text-align: left; }
+.signin-field label {
+  display: block; margin-bottom: 5px;
+  font-size: 13px; font-weight: 500;
+  color: var(--text-mute, #9ca3af);
+}
+.signin-field input {
+  width: 100%; padding: 10px 14px;
+  border: 1px solid var(--border-color, #2e3348);
+  border-radius: 8px;
+  background: var(--bg-color, #0f1117);
+  color: var(--text-main, #f0f2f5);
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+.signin-field input:focus { border-color: var(--accent-color, #3b82f6); }
+.signin-field input::placeholder { color: var(--text-mute, #6b7280); }
+.signin-submit-btn {
+  width: 100%; padding: 11px 20px;
+  background: var(--accent-color, #3b82f6);
+  color: #fff; border: none;
+  border-radius: 8px;
+  font-size: 14px; font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.signin-submit-btn:hover { opacity: 0.88; }
+.signin-switch {
+  font-size: 13px; color: var(--text-mute, #9ca3af);
+  margin: 0 0 8px;
+}
+.signin-switch a { color: var(--accent-color, #3b82f6); text-decoration: none; }
+.signin-switch a:hover { text-decoration: underline; }
+.signin-hint {
+  font-size: 13px; color: var(--text-mute, #9ca3af);
+  margin: 0; text-align: center;
+}
+.signup-step { display: flex; flex-direction: column; gap: 14px; margin-bottom: 16px; }
+
+.signin-terms {
+  font-size: 12px; color: var(--text-mute, #6b7280);
+}
+.signin-terms a { color: var(--accent-color, #3b82f6); text-decoration: none; }
+.signin-terms a:hover { text-decoration: underline; }
+
 /* === Home Hero === */
 .hero { padding: 72px 0 40px; text-align: center; }
 .hero h1 { font-size: 44px; font-weight: 700; letter-spacing: -1.2px; line-height: 1.15; margin-bottom: 16px; }
@@ -1678,4 +1811,38 @@ a[data-lightbox] { cursor: zoom-in; }
   .lb-overlay { padding: var(--s-4); }
   .lb-overlay .lb-prev, .lb-overlay .lb-next { width: 40px; height: 40px; font-size: 20px; }
   .lb-overlay img.lb-img { max-height: 74vh; }
+}
+
+
+/* ===== Blog related tools grid (Phase 4 internal linking) ===== */
+.related-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+.related-tool-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  border: 1px solid var(--border, #2a2a3a);
+  border-radius: var(--radius-md, 14px);
+  text-decoration: none;
+  transition: var(--transition, all 150ms ease);
+}
+.related-tool-card:hover {
+  border-color: var(--accent, #7c6cff);
+  transform: translateY(-2px);
+}
+.related-tool-card i {
+  font-size: 1.2rem;
+  color: var(--accent, #7c6cff);
+}
+.related-tool-card span {
+  font-weight: 600;
+}
+.related-tool-card small {
+  opacity: 0.65;
+  font-size: 0.8rem;
 }

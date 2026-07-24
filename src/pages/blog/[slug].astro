@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import posts from "../../data/posts.json";
+import toolsData from "../../data/tools.json";
+import solutionsData from "../../data/solutions.json";
 import Comments from "../../components/Comments.astro";
 import RelatedPosts from "../../components/RelatedPosts.astro";
 import Feedback from "../../components/Feedback.astro";
@@ -8,6 +10,11 @@ export async function getStaticPaths() {
   return posts.map(p => ({ params: { slug: p.slug }, props: { post: p } }));
 }
 const { post } = Astro.props;
+const relatedTools = (post.related_tools || []).map(tid => {
+  const t = toolsData[tid];
+  return t ? { id: tid, name: t.name?.en || tid, icon: t.icon || "fa-robot" } : null;
+}).filter(Boolean);
+const relatedSolution = solutionsData.find(s => s.slug === post.related_solution);
 const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/blog/" + post.slug + "/";
 const faqItems = post.faq && post.faq.length > 0 ? post.faq : [
@@ -15,7 +22,17 @@ const faqItems = post.faq && post.faq.length > 0 ? post.faq : [
   { q: "Who is this for?", a: "Anyone interested in " + post.category + " - " + post.desc_en },
   { q: "How was this content created?", a: "Our editorial team tested real AI tools on real work over multiple weeks before publishing this review." }
 ];
-const authorSchema = {
+const authorSchema = post.author_slug ? {
+  "@type": "Person",
+  "name": "Lin Chen",
+  "url": siteUrl + "/author/" + post.author_slug + "/",
+  "jobTitle": "Lead Reviewer and Editor-in-Chief",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "AI Tool Hub",
+    "url": siteUrl
+  }
+} : {
   "@type": "Person",
   "name": post.author || "AI Tool Hub Editorial"
 };
@@ -88,14 +105,39 @@ const faqSchema = {
         <span class="meta-item"><i class="far fa-user"></i> {post.author}</span>
         <span class="meta-item reviewer">
           <i class="fas fa-user-check"></i>
-          Reviewed by <strong>Lin Chen</strong>, Lead Reviewer (5+ years testing AI tools)
+          Reviewed by <strong><a href="/author/lin-chen/">Lin Chen</a></strong>, Lead Reviewer (5+ years testing AI tools)
         </span>
       </div>
     </header>
 
     <section class="article-body">
-      <slot />
+      {post.content_en && <Fragment set:html={post.content_en} />}
     </section>
+
+    {relatedTools.length > 0 && (
+      <section class="section-mt">
+        <h3>Tools Mentioned in This Article</h3>
+        <div class="related-tools-grid">
+          {relatedTools.map(t => (
+            <a class="related-tool-card" href={"/tool/" + t.id + "/"}>
+              <i class={"fas " + t.icon}></i>
+              <span>{t.name}</span>
+              <small>Read our full review</small>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {relatedSolution && (
+      <section class="section-mt">
+        <h3>Explore the Full Workflow</h3>
+        <p class="meta-text">
+          See how these tools fit into a complete stack in our guide:
+          <a href={"/solutions/" + relatedSolution.slug + "/"}>{relatedSolution.title}</a>
+        </p>
+      </section>
+    )}
 
     {post.tags && post.tags.length > 0 && (
       <section class="section-mt">
@@ -111,7 +153,7 @@ const faqSchema = {
     </section>
 
     <Feedback slug={post.slug} lang="en" />
-    <RelatedPosts currentSlug={post.slug} currentCategory={post.category} currentTags={post.tags || []} limit={3} />
+    <RelatedPosts currentSlug={post.slug} currentCategory={post.category} currentTags={post.tags || []} relatedSlugs={post.related_posts || []} limit={3} />
     <Comments lang="en" />
   </div>
 </BaseLayout>
