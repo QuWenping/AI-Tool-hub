@@ -5,6 +5,8 @@ import toolsData from "../../data/tools.json";
 import matchupsData from "../../data/matchups.json";
 import categories from "../../data/categories.json";
 import editorialData from "../../data/tool-editorial.json";
+import ZhNotice from "../../components/ZhNotice.astro";
+import { t, ta, hasZh, catLabel } from "../../utils/i18n";
 import TLDR from "../../components/ui/TLDR.astro";
 import ProsCons from "../../components/ui/ProsCons.astro";
 import QuickFacts from "../../components/ui/QuickFacts.astro";
@@ -14,6 +16,8 @@ import ToolFAQ from "../../components/ui/ToolFAQ.astro";
 import ScreenshotGallery from "../../components/ui/ScreenshotGallery.astro";
 import ScoreCard from "../../components/ui/ScoreCard.astro";
 import SaveButton from "../../components/ui/SaveButton.astro";
+
+const pageLang = Astro.currentLocale || "en";
 
 export async function getStaticPaths() {
   return Object.entries(toolsData)
@@ -38,6 +42,12 @@ const tExampleEn = tool?.example?.en || "";
 const tCat = tool?.cat || "productivity";
 const tUrl = tool?.url || "#";
 const tIcon = tool?.icon || "fa-robot";
+
+// i18n: localized versions with en fallback
+const tName = pageLang === "zh" ? (tool?.name?.zh || tNameEn) : tNameEn;
+const tShort = pageLang === "zh" ? (tool?.short_desc?.zh || tShortEn) : tShortEn;
+const tLong = pageLang === "zh" ? (tool?.long_desc?.zh || tLongEn) : tLongEn;
+const zhAvailable = hasZh(tool, "name");
 
 const categoryLabels = { text: "Writing", image: "Image", code: "Coding", video: "Video", audio: "Audio", productivity: "Productivity" };
 const catLabelEn = categoryLabels[tCat] || tCat;
@@ -162,22 +172,27 @@ const ourVerdict = ourVerdicts[id] || {
 };
 
 // Structured data
-const seoTitle = isReviewed
-  ? `${tNameEn} Review 2026: Features, Pricing, Alternatives & Use Cases`
-  : `${tNameEn}: Features, Pricing, Alternatives & Use Cases`;
-const seoDescription = `${tNameEn} ${isReviewed ? "review" : "overview"} for 2026 — ${tShortEn || `a ${catLabelEn.toLowerCase()} AI tool`}. Features, pricing, pros/cons, alternatives and FAQs.`.slice(0, 158);
+const seoTitle = pageLang === "zh"
+  ? (isReviewed ? `${tName} 评测 2026：功能、价格、替代品与使用场景` : `${tName}：功能、价格、替代品与使用场景`)
+  : (isReviewed ? `${tNameEn} Review 2026: Features, Pricing, Alternatives & Use Cases` : `${tNameEn}: Features, Pricing, Alternatives & Use Cases`);
+const seoDescription = pageLang === "zh"
+  ? `${tName}${isReviewed ? "评测" : "概览"} 2026 — ${tShortEn || `${catLabelEn.toLowerCase()} AI 工具`}。`.slice(0, 158)
+  : `${tNameEn} ${isReviewed ? "review" : "overview"} for 2026 — ${tShortEn || `a ${catLabelEn.toLowerCase()} AI tool`}. Features, pricing, pros/cons, alternatives and FAQs.`.slice(0, 158);
+
+const pageLangcode = pageLang === "zh" ? "zh" : "en";
 
 const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: tNameEn,
+  name: tName,
   description: tShortEn || tLongEn,
   url: pageUrl,
   image: siteUrl + "/og-image.svg",
   applicationCategory: appCategory,
   operatingSystem: "Web, iOS, Android",
   author: { "@type": "Organization", name: "AI Tool Hub Editorial", url: siteUrl },
-  publisher: { "@type": "Organization", name: "AI Tool Hub", url: siteUrl }
+  publisher: { "@type": "Organization", name: "AI Tool Hub", url: siteUrl },
+  inLanguage: pageLangcode
 };
 if (isReviewed && rating) {
   softwareSchema.review = {
@@ -220,12 +235,14 @@ const tocSections = [
 <BaseLayout
   title={seoTitle}
   description={seoDescription}
-  keywords={`${tNameEn}, ${tNameEn} review, ${tNameEn} pricing, ${catLabelEn} AI tools`}
+  keywords={`${tName}, ${tNameEn} review, ${tNameEn} pricing, ${catLabelEn} AI tools`}
+  lang={pageLang}
 >
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(softwareSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
   </Fragment>
+  {pageLang === "zh" && <ZhNotice hasTranslation={zhAvailable} />}
   <article class="tool-detail">
   <div class="article-grid">
     <div class="article-main">

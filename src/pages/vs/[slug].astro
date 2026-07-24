@@ -2,10 +2,14 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import matchups from "../../data/matchups.json";
 import toolsData from "../../data/tools.json";
+import ZhNotice from "../../components/ZhNotice.astro";
+import { hasZh } from "../../utils/i18n";
 import Chart from "../../components/Chart.astro";
 import TLDR from "../../components/ui/TLDR.astro";
 import AdSlot from "../../components/ui/AdSlot.astro";
 import ArticleToc from "../../components/ui/ArticleToc.astro";
+
+const pageLang = Astro.currentLocale || "en";
 export async function getStaticPaths() {
   return matchups.map(function(m){return {params:{slug:m.slug},props:{m:m}}});
 }
@@ -20,6 +24,9 @@ const pillarHref = clusterSlug === "code" ? "/solutions/ai-for-developers/" : ("
 const pillarLabel = clusterSlug === "code" ? "AI Tools for Developers" : ("Best " + clusterLabel);
 const aName = (a && a.name && a.name.en) || "Tool A";
 const bName = (b && b.name && b.name.en) || "Tool B";
+const aNameZh = (a && a.name && a.name.zh) || aName;
+const bNameZh = (b && b.name && b.name.zh) || bName;
+const zhAvailable = hasZh(a, "name") && hasZh(b, "name");
 const aUse = (a && a.use_cases && a.use_cases.en && a.use_cases.en[0]) || "general use";
 const bUse = (b && b.use_cases && b.use_cases.en && b.use_cases.en[0]) || "general use";
 const aPros = (a && a.pros && a.pros.en) || [];
@@ -62,7 +69,7 @@ const articleSchema = {
   "author": { "@type": "Person", "name": "AI Tool Hub Editorial" },
   "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl, "logo": { "@type": "ImageObject", "url": siteUrl + "/logo.svg", "width": 300, "height": 60 } },
   "articleSection": "AI Tool Comparison",
-  "inLanguage": "en"
+  "inLanguage": pageLang === "zh" ? "zh" : "en"
 };
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -100,13 +107,21 @@ const tocSections = [
   { id: "this-page-answers", label: "This page answers" }
 ];
 
+const seoTitle = pageLang === "zh"
+  ? `${aNameZh} vs ${bNameZh}：全面对比评测`
+  : m.title_en;
+const seoDesc = pageLang === "zh"
+  ? `${aNameZh} 和 ${bNameZh} 的全面对比：功能、价格、优缺点及最终结论。`
+  : `Side-by-side comparison of ${aName} vs ${bName}`;
+
 ---
-<BaseLayout title={m.title_en} description={"Side-by-side comparison of " + aName + " vs " + bName}>
+<BaseLayout title={seoTitle} description={seoDesc} lang={pageLang}>
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
   </Fragment>
+  {pageLang === "zh" && <ZhNotice hasTranslation={zhAvailable} />}
   <div class="article-grid">
     <div class="article-main">
     <nav class="breadcrumbs">

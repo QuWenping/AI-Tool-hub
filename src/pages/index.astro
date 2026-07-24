@@ -265,15 +265,6 @@ const faqSchema = {
 
     <section class="home-section faq-section home-faq"><div class="home-shell narrow-shell"><div class="section-heading center-heading"><span class="section-kicker">FAQ</span><h2 data-i18n-en="Frequently asked questions">Frequently asked questions</h2></div>{faq.map(item => <details><summary data-i18n-en={item.q_en} data-i18n-zh={item.q_zh}>{item.q_en}</summary><p data-i18n-en={item.a_en} data-i18n-zh={item.a_zh}>{item.a_en}</p></details>)}</div></section>
 
-    <section class="home-section cta-section">
-  <div class="home-shell narrow-shell">
-    <div class="cta-card">
-      <span class="section-kicker">Newsletter</span>
-      <h2>Get the directory in your inbox</h2>
-      <p>We send a short, no-spam email every month with our top picks, hidden gems, and what's new in the AI tool world.</p>
-      <a class="home-button primary" href="/newsletter/">Subscribe to the newsletter</a>
-    </div>
-  </div>
-</section>
+
   </div>
 </BaseLayout>

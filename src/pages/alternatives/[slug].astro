@@ -2,7 +2,11 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import toolsData from "../../data/tools.json";
 import editorialData from "../../data/tool-editorial.json";
+import ZhNotice from "../../components/ZhNotice.astro";
+import { hasZh } from "../../utils/i18n";
 import TLDR from "../../components/ui/TLDR.astro";
+
+const pageLang = Astro.currentLocale || "en";
 export async function getStaticPaths() {
   return Object.entries(toolsData)
     .filter(function(e){return e[0] !== "codewords" && editorialData[e[0]]?.reviewed === true})
@@ -14,6 +18,8 @@ const alternatives = Object.entries(toolsData)
   .slice(0, 8)
   .map(function(e){return Object.assign({id:e[0]}, e[1])});
 const aName = (tool && tool.name && tool.name.en) || "Tool";
+const aNameZh = (tool && tool.name && tool.name.zh) || aName;
+const zhAvailable = hasZh(tool, "name");
 const aCat = (tool && tool.cat) || "ai";
 const aIcon = (tool && tool.icon) || "fa-robot";
 const aShort = (tool && tool.short_desc && tool.short_desc.en) || "";
@@ -36,13 +42,21 @@ const pageUrl = siteUrl + "/alternatives/" + id + "/";
 const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faq.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
 const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Best " + aName + " Alternatives in 2026","description":"Looking for " + aName + " alternatives? Top options ranked by use case, pricing, and editorial testing.","author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"mainEntityOfPage":pageUrl,"datePublished":"2026-07-14","dateModified":"2026-07-14" };
 const breadcrumbSchema = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":aName,"item":siteUrl+"/tool/"+id+"/"},{"@type":"ListItem","position":3,"name":"Alternatives","item":pageUrl}] };
+
+const seoTitle = pageLang === "zh"
+  ? `最佳 ${aNameZh} 替代品 2026（实测对比）`
+  : `Best ${aName} Alternatives in 2026 (Tested Side-by-Side)`;
+const seoDesc = pageLang === "zh"
+  ? `寻找 ${aNameZh} 替代品？我们按使用场景、价格和编辑实测排名了 ${altCount} 款工具。`
+  : `Looking for ${aName} alternatives? Here are the top options ranked by use case, pricing, and our editorial testing. ${altCount} tools compared.`;
 ---
-<BaseLayout title={"Best " + aName + " Alternatives in 2026 (Tested Side-by-Side)"} description={"Looking for " + aName + " alternatives? Here are the top options ranked by use case, pricing, and our editorial testing. " + altCount + " tools compared."} keywords={aName + " alternatives, alternatives to " + aName + ", " + aCat + " AI tools"}>
+<BaseLayout title={seoTitle} description={seoDesc} keywords={aName + " alternatives, alternatives to " + aName + ", " + aCat + " AI tools"} lang={pageLang}>
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
   </Fragment>
+  {pageLang === "zh" && <ZhNotice hasTranslation={zhAvailable} />}
 
   <article class="legal-page">
     <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={"/tool/" + id + "/"}>{aName}</a> &rsaquo; <span>Alternatives</span></nav>

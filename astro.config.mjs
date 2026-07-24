@@ -13,12 +13,9 @@ export default defineConfig({
     }
   },
   site: 'https://thebestaitoolsreview.com',
-  redirects: {
-    '/zh/[...slug]': '/[...slug]',
-  },
   trailingSlash: 'always',
   build: { format: 'directory' },
-  i18n: { defaultLocale: 'en', locales: ['en'] },
+  i18n: { defaultLocale: 'en', locales: ['en', 'zh'], routing: { prefixDefaultLocale: false } },
   integrations: [
     sitemap({
       // Exclude utility pages and the home anchor link from the sitemap
