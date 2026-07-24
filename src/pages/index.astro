@@ -1,10 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ZhNotice from "../components/ZhNotice.astro";
 import categoriesData from "../data/categories.json";
 import toolsData from "../data/tools.json";
 import matchupsData from "../data/matchups.json";
 import stackRecs from "../data/stack-recommendations.json";
 import "../styles/home.css";
+
+const pageLang = Astro.currentLocale || "en";
 
 const visibleTools = Object.entries(toolsData).filter(([, tool]) => !tool.hidden);
 const siteStats = {
@@ -83,13 +86,22 @@ const faqSchema = {
     "acceptedAnswer": { "@type": "Answer", "text": item.a_en }
   }))
 };
+
+const seoTitle = pageLang === "zh"
+  ? "AI Tool Hub | 发现你的理想 AI 工具组合"
+  : "AI Tool Hub | Find Your Perfect AI Stack";
+const seoDesc = pageLang === "zh"
+  ? "发现、对比并打造你的理想 AI 工具组合。探索涵盖写作、编程、图像、视频、音频及效率提升等领域的实测 AI 工具。"
+  : "Discover, compare, and build your ideal AI stack. Explore tested AI tools for writing, coding, images, video, audio, and productivity.";
 ---
 <BaseLayout
-  title="AI Tool Hub | Find Your Perfect AI Stack"
-  description="Discover, compare, and build your ideal AI stack. Explore tested AI tools for writing, coding, images, video, audio, and productivity."
+  title={seoTitle}
+  description={seoDesc}
   fullWidth={true}
+  lang={pageLang}
 >
   <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script></Fragment>
+  {pageLang === "zh" && <ZhNotice />}
   <div class="home-page">
     <section class="home-hero">
       <div class="home-shell hero-layout">

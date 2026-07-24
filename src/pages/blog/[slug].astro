@@ -1,15 +1,22 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ZhNotice from "../../components/ZhNotice.astro";
 import posts from "../../data/posts.json";
 import toolsData from "../../data/tools.json";
 import solutionsData from "../../data/solutions.json";
 import Comments from "../../components/Comments.astro";
 import RelatedPosts from "../../components/RelatedPosts.astro";
 import Feedback from "../../components/Feedback.astro";
+
+const pageLang = Astro.currentLocale || "en";
 export async function getStaticPaths() {
   return posts.map(p => ({ params: { slug: p.slug }, props: { post: p } }));
 }
 const { post } = Astro.props;
+const zhAvailable = !!(post.title_zh || post.desc_zh || post.content_zh);
+const postTitle = pageLang === "zh" && post.title_zh ? post.title_zh : post.title_en;
+const postDesc = pageLang === "zh" && post.desc_zh ? post.desc_zh : post.desc_en;
+const postContent = pageLang === "zh" && post.content_zh ? post.content_zh : post.content_en;
 const relatedTools = (post.related_tools || []).map(tid => {
   const t = toolsData[tid];
   return t ? { id: tid, name: t.name?.en || tid, icon: t.icon || "fa-robot" } : null;
@@ -39,8 +46,8 @@ const authorSchema = post.author_slug ? {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": post.title_en,
-  "description": post.desc_en,
+  "headline": postTitle,
+  "description": postDesc,
   "url": pageUrl,
   "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
   "image": {
@@ -60,7 +67,7 @@ const articleSchema = {
   },
   "articleSection": post.category,
   "keywords": (post.tags || []).join(", "),
-  "inLanguage": "en"
+  "inLanguage": pageLang === "zh" ? "zh" : "en"
 };
 const breadcrumbSchema = {
   "@context": "https://schema.org",
@@ -82,23 +89,24 @@ const faqSchema = {
   }))
 };
 ---
-<BaseLayout title={post.title_en} description={post.desc_en} keywords={post.tags?.join(", ") || post.title_en}>
+<BaseLayout title={postTitle} description={postDesc} keywords={post.tags?.join(", ") || postTitle} lang={pageLang}>
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
   </Fragment>
+  {pageLang === "zh" && <ZhNotice hasTranslation={zhAvailable} />}
   <div class="article">
     <nav class="breadcrumbs">
       <a href="/">Home</a> &rsaquo;
       <a href="/blog/">Blog</a> &rsaquo;
-      <span>{post.title_en}</span>
+      <span>{postTitle}</span>
     </nav>
 
     <header class="article-header">
       <span class="eyebrow">{post.category}</span>
-      <h1>{post.title_en}</h1>
-      <p class="lede">{post.desc_en}</p>
+      <h1>{postTitle}</h1>
+      <p class="lede">{postDesc}</p>
       <div class="article-meta">
         <span class="meta-item"><i class="far fa-calendar"></i> {post.date}</span>
         <span class="meta-item"><i class="far fa-clock"></i> {post.read_time} read</span>
@@ -111,7 +119,7 @@ const faqSchema = {
     </header>
 
     <section class="article-body">
-      {post.content_en && <Fragment set:html={post.content_en} />}
+      {postContent && <Fragment set:html={postContent} />}
     </section>
 
     {relatedTools.length > 0 && (
@@ -152,8 +160,8 @@ const faqSchema = {
       <p class="meta-text">Want us to review a specific tool? <a href="/contact/">Suggest a topic</a>.</p>
     </section>
 
-    <Feedback slug={post.slug} lang="en" />
+    <Feedback slug={post.slug} lang={pageLang === "zh" ? "zh" : "en"} />
     <RelatedPosts currentSlug={post.slug} currentCategory={post.category} currentTags={post.tags || []} relatedSlugs={post.related_posts || []} limit={3} />
-    <Comments lang="en" />
+    <Comments lang={pageLang === "zh" ? "zh" : "en"} />
   </div>
 </BaseLayout>

@@ -1,15 +1,23 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ZhNotice from "../../components/ZhNotice.astro";
 import posts from "../../data/posts.json";
 const sortedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date));
+
+const pageLang = Astro.currentLocale || "en";
+const seoTitle = pageLang === "zh" ? "博客 - AI Tool Hub" : "Blog - AI Tool Hub";
+const seoDesc = pageLang === "zh"
+  ? "AI Tool Hub 编辑团队的深度指南、实测评测与精选排名。每周更新。"
+  : "In-depth guides, rankings, and hands-on reviews of AI tools from the AI Tool Hub editorial team.";
 ---
-<BaseLayout title="Blog - AI Tool Hub" description="In-depth guides, rankings, and hands-on reviews of AI tools from the AI Tool Hub editorial team.">
+<BaseLayout title={seoTitle} description={seoDesc} lang={pageLang}>
+  {pageLang === "zh" && <ZhNotice />}
   <article class="legal-page">
     <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <span>Blog</span></nav>
     <header class="page-hero">
-      <span class="eyebrow">Insights &amp; guides</span>
-      <h1>Blog</h1>
-      <p class="lede">In-depth guides, hands-on reviews, and curated rankings from the AI Tool Hub editorial team. Updated weekly.</p>
+      <span class="eyebrow">{pageLang === "zh" ? "洞察与指南" : "Insights &amp; guides"}</span>
+      <h1>{pageLang === "zh" ? "博客" : "Blog"}</h1>
+      <p class="lede">{pageLang === "zh" ? "来自 AI Tool Hub 编辑团队的深度指南、实测评测与精选排名。每周更新。" : "In-depth guides, hands-on reviews, and curated rankings from the AI Tool Hub editorial team. Updated weekly."}</p>
     </header>
 
     <section>
@@ -18,8 +26,8 @@ const sortedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date));
           <a class="related-card" href={"/blog/" + p.slug + "/"}>
             <div class="related-icon"><i class="fas fa-newspaper"></i></div>
             <div>
-              <h3>{p.title_en}</h3>
-              <p>{p.desc_en}</p>
+              <h3>{pageLang === "zh" && p.title_zh ? p.title_zh : p.title_en}</h3>
+              <p>{pageLang === "zh" && p.desc_zh ? p.desc_zh : p.desc_en}</p>
               <p class="meta-text">
                 <i class="far fa-calendar"></i> {p.date} &middot; <i class="far fa-clock"></i> {p.read_time}
               </p>
@@ -30,7 +38,7 @@ const sortedPosts = [...posts].sort((a, b) => b.date.localeCompare(a.date));
     </section>
 
     <section class="section-mt back-link">
-      <p class="meta-text">More articles coming soon. Have a topic suggestion? <a href="/contact/">Let us know</a>.</p>
+      <p class="meta-text">{pageLang === "zh" ? "更多文章即将发布。有想看的主题？" : "More articles coming soon. Have a topic suggestion?"} <a href="/contact/">{pageLang === "zh" ? "告诉我们" : "Let us know"}</a>.</p>
     </section>
   </article>
 </BaseLayout>
