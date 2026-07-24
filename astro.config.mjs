@@ -1,9 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import node from '@astrojs/node';
 
 export default defineConfig({
-  adapter: node({ mode: 'standalone' }),
   vite: {
     resolve: {
       alias: {
@@ -12,7 +10,6 @@ export default defineConfig({
     }
   },
   site: 'https://thebestaitoolsreview.com',
-  output: 'hybrid',
   trailingSlash: 'always',
   build: { format: 'directory' },
   i18n: { defaultLocale: 'en', locales: ['en'] },
