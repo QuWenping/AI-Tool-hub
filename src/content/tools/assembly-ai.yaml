@@ -1,0 +1,89 @@
+name:
+  en: AssemblyAI
+  zh: AssemblyAI
+short_desc:
+  en: AI transcription API
+  zh: AI 转录 API
+long_desc:
+  en: High-accuracy speech-to-text with speaker detection
+cat: audio
+url: https://assemblyai.com
+icon: fa-waveform
+scenes:
+  en:
+  - transcription
+  - api
+  - analysis
+pros:
+  en:
+  - See review
+  zh:
+  - 详见评测
+cons:
+  en:
+  - See review
+  zh:
+  - 详见评测
+pricing:
+  en: Pay per use
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: AssemblyAI API 2026
+score: 8.4
+overall_score: 8.4
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - API
+  - Web Dashboard
+pricingSummary:
+  en: >-
+    Pay-as-you-go: Speech-to-Text $0.015/min (real-time $0.024/min) · LeMUR (LLM) $0.002 × 1k chars · Annual volume discounts
+    available.
+faq:
+- q_en: Is AssemblyAI free to use?
+  a_en: >-
+    The API has a free tier (limited hours per month). After that, pay-as-you-go pricing starts at $0.015 per minute for speech-to-text.
+- q_en: What is LeMUR?
+  a_en: >-
+    LeMUR is AssemblyAI's framework for applying LLMs to transcribed audio. You can ask questions, generate summaries, extract
+    action items, and classify content from your audio files.
+- q_en: What languages does AssemblyAI support?
+  a_en: >-
+    100+ languages for speech-to-text. Best accuracy on English, Spanish, French, German, Italian, Portuguese, Japanese, Korean,
+    Mandarin Chinese.
+- q_en: Does AssemblyAI support real-time transcription?
+  a_en: >-
+    Yes. Real-time streaming endpoint with speaker diarization, interim results, and final transcripts. Slightly higher pricing
+    at $0.024/min.
+- q_en: How accurate is AssemblyAI?
+  a_en: >-
+    Industry-leading for English with word error rate (WER) under 5% on clean audio. Accuracy drops on heavy accents, background
+    noise, or overlapping speech.
+- q_en: Can AssemblyAI identify multiple speakers?
+  a_en: >-
+    Yes. Speaker diarization is built in and configurable. It labels each segment with a speaker ID and supports up to 10+
+    speakers per audio file.
+- q_en: Does AssemblyAI support custom vocabulary?
+  a_en: >-
+    Yes. You can provide a custom vocabulary with domain-specific terms, product names, acronyms, and proper nouns to improve
+    accuracy.
+- q_en: How does AssemblyAI compare to Deepgram?
+  a_en: >-
+    AssemblyAI offers richer post-processing features (LeMUR LLM, content moderation, summarization). Deepgram has lower latency
+    and stronger custom model options. Both are top-tier API providers.
+- q_en: Is AssemblyAI secure for enterprise use?
+  a_en: >-
+    Yes. SOC 2 Type II certified, HIPAA compliance available on Enterprise plan, data encryption at rest and in transit, and
+    data retention policies you can configure.
+- q_en: What is the best use case for AssemblyAI?
+  a_en: >-
+    Building speech-to-text into your own product: call center analytics, meeting transcription, video captioning, podcast
+    indexing, and voice agent pipelines.
+scoreBreakdown:
+  user: 8.4
+  capability: 5
+  price: 10
+  growth: 7
+  trust: 8

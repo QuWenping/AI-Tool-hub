@@ -1,0 +1,24 @@
+name:
+  en: Playground AI
+  zh: Playground AI
+short_desc:
+  en: Online AI image creation
+  zh: 在线 AI 图像创作
+long_desc:
+  en: Online AI image creation and editing with multiple styles
+cat: image
+url: https://playground.com
+icon: fa-image
+scenes:
+  en:
+  - image
+  - editing
+  - creative
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

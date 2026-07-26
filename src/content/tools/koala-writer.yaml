@@ -1,0 +1,24 @@
+name:
+  en: Koala Writer
+  zh: Koala Writer
+short_desc:
+  en: AI blog writer
+  zh: AI 博客写作
+long_desc:
+  en: AI article writer optimized for SEO
+cat: text
+url: https://koala.sh
+icon: fa-pen
+scenes:
+  en:
+  - blog
+  - seo
+  - articles
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

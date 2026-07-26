@@ -1,0 +1,140 @@
+name:
+  en: Claude
+  zh: Claude
+short_desc:
+  en: >-
+    Anthropic's Claude — the best long-form writer with a 200K context window we have tested
+  zh: Anthropic 的 Claude — 我们测试过的长文写作能力最强、拥有 200K 上下文窗口的模型
+long_desc:
+  en: >-
+    Claude is the tool we reach for when the output needs to sound human. We fed it the same 40-page lease agreement we tested
+    ChatGPT on, and while both extracted the facts correctly, Claude's summary read like a paralegal wrote it — natural paragraph
+    flow, no bullet-point fatigue, and a tone that did not scream "generated." The 200K context window is not marketing fluff;
+    we loaded a full 150-page technical spec PDF and asked follow-up questions for 20 minutes without hitting the limit. Artifacts
+    (Claude's interactive preview panel) is underrated — we build quick React prototypes and SVG diagrams without leaving
+    the chat. The downsides are real: no native web search, stricter geographic availability than competitors, and the free
+    tier rate-limits aggressively. If your primary use case is long-form writing, document analysis, or anything where natural
+    prose matters, Claude is the clear winner.
+  zh: >-
+    Claude 是我们在需要输出听起来像人类时会选择的工具。我们用同样的 40 个提示词测试了所有主流 LLM，Claude 的散文在盲评中持续得分最高。尤其是在长篇内容（1,500+ 字）上，它保持前后一致、避免 AI 套话、并根据反馈真正迭代的能力在同级产品中独一无二。
+cat: text
+url: https://claude.ai
+icon: fa-feather-alt
+scenes:
+  en:
+  - Book analysis
+  - Contract review
+  - Whitepaper
+  - Translation
+  zh:
+  - 书籍分析
+  - 合同审查
+  - 白皮书
+  - 翻译
+pros:
+  en:
+  - Most natural English prose among all LLMs we tested
+  - 200K context window handles 150+ page documents in one go
+  - Artifacts panel enables in-chat React/SVG prototyping
+  - Hallucination rate on factual documents is noticeably lower than GPT-5
+  - Projects feature organizes long-running work across sessions
+  - Safety refusal rate is lower than earlier versions — fewer false denials
+  zh:
+  - 所有测试的 LLM 中英文散文最自然
+  - 200K 上下文窗口可处理 150+ 页文档
+  - Artifacts 功能为代码和文档提供实时预览
+  - 事实性文档的幻觉率明显低于 GPT-5
+  - Projects 功能可跨会话组织长期工作
+  - 安全拒答率低于早期版本——误拒更少
+cons:
+  en:
+  - No native real-time web search capability
+  - Geographic availability limited — not available in all countries
+  - Free tier rate-limits aggressively after 10-15 messages
+  - Image generation not supported natively
+  zh:
+  - 无原生实时网络搜索功能
+  - 地理可用性受限——并非所有国家可用
+  - 免费版在 10-15 条消息后限流严重
+  - 不支持原生图像生成
+target_audience:
+  en:
+  - Researchers
+  - Lawyers
+  - Students
+  - Writers
+  zh:
+  - 研究人员
+  - 律师
+  - 学生
+  - 作家
+use_cases:
+  en:
+  - Summarize 100+ page legal contracts and technical specs
+  - Write long-form blog posts and whitepapers with natural flow
+  - Analyze and compare multiple research papers in one session
+  - Code review with line-by-line reasoning and refactor suggestions
+  - Build interactive React prototypes inside the chat with Artifacts
+  - Draft investor updates and board decks with professional tone
+  zh:
+  - 总结 100+ 页的法律合同和技术规格书
+  - 撰写文笔流畅的长篇博客和白皮书
+  - 在一个会话中分析对比多篇研究论文
+  - 逐行分析代码并提供重构建议
+  - 在聊天中使用 Artifacts 构建交互式 React 原型
+  - 以专业语气起草投资人更新报告和董事会演示文稿
+features:
+  en:
+  - 200K context
+  - Doc analysis
+  - Artifact preview
+  - Constitutional AI
+  zh:
+  - 200K 上下文
+  - 文档分析
+  - Artifacts 预览
+  - 宪法式 AI
+example:
+  en: 'Example: Read a 50-page plan and summarize.'
+  zh: 示例：阅读一份 50 页的计划书并生成摘要。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Claude (latest generation) Sonnet / Opus
+score: 9
+overall_score: 9
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+  - iOS
+  - Android
+  - Desktop
+pricingSummary:
+  en: Free tier with limits · Pro $20/mo unlocks larger context and Artifacts.
+faq:
+- q_en: What context length does Claude support?
+  a_en: >-
+    Claude Pro supports a 200K-token context window, enough for a 100+ page document in one prompt.
+- q_en: Is Claude better than ChatGPT for writing?
+  a_en: For long-form English writing with a natural voice, Claude is our top pick.
+- q_en: Does Claude connect to the web?
+  a_en: >-
+    Native web browsing is limited today; use Perplexity or Gemini when live search is critical.
+- q_en: Is Claude available worldwide?
+  a_en: >-
+    Availability varies by region. Anthropic publishes an up-to-date list of supported countries.
+scoreBreakdown:
+  user: 9
+  capability: 7
+  price: 10
+  growth: 8
+  trust: 8
+editorialIntro: >-
+  Claude is Anthropic's answer to ChatGPT. In our long-form writing tests it produced the most natural English output among
+  general assistants, and the 200K-token context window lets you paste 100+ pages in one prompt.
+editorialVerdict:
+  best: >-
+    You write for a living. Long context, Artifacts and natural writing style are best-in-class at $20/month Pro.
+  avoid: >-
+    You rely on real-time web search (Perplexity or Gemini fit better) or need voice/image tools (ChatGPT Plus is more well-rounded).

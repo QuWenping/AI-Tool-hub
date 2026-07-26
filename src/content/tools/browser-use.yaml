@@ -1,0 +1,33 @@
+name:
+  en: Browser Use
+  zh: Browser Use
+short_desc:
+  en: AI agent framework that controls browsers to execute tasks
+  zh: 控制浏览器执行任务的 AI 智能体框架
+long_desc:
+  en: >-
+    Browser Use is an open-source Python framework that lets LLMs control browsers through visual understanding and DOM parsing.
+    Supports multi-tab operations, file uploads/downloads, form filling, and more. Ideal for automating web tasks and data
+    collection.
+cat: productivity
+url: https://github.com/browser-use/browser-use
+icon: fa-window-restore
+scenes:
+  en:
+  - Browser automation
+  - Web scraping
+  - Auto form filling
+  - E2E testing
+pros:
+  en:
+  - 'Dual mode: vision + DOM understanding'
+  - Multi-tab support
+  - Open source and customizable
+  - Works with major LLMs
+cons:
+  en:
+  - Speed limited by browser rendering
+  - May fail on complex pages
+  - Requires Python environment
+pricing:
+  en: Open source (requires LLM API)

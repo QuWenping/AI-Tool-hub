@@ -1,0 +1,134 @@
+name:
+  en: Replit
+  zh: Replit
+short_desc:
+  en: Cloud AI dev environment, code and deploy in browser
+  zh: 云端 AI 开发环境，浏览器中编码和部署
+long_desc:
+  en: >-
+    Replit is a cloud IDE with built-in AI assistant, supporting in-browser dev, run, and deploy.
+cat: code
+url: https://replit.com
+icon: fa-cloud
+scenes:
+  en:
+  - Quick protos
+  - Teaching
+  - Collab dev
+  - Deploy
+  zh:
+  - 快速原型
+  - 学习编程
+  - 全栈应用
+  - 浏览器开发
+pros:
+  en:
+  - Zero config
+  - Browser-based
+  - One-click deploy
+  zh:
+  - 零安装浏览器即用
+  - AI Agent 可生成完整应用
+  - 一键部署
+cons:
+  en:
+  - Limited for big projects
+  - Paid for advanced AI
+  zh:
+  - 性能受限于云端环境
+  - 不适合大型生产项目
+target_audience:
+  en:
+  - Students
+  - Beginners
+  - Prototypers
+  zh:
+  - 学生
+  - 初学者
+  - 原型开发者
+use_cases:
+  en:
+  - Protos
+  - Teaching
+  - Deploy
+  - Collab
+  zh:
+  - 原型开发
+  - 教学
+  - 部署
+  - 协作
+features:
+  en:
+  - Cloud IDE
+  - AI assistant
+  - One-click deploy
+  - Collab
+  zh:
+  - 云端 IDE
+  - AI 助手
+  - 一键部署
+  - 协作
+example:
+  en: 'Example: Generate a Flask API in Replit and deploy it.'
+  zh: 示例：在 Replit 中生成 Flask API 并部署。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Replit 2026 (Agent Mode)
+score: 8.6
+overall_score: 8.6
+quickFacts:
+  freeTier: true
+  hasApi: false
+  platforms:
+  - Web Browser
+  - iOS
+  - Android
+pricingSummary:
+  en: >-
+    Free tier (limited compute + AI) · Core $20/mo (unlimited compute + AI agent) · Teams $40/seat/mo.
+faq:
+- q_en: What is Replit?
+  a_en: >-
+    A browser-based cloud IDE with built-in AI. You can code, run, and deploy apps without installing anything. The 2026 Agent
+    mode can build entire features from a description.
+- q_en: Is Replit free?
+  a_en: >-
+    Free tier includes limited compute and AI credits. Core at $20/month removes the limits and adds the AI agent with full
+    context.
+- q_en: Can Replit deploy apps?
+  a_en: >-
+    Yes. One-click deploy with a generated URL. Static sites, Node.js, Python, and Go apps are supported. Custom domains on
+    paid plans.
+- q_en: Is Replit good for learning to code?
+  a_en: >-
+    Yes. Zero setup, browser-based, and the AI agent explains code as it generates it. Widely used in CS education programs.
+- q_en: How does Replit compare to Cursor?
+  a_en: >-
+    Replit is browser-based and requires no setup — ideal for quick prototypes and learning. Cursor is a local IDE with deeper
+    codebase understanding and better for large projects.
+- q_en: What languages does Replit support?
+  a_en: >-
+    50+ languages including Python, JavaScript, TypeScript, Go, Rust, C++, Java, HTML/CSS, Bash, and SQL. Python and JavaScript
+    have the best AI support.
+- q_en: Can teams collaborate on Replit?
+  a_en: >-
+    Yes. Teams plan includes multiplayer editing, shared secrets, and team workspaces. Multiple developers can edit the same
+    repl simultaneously.
+- q_en: Is Replit's Agent mode worth the upgrade?
+  a_en: >-
+    If you build features frequently, yes. The Agent can scaffold, debug, and deploy autonomously — saving hours per feature.
+    The free tier is good for occasional use.
+- q_en: Can Replit run scheduled tasks?
+  a_en: >-
+    Yes, with the Always-On feature (paid plans). You can keep a web server running or schedule cron jobs. The free tier sleeps
+    after inactivity.
+- q_en: Who should use Replit?
+  a_en: >-
+    Students learning to code, developers prototyping quickly, educators teaching programming, and anyone who wants to code
+    from any device without setup.
+scoreBreakdown:
+  user: 8.6
+  capability: 7
+  price: 10
+  growth: 5
+  trust: 8

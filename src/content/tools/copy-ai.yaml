@@ -1,0 +1,184 @@
+name:
+  en: Copy.ai
+  zh: Copy.ai
+short_desc:
+  en: AI marketing copy generation platform
+  zh: AI 营销文案生成平台
+long_desc:
+  en: >-
+    Copy.ai is designed for marketing teams, offering ad, email, blog copy templates and AI generation.
+cat: text
+url: https://www.copy.ai
+icon: fa-pen
+scenes:
+  en:
+  - Ad copy
+  - Email marketing
+  - Social media
+  - Blog
+  zh:
+  - 广告文案
+  - 邮件营销
+  - 落地页
+  - 社交媒体
+pros:
+  en:
+  - Full marketing templates
+  - Team collab
+  - Multilingual
+  zh:
+  - 营销场景模板丰富
+  - 批量生成效率高
+  - 品牌语调管理
+cons:
+  en:
+  - Generic output
+  - Mid-high price
+  zh:
+  - 性价比不如 ChatGPT
+  - 中文营销文案质量一般
+target_audience:
+  en:
+  - Marketers
+  - Copywriters
+  - SMBs
+  zh:
+  - 营销人员
+  - 文案写手
+  - 中小企业
+use_cases:
+  en:
+  - Ads
+  - Email
+  - Social
+  - Blog
+  zh:
+  - 广告
+  - 邮件
+  - 社交媒体
+  - 博客
+features:
+  en:
+  - Marketing templates
+  - AI gen
+  - Team collab
+  - Multilingual
+  zh:
+  - 营销模板
+  - AI 生成
+  - 团队协作
+  - 多语言
+example:
+  en: 'Example: Generate 5 Facebook ad copy variations.'
+  zh: 示例：生成 5 个 Facebook 广告文案变体。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Copy.ai (2026-07)
+score: 7.6
+overall_score: 7.6
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+pricingSummary:
+  en: >-
+    Free tier: 2,000 words/mo. Pro at $49/mo (unlimited words, 5 seats). Team at $249/mo (unlimited, 20 seats, workflow builder).
+    Enterprise custom.
+faq:
+- q_en: What is Copy.ai and who is it for?
+  a_en: >-
+    Copy.ai is an AI-powered GTM (Go-To-Market) content platform designed for marketing teams, sales professionals, and startup
+    founders. Unlike basic AI writing tools that only generate text from prompts, Copy.ai provides automated workflow pipelines
+    that chain multiple AI steps—for example, researching a prospect's LinkedIn, drafting a personalized outreach email in
+    your brand voice, and generating follow-up content—all triggered by a single action. It includes 90+ templates, a Brand
+    Voice system that learns your company's writing style, and an Infobase knowledge repository that stores product documentation
+    and sales materials for the AI to reference. The free tier provides 2,000 words per month without requiring a credit card,
+    making it accessible for solopreneurs and small teams to test before committing to a paid plan.
+- q_en: Does Copy.ai have a free plan?
+  a_en: >-
+    Yes, Copy.ai offers a free tier that includes 2,000 words per month with no credit card required at signup. The free plan
+    provides access to core features including the chat-based content generator, basic templates for blog posts, emails, and
+    social media content, and the Brand Voice system for tone consistency. Advanced features like the GTM AI Workflow Builder,
+    Infobase knowledge repository, and team collaboration features are locked behind the Pro plan at $49/month (unlimited
+    words, 5 seats). The free tier is suitable for testing the platform and casual use, but most professional users will need
+    the Pro plan within the first month.
+- q_en: How does Copy.ai Brand Voice work?
+  a_en: >-
+    Copy.ai's Brand Voice feature analyzes your existing content—landing pages, blog posts, email campaigns, sales decks—to
+    learn your company's unique tone, vocabulary, sentence structure, and stylistic preferences. After uploading reference
+    materials and defining voice attributes (e.g., professional but approachable, data-driven, conversational, authoritative),
+    the AI applies these characteristics to all generated content. You can create multiple Brand Voices for different product
+    lines, audience segments, or campaign types. The system also detects tone drift when team members generate content that
+    deviates from established guidelines, helping maintain consistency across a distributed marketing team. Brand Voice is
+    available on all plans including the free tier.
+- q_en: What is Copy.ai Infobase?
+  a_en: >-
+    Infobase is Copy.ai's knowledge repository system where you upload your company's product documentation, sales playbooks,
+    competitive battle cards, brand guidelines, pricing sheets, and other reference materials. The AI then references Infobase
+    when generating content to ensure accuracy and reduce hallucination. For example, when drafting a product launch blog
+    post, the AI can pull the latest feature specifications, pricing details, and competitor differentiators directly from
+    Infobase rather than making assumptions. This significantly reduces the editing time needed to verify AI-generated claims.
+    Infobase supports text documents, PDFs, web pages via URL, and direct text input. It is available on Pro plans and above.
+- q_en: How do Copy.ai GTM AI Workflows work?
+  a_en: >-
+    GTM AI Workflows are Copy.ai's automation pipelines that chain multiple AI steps into a single triggered sequence. For
+    example, a sales rep can create a workflow that: (1) inputs a prospect's LinkedIn profile URL, (2) the AI researches the
+    prospect's company, role, and recent activity, (3) drafts a personalized outreach email in the company's brand voice incorporating
+    the research, (4) generates a follow-up LinkedIn message, and (5) saves everything to HubSpot. Workflows can be triggered
+    manually or via integrations with Salesforce, HubSpot, and webhooks. The Workflow Builder uses a visual drag-and-drop
+    interface where you connect AI action blocks like research, draft, personalize, summarize, and translate. Workflows are
+    available on Team plans and above.
+- q_en: Does Copy.ai integrate with other tools?
+  a_en: >-
+    Yes, Copy.ai integrates with major CRM, productivity, and communication platforms. Native integrations include Salesforce
+    (pull contact data, push generated content to records), HubSpot (create marketing emails and sales sequences from AI-generated
+    drafts), Google Workspace (export content to Docs, Sheets for team review and collaboration), and Microsoft 365. The API
+    allows custom integrations with internal tools and workflows. Zapier integration connects Copy.ai to thousands of additional
+    apps. The Pro plan includes API access and basic integrations, while the Team plan adds Workflow integrations that can
+    trigger AI generations from CRM events like a new lead being added or a deal stage change.
+- q_en: How does Copy.ai compare to Jasper?
+  a_en: >-
+    Copy.ai and Jasper are the two leading AI marketing content platforms but serve different organizational needs. Copy.ai
+    differentiates with its GTM AI Workflow automation, which chains multiple AI steps into automated pipelines for sales
+    and marketing teams, and its Infobase knowledge repository for accuracy. Jasper excels at long-form content quality with
+    its document editor, SEO mode integrating Surfer SEO, and more refined outputs for blog posts and in-depth articles. For
+    teams focused on automating their go-to-market content engine with workflows, Copy.ai is the stronger choice. For content
+    marketers who prioritize long-form blog quality, SEO optimization, and polished editorial output, Jasper typically delivers
+    better results. Copy.ai's free tier is more generous (2,000 words vs Jasper's 7-day trial), but Jasper's output requires
+    less human editing for long-form pieces.
+- q_en: Can Copy.ai write long-form blog posts?
+  a_en: >-
+    Copy.ai can generate long-form blog posts up to 1,500+ words using its Blog Post Wizard template and the general chat
+    interface. However, quality degrades noticeably beyond approximately 800 words, with generated content tending toward
+    generic statements, repetition, and shallow analysis that requires significant human editing to reach publishable quality.
+    For short-form content under 500 words—social media posts, email sequences, ad copy, and product descriptions—Copy.ai's
+    output is generally strong with minimal editing needed. If your primary need is long-form blog content, Jasper or dedicated
+    writing assistants like Sudowrite may deliver better raw output quality. Copy.ai's strength is in generating the full
+    marketing content ecosystem (blog intro + social posts + email campaign + sales follow-ups) around a topic rather than
+    a single polished long-form piece.
+- q_en: Is Copy.ai suitable for non-English content?
+  a_en: >-
+    Copy.ai supports content generation in over 25 languages including Spanish, French, German, Portuguese, Italian, Dutch,
+    Japanese, Korean, Chinese (Simplified), Arabic, Hindi, and Russian. Language quality varies: English output is the most
+    polished and natural since the underlying models are optimized for English. Major European languages (Spanish, French,
+    German, Portuguese) deliver good quality output suitable for marketing content. Asian languages (Japanese, Korean, Chinese)
+    and Arabic produce functional but sometimes awkward phrasing that benefits from native speaker review. The Brand Voice
+    feature works across supported languages, learning tone and style preferences from the primary language and applying them
+    to translations. For multilingual campaigns, it is recommended to write original content in English first, then use Copy.ai's
+    translation and localization feature rather than generating from scratch in the target language.
+- q_en: Can Copy.ai generate images or multimedia content?
+  a_en: >-
+    Copy.ai's capabilities are primarily text-focused with limited image generation support. It does not have a native AI
+    image generator but can suggest image concepts and descriptions for use in other tools. Some templates include placeholder
+    areas for images, but you need to source and insert images manually or through integrations. Copy.ai does not generate
+    video, audio, presentations, or infographics. This is a significant limitation compared to all-in-one platforms like Canva
+    AI which combines copywriting with design, or Jasper which includes an AI image generator. If your content workflow requires
+    frequent visual asset creation alongside text, you should plan to pair Copy.ai with a dedicated image generation tool
+    like Midjourney, DALL-E, or Canva.
+scoreBreakdown:
+  user: 7.8
+  capability: 7.5
+  price: 7.0
+  growth: 7.2
+  trust: 7.5

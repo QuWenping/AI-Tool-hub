@@ -1,0 +1,24 @@
+name:
+  en: Aider
+  zh: Aider
+short_desc:
+  en: AI pair programming CLI
+  zh: AI 结对编程 CLI
+long_desc:
+  en: AI pair programming in terminal with git integration
+cat: code
+url: https://aider.chat
+icon: fa-code
+scenes:
+  en:
+  - pair-programming
+  - terminal
+  - git
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

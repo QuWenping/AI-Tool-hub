@@ -1,0 +1,24 @@
+name:
+  en: Artbreeder
+  zh: Artbreeder
+short_desc:
+  en: Collaborative AI image blending
+  zh: 协作式 AI 图像融合
+long_desc:
+  en: Create unique images by blending and adjusting gene parameters
+cat: image
+url: https://artbreeder.com
+icon: fa-paint-brush
+scenes:
+  en:
+  - character
+  - landscape
+  - art
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

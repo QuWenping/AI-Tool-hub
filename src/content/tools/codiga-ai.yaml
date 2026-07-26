@@ -1,0 +1,24 @@
+name:
+  en: Codiga
+  zh: Codiga
+short_desc:
+  en: AI code assistant
+  zh: AI 代码助手
+long_desc:
+  en: Code analysis and snippets for code review
+cat: code
+url: https://codiga.io
+icon: fa-code
+scenes:
+  en:
+  - analysis
+  - snippets
+  - review
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

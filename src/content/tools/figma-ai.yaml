@@ -1,0 +1,68 @@
+name:
+  en: Figma AI
+  zh: Figma AI
+short_desc:
+  en: AI design assistant built into Figma
+  zh: 内置于 Figma 的 AI 设计助手
+long_desc:
+  en: >-
+    Figma AI provides text-to-UI, auto-rename layers, content fill, and more inside the design tool.
+cat: image
+url: https://www.figma.com
+icon: fa-pen-nib
+scenes:
+  en:
+  - UI design
+  - Auto-rename
+  - Content fill
+  - Text-to-UI
+pros:
+  en:
+  - Built into Figma
+  - Designer-friendly
+  - Workflow integrated
+  zh:
+  - Figma 内置
+  - 设计师友好
+  - 工作流集成
+cons:
+  en:
+  - Limited AI features
+  - Requires Figma paid
+  zh:
+  - AI 功能有限
+  - 需 Figma 付费版
+target_audience:
+  en:
+  - Designers
+  - PMs
+  - Frontend
+  zh:
+  - 设计师
+  - 产品经理
+  - 前端开发者
+use_cases:
+  en:
+  - UI design
+  - Prototypes
+  - Efficiency
+  - Content
+  zh:
+  - UI 设计
+  - 原型
+  - 效率提升
+  - 内容填充
+features:
+  en:
+  - Text-to-UI
+  - Auto-rename
+  - Content fill
+  - AI search
+  zh:
+  - 文字转 UI
+  - 自动重命名
+  - 内容填充
+  - AI 搜索
+example:
+  en: 'Example: Generate a login page UI from text.'
+  zh: 示例：用文字生成登录页 UI。

@@ -1,0 +1,138 @@
+name:
+  en: DeepSeek
+  zh: DeepSeek
+short_desc:
+  en: Leading Chinese AI model, exceptional value
+  zh: 领先的中国 AI 模型，性价比极高
+long_desc:
+  en: >-
+    DeepSeek offers near-GPT-4 capability at extremely low cost, open-source model for local deploy, strong in Chinese.
+cat: text
+url: https://chat.deepseek.com
+icon: fa-water
+scenes:
+  en:
+  - Chinese writing
+  - Coding
+  - Reasoning
+  - API calls
+  zh:
+  - 中文对话
+  - 编程推理
+  - 预算开发
+  - 学术研究
+pros:
+  en:
+  - Extremely cheap
+  - Open source
+  - Strong Chinese
+  zh:
+  - 性价比行业最高
+  - 开源模型
+  - 中文支持最佳
+cons:
+  en:
+  - Unstable overseas
+  - Weak multimodal
+  zh:
+  - 多模态能力不如 Gemini
+  - 国际知名度有待提升
+target_audience:
+  en:
+  - Chinese users
+  - Devs
+  - Budget-sensitive
+  zh:
+  - 中文用户
+  - 开发者
+  - 预算敏感用户
+use_cases:
+  en:
+  - CN writing
+  - Coding
+  - API
+  - Local deploy
+  zh:
+  - 中文写作
+  - 编程
+  - API 调用
+  - 本地部署
+features:
+  en:
+  - Open model
+  - Cheap API
+  - CN-optimized
+  - Strong reasoning
+  zh:
+  - 开源模型
+  - 廉价 API
+  - 中文优化
+  - 强推理能力
+example:
+  en: 'Example: Write a Chinese product intro with DeepSeek.'
+  zh: 示例：用 DeepSeek 撰写中文产品介绍。
+reviewed: true
+updatedAt: '2026-07-21'
+testedVersion: DeepSeek-V3 / DeepSeek-R1 (2026)
+score: 8.6
+overall_score: 8.6
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+  - iOS
+  - Android
+  - API
+  - Self-hosted
+pricingSummary:
+  en: >-
+    Free web/app chat · API $0.14/M input, $0.28/M output for V3 · R1 reasoning at $0.55/M input, $2.19/M output · Weights
+    open-source for self-hosting.
+faq:
+- q_en: Is DeepSeek free to use?
+  a_en: >-
+    Yes — the web app and mobile app are free. Paid usage only kicks in when you call the API or self-host on your own GPUs.
+- q_en: How is DeepSeek so much cheaper than current-generation models or Claude?
+  a_en: >-
+    DeepSeek trained a Mixture-of-Experts (MoE) model that activates only ~37B of its 671B parameters per token, so inference
+    cost is a fraction of dense frontier models. Public weights let cloud vendors compete on price.
+- q_en: What is DeepSeek-R1 and how is it different from V3?
+  a_en: >-
+    V3 is the general-purpose chat/coding model. R1 is the reasoning model with visible chain-of-thought; use R1 for math,
+    code review, planning and hard reasoning, use V3 for everything else.
+- q_en: How does DeepSeek compare to ChatGPT for Chinese content?
+  a_en: >-
+    DeepSeek's Chinese writing and reasoning are noticeably more natural than ChatGPT on native mainland-Chinese prompts.
+    For English long-form writing, Claude still leads.
+- q_en: Can I self-host DeepSeek?
+  a_en: >-
+    Yes. Full weights are released under an MIT-style license. Practical self-hosting requires 8×H100 or equivalent for the
+    full V3/R1; distilled variants run on a single 24 GB GPU.
+- q_en: Is DeepSeek safe for enterprise data?
+  a_en: >-
+    The hosted API stores prompts and may use them for service improvement unless you opt out. For sensitive data, deploy
+    the open-source weights on your own infrastructure or use a private cloud (Azure, AWS, Volcano Engine) that offers DeepSeek
+    without data retention.
+- q_en: How good is DeepSeek at coding?
+  a_en: >-
+    V3 is competitive with Claude (latest generation) Sonnet on HumanEval and beats current-generation models on many benchmarks.
+    R1 excels at multi-file refactor reasoning. Cursor and Cline both support DeepSeek as the underlying model.
+- q_en: Does DeepSeek support image and voice input?
+  a_en: >-
+    V3 has limited multimodal support; DeepSeek-VL handles vision separately. For serious multimodal work, Gemini (latest
+    generation) Pro or current-generation models remain stronger choices in 2026.
+- q_en: Are there censorship or topic restrictions?
+  a_en: >-
+    The hosted DeepSeek service filters politically sensitive Chinese topics. The open-source weights on your own hardware
+    do not carry the same filter but still reflect training-data bias.
+- q_en: Who should not use DeepSeek?
+  a_en: >-
+    Teams needing tightly integrated voice, image and plugin ecosystems (ChatGPT Plus wins) or the most natural English long-form
+    writing (Claude wins). For everyone else it is the best price/performance model in 2026.
+scoreBreakdown:
+  user: 8.6
+  capability: 7
+  price: 10
+  growth: 8
+  trust: 8

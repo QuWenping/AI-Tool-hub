@@ -1,0 +1,24 @@
+name:
+  en: Reclaim AI
+  zh: Reclaim AI
+short_desc:
+  en: AI schedule optimizer
+  zh: AI 日程优化器
+long_desc:
+  en: AI that protects your time and optimizes your calendar
+cat: productivity
+url: https://reclaim.ai
+icon: fa-calendar
+scenes:
+  en:
+  - calendar
+  - time-management
+  - scheduling
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

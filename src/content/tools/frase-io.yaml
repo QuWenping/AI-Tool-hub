@@ -1,0 +1,24 @@
+name:
+  en: Frase
+  zh: Frase
+short_desc:
+  en: AI SEO content platform
+  zh: AI SEO 内容平台
+long_desc:
+  en: AI SEO research and writing for optimized content
+cat: text
+url: https://frase.io
+icon: fa-file-text
+scenes:
+  en:
+  - seo
+  - content
+  - research
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

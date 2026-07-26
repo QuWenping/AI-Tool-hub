@@ -1,0 +1,24 @@
+name:
+  en: AI Voice
+  zh: AI Voice
+short_desc:
+  en: AI voice generator
+  zh: AI 语音生成器
+long_desc:
+  en: Natural AI voice generation for content creators
+cat: audio
+url: https://aivoice.com
+icon: fa-microphone
+scenes:
+  en:
+  - voice
+  - tts
+  - narration
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

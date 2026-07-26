@@ -1,0 +1,47 @@
+name:
+  en: You.com
+  zh: You.com
+short_desc:
+  en: Web search APIs for AI applications
+  zh: 面向 AI 应用的网页搜索 API
+long_desc:
+  en: >-
+    You.com provides web search, content extraction, and grounded answer APIs for AI agents and LLMs, serving enterprises
+    like OpenAI and Amazon.
+cat: text
+url: https://you.com
+icon: fa-search
+scenes:
+  en:
+  - AI search API
+  - Content extraction
+  - RAG
+  - Enterprise
+pros:
+  en:
+  - Enterprise API
+  - Clean content extraction
+  - Big client backing
+cons:
+  en:
+  - Developer-focused
+  - Not consumer-facing
+target_audience:
+  en:
+  - Devs
+  - AI teams
+  - Enterprise
+use_cases:
+  en:
+  - RAG
+  - Agent search
+  - Content extraction
+  - API
+features:
+  en:
+  - Search API
+  - Content extraction
+  - RAG
+  - Enterprise
+example:
+  en: 'Example: Add web search to your AI Agent via You.com API.'

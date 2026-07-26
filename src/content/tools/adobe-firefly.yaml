@@ -1,0 +1,135 @@
+name:
+  en: Adobe Firefly
+  zh: Adobe Firefly
+short_desc:
+  en: Adobe AI creative tool for images, video, and audio
+  zh: Adobe AI 创意工具，涵盖图片、视频和音频
+long_desc:
+  en: >-
+    Adobe Firefly is an AI-powered creative space to create and edit images, videos, audio, and vector graphics from text
+    prompts, supporting the entire creative process.
+cat: image
+url: https://www.adobe.com/products/firefly.html
+icon: fa-fire
+scenes:
+  en:
+  - Image gen
+  - Video gen
+  - Creative editing
+  - Vector
+pros:
+  en:
+  - Adobe ecosystem
+  - Multimodal
+  - Commercial-safe
+  zh:
+  - Adobe 生态
+  - 多模态
+  - 商业安全可用
+cons:
+  en:
+  - Needs Adobe subscription
+  - Weak Chinese
+  zh:
+  - 需 Adobe 订阅
+  - 中文支持弱
+target_audience:
+  en:
+  - Designers
+  - Marketing
+  - Creative teams
+  zh:
+  - 设计师
+  - 营销
+  - 创意团队
+use_cases:
+  en:
+  - Images
+  - Video
+  - Creative
+  - Editing
+  zh:
+  - 图像
+  - 视频
+  - 创意
+  - 编辑
+features:
+  en:
+  - Image gen
+  - Video gen
+  - Audio
+  - Vector
+  zh:
+  - 图像生成
+  - 视频生成
+  - 音频
+  - 矢量图
+example:
+  en: 'Example: Generate and edit product concept images with Firefly.'
+  zh: 示例：使用 Firefly 生成并编辑产品概念图。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Firefly web (2026-07)
+score: 8.2
+overall_score: 8.2
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+  - Desktop
+pricingSummary:
+  en: >-
+    Free tier with 25 monthly generative credits. Premium plan from $4.99/mo for 100 credits. Included in Creative Cloud subscriptions.
+faq:
+- q_en: Is Adobe Firefly free to use?
+  a_en: >-
+    Yes, Adobe Firefly offers a free tier with 25 generative credits per month. Each image generation or edit consumes 1 credit.
+    The Premium plan at $4.99/month provides 100 credits and faster processing. Firefly features are also included in most
+    Creative Cloud subscriptions with higher credit allowances.
+- q_en: What makes Firefly commercially safe?
+  a_en: >-
+    Adobe trained Firefly exclusively on Adobe Stock images, openly licensed content, and public domain material—not on scraped
+    web data. Adobe provides IP indemnification for enterprise customers, meaning Adobe will defend against copyright claims
+    on Firefly-generated content used in accordance with their terms, a unique guarantee in the AI image space.
+- q_en: Can I use Firefly inside Photoshop?
+  a_en: >-
+    Absolutely. Firefly powers Generative Fill and Generative Expand directly inside Photoshop (v25.0+). Simply make a selection,
+    click Generative Fill, and type what you want to add or replace. For background extension, use the Crop tool and select
+    Generative Expand. These features work non-destructively on separate layers.
+- q_en: How does Firefly compare to integrated image generation?
+  a_en: >-
+    Firefly prioritizes commercial safety and Creative Cloud integration, making it ideal for professional design workflows.
+    integrated image generation offers superior prompt understanding and text generation within images. Firefly excels at
+    editing existing images (Generative Fill), while integrated image generation is stronger at generating complete images
+    from complex descriptions from scratch.
+- q_en: What is Generative Fill in Firefly?
+  a_en: >-
+    Generative Fill is Firefly's inpainting feature that lets you select any area of an image and replace it with AI-generated
+    content matching the surrounding context, lighting, and perspective. It's Notably Advanced for removing unwanted objects,
+    adding elements, extending backgrounds, and even creating full scenes from rough sketches.
+- q_en: Does Firefly support style reference?
+  a_en: >-
+    Yes, Firefly's Style Reference feature lets you upload a reference image, and the model generates new images matching
+    its aesthetic style—color palette, lighting, texture, and overall mood. Combined with Structure Reference (which locks
+    composition), you can achieve tight control over output while maintaining creative flexibility.
+- q_en: Can I generate vector graphics with Firefly?
+  a_en: >-
+    Firefly doesn't generate vectors from scratch, but its Generative Recolor feature in Adobe Illustrator uses AI to instantly
+    recolor entire vector artworks based on text prompts. You can type 'vaporwave aesthetic' or 'autumn palette' and watch
+    your vector illustration transform while preserving all paths and layers intact.
+- q_en: What Firefly features are in Adobe Express?
+  a_en: >-
+    Adobe Express integrates Text to Image, Text Effects, and Generative Fill for quick social media content creation. The
+    Text Effects feature is particularly popular—it transforms typed text into AI-styled typography (neon, metallic, 3D).
+    Express is the easiest entry point for non-designers to access Firefly's creative AI capabilities.
+- q_en: Does Firefly have video generation?
+  a_en: >-
+    Adobe is developing Firefly Video, currently in limited beta. Early previews show text-to-video generation, AI-powered
+    video editing in Premiere Pro (object removal, scene extension), and generative audio. However, these features are not
+    yet broadly available and significantly trail dedicated video AI tools like Runway and Pika in capability.
+- q_en: How do generative credits work across Creative Cloud?
+  a_en: >-
+    Generative credits are pooled across all Firefly-powered features. Standard image generation costs 1 credit; higher-resolution
+    outputs may use more. Creative Cloud All Apps subscribers get 1,000 monthly credits. Unused credits don't roll over. Once
+    depleted, you can still generate but at slower speeds, or purchase additional credit packs.

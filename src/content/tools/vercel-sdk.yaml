@@ -1,0 +1,24 @@
+name:
+  en: Vercel AI SDK
+  zh: Vercel AI SDK
+short_desc:
+  en: AI app development SDK
+  zh: AI 应用开发 SDK
+long_desc:
+  en: SDK for building AI apps with streaming and edge
+cat: code
+url: https://sdk.vercel.ai
+icon: fa-code
+scenes:
+  en:
+  - ai-dev
+  - streaming
+  - edge
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

@@ -8,7 +8,8 @@ const {
   author = post.author ?? '',
   category = post.category ?? '',
   tags = Array.isArray(post.tags) ? post.tags : [],
-  keywords = post.keywords ?? ''
+  keywords = post.keywords ?? '',
+  image = post.image ?? ''
 } = Astro.props;
 // Ensure title and description have fallback values to avoid empty structured data
 const safeTitle = (title ?? "").trim() || "Untitled Article";

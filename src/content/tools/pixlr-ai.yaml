@@ -1,0 +1,24 @@
+name:
+  en: Pixlr AI
+  zh: Pixlr AI
+short_desc:
+  en: Online AI image editor
+  zh: 在线 AI 图像编辑器
+long_desc:
+  en: Online image editor with AI background removal and enhancement
+cat: image
+url: https://pixlr.com
+icon: fa-image
+scenes:
+  en:
+  - editing
+  - bg-removal
+  - enhance
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

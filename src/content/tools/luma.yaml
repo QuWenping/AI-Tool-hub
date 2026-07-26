@@ -1,0 +1,131 @@
+name:
+  en: Luma
+  zh: Luma
+short_desc:
+  en: Luma Dream Machine high-quality AI video
+  zh: Luma Dream Machine 高质量 AI 视频生成
+long_desc:
+  en: >-
+    Luma's Dream Machine is known for natural motion and high quality, good for clips and image-to-video.
+cat: video
+url: https://lumalabs.ai/dream-machine
+icon: fa-video
+scenes:
+  en:
+  - Shorts
+  - Image-to-video
+  - Camera moves
+  - Creative
+  zh:
+  - 图生视频
+  - 电商动态展示
+  - 社交媒体
+  - 概念动画
+pros:
+  en:
+  - High quality
+  - Natural motion
+  - Free trial
+  zh:
+  - 图生视频效果业界最佳
+  - 运动自然流畅
+  - 相机控制灵活
+cons:
+  en:
+  - Queue times
+  - Paid tier
+  - Length limits
+  zh:
+  - 从零生成视频不如 Runway
+  - 视频长度有限
+  - 排队时间较长
+target_audience:
+  en:
+  - Creators
+  - Marketers
+  - Designers
+  - Indie
+  zh:
+  - 创作者
+  - 营销人员
+  - 设计师
+  - 独立开发者
+use_cases:
+  en:
+  - Shorts
+  - Img-to-video
+  - Camera moves
+  - Creative ads
+  zh:
+  - 短视频
+  - 图片转视频
+  - 镜头运动
+  - 创意广告
+features:
+  en:
+  - Dream Machine
+  - Img-to-video
+  - Camera control
+  - HD output
+  zh:
+  - Dream Machine
+  - 图片转视频
+  - 镜头控制
+  - 高清输出
+example:
+  en: 'Example: Animate a still into a 5s video with camera motion.'
+  zh: 示例：将静态图片动画化为 5 秒带镜头运动的视频。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Latest stable (2026)
+score: 8.5
+overall_score: 8.5
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+  - iOS
+pricingSummary:
+  en: >-
+    Free tier with daily generations · Standard $9.99/mo, Pro $29.99/mo, Premier $99.99/mo unlock more generations, higher
+    resolution, and priority queue.
+faq:
+- q_en: What is Luma?
+  a_en: >-
+    Luma is an AI video generation company best known for Dream Machine, which turns text and image prompts into realistic
+    short videos.
+- q_en: Is Luma free?
+  a_en: >-
+    Yes. Luma offers a free tier with daily generations; paid plans start at $9.99/month for more generations and higher resolution.
+- q_en: How does Luma compare to Sora?
+  a_en: >-
+    Luma's Dream Machine is competitive on realism and faster on iteration; Sora still leads on long-form coherent shots.
+    Pick by workflow speed vs. shot length.
+- q_en: Does Luma support image-to-video?
+  a_en: >-
+    Yes. Image-to-video is one of Dream Machine's strongest paths: upload a still, prompt the motion, get a 5-second clip.
+- q_en: Can I extend Luma videos?
+  a_en: >-
+    Yes. You can extend a clip by using its last frame as a new keyframe and prompting the next 5 seconds.
+- q_en: What is Luma Ray2?
+  a_en: >-
+    Ray2 is Luma's latest video model, with improved physics, prompt adherence, and human motion quality over Ray1.
+- q_en: Does Luma have an API?
+  a_en: >-
+    Yes. Luma exposes a REST API for Dream Machine and Ray2, useful for batch workflows and app integration.
+- q_en: Is Luma good for product videos?
+  a_en: >-
+    Yes. Many brands use Dream Machine to animate product stills into 5-second looping clips for social ads.
+- q_en: Can Luma generate sound?
+  a_en: >-
+    Luma focuses on visuals. For voiceover, use ElevenLabs; for music, use Suno or Udio.
+- q_en: Who should use Luma?
+  a_en: >-
+    Creators who need fast, realistic image-to-video and don't mind short clip lengths that can be chained.
+scoreBreakdown:
+  user: 8.5
+  capability: 7.5
+  price: 9
+  growth: 8
+  trust: 8

@@ -1,0 +1,24 @@
+name:
+  en: FlexClip
+  zh: FlexClip
+short_desc:
+  en: Online video editor
+  zh: 在线视频编辑器
+long_desc:
+  en: Online video editing with templates and AI text-to-video
+cat: video
+url: https://flexclip.com
+icon: fa-video
+scenes:
+  en:
+  - editing
+  - marketing
+  - templates
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

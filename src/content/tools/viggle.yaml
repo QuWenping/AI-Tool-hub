@@ -1,0 +1,58 @@
+name:
+  en: Viggle
+  zh: Viggle
+short_desc:
+  en: AI character animation, make photos dance
+  zh: AI 角色动画，让照片跳舞
+long_desc:
+  en: >-
+    Viggle turns character photos into action/dance animations; viral on social media.
+cat: video
+url: https://viggle.ai
+icon: fa-person-running
+scenes:
+  en:
+  - Character anim
+  - Social video
+  - Dance
+  - Action
+  zh:
+  - 角色动画
+  - 社交媒体
+  - 趣味视频
+  - 舞蹈模仿
+pros:
+  en:
+  - Lively results
+  - Usable free
+  - Viral potential
+  zh:
+  - 趣味性极高
+  - 社交媒体传播力强
+  - 上手极简单
+cons:
+  en:
+  - Limited resolution
+  - Needs clear subject
+  zh:
+  - 用途较为局限
+  - 不适合专业制作
+target_audience:
+  en:
+  - Creators
+  - Social media
+  - Marketing
+use_cases:
+  en:
+  - Social
+  - Dance
+  - Creative
+  - Fun
+features:
+  en:
+  - Character anim
+  - Motion templates
+  - Social share
+  - Free
+example:
+  en: 'Example: Make a person''s photo dance.'

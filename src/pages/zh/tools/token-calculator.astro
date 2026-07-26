@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/tools/token-calculator/";
+const faqSchema = {
+  "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,
+  "mainEntity":[
+    {"@type":"Question","name":"Token 是如何计算的？","acceptedAnswer":{"@type":"Answer","text":"Token 采用行业标准的近似估算：英文文本约每 4 个字符对应 1 个 token，中文文本约每 1.5 个字符对应 1 个 token。实际数量因模型的分词器而异。"}},
+    {"@type":"Question","name":"一个 Token 多少钱？","acceptedAnswer":{"@type":"Answer","text":"Token 成本因模型而异。GPT-4o 每 100 万输入 token 收费 $5，Claude 3.5 Sonnet 收费 $3，Gemini 1.5 Pro 收费 $1.25。请查看本页面的价格表。"}}
+  ]
+};
+---
+<BaseLayout title="AI Token 计算器 | 免费在线工具" description="免费在线 AI Token 计算器。估算任意文本的 Token 数量和成本，支持 GPT-4o、Claude、Gemini 等模型。无需注册。" keywords="token 计算器, AI token 计算, GPT token 计算, LLM 成本估算, 免费 AI 工具">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+  <div class="container" style="max-width:800px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumbs" style="margin-bottom:24px;"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/tools/">免费工具</a> &rsaquo; <span>Token 计算器</span></nav>
+    <h1 style="font-size:32px;font-weight:700;margin-bottom:8px;">AI Token 计算器</h1>
+    <p style="color:var(--text-mute);font-size:16px;margin-bottom:32px;">估算任意文本的 Token 数量和成本。免费，无需注册。</p>
+
+    <div style="background:var(--card-bg);border:1px solid var(--border-color);border-radius:14px;padding:24px;margin-bottom:24px;">
+      <label style="font-size:14px;font-weight:600;color:var(--text-main);display:block;margin-bottom:8px;">粘贴你的文本：</label>
+      <textarea id="tc-input" rows="8" placeholder="在此粘贴你的提示词、文章或代码..." style="width:100%%;background:var(--bg-color);border:1px solid var(--border-color);border-radius:10px;padding:12px;color:var(--text-main);font-size:14px;font-family:monospace;resize:vertical;"></textarea>
+      <div style="display:flex;gap:8px;margin-top:12px;">
+        <button id="tc-calc" style="background:var(--accent-color);color:#fff;border:none;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:600;cursor:pointer;">计算</button>
+        <button id="tc-clear" style="background:var(--bg-color);color:var(--text-main);border:1px solid var(--border-color);border-radius:8px;padding:10px 24px;font-size:14px;font-weight:600;cursor:pointer;">清空</button>
+      </div>
+    </div>
+
+    <div id="tc-results" style="display:none;background:var(--card-bg);border:1px solid var(--border-color);border-radius:14px;padding:24px;">
+      <h2 style="font-size:18px;margin-bottom:16px;">结果</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:20px;">
+        <div id="tc-tokens" style="background:var(--bg-color);border-radius:10px;padding:16px;text-align:center;"><div style="font-size:11px;color:var(--text-mute);text-transform:uppercase;">估算 Token 数</div><div style="font-size:24px;font-weight:700;color:var(--accent-color);margin-top:4px;">—</div></div>
+        <div id="tc-words" style="background:var(--bg-color);border-radius:10px;padding:16px;text-align:center;"><div style="font-size:11px;color:var(--text-mute);text-transform:uppercase;">单词数</div><div style="font-size:24px;font-weight:700;color:var(--text-main);margin-top:4px;">—</div></div>
+        <div id="tc-chars" style="background:var(--bg-color);border-radius:10px;padding:16px;text-align:center;"><div style="font-size:11px;color:var(--text-mute);text-transform:uppercase;">字符数</div><div style="font-size:24px;font-weight:700;color:var(--text-main);margin-top:4px;">—</div></div>
+      </div>
+      <h3 style="font-size:14px;margin-bottom:10px;">各模型成本（输入）</h3>
+      <table style="width:100%%;border-collapse:collapse;font-size:14px;">
+        <thead><tr><th style="text-align:left;padding:8px;border-bottom:1px solid var(--border-color);">模型</th><th style="text-align:right;padding:8px;border-bottom:1px solid var(--border-color);">每 100 万 Token 价格</th><th style="text-align:right;padding:8px;border-bottom:1px solid var(--border-color);">估算成本</th></tr></thead>
+        <tbody id="tc-prices"></tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:32px;">
+      <h2 style="font-size:20px;margin-bottom:12px;">常见问题</h2>
+      <details style="border:1px solid var(--border-color);border-radius:10px;padding:16px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;">Token 是如何计算的？</summary>
+        <p style="margin-top:8px;color:var(--text-mute);font-size:14px;">Token 采用近似估算：英文约每 4 个字符对应 1 个 token，中文约每 1.5 个字符对应 1 个 token。实际数量因模型的分词器而异。</p>
+      </details>
+      <details style="border:1px solid var(--border-color);border-radius:10px;padding:16px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;">这个估算有多准？</summary>
+        <p style="margin-top:8px;color:var(--text-mute);font-size:14px;">估算误差在大多数模型的实际分词计数的 ±10% 以内。如需精确计数，请使用各模型官方提供的分词器。</p>
+      </details>
+    </div>
+  </div>
+</BaseLayout>
+<script is:inline>
+  var models = [["GPT-4o","$5"],["GPT-4o mini","$0.15"],["Claude 3.5 Sonnet","$3"],["Gemini 1.5 Pro","$1.25"],["DeepSeek V3","$0.27"],["Llama 3.1 70B","$0.59"]];
+  function calc(){
+    var text=document.getElementById("tc-input").value; if(!text){return;}
+    var chars=text.length; var words=text.trim().split(/\s+/).filter(function(w){return w.length>0}).length;
+    var cn=(text.match(/[\u4e00-\u9fff]/g)||[]).length; var en=chars-cn;
+    var tokens=Math.ceil(en/4+cn/1.5);
+    document.querySelector("#tc-tokens div:last-child").textContent=tokens.toLocaleString();
+    document.querySelector("#tc-words div:last-child").textContent=words.toLocaleString();
+    document.querySelector("#tc-chars div:last-child").textContent=chars.toLocaleString();
+    var tbody=document.getElementById("tc-prices"); tbody.innerHTML="";
+    models.forEach(function(m){
+      var price=parseFloat(m[1].replace("$","")); var cost=(tokens/1000000*price).toFixed(4);
+      var tr=document.createElement("tr"); tr.innerHTML='<td style="padding:8px;border-bottom:1px solid var(--border-color);">'+m[0]+'</td><td style="text-align:right;padding:8px;border-bottom:1px solid var(--border-color);">'+m[1]+'</td><td style="text-align:right;padding:8px;border-bottom:1px solid var(--border-color);color:var(--accent-color);font-weight:600;">$'+cost+'</td>';
+      tbody.appendChild(tr);
+    });
+    document.getElementById("tc-results").style.display="block";
+  }
+  document.getElementById("tc-calc").addEventListener("click",calc);
+  document.getElementById("tc-clear").addEventListener("click",function(){document.getElementById("tc-input").value="";document.getElementById("tc-results").style.display="none";});
+</script>

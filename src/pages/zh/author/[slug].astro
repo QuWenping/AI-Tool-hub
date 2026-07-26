@@ -1,0 +1,72 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+
+export async function getStaticPaths() {
+  const authors = await getCollection("authors");
+  return authors.map((author) => ({
+    params: { slug: author.data.slug || author.id },
+    props: { author },
+  }));
+}
+
+const { author } = Astro.props;
+const { data } = author;
+
+const pageLang = "zh";
+
+const i18n = {
+  articles: "文章",
+  about: "关于",
+  links: "链接",
+  twitter: "Twitter",
+  github: "GitHub",
+  website: "网站",
+  linkedin: "LinkedIn",
+  noBio: "这位作者还没有填写简介。",
+  noArticles: "暂无文章。",
+};
+---
+
+<BaseLayout
+  title={`${data.name} - AI Tool Hub 作者`}
+  description={data.bio?.slice(0, 160) || `${data.name} 在 AI Tool Hub 的作者页面`}
+  lang={pageLang}
+>
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <span>{data.name}</span></nav>
+    <header style="display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+      {data.avatar && (
+        <Image
+          src={data.avatar}
+          alt={data.name}
+          width={96}
+          height={96}
+          style="border-radius:50%;object-fit:cover;"
+        />
+      )}
+      <div>
+        <h1>{data.name}</h1>
+        {data.role && <p style="font-size:18px;color:var(--text-mute);">{data.role}</p>}
+      </div>
+    </header>
+
+    <section>
+      <h2>{i18n.about}</h2>
+      <p>{data.bio || i18n.noBio}</p>
+    </section>
+
+    {data.socials && (data.socials.twitter || data.socials.github || data.socials.website || data.socials.linkedin) && (
+      <section>
+        <h2>{i18n.links}</h2>
+        <ul>
+          {data.socials.twitter && <li><a href={`https://twitter.com/${data.socials.twitter}`} target="_blank" rel="noopener">{i18n.twitter}</a></li>}
+          {data.socials.github && <li><a href={`https://github.com/${data.socials.github}`} target="_blank" rel="noopener">{i18n.github}</a></li>}
+          {data.socials.website && <li><a href={data.socials.website} target="_blank" rel="noopener">{i18n.website}</a></li>}
+          {data.socials.linkedin && <li><a href={`https://linkedin.com/in/${data.socials.linkedin}`} target="_blank" rel="noopener">{i18n.linkedin}</a></li>}
+        </ul>
+      </section>
+    )}
+  </article>
+</BaseLayout>

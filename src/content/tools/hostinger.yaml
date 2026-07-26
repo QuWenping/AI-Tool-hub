@@ -1,0 +1,102 @@
+name:
+  en: Hostinger
+short_desc:
+  en: High-performance web hosting and website builder
+long_desc:
+  en: Hostinger offers shared, VPS, cloud hosting and domains, known for value.
+cat: productivity
+url: https://www.hostinger.com?REFERRALCODE=5YF251676FDR
+icon: fa-server
+scenes:
+  en:
+  - Personal blog
+  - AI site
+  - SMB site
+  - E-com
+pros:
+  en:
+  - Cheap
+  - Easy hPanel
+  - Global nodes
+  zh:
+  - 价格实惠
+  - 易用的 hPanel
+  - 全球节点
+cons:
+  en:
+  - Low-tier thin
+  - Upgrade needed
+  - Limited CN support
+  zh:
+  - 低价套餐资源较少
+  - 高级功能需要升级
+  - 中国地区支持有限
+target_audience:
+  en:
+  - Webmasters
+  - Devs
+  - SMB owners
+  - E-com
+  zh:
+  - 网站管理员
+  - 开发者
+  - 中小企业主
+  - 电商经营者
+use_cases:
+  en:
+  - Quick blog
+  - AI landing
+  - WooCommerce
+  - Multi-subdomain
+  zh:
+  - 快速建博客
+  - AI 落地页
+  - WooCommerce
+  - 多子域名
+features:
+  en:
+  - 1-click WP
+  - Free SSL
+  - hPanel
+  - Daily backup
+  zh:
+  - 一键安装 WP
+  - 免费 SSL
+  - hPanel
+  - 每日备份
+example:
+  en: 'Example: One-click WordPress install.'
+  zh: 示例：一键安装 WordPress。
+hidden: true
+reviewed: true
+updatedAt: '2026-07-19'
+testedVersion: Hostinger 2026
+score: 7.8
+overall_score: 7.8
+quickFacts:
+  freeTier: false
+  hasApi: false
+  platforms:
+  - Web dashboard
+pricingSummary:
+  en: Premium $2.99/mo · Business $3.99/mo · Cloud $9.99/mo (introductory).
+faq:
+- q_en: Is Hostinger suitable for high-traffic sites?
+  a_en: >-
+    Entry-level plans have shared resource caps; scale up to Cloud or use a CDN when traffic grows.
+- q_en: Does Hostinger include a free domain?
+  a_en: Yes, annual Business+ plans include a free first-year domain and SSL.
+scoreBreakdown:
+  user: 7.8
+  capability: 7
+  price: 5
+  growth: 5
+  trust: 8
+editorialIntro: >-
+  Hostinger is the low-cost hosting provider we recommend for small sites: cheapest tier in the category, easy hPanel control
+  panel, WordPress one-click install. Traffic-heavy sites eventually outgrow the entry-level plans.
+editorialVerdict:
+  best: >-
+    You are launching a small site or side project and want the lowest price on the market.
+  avoid: >-
+    You run high-traffic or mission-critical apps — Cloudways or Vercel are better fits.

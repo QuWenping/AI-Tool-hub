@@ -1,0 +1,24 @@
+name:
+  en: Typeface AI
+  zh: Typeface AI
+short_desc:
+  en: Enterprise AI content platform
+  zh: 企业级 AI 内容平台
+long_desc:
+  en: Enterprise AI content generation for brands
+cat: text
+url: https://typeface.ai
+icon: fa-font
+scenes:
+  en:
+  - enterprise
+  - content
+  - brand
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

@@ -1,0 +1,46 @@
+name:
+  en: Fliki
+  zh: Fliki
+short_desc:
+  en: Text to video with AI voiceover
+  zh: 文字转视频（含 AI 配音）
+long_desc:
+  en: >-
+    Fliki turns text/blogs into short videos with AI voiceover and stock footage; popular for social marketing.
+cat: video
+url: https://fliki.ai
+icon: fa-microphone
+scenes:
+  en:
+  - Social video
+  - Blog-to-video
+  - Voiceover
+  - Subtitles
+pros:
+  en:
+  - Text-to-video
+  - Natural voiceover
+  - Friendly price
+cons:
+  en:
+  - Average visual quality
+  - Repetitive stock
+target_audience:
+  en:
+  - Marketing
+  - Creators
+  - SMBs
+use_cases:
+  en:
+  - Social
+  - Marketing
+  - Blog-to-video
+  - Tutorials
+features:
+  en:
+  - Text-to-video
+  - AI voice
+  - Multilingual
+  - Subtitles
+example:
+  en: 'Example: Turn a product description into a 30s video.'

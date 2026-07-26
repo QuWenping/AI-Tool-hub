@@ -1,0 +1,24 @@
+name:
+  en: Voice123 AI
+  zh: Voice123 AI
+short_desc:
+  en: AI voice casting
+  zh: AI 声音选角
+long_desc:
+  en: AI-powered voice talent matching platform
+cat: audio
+url: https://voice123.com
+icon: fa-microphone
+scenes:
+  en:
+  - voice
+  - casting
+  - talent
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

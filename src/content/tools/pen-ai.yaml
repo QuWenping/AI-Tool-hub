@@ -1,0 +1,24 @@
+name:
+  en: Pen AI
+  zh: Pen AI
+short_desc:
+  en: AI pen writing
+  zh: AI 写作笔
+long_desc:
+  en: AI writing assistant focused on long-form content
+cat: text
+url: https://pen.ai
+icon: fa-pen
+scenes:
+  en:
+  - long-form
+  - writing
+  - content
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

@@ -1,0 +1,128 @@
+name:
+  en: Bolt
+  zh: Bolt
+short_desc:
+  en: StackBlitz in-browser full-stack AI app builder
+  zh: StackBlitz 浏览器端全栈 AI 应用构建器
+long_desc:
+  en: >-
+    Bolt generates, runs, and deploys full-stack apps in the browser with AI, no local env needed.
+cat: code
+url: https://bolt.new
+icon: fa-rocket
+scenes:
+  en:
+  - Full-stack apps
+  - Quick protos
+  - Browser dev
+  zh:
+  - 全栈应用
+  - MVP 开发
+  - 技术原型
+  - 快速验证
+pros:
+  en:
+  - Zero config
+  - Runs in browser
+  - One-click deploy
+  zh:
+  - 真正的浏览器端全栈环境
+  - 代码即时可运行
+  - WebContainer 技术独特
+cons:
+  en:
+  - Complex projects limited
+  - Token-heavy
+  zh:
+  - 仅限 JavaScript/TypeScript 生态
+  - 复杂应用性能有限
+target_audience:
+  en:
+  - Devs
+  - Founders
+  - Prototypers
+  zh:
+  - 开发者
+  - 创业者
+  - 原型开发者
+use_cases:
+  en:
+  - Protos
+  - MVPs
+  - Internal tools
+  - Demos
+  zh:
+  - 原型
+  - MVP
+  - 内部工具
+  - 演示
+features:
+  en:
+  - Browser full-stack
+  - AI gen
+  - Deploy
+  - WebContainer
+  zh:
+  - 浏览器全栈
+  - AI 生成
+  - 部署
+  - WebContainer
+example:
+  en: 'Example: ''build a real-time chat app'' → gen+run+deploy.'
+  zh: 示例：'构建一个实时聊天应用' → 生成+运行+部署。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Bolt 2026 (WebContainer)
+score: 8.6
+overall_score: 8.6
+quickFacts:
+  freeTier: true
+  hasApi: false
+  platforms:
+  - Web Browser
+pricingSummary:
+  en: >-
+    Free tier with limited daily tokens · Pro $20/mo (2x faster AI, larger context) · Enterprise for teams.
+faq:
+- q_en: Is Bolt free to use?
+  a_en: >-
+    Yes, with a daily token limit. Pro at $20/month removes the cap and gives faster inference.
+- q_en: Can Bolt build production apps?
+  a_en: >-
+    Best for MVPs, prototypes, and internal tools. Complex production apps with many dependencies may hit the WebContainer
+    sandbox limits. Bolt is excellent for quick validation.
+- q_en: How does Bolt compare to Lovable?
+  a_en: >-
+    Bolt runs in a browser-based WebContainer and is better for React/Node.js stacks. Lovable integrates with Supabase out
+    of the box and is better for full-stack apps with databases.
+- q_en: Does Bolt support GitHub integration?
+  a_en: >-
+    Yes. You can push directly to a GitHub repository from the Bolt editor. One-click deploy to Vercel or Netlify is also
+    available.
+- q_en: What tech stacks does Bolt support?
+  a_en: >-
+    React, Next.js, Vue, Svelte, Node.js, Express, Python (FastAPI), and most npm packages. The WebContainer sandbox has some
+    limitations on native OS calls.
+- q_en: Can Bolt generate APIs?
+  a_en: >-
+    Yes. Bolt can scaffold REST and GraphQL APIs with Node.js or Python. For production API hosting, you will want to move
+    the code to a dedicated server.
+- q_en: Is Bolt suitable for learning to code?
+  a_en: >-
+    Very. The zero-config environment and browser-based IDE let beginners build real apps immediately without worrying about
+    setup.
+- q_en: What are the main alternatives to Bolt?
+  a_en: >-
+    Lovable (Supabase + full-stack), v0 (Vercel UI), Replit (cloud IDE), and Cursor (local IDE). Each has a different strength.
+- q_en: Can Bolt work offline?
+  a_en: >-
+    No. Bolt runs entirely in the browser and requires a network connection for both the AI and the WebContainer runtime.
+- q_en: Who should use Bolt?
+  a_en: >-
+    Founders building MVPs, developers prototyping ideas quickly, and anyone who wants to go from idea to working app in minutes.
+scoreBreakdown:
+  user: 8.6
+  capability: 7
+  price: 10
+  growth: 5
+  trust: 8

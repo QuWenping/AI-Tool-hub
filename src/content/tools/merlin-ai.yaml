@@ -1,0 +1,24 @@
+name:
+  en: Merlin AI
+  zh: Merlin AI
+short_desc:
+  en: AI browser extension
+  zh: AI 浏览器扩展
+long_desc:
+  en: AI summarization, writing and search on any webpage
+cat: productivity
+url: https://merlin.foyer.work
+icon: fa-magic
+scenes:
+  en:
+  - web
+  - summarize
+  - writing
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

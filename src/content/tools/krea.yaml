@@ -1,0 +1,128 @@
+name:
+  en: Krea
+  zh: Krea
+short_desc:
+  en: Real-time AI image generation and enhancement platform
+  zh: 实时 AI 图像生成和增强平台
+long_desc:
+  en: Krea excels at real-time generation and image enhancement for fast iteration.
+cat: image
+url: https://www.krea.ai
+icon: fa-palette
+scenes:
+  en:
+  - Real-time gen
+  - Upscale
+  - Restyle
+  - Concept art
+  zh:
+  - 实时图像创作
+  - 图像增强
+  - 风格迁移
+  - 概念迭代
+pros:
+  en:
+  - Real-time preview
+  - Full enhance tools
+  - Easy start
+  zh:
+  - 实时反馈所见即所得
+  - 图像增强质量高
+  - 精准控制构图
+cons:
+  en:
+  - Lower ceiling than MJ
+  - Mid-high price
+  - Average CN prompts
+  zh:
+  - 学习曲线较陡
+  - 价格相对较高
+  - 美学上限不如 Midjourney
+target_audience:
+  en:
+  - Designers
+  - Concept artists
+  - Creators
+  - Marketers
+  zh:
+  - 设计师
+  - 概念艺术家
+  - 创作者
+  - 营销人员
+use_cases:
+  en:
+  - Quick sketch
+  - Upscale
+  - Restyle
+  - Concept
+  zh:
+  - 快速草图
+  - 超分辨率
+  - 风格转换
+  - 概念设计
+features:
+  en:
+  - Real-time gen
+  - Enhance
+  - Restyle
+  - Canvas
+  zh:
+  - 实时生成
+  - 增强
+  - 风格重塑
+  - 画布
+example:
+  en: 'Example: Doodle in real time and get HD images.'
+  zh: 示例：实时涂鸦即可获得高清图像。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Latest stable (2026)
+score: 8.1
+overall_score: 8.1
+quickFacts:
+  freeTier: true
+  hasApi: false
+  platforms:
+  - Web
+pricingSummary:
+  en: >-
+    Free tier with slow queue · Basic $10/mo, Pro $30/mo unlock real-time generation, higher resolution, and faster queue.
+faq:
+- q_en: What is Krea?
+  a_en: >-
+    Krea is an AI image and video tool focused on real-time generation — you paint or sketch and the model updates the canvas
+    live.
+- q_en: Is Krea free?
+  a_en: >-
+    Yes. There is a free plan with a slow queue; paid plans start at $10/month for faster real-time output.
+- q_en: How does Krea's real-time generation work?
+  a_en: >-
+    Krea streams a small diffusion model that re-generates the canvas continuously as you sketch, achieving sub-second feedback.
+- q_en: Does Krea support video?
+  a_en: >-
+    Yes. Krea Video extends the same real-time UI to short video clips and keyframe animation.
+- q_en: Can I use Krea for logos?
+  a_en: >-
+    Krea is great for ideation but final logo work usually needs a vector tool (Figma, Illustrator) and a dedicated typography
+    model.
+- q_en: Does Krea have an API?
+  a_en: >-
+    Krea is web-app only today; an API has been teased but is not generally available as of mid-2026.
+- q_en: What is Krea Diffusion?
+  a_en: >-
+    Krea Diffusion is the company's text-to-image model that is also available through partner platforms like Replicate.
+- q_en: How good is Krea for product mockups?
+  a_en: >-
+    Krea is strong for stylised mockups and concept art; for photoreal product shots, Flux Pro or Midjourney still lead.
+- q_en: Can I bring my own LoRA to Krea?
+  a_en: >-
+    Paid plans allow private LoRAs trained on Krea, useful for consistent character or product looks.
+- q_en: Who should use Krea?
+  a_en: >-
+    Designers, concept artists, and creative directors who iterate visually and want immediate feedback.
+scoreBreakdown:
+  user: 8.1
+  capability: 7.1
+  price: 9
+  growth: 8
+  trust: 8

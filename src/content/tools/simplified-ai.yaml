@@ -1,0 +1,24 @@
+name:
+  en: Simplified AI
+  zh: Simplified AI
+short_desc:
+  en: All-in-one AI marketing
+  zh: 一站式 AI 营销平台
+long_desc:
+  en: AI writing, design, video and social media in one platform
+cat: text
+url: https://simplified.com
+icon: fa-magic
+scenes:
+  en:
+  - marketing
+  - design
+  - social
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

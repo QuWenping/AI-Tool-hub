@@ -1,0 +1,24 @@
+name:
+  en: Katteb
+  zh: Katteb
+short_desc:
+  en: AI content writer
+  zh: AI 内容写作
+long_desc:
+  en: AI content writing with fact-checking
+cat: text
+url: https://katteb.com
+icon: fa-pen
+scenes:
+  en:
+  - content
+  - fact-check
+  - writing
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

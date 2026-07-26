@@ -1,0 +1,24 @@
+name:
+  en: Hoppy Copy
+  zh: Hoppy Copy
+short_desc:
+  en: AI email marketing copy
+  zh: AI 邮件营销文案
+long_desc:
+  en: AI copy tool for email marketing sequences
+cat: text
+url: https://hoppycopy.com
+icon: fa-envelope
+scenes:
+  en:
+  - email
+  - marketing
+  - copy
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

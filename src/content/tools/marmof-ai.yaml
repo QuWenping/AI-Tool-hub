@@ -1,0 +1,24 @@
+name:
+  en: Marmof
+  zh: Marmof
+short_desc:
+  en: AI content and image
+  zh: AI 内容和图像
+long_desc:
+  en: AI content writing and image generation platform
+cat: image
+url: https://marmof.com
+icon: fa-pen
+scenes:
+  en:
+  - content
+  - image
+  - writing
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

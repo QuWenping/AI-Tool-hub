@@ -1,0 +1,24 @@
+name:
+  en: Jasper Art
+  zh: Jasper Art
+short_desc:
+  en: AI art generation by Jasper
+  zh: Jasper AI 艺术生成
+long_desc:
+  en: AI image generation integrated with Jasper writing platform
+cat: text
+url: https://jasper.ai/art
+icon: fa-paint-brush
+scenes:
+  en:
+  - image
+  - art
+  - marketing
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

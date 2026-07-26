@@ -2,7 +2,6 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import toolsData from "../../data/tools.json";
 import editorialData from "../../data/tool-editorial.json";
-import ZhNotice from "../../components/ZhNotice.astro";
 import { hasZh } from "../../utils/i18n";
 import TLDR from "../../components/ui/TLDR.astro";
 
@@ -56,7 +55,6 @@ const seoDesc = pageLang === "zh"
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
   </Fragment>
-  {pageLang === "zh" && <ZhNotice hasTranslation={zhAvailable} />}
 
   <article class="legal-page">
     <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={"/tool/" + id + "/"}>{aName}</a> &rsaquo; <span>Alternatives</span></nav>

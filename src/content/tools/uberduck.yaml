@@ -1,0 +1,24 @@
+name:
+  en: Uberduck
+  zh: Uberduck
+short_desc:
+  en: AI voice and rap
+  zh: AI 语音和说唱
+long_desc:
+  en: AI voice generation for music and rap
+cat: audio
+url: https://uberduck.ai
+icon: fa-music
+scenes:
+  en:
+  - voice
+  - music
+  - rap
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

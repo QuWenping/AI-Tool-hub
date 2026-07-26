@@ -1,0 +1,137 @@
+name:
+  en: Windsurf
+  zh: Windsurf
+short_desc:
+  en: AI IDE by Codeium, main Cursor competitor
+  zh: Codeium 推出的 AI IDE，Cursor 的主要竞争对手
+long_desc:
+  en: >-
+    Windsurf by Codeium is an AI-native IDE with multi-file editing, agent mode, and context awareness.
+cat: code
+url: https://codeium.com/windsurf
+icon: fa-wind
+scenes:
+  en:
+  - Multi-file refactor
+  - Agent tasks
+  - Autocomplete
+  - Debugging
+  zh:
+  - AI 原生编码
+  - 代码库分析
+  - 跨文件编辑
+  - 代码建议
+pros:
+  en:
+  - Generous free tier
+  - Strong agent mode
+  - VS Code compatible
+  zh:
+  - 比 Cursor 便宜 25%
+  - 流模式提供持续建议
+  - 免费层级慷慨
+cons:
+  en:
+  - Young ecosystem
+  - Occasional perf issues
+  zh:
+  - 品牌知名度不如 Cursor
+  - 社区和扩展生态较小
+target_audience:
+  en:
+  - Devs
+  - Engineers
+  - Full-stack
+  zh:
+  - 开发者
+  - 工程师
+  - 全栈开发者
+use_cases:
+  en:
+  - Refactor
+  - Feature build
+  - Autocomplete
+  - Debug
+  zh:
+  - 重构
+  - 功能开发
+  - 自动补全
+  - 调试
+features:
+  en:
+  - Agent mode
+  - Multi-file
+  - Context-aware
+  - Free tier
+  zh:
+  - Agent 模式
+  - 多文件编辑
+  - 上下文感知
+  - 免费层级
+example:
+  en: 'Example: Have Windsurf Agent implement a CRUD module.'
+  zh: 示例：让 Windsurf Agent 实现一个 CRUD 模块。
+reviewed: true
+updatedAt: '2026-07-21'
+testedVersion: Windsurf 2026 (Cascade Agent)
+score: 8.8
+overall_score: 8.8
+quickFacts:
+  freeTier: true
+  hasApi: false
+  platforms:
+  - macOS
+  - Windows
+  - Linux
+pricingSummary:
+  en: >-
+    Free tier with generous prompt credits · Pro $15/mo (500 prompt credits) · Comprehensive $60/mo (unlimited fast credits
+    and premium models).
+faq:
+- q_en: Is Windsurf free to use?
+  a_en: >-
+    Yes. The free tier ships Cascade agent and autocomplete with a monthly credit cap. Pro at $15/month unlocks 500 prompt
+    credits and higher-tier models.
+- q_en: How does Windsurf compare to Cursor?
+  a_en: >-
+    Cursor emphasizes hand-guided edits and codebase chat; Windsurf's Cascade agent leans more autonomous, executes commands
+    and iterates until tests pass. Windsurf's free tier is more generous; Cursor's plugin ecosystem is bigger.
+- q_en: What is Cascade Agent?
+  a_en: >-
+    Cascade is Windsurf's autonomous coding agent that reads the whole workspace, plans multi-step tasks, runs commands, edits
+    multiple files and can retry until objectives are met — all inside the IDE.
+- q_en: Can Windsurf run against my own model?
+  a_en: >-
+    Yes. Team and Enterprise plans support custom endpoints for OpenAI-compatible APIs, Azure OpenAI, and self-hosted models
+    via LiteLLM-style proxies.
+- q_en: Is Windsurf a VS Code fork?
+  a_en: >-
+    Yes. It is built on the VS Code open-source base, so most VS Code extensions and keybindings work. Codeium plans a JetBrains
+    variant on the same agent runtime.
+- q_en: How good is Windsurf for large codebases?
+  a_en: >-
+    Cascade indexes the workspace and maintains long-term context per branch. In our testing it handles repos up to a few
+    hundred thousand lines cleanly; beyond that you should scope work with folder filters.
+- q_en: Does Windsurf work offline?
+  a_en: >-
+    Autocomplete works with local models via Windsurf's on-device inference; agentic and chat features require a network connection
+    to the Codeium or your enterprise endpoint.
+- q_en: Is Windsurf safe for proprietary code?
+  a_en: >-
+    Enterprise plans include zero-data-retention agreements, on-prem deployment and audit logging. On the free/Pro plans,
+    code snippets sent for inference follow Codeium's public data policy — review it before uploading trade secrets.
+- q_en: What language and framework support does Windsurf have?
+  a_en: >-
+    70+ languages including Python, TypeScript/JavaScript, Go, Rust, Java, C#, PHP, Kotlin and Swift. Cascade is stronger
+    on TypeScript/Python/Go than niche languages like OCaml or Erlang.
+- q_en: Is Windsurf worth switching from Cursor or Copilot?
+  a_en: >-
+    Try it side-by-side for a week. Windsurf wins if you rely on autonomous multi-step agent runs and want a generous free
+    tier; Cursor wins if you prefer manual precision and richer plugins; Copilot wins if you never want to leave your existing
+    IDE.
+scoreBreakdown:
+  user: 8.8
+  capability: 7
+  price: 10
+  growth: 5
+  trust: 8

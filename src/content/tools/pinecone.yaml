@@ -1,0 +1,24 @@
+name:
+  en: Pinecone
+  zh: Pinecone
+short_desc:
+  en: Vector database for AI
+  zh: AI 向量数据库
+long_desc:
+  en: Vector database designed for AI semantic search and RAG
+cat: code
+url: https://pinecone.io
+icon: fa-tree
+scenes:
+  en:
+  - vector
+  - rag
+  - ai-apps
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

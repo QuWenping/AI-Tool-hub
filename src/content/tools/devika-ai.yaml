@@ -1,0 +1,24 @@
+name:
+  en: Devika
+  zh: Devika
+short_desc:
+  en: AI software engineer
+  zh: AI 软件工程师
+long_desc:
+  en: Open-source AI software engineer agent
+cat: code
+url: https://devika.ai
+icon: fa-code
+scenes:
+  en:
+  - agent
+  - engineering
+  - open-source
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

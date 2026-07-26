@@ -1,0 +1,24 @@
+name:
+  en: Text Blaze
+  zh: Text Blaze
+short_desc:
+  en: AI text expansion
+  zh: AI 文本扩展
+long_desc:
+  en: Create text snippets and templates with AI
+cat: text
+url: https://blaze.today
+icon: fa-pen
+scenes:
+  en:
+  - snippets
+  - templates
+  - productivity
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

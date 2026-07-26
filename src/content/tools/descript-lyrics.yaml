@@ -1,0 +1,24 @@
+name:
+  en: Descript Lyrics
+  zh: Descript Lyrics
+short_desc:
+  en: AI lyrics transcription
+  zh: AI 歌词转录
+long_desc:
+  en: Auto-transcribe and edit song lyrics
+cat: audio
+url: https://descript.com
+icon: fa-music
+scenes:
+  en:
+  - music
+  - lyrics
+  - transcription
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

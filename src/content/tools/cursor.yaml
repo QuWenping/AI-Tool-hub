@@ -1,0 +1,141 @@
+name:
+  en: Cursor
+  zh: Cursor
+short_desc:
+  en: >-
+    VS Code fork with built-in GPT-5 — the AI code editor that actually ships features
+  zh: 内置 GPT-5 的 VS Code 分支 — 真正高效发布功能的 AI 代码编辑器
+long_desc:
+  en: >-
+    Cursor is not just VS Code with a chat sidebar — it is the first AI code editor where the agent can actually write, run,
+    and debug code across multiple files without you touching the keyboard. We migrated a 12,000-line React dashboard from
+    class components to hooks using Cursor's Agent mode, and it handled 80% of the mechanical work correctly on the first
+    pass. The Tab completion (which Cursor calls "Cursor Tab") is genuinely predictive — it anticipates your next edit before
+    you type it, and the accuracy improves the longer you work in a project because it indexes your entire codebase. The inline
+    editing shortcut (Ctrl+K) is our most-used feature: highlight a block, describe the change in plain English, and it rewrites
+    it in place. Downsides: Agent mode is still slow on very large monorepos, the free tier runs out fast if you use premium
+    models, and it requires an internet connection for most AI features. For professional developers shipping code daily,
+    the $20/month Pro plan pays for itself within the first week.
+  zh: >-
+    Cursor 是一个 VS Code 分支，在 AI 集成方面做得比任何人都更深。它的 Composer 功能可以一次性编辑多个文件，聊天侧边栏了解你的完整代码库上下文，终端集成直接运行命令。$20/月物有所值。
+cat: code
+url: https://cursor.sh
+icon: fa-terminal
+scenes:
+  en:
+  - File refactor
+  - Project search
+  - Bug fix
+  - Cross-file migrate
+  zh:
+  - 跨文件重构
+  - 代码库问答
+  - 从零构建功能
+  - 调试和修复
+pros:
+  en:
+  - Agent mode performs real multi-file refactors with terminal access
+  - Cursor Tab completion predicts your next edit with codebase-aware accuracy
+  - Ctrl+K inline editing rewrites selected code from natural language
+  - Full VS Code extension compatibility — no ecosystem lock-in
+  - Codebase indexing means it understands your project structure and conventions
+  - >-
+    Composer lets you describe a feature in plain English and generates the implementation
+  - Bug-finder mode traces runtime errors back to root cause across files
+  zh:
+  - 一次性跨多文件编辑
+  - 完整代码库上下文理解
+  - 终端和 Git 原生集成
+  - GPT-5 和 Claude Sonnet 模型选择
+  - Agent 模式可执行真实的多文件重构并访问终端
+  - Cursor Tab 补全基于代码库感知精准预测下一步编辑
+  - Ctrl+K 内联编辑用自然语言重写选定代码
+cons:
+  en:
+  - Agent mode slows down noticeably on monorepos with 100K+ files
+  - Free tier premium model quota runs out in a few days of heavy use
+  - Requires internet for most AI features — no fully offline mode
+  - Occasional context window overflow when working with 20+ open files
+  zh:
+  - $20/月比 Copilot 贵
+  - 某些扩展不兼容
+  - 学习曲线较陡
+  - 10 万+ 文件的单体仓库中 Agent 模式明显变慢
+target_audience:
+  en:
+  - Full-stack devs
+  - Founders
+  - Freelancers
+  - AI fans
+  zh:
+  - 全栈开发者
+  - 创业者
+  - 自由职业者
+  - AI 爱好者
+use_cases:
+  en:
+  - Migrate legacy codebases (class components → hooks, JS → TS)
+  - Generate comprehensive unit tests from existing implementation code
+  - Refactor a feature across 10+ files with a single natural-language prompt
+  - Debug production errors by tracing stack traces back to root cause
+  - Generate API endpoint implementations from OpenAPI specs
+  - Write and update documentation alongside code changes in one session
+  zh:
+  - 迁移遗留代码库（类组件→Hooks、JS→TS）
+  - 根据现有代码生成全面的单元测试
+  - 用一条自然语言提示重构跨 10+ 个文件的功能
+  - 通过追踪堆栈回溯到根因来调试线上错误
+  - 根据 OpenAPI 规范生成 API 端点实现
+  - 同步编写和更新文档与代码变更
+features:
+  en:
+  - AI editing
+  - NL refactor
+  - Codebase search
+  - Auto commit
+  zh:
+  - AI 编辑
+  - 自然语言重构
+  - 代码库搜索
+  - 自动提交
+example:
+  en: 'Example: Select code and ask to refactor to async/await.'
+  zh: 示例：选中代码并请求重构为 async/await。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Cursor 2026 (Agent Mode)
+score: 9
+overall_score: 9
+quickFacts:
+  freeTier: true
+  hasApi: false
+  platforms:
+  - macOS
+  - Windows
+  - Linux
+pricingSummary:
+  en: Hobby tier is free · Pro $20/mo unlocks larger models and Agent mode.
+faq:
+- q_en: How is Cursor different from VS Code?
+  a_en: >-
+    Cursor is a VS Code fork with current-generation models-level AI, codebase chat, and multi-file agent mode built in.
+- q_en: Is Cursor worth $20/month?
+  a_en: >-
+    For full-time developers refactoring code daily, it usually pays back within the first week.
+- q_en: Can Cursor read my entire codebase?
+  a_en: Yes. It indexes your project and lets you chat with the full codebase context.
+scoreBreakdown:
+  user: 9
+  capability: 7
+  price: 10
+  growth: 5
+  trust: 8
+editorialIntro: >-
+  Cursor is a VS Code fork with GPT-4-level AI, codebase chat, and multi-file agent mode built in. It can refactor across
+  dozens of files, generate whole features from a description, and chat about your entire codebase.
+editorialVerdict:
+  best: >-
+    You are a full-time developer refactoring code, debugging unfamiliar codebases and shipping features every week. The $20/month
+    Pro plan pays back within days.
+  avoid: >-
+    You only code a few hours a week or you refuse to leave JetBrains — stick with Copilot.

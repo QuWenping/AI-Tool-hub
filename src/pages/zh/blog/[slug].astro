@@ -1,0 +1,182 @@
+---
+
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getCollection } from 'astro:content';
+import toolsData from "../../../data/tools.json";
+import solutionsData from "../../../data/solutions.json";
+import Comments from "../../../components/Comments.astro";
+import RelatedPosts from "../../../components/RelatedPosts.astro";
+import Feedback from "../../../components/Feedback.astro";
+
+const pageLang = "zh";
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(p => ({ params: { slug: p.slug }, props: { post: p } }));
+}
+const post = Astro.props.post;
+const postData = post.data;
+const postBody = post.body || '';
+const allBlogPosts = await getCollection('blog');
+const zhAvailable = !!(postData.title_zh || postData.desc_zh || postData.content_zh);
+const postTitle = pageLang === "zh" && postData.title_zh ? postData.title_zh : postData.title_en;
+const postDesc = pageLang === "zh" && postData.desc_zh ? postData.desc_zh : postData.desc_en;
+const postContent = pageLang === "zh" && postData.content_zh ? postData.content_zh : postBody;
+const relatedTools = (postData.related_tools || []).map(tid => {
+  const t = toolsData[tid];
+  return t ? { id: tid, name: t.name?.en || tid, icon: t.icon || "fa-robot" } : null;
+}).filter(Boolean);
+const relatedSolution = solutionsData.find(s => s.slug === postData.related_solution);
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/blog/" + post.slug + "/";
+const faqItems = postData.faq && postData.faq.length > 0 ? postData.faq : [
+  { q: "What is " + postData.title_en + "?", a: postData.desc_en },
+  { q: "Who is this for?", a: "Anyone interested in " + postData.category + " - " + postData.desc_en },
+  { q: "How was this content created?", a: "Our editorial team tested real AI tools on real work over multiple weeks before publishing this review." }
+];
+const authorSchema = postData.author_slug ? {
+  "@type": "Person",
+  "name": "Lin Chen",
+  "url": siteUrl + "/author/" + postData.author_slug + "/",
+  "jobTitle": "Lead Reviewer and Editor-in-Chief",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "AI Tool Hub",
+    "url": siteUrl
+  }
+} : {
+  "@type": "Person",
+  "name": postData.author || "AI Tool Hub Editorial"
+};
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": postTitle,
+  "description": postDesc,
+  "url": pageUrl,
+  "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
+  "image": {
+    "@type": "ImageObject",
+    "url": postData.image ? siteUrl + postData.image : siteUrl + "/og-image.svg",
+    "width": 1200,
+    "height": 630
+  },
+  "datePublished": postData.date,
+  "dateModified": postData.date,
+  "author": authorSchema,
+  "publisher": {
+    "@type": "Organization",
+    "name": "AI Tool Hub",
+    "url": siteUrl,
+    "logo": { "@type": "ImageObject", "url": siteUrl + "/logo.svg", "width": 300, "height": 60 }
+  },
+  "articleSection": postData.category,
+  "keywords": (postData.tags || []).join(", "),
+  "inLanguage": pageLang === "zh" ? "zh" : "en"
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl + "/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": siteUrl + "/blog/" },
+    { "@type": "ListItem", "position": 3, "name": postData.title_en, "item": pageUrl }
+  ]
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": pageUrl,
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
+---
+<BaseLayout title={postTitle} description={postDesc} keywords={postData.tags?.join(", ") || postTitle} lang={pageLang} image={postData.image}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> &rsaquo;
+      <a href="/blog/">Blog</a> &rsaquo;
+      <span>{postTitle}</span>
+    </nav>
+
+    <header class="article-header">
+      <span class="eyebrow">{postData.category}</span>
+      <h1>{postTitle}</h1>
+      <p class="lede">{postDesc}</p>
+      <div class="article-meta">
+        <span class="meta-item"><i class="far fa-calendar"></i> {postData.date}</span>
+        <span class="meta-item"><i class="far fa-clock"></i> {postData.read_time} read</span>
+        <span class="meta-item"><i class="far fa-user"></i> {postData.author}</span>
+        <span class="meta-item reviewer">
+          <i class="fas fa-user-check"></i>
+          Reviewed by <strong><a href="/author/lin-chen/">Lin Chen</a></strong>, Lead Reviewer (5+ years testing AI tools)
+        </span>
+      </div>
+    </header>
+
+    {postData.image && (
+      <img
+        class="article-hero"
+        src={postData.image}
+        alt={postTitle}
+        width="1200"
+        height="630"
+        loading="eager"
+      />
+    )}
+
+    <section class="article-body">
+      {postContent && <Fragment set:html={postContent} />}
+    </section>
+
+    {relatedTools.length > 0 && (
+      <section class="section-mt">
+        <h3>Tools Mentioned in This Article</h3>
+        <div class="related-tools-grid">
+          {relatedTools.map(t => (
+            <a class="related-tool-card" href={"/tool/" + t.id + "/"}>
+              <i class={"fas " + t.icon}></i>
+              <span>{t.name}</span>
+              <small>Read our full review</small>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {relatedSolution && (
+      <section class="section-mt">
+        <h3>Explore the Full Workflow</h3>
+        <p class="meta-text">
+          See how these tools fit into a complete stack in our guide:
+          <a href={"/solutions/" + relatedSolution.slug + "/"}>{relatedSolution.title}</a>
+        </p>
+      </section>
+    )}
+
+    {postData.tags && postData.tags.length > 0 && (
+      <section class="section-mt">
+        <h3>Tags</h3>
+        <div class="audience-tags">
+          {postData.tags.map(t => <span class="audience-tag">#{t}</span>)}
+        </div>
+      </section>
+    )}
+
+    <section class="section-mt back-link">
+      <p class="meta-text">Want us to review a specific tool? <a href="/contact/">Suggest a topic</a>.</p>
+    </section>
+
+    <Feedback slug={post.slug} lang={pageLang === "zh" ? "zh" : "en"} />
+    <RelatedPosts posts={allBlogPosts} currentSlug={post.slug} currentCategory={postData.category} currentTags={postData.tags || []} relatedSlugs={postData.related_posts || []} limit={3} />
+    <Comments lang={pageLang === "zh" ? "zh" : "en"} />
+  </div>
+</BaseLayout>

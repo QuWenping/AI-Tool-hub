@@ -1,0 +1,32 @@
+name:
+  en: Microsoft AutoGen
+  zh: Microsoft AutoGen
+short_desc:
+  en: Microsoft multi-agent conversation framework
+  zh: 微软多智能体会话框架
+long_desc:
+  en: >-
+    AutoGen is a multi-agent framework from Microsoft Research that accomplishes complex tasks through agent-to-agent conversations.
+    Supports custom agent roles, tool calling, code execution, and group chat modes. Ideal for research and prototyping.
+cat: productivity
+url: https://github.com/microsoft/autogen
+icon: fa-robot
+scenes:
+  en:
+  - Multi-agent collaboration
+  - Code generation and execution
+  - Research prototyping
+  - Task decomposition
+pros:
+  en:
+  - Microsoft-backed with quality assurance
+  - Flexible agent role definition
+  - Built-in code execution sandbox
+  - Group chat mode for multi-agent discussion
+cons:
+  en:
+  - Documentation less complete than LangChain
+  - Complex configuration
+  - Performance tuning requires experience
+pricing:
+  en: Open source, free

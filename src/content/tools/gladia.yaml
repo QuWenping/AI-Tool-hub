@@ -1,0 +1,24 @@
+name:
+  en: Gladia
+  zh: Gladia
+short_desc:
+  en: AI transcription API
+  zh: AI 转录 API
+long_desc:
+  en: Real-time and async audio/video transcription API
+cat: audio
+url: https://gladia.io
+icon: fa-waveform
+scenes:
+  en:
+  - transcription
+  - api
+  - real-time
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Pay per use

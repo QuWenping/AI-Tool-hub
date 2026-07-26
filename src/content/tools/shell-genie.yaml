@@ -1,0 +1,24 @@
+name:
+  en: Shell Genie
+  zh: Shell Genie
+short_desc:
+  en: AI shell commands
+  zh: AI Shell 命令
+long_desc:
+  en: Generate shell commands from natural language
+cat: code
+url: https://shellgenie.com
+icon: fa-terminal
+scenes:
+  en:
+  - shell
+  - commands
+  - terminal
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

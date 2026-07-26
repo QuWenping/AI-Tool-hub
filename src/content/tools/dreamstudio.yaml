@@ -1,0 +1,23 @@
+name:
+  en: DreamStudio
+  zh: DreamStudio
+short_desc:
+  en: Stability AI official platform
+  zh: Stability AI 官方平台
+long_desc:
+  en: Official Stable Diffusion web interface by Stability AI
+cat: image
+url: https://dreamstudio.ai
+icon: fa-image
+scenes:
+  en:
+  - image
+  - stable-diffusion
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Pay per use

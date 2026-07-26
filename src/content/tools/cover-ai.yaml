@@ -1,0 +1,24 @@
+name:
+  en: Covers AI
+  zh: Covers AI
+short_desc:
+  en: AI song cover generator
+  zh: AI 翻唱生成器
+long_desc:
+  en: Generate AI covers of songs with different voices
+cat: audio
+url: https://covers.ai
+icon: fa-music
+scenes:
+  en:
+  - music
+  - cover
+  - voice
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

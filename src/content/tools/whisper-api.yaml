@@ -1,0 +1,24 @@
+name:
+  en: OpenAI Whisper
+  zh: OpenAI Whisper
+short_desc:
+  en: Open-source speech recognition
+  zh: 开源语音识别
+long_desc:
+  en: Open-source speech recognition model, 99 languages
+cat: audio
+url: https://github.com/openai/whisper
+icon: fa-waveform
+scenes:
+  en:
+  - stt
+  - transcription
+  - open-source
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

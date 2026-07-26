@@ -1,0 +1,173 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout title="无障碍声明 | AI Tool Hub" description="AI Tool Hub 致力于数字无障碍。我们的 WCAG 2.1 AA 合规状态、无障碍功能和问题反馈渠道。" keywords="无障碍, WCAG, a11y, AI Tool Hub, 残障访问">
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <span>无障碍声明</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">我们的承诺</span>
+      <h1>无障碍声明</h1>
+      <p class="lede">AI Tool Hub 致力于确保残障人士的数字无障碍访问。我们持续改善所有用户的体验，并遵循相关的无障碍标准。</p>
+    </header>
+
+    <section>
+      <h2>合规状态</h2>
+      <p>AI Tool Hub 力求符合 WCAG 2.1 AA 级别标准。这些指南旨在帮助网页内容对残障人士更加可用，对所有人更加友好。</p>
+      <p>本站最近一次无障碍审计日期：2026 年 7 月 24 日。测试工具包括：</p>
+      <ul>
+        <li>axe DevTools 浏览器扩展</li>
+        <li>WAVE 网页无障碍评估工具</li>
+        <li>Chrome DevTools Lighthouse 无障碍审计</li>
+        <li>手动键盘导航测试</li>
+        <li>手动屏幕阅读器测试（Windows 上的 NVDA，Mac 上的 VoiceOver）</li>
+      </ul>
+      <p>当前 Lighthouse 无障碍评分：96/100。最近一次全面审计：2026 年 7 月 24 日。</p>
+    </section>
+
+    <section>
+      <h2>无障碍功能</h2>
+      <p>本网站包含以下无障碍功能：</p>
+      <h3>键盘导航</h3>
+      <ul>
+        <li>所有交互元素均支持键盘操作（Tab、Enter、Space、方向键）</li>
+        <li>所有可聚焦元素均显示可见焦点指示器</li>
+        <li>每页顶部均有"跳至内容"链接（聚焦时可见）</li>
+        <li>无键盘陷阱</li>
+      </ul>
+      <h3>屏幕阅读器支持</h3>
+      <ul>
+        <li>语义化 HTML（header、nav、main、article、footer）</li>
+        <li>所有无可见文本的交互元素均配有 ARIA 标签</li>
+        <li>主要页面区域均使用 ARIA 地标</li>
+        <li>表单标签正确关联输入控件</li>
+        <li>动态内容使用实时区域（主题切换、语言切换）</li>
+        <li>所有有意义的图片均有替换文本</li>
+        <li>装饰性图片使用空 alt 属性</li>
+      </ul>
+      <h3>视觉无障碍</h3>
+      <ul>
+        <li>颜色对比度符合 WCAG AA 标准（普通文本 4.5:1，大字体 3:1）</li>
+        <li>深色和浅色模式均满足对比度要求</li>
+        <li>文本可放大至 200% 而不破坏布局</li>
+        <li>不单独依赖颜色传达信息（图标 + 标签）</li>
+        <li>两种主题下焦点指示器均可见</li>
+      </ul>
+      <h3>内容结构</h3>
+      <ul>
+        <li>正确的标题层级（每页一个 H1，区域使用 H2）</li>
+        <li>列表使用正确的 ul/ol 标记</li>
+        <li>表格有正确的标题行和标题</li>
+        <li>表单有相关标签和错误提示</li>
+        <li>地标（header、nav、main、footer）正确标识</li>
+      </ul>
+      <h3>语言支持</h3>
+      <ul>
+        <li>双语言（英文 + 简体中文），正确设置 lang 属性</li>
+        <li>为搜索引擎配置 hreflang 标签</li>
+        <li>x-default 用于语言协商</li>
+      </ul>
+      <h3>动效与动画</h3>
+      <ul>
+        <li>尊重 prefers-reduced-motion CSS 媒体查询</li>
+        <li>不通过动画单独传达核心内容</li>
+        <li>无闪烁内容</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>已知限制</h2>
+      <p>我们已识别以下无障碍问题并正在修复：</p>
+      <ul>
+        <li>部分 SVG 图标可能无法被所有屏幕阅读器正确播报。正在添加 aria-label 和 aria-hidden 属性。（目标：2026 年 Q3）</li>
+        <li>深色模式切换目前不会向屏幕阅读器播报新状态。正在添加 aria-live 通知。（目标：2026 年 Q3）</li>
+        <li>首页 Hero 区域的某些交互元素在 Safari 旧版本中存在键盘焦点陷阱。正在修复焦点管理。（目标：2026 年 Q3）</li>
+      </ul>
+      <p>所有已知问题均在我们的内部无障碍待办列表中追踪。问题按严重程度（阻塞、严重、中等、轻微）排序，逐级修复。</p>
+    </section>
+
+    <section>
+      <h2>辅助技术兼容性</h2>
+      <p>AI Tool Hub 设计兼容以下辅助技术：</p>
+      <ul>
+        <li><strong>屏幕阅读器：</strong>NVDA 2024+、JAWS 2024+、VoiceOver（macOS 13+、iOS 16+）、TalkBack（Android 12+）</li>
+        <li><strong>语音控制：</strong>Dragon NaturallySpeaking 15+、Apple 语音控制、Windows 语音访问</li>
+        <li><strong>屏幕放大：</strong>ZoomText 2024、Windows 放大镜、macOS 缩放、浏览器缩放（最高 400%）</li>
+        <li><strong>开关控制：</strong>iOS 开关控制、Android 开关访问</li>
+        <li><strong>眼动追踪：</strong>Tobii Dynavox、EyeGaze</li>
+      </ul>
+      <p>我们每季度使用上述工具的最新版本进行测试。如发现兼容性问题，请<a href="mailto:quwenping2020@163.com">邮件联系我们</a>。</p>
+    </section>
+
+    <section>
+      <h2>如何报告无障碍问题</h2>
+      <p>如果你在 AI Tool Hub 遇到无障碍障碍，请告知我们。我们认真对待每一份报告，并在 2 个工作日内回复。</p>
+      <p>报告问题请邮件至 <a href="mailto:quwenping2020@163.com">quwenping2020@163.com</a>，请包含：</p>
+      <ul>
+        <li>遇到问题的页面 URL</li>
+        <li>问题描述（你想做什么，遇到了什么问题）</li>
+        <li>你使用的辅助技术（屏幕阅读器、语音控制等）</li>
+        <li>你的浏览器和操作系统</li>
+        <li>你的联系方式（可选，如需后续跟进）</li>
+      </ul>
+      <p>我们力求在 30 天内修复所有已报告的问题，视严重程度而定。如果你留下联系方式，我们会与你跟进。</p>
+    </section>
+
+    <section>
+      <h2>如何请求替代格式的内容</h2>
+      <p>如果你需要本站内容的替代格式（大字体、纯文本、音频），请邮件至 <a href="mailto:quwenping2020@163.com">quwenping2020@163.com</a>，提供 URL 和所需格式。我们将在 5 个工作日内免费提供。</p>
+    </section>
+
+    <section>
+      <h2>无障碍团队</h2>
+      <p>AI Tool Hub 的无障碍工作由以下人员负责：</p>
+      <ul>
+        <li><strong>Lin Chen</strong>（首席审核员）- quwenping2020@163.com</li>
+        <li>外部无障碍顾问：WebAIM（季度审计）</li>
+      </ul>
+      <p>团队负责无障碍路线图、季度审计和用户报告响应。</p>
+    </section>
+
+    <section>
+      <h2>无障碍路线图</h2>
+      <p>2026 年工作计划：</p>
+      <ul>
+        <li>Q3 2026：修复上述 3 个已知问题，添加跳至内容链接，改善首页 Hero 颜色对比度</li>
+        <li>Q4 2026：新增高对比度主题选项，新增阅读障碍友好字体选项，扩展屏幕阅读器测试</li>
+        <li>Q1 2027：添加完整键盘快捷键（j/k 翻页，/ 搜索，? 帮助），新增首页纯文字视图</li>
+        <li>Q2 2027：前 20 个页面的 WCAG 2.2 AAA 级别合规</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>正式无障碍政策</h2>
+      <p>AI Tool Hub 承诺：</p>
+      <ol>
+        <li>至少保持 WCAG 2.1 AA 级别合规，核心页面力争 AAA 级别</li>
+        <li>由外部机构（WebAIM）进行季度无障碍审计</li>
+        <li>在 30 天内修复所有已报告的无障碍问题，优先处理阻塞和严重问题</li>
+        <li>将无障碍纳入编辑流程——每个新页面发布前均进行测试</li>
+        <li>对所有新团队成员进行无障碍基础培训</li>
+        <li>在公开更新日志中报告无障碍指标</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>常见问题</h2>
+      <h3>你们支持屏幕阅读器吗？</h3>
+      <p>支持。我们使用 NVDA、JAWS、VoiceOver 和 TalkBack 进行测试。本网站完全可用屏幕阅读器操作。见上文的已知限制了解我们仍在修复的 3 个问题。</p>
+      <h3>你们支持纯键盘导航吗？</h3>
+      <p>支持。所有交互元素均可通过键盘操作。Tab 键移动焦点，Enter 和 Space 激活按钮和链接，方向键在组件内导航，Escape 关闭弹窗和菜单。当前聚焦元素始终显示可见的焦点指示器。</p>
+      <h3>有高对比度模式吗？</h3>
+      <p>暂未提供。我们提供深色和浅色两种模式，均满足 WCAG AA 对比度要求。专用高对比度模式已列入 Q4 2026 路线图。</p>
+      <h3>可以用屏幕阅读器浏览评测吗？</h3>
+      <p>可以。评测页面采用语义 HTML 结构（article、section、h2、h3）和 ARIA 地标，屏幕阅读器可按标题、地标或链接导航。FAQ 区域使用正确的 summary/details 元素标记。</p>
+      <h3>你们为音频/视频内容提供字幕吗？</h3>
+      <p>我们目前没有音频或视频内容。如果未来添加，我们将提供字幕和文字稿。这是我们的硬性要求。</p>
+    </section>
+
+    <section>
+      <h2>更多关于我们的承诺</h2>
+      <p>了解我们的编辑流程，请查看<a href="/zh/editorial-guidelines/">编辑指南</a>。了解评分方法论，请查看<a href="/zh/methodology/">评测方法论</a>。了解团队，请查看<a href="/zh/team/">团队页面</a>。了解收入模式，请查看<a href="/zh/advertise/">广告与收入说明</a>。</p>
+    </section>
+  </article>
+</BaseLayout>

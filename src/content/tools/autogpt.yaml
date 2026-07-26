@@ -1,0 +1,48 @@
+name:
+  en: AutoGPT
+  zh: AutoGPT
+short_desc:
+  en: Open-source autonomous AI agent framework
+  zh: 开源自主 AI 智能体框架
+long_desc:
+  en: >-
+    AutoGPT is the original viral autonomous AI agent; given a goal, it plans, executes, and iterates autonomously.
+cat: productivity
+url: https://github.com/Significant-Gravitas/AutoGPT
+icon: fa-robot
+scenes:
+  en:
+  - Autonomous tasks
+  - Research
+  - Content gen
+  - Automation
+pros:
+  en:
+  - Fully open source
+  - Autonomous planning
+  - Active community
+cons:
+  en:
+  - Token-heavy
+  - Unstable results
+  - Needs tech skills
+target_audience:
+  en:
+  - Devs
+  - AI enthusiasts
+  - Researchers
+use_cases:
+  en:
+  - Research
+  - Automation
+  - Content
+  - Experiments
+features:
+  en:
+  - Autonomous agent
+  - Open source
+  - Multi-step planning
+  - File ops
+example:
+  en: >-
+    Example: 'Research the 2026 AI coding tools market' → auto search+summarize+report.

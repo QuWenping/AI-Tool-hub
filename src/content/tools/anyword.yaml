@@ -1,0 +1,46 @@
+name:
+  en: Anyword
+  zh: Anyword
+short_desc:
+  en: AI copywriting with performance prediction scoring
+  zh: 带效果预测评分的 AI 文案工具
+long_desc:
+  en: >-
+    Anyword doesn't just generate copy; it predicts a performance score for each variant to help pick the best.
+cat: text
+url: https://anyword.com
+icon: fa-chart-bar
+scenes:
+  en:
+  - Ad copy
+  - A/B testing
+  - Social
+  - Email
+pros:
+  en:
+  - Performance scoring
+  - Data-driven
+  - Multi-variant
+cons:
+  en:
+  - Expensive
+  - Marketing only
+target_audience:
+  en:
+  - Marketing
+  - Advertising
+  - E-commerce
+use_cases:
+  en:
+  - Ads
+  - Social
+  - Email
+  - A/B
+features:
+  en:
+  - AI copy
+  - Performance score
+  - A/B test
+  - Multi-variant
+example:
+  en: 'Example: Generate 5 ad copy variants ranked by predicted performance.'

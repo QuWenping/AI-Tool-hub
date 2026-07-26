@@ -1,0 +1,46 @@
+name:
+  en: Genmo
+  zh: Genmo
+short_desc:
+  en: AI video + 3D generation
+  zh: AI 视频 + 3D 生成
+long_desc:
+  en: >-
+    Genmo generates video and 3D assets with AI; great for creative and game development.
+cat: video
+url: https://genmo.ai
+icon: fa-film
+scenes:
+  en:
+  - Video gen
+  - 3D assets
+  - Creative
+  - Games
+pros:
+  en:
+  - Unique 3D gen
+  - Free trial
+  - Creative tools
+cons:
+  en:
+  - Quality varies
+  - Small ecosystem
+target_audience:
+  en:
+  - Designers
+  - Game devs
+  - Creators
+use_cases:
+  en:
+  - Video
+  - 3D
+  - Creative
+  - Games
+features:
+  en:
+  - Video gen
+  - 3D assets
+  - Creative
+  - Free trial
+example:
+  en: 'Example: Generate a 3D rotating product showcase video.'

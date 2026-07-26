@@ -1,0 +1,24 @@
+name:
+  en: Magic Studio
+  zh: Magic Studio
+short_desc:
+  en: AI image editing suite
+  zh: AI 图像编辑套件
+long_desc:
+  en: Remove backgrounds, enhance photos, and create images with AI
+cat: image
+url: https://magicstudio.com
+icon: fa-magic
+scenes:
+  en:
+  - image
+  - editing
+  - bg-removal
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

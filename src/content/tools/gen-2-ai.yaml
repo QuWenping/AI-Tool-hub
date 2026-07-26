@@ -1,0 +1,24 @@
+name:
+  en: Gen-2
+  zh: Gen-2
+short_desc:
+  en: Runway Gen-2 video model
+  zh: Runway Gen-2 视频模型
+long_desc:
+  en: Runway text-to-video and image-to-video model
+cat: video
+url: https://runwayml.com/gen-2
+icon: fa-video
+scenes:
+  en:
+  - video
+  - generation
+  - ai
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

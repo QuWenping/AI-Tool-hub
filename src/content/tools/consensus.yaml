@@ -1,0 +1,57 @@
+name:
+  en: Consensus
+  zh: Consensus
+short_desc:
+  en: AI academic paper search engine
+  zh: AI 学术论文搜索引擎
+long_desc:
+  en: >-
+    Consensus uses AI to search academic papers, answering scientific questions with paper citations.
+cat: productivity
+url: https://consensus.app
+icon: fa-users
+scenes:
+  en:
+  - Academic search
+  - Science Q&A
+  - Paper citations
+  zh:
+  - 学术搜索
+  - 循证决策
+  - 论文发现
+  - 研究验证
+pros:
+  en:
+  - Academic-specific
+  - Reliable citations
+  - Usable free
+  zh:
+  - 仅搜索学术来源
+  - 共识程度显示直观
+  - 论文引用直接可验证
+cons:
+  en:
+  - English papers only
+  - Limited depth
+  zh:
+  - 仅覆盖英文论文
+  - 非学术问题不适合
+target_audience:
+  en:
+  - Researchers
+  - Students
+  - Medical
+use_cases:
+  en:
+  - Research
+  - Papers
+  - Q&A
+  - Citations
+features:
+  en:
+  - Paper search
+  - AI answers
+  - Citations
+  - Free
+example:
+  en: 'Example: ''Does creatine help muscle growth?'' → cites 10 papers.'

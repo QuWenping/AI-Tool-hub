@@ -1,0 +1,24 @@
+name:
+  en: OpenAI API
+  zh: OpenAI API
+short_desc:
+  en: GPT model API
+  zh: GPT 模型 API
+long_desc:
+  en: Official API for GPT-4o, DALL-E, Whisper and more
+cat: code
+url: https://platform.openai.com
+icon: fa-code
+scenes:
+  en:
+  - api
+  - multimodal
+  - embeddings
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Pay per use

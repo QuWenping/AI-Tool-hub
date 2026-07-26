@@ -1,0 +1,111 @@
+name:
+  en: Runway
+  zh: Runway
+short_desc:
+  en: All-in-one AI video creation and editing platform
+  zh: 全能 AI 视频创作和编辑平台
+long_desc:
+  en: Runway is an AI toolbox for video creation, matting, and frame interpolation.
+cat: video
+url: https://runwayml.com
+icon: fa-film
+scenes:
+  en:
+  - Video matting
+  - Frame interp
+  - Static to motion
+  - Style transfer
+  zh:
+  - 视频制作
+  - 特效合成
+  - 广告创作
+  - 后期剪辑
+pros:
+  en:
+  - Browser pipeline
+  - No high-end HW
+  - Intuitive UI
+  zh:
+  - 最完整的 AI 视频工具套件
+  - Gen-3 模型质量高
+  - 内建编辑和特效功能
+cons:
+  en:
+  - Gen-2 4s limit
+  - HD is paid
+  - Some artifacts
+  zh:
+  - Gen-3 仅支持 10 秒视频
+  - 学习全部功能需要时间
+  - 高清输出需付费
+target_audience:
+  en:
+  - Video editors
+  - Creators
+  - Designers
+  - Indie filmmakers
+  zh:
+  - 视频编辑师
+  - 创作者
+  - 设计师
+  - 独立电影人
+use_cases:
+  en:
+  - Remove BG
+  - Static to motion
+  - 60fps interp
+  - Style transfer
+  zh:
+  - 移除背景
+  - 静态转动态
+  - 60fps 插帧
+  - 风格迁移
+features:
+  en:
+  - Gen-2 video
+  - Green screen
+  - Frame interp
+  - Infinite expand
+  zh:
+  - Gen-2 视频生成
+  - 绿幕抠图
+  - 帧插值
+  - 无限扩展
+example:
+  en: 'Example: Upload landscape to generate aerial shot.'
+  zh: 示例：上传风景照片生成航拍镜头。
+reviewed: true
+updatedAt: '2026-07-19'
+testedVersion: Runway current-generation video models Alpha
+score: 8.8
+overall_score: 8.8
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+  - API
+pricingSummary:
+  en: >-
+    Free tier with limited credits · Standard $15/mo · Pro $35/mo · Unlimited $95/mo.
+faq:
+- q_en: Which Runway plan should I pick?
+  a_en: The $35/month Pro plan is the sweet spot for creators shipping regular content.
+- q_en: Does Runway offer editing tools?
+  a_en: >-
+    Yes — motion brush, inpainting, storyboard, and current-generation video models upscale ship in the app.
+scoreBreakdown:
+  user: 8.8
+  capability: 7
+  price: 10
+  growth: 7
+  trust: 8
+editorialIntro: >-
+  Runway is the veteran of AI video and still the most production-ready tool in the category. Gen-3 Alpha plus motion brush,
+  inpainting, storyboard and Gen-3 upscale make it the default for creators who ship more than one-off clips.
+editorialVerdict:
+  best: >-
+    You are a creative professional shipping ads, music videos or short films. Motion brush, inpainting and storyboard are
+    unmatched.
+  avoid: >-
+    You only need one-off social clips or the tightest budget — Kling free tier or Hailuo covers that.

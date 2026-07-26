@@ -1,0 +1,109 @@
+name:
+  en: ElevenLabs
+  zh: ElevenLabs
+short_desc:
+  en: The most realistic AI voice synthesis and cloning
+  zh: 最真实的 AI 语音合成和声音克隆
+long_desc:
+  en: ElevenLabs offers near-indistinguishable TTS in 29 languages.
+cat: audio
+url: https://try.elevenlabs.io/j50wgji2obha
+icon: fa-microphone-alt
+scenes:
+  en:
+  - Audiobooks
+  - Video dub
+  - Game voice
+  - VTuber
+  zh:
+  - 播客配音
+  - 有声书
+  - YouTube 旁白
+  - 语音克隆
+pros:
+  en:
+  - Most realistic
+  - Amazing clone
+  - Multilingual
+  zh:
+  - 最佳语音质量，与真人无异
+  - 声音克隆功能强大
+  - API 适合生产级应用
+cons:
+  en:
+  - Char pricing
+  - Chinese quirks
+  - Ethics
+  zh:
+  - 免费版有水印
+  - 中文语音不如英文自然
+  - 按字符计费
+target_audience:
+  en:
+  - Podcasters
+  - Audiobook authors
+  - Game devs
+  - YouTubers
+  zh:
+  - 播客创作者
+  - 有声书作者
+  - 游戏开发者
+  - YouTuber
+use_cases:
+  en:
+  - 10h audiobook
+  - 5-lang dub
+  - Game voices
+  - Podcast intro
+  zh:
+  - 10 小时有声书
+  - 5 语言配音
+  - 游戏语音
+  - 播客片头
+features:
+  en:
+  - Seconds clone
+  - 29 langs
+  - Emotion control
+  - Streaming API
+  zh:
+  - 秒级克隆
+  - 29 种语言
+  - 情感控制
+  - 流式 API
+example:
+  en: 'Example: Pick a style to generate human-like voice.'
+  zh: 示例：选择一种风格生成类人语音。
+reviewed: true
+updatedAt: '2026-07-19'
+testedVersion: ElevenLabs v3
+score: 9
+overall_score: 9
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+  - API
+pricingSummary:
+  en: Starter $5/mo · Creator $22/mo · Pro $99/mo · Scale $330/mo.
+faq:
+- q_en: Can ElevenLabs clone my voice?
+  a_en: >-
+    Yes. Instant voice cloning requires only a short reference sample; professional cloning improves quality.
+- q_en: How many languages are supported?
+  a_en: 29 languages with natural intonation, including Chinese.
+scoreBreakdown:
+  user: 9
+  capability: 7
+  price: 10
+  growth: 7
+  trust: 8
+editorialIntro: >-
+  ElevenLabs v3 delivers the most realistic text-to-speech in 2026. Voice cloning needs only 30 seconds of reference audio,
+  29 languages are supported natively, and emotional range is a genuine step up from prior versions.
+editorialVerdict:
+  best: >-
+    Voice quality matters — audiobooks, podcasts, YouTube narration. Starter $5/month is enough for hobbyists.
+  avoid: >-
+    You need production-scale TTS at the lowest per-character price — PlayHT is cheaper.

@@ -1,0 +1,24 @@
+name:
+  en: Scholarcy
+  zh: Scholarcy
+short_desc:
+  en: AI paper summarizer
+  zh: AI 论文摘要
+long_desc:
+  en: AI that summarizes research papers into flashcards
+cat: research
+url: https://scholarcy.com
+icon: fa-book
+scenes:
+  en:
+  - summarize
+  - papers
+  - flashcards
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

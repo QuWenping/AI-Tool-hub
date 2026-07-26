@@ -1,0 +1,24 @@
+name:
+  en: ScienceDirect AI
+  zh: ScienceDirect AI
+short_desc:
+  en: AI scientific search
+  zh: AI 科学搜索
+long_desc:
+  en: AI-enhanced scientific literature search
+cat: research
+url: https://sciencedirect.com
+icon: fa-book
+scenes:
+  en:
+  - scientific
+  - literature
+  - search
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

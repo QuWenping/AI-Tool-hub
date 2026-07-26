@@ -1,0 +1,46 @@
+name:
+  en: Kapwing
+  zh: Kapwing
+short_desc:
+  en: Online AI video editor
+  zh: 在线 AI 视频编辑器
+long_desc:
+  en: >-
+    Kapwing is a browser video editor with AI tools (auto subtitles, background removal, translation).
+cat: video
+url: https://www.kapwing.com
+icon: fa-film
+scenes:
+  en:
+  - Video editing
+  - Subtitles
+  - Translation
+  - Social formats
+pros:
+  en:
+  - Browser-based
+  - Many AI tools
+  - Team collab
+cons:
+  en:
+  - Free has watermark
+  - Slow for big projects
+target_audience:
+  en:
+  - Creators
+  - Marketing
+  - Education
+use_cases:
+  en:
+  - Editing
+  - Subtitles
+  - Translation
+  - Social
+features:
+  en:
+  - Video edit
+  - AI subtitles
+  - Translation
+  - Collab
+example:
+  en: 'Example: Auto-generate multilingual subtitles for a video.'

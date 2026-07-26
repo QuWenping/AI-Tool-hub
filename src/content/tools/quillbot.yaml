@@ -1,0 +1,58 @@
+name:
+  en: QuillBot
+  zh: QuillBot
+short_desc:
+  en: AI paraphrasing, polishing, and summarizing tool
+  zh: AI 改写、润色和总结工具
+long_desc:
+  en: >-
+    QuillBot excels at paraphrasing, polishing, summarizing, and grammar checking; popular with students and writers.
+cat: text
+url: https://quillbot.com
+icon: fa-feather
+scenes:
+  en:
+  - Paraphrase
+  - Polish
+  - Summarize
+  - Grammar
+  zh:
+  - 英文改写
+  - 语法检查
+  - 文本润色
+  - 内容总结
+pros:
+  en:
+  - Good paraphrasing
+  - Usable free tier
+  - Browser extension
+  zh:
+  - 改写质量高
+  - 专注做好一件事
+  - 价格合理
+cons:
+  en:
+  - Long text limited
+  - Originality average
+  zh:
+  - 不生成原创内容
+  - 中文支持有限
+target_audience:
+  en:
+  - Students
+  - Writers
+  - Non-native
+use_cases:
+  en:
+  - Essays
+  - Email polish
+  - Summaries
+  - Grammar
+features:
+  en:
+  - Paraphrase
+  - Polish
+  - Summarize
+  - Grammar
+example:
+  en: 'Example: Rewrite academic text into plain language.'

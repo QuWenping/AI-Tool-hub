@@ -1,0 +1,24 @@
+name:
+  en: DeepCode
+  zh: DeepCode
+short_desc:
+  en: AI code review
+  zh: AI 代码审查
+long_desc:
+  en: AI-powered code review and bug detection
+cat: code
+url: https://deepcode.ai
+icon: fa-code
+scenes:
+  en:
+  - review
+  - bugs
+  - security
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

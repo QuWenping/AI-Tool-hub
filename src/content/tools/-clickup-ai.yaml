@@ -1,0 +1,24 @@
+name:
+  en: ClickUp AI
+  zh: ClickUp AI
+short_desc:
+  en: AI productivity platform
+  zh: AI 效率平台
+long_desc:
+  en: AI-powered project management and productivity
+cat: productivity
+url: https://clickup.com
+icon: fa-tasks
+scenes:
+  en:
+  - project
+  - productivity
+  - ai
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

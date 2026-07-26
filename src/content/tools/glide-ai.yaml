@@ -1,0 +1,24 @@
+name:
+  en: Glide AI
+  zh: Glide AI
+short_desc:
+  en: No-code AI app builder
+  zh: 无代码 AI 应用构建器
+long_desc:
+  en: Build AI-powered apps without coding
+cat: productivity
+url: https://glideapps.com
+icon: fa-mobile
+scenes:
+  en:
+  - no-code
+  - app-dev
+  - ai
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

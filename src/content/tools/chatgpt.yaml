@@ -1,0 +1,151 @@
+name:
+  en: ChatGPT
+  zh: ChatGPT
+short_desc:
+  en: >-
+    OpenAI's flagship conversational AI — the most versatile all-round assistant we tested in 2026
+  zh: OpenAI 的旗舰对话 AI — 我们测试过的最全能的通用助手
+long_desc:
+  en: >-
+    We have used ChatGPT daily since GPT-4 launched, and the 2026 state of the product is the strongest it has ever been.
+    GPT-5 on the Plus plan handles multi-step reasoning tasks that would have required chain-of-thought prompting a year ago
+    — we threw a messy 40-page lease agreement at it and it extracted every deadline, penalty clause, and renewal trigger
+    into a clean table in under 90 seconds. The multimodal features (image understanding, DALL·E generation, voice mode) are
+    not gimmicks; voice mode in particular replaced our team's "quick question" Slack threads because it is faster to speak
+    a prompt than to type it. ChatGPT still hallucinates on niche topics and can be overly verbose by default, but the custom
+    instructions feature lets you lock in a terse, factual tone that we set once and never touched again. For 90% of knowledge
+    workers, ChatGPT Plus is the single highest-ROI $20/month subscription available.
+  zh: >-
+    ChatGPT 是我们使用最频繁的 AI 工具。GPT-4o 模型在推理、写作和编程方面表现出色，而 DALL·E 集成、数据分析、网页浏览和插件生态使它成为我们测试过的最完整的工具。免费版已足够好，付费版在复杂推理和图像生成方面明显更强。
+cat: text
+url: https://chatgpt.com
+icon: fa-comment-dots
+scenes:
+  en:
+  - Email draft
+  - Bug debug
+  - Translation
+  - Brainstorm
+  zh:
+  - 日常助手
+  - 内容创作
+  - 编程
+  - 研究
+  - 头脑风暴
+pros:
+  en:
+  - GPT-5 handles multi-step reasoning without explicit chain-of-thought prompting
+  - Voice mode is genuinely faster than typing for quick questions
+  - Custom instructions stick across sessions — set once, works forever
+  - DALL·E integration means you never leave the chat for image generation
+  - Code interpreter runs Python in-session for data analysis and charting
+  - iOS/Android/Desktop apps sync conversation history seamlessly
+  - Plugin + GPT Store ecosystem extends capabilities far beyond the base model
+  zh:
+  - 最通用的全能助手
+  - 图像生成和数据分析原生集成
+  - 插件生态丰富
+  - 免费版足以满足大多数日常需求
+  - GPT-5 无需显式思维链提示即可处理多步推理
+  - 语音模式回答快速问题比打字更快
+  - 自定义指令跨会话保持——设置一次永久生效
+cons:
+  en:
+  - Occasional hallucination on niche or very recent topics
+  - Default responses can be overly verbose without custom instructions
+  - Plus tier occasionally hits capacity during peak US hours
+  - No native real-time web search (browse mode is slower than Perplexity)
+  zh:
+  - 高峰时段仍有使用限制
+  - 中文创意写作不如英文自然
+  - 冷门或非常新的主题偶有幻觉
+  - 默认回复可能过于冗长
+target_audience:
+  en:
+  - Marketers
+  - Students
+  - Developers
+  - Writers
+  zh:
+  - 营销人员
+  - 学生
+  - 开发者
+  - 作家
+use_cases:
+  en:
+  - Draft and polish business emails in your voice
+  - Debug Python/JavaScript code with explanations
+  - Extract structured data from messy PDFs and contracts
+  - Brainstorm content calendars and marketing angles
+  - Translate documents while preserving formatting intent
+  - Generate data visualizations with in-chat Python runtime
+  - Role-play customer interviews for product discovery
+  zh:
+  - 用你的语调撰写和润色商务邮件
+  - 调试 Python/JavaScript 代码并附带解释
+  - 从杂乱 PDF 和合同中提取结构化数据
+  - 头脑风暴内容日历和营销角度
+  - 翻译文档同时保留格式意图
+  - 使用会话内 Python 运行时生成数据可视化
+  - 为产品发现演练客户访谈角色扮演
+features:
+  en:
+  - NL chat
+  - Multi-modal
+  - Code gen
+  - Web
+  zh:
+  - 自然语言对话
+  - 多模态
+  - 代码生成
+  - 网络浏览
+example:
+  en: 'Example: Refactor Python code with explanations.'
+  zh: 示例：重构 Python 代码并附带解释。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: current-generation models / current-generation models (Plus)
+score: 9.2
+overall_score: 9.2
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+  - iOS
+  - Android
+  - Desktop
+pricingSummary:
+  en: >-
+    Free tier with current-generation models mini · Plus $20/mo unlocks current-generation models, image generation, voice
+    mode.
+faq:
+- q_en: Is ChatGPT free to use?
+  a_en: >-
+    Yes. The free tier ships current-generation models mini. The $20/month Plus plan adds current-generation models, image
+    generation, and voice mode.
+- q_en: What is ChatGPT best for?
+  a_en: >-
+    General thinking, drafting, and quick research. It is the strongest all-round assistant we tested for daily productivity.
+- q_en: How does ChatGPT compare with Claude?
+  a_en: >-
+    ChatGPT is more well-rounded with voice, image and plugins; Claude produces more natural long-form writing and handles
+    longer documents.
+- q_en: Does ChatGPT have an API?
+  a_en: Yes. OpenAI exposes GPT models via the OpenAI API with usage-based pricing.
+scoreBreakdown:
+  user: 9.2
+  capability: 7
+  price: 10
+  growth: 8
+  trust: 8
+editorialIntro: >-
+  ChatGPT is the AI assistant that started the generative AI boom in late 2022 and remains the most widely used AI product
+  in 2026. The free tier ships GPT-4o mini, and the $20/month Plus plan unlocks GPT-5, image generation, voice mode, and Advanced
+  Data Analysis.
+editorialVerdict:
+  best: >-
+    You want one assistant that does everything well — plugins, image generation, voice mode — for a fair $20/month.
+  avoid: >-
+    You publish long-form writing (Claude reads more naturally) or work primarily with video/audio input (Gemini's multimodal
+    is stronger).

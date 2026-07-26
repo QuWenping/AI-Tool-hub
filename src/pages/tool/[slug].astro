@@ -5,8 +5,7 @@ import toolsData from "../../data/tools.json";
 import matchupsData from "../../data/matchups.json";
 import categories from "../../data/categories.json";
 import editorialData from "../../data/tool-editorial.json";
-import ZhNotice from "../../components/ZhNotice.astro";
-import { t, ta, hasZh, catLabel } from "../../utils/i18n";
+import { catLabel, hasZh } from "../../utils/i18n";
 import TLDR from "../../components/ui/TLDR.astro";
 import ProsCons from "../../components/ui/ProsCons.astro";
 import QuickFacts from "../../components/ui/QuickFacts.astro";
@@ -17,7 +16,10 @@ import ScreenshotGallery from "../../components/ui/ScreenshotGallery.astro";
 import ScoreCard from "../../components/ui/ScoreCard.astro";
 import SaveButton from "../../components/ui/SaveButton.astro";
 
+import { getTranslations } from "../../utils/i18n";
 const pageLang = Astro.currentLocale || "en";
+const t = getTranslations("tool", pageLang);
+
 
 export async function getStaticPaths() {
   return Object.entries(toolsData)
@@ -126,47 +128,9 @@ const defaultFaqs = [
 // Use editorial FAQs if available, otherwise use defaults; merge if both exist
 const allFaqs = faqItems.length > 0 ? faqItems : defaultFaqs;
 
-// Editorial narrative
-const ourIntros = {
-  chatgpt: "ChatGPT is the AI assistant that started the generative AI boom in late 2022 and remains the most widely used AI product in 2026. The free tier ships GPT-4o mini, and the $20/month Plus plan unlocks GPT-5, image generation, voice mode, and Advanced Data Analysis.",
-  claude: "Claude is Anthropic's answer to ChatGPT. In our long-form writing tests it produced the most natural English output among general assistants, and the 200K-token context window lets you paste 100+ pages in one prompt.",
-  gemini: "Gemini 2.5 Pro is Google's flagship multimodal assistant. The 2M-token context window is the largest in the industry, the Google Search integration is the deepest, and Gemini Live delivers the most natural-sounding voice mode.",
-  "github-copilot": "GitHub Copilot is still the gold standard for autocomplete inside your existing IDE. The free tier for verified students is one of the best deals in tech; the $10/month Individual or $19/month Business plan add chat, multi-file edits and enterprise controls.",
-  cursor: "Cursor is a VS Code fork with GPT-4-level AI, codebase chat, and multi-file agent mode built in. It can refactor across dozens of files, generate whole features from a description, and chat about your entire codebase.",
-  sora: "Sora 2 is OpenAI's text-to-video model and the current quality leader in 2026. Physics understanding, character consistency and 20-second clip length lead the category, though the price ceiling and safety filters are aggressive.",
-  runway: "Runway is the veteran of AI video and still the most production-ready tool in the category. Gen-3 Alpha plus motion brush, inpainting, storyboard and Gen-3 upscale make it the default for creators who ship more than one-off clips.",
-  midjourney: "Midjourney v7 has the highest aesthetic ceiling in image generation. Lighting, composition and color grading feel curated even on lazy prompts. Best for art, illustration and stylized brand assets.",
-  "stable-diffusion": "Stable Diffusion 3.5 is the strongest open-source image model. Pick it when you need total control, custom styles, or zero per-image cost — and are comfortable with LoRAs, ControlNets and a decent GPU.",
-  leonardo: "Leonardo.AI is the specialist for game art, character design and concept art. Alchemy mode maintains style consistency across generations, Canvas is the most polished in-app editor, and the free tier is generous.",
-  elevenlabs: "ElevenLabs v3 delivers the most realistic text-to-speech in 2026. Voice cloning needs only 30 seconds of reference audio, 29 languages are supported natively, and emotional range is a genuine step up from prior versions.",
-  suno: "Suno v4 can produce a complete song — vocals, lyrics, arrangement — from a short text description, and it is the only AI music tool in 2026 whose output we would publish. Chinese-language songs generate cleanly.",
-  descript: "Descript works like a Word document for media: edit the transcript and the audio/video updates. AI filler-word removal, Studio Sound and Edit for Clarity cut editing time by 5–10× on interview-style content.",
-  "notion-ai": "Notion AI is the writing/summarization layer inside Notion. If your team already runs on Notion, the $10/user/month add-on is the highest-value line item on this list because it happens where the work is.",
-  perplexity: "Perplexity is the AI search engine that cites its sources. For research, market intelligence and product decisions it is dramatically faster than Google plus opening a dozen tabs.",
-  jasper: "Jasper is the AI writing platform built specifically for marketing teams. Brand voice training, marketing templates and SEO mode become useful once you have three or more writers sharing a brand.",
-  hostinger: "Hostinger is the low-cost hosting provider we recommend for small sites: cheapest tier in the category, easy hPanel control panel, WordPress one-click install. Traffic-heavy sites eventually outgrow the entry-level plans."
-};
-const ourVerdicts = {
-  chatgpt: { best: "You want one assistant that does everything well — plugins, image generation, voice mode — for a fair $20/month.", avoid: "You publish long-form writing (Claude reads more naturally) or work primarily with video/audio input (Gemini's multimodal is stronger)." },
-  claude: { best: "You write for a living. Long context, Artifacts and natural writing style are best-in-class at $20/month Pro.", avoid: "You rely on real-time web search (Perplexity or Gemini fit better) or need voice/image tools (ChatGPT Plus is more well-rounded)." },
-  gemini: { best: "You work with multimodal content (video, audio, images) or live research; Google Search integration is deepest and Gemini Live is the best voice mode.", avoid: "Your main workload is long-form English writing — Claude reads more naturally." },
-  "github-copilot": { best: "You want fast, accurate autocomplete inside the IDE you already use. Individual plan is $10/month; students are free.", avoid: "You regularly refactor across many files or want repo-wide agent workflows — Cursor is more capable." },
-  cursor: { best: "You are a full-time developer refactoring code, debugging unfamiliar codebases and shipping features every week. The $20/month Pro plan pays back within days.", avoid: "You only code a few hours a week or you refuse to leave JetBrains — stick with Copilot." },
-  sora: { best: "Quality is the priority and the budget exists — cinematic shots, character consistency and 20s clips beat the field.", avoid: "You need editing tools or 5–10s social clips — Runway or Pika are faster and cheaper." },
-  runway: { best: "You are a creative professional shipping ads, music videos or short films. Motion brush, inpainting and storyboard are unmatched.", avoid: "You only need one-off social clips or the tightest budget — Kling free tier or Hailuo covers that." },
-  midjourney: { best: "You want highest aesthetic ceiling with almost no prompt engineering. Standard plan at $30/month is the sweet spot.", avoid: "You need photorealism (Flux Pro), text in images (Ideogram) or total control (Stable Diffusion)." },
-  "stable-diffusion": { best: "You want total control, custom styles or zero per-image cost, and you can handle LoRAs, ControlNets and a decent GPU.", avoid: "Command-line tools and GPU setup are a barrier — use Midjourney or DALL-E." },
-  leonardo: { best: "You are a game artist, character designer or concept artist and value consistent style across generations.", avoid: "Your work is generic image generation for blogs/social — Midjourney or DALL-E is simpler." },
-  elevenlabs: { best: "Voice quality matters — audiobooks, podcasts, YouTube narration. Starter $5/month is enough for hobbyists.", avoid: "You need production-scale TTS at the lowest per-character price — PlayHT is cheaper." },
-  suno: { best: "You need custom music or jingles for videos, podcasts or personal projects. Free tier covers hobby use.", avoke: null, avoid: "You need a specific song by a specific artist — AI music tools cannot deliver that." },
-  descript: { best: "You edit audio or video regularly and want transcript-based workflows plus Studio Sound.", avoid: "You edit rarely (learning curve is too high) or you do music production (use a traditional DAW)." },
-  "notion-ai": { best: "Your team already runs on Notion — $10/user/month AI happens exactly where the work is.", avoid: "You do not use Notion — pay a general assistant instead." },
-  perplexity: { best: "You do regular research, market intelligence or investment work and need cited sources.", avoid: "You need a general assistant with plugins or the deepest multimodal — pick ChatGPT Plus or Gemini." },
-  jasper: { best: "You manage a marketing team of 3+ writers who need brand-voice consistency. Team plan starts at $125/month.", avoid: "You are an individual marketer — Claude Pro delivers similar output for less money." },
-  hostinger: { best: "You are launching a small site or side project and want the lowest price on the market.", avoid: "You run high-traffic or mission-critical apps — Cloudways or Vercel are better fits." }
-};
-const ourIntro = ourIntros[id] || `${tNameEn}. ${tLongEn || tShortEn}`;
-const ourVerdict = ourVerdicts[id] || {
+// Editorial narrative (now sourced from tool-editorial.json)
+const ourIntro = editorial?.editorialIntro || `${tNameEn}. ${tLongEn || tShortEn}`;
+const ourVerdict = editorial?.editorialVerdict || {
   best: `${tNameEn} is a fit if you need a reliable ${catLabelEn.toLowerCase()} AI tool with ${tProsEn[0] ? tProsEn[0].toLowerCase() : "solid fundamentals"}.`,
   avoid: `${tNameEn} is not the right fit if you need capabilities outside ${catLabelEn.toLowerCase()} — look at the alternatives below.`
 };
@@ -214,22 +178,22 @@ const breadcrumbSchema = {
 };
 
 const tocSections = [
-  { id: "overview", label: "What is " + tNameEn + "?" },
-  { id: "our-take", label: "Our take" },
-  screenshotImages.length > 0 && { id: "screenshots", label: "Screenshots" },
-  { id: "test-status-heading", label: "Real test data" },
-  featureRowsEn.length > 0 && { id: "features", label: "Key features" },
-  tUseEn.length > 0 && { id: "use-cases", label: "Use cases" },
-  tScenesEn.length > 0 && { id: "best-for", label: "Best for" },
-  tAudienceEn.length > 0 && { id: "audience", label: "Target audience" },
-  { id: "pricing", label: "Pricing" },
-  (tProsEn.length + tConsEn.length > 0) && { id: "pros-cons", label: "Pros & Cons" },
-  tExampleEn && { id: "example", label: "Example" },
-  { id: "verdict", label: "Our verdict" },
-  toolMatchups.length > 0 && { id: "comparisons", label: "Comparisons" },
-  alternatives.length > 0 && { id: "alternatives", label: "Alternatives" },
+  { id: "overview", label: t("tocOverview", { name: tName }) },
+  { id: "our-take", label: t("ourTakeHeading") },
+  screenshotImages.length > 0 && { id: "screenshots", label: t("screenshotsHeading") },
+  { id: "test-status-heading", label: t("tocTestData") },
+  featureRowsEn.length > 0 && { id: "features", label: t("featuresHeading") },
+  tUseEn.length > 0 && { id: "use-cases", label: t("useCasesCol") },
+  tScenesEn.length > 0 && { id: "best-for", label: t("bestForHeading") },
+  tAudienceEn.length > 0 && { id: "audience", label: t("audienceHeading") },
+  { id: "pricing", label: t("pricingCol") },
+  (tProsEn.length + tConsEn.length > 0) && { id: "pros-cons", label: t("tocProsCons") },
+  tExampleEn && { id: "example", label: t("exampleHeading") },
+  { id: "verdict", label: t("verdictHeading") },
+  toolMatchups.length > 0 && { id: "comparisons", label: t("tocComparisons") },
+  alternatives.length > 0 && { id: "alternatives", label: t("alternatives") },
   faqItems.length > 0 && { id: "tool-faq-heading", label: "FAQ" },
-  relatedCategories.length > 0 && { id: "related", label: "Related categories" }
+  relatedCategories.length > 0 && { id: "related", label: t("relatedHeading") }
 ].filter(Boolean);
 ---
 <BaseLayout
@@ -242,22 +206,21 @@ const tocSections = [
     <script type="application/ld+json" set:html={JSON.stringify(softwareSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
   </Fragment>
-  {pageLang === "zh" && <ZhNotice hasTranslation={zhAvailable} />}
   <article class="tool-detail">
   <div class="article-grid">
     <div class="article-main">
     <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <a href="/">Home</a> &rsaquo;
-      <a href={"/best/" + tCat + "/"}>Best {catLabelEn}</a> &rsaquo;
-      <span>{tNameEn}</span>
+      <a href="/">{t("home")}</a> &rsaquo;
+      <a href={"/best/" + tCat + "/"}>Best {pageLang === "zh" ? catLabel(tCat, "zh") : catLabelEn}</a> &rsaquo;
+      <span>{tName}</span>
     </nav>
 
     <header class="tool-detail-header">
       <div class="icon" aria-hidden="true"><i class={`fas ${tIcon}`}></i></div>
       <div class="title-group">
-        <h1>{tNameEn}</h1>
+        <h1>{tName}</h1>
         <div class="tool-detail-meta">
-          <span class="tag">{catLabelEn}</span>
+          <span class="tag">{pageLang === "zh" ? catLabel(tCat, "zh") : catLabelEn}</span>
           {isReviewed && rating && (
             <span class="tool-rating-inline">
               <i class="fas fa-star" aria-hidden="true"></i>
@@ -265,23 +228,23 @@ const tocSections = [
             </span>
           )}
           {isReviewed
-            ? <span class="status-badge status-badge--reviewed"><i class="fas fa-check-circle" aria-hidden="true"></i> Editorially reviewed</span>
-            : <span class="status-badge status-badge--pending"><i class="fas fa-info-circle" aria-hidden="true"></i> AI-catalogued, pending review</span>}
+            ? <span class="status-badge status-badge--reviewed"><i class="fas fa-check-circle" aria-hidden="true"></i> {t("editorReviewed")}</span>
+            : <span class="status-badge status-badge--pending"><i class="fas fa-info-circle" aria-hidden="true"></i> {t("aiCatalogued")}</span>}
           {editorial?.updatedAt && (
-            <span class="tool-detail-updated"><i class="fas fa-sync-alt" aria-hidden="true"></i> Updated {editorial.updatedAt}</span>
+            <span class="tool-detail-updated"><i class="fas fa-sync-alt" aria-hidden="true"></i> {t("updated")}{editorial.updatedAt}</span>
           )}
         </div>
       </div>
       <div class="actions">
         <a class="use" href={tUrl} rel="nofollow noopener" target="_blank">
-          <i class="fas fa-external-link-alt" aria-hidden="true"></i> Visit {tNameEn}
+          <i class="fas fa-external-link-alt" aria-hidden="true"></i> {t("visit")}{tName}
         </a>
-        <a class="alt" href={"/alternatives/" + id + "/"}>Alternatives</a>
-        <SaveButton toolId={id} toolName={tNameEn} />
+        <a class="alt" href={"/alternatives/" + id + "/"}>{t("alternatives")}</a>
+        <SaveButton toolId={id} toolName={tName} />
       </div>
     </header>
 
-    <p class="lede">{tShortEn}</p>
+    <p class="lede">{tShort}</p>
 
     <QuickFacts items={quickFactsEn} />
 
@@ -290,7 +253,7 @@ const tocSections = [
     )}
 
     <TLDR items={[
-      `${tNameEn} is a ${catLabelEn.toLowerCase()} AI tool: ${tShortEn || tLongEn || "an AI-powered helper"}.`,
+      `${tName} is a ${catLabelEn.toLowerCase()} AI tool: ${tShort || tLong || "an AI-powered helper"}.`,
       pricingSummaryEn ? `Pricing: ${pricingSummaryEn}` : "Pricing: see the official plan page for current pricing.",
       `Best for: ${tUseEn[0] || tScenesEn[0] || "general " + catLabelEn.toLowerCase() + " tasks"}.`,
       isReviewed
@@ -299,18 +262,18 @@ const tocSections = [
     ]} />
 
     <section class="detail-section">
-      <h2 id="overview"><i class="fas fa-info-circle" aria-hidden="true"></i> What is {tNameEn}?</h2>
-      <p data-i18n-en={tLongEn || tShortEn}>{tLongEn || tShortEn}</p>
+      <h2 id="overview"><i class="fas fa-info-circle" aria-hidden="true"></i> {t("overviewHeading", { name: tName })}</h2>
+      <p>{tLong || tShort}</p>
     </section>
 
     <section class="detail-section">
-      <h2 id="our-take"><i class="fas fa-user-edit" aria-hidden="true"></i> Our take</h2>
+      <h2 id="our-take"><i class="fas fa-user-edit" aria-hidden="true"></i> {t("ourTakeHeading")}</h2>
       <p>{ourIntro}</p>
     </section>
 
     {screenshotImages.length > 0 && (
       <section class="detail-section">
-        <h2 id="screenshots"><i class="fas fa-images" aria-hidden="true"></i> Screenshots</h2>
+        <h2 id="screenshots"><i class="fas fa-images" aria-hidden="true"></i> {t("screenshotsHeading")}</h2>
         <ScreenshotGallery images={screenshotImages} columns={screenshotImages.length >= 3 ? 3 : 2} />
       </section>
     )}
@@ -319,15 +282,15 @@ const tocSections = [
 
     {featureRowsEn.length > 0 && (
       <section class="detail-section">
-        <h2 id="features"><i class="fas fa-star" aria-hidden="true"></i> Key features</h2>
+        <h2 id="features"><i class="fas fa-star" aria-hidden="true"></i> {t("featuresHeading")}</h2>
         <FeatureTable rows={featureRowsEn} />
       </section>
     )}
 
     {tUseEn.length > 0 && (
       <section class="detail-section">
-        <h2 id="use-cases"><i class="fas fa-rocket" aria-hidden="true"></i> Use cases that actually work</h2>
-        <ul class="pros-list" data-i18n-en-rich={JSON.stringify(tUseEn)}>
+        <h2 id="use-cases"><i class="fas fa-rocket" aria-hidden="true"></i> {t("useCasesHeading")}</h2>
+        <ul class="pros-list">
           {tUseEn.map(u => <li>{u}</li>)}
         </ul>
       </section>
@@ -335,8 +298,8 @@ const tocSections = [
 
     {tScenesEn.length > 0 && (
       <section class="detail-section">
-        <h2 id="best-for"><i class="fas fa-bullseye" aria-hidden="true"></i> Best for</h2>
-        <ul class="pros-list" data-i18n-en-rich={JSON.stringify(tScenesEn)}>
+        <h2 id="best-for"><i class="fas fa-bullseye" aria-hidden="true"></i> {t("bestForHeading")}</h2>
+        <ul class="pros-list">
           {tScenesEn.map(s => <li>{s}</li>)}
         </ul>
       </section>
@@ -344,44 +307,44 @@ const tocSections = [
 
     {tAudienceEn.length > 0 && (
       <section class="detail-section">
-        <h2 id="audience"><i class="fas fa-users" aria-hidden="true"></i> Target audience</h2>
-        <div class="audience-tags" data-i18n-en-rich={JSON.stringify(tAudienceEn)}>
+        <h2 id="audience"><i class="fas fa-users" aria-hidden="true"></i> {t("audienceHeading")}</h2>
+        <div class="audience-tags">
           {tAudienceEn.map(a => <span class="audience-tag">{a}</span>)}
         </div>
       </section>
     )}
 
     <section class="detail-section pricing-section">
-      <h2 id="pricing"><i class="fas fa-tag" aria-hidden="true"></i> Pricing</h2>
+      <h2 id="pricing"><i class="fas fa-tag" aria-hidden="true"></i> {t("pricingCol")}</h2>
       {pricingSummaryEn
-        ? <p data-i18n-en={pricingSummaryEn}>{pricingSummaryEn}</p>
-        : <p><span class="status-badge status-badge--pending"><i class="fas fa-hourglass-half" aria-hidden="true"></i> Pricing verified pending</span> See the official plan page for current pricing.</p>}
-      <p class="pricing-note"><a href={tUrl} rel="nofollow noopener" target="_blank">Visit the official {tNameEn} pricing page →</a></p>
+        ? <p>{pricingSummaryEn}</p>
+        : <p><span class="status-badge status-badge--pending"><i class="fas fa-hourglass-half" aria-hidden="true"></i> {t("pricingPending")}</span> {t("pricingSeeOfficial")}</p>}
+      <p class="pricing-note"><a href={tUrl} rel="nofollow noopener" target="_blank">{t("pricingVisit", { name: tName })}</a></p>
     </section>
 
     {tProsEn.length + tConsEn.length > 0 && (
       <section class="detail-section">
-        <h2 id="pros-cons"><i class="fas fa-balance-scale" aria-hidden="true"></i> Pros &amp; Cons</h2>
+        <h2 id="pros-cons"><i class="fas fa-balance-scale" aria-hidden="true"></i> {t("prosConsHeading")}</h2>
         <ProsCons pros={tProsEn} cons={tConsEn} />
       </section>
     )}
 
     {tExampleEn && (
       <section class="detail-section">
-        <h2 id="example"><i class="fas fa-terminal" aria-hidden="true"></i> Example</h2>
-        <div class="example-box" data-i18n-en={tExampleEn}>{tExampleEn}</div>
+        <h2 id="example"><i class="fas fa-terminal" aria-hidden="true"></i> {t("exampleHeading")}</h2>
+        <div class="example-box">{tExampleEn}</div>
       </section>
     )}
 
     <section class="detail-section verdict-block">
-      <h2 id="verdict"><i class="fas fa-gavel" aria-hidden="true"></i> Our verdict</h2>
-      <p><strong>Pick {tNameEn} if:</strong> {ourVerdict.best}</p>
-      <p><strong>Skip {tNameEn} if:</strong> {ourVerdict.avoid}</p>
+      <h2 id="verdict"><i class="fas fa-gavel" aria-hidden="true"></i> {t("verdictHeading")}</h2>
+      <p><strong>{t("verdictPick", { name: tName })}}</strong> {ourVerdict.best}</p>
+      <p><strong>{t("verdictSkip", { name: tName })}}</strong> {ourVerdict.avoid}</p>
     </section>
 
     {toolMatchups.length > 0 && (
       <section class="detail-section">
-        <h2 id="comparisons"><i class="fas fa-scale-balanced" aria-hidden="true"></i> Head-to-head comparisons</h2>
+        <h2 id="comparisons"><i class="fas fa-scale-balanced" aria-hidden="true"></i> {t("comparisonsHeading")}</h2>
         <div class="comparison-grid">
           {toolMatchups.map(m => {
             const otherId = m.a === id ? m.b : m.a;
@@ -390,25 +353,25 @@ const tocSections = [
             const otherName = otherTool.name?.en || otherId;
             return (
               <a class="comparison-card" href={"/vs/" + m.slug + "/"}>
-                <strong>{tNameEn}</strong> <span>vs</span> <strong>{otherName}</strong>
+                <strong>{tName}</strong> <span>{t("vs")}</span> <strong>{otherName}</strong>
               </a>
             );
           })}
         </div>
-        <p class="section-followup"><a href={"/alternatives/" + id + "/"}>See all {tNameEn} alternatives →</a></p>
+        <p class="section-followup"><a href={"/alternatives/" + id + "/"}>{t("alternativesSeeAll", { name: tName })}</a></p>
       </section>
     )}
 
     {alternatives.length > 0 && (
       <section class="detail-section">
-        <h2 id="alternatives"><i class="fas fa-exchange-alt" aria-hidden="true"></i> Alternatives to {tNameEn}</h2>
+        <h2 id="alternatives"><i class="fas fa-exchange-alt" aria-hidden="true"></i> {t("alternativesHeading", { name: tName })}</h2>
         <div class="tool-grid">
           {alternatives.map(([k, t]) => (
             <a class="tool-card" href={"/tool/" + k + "/"}>
               <div class="icon" aria-hidden="true"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
-              <h3 data-i18n-en={t.name?.en || k}>{t.name?.en || k}</h3>
-              <p data-i18n-en={t.short_desc?.en || ""}>{t.short_desc?.en || ""}</p>
-              <span class="tag">{categoryLabels[t.cat] || t.cat}</span>
+              <h3>{pageLang === "zh" ? (t.name?.zh || t.name?.en || k) : t.name?.en || k}</h3>
+              <p>{pageLang === "zh" ? (t.short_desc?.zh || t.short_desc?.en || "") : t.short_desc?.en || ""}</p>
+              <span class="tag">{pageLang === "zh" ? catLabel(t.cat || "", "zh") : (categoryLabels[t.cat] || t.cat)}</span>
             </a>
           ))}
         </div>
@@ -419,14 +382,14 @@ const tocSections = [
 
     {relatedCategories.length > 0 && (
       <section class="detail-section related">
-        <h2 id="related"><i class="fas fa-folder-open" aria-hidden="true"></i> Related categories</h2>
+        <h2 id="related"><i class="fas fa-folder-open" aria-hidden="true"></i> {t("relatedHeading")}</h2>
         <div class="related-grid">
           {tCat === "code" && (
             <a class="related-card" href="/solutions/ai-for-developers/">
               <div class="related-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></div>
               <div>
-                <h3>AI for Developers</h3>
-                <p>Complete guide to AI-powered development workflow</p>
+                <h3>{t("aiForDevsTitle")}</h3>
+                <p>{t("aiForDevsDesc")}</p>
               </div>
             </a>
           )}
@@ -434,8 +397,8 @@ const tocSections = [
             <a class="related-card" href={"/best/" + c.slug + "/"}>
               <div class="related-icon" aria-hidden="true"><i class="fas fa-folder-open"></i></div>
               <div>
-                <h3>{c.title_en}</h3>
-                <p>{c.desc_en}</p>
+                <h3>{pageLang === "zh" ? (c.title_zh || c.title_en) : c.title_en}</h3>
+                <p>{pageLang === "zh" ? (c.desc_zh || c.desc_en) : c.desc_en}</p>
               </div>
             </a>
           ))}
@@ -445,14 +408,16 @@ const tocSections = [
 
     <section class="detail-section editorial-disclosure">
       {isReviewed ? (
-        <p>Curated by the AI Tool Hub editorial team{editorial?.updatedAt ? ` — last updated ${editorial.updatedAt}.` : "."} We publish real-test benchmark numbers only after running our standardized suite.</p>
+        <p>{pageLang === "zh"
+          ? `由 AI Tool Hub 编辑团队编目${editorial?.updatedAt ? ` — 最后更新于 ${editorial.updatedAt}。` : "。"}我们仅在运行标准化测试套件后发布真实测试基准数据。`
+          : `Curated by the AI Tool Hub editorial team${editorial?.updatedAt ? ` — last updated ${editorial.updatedAt}.` : "."} We publish real-test benchmark numbers only after running our standardized suite.`}</p>
       ) : (
-        <p>This page is an AI-catalogued summary based on public information. Our editorial team has not yet completed a hands-on review; benchmark, pricing and verdict updates will be published after real testing.</p>
+<p>{t("cataloguedNote")}</p>
       )}
     </section>
     </div>
     <aside class="article-toc" aria-label="Table of contents">
-      <div class="toc-title">On this page</div>
+      <div class="toc-title">{t("tocTitle")}</div>
       <ol>
         {tocSections.map(s => <li><a href={"#" + s.id}>{s.label}</a></li>)}
       </ol>

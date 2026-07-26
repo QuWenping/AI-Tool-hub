@@ -1,0 +1,43 @@
+name:
+  en: Frase
+  zh: Frase
+short_desc:
+  en: AI content research + optimization in one
+  zh: AI 内容研究 + 优化一体化
+long_desc:
+  en: Frase combines SERP research and AI writing from topic to draft in one platform.
+cat: text
+url: https://www.frase.io
+icon: fa-file-lines
+scenes:
+  en:
+  - Content research
+  - SEO briefs
+  - AI writing
+  - Optimization
+pros:
+  en:
+  - Research+writing unified
+  - Cheaper than Surfer
+cons:
+  en:
+  - AI writing quality average
+target_audience:
+  en:
+  - SEO
+  - Content marketers
+  - Bloggers
+use_cases:
+  en:
+  - Topics
+  - Briefs
+  - Writing
+  - SEO
+features:
+  en:
+  - SERP research
+  - SEO briefs
+  - AI writing
+  - Optimize
+example:
+  en: 'Example: Enter keyword → get SEO brief + draft.'

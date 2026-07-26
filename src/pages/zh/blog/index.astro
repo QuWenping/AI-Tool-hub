@@ -1,0 +1,47 @@
+---
+
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getCollection } from 'astro:content';
+import { getTranslations } from "../../../utils/i18n";
+const allPosts = await getCollection('blog');
+const sortedPosts = allPosts.sort((a, b) => b.data.date.localeCompare(a.data.date));
+
+export const prerender = true;
+const pageLang = "zh";
+const t = getTranslations("blog", pageLang);
+const tc = getTranslations("common", pageLang);
+const seoTitle = t("seoTitle");
+const seoDesc = t("seoDescEn");
+
+---
+<BaseLayout title={seoTitle} description={seoDesc} lang={pageLang}>
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/">{tc("home")}</a> &rsaquo; <span>{t("pageTitle")}</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">{t("eyebrow")}</span>
+      <h1>{t("pageTitle")}</h1>
+      <p class="lede">{t("pageLede")}</p>
+    </header>
+
+    <section>
+      <div class="related-grid">
+        {sortedPosts.map(p => (
+          <a class="related-card" href={"/blog/" + p.slug + "/"}>
+            <div class="related-icon"><i class="fas fa-newspaper"></i></div>
+            <div>
+              <h3>{pageLang === "zh" && p.data.title_zh ? p.data.title_zh : p.data.title_en}</h3>
+              <p>{pageLang === "zh" && p.data.desc_zh ? p.data.desc_zh : p.data.desc_en}</p>
+              <p class="meta-text">
+                <i class="far fa-calendar"></i> {p.data.date} &middot; <i class="far fa-clock"></i> {p.data.read_time}
+              </p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="section-mt back-link">
+      <p class="meta-text">{t("moreComing")} <a href="/contact/">{t("tellUs")}</a>.</p>
+    </section>
+  </article>
+</BaseLayout>

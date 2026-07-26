@@ -1,0 +1,24 @@
+name:
+  en: EbSynth
+  zh: EbSynth
+short_desc:
+  en: AI video style transfer
+  zh: AI 视频风格迁移
+long_desc:
+  en: Transfer painting style to video frames
+cat: image
+url: https://ebsynth.com
+icon: fa-paint-brush
+scenes:
+  en:
+  - video
+  - style-transfer
+  - art
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

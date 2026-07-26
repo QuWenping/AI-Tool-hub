@@ -1,0 +1,24 @@
+name:
+  en: Lovable
+  zh: Lovable
+short_desc:
+  en: AI full-stack builder
+  zh: AI 全栈构建器
+long_desc:
+  en: Generate full-stack web apps from descriptions
+cat: code
+url: https://lovable.dev
+icon: fa-heart
+scenes:
+  en:
+  - fullstack
+  - app-gen
+  - dev
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

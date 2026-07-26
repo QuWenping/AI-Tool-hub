@@ -1,0 +1,24 @@
+name:
+  en: SonarQube
+  zh: SonarQube
+short_desc:
+  en: Code quality platform
+  zh: 代码质量平台
+long_desc:
+  en: Continuous code quality and security analysis
+cat: code
+url: https://sonarqube.org
+icon: fa-code
+scenes:
+  en:
+  - quality
+  - security
+  - ci-cd
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

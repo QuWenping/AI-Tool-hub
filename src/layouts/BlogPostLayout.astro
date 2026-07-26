@@ -22,10 +22,13 @@
  * Slot (default): article body (HTML/h2/p/ul/Chart/TLDR/img ...).
  */
 import BaseLayout from "./BaseLayout.astro";
+import { getCollection } from 'astro:content';
 import BlogJsonLd from "../components/BlogJsonLd.astro";
 import Feedback from "../components/Feedback.astro";
 import RelatedPosts from "../components/RelatedPosts.astro";
 import Comments from "../components/Comments.astro";
+
+const allBlogPosts = await getCollection('blog');
 
 const {
   title,
@@ -48,7 +51,7 @@ const post = { slug, title_en: title, desc_en: description, date, read_time: rea
 const crumb = breadcrumb || title;
 const hasMeta = date || readTime || author || reviewer;
 ---
-<BaseLayout title={title} description={description} keywords={keywords || (tags && tags.join(", "))} lang={lang}>
+<BaseLayout title={title} description={description} keywords={keywords || (tags && tags.join(", "))} lang={lang} ogType="article" articleAuthor={author} pubDate={date}>
   <BlogJsonLd slot="head" post={post} />
   <div class="article">
     <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -92,7 +95,7 @@ const hasMeta = date || readTime || author || reviewer;
     {showEngagement && (
       <>
         <Feedback slug={slug} lang={lang} />
-        <RelatedPosts currentSlug={slug} currentCategory={category} currentTags={tags} limit={3} />
+        <RelatedPosts posts={allBlogPosts} currentSlug={slug} currentCategory={category} currentTags={tags} limit={3} />
         <Comments lang={lang} />
       </>
     )}

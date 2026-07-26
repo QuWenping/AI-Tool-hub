@@ -1,0 +1,61 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/submit-sitemap/";
+const faqSchema = {
+  "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,
+  "mainEntity":[
+    {"@type":"Question","name":"How often is the sitemap updated?","acceptedAnswer":{"@type":"Answer","text":"Our sitemap is automatically regenerated with each new deployment. This typically happens at least once per week, more frequently when we publish new reviews or guides."}},
+    {"@type":"Question","name":"Do you have separate sitemaps for Chinese pages?","acceptedAnswer":{"@type":"Answer","text":"Yes. All pages under /zh/ use hreflang tags that point search engines to the correct language version. The main sitemap includes both English and Chinese URLs with proper alternate language annotations."}}
+  ]
+};
+---
+<BaseLayout title="提交站点地图 | AI Tool Hub 搜索引擎提交" description="向 Google、Bing 提交 AI Tool Hub 的 XML 站点地图。我们的实时站点地图链接和搜索引擎提交指南。" keywords="提交站点地图, sitemap 提交, AI Tool Hub sitemap, Google Search Console, Bing Webmaster">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <span>提交站点地图</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">SEO 工具</span>
+      <h1>提交站点地图</h1>
+      <p class="lede">一键获取我们的实时站点地图链接，快速提交至 Google、Bing 等搜索引擎。</p>
+    </header>
+
+    <section>
+      <h2>实时站点地图</h2>
+      <p>我们的站点地图在每次部署时自动生成。以下链接始终指向最新版本：</p>
+      <ul>
+        <li><strong>主站点地图索引：</strong><a href="https://thebestaitoolsreview.com/sitemap-index.xml">sitemap-index.xml</a></li>
+        <li><strong>页面站点地图：</strong><a href="https://thebestaitoolsreview.com/sitemap-0.xml">sitemap-0.xml</a></li>
+      </ul>
+      <p>包含所有英文和中文页面，以及正确的 hreflang 标注。</p>
+    </section>
+
+    <section>
+      <h2>如何提交至搜索引擎</h2>
+      <h3>Google Search Console</h3>
+      <ol>
+        <li>登录 <a href="https://search.google.com/search-console" target="_blank" rel="noopener">Google Search Console</a></li>
+        <li>选择对应属性（thebestaitoolsreview.com）</li>
+        <li>左侧菜单 → 站点地图</li>
+        <li>在"添加新的站点地图"中输入 sitemap-index.xml</li>
+        <li>点击提交</li>
+      </ol>
+      <h3>Bing Webmaster Tools</h3>
+      <ol>
+        <li>登录 <a href="https://www.bing.com/webmasters" target="_blank" rel="noopener">Bing Webmaster Tools</a></li>
+        <li>选择网站 → 站点地图</li>
+        <li>提交 sitemap-index.xml</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>常见问题</h2>
+      <h3>站点地图多久更新一次？</h3>
+      <p>每次部署时自动重新生成，通常每周至少更新一次，发布新评测或指南时更频繁。</p>
+      <h3>中文页面有独立的站点地图吗？</h3>
+      <p>有。/zh/ 下的所有页面均带 hreflang 标签，引导搜索引擎选择正确的语言版本。主站点地图同时包含英文和中文 URL 及其对应的语言标注。</p>
+    </section>
+  </article>
+</BaseLayout>

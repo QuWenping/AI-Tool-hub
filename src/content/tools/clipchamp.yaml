@@ -1,0 +1,24 @@
+name:
+  en: Clipchamp
+  zh: Clipchamp
+short_desc:
+  en: Microsoft video editor
+  zh: 微软视频编辑器
+long_desc:
+  en: Microsoft online video editor with AI features
+cat: video
+url: https://clipchamp.com
+icon: fa-video
+scenes:
+  en:
+  - editing
+  - microsoft
+  - templates
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

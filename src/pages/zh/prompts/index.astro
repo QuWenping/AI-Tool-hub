@@ -1,0 +1,67 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import tools from "../../../data/tools.json";
+
+const pageLang = Astro.currentLocale || "zh";
+
+const prompts = [
+  {
+    title: "Blog Post Outline Generator",
+    description: "Generate detailed blog outlines with SEO-friendly headings",
+    tags: ["Writing", "ChatGPT"]
+  },
+  {
+    title: "Code Review Assistant",
+    description: "Get thorough code reviews with security and performance suggestions",
+    tags: ["Coding", "Claude"]
+  },
+  {
+    title: "Cold Email Template",
+    description: "Craft personalized cold outreach emails that get responses",
+    tags: ["Business", "ChatGPT"]
+  },
+  {
+    title: "Meeting Notes Summarizer",
+    description: "Turn raw meeting transcripts into action items and decisions",
+    tags: ["Productivity", "Claude"]
+  },
+  {
+    title: "Social Media Caption Creator",
+    description: "Write engaging captions for Instagram, Twitter, LinkedIn",
+    tags: ["Writing", "ChatGPT"]
+  },
+  {
+    title: "Resume/LinkedIn Optimizer",
+    description: "Optimize your resume and LinkedIn profile for ATS and recruiters",
+    tags: ["Career", "ChatGPT"]
+  }
+];
+
+const seoTitle = "AI 提示词库 - ChatGPT、Claude 等实测提示词";
+const seoDesc = "ChatGPT、Claude 等 LLM 的实测提示词。复制、调整，获得更好结果。";
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={seoDesc}
+  lang={pageLang}
+>
+  <div class="page-container">
+    <h1 class="page-title">AI 提示词库</h1>
+    <p class="page-lede">ChatGPT、Claude 等 LLM 的实测提示词。复制、调整，获得更好结果。</p>
+
+    <div class="card-grid">
+      {prompts.map(p => (
+        <div class="list-card">
+          <div class="card-head">{p.title}</div>
+          <p class="card-desc">{p.description}</p>
+          <div>
+            {p.tags.map(tag => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

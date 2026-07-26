@@ -1,0 +1,197 @@
+name:
+  en: PlayHT
+  zh: PlayHT
+short_desc:
+  en: Highly realistic AI text-to-speech
+  zh: 高度逼真的 AI 文字转语音
+long_desc:
+  en: >-
+    PlayHT offers many realistic voices and cloning for audiobooks, voiceover, and IVR.
+cat: audio
+url: https://play.ht
+icon: fa-volume-high
+scenes:
+  en:
+  - Audiobooks
+  - Voiceover
+  - IVR
+  - Podcasts
+  zh:
+  - API 语音合成
+  - 有声内容
+  - 应用内语音
+  - 大规模 TTS
+pros:
+  en:
+  - Many voices
+  - Fast cloning
+  - Cheap API
+  zh:
+  - 大规模 API 成本低
+  - 语音质量高
+  - 企业级支持
+cons:
+  en:
+  - Slightly less realistic than ElevenLabs
+  - Busy UI
+  - Limited CN voices
+  zh:
+  - 声音克隆质量不如 ElevenLabs
+  - 个人用户价格偏高
+  - 界面较复杂
+target_audience:
+  en:
+  - Creators
+  - Podcasters
+  - Support teams
+  - Video makers
+  zh:
+  - 创作者
+  - 播客创作者
+  - 客服团队
+  - 视频制作者
+use_cases:
+  en:
+  - Audiobooks
+  - Voiceover
+  - Podcasts
+  - IVR
+  zh:
+  - 有声书
+  - 配音
+  - 播客
+  - IVR
+features:
+  en:
+  - TTS
+  - Voice cloning
+  - Multilingual
+  - API
+  zh:
+  - 文字转语音
+  - 声音克隆
+  - 多语言
+  - API
+example:
+  en: 'Example: Turn an article into a natural male-voice audio.'
+  zh: 示例：将文章转为自然的男声朗读音频。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: PlayHT 3.0 (2026-07)
+score: 7.9
+overall_score: 7.9
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+  - API
+pricingSummary:
+  en: >-
+    Free: 5,000 chars/mo non-commercial. Creator $39/mo (3M chars). Pro $99/mo (10M chars). Business $199/mo (25M chars).
+    Enterprise custom.
+faq:
+- q_en: What is PlayHT and how is it different from other TTS tools?
+  a_en: >-
+    PlayHT is an AI text-to-speech platform with over 900 natural-sounding voices across 142 languages. Its key differentiator
+    is per-word emotion control: you can adjust the emotional delivery of individual words—whispering certain phrases, raising
+    excitement on key points, or adding sadness to emotional passages—giving creators granular control over speech generation
+    that most TTS tools lack. PlayHT also offers high-fidelity voice cloning from 30 seconds of audio and a Voice Generation
+    tool that creates entirely new synthetic voices by describing desired characteristics. It competes in the premium TTS
+    space alongside ElevenLabs (best for cloning fidelity) and Murf AI (best for video voiceovers). PlayHT's sweet spot is
+    long-form content production where emotional nuance and multilingual support matter: audiobooks, multi-voice podcasts,
+    and interactive voice applications.
+- q_en: How does PlayHT voice cloning work?
+  a_en: >-
+    PlayHT's voice cloning (PlayHT 3.0) requires a clean 30-second to 3-minute audio sample of the target speaker. The AI
+    analyzes the audio to extract vocal characteristics including pitch, timbre, speaking pace, breathing patterns, and emotional
+    range, then builds a mathematical model of that voice. Once cloned, you can generate unlimited speech from any text input
+    in that person's voice across supported languages. For best results, use high-quality audio recorded in a quiet environment
+    without background noise, echo, or music. The cloned voice captures natural pauses, emphasis patterns, and emotional inflections
+    from the source. Voice cloning is available on Creator plans and above. PlayHT's commercial terms clearly state that you
+    must have explicit consent from the person whose voice you are cloning, and the platform performs verification checks
+    during the cloning process.
+- q_en: What is per-word emotion control and how does it work?
+  a_en: >-
+    Per-word emotion control is PlayHT's unique feature that lets you apply different emotional deliveries to individual words
+    or phrases within a single speech generation. Using an SSML-like markup or the visual editor, you tag specific words with
+    emotions like whisper, excitement, sadness, anger, cheerful, terrified, or neutral. For example, in the sentence 'I can't
+    believe you did that,' you might set 'can't believe' to shock, 'you' to anger, and 'did that' to disappointment—creating
+    a nuanced emotional arc that static TTS cannot achieve. This feature is particularly powerful for audiobook narration
+    where character dialogue requires shifting emotions, podcast storytelling with dramatic moments, and e-learning content
+    where instructors need to emphasize key concepts with varied vocal energy. It is available on Pro plans and above.
+- q_en: How many voices and languages does PlayHT support?
+  a_en: >-
+    PlayHT offers over 900 AI voices covering 142 languages and accents. The voice library includes standard neural voices,
+    ultra-realistic premium voices with more natural prosody, and conversational voices optimized for dialogue and narration.
+    Languages span major world languages (English with US, UK, Australian, Indian accents, Spanish, Mandarin Chinese, Japanese,
+    Korean, French, German, Portuguese, Arabic, Hindi) as well as less commonly supported languages like Icelandic, Catalan,
+    Welsh, Swahili, and Tagalog. English voices have the highest quality and variety. Major European languages offer good
+    quality with 5-15 voice options each. Asian languages including Mandarin, Japanese, and Korean are functional but less
+    natural than English, with fewer voice options. The Voice Generation tool can also create custom voices not in the existing
+    library.
+- q_en: Does PlayHT offer a real-time API?
+  a_en: >-
+    Yes, PlayHT provides a streaming TTS API with latency as low as 200 milliseconds, making it suitable for real-time applications
+    like voice assistants, IVR phone systems, live narration, and interactive voice bots. The API supports both REST and WebSocket
+    connections: REST for standard request-response TTS where you send text and receive an audio file, and WebSocket for streaming
+    where audio chunks are delivered as they are generated, enabling immediate playback without waiting for the full audio
+    file to complete. The API includes parameters for voice selection, emotion control, speaking rate, pitch adjustment, and
+    output format (MP3, WAV, OGG, FLAC). Rate limits scale with your plan tier, with the Business plan supporting up to 1,000
+    concurrent requests. SDKs are available for Python, JavaScript, Node.js, and cURL with comprehensive documentation.
+- q_en: >-
+    Can PlayHT be used for commercial projects like monetized YouTube videos and audiobooks?
+  a_en: >-
+    Yes, commercial use is supported on paid plans with clear licensing terms. The Creator plan ($39/month) allows commercial
+    use including monetized YouTube videos, social media content, and podcasts. The Pro plan ($99/month) adds commercial audiobook
+    production rights, e-learning course narration, and corporate training materials. The Business plan ($199/month) covers
+    all commercial uses up to enterprise scale including IVR systems, resale of generated audio, and white-label applications.
+    The free tier is explicitly limited to personal, non-commercial use only. Each plan's terms specify whether you need to
+    attribute PlayHT, with attribution required on Creator and optional on Pro and above. Resale of cloned voices as standalone
+    voice packs requires a custom Enterprise agreement.
+- q_en: How does PlayHT compare to ElevenLabs?
+  a_en: >-
+    PlayHT and ElevenLabs are the top two AI TTS platforms with different strengths. ElevenLabs has the edge in voice cloning
+    fidelity—its clones are generally indistinguishable from the original speaker with as little as 1 minute of audio—and
+    offers more natural prosody for English narration. PlayHT counters with a larger voice library (900+ vs 300+), broader
+    language support (142 vs 29 languages), and unique per-word emotion control for granular delivery adjustments. ElevenLabs
+    excels at audiobook narration where maximum naturalness matters. PlayHT wins for multilingual projects and use cases requiring
+    emotional nuance like dramatic podcasts, dialogue-heavy e-learning, and interactive voice applications. Pricing is comparable
+    at the Creator/Starter tier; ElevenLabs becomes more expensive at scale due to character-based pricing on higher tiers.
+    Choose ElevenLabs for English audiobooks needing the most human-like narration, PlayHT for multilingual content and projects
+    requiring emotional range control.
+- q_en: What audio formats does PlayHT support for export?
+  a_en: >-
+    PlayHT supports exporting generated speech in MP3, WAV (16-bit PCM), OGG Vorbis, and FLAC lossless formats. Sample rates
+    include 8kHz, 16kHz, 22.05kHz, 24kHz, 44.1kHz, and 48kHz depending on the plan and selected voice quality. Premium ultra-realistic
+    voices support up to 48kHz sample rate for broadcast-quality output. MP3 is the default export with variable bitrate encoding
+    optimized for file size. WAV exports are uncompressed and suitable for professional audio editing and post-production.
+    The Pro and Business plans support batch generation where you can generate multiple chapters or segments and export them
+    as individual files or a combined audio file. There's no hard limit on single-generation length, but practical limits
+    of around 30-60 minutes per generation session apply due to rendering time.
+- q_en: Is there a limit on how much audio I can generate?
+  a_en: >-
+    Yes, PlayHT uses a character-based monthly quota system (not word count). The free tier includes 5,000 characters per
+    month for personal use. The Creator plan at $39/month includes 3 million characters (approximately 20-25 hours of spoken
+    audio depending on speech rate). The Pro plan at $99/month includes 10 million characters (~70-80 hours). The Business
+    plan at $199/month includes 25 million characters (~175-200 hours). Characters count includes spaces and punctuation.
+    Overage is handled differently per plan: Creator pauses generation when quota is reached, while Pro and Business allow
+    overage at additional per-character rates. Voice cloning, per-word emotion control, and premium ultra-realistic voices
+    may consume character multipliers (e.g., 2x characters for premium voices). Unused characters do not roll over month to
+    month.
+- q_en: Can I integrate PlayHT into my own application?
+  a_en: >-
+    Yes, PlayHT provides a comprehensive REST API and SDKs for Python, JavaScript, Node.js, and cURL to integrate TTS generation
+    into your own applications, websites, and services. The API covers the full feature set: list available voices, generate
+    speech from text with emotion control parameters, clone voices programmatically, and stream audio in real-time via WebSocket.
+    Common integration scenarios include adding TTS narration to e-learning platforms, building voice-enabled chatbots, creating
+    automated podcast production pipelines, and generating multilingual audio for content localization. API access requires
+    an API key generated from your PlayHT dashboard. Rate limits and concurrent request caps scale with your plan. Webhook
+    notifications are available for long-generation jobs. The documentation includes code samples for most common use cases
+    and a Postman collection for API exploration.
+scoreBreakdown:
+  user: 7.3
+  capability: 8.2
+  price: 6.8
+  growth: 7.5
+  trust: 7.8

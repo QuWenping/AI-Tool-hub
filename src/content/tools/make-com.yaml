@@ -1,0 +1,46 @@
+name:
+  en: Make
+  zh: Make
+short_desc:
+  en: Visual automation and integration platform
+  zh: 可视化自动化和集成平台
+long_desc:
+  en: >-
+    Make (formerly Integromat) is a visual automation platform connecting 1500+ apps with AI modules.
+cat: productivity
+url: https://www.make.com
+icon: fa-link
+scenes:
+  en:
+  - Automation
+  - Data sync
+  - AI workflows
+  - Integration
+pros:
+  en:
+  - 1500+ integrations
+  - Visual
+  - Usable free
+cons:
+  en:
+  - Expensive for complex
+  - Learning curve
+target_audience:
+  en:
+  - Operations
+  - Marketing
+  - Tech teams
+use_cases:
+  en:
+  - Automation
+  - Sync
+  - AI workflows
+  - Integration
+features:
+  en:
+  - Visual
+  - 1500+ integrations
+  - AI modules
+  - Free tier
+example:
+  en: 'Example: New email → AI classify → save to Sheets → notify.'

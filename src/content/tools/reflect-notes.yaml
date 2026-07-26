@@ -1,0 +1,24 @@
+name:
+  en: Reflect
+  zh: Reflect
+short_desc:
+  en: AI notes app
+  zh: AI 笔记应用
+long_desc:
+  en: AI-powered note-taking and knowledge management
+cat: productivity
+url: https://reflect.app
+icon: fa-sticky-note
+scenes:
+  en:
+  - notes
+  - knowledge
+  - ai
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

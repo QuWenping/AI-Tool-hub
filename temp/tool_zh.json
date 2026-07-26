@@ -1,0 +1,1355 @@
+{
+  "claude": {
+    "name": "Claude",
+    "short_desc": "Anthropic 的 Claude — 我们测试过的长文写作能力最强、拥有 200K 上下文窗口的模型",
+    "long_desc": "Claude 是我们在需要输出听起来像人类时会选择的工具。我们用同样的 40 个提示词测试了所有主流 LLM，Claude 的散文在盲评中持续得分最高。尤其是在长篇内容（1,500+ 字）上，它保持前后一致、避免 AI 套话、并根据反馈真正迭代的能力在同级产品中独一无二。",
+    "scenes": ["书籍分析", "合同审查", "白皮书", "翻译"],
+    "pros": ["所有测试的 LLM 中英文散文最自然", "200K 上下文窗口可处理 150+ 页文档", "Artifacts 功能为代码和文档提供实时预览"],
+    "cons": ["无原生实时网络搜索功能", "地理可用性受限", "与其他 AI 工具的集成生态较不成熟"]
+  },
+  "chatgpt": {
+    "name": "ChatGPT",
+    "short_desc": "OpenAI 的旗舰对话 AI — 我们测试过的最全能的通用助手",
+    "long_desc": "ChatGPT 是我们使用最频繁的 AI 工具。GPT-4o 模型在推理、写作和编程方面表现出色，而 DALL·E 集成、数据分析、网页浏览和插件生态使它成为我们测试过的最完整的工具。免费版已足够好，付费版在复杂推理和图像生成方面明显更强。",
+    "scenes": ["日常助手", "内容创作", "编程", "研究", "头脑风暴"],
+    "pros": ["最通用的全能助手", "图像生成和数据分析原生集成", "插件生态丰富", "免费版足以满足大多数日常需求"],
+    "cons": ["高峰时段仍有使用限制", "中文创意写作不如英文自然"]
+  },
+  "gemini": {
+    "name": "Gemini",
+    "short_desc": "Google 多模态 AI 助手",
+    "long_desc": "Google 的多模态 AI 助手，深度集成 Google 生态（Gmail、Drive、YouTube），原生支持图像、视频和音频理解。对于已经使用 Google Workspace 的用户来说，它是自然的第一选择。",
+    "scenes": ["Google 生态集成", "多模态分析", "长文档处理", "网页搜索"],
+    "pros": ["Google 生态深度集成", "原生多模态能力", "免费版性能出色", "超长上下文窗口"],
+    "cons": ["中文创意写作能力一般", "部分功能仅限特定地区"]
+  },
+  "github-copilot": {
+    "name": "GitHub Copilot",
+    "short_desc": "嵌入 IDE 的 AI 结对编程助手",
+    "long_desc": "GitHub Copilot 是 2026 年最成熟的 AI 代码补全工具，深度集成到 VS Code、JetBrains 和 Neovim 中。对学生和开源维护者免费，$10/月，是性价比最高的日常编码伴侣。",
+    "scenes": ["代码补全", "IDE 内聊天", "代码审查", "文档生成"],
+    "pros": ["对学生和开源维护者免费", "所有主流 IDE 支持", "$10/月性价比极高", "GPT-5 驱动补全准确率高"],
+    "cons": ["不能跨文件重构", "不接管终端或调试器", "企业版价格较高"]
+  },
+  "cursor": {
+    "name": "Cursor",
+    "short_desc": "内置 GPT-5 的 VS Code 分支 — 真正高效发布功能的 AI 代码编辑器",
+    "long_desc": "Cursor 是一个 VS Code 分支，在 AI 集成方面做得比任何人都更深。它的 Composer 功能可以一次性编辑多个文件，聊天侧边栏了解你的完整代码库上下文，终端集成直接运行命令。$20/月物有所值。",
+    "scenes": ["跨文件重构", "代码库问答", "从零构建功能", "调试和修复"],
+    "pros": ["一次性跨多文件编辑", "完整代码库上下文理解", "终端和 Git 原生集成", "GPT-5 和 Claude Sonnet 模型选择"],
+    "cons": ["$20/月比 Copilot 贵", "某些扩展不兼容", "学习曲线较陡"]
+  },
+  "sora": {
+    "name": "Sora",
+    "short_desc": "OpenAI 文本到视频生成模型",
+    "scenes": ["广告创意", "社交媒体内容", "概念验证", "影视预演"],
+    "pros": ["视频质量在同级中最高", "20 秒输出时长远超竞品"],
+    "cons": ["定价较高", "迭代成本累积快", "长视频中仍有可见瑕疵"]
+  },
+  "runway": {
+    "name": "Runway",
+    "short_desc": "全能 AI 视频创作和编辑平台",
+    "scenes": ["视频制作", "特效合成", "广告创作", "后期剪辑"],
+    "pros": ["最完整的 AI 视频工具套件", "Gen-3 模型质量高", "内建编辑和特效功能"],
+    "cons": ["Gen-3 仅支持 10 秒视频", "学习全部功能需要时间"]
+  },
+  "midjourney": {
+    "name": "Midjourney",
+    "short_desc": "美学天花板级 AI 图像生成器 — v7 版本再次拉高了行业标准",
+    "scenes": ["艺术创作", "概念设计", "品牌视觉", "海报设计"],
+    "pros": ["无与伦比的美学质量", "无需提示词工程即可出好图", "Discord 社区活跃"],
+    "cons": ["照片写实能力不如 Flux", "不支持图中文字"]
+  },
+  "stable-diffusion": {
+    "name": "Stable Diffusion",
+    "short_desc": "开源、免费、本地运行的 AI 图像生成器",
+    "scenes": ["本地图像生成", "自定义模型训练", "隐私敏感项目", "研究和实验"],
+    "pros": ["完全免费开源", "本地运行隐私安全", "丰富的社区模型和扩展"],
+    "cons": ["需要好显卡", "入门门槛较高"]
+  },
+  "leonardo": {
+    "name": "Leonardo.AI",
+    "short_desc": "面向游戏和设计的 AI 图像生成平台",
+    "scenes": ["游戏资产", "角色设计", "概念艺术"],
+    "pros": ["角色风格一致性最佳", "游戏和设计场景优化", "慷慨的免费层级"],
+    "cons": ["通用美学不如 Midjourney", "免费版有水印"]
+  },
+  "elevenlabs": {
+    "name": "ElevenLabs",
+    "short_desc": "最真实的 AI 语音合成和声音克隆",
+    "scenes": ["播客配音", "有声书", "YouTube 旁白", "语音克隆"],
+    "pros": ["最佳语音质量，与真人无异", "声音克隆功能强大", "API 适合生产级应用"],
+    "cons": ["免费版有水印", "中文语音不如英文自然"]
+  },
+  "suno": {
+    "name": "Suno",
+    "short_desc": "文本到完整歌曲的 AI 音乐生成器",
+    "scenes": ["音乐创作", "背景音乐", "歌曲生成", "社交媒体配乐"],
+    "pros": ["几秒钟出完整歌曲", "v4 音质大幅提升", "上手难度几乎为零"],
+    "cons": ["音乐结构比较模板化", "人声中文发音不够自然"]
+  },
+  "descript": {
+    "name": "Descript",
+    "short_desc": "革命性的音视频编辑器 — 像编辑文档一样编辑音视频",
+    "scenes": ["播客编辑", "视频教程", "会议记录", "AI 配音"],
+    "pros": ["文字编辑音视频效率翻倍", "自动去填充词功能实用", "免费版可完成基础工作"],
+    "cons": ["专业级调色和特效不如传统软件", "中文转录准确率不如英文"]
+  },
+  "notion-ai": {
+    "name": "Notion AI",
+    "short_desc": "嵌入工作流的智能写作和知识管理",
+    "scenes": ["知识管理", "会议记录总结", "项目文档生成", "写作辅助"],
+    "pros": ["零上下文切换工作流嵌入", "Q&A 功能可基于数据库回答", "写作辅助质量好"],
+    "cons": ["AI 能力不如 ChatGPT/Claude", "必须已使用 Notion 才值得"]
+  },
+  "perplexity": {
+    "name": "Perplexity",
+    "short_desc": "每句话都标注来源的 AI 研究引擎 — 我们做事实核查的首选",
+    "scenes": ["事实核查研究", "市场分析", "学术调研", "新闻写作"],
+    "pros": ["每句话附带来源链接", "事实准确性显著高于竞品", "免费版已足够大多数用途"],
+    "cons": ["不擅长创意写作", "代码能力一般", "中文来源覆盖不如英文"]
+  },
+  "jasper": {
+    "name": "Jasper",
+    "short_desc": "面向营销团队的品牌 AI 写作平台",
+    "scenes": ["品牌营销", "内容团队协作", "广告文案", "SEO 内容"],
+    "pros": ["品牌声音一致性管理", "团队协作功能完善", "模板库覆盖常见营销场景"],
+    "cons": ["$49/月起对个人偏高", "中文支持有限"]
+  },
+  "ideogram": {
+    "name": "Ideogram",
+    "short_desc": "在图像中渲染文字能力最强的 AI 图像生成器",
+    "scenes": ["Logo 设计", "海报制作", "社交媒体图形", "品牌素材"],
+    "pros": ["文字渲染准确率遥遥领先", "免费层级实用", "设计风格多样"],
+    "cons": ["纯艺术美感不如 Midjourney", "照片写实不如 Flux"]
+  },
+  "krea": {
+    "name": "Krea",
+    "short_desc": "实时 AI 图像生成和增强平台",
+    "scenes": ["实时图像创作", "图像增强", "风格迁移", "概念迭代"],
+    "pros": ["实时反馈所见即所得", "图像增强质量高", "精准控制构图"],
+    "cons": ["学习曲线较陡", "价格相对较高"]
+  },
+  "flux": {
+    "name": "Flux",
+    "short_desc": "Black Forest Labs 推出的照片级写实图像模型",
+    "scenes": ["产品摄影", "电商展示", "照片写实", "建筑渲染"],
+    "pros": ["照片写实效果最佳", "细节和纹理渲染出色", "架构和室内设计表现出色"],
+    "cons": ["艺术创意性不如 Midjourney", "使用成本较高"]
+  },
+  "pika": {
+    "name": "Pika",
+    "short_desc": "简单易用的 AI 短视频生成器",
+    "scenes": ["短视频创作", "社交媒体", "动态海报", "快速原型"],
+    "pros": ["上手难度最低", "短视频成功率最高", "价格合理"],
+    "cons": ["视频长度有限", "不支持专业编辑"]
+  },
+  "luma": {
+    "name": "Luma",
+    "short_desc": "Luma Dream Machine 高质量 AI 视频生成",
+    "scenes": ["图生视频", "电商动态展示", "社交媒体", "概念动画"],
+    "pros": ["图生视频效果业界最佳", "运动自然流畅", "相机控制灵活"],
+    "cons": ["从零生成视频不如 Runway", "视频长度有限"]
+  },
+  "kling": {
+    "name": "Kling",
+    "short_desc": "快手推出的 AI 视频生成模型",
+    "scenes": ["中文视频创作", "短视频", "广告", "社交媒体"],
+    "pros": ["中文提示词理解最佳", "亚洲面孔生成自然", "价格极具竞争力"],
+    "cons": ["国际版功能不如中国版", "英文提示词效果一般"]
+  },
+  "hailuo": {
+    "name": "Hailuo",
+    "short_desc": "MiniMax 推出的 Hailuo AI 视频生成",
+    "scenes": ["中文视频生成", "内容创作", "营销素材", "动画制作"],
+    "pros": ["视频画质出色", "中文理解准确", "价格有竞争力"],
+    "cons": ["国际知名度较低", "部分功能仍在迭代"]
+  },
+  "synthesia": {
+    "name": "Synthesia",
+    "short_desc": "AI 数字人视频制作平台",
+    "scenes": ["企业培训", "产品演示", "多语言内容", "内部沟通"],
+    "pros": ["数字人逼真度高", "140+ 种语言支持", "企业级安全合规"],
+    "cons": ["$22/月个人版功能受限", "不能替代真人出镜情感表达"]
+  },
+  "heygen": {
+    "name": "HeyGen",
+    "short_desc": "AI 数字人和视频本地化平台",
+    "scenes": ["视频本地化", "多语言营销", "全球培训", "跨语言内容"],
+    "pros": ["视频口型同步翻译是杀手功能", "多语言效果出色", "数字人质量高"],
+    "cons": ["价格偏高", "免费版功能受限"]
+  },
+  "play-ht": {
+    "name": "PlayHT",
+    "short_desc": "高度逼真的 AI 文字转语音",
+    "scenes": ["API 语音合成", "有声内容", "应用内语音", "大规模 TTS"],
+    "pros": ["大规模 API 成本低", "语音质量高", "企业级支持"],
+    "cons": ["声音克隆质量不如 ElevenLabs", "个人用户价格偏高"]
+  },
+  "murf": {
+    "name": "Murf",
+    "short_desc": "面向团队的 AI 配音工作室",
+    "scenes": ["团队配音协作", "在线教育", "企业培训", "广告配音"],
+    "pros": ["团队协作功能出色", "语音库丰富", "版本控制实用"],
+    "cons": ["语音质量略逊 ElevenLabs", "中文声音自然度有待提升"]
+  },
+  "otter": {
+    "name": "Otter",
+    "short_desc": "AI 会议记录和实时转录",
+    "scenes": ["会议记录", "实时转录", "访谈整理", "课堂笔记"],
+    "pros": ["转录准确率高", "自动加入会议功能方便", "说话人识别准确"],
+    "cons": ["中文转录不如英文", "高级功能需付费"]
+  },
+  "fireflies": {
+    "name": "Fireflies",
+    "short_desc": "AI 会议助手和对话分析",
+    "scenes": ["销售会议分析", "团队协作", "对话情报", "CRM 集成"],
+    "pros": ["对话分析功能独特", "销售场景优化", "CRM 集成完善"],
+    "cons": ["转录准确率略低于 Otter", "中文支持有限"]
+  },
+  "gamma": {
+    "name": "Gamma",
+    "short_desc": "AI 一键生成演示文稿和页面",
+    "scenes": ["演示文稿生成", "快速提案", "网页式文档", "会议材料"],
+    "pros": ["生成速度快几秒出稿", "设计品味好", "支持多种导出格式"],
+    "cons": ["高度定制能力有限", "复杂图表不如手动制作"]
+  },
+  "cline": {
+    "name": "Cline",
+    "short_desc": "VS Code 中的自主编程智能体",
+    "scenes": ["自主编程", "功能实现", "代码重构", "自动化任务"],
+    "pros": ["高度自主可完成多步骤任务", "免费开源", "VS Code 原生集成"],
+    "cons": ["需要自行管理 API 费用", "自主模式下可能出错"]
+  },
+  "windsurf": {
+    "name": "Windsurf",
+    "short_desc": "Codeium 推出的 AI IDE，Cursor 的主要竞争对手",
+    "scenes": ["AI 原生编码", "代码库分析", "跨文件编辑", "代码建议"],
+    "pros": ["比 Cursor 便宜 25%", "流模式提供持续建议", "免费层级慷慨"],
+    "cons": ["品牌知名度不如 Cursor", "社区和扩展生态较小"]
+  },
+  "aider": {
+    "name": "Aider",
+    "short_desc": "命令行 AI 编程助手，Git 原生",
+    "scenes": ["终端编程", "Git 集成开发", "代码审查", "自动化重构"],
+    "pros": ["Git 原生每次修改可追溯", "纯命令行可脚本化", "开源免费"],
+    "cons": ["无 GUI 学习曲线陡", "需要自行管理 API 费用"]
+  },
+  "codeium": {
+    "name": "Codeium",
+    "short_desc": "免费 AI 代码补全，Copilot 的替代品",
+    "scenes": ["代码补全", "免费编程助手", "多语言开发", "IDE 内聊天"],
+    "pros": ["个人永久免费", "支持 70+ 编程语言", "补全速度快"],
+    "cons": ["补全质量略逊 Copilot", "高级功能需要企业版"]
+  },
+  "replit": {
+    "name": "Replit",
+    "short_desc": "云端 AI 开发环境，浏览器中编码和部署",
+    "scenes": ["快速原型", "学习编程", "全栈应用", "浏览器开发"],
+    "pros": ["零安装浏览器即用", "AI Agent 可生成完整应用", "一键部署"],
+    "cons": ["性能受限于云端环境", "不适合大型生产项目"]
+  },
+  "v0": {
+    "name": "v0",
+    "short_desc": "Vercel AI UI 生成器，文字描述转 React 页面",
+    "scenes": ["UI 原型", "React 开发", "快速迭代", "设计到代码"],
+    "pros": ["文字描述即 UI 效率惊人", "代码质量可直接使用", "与 Vercel 生态集成"],
+    "cons": ["仅限 React/Next.js", "复杂交互逻辑需要手动调整"]
+  },
+  "lovable": {
+    "name": "Lovable",
+    "short_desc": "AI 全栈应用构建器，聊天即应用",
+    "scenes": ["创业 MVP", "全栈应用", "无代码开发", "快速验证"],
+    "pros": ["聊天即应用零门槛", "全栈生成", "部署一键完成"],
+    "cons": ["代码质量不确定", "不适合复杂业务逻辑"]
+  },
+  "deepseek": {
+    "name": "DeepSeek",
+    "short_desc": "领先的中国 AI 模型，性价比极高",
+    "scenes": ["中文对话", "编程推理", "预算开发", "学术研究"],
+    "pros": ["性价比行业最高", "推理能力世界级", "中文支持最佳", "API 价格极低"],
+    "cons": ["多模态能力不如 Gemini", "国际知名度有待提升"]
+  },
+  "copy-ai": {
+    "name": "Copy.ai",
+    "short_desc": "AI 营销文案生成平台",
+    "scenes": ["广告文案", "邮件营销", "落地页", "社交媒体"],
+    "pros": ["营销场景模板丰富", "批量生成效率高", "品牌语调管理"],
+    "cons": ["性价比不如 ChatGPT", "中文营销文案质量一般"]
+  },
+  "quillbot": {
+    "name": "QuillBot",
+    "short_desc": "AI 改写、润色和总结工具",
+    "scenes": ["英文改写", "语法检查", "文本润色", "内容总结"],
+    "pros": ["改写质量高", "专注做好一件事", "价格合理"],
+    "cons": ["不生成原创内容", "中文支持有限"]
+  },
+  "elicit": {
+    "name": "Elicit",
+    "short_desc": "AI 研究助手，自动化文献综述",
+    "scenes": ["文献综述", "学术研究", "论文检索", "证据提取"],
+    "pros": ["仅引用学术来源可信度高", "自动提取论文关键发现", "文献综述表格生成"],
+    "cons": ["非 STEM 领域覆盖较弱", "中文论文覆盖不足"]
+  },
+  "phind": {
+    "name": "Phind",
+    "short_desc": "面向开发者的 AI 搜索引擎",
+    "scenes": ["技术搜索", "代码示例", "API 文档", "调试帮助"],
+    "pros": ["技术问题准确率高", "带来源引用", "代码示例直接可用"],
+    "cons": ["非技术问题不如 Perplexity", "中文技术资源覆盖有限"]
+  },
+  "canva-ai": {
+    "name": "Canva AI",
+    "short_desc": "内置于 Canva 的 AI 设计助手",
+    "scenes": ["平面设计", "社交媒体素材", "演示文稿", "营销物料"],
+    "pros": ["Canva 生态无缝集成", "AI 功能齐全", "免费版慷慨"],
+    "cons": ["AI 图像质量不如专业工具", "高级功能需 Pro 版"]
+  },
+  "uizard": {
+    "name": "Uizard",
+    "short_desc": "AI UI 设计工具，草图转原型",
+    "scenes": ["UI 原型", "草图数字化", "快速设计", "产品演示"],
+    "pros": ["草图转原型独一无二", "截图转设计实用", "上手简单"],
+    "cons": ["不如 Figma 专业", "设计自由度有限"]
+  },
+  "bolt": {
+    "name": "Bolt",
+    "short_desc": "StackBlitz 浏览器端全栈 AI 应用构建器",
+    "scenes": ["全栈应用", "MVP 开发", "技术原型", "快速验证"],
+    "pros": ["真正的浏览器端全栈环境", "代码即时可运行", "WebContainer 技术独特"],
+    "cons": ["仅限 JavaScript/TypeScript 生态", "复杂应用性能有限"]
+  },
+  "writesonic": {
+    "name": "Writesonic",
+    "short_desc": "AI 写作和 SEO 优化平台",
+    "scenes": ["SEO 内容", "博客写作", "营销文案", "内容策略"],
+    "pros": ["SEO + AI 写作一体化", "内容评分功能实用", "模板库覆盖广"],
+    "cons": ["高级 SEO 功能需高价位套餐", "中文 SEO 效果不确定"]
+  },
+  "taskade": {
+    "name": "Taskade",
+    "short_desc": "AI 团队协作和项目管理",
+    "scenes": ["项目管理", "团队协作", "AI 工作流", "思维导图"],
+    "pros": ["项目管理和 AI 一体化", "AI 自动生成项目计划", "价格合理"],
+    "cons": ["项目管理深度不如 Asana", "AI 功能不如独立工具"]
+  },
+  "read-ai": {
+    "name": "Read AI",
+    "short_desc": "AI 会议分析，自动摘要 + 情绪分析",
+    "scenes": ["会议分析", "团队效率", "情绪跟踪", "参与度监测"],
+    "pros": ["会议效率分析独特", "参与度和情绪指标有用", "免费版可用"],
+    "cons": ["分析维度有时过度", "中文会议分析不如英文"]
+  },
+  "grammarly-ai": {
+    "name": "Grammarly AI",
+    "short_desc": "AI 语法检查和写作增强",
+    "scenes": ["英语写作", "语法检查", "风格优化", "商务沟通"],
+    "pros": ["语法和风格建议最全面", "多平台集成", "AI 写作建议实用"],
+    "cons": ["仅支持英文", "免费版功能较基础"]
+  },
+  "consensus": {
+    "name": "Consensus",
+    "short_desc": "AI 学术论文搜索引擎",
+    "scenes": ["学术搜索", "循证决策", "论文发现", "研究验证"],
+    "pros": ["仅搜索学术来源", "共识程度显示直观", "论文引用直接可验证"],
+    "cons": ["仅覆盖英文论文", "非学术问题不适合"]
+  },
+  "coda-ai": {
+    "name": "Coda AI",
+    "short_desc": "AI 文档 + 数据库 + 自动化平台",
+    "scenes": ["结构化文档", "数据驱动写作", "工作流自动化", "团队协作"],
+    "pros": ["文档 + 数据库结合强大", "AI 数据分析功能", "自动化工作流灵活"],
+    "cons": ["学习成本高于 Notion", "移动端体验一般"]
+  },
+  "viggle": {
+    "name": "Viggle",
+    "short_desc": "AI 角色动画，让照片跳舞",
+    "scenes": ["角色动画", "社交媒体", "趣味视频", "舞蹈模仿"],
+    "pros": ["趣味性极高", "社交媒体传播力强", "上手极简单"],
+    "cons": ["用途较为局限", "不适合专业制作"]
+  },
+  "vidu": {
+    "name": "Vidu",
+    "short_desc": "生数科技推出的 AI 视频生成模型"
+  },
+  "invideo-ai": {
+    "name": "Invideo AI",
+    "short_desc": "文字描述到完整视频（含配音和字幕）"
+  },
+  "fliki": {
+    "name": "Fliki",
+    "short_desc": "文字转视频（含 AI 配音）"
+  },
+  "kapwing": {
+    "name": "Kapwing",
+    "short_desc": "在线 AI 视频编辑器"
+  },
+  "d-id": {
+    "name": "D-ID",
+    "short_desc": "AI 虚拟人像动画"
+  },
+  "udio": {
+    "name": "Udio",
+    "short_desc": "AI 音乐生成，Suno 的主要竞争对手"
+  },
+  "speechify": {
+    "name": "Speechify",
+    "short_desc": "AI 文字转语音阅读器"
+  },
+  "surfer-seo": {
+    "name": "Surfer SEO",
+    "short_desc": "AI 驱动的 SEO 内容优化平台"
+  },
+  "frase": {
+    "name": "Frase",
+    "short_desc": "AI 内容研究 + 优化一体化"
+  },
+  "rytr": {
+    "name": "Rytr",
+    "short_desc": "经济实惠的 AI 写作助手"
+  },
+  "sudowrite": {
+    "name": "Sudowrite",
+    "short_desc": "AI 小说和创意写作助手"
+  },
+  "wordtune": {
+    "name": "Wordtune",
+    "short_desc": "AI 句子改写和扩展工具"
+  },
+  "figma-ai": {
+    "name": "Figma AI",
+    "short_desc": "内置于 Figma 的 AI 设计助手"
+  },
+  "comfyui": {
+    "name": "ComfyUI",
+    "short_desc": "基于节点的 Stable Diffusion 工作流 UI"
+  },
+  "dalle3": {
+    "name": "DALL·E 3",
+    "short_desc": "OpenAI AI 图像生成器"
+  },
+  "photoroom": {
+    "name": "PhotoRoom",
+    "short_desc": "AI 产品照片、背景去除和编辑"
+  },
+  "removebg": {
+    "name": "Remove.bg",
+    "short_desc": "一键图像背景去除"
+  },
+  "tabnine": {
+    "name": "Tabnine",
+    "short_desc": "注重隐私的 AI 代码补全工具"
+  },
+  "n8n": {
+    "name": "n8n",
+    "short_desc": "开源工作流自动化平台"
+  },
+  "autogpt": {
+    "name": "AutoGPT",
+    "short_desc": "开源自主 AI 智能体框架"
+  },
+  "dify": {
+    "name": "Dify",
+    "short_desc": "开源 LLMOps + AI 应用开发平台"
+  },
+  "make-com": {
+    "name": "Make",
+    "short_desc": "可视化自动化和集成平台"
+  },
+  "amazon-q": {
+    "name": "Amazon Q",
+    "short_desc": "AWS AI 编程助手"
+  },
+  "cody": {
+    "name": "Cody",
+    "short_desc": "Sourcegraph 推出的 AI 编程助手"
+  },
+  "tome": {
+    "name": "Tome",
+    "short_desc": "AI 演示文稿生成器"
+  },
+  "mem": {
+    "name": "Mem",
+    "short_desc": "AI 笔记应用，自动整理"
+  },
+  "lindy": {
+    "name": "Lindy",
+    "short_desc": "AI 个人助理智能体"
+  },
+  "bardeen": {
+    "name": "Bardeen",
+    "short_desc": "浏览器 AI 自动化工具"
+  },
+  "jenni-ai": {
+    "name": "Jenni AI",
+    "short_desc": "AI 学术写作助手"
+  },
+  "anyword": {
+    "name": "Anyword",
+    "short_desc": "带效果预测评分的 AI 文案工具"
+  },
+  "genmo": {
+    "name": "Genmo",
+    "short_desc": "AI 视频 + 3D 生成"
+  },
+  "voicemod": {
+    "name": "Voicemod",
+    "short_desc": "实时 AI 变声器"
+  },
+  "letsenhance": {
+    "name": "Let's Enhance",
+    "short_desc": "AI 图像放大 + 质量增强"
+  },
+  "stable-audio": {
+    "name": "Stable Audio",
+    "short_desc": "Stability AI 的音乐和音效生成"
+  },
+  "galileo-ai": {
+    "name": "Galileo AI",
+    "short_desc": "AI UI 设计生成器"
+  },
+  "agentgpt": {
+    "name": "AgentGPT",
+    "short_desc": "浏览器端 AI 智能体平台"
+  },
+  "beautiful-ai": {
+    "name": "Beautiful.ai",
+    "short_desc": "AI 驱动的智能演示文稿工具"
+  },
+  "multion": {
+    "name": "MultiOn",
+    "short_desc": "AI 浏览器智能体，自动执行网页任务"
+  },
+  "grok": {
+    "name": "Grok",
+    "short_desc": "xAI 推出的 AI 助手，集成于 X 平台"
+  },
+  "you-com": {
+    "name": "You.com",
+    "short_desc": "面向 AI 应用的网页搜索 API"
+  },
+  "ollama": {
+    "name": "Ollama",
+    "short_desc": "最简便的本地运行开源模型方式"
+  },
+  "crewai": {
+    "name": "CrewAI",
+    "short_desc": "多智能体协作框架，开源 + 企业版"
+  },
+  "huggingface": {
+    "name": "Hugging Face",
+    "short_desc": "AI 模型中心，开源模型的 GitHub"
+  },
+  "adobe-firefly": {
+    "name": "Adobe Firefly",
+    "short_desc": "Adobe AI 创意工具，涵盖图片、视频和音频"
+  },
+  "capcut": {
+    "name": "CapCut",
+    "short_desc": "AI 驱动的视频编辑器，适合社交媒体创作"
+  },
+  "mistral": {
+    "name": "Mistral",
+    "short_desc": "领先的欧洲开源 AI 模型公司"
+  },
+  "riverside": {
+    "name": "Riverside",
+    "short_desc": "AI 驱动的播客和视频录制 + 编辑平台"
+  },
+  "langgraph": {
+    "name": "LangGraph",
+    "short_desc": "LangChain 推出的有状态多智能体编排框架"
+  },
+  "browser-use": {
+    "name": "Browser Use",
+    "short_desc": "控制浏览器执行任务的 AI 智能体框架"
+  },
+  "autogen": {
+    "name": "Microsoft AutoGen",
+    "short_desc": "微软多智能体会话框架"
+  },
+  "llamaindex": {
+    "name": "LlamaIndex",
+    "short_desc": "LLM 应用和智能体的数据框架"
+  },
+  "claude-computer-use": {
+    "name": "Claude Computer Use",
+    "short_desc": "Anthropic 计算机使用智能体 API"
+  },
+  "leonardo-ai": {
+    "name": "Leonardo AI",
+    "short_desc": "AI 艺术和图像生成"
+  },
+  "playground-ai": {
+    "name": "Playground AI",
+    "short_desc": "在线 AI 图像创作"
+  },
+  "getimg-ai": {
+    "name": "GetImg AI",
+    "short_desc": "AI 图像生成工具集"
+  },
+  "dreamstudio": {
+    "name": "DreamStudio",
+    "short_desc": "Stability AI 官方平台"
+  },
+  "pixlr-ai": {
+    "name": "Pixlr AI",
+    "short_desc": "在线 AI 图像编辑器"
+  },
+  "artbreeder": {
+    "name": "Artbreeder",
+    "short_desc": "协作式 AI 图像融合"
+  },
+  "nightcafe": {
+    "name": "NightCafe",
+    "short_desc": "AI 艺术生成社区"
+  },
+  "stability-api": {
+    "name": "Stability API",
+    "short_desc": "Stable Diffusion API 服务"
+  },
+  "krea-ai": {
+    "name": "Krea AI",
+    "short_desc": "实时 AI 图像生成"
+  },
+  "topaz-video": {
+    "name": "Topaz Video AI",
+    "short_desc": "AI 视频放大增强"
+  },
+  "descript-edit": {
+    "name": "Descript",
+    "short_desc": "AI 视频/音频编辑"
+  },
+  "tencent-zhiying": {
+    "name": "腾讯智影",
+    "short_desc": "腾讯 AI 视频平台"
+  },
+  "wisecut": {
+    "name": "Wisecut",
+    "short_desc": "AI 自动视频编辑"
+  },
+  "flexclip": {
+    "name": "FlexClip",
+    "short_desc": "在线视频编辑器"
+  },
+  "clipchamp": {
+    "name": "Clipchamp",
+    "short_desc": "微软视频编辑器"
+  },
+  "pictory": {
+    "name": "Pictory",
+    "short_desc": "AI 文章转视频"
+  },
+  "munch-ai": {
+    "name": "Munch",
+    "short_desc": "AI 长视频转短视频"
+  },
+  "bhuman": {
+    "name": "BHuman",
+    "short_desc": "AI 个性化视频"
+  },
+  "shuffll": {
+    "name": "Shuffll",
+    "short_desc": "AI 企业视频"
+  },
+  "vercel-sdk": {
+    "name": "Vercel AI SDK",
+    "short_desc": "AI 应用开发 SDK"
+  },
+  "supabase-ai": {
+    "name": "Supabase AI",
+    "short_desc": "AI 增强数据库"
+  },
+  "pinecone": {
+    "name": "Pinecone",
+    "short_desc": "AI 向量数据库"
+  },
+  "anthropic-api": {
+    "name": "Anthropic API",
+    "short_desc": "Claude API 服务"
+  },
+  "openai-api": {
+    "name": "OpenAI API",
+    "short_desc": "GPT 模型 API"
+  },
+  "phind-pro": {
+    "name": "Phind Pro",
+    "short_desc": "AI 开发者搜索引擎"
+  },
+  "v0-dev": {
+    "name": "v0 by Vercel",
+    "short_desc": "AI UI 组件生成器"
+  },
+  "bolt-new": {
+    "name": "Bolt.new",
+    "short_desc": "AI 全栈应用生成器"
+  },
+  "lovable-dev": {
+    "name": "Lovable",
+    "short_desc": "AI 全栈构建器"
+  },
+  "windsurf-edit": {
+    "name": "Windsurf Editor",
+    "short_desc": "AI 优先代码编辑器"
+  },
+  "zed-ai": {
+    "name": "Zed",
+    "short_desc": "高性能编辑器"
+  },
+  "trae-ai": {
+    "name": "Trae",
+    "short_desc": "字节跳动 AI IDE"
+  },
+  "murf-ai": {
+    "name": "Murf AI",
+    "short_desc": "AI 语音合成"
+  },
+  "playht": {
+    "name": "PlayHT",
+    "short_desc": "AI 文字转语音"
+  },
+  "listnr": {
+    "name": "Listnr",
+    "short_desc": "AI TTS 生成器"
+  },
+  "wellsaid": {
+    "name": "WellSaid Labs",
+    "short_desc": "企业级 AI 语音"
+  },
+  "assembly-ai": {
+    "name": "AssemblyAI",
+    "short_desc": "AI 转录 API"
+  },
+  "whisper-api": {
+    "name": "OpenAI Whisper",
+    "short_desc": "开源语音识别"
+  },
+  "audo-ai": {
+    "name": "Audo AI",
+    "short_desc": "AI 音频降噪"
+  },
+  "adobe-podcast": {
+    "name": "Adobe Podcast Enhance",
+    "short_desc": "AI 播客音频增强"
+  },
+  "audioalter": {
+    "name": "AudioAlter",
+    "short_desc": "在线音频编辑"
+  },
+  "gladia": {
+    "name": "Gladia",
+    "short_desc": "AI 转录 API"
+  },
+  "frase-io": {
+    "name": "Frase",
+    "short_desc": "AI SEO 内容平台"
+  },
+  "rytr-ai": {
+    "name": "Rytr",
+    "short_desc": "AI 写作助手"
+  },
+  "contentbot": {
+    "name": "ContentBot",
+    "short_desc": "AI 内容生成"
+  },
+  "ink-ai": {
+    "name": "INK AI",
+    "short_desc": "AI SEO 写作"
+  },
+  "sudowrite-ai": {
+    "name": "Sudowrite",
+    "short_desc": "AI 小说写作"
+  },
+  "ai-writer": {
+    "name": "AI-Writer",
+    "short_desc": "AI 文章生成器"
+  },
+  "textcortex": {
+    "name": "TextCortex",
+    "short_desc": "AI 改写助手"
+  },
+  "hoppycopy": {
+    "name": "Hoppy Copy",
+    "short_desc": "AI 邮件营销文案"
+  },
+  "simplified-ai": {
+    "name": "Simplified AI",
+    "short_desc": "一站式 AI 营销平台"
+  },
+  "hypotenuse": {
+    "name": "Hypotenuse AI",
+    "short_desc": "AI 电商内容"
+  },
+  "copysmith": {
+    "name": "Copysmith",
+    "short_desc": "AI 电商文案"
+  },
+  "anyword-ai": {
+    "name": "Anyword",
+    "short_desc": "AI 文案评分工具"
+  },
+  "grammarly-prem": {
+    "name": "Grammarly Premium",
+    "short_desc": "AI 语法和风格优化"
+  },
+  "monica-ai": {
+    "name": "Monica AI",
+    "short_desc": "AI 浏览器助手"
+  },
+  "merlin-ai": {
+    "name": "Merlin AI",
+    "short_desc": "AI 浏览器扩展"
+  },
+  "harpa-ai": {
+    "name": "Harpa AI",
+    "short_desc": "AI 网页自动化"
+  },
+  "maxai": {
+    "name": "MaxAI",
+    "short_desc": "AI 浏览器助手"
+  },
+  "sider-ai": {
+    "name": "Sider AI",
+    "short_desc": "浏览器侧边栏 AI"
+  },
+  "tldv": {
+    "name": "tl;dv",
+    "short_desc": "AI 会议录像"
+  },
+  "fathom": {
+    "name": "Fathom",
+    "short_desc": "AI 会议助手"
+  },
+  "glide-ai": {
+    "name": "Glide AI",
+    "short_desc": "无代码 AI 应用构建器"
+  },
+  "airtable-ai": {
+    "name": "Airtable AI",
+    "short_desc": "AI 数据库平台"
+  },
+  "zapier": {
+    "name": "Zapier",
+    "short_desc": "AI 自动化平台"
+  },
+  "resend": {
+    "name": "Resend",
+    "short_desc": "开发者邮件 API"
+  },
+  "twilio-ai": {
+    "name": "Twilio AI",
+    "short_desc": "AI 通信 API"
+  },
+  "lexica": {
+    "name": "Lexica",
+    "short_desc": "AI 图像搜索和生成"
+  },
+  "tensor-art": {
+    "name": "Tensor Art",
+    "short_desc": "AI 图像生成社区"
+  },
+  "civitai": {
+    "name": "CivitAI",
+    "short_desc": "AI 模型分享社区"
+  },
+  "openart": {
+    "name": "OpenArt AI",
+    "short_desc": "AI 图像生成和编辑"
+  },
+  "seaart": {
+    "name": "SeaArt AI",
+    "short_desc": "AI 艺术生成平台"
+  },
+  "tensor-gen": {
+    "name": "TensorGen",
+    "short_desc": "AI 图像生成器"
+  },
+  "d-ID-pro": {
+    "name": "D-ID Pro",
+    "short_desc": "AI 数字人视频"
+  },
+  "gliacloud": {
+    "name": "GliaCloud",
+    "short_desc": "AI 视频生成"
+  },
+  "sora-pro": {
+    "name": "Sora Pro",
+    "short_desc": "OpenAI 专业视频生成"
+  },
+  "genmo-pro": {
+    "name": "Genmo Pro",
+    "short_desc": "AI 交互式视频生成"
+  },
+  "lipsync": {
+    "name": "Wav2Lip",
+    "short_desc": "AI 口型同步工具"
+  },
+  "aider-ai": {
+    "name": "Aider",
+    "short_desc": "AI 结对编程 CLI"
+  },
+  "continue-dev": {
+    "name": "Continue",
+    "short_desc": "开源 AI 代码助手"
+  },
+  "roo-code": {
+    "name": "Roo Code",
+    "short_desc": "AI 编程扩展"
+  },
+  "ollama-api": {
+    "name": "Ollama API",
+    "short_desc": "本地 LLM 运行时"
+  },
+  "lm-studio": {
+    "name": "LM Studio",
+    "short_desc": "本地 LLM 桌面应用"
+  },
+  "lalals": {
+    "name": "Lalals",
+    "short_desc": "AI 声音克隆音乐"
+  },
+  "kits-ai": {
+    "name": "Kits AI",
+    "short_desc": "AI 声音克隆工具集"
+  },
+  "musicfy": {
+    "name": "Musicfy",
+    "short_desc": "AI 音乐声音克隆"
+  },
+  "cover-ai": {
+    "name": "Covers AI",
+    "short_desc": "AI 翻唱生成器"
+  },
+  "voicemod-pro": {
+    "name": "Voicemod Pro",
+    "short_desc": "实时变声器专业版"
+  },
+  "typeface-ai": {
+    "name": "Typeface AI",
+    "short_desc": "企业级 AI 内容平台"
+  },
+  "jasper-art": {
+    "name": "Jasper Art",
+    "short_desc": "Jasper AI 艺术生成"
+  },
+  "copyhero": {
+    "name": "CopyHero",
+    "short_desc": "AI 文案工具"
+  },
+  "texta-ai": {
+    "name": "Texta AI",
+    "short_desc": "AI 文章写作"
+  },
+  "katteb": {
+    "name": "Katteb",
+    "short_desc": "AI 内容写作"
+  },
+  "rewind-ai": {
+    "name": "Rewind AI",
+    "short_desc": "AI 生活搜索引擎"
+  },
+  "mem-ai": {
+    "name": "Mem AI",
+    "short_desc": "AI 笔记工作空间"
+  },
+  "taskade-ai": {
+    "name": "Taskade AI",
+    "short_desc": "AI 工作空间和任务"
+  },
+  "motion-ai": {
+    "name": "Motion AI",
+    "short_desc": "AI 日历和任务管理"
+  },
+  "taskade-pro": {
+    "name": "Taskade Pro",
+    "short_desc": "AI 项目管理专业版"
+  },
+  "agnes-ai": {
+    "name": "Agnes AI",
+    "short_desc": "免费全模态 AI API 平台"
+  },
+  "manus-ai": {
+    "name": "Manus AI",
+    "short_desc": "AI 自主智能体平台"
+  },
+  "mastra": {
+    "name": "Mastra",
+    "short_desc": "TypeScript AI 智能体框架"
+  },
+  "flowise": {
+    "name": "Flowise",
+    "short_desc": "可视无代码 AI 智能体构建器"
+  },
+  "kiri-ai": {
+    "name": "Kiri AI",
+    "short_desc": "AI 图像生成平台"
+  },
+  "astria-ai": {
+    "name": "Astria",
+    "short_desc": "自定义 AI 图像生成"
+  },
+  "prodias-ai": {
+    "name": "Prodia",
+    "short_desc": "免费 AI 图像 API"
+  },
+  "stability-dev": {
+    "name": "Stability AI Developer",
+    "short_desc": "Stable Diffusion API 平台"
+  },
+  "novita-ai": {
+    "name": "Novita AI",
+    "short_desc": "AI 图像生成 API"
+  },
+  "baseten-ai": {
+    "name": "Baseten",
+    "short_desc": "ML 模型部署平台"
+  },
+  "replicate-ai": {
+    "name": "Replicate",
+    "short_desc": "通过 API 运行 ML 模型"
+  },
+  "modelscope": {
+    "name": "ModelScope",
+    "short_desc": "AI 模型中心"
+  },
+  "magicstudio": {
+    "name": "Magic Studio",
+    "short_desc": "AI 图像编辑套件"
+  },
+  "ebsynth-ai": {
+    "name": "EbSynth",
+    "short_desc": "AI 视频风格迁移"
+  },
+  "scenarios-ai": {
+    "name": "Scenario AI",
+    "short_desc": "AI 游戏资产生成器"
+  },
+  "vizcom-ai": {
+    "name": "Vizcom AI",
+    "short_desc": "AI 草图转渲染"
+  },
+  "marmof-ai": {
+    "name": "Marmof",
+    "short_desc": "AI 内容和图像"
+  },
+  "vance-ai": {
+    "name": "Vance AI",
+    "short_desc": "AI 照片增强器"
+  },
+  "hotpot-ai": {
+    "name": "Hotpot AI",
+    "short_desc": "AI 图像工具套件"
+  },
+  "pika-labs": {
+    "name": "Pika Labs",
+    "short_desc": "AI 视频生成平台"
+  },
+  "genmo-video": {
+    "name": "Genmo Video",
+    "short_desc": "AI 3D 和视频生成"
+  },
+  "higgsfield": {
+    "name": "Higgsfield",
+    "short_desc": "AI 视频创作平台"
+  },
+  "immersion-ai": {
+    "name": "Immersion AI",
+    "short_desc": "AI 沉浸式视频"
+  },
+  "kaiber-ai": {
+    "name": "Kaiber",
+    "short_desc": "AI 视频艺术生成器"
+  },
+  "gen-2-ai": {
+    "name": "Gen-2",
+    "short_desc": "Runway Gen-2 视频模型"
+  },
+  "polish-video": {
+    "name": "Polish Video AI",
+    "short_desc": "AI 视频润色"
+  },
+  "viz-ai": {
+    "name": "Viz AI",
+    "short_desc": "AI 视频分析"
+  },
+  "morph-ai": {
+    "name": "Morph Studio",
+    "short_desc": "AI 视频生成工作流"
+  },
+  "dramatron": {
+    "name": "Dramatron",
+    "short_desc": "AI 编剧助手"
+  },
+  "bigmp4-video": {
+    "name": "BigMP4",
+    "short_desc": "AI 视频放大"
+  },
+  "wz-ai": {
+    "name": "WZ AI",
+    "short_desc": "AI 视频编辑器"
+  },
+  "coupert-video": {
+    "name": "Coupert Video",
+    "short_desc": "AI 产品视频制作"
+  },
+  "shorts-ai": {
+    "name": "Shorts AI",
+    "short_desc": "AI 短视频生成器"
+  },
+  "twipu-ai": {
+    "name": "Twipu",
+    "short_desc": "AI 视频字幕"
+  },
+  "ai-voice": {
+    "name": "AI Voice",
+    "short_desc": "AI 语音生成器"
+  },
+  "ttsmaker": {
+    "name": "TTSMaker",
+    "short_desc": "免费在线 TTS"
+  },
+  "naturalreader": {
+    "name": "NaturalReader",
+    "short_desc": "AI 文本转语音"
+  },
+  "clipchamp-tts": {
+    "name": "Clipchamp TTS",
+    "short_desc": "微软 AI 语音"
+  },
+  "uberduck": {
+    "name": "Uberduck",
+    "short_desc": "AI 语音和说唱"
+  },
+  "lovo-ai": {
+    "name": "LOVO AI",
+    "short_desc": "AI 配音平台"
+  },
+  "voice123": {
+    "name": "Voice123 AI",
+    "short_desc": "AI 声音选角"
+  },
+  "typecast": {
+    "name": "Typecast",
+    "short_desc": "AI 配音表演"
+  },
+  "descript-lyrics": {
+    "name": "Descript Lyrics",
+    "short_desc": "AI 歌词转录"
+  },
+  "songdonkey": {
+    "name": "SongDonkey",
+    "short_desc": "AI 音乐分轨工具"
+  },
+  "sourcegraph": {
+    "name": "Sourcegraph Cody",
+    "short_desc": "AI 代码搜索和智能"
+  },
+  "sourcery-ai": {
+    "name": "Sourcery",
+    "short_desc": "AI 代码重构"
+  },
+  "deepcode-ai": {
+    "name": "DeepCode",
+    "short_desc": "AI 代码审查"
+  },
+  "snyk-ai": {
+    "name": "Snyk Code",
+    "short_desc": "AI 安全扫描"
+  },
+  "veracode": {
+    "name": "Veracode",
+    "short_desc": "应用安全"
+  },
+  "sonarqube": {
+    "name": "SonarQube",
+    "short_desc": "代码质量平台"
+  },
+  "codiga-ai": {
+    "name": "Codiga",
+    "short_desc": "AI 代码助手"
+  },
+  "qodo-ai": {
+    "name": "Qodo",
+    "short_desc": "AI 代码测试"
+  },
+  "sweep-ai": {
+    "name": "Sweep AI",
+    "short_desc": "AI GitHub 助手"
+  },
+  "codemod-ai": {
+    "name": "Codemod",
+    "short_desc": "AI 代码迁移"
+  },
+  "bloop-ai": {
+    "name": "Bloop AI",
+    "short_desc": "AI 代码搜索"
+  },
+  "mutable-ai": {
+    "name": "Mutable AI",
+    "short_desc": "AI 代码库编辑"
+  },
+  "devika-ai": {
+    "name": "Devika",
+    "short_desc": "AI 软件工程师"
+  },
+  "gorilla-cli": {
+    "name": "Gorilla CLI",
+    "short_desc": "AI 终端助手"
+  },
+  "shell-genie": {
+    "name": "Shell Genie",
+    "short_desc": "AI Shell 命令"
+  },
+  "hypotenuse-prod": {
+    "name": "Hypotenuse Product",
+    "short_desc": "AI 产品描述"
+  },
+  "texta-copilot": {
+    "name": "Texta Copilot",
+    "short_desc": "AI 写作副驾驶"
+  },
+  "ai-text": {
+    "name": "AI Text",
+    "short_desc": "AI 文本生成器"
+  },
+  "writely-ai": {
+    "name": "Writely AI",
+    "short_desc": "AI 论文写作"
+  },
+  "textify": {
+    "name": "Textify",
+    "short_desc": "AI 文本简化"
+  },
+  "text-blaze": {
+    "name": "Text Blaze",
+    "short_desc": "AI 文本扩展"
+  },
+  "magickpen": {
+    "name": "MagickPen",
+    "short_desc": "AI 写作工具"
+  },
+  "easy-ai": {
+    "name": "Easy AI",
+    "short_desc": "简易 AI 写作"
+  },
+  "koala-writer": {
+    "name": "Koala Writer",
+    "short_desc": "AI 博客写作"
+  },
+  "atonce-ai": {
+    "name": "AtOnce",
+    "short_desc": "AI 内容生成器"
+  },
+  "txt-ai": {
+    "name": "Txt AI",
+    "short_desc": "AI 文本处理"
+  },
+  "type-ai": {
+    "name": "Type AI",
+    "short_desc": "AI 打字助手"
+  },
+  "pen-ai": {
+    "name": "Pen AI",
+    "short_desc": "AI 写作笔"
+  },
+  "inkforall-pro": {
+    "name": "INK Pro",
+    "short_desc": "AI SEO 写作专业版"
+  },
+  "smodin-ai": {
+    "name": "Smodin",
+    "short_desc": "AI 写作和作业"
+  },
+  "motion-pro": {
+    "name": "Motion Pro",
+    "short_desc": "AI 日历专业版"
+  },
+  "reclaim-ai": {
+    "name": "Reclaim AI",
+    "short_desc": "AI 日程优化器"
+  },
+  "clockwise-ai": {
+    "name": "Clockwise",
+    "short_desc": "AI 会议调度"
+  },
+  "trevor-ai": {
+    "name": "Trevor AI",
+    "short_desc": "AI 任务规划"
+  },
+  "akiflow": {
+    "name": "Akiflow",
+    "short_desc": "AI 收件箱管理"
+  },
+  "sunsama": {
+    "name": "Sunsama",
+    "short_desc": "AI 每日规划"
+  },
+  "height-ai": {
+    "name": "Height",
+    "short_desc": "AI 项目管理"
+  },
+  "-clickup-ai": {
+    "name": "ClickUp AI",
+    "short_desc": "AI 效率平台"
+  },
+  "asana-ai": {
+    "name": "Asana AI",
+    "short_desc": "AI 工作管理"
+  },
+  "monday-ai": {
+    "name": "Monday AI",
+    "short_desc": "AI 项目平台"
+  },
+  "notion-calendar": {
+    "name": "Notion Calendar",
+    "short_desc": "Notion AI 日历"
+  },
+  "reflect-notes": {
+    "name": "Reflect",
+    "short_desc": "AI 笔记应用"
+  },
+  "bear-notes": {
+    "name": "Bear AI",
+    "short_desc": "AI Markdown 笔记"
+  },
+  "consensus-pro": {
+    "name": "Consensus Pro",
+    "short_desc": "AI 研究搜索专业版"
+  },
+  "scite-ai": {
+    "name": "Scite",
+    "short_desc": "AI 引文分析"
+  },
+  "inciteful": {
+    "name": "Inciteful",
+    "short_desc": "AI 文献网络"
+  },
+  "scholarcy": {
+    "name": "Scholarcy",
+    "short_desc": "AI 论文摘要"
+  },
+  "paperpile": {
+    "name": "Paperpile",
+    "short_desc": "AI 参考文献管理"
+  },
+  "zotero-ai": {
+    "name": "Zotero AI",
+    "short_desc": "AI 研究助手"
+  },
+  "researchrabbit": {
+    "name": "Research Rabbit",
+    "short_desc": "AI 论文发现"
+  },
+  "connected-papers": {
+    "name": "Connected Papers",
+    "short_desc": "AI 论文图谱"
+  },
+  "lens-ai": {
+    "name": "Lens AI",
+    "short_desc": "AI 学术搜索"
+  },
+  "sciencedirect": {
+    "name": "ScienceDirect AI",
+    "short_desc": "AI 科学搜索"
+  }
+}

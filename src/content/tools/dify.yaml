@@ -1,0 +1,47 @@
+name:
+  en: Dify
+  zh: Dify
+short_desc:
+  en: Open-source LLMOps + AI app development platform
+  zh: 开源 LLMOps + AI 应用开发平台
+long_desc:
+  en: >-
+    Dify lets you visually build AI apps (chatbots, workflows, agents) with self-hosting option.
+cat: productivity
+url: https://dify.ai
+icon: fa-puzzle-piece
+scenes:
+  en:
+  - AI apps
+  - Chatbots
+  - Workflows
+  - RAG
+pros:
+  en:
+  - Open source
+  - Visual builder
+  - RAG support
+  - Self-host
+cons:
+  en:
+  - Needs tech skills
+  - Young ecosystem
+target_audience:
+  en:
+  - Devs
+  - Tech teams
+  - Enterprise
+use_cases:
+  en:
+  - AI apps
+  - Support
+  - Workflows
+  - RAG
+features:
+  en:
+  - Visual builder
+  - RAG
+  - Workflows
+  - Self-host
+example:
+  en: 'Example: Build an AI customer service bot from company docs.'

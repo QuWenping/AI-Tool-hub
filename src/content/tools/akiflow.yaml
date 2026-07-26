@@ -1,0 +1,24 @@
+name:
+  en: Akiflow
+  zh: Akiflow
+short_desc:
+  en: AI inbox manager
+  zh: AI 收件箱管理
+long_desc:
+  en: AI-powered inbox and task consolidation
+cat: productivity
+url: https://akiflow.com
+icon: fa-inbox
+scenes:
+  en:
+  - inbox
+  - tasks
+  - consolidation
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

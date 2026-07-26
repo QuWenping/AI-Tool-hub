@@ -1,0 +1,24 @@
+name:
+  en: AtOnce
+  zh: AtOnce
+short_desc:
+  en: AI content generator
+  zh: AI 内容生成器
+long_desc:
+  en: AI content generation for marketing teams
+cat: text
+url: https://atonce.com
+icon: fa-pen
+scenes:
+  en:
+  - content
+  - marketing
+  - team
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

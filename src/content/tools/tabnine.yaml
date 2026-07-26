@@ -1,0 +1,43 @@
+name:
+  en: Tabnine
+  zh: Tabnine
+short_desc:
+  en: AI code completion, privacy-focused
+  zh: 注重隐私的 AI 代码补全工具
+long_desc:
+  en: >-
+    Tabnine offers AI code completion with local model deployment options, focused on enterprise data privacy.
+cat: code
+url: https://www.tabnine.com
+icon: fa-keyboard
+scenes:
+  en:
+  - Code completion
+  - Enterprise dev
+  - Privacy-sensitive
+pros:
+  en:
+  - Local deploy
+  - Privacy protection
+  - Multi-IDE
+cons:
+  en:
+  - Less capable than Copilot
+  - No agent
+target_audience:
+  en:
+  - Enterprise devs
+  - Privacy-conscious
+use_cases:
+  en:
+  - Daily completion
+  - Enterprise
+  - Security
+features:
+  en:
+  - Completion
+  - Local deploy
+  - Multi-IDE
+  - Enterprise
+example:
+  en: 'Example: Complete Java code with local Tabnine on enterprise intranet.'

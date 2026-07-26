@@ -1,0 +1,26 @@
+name:
+  en: Manus AI
+  zh: Manus AI
+short_desc:
+  en: AI autonomous agent platform
+  zh: AI 自主智能体平台
+long_desc:
+  en: >-
+    Manus AI is an autonomous AI agent that can complete complex multi-step tasks independently, from research to coding to
+    data analysis.
+cat: productivity
+url: https://manus.im
+icon: fa-robot
+scenes:
+  en:
+  - autonomous-agent
+  - task-completion
+  - research
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

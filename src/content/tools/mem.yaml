@@ -1,0 +1,45 @@
+name:
+  en: Mem
+  zh: Mem
+short_desc:
+  en: AI notes app, auto-organized
+  zh: AI 笔记应用，自动整理
+long_desc:
+  en: >-
+    Mem is an AI-powered notes app that auto-organizes, connects, and searches your notes.
+cat: productivity
+url: https://mem.ai
+icon: fa-note-sticky
+scenes:
+  en:
+  - Notes
+  - Knowledge mgmt
+  - Auto-organize
+  - Search
+pros:
+  en:
+  - Auto-organize
+  - AI search
+  - Clean
+cons:
+  en:
+  - Less flexible than Notion
+  - Fewer features
+target_audience:
+  en:
+  - Knowledge workers
+  - Researchers
+use_cases:
+  en:
+  - Notes
+  - Knowledge
+  - Ideas
+  - Search
+features:
+  en:
+  - AI notes
+  - Auto-organize
+  - Search
+  - Connect
+example:
+  en: 'Example: Jot down ideas → Mem auto-categorizes+connects.'

@@ -1,0 +1,24 @@
+name:
+  en: Research Rabbit
+  zh: Research Rabbit
+short_desc:
+  en: AI paper discovery
+  zh: AI 论文发现
+long_desc:
+  en: AI-powered paper discovery and citation mapping
+cat: research
+url: https://researchrabbit.ai
+icon: fa-search
+scenes:
+  en:
+  - discovery
+  - papers
+  - citations
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

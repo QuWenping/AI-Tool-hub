@@ -1,0 +1,135 @@
+name:
+  en: Kling
+  zh: Kling
+short_desc:
+  en: AI video model by Kuaishou
+  zh: 快手推出的 AI 视频生成模型
+long_desc:
+  en: >-
+    Kling by Kuaishou is a video model with strong motion and length, CN-prompt friendly, accessible in China.
+cat: video
+url: https://klingai.com
+icon: fa-film
+scenes:
+  en:
+  - Shorts
+  - Img-to-video
+  - CN prompts
+  - Social video
+  zh:
+  - 中文视频创作
+  - 短视频
+  - 广告
+  - 社交媒体
+pros:
+  en:
+  - CN-friendly
+  - Natural motion
+  - China accessible
+  - Free tier
+  zh:
+  - 中文提示词理解最佳
+  - 亚洲面孔生成自然
+  - 价格极具竞争力
+  - 国内可直接访问
+cons:
+  en:
+  - Overseas queue
+  - Paid tier
+  - Fewer EN docs
+  zh:
+  - 国际版功能不如中国版
+  - 英文提示词效果一般
+  - 海外排队时间较长
+target_audience:
+  en:
+  - Creators
+  - Marketers
+  - Indie
+  - E-com
+  zh:
+  - 创作者
+  - 营销人员
+  - 独立开发者
+  - 电商从业者
+use_cases:
+  en:
+  - Social
+  - Img-to-video
+  - CN clips
+  - E-com demos
+  zh:
+  - 社交媒体
+  - 图片转视频
+  - 中文视频
+  - 电商演示
+features:
+  en:
+  - Text-to-video
+  - Img-to-video
+  - CN-optimized
+  - Longer clips
+  zh:
+  - 文本转视频
+  - 图片转视频
+  - 中文优化
+  - 更长片段
+example:
+  en: 'Example: Describe in Chinese, get a 10s clip.'
+  zh: 示例：用中文描述即可生成 10 秒视频。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Latest stable (2026)
+score: 8.3
+overall_score: 8.3
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+  - iOS
+  - Android
+  - API
+pricingSummary:
+  en: >-
+    Free tier with daily credits · Standard $5.99/mo, Pro $9.99/mo, Premier $29.99/mo unlock more credits, longer clips, and
+    priority queue.
+faq:
+- q_en: What is Kling?
+  a_en: >-
+    Kling is an AI video generation model from Kuaishou, popular for realistic human motion and competitive image-to-video
+    at low cost.
+- q_en: Is Kling free?
+  a_en: >-
+    Yes. Free users get daily credits; paid plans start at $5.99/month and offer more credits and longer videos.
+- q_en: How does Kling compare to Sora?
+  a_en: >-
+    Kling is strong on realistic human motion, choreography, and image-to-video at a fraction of Sora's price. Sora still
+    leads on long coherent shots and prompt fidelity.
+- q_en: How long can Kling videos be?
+  a_en: >-
+    Paid plans can generate up to ~10 seconds per clip; clips can be chained in the editor for longer sequences.
+- q_en: Does Kling support image-to-video?
+  a_en: >-
+    Yes. Image-to-video is one of Kling's strongest paths and supports both start and end frames for controlled motion.
+- q_en: Does Kling have an API?
+  a_en: >-
+    Yes. Kuaishou exposes the Kling API for paid accounts, popular for batch generation in apps.
+- q_en: How good is Kling at human motion?
+  a_en: >-
+    Kling is widely regarded as the strongest open-platform model for natural human motion, dance, and lip sync in 2026.
+- q_en: Is Kling available worldwide?
+  a_en: >-
+    Kling is available in most regions but pricing and access vary; check the Kuaishou Kling site for your country.
+- q_en: Can Kling generate sound?
+  a_en: >-
+    Kling focuses on visuals. Voice and music are not generated; pair with ElevenLabs / Suno.
+- q_en: Who should use Kling?
+  a_en: >-
+    Creators and indie studios producing social videos, dance content, and short ads that rely on realistic human motion.
+scoreBreakdown:
+  user: 8.3
+  capability: 7.300000000000001
+  price: 9
+  growth: 8
+  trust: 8

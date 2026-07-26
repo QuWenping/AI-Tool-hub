@@ -1,0 +1,24 @@
+name:
+  en: WZ AI
+  zh: WZ AI
+short_desc:
+  en: AI video editor
+  zh: AI 视频编辑器
+long_desc:
+  en: AI-powered video editing with auto-cut and effects
+cat: video
+url: https://wz.ai
+icon: fa-video
+scenes:
+  en:
+  - video
+  - editing
+  - auto-cut
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

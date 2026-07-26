@@ -1,0 +1,24 @@
+name:
+  en: Sunsama
+  zh: Sunsama
+short_desc:
+  en: AI daily planner
+  zh: AI 每日规划
+long_desc:
+  en: AI-assisted daily planning and review
+cat: productivity
+url: https://sunsama.com
+icon: fa-sun
+scenes:
+  en:
+  - planning
+  - daily
+  - review
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

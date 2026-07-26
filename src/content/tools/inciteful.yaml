@@ -1,0 +1,24 @@
+name:
+  en: Inciteful
+  zh: Inciteful
+short_desc:
+  en: AI literature network
+  zh: AI 文献网络
+long_desc:
+  en: AI-powered literature network analysis
+cat: research
+url: https://inciteful.xyz
+icon: fa-search
+scenes:
+  en:
+  - literature
+  - network
+  - analysis
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

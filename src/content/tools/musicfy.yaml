@@ -1,0 +1,24 @@
+name:
+  en: Musicfy
+  zh: Musicfy
+short_desc:
+  en: AI music voice clone
+  zh: AI 音乐声音克隆
+long_desc:
+  en: Create AI music covers with voice cloning
+cat: audio
+url: https://musicfy.lol
+icon: fa-music
+scenes:
+  en:
+  - music
+  - voice-clone
+  - cover
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

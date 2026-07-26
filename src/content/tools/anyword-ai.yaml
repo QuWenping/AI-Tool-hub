@@ -1,0 +1,24 @@
+name:
+  en: Anyword
+  zh: Anyword
+short_desc:
+  en: AI copy with scoring
+  zh: AI 文案评分工具
+long_desc:
+  en: AI marketing copy with predictive performance scoring
+cat: text
+url: https://anyword.com
+icon: fa-bullhorn
+scenes:
+  en:
+  - marketing
+  - copy
+  - ab-testing
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

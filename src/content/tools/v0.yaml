@@ -1,0 +1,129 @@
+name:
+  en: v0
+  zh: v0
+short_desc:
+  en: Vercel AI UI generator, text to React pages
+  zh: Vercel AI UI 生成器，文字描述转 React 页面
+long_desc:
+  en: >-
+    v0 by Vercel generates React/Tailwind UI components from natural language, deployable to Vercel.
+cat: code
+url: https://v0.dev
+icon: fa-laptop-code
+scenes:
+  en:
+  - UI prototypes
+  - Landing pages
+  - Component gen
+  zh:
+  - UI 原型
+  - React 开发
+  - 快速迭代
+  - 设计到代码
+pros:
+  en:
+  - Fast UI gen
+  - React+Tailwind
+  - One-click deploy
+  zh:
+  - 文字描述即 UI 效率惊人
+  - 代码质量可直接使用
+  - 与 Vercel 生态集成
+cons:
+  en:
+  - Frontend UI only
+  - Limited free credits
+  zh:
+  - 仅限 React/Next.js
+  - 复杂交互逻辑需要手动调整
+target_audience:
+  en:
+  - Frontend devs
+  - Designers
+  - PMs
+  zh:
+  - 前端开发者
+  - 设计师
+  - 产品经理
+use_cases:
+  en:
+  - UI protos
+  - Landing pages
+  - Components
+  - Demos
+  zh:
+  - UI 原型
+  - 落地页
+  - 组件
+  - 演示
+features:
+  en:
+  - Text-to-UI
+  - React+Tailwind
+  - Deploy
+  - Components
+  zh:
+  - 文字转 UI
+  - React+Tailwind
+  - 部署
+  - 组件库
+example:
+  en: 'Example: ''a pricing page with 3 tiers'' → full React page.'
+  zh: 示例：'一个三档定价页面' → 完整 React 页面。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: v0 2026
+score: 8.4
+overall_score: 8.4
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web Browser
+pricingSummary:
+  en: >-
+    Free tier (limited prompt credits) · Pro $20/mo · Team $40/seat/mo · Enterprise custom.
+faq:
+- q_en: What is v0?
+  a_en: >-
+    Vercel's AI-powered UI generator. Describe a component or page in natural language, and v0 generates production-ready
+    React + Tailwind code with one-click deploy.
+- q_en: Is v0 free?
+  a_en: >-
+    Free tier with limited monthly credits. Pro at $20/month adds more credits and priority access.
+- q_en: What frameworks does v0 support?
+  a_en: >-
+    React, Next.js, and Vue with Tailwind CSS. Generated components are production-ready and follow accessibility best practices.
+- q_en: Can v0 generate entire pages?
+  a_en: >-
+    Yes. Describe a landing page, dashboard, or form, and v0 generates the full layout with responsive design. You can iterate
+    on specific sections.
+- q_en: How does v0 compare to Bolt?
+  a_en: >-
+    v0 specializes in UI generation (React + Tailwind, one-click deploy to Vercel). Bolt is a full-stack app builder with
+    a WebContainer runtime. Use v0 for UI, Bolt for full apps.
+- q_en: Does v0 have an API?
+  a_en: >-
+    Yes. The v0 API allows you to generate UI components programmatically, making it possible to integrate into your design-to-code
+    pipeline.
+- q_en: Can v0 generate images?
+  a_en: >-
+    No. v0 generates UI code only. For images, use Midjourney, Flux, or DALL-E. For icons, use the bundled Lucide icon library.
+- q_en: Is v0 good for design systems?
+  a_en: >-
+    Yes. You can describe your design tokens, components, and variants, and v0 generates a consistent component library that
+    matches your brand.
+- q_en: Can I edit v0 output in VS Code?
+  a_en: >-
+    Yes. Export the generated code and open it in any editor. The code is standard React/Vue + Tailwind with no proprietary
+    lock-in.
+- q_en: Who should use v0?
+  a_en: >-
+    Frontend developers who want to ship UI faster, designers who want to turn mockups into code, and full-stack devs who
+    want to skip the boilerplate.
+scoreBreakdown:
+  user: 8.4
+  capability: 7
+  price: 10
+  growth: 7
+  trust: 8

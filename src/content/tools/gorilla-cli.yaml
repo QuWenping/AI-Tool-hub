@@ -1,0 +1,24 @@
+name:
+  en: Gorilla CLI
+  zh: Gorilla CLI
+short_desc:
+  en: AI terminal assistant
+  zh: AI 终端助手
+long_desc:
+  en: Natural language command line interface
+cat: code
+url: https://github.com/gorilla-llm/gorilla-cli
+icon: fa-terminal
+scenes:
+  en:
+  - cli
+  - terminal
+  - assistant
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

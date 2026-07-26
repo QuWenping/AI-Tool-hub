@@ -1,0 +1,24 @@
+name:
+  en: Prodia
+  zh: Prodia
+short_desc:
+  en: Free AI image API
+  zh: 免费 AI 图像 API
+long_desc:
+  en: Free API for Stable Diffusion image generation
+cat: image
+url: https://prodia.com
+icon: fa-image
+scenes:
+  en:
+  - image
+  - api
+  - free
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

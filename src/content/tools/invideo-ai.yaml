@@ -1,0 +1,46 @@
+name:
+  en: Invideo AI
+  zh: Invideo AI
+short_desc:
+  en: Text prompt to full video with voiceover and subtitles
+  zh: 文字描述到完整视频（含配音和字幕）
+long_desc:
+  en: >-
+    Invideo AI turns a single prompt into a complete video with voiceover, subtitles, and stock footage.
+cat: video
+url: https://invideo.io/ai
+icon: fa-video
+scenes:
+  en:
+  - YouTube
+  - Social shorts
+  - Tutorials
+  - Marketing
+pros:
+  en:
+  - One-click video
+  - Voiceover+subtitles
+  - Full stock library
+cons:
+  en:
+  - Limited creative control
+  - Mid-high price
+target_audience:
+  en:
+  - YouTubers
+  - Marketing
+  - Creators
+use_cases:
+  en:
+  - YouTube
+  - Social
+  - Tutorials
+  - Ads
+features:
+  en:
+  - One-click
+  - AI voiceover
+  - Auto subtitles
+  - Stock library
+example:
+  en: 'Example: ''60s video about top 5 AI tools'' → full video.'

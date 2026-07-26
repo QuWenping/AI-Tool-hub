@@ -7,6 +7,7 @@
  * Replace formAction with your service URL
  */
 const { variant = "default", lang = "en" } = Astro.props;
+const isZh = lang === "zh";
 ---
 <form
   class="newsletter-form"
@@ -16,9 +17,10 @@ const { variant = "default", lang = "en" } = Astro.props;
   style={variant === "compact" ? "" : "background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 32px; max-width: 500px; margin: 24px auto;"}
 >
   {variant === "default" && (
-    <h3 data-i18n-en="Get the directory in your inbox">Get the directory in your inbox</h3>
+    <h3>{isZh ? "邮件订阅：获取最新 AI 工具动态" : "Get the directory in your inbox"}</h3>
   )}
-  <p data-i18n-en="We send a short, no-spam email every month with our top picks, hidden gems, and what is new in the AI tool world.">We send a short, no-spam email every month with our top picks, hidden gems, and what is new in the AI tool world.</p>
+  <p>{isZh ? "我们每月发送一封简短、不烦人的邮件，包含精选推荐、隐藏宝藏和 AI 工具世界的新动态。"
+    : "We send a short, no-spam email every month with our top picks, hidden gems, and what is new in the AI tool world."}</p>
 
   <div class="newsletter-form">
     <input
@@ -32,9 +34,9 @@ const { variant = "default", lang = "en" } = Astro.props;
       type="submit"
       class="cta-btn cta-primary"
       class="newsletter-btn"
-      data-i18n-en="Subscribe"
-    >Subscribe</button>
+    >{isZh ? "订阅" : "Subscribe"}</button>
   </div>
 
-  <p class="newsletter-hint" data-i18n-en="No spam. Unsubscribe anytime. We never share your email.">No spam. Unsubscribe anytime. We never share your email.</p>
+  <p class="newsletter-hint">{isZh ? "无垃圾邮件。随时退订。我们永不分享您的邮箱。"
+    : "No spam. Unsubscribe anytime. We never share your email."}</p>
 </form>

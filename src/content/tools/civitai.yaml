@@ -1,0 +1,24 @@
+name:
+  en: CivitAI
+  zh: CivitAI
+short_desc:
+  en: AI model sharing community
+  zh: AI 模型分享社区
+long_desc:
+  en: Community platform for sharing AI models and LoRA
+cat: image
+url: https://civitai.com
+icon: fa-images
+scenes:
+  en:
+  - models
+  - community
+  - lora
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

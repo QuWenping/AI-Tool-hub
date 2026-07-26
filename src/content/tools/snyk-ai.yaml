@@ -1,0 +1,24 @@
+name:
+  en: Snyk Code
+  zh: Snyk Code
+short_desc:
+  en: AI security scanning
+  zh: AI 安全扫描
+long_desc:
+  en: AI-powered vulnerability detection in code
+cat: code
+url: https://snyk.io
+icon: fa-shield
+scenes:
+  en:
+  - security
+  - vulnerabilities
+  - scan
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

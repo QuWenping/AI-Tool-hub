@@ -1,0 +1,46 @@
+name:
+  en: Sudowrite
+  zh: Sudowrite
+short_desc:
+  en: AI fiction and creative writing assistant
+  zh: AI 小说和创意写作助手
+long_desc:
+  en: >-
+    Sudowrite is designed for fiction/story writers with continuation, rewrite, character development, and plot suggestions.
+cat: text
+url: https://www.sudowrite.com
+icon: fa-book
+scenes:
+  en:
+  - Novels
+  - Stories
+  - Continuation
+  - Characters
+pros:
+  en:
+  - Built for fiction
+  - Strong continuation
+  - Character management
+cons:
+  en:
+  - English only excellent
+  - Mid-high price
+target_audience:
+  en:
+  - Novelists
+  - Screenwriters
+  - Creative writers
+use_cases:
+  en:
+  - Novels
+  - Stories
+  - Continuation
+  - Creative
+features:
+  en:
+  - Continue
+  - Rewrite
+  - Characters
+  - Plot
+example:
+  en: 'Example: Continue a mystery novel''s next chapter.'

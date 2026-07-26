@@ -1,0 +1,134 @@
+name:
+  en: Ideogram
+  zh: Ideogram
+short_desc:
+  en: AI image generator best at rendering text in images
+  zh: 在图像中渲染文字能力最强的 AI 图像生成器
+long_desc:
+  en: >-
+    Ideogram is known for accurate text rendering - posters, logos, and social cards with words that spell right.
+cat: image
+url: https://ideogram.ai
+icon: fa-font
+scenes:
+  en:
+  - Posters
+  - Logo drafts
+  - Social cards
+  - Infographics
+  zh:
+  - Logo 设计
+  - 海报制作
+  - 社交媒体图形
+  - 品牌素材
+pros:
+  en:
+  - Best text rendering
+  - Clean layout
+  - Forgiving prompts
+  zh:
+  - 文字渲染准确率遥遥领先
+  - 免费层级实用
+  - 设计风格多样
+cons:
+  en:
+  - Less artistic than MJ
+  - Limited free credits
+  - Flat style
+  zh:
+  - 纯艺术美感不如 Midjourney
+  - 照片写实不如 Flux
+  - 免费额度有限
+target_audience:
+  en:
+  - Designers
+  - Marketers
+  - Creators
+  - SMB owners
+  zh:
+  - 设计师
+  - 营销人员
+  - 创作者
+  - 中小企业主
+use_cases:
+  en:
+  - Posters
+  - Logos
+  - Social
+  - Infographics
+  zh:
+  - 海报
+  - Logo
+  - 社交媒体
+  - 信息图
+features:
+  en:
+  - Text rendering
+  - Magic Prompt
+  - Style presets
+  - Batch gen
+  zh:
+  - 文字渲染
+  - 魔法提示词
+  - 风格预设
+  - 批量生成
+example:
+  en: 'Example: Generate a poster reading ''2026 AI Tool Awards''.'
+  zh: 示例：生成一张写着「2026 AI 工具大奖」的海报。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Latest stable (2026)
+score: 8.4
+overall_score: 8.4
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+  - iOS
+  - API
+pricingSummary:
+  en: >-
+    Free tier with daily generations · Basic $8/mo, Plus $16/mo, Pro $48/mo unlock more generations, private mode, and higher
+    resolution.
+faq:
+- q_en: What is Ideogram?
+  a_en: >-
+    Ideogram is an AI image generator from a Toronto-based team of ex-Google researchers, focused on accurate text rendering
+    inside images.
+- q_en: Is Ideogram free?
+  a_en: >-
+    Yes. The free plan allows a daily quota of generations; paid plans start at $8/month.
+- q_en: Why is Ideogram good at text in images?
+  a_en: >-
+    Ideogram's architecture and training data are optimized for typographic accuracy, which is the hardest problem for most
+    diffusion models.
+- q_en: How does Ideogram compare to Midjourney?
+  a_en: >-
+    Midjourney produces more aesthetic imagery; Ideogram wins for posters, logos, mockups, and any image that contains real
+    text.
+- q_en: Does Ideogram have an API?
+  a_en: >-
+    Yes. The Ideogram API exposes image generation, inpainting, and style references for paid users.
+- q_en: What is Ideogram Canvas?
+  a_en: >-
+    Canvas is Ideogram's in-browser editor for extending, inpainting, and re-styling generated images.
+- q_en: Can I use Ideogram images commercially?
+  a_en: >-
+    Paid plans include commercial usage rights; the free plan is for personal use. Always check the latest terms on Ideogram's
+    site.
+- q_en: What aspect ratios does Ideogram support?
+  a_en: >-
+    Ideogram supports square, portrait, landscape and several print/social aspect ratios up to high resolutions on paid plans.
+- q_en: Does Ideogram support styles and references?
+  a_en: >-
+    Yes. You can upload a style or character reference to maintain visual consistency across generations.
+- q_en: Who should use Ideogram?
+  a_en: >-
+    Designers, marketers, and indie founders who need on-brand visuals with real text inside them.
+scoreBreakdown:
+  user: 8.4
+  capability: 7.4
+  price: 9
+  growth: 8
+  trust: 8

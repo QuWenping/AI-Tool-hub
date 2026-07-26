@@ -1,0 +1,112 @@
+name:
+  en: Stable Diffusion
+  zh: Stable Diffusion
+short_desc:
+  en: Open-source, free, local AI image generator
+  zh: 开源、免费、本地运行的 AI 图像生成器
+long_desc:
+  en: Stable Diffusion is the most popular open-source image model.
+cat: image
+url: https://stability.ai
+icon: fa-image
+scenes:
+  en:
+  - Private local
+  - Anime design
+  - E-com batch
+  - Arch render
+  zh:
+  - 本地图像生成
+  - 自定义模型训练
+  - 隐私敏感项目
+  - 研究和实验
+pros:
+  en:
+  - Completely free
+  - Offline
+  - Huge ecosystem
+  zh:
+  - 完全免费开源
+  - 本地运行隐私安全
+  - 丰富的社区模型和扩展
+cons:
+  en:
+  - Steep learning
+  - Needs GPU
+  - Less consistent
+  zh:
+  - 需要好显卡
+  - 入门门槛较高
+  - 出图一致性较差
+target_audience:
+  en:
+  - Indie devs
+  - Privacy users
+  - Anime fans
+  - Researchers
+  zh:
+  - 独立开发者
+  - 隐私用户
+  - 动漫爱好者
+  - 研究人员
+use_cases:
+  en:
+  - Consistent chars
+  - Local mockup
+  - Restore photos
+  - Train style
+  zh:
+  - 角色一致性
+  - 本地原型
+  - 照片修复
+  - 风格训练
+features:
+  en:
+  - Local deploy
+  - LoRA tuning
+  - ControlNet
+  - Inpaint
+  zh:
+  - 本地部署
+  - LoRA 微调
+  - ControlNet
+  - 局部重绘
+example:
+  en: 'Example: Anime character in sunflower field.'
+  zh: 示例：向日葵田野中的动漫角色。
+reviewed: true
+updatedAt: '2026-07-19'
+testedVersion: Stable Diffusion 3.5
+score: 8
+overall_score: 8
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Self-hosted
+  - Web (cloud)
+  - API
+pricingSummary:
+  en: Open source and free to self-host · Cloud hosts charge per generation.
+faq:
+- q_en: Do I need a GPU for Stable Diffusion?
+  a_en: >-
+    Yes for local runs; cloud hosts (RunDiffusion, ThinkDiffusion) work without local hardware.
+- q_en: How does SD compare with Midjourney?
+  a_en: >-
+    SD offers more control (LoRA, ControlNet, ComfyUI) but a steeper learning curve; Midjourney is easier for stylish output.
+- q_en: Is commercial use allowed?
+  a_en: Yes, subject to the Stability AI community license.
+scoreBreakdown:
+  user: 8
+  capability: 7
+  price: 10
+  growth: 7
+  trust: 8
+editorialIntro: >-
+  Stable Diffusion 3.5 is the strongest open-source image model. Pick it when you need total control, custom styles, or zero
+  per-image cost — and are comfortable with LoRAs, ControlNets and a decent GPU.
+editorialVerdict:
+  best: >-
+    You want total control, custom styles or zero per-image cost, and you can handle LoRAs, ControlNets and a decent GPU.
+  avoid: Command-line tools and GPU setup are a barrier — use Midjourney or DALL-E.

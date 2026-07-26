@@ -1,0 +1,24 @@
+name:
+  en: Polish Video AI
+  zh: Polish Video AI
+short_desc:
+  en: AI video polish
+  zh: AI 视频润色
+long_desc:
+  en: Enhance video quality with AI upscaling and denoising
+cat: video
+url: https://polish.ai
+icon: fa-video
+scenes:
+  en:
+  - video
+  - enhance
+  - upscale
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

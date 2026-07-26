@@ -1,0 +1,26 @@
+name:
+  en: Flowise
+  zh: Flowise
+short_desc:
+  en: Visual no-code AI agent builder
+  zh: 可视无代码 AI 智能体构建器
+long_desc:
+  en: >-
+    Flowise is an open-source visual platform for building AI agents and LLM workflows without coding, using a drag-and-drop
+    interface.
+cat: productivity
+url: https://flowise.ai
+icon: fa-sitemap
+scenes:
+  en:
+  - no-code
+  - visual
+  - agent-builder
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Open Source

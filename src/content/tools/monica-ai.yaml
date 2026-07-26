@@ -1,0 +1,24 @@
+name:
+  en: Monica AI
+  zh: Monica AI
+short_desc:
+  en: AI browser assistant
+  zh: AI 浏览器助手
+long_desc:
+  en: Chrome extension for AI writing, translation and search
+cat: productivity
+url: https://monica.im
+icon: fa-robot
+scenes:
+  en:
+  - browser
+  - writing
+  - translation
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

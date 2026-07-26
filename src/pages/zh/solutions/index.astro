@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import solutions from "../../../data/solutions.json";
+import taxonomy from "../../../data/industry-taxonomy.json";
+
+const featuredSlugs = [
+  "ai-for-architecture",
+  "ai-for-engineers",
+  "ai-for-construction",
+  "ai-for-small-business",
+  "ai-for-students"
+];
+const featured = featuredSlugs.map(slug => solutions.find(s => s.slug === slug)).filter(Boolean);
+const others = solutions.filter(s => !featuredSlugs.includes(s.slug));
+
+const filterTags = [
+  { slug: "all", label: "全部" },
+  { slug: "architecture", label: "建筑" },
+  { slug: "engineering", label: "工程" },
+  { slug: "construction", label: "施工" },
+  { slug: "small-business", label: "小企业" },
+  { slug: "students", label: "学生" },
+  { slug: "marketing", label: "营销" },
+  { slug: "software-development", label: "软件开发" }
+];
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/solutions/";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "首页", item: siteUrl + "/zh/" },
+    { "@type": "ListItem", position: 2, name: "解决方案", item: pageUrl }
+  ]
+};
+---
+<BaseLayout
+  title="2026 年行业 AI 解决方案：技术栈、工作流与用例"
+  description="面向建筑、工程、施工、小企业和学生等行业定制的 AI 技术栈和工作流。真实工具、真实用例、真实工作流。"
+  keywords="AI解决方案, 建筑AI, 工程AI, 施工AI, 小企业AI, 学生AI"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+  <article class="solutions-index">
+    <nav class="breadcrumbs" aria-label="面包屑导航">
+      <a href="/zh/">首页</a> &rsaquo; <span>解决方案</span>
+    </nav>
+
+    <header class="solutions-hero">
+      <span class="section-kicker">行业 AI 解决方案</span>
+      <h1>按行业划分的 AI 技术栈、工作流与用例</h1>
+      <p class="solutions-hero-summary">
+        解决方案页面为你推荐完整的 <strong>技术栈</strong> 和真实的 <strong>工作流</strong>。
+        如需工具对比排名，请查看我们的 <a href="/zh/best/">最佳 AI 工具</a> 指南。
+        不确定从哪里开始？试试 <a href="/zh/#finder">AI 技术栈构建器</a>。
+      </p>
+      <div class="solution-filter" role="tablist" aria-label="行业筛选">
+        {filterTags.map(tag => (
+          <button class="solution-filter-btn" type="button" data-filter={tag.slug} aria-pressed={tag.slug === "all" ? "true" : "false"}>{tag.label}</button>
+        ))}
+      </div>
+    </header>
+
+    <section class="solutions-featured">
+      <h2>精选行业页面</h2>
+      <div class="solutions-grid">
+        {featured.map(s => (
+          <a class="solution-card" href={`/zh/solutions/${s.slug}/`} data-tags={(s.industryTags || []).join(",")}>
+            <div class="solution-card-head">
+              <span class="solution-card-icon" aria-hidden="true"><i class={`fas ${s.icon || "fa-briefcase"}`}></i></span>
+              <span class="solution-card-industry">{s.industry}</span>
+            </div>
+            <h3>{s.title?.zh || s.title}</h3>
+            {s.description && <p>{s.description?.zh || s.description}</p>}
+            <div class="solution-card-meta">
+              <span>{(s.toolIds || s.tools || []).length} 款工具</span>
+              <span>{(s.workflows || []).length} 个工作流</span>
+              <span>{(s.faq || []).length} 条常见问题</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="solutions-list">
+      <h2>所有行业和用例</h2>
+      <div class="solutions-grid">
+        {others.map(s => (
+          <a class="solution-card compact" href={`/zh/solutions/${s.slug}/`} data-tags={(s.industryTags || []).join(",")}>
+            <div class="solution-card-head">
+              <span class="solution-card-icon" aria-hidden="true"><i class={`fas ${s.icon || "fa-briefcase"}`}></i></span>
+              <span class="solution-card-industry">{s.industry}</span>
+            </div>
+            <h3>{s.title?.zh || s.title}</h3>
+            {s.description && <p>{s.description?.zh || s.description}</p>}
+            <div class="solution-card-meta">
+              <span>{(s.toolIds || s.tools || []).length} 款工具</span>
+              <span>{(s.workflows || []).length} 个工作流</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </article>
+
+  <script is:inline>
+    (function () {
+      const buttons = document.querySelectorAll(".solution-filter-btn");
+      const cards = document.querySelectorAll(".solution-card");
+      if (!buttons.length || !cards.length) return;
+      function apply(filter) {
+        cards.forEach(card => {
+          const tags = (card.getAttribute("data-tags") || "").split(",").filter(Boolean);
+          card.hidden = !(filter === "all" || tags.includes(filter));
+        });
+        buttons.forEach(btn => {
+          btn.setAttribute("aria-pressed", String(btn.dataset.filter === filter));
+        });
+      }
+      buttons.forEach(btn => {
+        btn.addEventListener("click", () => apply(btn.dataset.filter));
+      });
+    })();
+  </script>
+</BaseLayout>

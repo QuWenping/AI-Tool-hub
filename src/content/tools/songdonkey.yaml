@@ -1,0 +1,24 @@
+name:
+  en: SongDonkey
+  zh: SongDonkey
+short_desc:
+  en: AI music stems splitter
+  zh: AI 音乐分轨工具
+long_desc:
+  en: Split songs into vocals, drums, bass with AI
+cat: audio
+url: https://songdonkey.ai
+icon: fa-music
+scenes:
+  en:
+  - music
+  - stems
+  - split
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

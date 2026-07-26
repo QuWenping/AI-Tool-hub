@@ -1,0 +1,24 @@
+name:
+  en: Kits AI
+  zh: Kits AI
+short_desc:
+  en: AI voice cloning toolkit
+  zh: AI 声音克隆工具集
+long_desc:
+  en: Clone voices for music production
+cat: audio
+url: https://kits.ai
+icon: fa-microphone
+scenes:
+  en:
+  - voice-clone
+  - music
+  - production
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

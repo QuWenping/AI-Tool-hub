@@ -1,0 +1,127 @@
+name:
+  en: Aider
+  zh: Aider
+short_desc:
+  en: CLI AI coding assistant, Git-native
+  zh: 命令行 AI 编程助手，Git 原生
+long_desc:
+  en: >-
+    Aider edits code with AI in the terminal, auto-commits to Git, supports multiple models.
+cat: code
+url: https://aider.chat
+icon: fa-terminal
+scenes:
+  en:
+  - Terminal coding
+  - Auto Git commits
+  - Multi-model
+  zh:
+  - 终端编程
+  - Git 集成开发
+  - 代码审查
+  - 自动化重构
+pros:
+  en:
+  - Open source free
+  - Git-native
+  - BYO any model
+  zh:
+  - Git 原生每次修改可追溯
+  - 纯命令行可脚本化
+  - 开源免费
+cons:
+  en:
+  - CLI only no GUI
+  - Manual model config
+  zh:
+  - 无 GUI 学习曲线陡
+  - 需要自行管理 API 费用
+target_audience:
+  en:
+  - Devs
+  - Terminal users
+  - OSS fans
+  zh:
+  - 开发者
+  - 终端用户
+  - 开源爱好者
+use_cases:
+  en:
+  - Quick edits
+  - Git workflow
+  - Batch refactor
+  zh:
+  - 快速编辑
+  - Git 工作流
+  - 批量重构
+features:
+  en:
+  - Auto Git commit
+  - Multi-model
+  - CLI-native
+  - Open source
+  zh:
+  - 自动 Git 提交
+  - 多模型
+  - 命令行原生
+  - 开源
+example:
+  en: 'Example: aider --msg ''add error handling to main.py'''
+  zh: 示例：aider --msg '为 main.py 添加错误处理'
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Latest stable (2026)
+score: 8.0
+overall_score: 8.0
+quickFacts:
+  freeTier: true
+  hasApi: false
+  platforms:
+  - CLI
+  - Self-hosted
+pricingSummary:
+  en: >-
+    Open source under Apache 2.0. Pay only the underlying LLM API (DeepSeek, OpenAI, Anthropic, etc.); free if you use a local
+    model.
+faq:
+- q_en: What is Aider?
+  a_en: >-
+    Aider is an open-source AI pair-programming tool that runs in your terminal. It edits files in your repo and auto-commits
+    each change to Git.
+- q_en: Is Aider free?
+  a_en: >-
+    Yes. Aider itself is free and open source (Apache 2.0). You only pay for the LLM API you point it at, or run it free with
+    a local model.
+- q_en: Which models does Aider support?
+  a_en: >-
+    Aider works with most frontier LLMs through API keys or local servers: DeepSeek, Claude, GPT, Gemini, Llama, Qwen, and
+    Ollama-served models.
+- q_en: How is Aider different from Cursor or Windsurf?
+  a_en: >-
+    Aider is purely a command-line tool with no GUI; it integrates with any editor via your terminal. Cursor and Windsurf
+    are full IDEs with graphical UIs.
+- q_en: Does Aider create Git commits?
+  a_en: >-
+    Yes. Every accepted change is committed with a descriptive message you can review with /undo.
+- q_en: What languages does Aider work with?
+  a_en: >-
+    Aider handles Python, JavaScript, TypeScript, Go, Rust, Java, C/C++, Ruby, PHP and most other popular languages. It uses
+    tree-sitter to map edits to existing code structure.
+- q_en: Can Aider work on a whole repository?
+  a_en: >-
+    Yes. Aider builds a repo map of your codebase so the model can reason across files, useful for multi-file refactors.
+- q_en: Does Aider need a code editor extension?
+  a_en: >-
+    No. Aider runs in a terminal and works alongside any editor (VS Code, Neovim, JetBrains, etc.) as a side process.
+- q_en: How does Aider handle voice?
+  a_en: >-
+    Voice is not built in. You can pipe any system voice-to-text tool (Whisper, Mac Dictation) into Aider's input.
+- q_en: Who should use Aider?
+  a_en: >-
+    Terminal-native developers who want fine-grained control, prefer open source, and already use Git heavily.
+scoreBreakdown:
+  user: 8.0
+  capability: 7.0
+  price: 9
+  growth: 8
+  trust: 8

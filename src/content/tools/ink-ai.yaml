@@ -1,0 +1,24 @@
+name:
+  en: INK AI
+  zh: INK AI
+short_desc:
+  en: AI SEO writing
+  zh: AI SEO 写作
+long_desc:
+  en: AI writing with SEO scoring and optimization
+cat: text
+url: https://inkforall.com
+icon: fa-pen
+scenes:
+  en:
+  - seo
+  - writing
+  - optimization
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

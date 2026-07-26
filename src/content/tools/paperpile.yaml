@@ -1,0 +1,24 @@
+name:
+  en: Paperpile
+  zh: Paperpile
+short_desc:
+  en: AI reference manager
+  zh: AI 参考文献管理
+long_desc:
+  en: AI-enhanced reference management for researchers
+cat: research
+url: https://paperpile.com
+icon: fa-book
+scenes:
+  en:
+  - references
+  - management
+  - academic
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

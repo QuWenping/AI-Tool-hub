@@ -1,0 +1,24 @@
+name:
+  en: tl;dv
+  zh: tl;dv
+short_desc:
+  en: AI meeting recorder
+  zh: AI 会议录像
+long_desc:
+  en: Auto record, transcribe and summarize meetings
+cat: productivity
+url: https://tldv.io
+icon: fa-video
+scenes:
+  en:
+  - meeting
+  - transcription
+  - summary
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

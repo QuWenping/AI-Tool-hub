@@ -1,0 +1,24 @@
+name:
+  en: Bear AI
+  zh: Bear AI
+short_desc:
+  en: AI markdown notes
+  zh: AI Markdown 笔记
+long_desc:
+  en: Markdown notes with AI assistance
+cat: productivity
+url: https://bear.app
+icon: fa-paw
+scenes:
+  en:
+  - notes
+  - markdown
+  - ai
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

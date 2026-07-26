@@ -1,0 +1,24 @@
+name:
+  en: Dramatron
+  zh: Dramatron
+short_desc:
+  en: AI screenwriting assistant
+  zh: AI 编剧助手
+long_desc:
+  en: AI co-writer for screenplays and video scripts
+cat: video
+url: https://dramatron.com
+icon: fa-film
+scenes:
+  en:
+  - script
+  - screenplay
+  - writing
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

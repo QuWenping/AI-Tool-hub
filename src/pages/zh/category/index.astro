@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import categories from "../../../data/categories.json";
+import toolsData from "../../../data/tools.json";
+const siteUrl = "https://thebestaitoolsreview.com";
+const breadcrumb = {
+  "@context": "https://schema.org", "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "首页", "item": siteUrl + "/zh/" },
+    { "@type": "ListItem", "position": 2, "name": "分类", "item": siteUrl + "/zh/category/" }
+  ]
+};
+---
+<BaseLayout title="AI 工具分类 — 浏览所有分类" description="浏览所有 AI 工具分类。写作、编程、图像、视频、音频、效率等。找到适合你需求的工具。" keywords="AI工具分类, AI工具目录, 浏览AI工具">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="page-container">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <span>分类</span></nav>
+    <h1 class="page-title">AI 工具分类</h1>
+    <p class="page-lede">{categories.length} 个分类，涵盖 {Object.keys(toolsData).length} 款 AI 工具。按分类浏览，或查看我们的 <a href="/zh/best/students/">推荐排名</a>。</p>
+
+    <div class="card-grid">
+      {categories.map(cat => {
+        const count = cat.tools.filter(id => toolsData[id]).length;
+        const cleanTitle = cat.title_zh.replace(/^Best\s+/i, "").replace(/\s+in\s+2026$/i, "");
+        return (
+          <a class="list-card" href={`/zh/category/${cat.slug}/`}>
+            <div class="card-head">
+              <h3>{cleanTitle}</h3>
+              <span class="tool-pill">{count} 款工具</span>
+            </div>
+            <p class="card-desc">{cat.desc_zh}</p>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</BaseLayout>

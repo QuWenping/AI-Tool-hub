@@ -1,0 +1,24 @@
+name:
+  en: Sora Pro
+  zh: Sora Pro
+short_desc:
+  en: OpenAI video generation pro
+  zh: OpenAI 专业视频生成
+long_desc:
+  en: OpenAI advanced video generation model
+cat: video
+url: https://sora.com
+icon: fa-film
+scenes:
+  en:
+  - video
+  - generation
+  - cinematic
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

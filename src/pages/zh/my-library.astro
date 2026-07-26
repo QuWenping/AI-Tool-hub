@@ -1,0 +1,185 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import toolsData from "../../data/tools.json";
+
+const pageLang = "zh";
+const pageTitle = "我的收藏";
+
+// Build lookup map for client-side rendering
+const toolsLookup: Record<string, { name_en: string; name_zh: string; desc_en: string; desc_zh: string; cat: string; icon: string }> = {};
+for (const [id, tool] of Object.entries(toolsData) as [string, any][]) {
+  if (id === "codewords" || tool?.hidden) continue;
+  toolsLookup[id] = {
+    name_en: tool?.name?.en || id,
+    name_zh: tool?.name?.zh || tool?.name?.en || id,
+    desc_en: tool?.short_desc?.en || "",
+    desc_zh: tool?.short_desc?.zh || tool?.short_desc?.en || "",
+    cat: tool?.cat || "productivity",
+    icon: tool?.icon || "fa-robot",
+  };
+}
+---
+
+<BaseLayout
+  title={pageTitle}
+  description="你收藏的 AI 工具列表。随时管理你的收藏夹。"
+  lang={pageLang}
+>
+  <div class="my-library-page">
+    <header class="library-header">
+      <h1>{pageTitle}</h1>
+      <p class="library-sub">你收藏的 AI 工具。在这里快速访问和管理。</p>
+    </header>
+
+    <div id="library-root">
+      <div class="library-loading">加载中...</div>
+    </div>
+
+    <template id="library-empty-tpl">
+      <div class="library-empty">
+        <i class="far fa-bookmark" aria-hidden="true"></i>
+        <h2>还没有收藏任何工具</h2>
+        <p>浏览工具并在详情页点击"收藏"按钮即可将它们添加到这里。</p>
+        <a class="cta-primary" href="/zh/">浏览工具</a>
+      </div>
+    </template>
+
+    <template id="library-card-tpl">
+      <div class="library-tool-card">
+        <div class="card-icon"><i></i></div>
+        <div class="card-body">
+          <h3><a class="card-link" href=""></a></h3>
+          <p class="card-desc"></p>
+          <div class="card-meta">
+            <span class="card-cat"></span>
+          </div>
+        </div>
+        <button class="library-remove-btn" title="移除" aria-label="从收藏中移除">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </template>
+  </div>
+</BaseLayout>
+
+<script define:vars={{ toolsLookup }}>
+  const TOOLS = toolsLookup;
+  const LANG = "zh";
+  const KEY = "ai-tool-hub-library";
+
+  const CAT_LABELS: Record<string, string> = {
+    text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "效率"
+  };
+
+  function getSaved(): string[] {
+    try { return JSON.parse(localStorage.getItem(KEY) || "[]"); } catch { return []; }
+  }
+  function setSaved(arr: string[]) { localStorage.setItem(KEY, JSON.stringify(arr)); }
+
+  function render() {
+    const root = document.getElementById("library-root")!;
+    const ids = getSaved();
+    const validIds = ids.filter(id => id in TOOLS);
+
+    if (validIds.length === 0) {
+      const tpl = document.getElementById("library-empty-tpl") as HTMLTemplateElement;
+      root.innerHTML = "";
+      root.appendChild(tpl.content.cloneNode(true));
+      return;
+    }
+
+    const countEl = document.createElement("div");
+    countEl.className = "library-count";
+    countEl.innerHTML = `<i class="fas fa-bookmark"></i> <span>共 <strong>${validIds.length}</strong> 个收藏</span>`;
+    root.innerHTML = "";
+    root.appendChild(countEl);
+
+    const grid = document.createElement("div");
+    grid.className = "library-grid";
+    const cardTpl = document.getElementById("library-card-tpl") as HTMLTemplateElement;
+
+    validIds.forEach(id => {
+      const tool = TOOLS[id];
+      const clone = cardTpl.content.cloneNode(true) as HTMLElement;
+
+      const icon = clone.querySelector(".card-icon i")!;
+      icon.className = `fas ${tool.icon}`;
+
+      const link = clone.querySelector(".card-link") as HTMLAnchorElement;
+      link.href = `/zh/tool/${id}/`;
+      link.textContent = tool.name_zh;
+
+      const desc = clone.querySelector(".card-desc")!;
+      desc.textContent = tool.desc_zh;
+
+      const catSpan = clone.querySelector(".card-cat")!;
+      catSpan.textContent = CAT_LABELS[tool.cat] || tool.cat;
+
+      const removeBtn = clone.querySelector(".library-remove-btn")!;
+      removeBtn.addEventListener("click", () => {
+        const current = getSaved().filter(sid => sid !== id);
+        setSaved(current);
+        document.dispatchEvent(new CustomEvent("library-updated", { detail: { count: current.length } }));
+        render();
+      });
+
+      grid.appendChild(clone);
+    });
+
+    root.appendChild(grid);
+  }
+
+  document.addEventListener("library-updated", () => render());
+  render();
+</script>
+
+<style>
+  .my-library-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+  .library-header { margin-bottom: 32px; }
+  .library-header h1 { font-size: 28px; margin-bottom: 8px; }
+  .library-sub { color: var(--text-secondary); font-size: 15px; }
+  .library-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+  }
+  .library-tool-card {
+    display: flex; align-items: flex-start; gap: 14px;
+    padding: 18px; background: var(--bg-card, #f8f9fb);
+    border: 1px solid var(--border, #e2e5ea); border-radius: 10px;
+    transition: border-color 0.2s; position: relative;
+  }
+  .library-tool-card:hover { border-color: var(--brand, #3b82f6); }
+  .card-icon {
+    width: 44px; height: 44px;
+    background: var(--bg, #fff); border: 1px solid var(--border, #e2e5ea);
+    border-radius: 10px; display: flex; align-items: center; justify-content: center;
+    font-size: 20px; color: var(--brand, #3b82f6); flex-shrink: 0;
+  }
+  .card-body { flex: 1; min-width: 0; }
+  .card-body h3 { font-size: 16px; margin: 0 0 6px; line-height: 1.3; }
+  .card-link { color: inherit; text-decoration: none; }
+  .card-link:hover { color: var(--brand, #3b82f6); }
+  .card-desc {
+    font-size: 13px; color: var(--text-secondary, #6b7280); margin: 0 0 10px;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .card-meta { display: flex; align-items: center; gap: 8px; }
+  .card-cat {
+    font-size: 12px; font-weight: 600; color: var(--brand, #3b82f6);
+    background: rgba(59,130,246,0.08); padding: 2px 10px; border-radius: 99px;
+  }
+  .library-remove-btn {
+    position: absolute; top: 10px; right: 10px;
+    width: 28px; height: 28px; border: none; background: transparent;
+    color: var(--text-secondary, #9ca3af); border-radius: 6px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; font-size: 14px;
+    transition: all 0.15s;
+  }
+  .library-remove-btn:hover { background: #fef2f2; color: #ef4444; }
+  .library-loading { text-align: center; padding: 60px 0; color: var(--text-secondary); }
+</style>

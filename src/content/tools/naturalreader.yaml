@@ -1,0 +1,24 @@
+name:
+  en: NaturalReader
+  zh: NaturalReader
+short_desc:
+  en: AI text to speech
+  zh: AI 文本转语音
+long_desc:
+  en: Natural-sounding TTS for reading and accessibility
+cat: audio
+url: https://naturalreader.com
+icon: fa-book
+scenes:
+  en:
+  - tts
+  - reading
+  - accessibility
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

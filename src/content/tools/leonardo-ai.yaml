@@ -1,0 +1,24 @@
+name:
+  en: Leonardo AI
+  zh: Leonardo AI
+short_desc:
+  en: AI art and image generation
+  zh: AI 艺术和图像生成
+long_desc:
+  en: AI art platform with multiple models and custom training
+cat: image
+url: https://leonardo.ai
+icon: fa-paint-brush
+scenes:
+  en:
+  - art
+  - game-assets
+  - design
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import tools from "../../../data/tools.json";
+
+const pageLang = "zh";
+const seoTitle = "2026 年最佳 AI Agent - 智能 AI 助手排行";
+const seoDesc = "对比 2026 年最佳 AI Agent：Claude、ChatGPT、Cursor、Perplexity 等。实测评分，帮您找到最合适的智能助手。";
+---
+
+<BaseLayout
+  title={seoTitle}
+  description={seoDesc}
+  lang={pageLang}
+>
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <span>最佳 AI Agent</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">深度对比</span>
+      <h1>2026 年最佳 AI Agent</h1>
+      <p class="lede">AI Agent 已从聊天机器人进化为能自主执行多步骤任务的智能助手。我们实测了当前最优秀的 AI Agent，从推理能力、工具调用、代码生成、多模态等维度进行评分。以下是我们的推荐。</p>
+    </header>
+
+    <section>
+      <h2>为什么选择 AI Agent？</h2>
+      <p>与传统的聊天机器人不同，AI Agent 能够：</p>
+      <ul>
+        <li><strong>自主执行任务</strong> - 分解复杂目标为子任务，逐步完成</li>
+        <li><strong>使用工具</strong> - 调用 API、读写文件、搜索网络、执行代码</li>
+        <li><strong>多步推理</strong> - 在做出决策前进行多步推理和验证</li>
+        <li><strong>记忆与上下文</strong> - 保持长期对话记忆，跨会话持久化上下文</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>我们的评选标准</h2>
+      <p>我们根据以下维度评测每个 AI Agent（满分 10 分）：</p>
+      <ul>
+        <li><strong>推理能力（30%）</strong> - 逻辑推理、数学、代码生成能力</li>
+        <li><strong>工具调用（25%）</strong> - 函数调用、API 集成、外部工具使用</li>
+        <li><strong>多模态（15%）</strong> - 视觉理解、图像生成、音频处理</li>
+        <li><strong>上下文窗口（15%）</strong> - 最大上下文长度和长文档理解</li>
+        <li><strong>性价比（15%）</strong> - 每百万 token 成本和免费额度</li>
+      </ul>
+      <p>每个 Agent 至少经过 2 周的实际使用测试。评测方法和编辑独立性详见<a href="/zh/methodology/">评测方法论</a>。</p>
+    </section>
+
+    <section>
+      <h2>2026 年最佳 AI Agent 排名</h2>
+      <p>排名基于综合评分。如需查看完整详细评测，请访问各工具的独立评测页面。</p>
+      <p style="margin-top:24px;">浏览我们的<a href="/zh/category/"> AI 工具分类</a>页面查看全部工具，或查看<a href="/zh/tool/">单个工具评测</a>。</p>
+    </section>
+
+    <section>
+      <h2>如何选择适合您的 AI Agent</h2>
+      <h3>开发者</h3>
+      <p>优先考虑代码生成能力强、支持终端工具调用的 Agent。Claude（通过 Cursor 集成）和 Cursor 自身是开发者的首选。</p>
+      <h3>内容创作者</h3>
+      <p>选择多模态能力强、创意写作水平高的 Agent。ChatGPT 和 Claude 都是优秀选择，ChatGPT 在多模态方面更有优势。</p>
+      <h3>研究人员</h3>
+      <p>需要超长上下文窗口和深度推理能力。Gemini 的 200 万 token 上下文和 Claude 的长文档理解能力非常适合。</p>
+      <h3>企业用户</h3>
+      <p>考虑数据隐私、团队协作和 API 集成。Claude Team Plan 和 ChatGPT Team 都提供企业级安全保障。</p>
+    </section>
+  </article>
+</BaseLayout>

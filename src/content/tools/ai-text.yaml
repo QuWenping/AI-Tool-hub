@@ -1,0 +1,24 @@
+name:
+  en: AI Text
+  zh: AI Text
+short_desc:
+  en: AI text generator
+  zh: AI 文本生成器
+long_desc:
+  en: Free AI text generation for various use cases
+cat: text
+url: https://aitext.com
+icon: fa-pen
+scenes:
+  en:
+  - text
+  - free
+  - generation
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

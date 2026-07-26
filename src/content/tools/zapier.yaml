@@ -1,0 +1,24 @@
+name:
+  en: Zapier
+  zh: Zapier
+short_desc:
+  en: AI automation platform
+  zh: AI 自动化平台
+long_desc:
+  en: Connect 6000+ apps with AI workflow generation
+cat: productivity
+url: https://zapier.com
+icon: fa-bolt
+scenes:
+  en:
+  - automation
+  - integration
+  - workflow
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

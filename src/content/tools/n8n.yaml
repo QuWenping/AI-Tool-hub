@@ -1,0 +1,47 @@
+name:
+  en: n8n
+  zh: n8n
+short_desc:
+  en: Open-source workflow automation platform
+  zh: 开源工作流自动化平台
+long_desc:
+  en: >-
+    n8n is a visual workflow automation tool with 400+ integrations, self-hostable, and native AI agent support.
+cat: productivity
+url: https://n8n.io
+icon: fa-diagram-project
+scenes:
+  en:
+  - Workflow automation
+  - AI Agent
+  - Data sync
+  - API integration
+pros:
+  en:
+  - Open source free
+  - 400+ integrations
+  - Self-hostable
+  - AI native
+cons:
+  en:
+  - Complex workflows hard
+  - Needs tech background
+target_audience:
+  en:
+  - Devs
+  - Operations
+  - Tech teams
+use_cases:
+  en:
+  - Automation
+  - Data sync
+  - AI Agent
+  - API
+features:
+  en:
+  - Visual workflow
+  - 400+ integrations
+  - Self-host
+  - AI Agent
+example:
+  en: 'Example: Auto-fetch RSS → AI summarize → post to Slack.'

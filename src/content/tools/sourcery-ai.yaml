@@ -1,0 +1,24 @@
+name:
+  en: Sourcery
+  zh: Sourcery
+short_desc:
+  en: AI code refactoring
+  zh: AI 代码重构
+long_desc:
+  en: Automatic code refactoring suggestions for Python
+cat: code
+url: https://sourcery.ai
+icon: fa-code
+scenes:
+  en:
+  - refactor
+  - python
+  - quality
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

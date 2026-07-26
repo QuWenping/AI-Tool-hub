@@ -1,0 +1,130 @@
+name:
+  en: Canva AI
+  zh: Canva AI
+short_desc:
+  en: AI design assistant built into Canva
+  zh: 内置于 Canva 的 AI 设计助手
+long_desc:
+  en: >-
+    Canva AI lets non-designers generate designs, edit photos, and write copy from text descriptions, all-in-one.
+cat: image
+url: https://www.canva.com
+icon: fa-palette
+scenes:
+  en:
+  - Social graphics
+  - Presentations
+  - Posters
+  - Photo edit
+  zh:
+  - 平面设计
+  - 社交媒体素材
+  - 演示文稿
+  - 营销物料
+pros:
+  en:
+  - Zero learning curve
+  - Rich templates
+  - All-in-one
+  zh:
+  - Canva 生态无缝集成
+  - AI 功能齐全
+  - 免费版慷慨
+cons:
+  en:
+  - Templated AI output
+  - Advanced paid
+  zh:
+  - AI 图像质量不如专业工具
+  - 高级功能需 Pro 版
+target_audience:
+  en:
+  - Non-designers
+  - Marketers
+  - SMBs
+  zh:
+  - 非设计师
+  - 营销人员
+  - 中小企业
+use_cases:
+  en:
+  - Social
+  - Posters
+  - Presentations
+  - Photo edit
+  zh:
+  - 社交媒体
+  - 海报
+  - 演示文稿
+  - 图片编辑
+features:
+  en:
+  - AI design
+  - Templates
+  - Photo edit
+  - Copy
+  zh:
+  - AI 设计
+  - 模板
+  - 图片编辑
+  - 文案
+example:
+  en: 'Example: ''design a Spring Festival promo poster'' → editable design.'
+  zh: 示例：'设计一张春节促销海报' → 可编辑设计。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Latest stable (2026)
+score: 8.2
+overall_score: 8.2
+quickFacts:
+  freeTier: true
+  hasApi: false
+  platforms:
+  - Web
+  - iOS
+  - Android
+  - Desktop
+pricingSummary:
+  en: >-
+    Free tier with Magic Studio basics · Pro $13/mo, Teams $30/mo (5 seats) unlock Magic Studio, Brand Kit, background remover,
+    and full template library.
+faq:
+- q_en: What is Canva AI?
+  a_en: >-
+    Canva AI is the AI feature set inside Canva (Magic Write, Magic Design, Magic Edit, Magic Animate) that helps non-designers
+    create on-brand visuals.
+- q_en: Is Canva free?
+  a_en: >-
+    Yes. The free plan is generous; Pro ($13/mo) unlocks Magic Studio and the full template library.
+- q_en: Do I need design skills to use Canva AI?
+  a_en: >-
+    No. Canva is built for non-designers; Magic Design can produce a complete layout from a text prompt or a single image.
+- q_en: How good is Canva AI at generating images?
+  a_en: >-
+    Canva's image generation is convenient and on-brand but not state-of-the-art; for hero art, designers still prefer Midjourney
+    or Flux Pro.
+- q_en: Does Canva AI support brand consistency?
+  a_en: >-
+    Yes. Brand Kit (Pro and above) lets Magic Studio pull colors, fonts, and logos so every generated asset stays on-brand.
+- q_en: Can I use Canva AI to make presentations?
+  a_en: >-
+    Yes. Magic Design for Presentations generates full decks from a topic or document; teams can also use AI to summarise
+    existing slides.
+- q_en: Does Canva have an API?
+  a_en: >-
+    Canva exposes a Connect API for assets, exports, and design automation; full AI features are not yet available via API.
+- q_en: Can Canva AI remove backgrounds?
+  a_en: >-
+    Yes. The background remover is one of the most popular tools, included on Pro plans and above.
+- q_en: Is Canva suitable for print?
+  a_en: >-
+    Yes. Pro unlocks CMYK export and high-resolution PNG/PDF suitable for print, including business cards, posters, and merch.
+- q_en: Who should use Canva AI?
+  a_en: >-
+    Small business owners, marketers, teachers, and anyone who needs polished visuals without learning Photoshop.
+scoreBreakdown:
+  user: 8.2
+  capability: 7.199999999999999
+  price: 9
+  growth: 8
+  trust: 8

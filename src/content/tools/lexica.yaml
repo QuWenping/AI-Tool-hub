@@ -1,0 +1,24 @@
+name:
+  en: Lexica
+  zh: Lexica
+short_desc:
+  en: AI image search and generation
+  zh: AI 图像搜索和生成
+long_desc:
+  en: Search AI-generated images and generate with Stable Diffusion
+cat: image
+url: https://lexica.art
+icon: fa-search
+scenes:
+  en:
+  - search
+  - generation
+  - stable-diffusion
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

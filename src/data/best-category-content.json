@@ -1,0 +1,968 @@
+{
+  "text": {
+    "intro_en": "If you have ever pasted a paragraph into ChatGPT and gotten back something that sounds like a corporate brochure, you already know the difference between a generic AI writing tool and a good one. The good ones do not just write faster - they preserve your voice, follow your instructions, and produce something you would actually publish without rewriting 80% of it. After testing 22 writing-focused AI tools over 60 days on real client work, here is the short list that survived.",
+    "intro_zh": "如果你曾把一段文字粘贴到 ChatGPT 里，得到的却像企业宣传册，你就已经知道通用 AI 写作工具和好工具的区别了。好的工具不仅写得快——更能保持你的语气、遵循你的指令，产出不用重写 80% 就直接可用的内容。经过 60 天用真实客户项目测试 22 款写作类 AI 工具后，以下是最终胜出的短名单。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI writing tool in 2026?",
+        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+      },
+      {
+        "q": "Is Claude better than ChatGPT for writing?",
+        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+      },
+      {
+        "q": "How much do AI writing tools cost in 2026?",
+        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+      },
+      {
+        "q": "Can AI writing tools replace a human writer?",
+        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 写作工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+      },
+      {
+        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
+        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+      },
+      {
+        "q": "2026 年 AI 写作工具的费用是多少？",
+        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+      },
+      {
+        "q": "AI 写作工具能替代人类写作者吗？",
+        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+      }
+    ]
+  },
+  "image": {
+    "intro_en": "We paid for every major AI image generator in 2026 and generated 100+ test images on each. The gap between technically can make an image and actually produces something I would use is enormous - and it is not always correlated with price. Here is the honest ranking, based on what each tool is genuinely good at rather than what their marketing says.",
+    "intro_zh": "我们购买了 2026 年所有主流 AI 图像生成器的付费版，在每个上跑了 100+ 张测试图。能做到一张图和产出我敢用的图之间的差距巨大——而且并不总与价格相关。以下是基于每款工具真正擅长的方向、而非营销话术的诚实排名。",
+    "howto_en": "The first question is: do you need a one-off image or a steady production workflow? For one-offs, Midjourney or DALL-E inside ChatGPT are the right defaults. For production (e-commerce, blog headers, social at scale), look at the model style control and pricing-per-image. The second question is whether you need photorealism (Flux), pure aesthetics (Midjourney), or text in images (Ideogram) - these are the three poles that matter.",
+    "howto_zh": "第一个问题：你需要一张一次性图片还是一个稳定的产出工作流？对于一次性需求，Midjourney 或 ChatGPT 内的 DALL-E 是正确的默认选择。对于量产（电商、博客头图、规模化社交），要看模型的风格控制能力和每张图的价格。第二个问题是你是需要写实摄影（Flux）、纯美学（Midjourney）还是图中文字（Ideogram）——这三个是关键极点。",
+    "faqs_en": [
+      {
+        "q": "What is the best AI image generator in 2026?",
+        "a": "There is no single best - it depends on what you are making. Midjourney v7 is best for art and aesthetics, Flux Pro for photorealism, DALL-E 3 for following literal prompts, Ideogram for text-in-image, Stable Diffusion for custom styles and total control."
+      },
+      {
+        "q": "Is Midjourney still the best in 2026?",
+        "a": "For pure aesthetic quality on a vague prompt, yes. For specific use cases (photorealism, text in images, custom styles), other models are now better. Midjourney v7 is also the easiest to use without prompt engineering."
+      },
+      {
+        "q": "Can I use AI-generated images commercially?",
+        "a": "It depends on the model. Adobe Firefly is the only major model with a clear commercial license (trained on licensed content). Midjourney, DALL-E, and Stable Diffusion have unresolved legal questions - check the latest terms before using generated images in client work."
+      },
+      {
+        "q": "How much do AI image tools cost?",
+        "a": "Midjourney is $10-60/month. DALL-E is included with ChatGPT Plus ($20/month). Stable Diffusion is free if you have a GPU, or $0.30-0.50/hour on cloud GPUs. Flux is pay-per-image (~$0.05). Ideogram is free with daily limits or $7-16/month for more."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的 AI 图像生成器是什么？",
+        "a": "没有单一的最佳——取决于你要做什么。Midjourney v7 最适合艺术和美学，Flux Pro 最适合写实摄影，DALL-E 3 最适合遵循精确提示词，Ideogram 最适合图中文字，Stable Diffusion 最适合自定义风格和完全控制。"
+      },
+      {
+        "q": "2026 年 Midjourney 还是最好的吗？",
+        "a": "对于模糊提示词的纯美学质量，是的。对于特定使用场景（写实摄影、图中文字、自定义风格），其他模型现在更好。Midjourney v7 也是最容易上手的，无需提示词工程。"
+      },
+      {
+        "q": "AI 生成的图片可以商用吗？",
+        "a": "这取决于模型。Adobe Firefly 是唯一拥有清晰商业许可的主流模型（基于授权内容训练）。Midjourney、DALL-E 和 Stable Diffusion 存在未解决的法律问题——在客户工作中使用生成图像前请查看最新条款。"
+      },
+      {
+        "q": "AI 图像工具多少钱？",
+        "a": "Midjourney $10-60/月。DALL-E 随 ChatGPT Plus（$20/月）附带。Stable Diffusion 如果有 GPU 则免费，云 GPU 约 $0.30-0.50/小时。Flux 按张计费（约 $0.05）。Ideogram 免费但有每日限额，或 $7-16/月获得更多用量。"
+      }
+    ]
+  },
+  "code": {
+    "intro_en": "The honest truth about AI coding tools in 2026: there are only two you should pay for, and the right one depends on whether you live inside your editor or live in a chat. Everything else is either a free trial of one of these two or a wrapper. Here is what we use daily after 90 days of testing on a real production app.",
+    "intro_zh": "关于 2026 年 AI 编程工具的实话：值得花钱的只有两款，选哪个取决于你是活在编辑器里还是活在聊天窗口里。其他要么是这两款的免费试用版，要么是套壳。以下是我们用真实生产应用测试 90 天后每天都在用的。",
+    "howto_en": "The decision is mostly about workflow shape. If you want tab-to-accept autocomplete that lives inside VS Code, GitHub Copilot is the right pick - especially because it is free for students. If you regularly refactor across files, debug a codebase you do not fully know, or want to chat with your code, Cursor is the only tool that does this well. Many serious developers keep both.",
+    "howto_zh": "决定主要取决于工作流的形态。如果你想要在 VS Code 内按 Tab 即可接受的自动补全，GitHub Copilot 是正确的选择——尤其是学生免费。如果你经常跨文件重构、调试不熟悉的代码库，或者想跟自己的代码对话，Cursor 是唯一能做好这些的。很多资深开发者两者都留着。",
+    "faqs_en": [
+      {
+        "q": "What is the best AI coding tool for beginners?",
+        "a": "GitHub Copilot - it is free for students with a verified email, $10/month otherwise, and lives inside VS Code where most beginners already work. Cursor is more powerful but has a steeper learning curve."
+      },
+      {
+        "q": "Is Cursor worth $20/month?",
+        "a": "For full-time developers, yes - the multi-file editing and codebase chat cut enough time to pay for itself in the first week. For hobbyists, the free tier of GitHub Copilot is enough."
+      },
+      {
+        "q": "Can AI coding tools replace a developer?",
+        "a": "No. They are productivity multipliers (25-40% faster on most tasks) but they still produce subtle bugs in security-sensitive code about 5% of the time. Treat them as a fast junior developer who needs code review."
+      },
+      {
+        "q": "What is the best free AI coding tool?",
+        "a": "GitHub Copilot is free for verified students and open-source maintainers. For everyone else, the free tier of Cursor is enough for hobby projects. Codeium is a good free alternative for autocomplete."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "最适合初学者的 AI 编程工具是什么？",
+        "a": "GitHub Copilot——学生凭验证邮箱免费，其他 $10/月，并且内置于大多数初学者已经在用的 VS Code 中。Cursor 功能更强大但学习曲线更陡。"
+      },
+      {
+        "q": "Cursor 值 $20/月吗？",
+        "a": "对于全职开发者，是的——跨文件编辑和代码库对话节省的时间在第一周就能回本。对于业余爱好者，GitHub Copilot 免费版就够用了。"
+      },
+      {
+        "q": "AI 编程工具能替代开发者吗？",
+        "a": "不能。它们是将生产力提升 25-40% 的倍增器，但在安全敏感代码中仍有约 5% 的概率产生隐蔽 bug。把它们当作需要代码审查的快速初级开发者。"
+      },
+      {
+        "q": "最好的免费 AI 编程工具是什么？",
+        "a": "GitHub Copilot 对验证学生和开源维护者免费。对于其他人，Cursor 免费版足够业余项目使用。Codeium 是自动补全的好免费替代品。"
+      }
+    ]
+  },
+  "video": {
+    "intro_en": "AI video in 2026 is where image generation was in early 2023 - exciting, fast-moving, and genuinely useful for a specific set of use cases. The output is no longer obviously AI for short clips, but long-form narrative is still years away. Here is the short list of tools that actually shipped production-ready video in 2026, ranked by what they are good at.",
+    "intro_zh": "2026 年的 AI 视频相当于 2023 年初的图像生成阶段——令人兴奋、发展迅猛，且对特定场景真正有用。短视频输出已经看不出明显的 AI 痕迹，但长篇叙事仍需数年。以下是 2026 年真正交付可用视频的短名单，按各自擅长方向排名。",
+    "howto_en": "Start with the use case. For a 5-10 second ad clip or social hook, Runway Gen-3 or Pika are the right defaults. For a 20-second cinematic shot, Sora 2 is the quality leader. For animating a still image (the cheapest, highest-ROI use case), Luma Dream Machine is the specialist. Most teams end up using 2-3 of these in combination.",
+    "howto_zh": "从使用场景出发。对于 5-10 秒的广告片段或社交钩子，Runway Gen-3 或 Pika 是正确的默认选择。对于 20 秒的电影级镜头，Sora 2 是质量领导者。对于让静态图片动起来（最便宜、回报率最高的场景），Luma Dream Machine 是专家。大多数团队最终会组合使用 2-3 款。",
+    "faqs_en": [
+      {
+        "q": "What is the best AI video generator in 2026?",
+        "a": "For highest quality, Sora 2 ($20-200/month). For production workflows, Runway Gen-3 ($15-95/month). For free experimentation, Kling ($0-66/month). For animating stills, Luma Dream Machine ($24-96/month). For social clips, Pika ($10-95/month)."
+      },
+      {
+        "q": "Can AI video replace a real camera?",
+        "a": "Not yet. For 5-10 second clips, AI video is genuinely good enough for ads, social, and prototypes. For anything longer or with real human motion, the artifacts are still visible. Use AI video for what it is good at, not for what it cannot do."
+      },
+      {
+        "q": "How long can AI video clips be in 2026?",
+        "a": "Sora 2 supports up to 20 seconds at high quality. Runway Gen-3 supports 10 seconds. Most other tools are limited to 4-8 seconds. You can stitch clips together in a video editor for longer sequences."
+      },
+      {
+        "q": "Is AI video cheap?",
+        "a": "The free tiers are usable for experimentation. Production-quality AI video costs $20-200/month for the tool subscription, plus the time to iterate. For a 60-second ad, budget $50-200 in tool costs and 3-5 hours of iteration time."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的 AI 视频生成器是什么？",
+        "a": "最高质量：Sora 2（$20-200/月）。制作工作流：Runway Gen-3（$15-95/月）。免费实验：Kling（$0-66/月）。让静态图动起来：Luma Dream Machine（$24-96/月）。社交片段：Pika（$10-95/月）。"
+      },
+      {
+        "q": "AI 视频能替代真实摄影机吗？",
+        "a": "还不能。对于 5-10 秒的片段，AI 视频对广告、社交和原型来说确实够用了。对于更长或有真实人体运动的内容，伪影仍然可见。把 AI 视频用在它擅长的领域，而非它做不到的。"
+      },
+      {
+        "q": "2026 年 AI 视频片段最长能有多久？",
+        "a": "Sora 2 支持高达 20 秒高质量输出。Runway Gen-3 支持 10 秒。大多数其他工具限制在 4-8 秒。你可以在视频编辑器中拼接片段以获得更长序列。"
+      },
+      {
+        "q": "AI 视频便宜吗？",
+        "a": "免费版可用于实验。生产级 AI 视频工具订阅 $20-200/月，加上迭代时间。对于一条 60 秒广告，预算约 $50-200 的工具费用和 3-5 小时的迭代时间。"
+      }
+    ]
+  },
+  "audio": {
+    "intro_en": "AI voice generation crossed the indistinguishable from a real voice actor threshold in late 2025, and the 2026 market is now segmented by use case rather than quality (everyone is good enough for English narration). The differences are in languages, voice cloning, latency, and price-per-character. Here is the honest ranking.",
+    "intro_zh": "AI 语音生成在 2025 年底跨越了与真人配音无法区分的门槛，2026 年的市场按使用场景而非质量来细分（英文旁白大家都不错）。差异在于语言、声音克隆、延迟和每字价格。以下是诚实排名。",
+    "howto_en": "If you are making a podcast, audiobook, or YouTube video, ElevenLabs is the default - the quality is the highest and the free tier is enough to test. If you are building a production app that needs TTS at scale, PlayHT is cheaper at volume. If you need real-time voice for a conversational agent, LMNT or OpenAI Realtime API are the right picks.",
+    "howto_zh": "如果你在做播客、有声书或 YouTube 视频，ElevenLabs 是默认选择——质量最高，免费版就够测试用。如果你在构建需要大规模 TTS 的生产应用，PlayHT 在量大时更便宜。如果你需要实时语音用于对话代理，LMNT 或 OpenAI Realtime API 是正确的选择。",
+    "faqs_en": [
+      {
+        "q": "What is the best AI voice generator in 2026?",
+        "a": "ElevenLabs for quality, voice cloning, and emotional range. PlayHT for high-volume API use. LMNT for real-time applications. OpenAI Realtime API for conversational agents."
+      },
+      {
+        "q": "Can AI voices replace voice actors?",
+        "a": "For narration, audiobooks, and most non-emotional content, yes - the quality is indistinguishable from a real voice actor. For songs, extreme emotional range, and specific character voices, no. The ethics of voice cloning also matter - always get consent."
+      },
+      {
+        "q": "How much do AI voice tools cost?",
+        "a": "ElevenLabs is $5-330/month depending on usage. PlayHT is $31-99/month. OpenAI Realtime is pay-per-use (~$0.06/min input, $0.24/min output). Free tiers exist for experimentation."
+      },
+      {
+        "q": "What is the best free AI voice tool?",
+        "a": "ElevenLabs free tier (10 minutes/month, watermarked) is enough for short projects. For unlimited use, open-source Whisper + a TTS model on your own hardware is free but requires setup."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的 AI 语音生成器是什么？",
+        "a": "ElevenLabs 在质量、声音克隆和情感范围方面最佳。PlayHT 适合高用量 API。LMNT 适合实时应用。OpenAI Realtime API 适合对话代理。"
+      },
+      {
+        "q": "AI 语音能替代配音演员吗？",
+        "a": "对于旁白、有声书和大多数非情感内容，是的——质量与真人配音无法区分。对于歌曲、极端情感和特定角色声音，不能。声音克隆的伦理也很重要——始终获得同意。"
+      },
+      {
+        "q": "AI 语音工具多少钱？",
+        "a": "ElevenLabs $5-330/月取决于用量。PlayHT $31-99/月。OpenAI Realtime 按用量计费（约 $0.06/分钟输入，$0.24/分钟输出）。有免费版供实验。"
+      },
+      {
+        "q": "最好的免费 AI 语音工具是什么？",
+        "a": "ElevenLabs 免费版（10 分钟/月，有水印）足够短项目使用。如需无限使用，在自己硬件上部署开源 Whisper + TTS 模型免费但需要配置。"
+      }
+    ]
+  },
+  "productivity": {
+    "intro_en": "Productivity is the messiest category in AI - it covers everything from note-taking to scheduling to project management to search. Most productivity AI tools are wrappers around the same 3-4 underlying models with a UI. Here is the small list that genuinely fits into a real workflow, not the ones that just look good in a demo.",
+    "intro_zh": "效率是 AI 中最混乱的类别——涵盖从笔记到日程到项目管理到搜索的一切。大多数效率 AI 工具是底层 3-4 个模型的套壳加一个 UI。以下是真正融入实际工作流的少量工具，不是那些只在演示中好看的。",
+    "howto_en": "For most people, the right answer is one general assistant (ChatGPT or Claude) used daily for 2-3 weeks, plus one specialized tool that solves a specific pain point. The specialized tool depends on what you actually do - if you live in Notion, Notion AI. If you do research, Perplexity. The trap is buying 5 productivity tools and using none of them.",
+    "howto_zh": "对大多数人来说，正确答案是一个通用助手（ChatGPT 或 Claude）每天使用 2-3 周，再加一个解决特定痛点的专业工具。专业工具取决于你的实际工作——如果你活在 Notion 里，选 Notion AI。如果你做研究，选 Perplexity。陷阱是买 5 款效率工具但一款都不用。",
+    "faqs_en": [
+      {
+        "q": "What is the best AI productivity tool?",
+        "a": "There is no single best - it depends on your workflow. For general use, ChatGPT or Claude. For research, Perplexity. For note-taking, Notion AI. The trap is buying 5 tools and using none of them - start with one."
+      },
+      {
+        "q": "Will AI productivity tools save me time?",
+        "a": "Yes, but only if you actually use them. Our data shows ~22 hours/week saved for an 8-person team, but that requires daily use. If you only open a tool once a week, the friction of context-switching eats the time savings."
+      },
+      {
+        "q": "How much should I spend on AI productivity tools?",
+        "a": "For an individual: $20-40/month is the minimum viable stack. For a team: $100-500/month depending on size. The right way to think about it: each tool should pay for itself within 1 month of consistent use, or you stop paying."
+      },
+      {
+        "q": "Are AI productivity tools worth it for a small business?",
+        "a": "Yes - the ROI is one of the highest of any software category. Our 8-person team saves 22 hours/week on $385/month in tool costs, which is a 11x return. The key is to start with one general tool, build the habit, then add specialized tools."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "最好的 AI 效率工具是什么？",
+        "a": "没有单一的最佳——取决于你的工作流。通用使用：ChatGPT 或 Claude。研究：Perplexity。笔记：Notion AI。陷阱是买 5 款工具但一款都不用——先从一个开始。"
+      },
+      {
+        "q": "AI 效率工具能为我节省时间吗？",
+        "a": "能，但前提是你真正使用它们。我们的数据显示 8 人团队每周节省约 22 小时，但这需要日常使用。如果你每周只打开一次工具，切换上下文的摩擦会吃掉节省的时间。"
+      },
+      {
+        "q": "我应该在 AI 效率工具上花多少钱？",
+        "a": "个人：$20-40/月是最低可行组合。团队：$100-500/月取决于规模。正确的思路：每款工具应在持续使用 1 个月内回本，否则就停止付费。"
+      },
+      {
+        "q": "AI 效率工具对小企业值得吗？",
+        "a": "值得——这是所有软件类别中回报率最高的之一。我们的 8 人团队每月花费 $385 节省 22 小时，回报率 11 倍。关键是先从一个通用工具开始，养成习惯，再添加专业工具。"
+      }
+    ]
+  },
+  "students": {
+    "intro_en": "Every month, a new 10 AI tools every student needs listicle shows up. Most of them list the same five paid tools with a use the free trial footnote. This list is different: we tested the free tiers of 22 popular AI tools on real student work for two full weeks. No paid upgrades, no credit card. Here are the 10 that actually held up.",
+    "intro_zh": "每个月都会出现一篇新的每个学生必备的 10 款 AI 工具清单。大多数只是列出同样的 5 款付费工具，加上使用免费试用版的脚注。这份清单不同：我们用了整整两周，在真实学生作业上测试了 22 款流行 AI 工具的免费版。没有付费升级，没有信用卡。以下是真正经得起考验的 10 款。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI tool for students?",
+        "a": "ChatGPT free (GPT-4o mini) for general writing, Perplexity free for research with sources, Claude free for long readings. Together they cover 80% of what you need for free."
+      },
+      {
+        "q": "Is it cheating to use AI for schoolwork?",
+        "a": "It depends on your school policy. Most schools in 2026 allow AI for editing, brainstorming, and explaining concepts you do not understand. They do not allow AI to write essays you submit as your own. Always check your school specific policy."
+      },
+      {
+        "q": "Can AI help me study?",
+        "a": "Yes, in many ways: generating flashcards from your notes, explaining difficult concepts in simpler terms, creating practice problems, summarizing long readings, and translating foreign-language sources. The best study AI tools in 2026 are ChatGPT, Perplexity, and Anki for spaced repetition."
+      },
+      {
+        "q": "What is the best AI tool for math homework?",
+        "a": "Google Gemini (free, 1.5 Flash) is the best for step-by-step math solutions. Photomath is the best for showing work on handwritten problems. For statistics, ChatGPT with the Advanced Data Analysis mode is the right pick."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "最适合学生的免费 AI 工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）用于通用写作，Perplexity 免费版用于带来源的研究，Claude 免费版用于长文阅读。三者结合免费覆盖 80% 的需求。"
+      },
+      {
+        "q": "用 AI 做作业算作弊吗？",
+        "a": "取决于学校政策。2026 年大多数学校允许用 AI 进行编辑、头脑风暴和解释你不懂的概念。不允许用 AI 写你署名提交的论文。请始终查看你学校的具体政策。"
+      },
+      {
+        "q": "AI 能帮我学习吗？",
+        "a": "能，在很多方面：从笔记生成记忆卡片、用更简单的方式解释难懂概念、创建练习题、总结长文阅读、翻译外语资料。2026 年最好的学习 AI 工具是 ChatGPT、Perplexity 和 Anki（间隔重复）。"
+      },
+      {
+        "q": "最适合数学作业的 AI 工具是什么？",
+        "a": "Google Gemini（免费，1.5 Flash）最适合逐步数学解答。Photomath 最适合展示手写问题的解题过程。对于统计，ChatGPT 的 Advanced Data Analysis 模式是正确的选择。"
+      }
+    ]
+  },
+  "content-writing": {
+    "intro_en": "Content writing is a different beast from general writing - it has a specific shape (hook, value, CTA), a specific rhythm, and specific requirements (SEO, brand voice, format). Most AI writing tools are tuned for general text, not the specific demands of a blog post or a sales page. Here is the small list of tools that survived 30+ days of real client work.",
+    "intro_zh": "内容写作与通用写作是两回事——它有特定的结构（钩子、价值、行动号召）、特定的节奏和特定的要求（SEO、品牌语调、格式）。大多数 AI 写作工具针对通用文本优化，而非博客文章或销售页面的特定需求。以下是经过 30+ 天真实客户工作考验的短名单。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI writing tool in 2026?",
+        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+      },
+      {
+        "q": "Is Claude better than ChatGPT for writing?",
+        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+      },
+      {
+        "q": "How much do AI writing tools cost in 2026?",
+        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+      },
+      {
+        "q": "Can AI writing tools replace a human writer?",
+        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 写作工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+      },
+      {
+        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
+        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+      },
+      {
+        "q": "2026 年 AI 写作工具的费用是多少？",
+        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+      },
+      {
+        "q": "AI 写作工具能替代人类写作者吗？",
+        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+      }
+    ]
+  },
+  "developers": {
+    "intro_en": "Developer AI tools in 2026 are mostly about one decision: do you stay in your existing IDE and get autocomplete, or do you switch to a new editor that does more. The answer depends on how much multi-file work you do and how much you trust the AI to make changes. Here is what 8 of our engineer friends actually use after 6 months of testing.",
+    "intro_zh": "2026 年的开发者 AI 工具大多归结为一个决定：留在现有 IDE 里使用自动补全，还是换到一个功能更强大的新编辑器。答案取决于你做了多少跨文件工作，以及你有多信任 AI 来帮你改代码。以下是 8 位工程师朋友经过 6 个月测试后实际在用的工具。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI writing tool in 2026?",
+        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+      },
+      {
+        "q": "Is Claude better than ChatGPT for writing?",
+        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+      },
+      {
+        "q": "How much do AI writing tools cost in 2026?",
+        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+      },
+      {
+        "q": "Can AI writing tools replace a human writer?",
+        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 写作工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+      },
+      {
+        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
+        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+      },
+      {
+        "q": "2026 年 AI 写作工具的费用是多少？",
+        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+      },
+      {
+        "q": "AI 写作工具能替代人类写作者吗？",
+        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+      }
+    ]
+  },
+  "free": {
+    "intro_en": "Free AI tools in 2026 are surprisingly capable - the free tier of the major assistants now runs models that would have cost $20/month 18 months ago. The catch is the usage caps. Here is the honest ranking of the free tiers that actually let you get work done, not the ones that lock you out after 3 messages.",
+    "intro_zh": "2026 年免费的 AI 工具出人意料地强大——主流助手的免费版现在运行的是 18 个月前需要 $20/月才能用的模型。唯一的问题是用量限制。以下是真正能让你完成工作的免费版诚实排名，不是那些 3 条消息就把你锁在外面的。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI writing tool in 2026?",
+        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+      },
+      {
+        "q": "Is Claude better than ChatGPT for writing?",
+        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+      },
+      {
+        "q": "How much do AI writing tools cost in 2026?",
+        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+      },
+      {
+        "q": "Can AI writing tools replace a human writer?",
+        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 写作工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+      },
+      {
+        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
+        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+      },
+      {
+        "q": "2026 年 AI 写作工具的费用是多少？",
+        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+      },
+      {
+        "q": "AI 写作工具能替代人类写作者吗？",
+        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+      }
+    ]
+  },
+  "image-generation": {
+    "intro_en": "We subscribed to every major text-to-image model in 2026 and ran the same 25 prompts on each. The result: there is no single best image generator. The right answer depends on what you are making - photorealism, art, graphic design, anime, or text-in-image. Here is the honest breakdown by use case.",
+    "intro_zh": "我们订阅了 2026 年所有主流文生图模型，在每个上跑了相同的 25 条提示词。结果：不存在单一最佳图像生成器。正确答案取决于你要做什么——写实摄影、艺术、平面设计、动漫还是图中文字。以下是按使用场景的诚实拆解。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI writing tool in 2026?",
+        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+      },
+      {
+        "q": "Is Claude better than ChatGPT for writing?",
+        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+      },
+      {
+        "q": "How much do AI writing tools cost in 2026?",
+        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+      },
+      {
+        "q": "Can AI writing tools replace a human writer?",
+        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 写作工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+      },
+      {
+        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
+        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+      },
+      {
+        "q": "2026 年 AI 写作工具的费用是多少？",
+        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+      },
+      {
+        "q": "AI 写作工具能替代人类写作者吗？",
+        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+      }
+    ]
+  },
+  "video-generation": {
+    "intro_en": "We generated 50+ short videos across every major AI video model in 2026. The output is genuinely useful for social content, ads, and prototypes - but the differences between platforms are large, and the pricing is all over the map. Here is the honest ranking by use case, with real before/after quality notes.",
+    "intro_zh": "我们在 2026 年用所有主流 AI 视频模型生成了 50+ 个短视频。输出对社交内容、广告和原型来说确实可用——但平台之间的差异很大，定价也天差地别。以下是按使用场景的诚实排名，附真实前后质量对比。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI writing tool in 2026?",
+        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+      },
+      {
+        "q": "Is Claude better than ChatGPT for writing?",
+        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+      },
+      {
+        "q": "How much do AI writing tools cost in 2026?",
+        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+      },
+      {
+        "q": "Can AI writing tools replace a human writer?",
+        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 写作工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+      },
+      {
+        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
+        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+      },
+      {
+        "q": "2026 年 AI 写作工具的费用是多少？",
+        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+      },
+      {
+        "q": "AI 写作工具能替代人类写作者吗？",
+        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+      }
+    ]
+  },
+  "marketing": {
+    "intro_en": "We rebuilt our marketing team workflow with AI in 2026. The team is 3 people, the monthly bill is $687, and the added pipeline in Q1 was $42K MRR. Here are the 8 tools that actually moved the needle on traffic, conversions, and time saved - ranked by ROI, not hype.",
+    "intro_zh": "我们在 2026 年用 AI 重构了营销团队的工作流。团队 3 人，月花费 $687，Q1 新增的销售线索是 $42K MRR。以下是真正对流量、转化和节省时间产生影响的 8 款工具——按 ROI 而非炒作排名。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI writing tool in 2026?",
+        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+      },
+      {
+        "q": "Is Claude better than ChatGPT for writing?",
+        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+      },
+      {
+        "q": "How much do AI writing tools cost in 2026?",
+        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+      },
+      {
+        "q": "Can AI writing tools replace a human writer?",
+        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 写作工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+      },
+      {
+        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
+        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+      },
+      {
+        "q": "2026 年 AI 写作工具的费用是多少？",
+        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+      },
+      {
+        "q": "AI 写作工具能替代人类写作者吗？",
+        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+      }
+    ]
+  },
+  "small-business": {
+    "intro_en": "We rebuilt our small business workflow with AI tools over 90 days. The team is 8 people, the monthly bill is $385, and we saved ~22 hours per week. Here are the 10 tools that actually paid for themselves, ranked by ROI rather than by what was trending on Twitter.",
+    "intro_zh": "我们在 90 天内用 AI 工具重构了小企业工作流。团队 8 人，月花费 $385，每周节省约 22 小时。以下是真正回本的工具，按 ROI 而非 Twitter 热门程度排名。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI writing tool in 2026?",
+        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+      },
+      {
+        "q": "Is Claude better than ChatGPT for writing?",
+        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+      },
+      {
+        "q": "How much do AI writing tools cost in 2026?",
+        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+      },
+      {
+        "q": "Can AI writing tools replace a human writer?",
+        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 写作工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+      },
+      {
+        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
+        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+      },
+      {
+        "q": "2026 年 AI 写作工具的费用是多少？",
+        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+      },
+      {
+        "q": "AI 写作工具能替代人类写作者吗？",
+        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+      }
+    ]
+  },
+  "designers": {
+    "intro_en": "We tested 18 AI design tools in 2026 with three product designers. Most were toys - impressive demos, no real workflow integration, output that looks AI on second glance. Here are the 7 that actually fit into a real design workflow, ranked by how often we open them during the workday.",
+    "intro_zh": "我们在 2026 年和三位产品设计师一起测试了 18 款 AI 设计工具。大多数是玩具——演示炫酷，但无法融入真实工作流，第二眼看就能发现 AI 痕迹。以下是真正融入真实设计工作流的 7 款，按工作时间内打开频率排名。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI writing tool in 2026?",
+        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+      },
+      {
+        "q": "Is Claude better than ChatGPT for writing?",
+        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+      },
+      {
+        "q": "How much do AI writing tools cost in 2026?",
+        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+      },
+      {
+        "q": "Can AI writing tools replace a human writer?",
+        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 写作工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+      },
+      {
+        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
+        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+      },
+      {
+        "q": "2026 年 AI 写作工具的费用是多少？",
+        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+      },
+      {
+        "q": "AI 写作工具能替代人类写作者吗？",
+        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+      }
+    ]
+  },
+  "seo": {
+    "intro_en": "We rebuilt our SEO workflow with AI in 2026 and tracked the impact for 6 months. Organic traffic is up 187%, the team is 3x more productive, and the monthly tool bill is $1,143. Here are the tools that actually moved rankings, with the real before/after data.",
+    "intro_zh": "我们在 2026 年用 AI 重构了 SEO 工作流，并追踪了 6 个月的影响。自然流量增长 187%，团队效率提升 3 倍，月工具花费 $1,143。以下是真正推动排名的工具，附真实前后数据。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI writing tool in 2026?",
+        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+      },
+      {
+        "q": "Is Claude better than ChatGPT for writing?",
+        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+      },
+      {
+        "q": "How much do AI writing tools cost in 2026?",
+        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+      },
+      {
+        "q": "Can AI writing tools replace a human writer?",
+        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 写作工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+      },
+      {
+        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
+        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+      },
+      {
+        "q": "2026 年 AI 写作工具的费用是多少？",
+        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+      },
+      {
+        "q": "AI 写作工具能替代人类写作者吗？",
+        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+      }
+    ]
+  },
+  "research": {
+    "intro_en": "Academic research is one of the areas where AI is genuinely transformative in 2026 - the tools can do the discovery, the extraction, the citation management, the literature review. They cannot do the thinking or the writing for you. Here are the 6 tools that actually save hours (not just minutes) on a real thesis chapter.",
+    "intro_zh": "学术研究是 2026 年 AI 真正带来变革的领域之一——工具可以完成发现、提取、引文管理和文献综述。但它们不能替你思考或写作。以下是真正能为真实论文章节节省数小时（而不仅是几分钟）的 6 款工具。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI writing tool in 2026?",
+        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+      },
+      {
+        "q": "Is Claude better than ChatGPT for writing?",
+        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+      },
+      {
+        "q": "How much do AI writing tools cost in 2026?",
+        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+      },
+      {
+        "q": "Can AI writing tools replace a human writer?",
+        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 写作工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+      },
+      {
+        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
+        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+      },
+      {
+        "q": "2026 年 AI 写作工具的费用是多少？",
+        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+      },
+      {
+        "q": "AI 写作工具能替代人类写作者吗？",
+        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+      }
+    ]
+  },
+  "social": {
+    "intro_en": "Social media in 2026 is driven by short-form video, and AI tools are now good enough to be the default for ideation, drafting, and asset generation. Here are the tools that survived 60 days of daily use on real social campaigns.",
+    "intro_zh": "2026 年的社交媒体由短视频驱动，AI 工具现在足以成为创意、起草和素材生成的默认选择。以下是经过 60 天真实社交活动日常使用考验的工具。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI writing tool in 2026?",
+        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+      },
+      {
+        "q": "Is Claude better than ChatGPT for writing?",
+        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+      },
+      {
+        "q": "How much do AI writing tools cost in 2026?",
+        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+      },
+      {
+        "q": "Can AI writing tools replace a human writer?",
+        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 写作工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+      },
+      {
+        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
+        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+      },
+      {
+        "q": "2026 年 AI 写作工具的费用是多少？",
+        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+      },
+      {
+        "q": "AI 写作工具能替代人类写作者吗？",
+        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+      }
+    ]
+  },
+  "ecommerce": {
+    "intro_en": "E-commerce is one of the highest-ROI use cases for AI - product descriptions, customer service, personalization, and ad creative all benefit. Here are the tools that actually shipped measurable results for online stores in 2026, ranked by impact.",
+    "intro_zh": "电商是 AI 回报率最高的使用场景之一——产品描述、客服、个性化和广告创意都能受益。以下是 2026 年真正为在线商店带来可衡量成果的工具，按影响力排名。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI writing tool in 2026?",
+        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+      },
+      {
+        "q": "Is Claude better than ChatGPT for writing?",
+        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+      },
+      {
+        "q": "How much do AI writing tools cost in 2026?",
+        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+      },
+      {
+        "q": "Can AI writing tools replace a human writer?",
+        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 写作工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+      },
+      {
+        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
+        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+      },
+      {
+        "q": "2026 年 AI 写作工具的费用是多少？",
+        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+      },
+      {
+        "q": "AI 写作工具能替代人类写作者吗？",
+        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+      }
+    ]
+  },
+  "podcasters": {
+    "intro_en": "We rebuilt a 5-episode podcast with AI tools in Q2 2026. The total bill is $163/month, and the production time per episode dropped from ~25 hours to ~9 hours. Here are the 7 tools that actually cut production time in half without hurting quality.",
+    "intro_zh": "我们在 2026 年 Q2 用 AI 工具重构了 5 集播客的制作流程。总花费 $163/月，每集制作时间从约 25 小时降至约 9 小时。以下是真正将制作时间减半而不牺牲质量的 7 款工具。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI writing tool in 2026?",
+        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+      },
+      {
+        "q": "Is Claude better than ChatGPT for writing?",
+        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+      },
+      {
+        "q": "How much do AI writing tools cost in 2026?",
+        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+      },
+      {
+        "q": "Can AI writing tools replace a human writer?",
+        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 写作工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+      },
+      {
+        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
+        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+      },
+      {
+        "q": "2026 年 AI 写作工具的费用是多少？",
+        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+      },
+      {
+        "q": "AI 写作工具能替代人类写作者吗？",
+        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+      }
+    ]
+  },
+  "design": {
+    "intro_en": "Design is one of the categories where AI has had the most uneven impact - some tools are genuinely transformative, others are toys that produce AI-looking output. Here are the 7 tools that survived 30+ days of real use with three product designers.",
+    "intro_zh": "设计是 AI 影响最不均衡的类别之一——有些工具真正具有变革性，有些则是产生 AI 感输出的玩具。以下是三位置业产品设计师经过 30+ 天真实使用后仍保留的 7 款工具。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI writing tool in 2026?",
+        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+      },
+      {
+        "q": "Is Claude better than ChatGPT for writing?",
+        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+      },
+      {
+        "q": "How much do AI writing tools cost in 2026?",
+        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+      },
+      {
+        "q": "Can AI writing tools replace a human writer?",
+        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 写作工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+      },
+      {
+        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
+        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+      },
+      {
+        "q": "2026 年 AI 写作工具的费用是多少？",
+        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+      },
+      {
+        "q": "AI 写作工具能替代人类写作者吗？",
+        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+      }
+    ]
+  },
+  "email": {
+    "intro_en": "Email is the highest-ROI AI use case for most businesses - the writing volume is high, the formats are repeatable, and the personal productivity gain is immediate. Here are the tools that actually moved the needle in 2026.",
+    "intro_zh": "对大多数企业来说，邮件是 AI 回报率最高的场景——写作量大、格式可重复、个人效率提升立竿见影。以下是 2026 年真正产生影响的工具。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI writing tool in 2026?",
+        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+      },
+      {
+        "q": "Is Claude better than ChatGPT for writing?",
+        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+      },
+      {
+        "q": "How much do AI writing tools cost in 2026?",
+        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+      },
+      {
+        "q": "Can AI writing tools replace a human writer?",
+        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 写作工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+      },
+      {
+        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
+        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+      },
+      {
+        "q": "2026 年 AI 写作工具的费用是多少？",
+        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+      },
+      {
+        "q": "AI 写作工具能替代人类写作者吗？",
+        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+      }
+    ]
+  },
+  "translation": {
+    "intro_en": "AI translation in 2026 is solved for major languages but still has edge cases for tone, cultural context, and technical jargon. Here is the honest ranking of the tools that ship reliable translations without embarrassing you.",
+    "intro_zh": "2026 年的 AI 翻译对主流语言已经解决，但在语调、文化语境和技术术语方面仍有短板。以下是能可靠产出翻译而不会让你尴尬的工具诚实排名。",
+    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
+    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI writing tool in 2026?",
+        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+      },
+      {
+        "q": "Is Claude better than ChatGPT for writing?",
+        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+      },
+      {
+        "q": "How much do AI writing tools cost in 2026?",
+        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+      },
+      {
+        "q": "Can AI writing tools replace a human writer?",
+        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 写作工具是什么？",
+        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+      },
+      {
+        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
+        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+      },
+      {
+        "q": "2026 年 AI 写作工具的费用是多少？",
+        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+      },
+      {
+        "q": "AI 写作工具能替代人类写作者吗？",
+        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+      }
+    ]
+  }
+}

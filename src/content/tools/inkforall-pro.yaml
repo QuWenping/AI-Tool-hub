@@ -1,0 +1,24 @@
+name:
+  en: INK Pro
+  zh: INK Pro
+short_desc:
+  en: AI SEO writing pro
+  zh: AI SEO 写作专业版
+long_desc:
+  en: Professional AI SEO writing with content scoring
+cat: text
+url: https://inkforall.com
+icon: fa-pen
+scenes:
+  en:
+  - seo
+  - writing
+  - scoring
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

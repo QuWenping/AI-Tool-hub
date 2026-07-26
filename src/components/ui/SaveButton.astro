@@ -1,12 +1,14 @@
 ---
 /* SaveButton.astro — "Save to My Library" toggle (P1-12)
    Client-side only (localStorage). No backend needed.
-   Props: toolId, toolName */
-const { toolId, toolName = "this tool" } = Astro.props;
+   Props: toolId, toolName, lang */
+const { toolId, toolName = "this tool", lang = "en" } = Astro.props;
+const isZh = lang === "zh";
 ---
-<button class="save-btn" data-tool-id={toolId} data-tool-name={toolName} aria-label={`Save ${toolName} to My Library`}>
+<button class="save-btn" data-tool-id={toolId} data-tool-name={toolName} data-lang={lang}
+  aria-label={isZh ? `收藏 ${toolName} 到我的收藏` : `Save ${toolName} to My Library`}>
   <i class="far fa-bookmark" aria-hidden="true"></i>
-  <span class="save-label">Save</span>
+  <span class="save-label">{isZh ? "收藏" : "Save"}</span>
 </button>
 <script is:inline>
 (function() {
@@ -15,10 +17,13 @@ const { toolId, toolName = "this tool" } = Astro.props;
   function setSaved(arr) { localStorage.setItem(KEY, JSON.stringify(arr)); }
   document.querySelectorAll(".save-btn").forEach(function(btn) {
     var id = btn.getAttribute("data-tool-id");
+    var lang = btn.getAttribute("data-lang") || "en";
+    var labels = lang === "zh" ? { save: "收藏", saved: "已收藏", ariaSave: "收藏", ariaRemove: "取消收藏" }
+                                : { save: "Save", saved: "Saved", ariaSave: "Save", ariaRemove: "Remove" };
     var saved = getSaved();
     if (saved.indexOf(id) !== -1) {
       btn.classList.add("saved");
-      btn.querySelector(".save-label").textContent = "Saved";
+      btn.querySelector(".save-label").textContent = labels.saved;
       btn.querySelector("i").className = "fas fa-bookmark";
     }
     btn.addEventListener("click", function() {
@@ -27,12 +32,12 @@ const { toolId, toolName = "this tool" } = Astro.props;
       if (idx === -1) {
         saved.push(id);
         btn.classList.add("saved");
-        btn.querySelector(".save-label").textContent = "Saved";
+        btn.querySelector(".save-label").textContent = labels.saved;
         btn.querySelector("i").className = "fas fa-bookmark";
       } else {
         saved.splice(idx, 1);
         btn.classList.remove("saved");
-        btn.querySelector(".save-label").textContent = "Save";
+        btn.querySelector(".save-label").textContent = labels.save;
         btn.querySelector("i").className = "far fa-bookmark";
       }
       setSaved(saved);

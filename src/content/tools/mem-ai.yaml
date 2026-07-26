@@ -1,0 +1,24 @@
+name:
+  en: Mem AI
+  zh: Mem AI
+short_desc:
+  en: AI notes workspace
+  zh: AI 笔记工作空间
+long_desc:
+  en: AI-powered notes workspace with automatic organization
+cat: productivity
+url: https://mem.ai
+icon: fa-sticky-note
+scenes:
+  en:
+  - notes
+  - organization
+  - ai
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

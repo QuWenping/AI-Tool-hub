@@ -1,0 +1,141 @@
+name:
+  en: ComfyUI
+  zh: ComfyUI
+short_desc:
+  en: Node-based Stable Diffusion workflow UI
+  zh: 基于节点的 Stable Diffusion 工作流 UI
+long_desc:
+  en: >-
+    ComfyUI is an open-source node-based AI image generation UI; maximum flexibility for advanced users and custom workflows.
+cat: image
+url: https://github.com/comfyanonymous/ComfyUI
+icon: fa-cubes
+scenes:
+  en:
+  - Custom workflows
+  - Batch gen
+  - Model testing
+  - ControlNet
+pros:
+  en:
+  - Fully open source
+  - Maximum flexibility
+  - Strong community
+  zh:
+  - 完全开源
+  - 最大灵活性
+  - 社区活跃
+cons:
+  en:
+  - Steep learning curve
+  - Needs GPU
+  - No GUI guidance
+  zh:
+  - 学习曲线陡峭
+  - 需要 GPU
+  - 无图形引导
+target_audience:
+  en:
+  - AI researchers
+  - Advanced users
+  - Devs
+  zh:
+  - AI 研究人员
+  - 高级用户
+  - 开发者
+use_cases:
+  en:
+  - Image gen
+  - Batch
+  - Workflows
+  - Experiments
+  zh:
+  - 图像生成
+  - 批量处理
+  - 工作流
+  - 实验
+features:
+  en:
+  - Node editor
+  - Custom workflows
+  - Open source
+  - ControlNet
+  zh:
+  - 节点编辑器
+  - 自定义工作流
+  - 开源
+  - ControlNet
+example:
+  en: 'Example: Build a txt2img+upscale+face_restore workflow.'
+  zh: 示例：构建文生图+超分+面部修复工作流。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: ComfyUI (2026-07 stable)
+score: 8.0
+overall_score: 8.0
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Desktop
+  - API
+pricingSummary:
+  en: >-
+    Completely free and open-source. Requires local GPU or cloud GPU rental ($0.50-$3/hr). Cloud-hosted alternatives like
+    ComfyUI Cloud and RunComfy offer managed instances from $10/mo.
+faq:
+- q_en: What is ComfyUI and who is it for?
+  a_en: >-
+    ComfyUI is a node-based graphical interface for Stable Diffusion and other diffusion models. It is designed for power
+    users, researchers, and professionals who need precise control over image generation pipelines. Unlike simple prompt-and-generate
+    tools, ComfyUI lets you build custom workflows combining multiple models, ControlNets, upscalers, and post-processing
+    steps.
+- q_en: What hardware do I need to run ComfyUI?
+  a_en: >-
+    ComfyUI requires an NVIDIA GPU with at least 6GB of VRAM for SDXL or Flux models. For complex workflows involving multiple
+    ControlNets, IP-Adapter, and upscaling simultaneously, 8 to 12GB VRAM is strongly recommended. AMD GPUs can work through
+    ROCm on Linux systems. CPU-only generation is technically possible but impractically slow, taking minutes per image versus
+    seconds on GPU.
+- q_en: How do I install ComfyUI?
+  a_en: >-
+    Installation involves cloning the GitHub repository, installing Python dependencies through pip, and downloading model
+    checkpoint files for SDXL, SD3, or Flux into the models/checkpoints directory. The ComfyUI Manager plugin, installable
+    via git clone into the custom_nodes folder, dramatically simplifies custom node installation and updates.
+- q_en: What is a ComfyUI workflow?
+  a_en: >-
+    A ComfyUI workflow is a JSON file that defines a complete image generation pipeline as a node graph, including which models
+    to load, prompt encoding parameters, sampler settings and scheduling, ControlNet configurations, and any post-processing
+    steps like upscaling or face restoration.
+- q_en: Can ComfyUI run on the cloud?
+  a_en: >-
+    Yes, several cloud services offer managed ComfyUI instances with pre-installed environments. Popular options include RunComfy,
+    ComfyUI Cloud, ThinkDiffusion, and RunPod templates. These services provide pre-loaded popular models and custom nodes,
+    GPU rental starting from approximately 50 cents per hour for mid-range GPUs, and persistent storage for your workflows
+    and generated outputs.
+- q_en: How does ComfyUI handle video generation?
+  a_en: >-
+    ComfyUI supports video generation through specialized custom nodes including AnimateDiff, SVD (Stable Video Diffusion),
+    and various frame interpolation nodes. AnimateDiff enables temporally consistent animation by applying learned motion
+    modules across a batch of generated frames. While powerful, video workflows are complex to configure correctly and computationally
+    intensive.
+- q_en: What are the best custom nodes for ComfyUI?
+  a_en: >-
+    Essential custom nodes include ComfyUI Manager for installing and updating all other nodes, Efficiency Nodes that simplify
+    common workflow patterns, ControlNet Aux for preprocessing pose, depth, and canny inputs, IP-Adapter for face and style
+    consistency across generations, WAS Node Suite providing comprehensive image processing utilities, Comprehensive SD Upscale
+    for high-quality resolution.
+- q_en: Does ComfyUI have an API?
+  a_en: >-
+    Yes, ComfyUI exposes a REST API that you enable by launching with the --enable-api flag. The API allows programmatic workflow
+    execution where you submit a workflow JSON, trigger generation, and retrieve outputs through HTTP endpoints. This enables
+    automated batch processing, integration with web applications, and building content generation pipelines.
+- q_en: ComfyUI vs Automatic1111 which should I use?
+  a_en: >-
+    Automatic1111 offers a traditional tabbed UI that is significantly more approachable for beginners and casual users who
+    primarily do prompt-to-image with occasional inpainting. ComfyUI's node graph architecture excels for building complex,
+    reproducible pipelines and production use cases.
+- q_en: How do I share my ComfyUI workflows?
+  a_en: >-
+    Share workflows by exporting the JSON from ComfyUI using the Workflow menu and Export option, then uploading to community
+    hubs like OpenArt, Civitai, or the ComfyUI Workflows website. Recipients can drag and drop the JSON file directly into
+    their ComfyUI window or paste the workflow JSON text.

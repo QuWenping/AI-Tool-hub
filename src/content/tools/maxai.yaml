@@ -1,0 +1,24 @@
+name:
+  en: MaxAI
+  zh: MaxAI
+short_desc:
+  en: AI browser assistant
+  zh: AI 浏览器助手
+long_desc:
+  en: AI writing, reading and search in the browser
+cat: productivity
+url: https://maxai.me
+icon: fa-robot
+scenes:
+  en:
+  - browser
+  - writing
+  - search
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

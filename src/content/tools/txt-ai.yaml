@@ -1,0 +1,24 @@
+name:
+  en: Txt AI
+  zh: Txt AI
+short_desc:
+  en: AI text processing
+  zh: AI 文本处理
+long_desc:
+  en: AI-powered text search and processing
+cat: text
+url: https://txt.ai
+icon: fa-pen
+scenes:
+  en:
+  - search
+  - processing
+  - nlp
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

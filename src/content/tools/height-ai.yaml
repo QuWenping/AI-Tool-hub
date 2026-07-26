@@ -1,0 +1,24 @@
+name:
+  en: Height
+  zh: Height
+short_desc:
+  en: AI project management
+  zh: AI 项目管理
+long_desc:
+  en: AI-powered project management with automation
+cat: productivity
+url: https://height.app
+icon: fa-tasks
+scenes:
+  en:
+  - project
+  - automation
+  - tasks
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

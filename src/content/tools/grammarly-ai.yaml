@@ -1,0 +1,58 @@
+name:
+  en: Grammarly AI
+  zh: Grammarly AI
+short_desc:
+  en: AI grammar check + writing enhancement
+  zh: AI 语法检查和写作增强
+long_desc:
+  en: >-
+    Grammarly AI checks grammar, polishes text, adjusts tone; browser extension works everywhere.
+cat: text
+url: https://www.grammarly.com
+icon: fa-check-double
+scenes:
+  en:
+  - Grammar
+  - Polish
+  - Tone adjust
+  - Email
+  zh:
+  - 英语写作
+  - 语法检查
+  - 风格优化
+  - 商务沟通
+pros:
+  en:
+  - Cross-platform
+  - Real-time
+  - Usable free
+  zh:
+  - 语法和风格建议最全面
+  - 多平台集成
+  - AI 写作建议实用
+cons:
+  en:
+  - Advanced paid
+  - Weak Chinese
+  zh:
+  - 仅支持英文
+  - 免费版功能较基础
+target_audience:
+  en:
+  - Writers
+  - Non-native
+  - Professionals
+use_cases:
+  en:
+  - Email
+  - Essays
+  - Blog
+  - Social
+features:
+  en:
+  - Grammar
+  - Polish
+  - Tone
+  - Cross-platform
+example:
+  en: 'Example: Write a business email, Grammarly auto-corrects grammar+adjusts tone.'

@@ -1,0 +1,24 @@
+name:
+  en: Tensor Art
+  zh: Tensor Art
+short_desc:
+  en: AI image generation community
+  zh: AI 图像生成社区
+long_desc:
+  en: AI image generation with community models and LoRA
+cat: image
+url: https://tensor.art
+icon: fa-paint-brush
+scenes:
+  en:
+  - art
+  - community
+  - lora
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

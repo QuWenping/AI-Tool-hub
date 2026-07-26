@@ -15,7 +15,7 @@ export default defineConfig({
   site: 'https://thebestaitoolsreview.com',
   trailingSlash: 'always',
   build: { format: 'directory' },
-  i18n: { defaultLocale: 'en', locales: ['en', 'zh'], routing: { prefixDefaultLocale: false } },
+  i18n: { defaultLocale: 'en', locales: ['en', 'zh'], routing: { prefixDefaultLocale: false, fallbackType: 'rewrite' }, fallback: { zh: 'en' } },
   integrations: [
     sitemap({
       // Exclude utility pages and the home anchor link from the sitemap

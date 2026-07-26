@@ -1,0 +1,24 @@
+name:
+  en: MagickPen
+  zh: MagickPen
+short_desc:
+  en: AI writing tool
+  zh: AI 写作工具
+long_desc:
+  en: AI-powered writing assistant for all content types
+cat: text
+url: https://magickpen.com
+icon: fa-pen
+scenes:
+  en:
+  - writing
+  - content
+  - assistant
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

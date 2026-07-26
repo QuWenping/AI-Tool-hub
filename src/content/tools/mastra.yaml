@@ -1,0 +1,26 @@
+name:
+  en: Mastra
+  zh: Mastra
+short_desc:
+  en: TypeScript AI agent framework
+  zh: TypeScript AI 智能体框架
+long_desc:
+  en: >-
+    Mastra is a TypeScript-first AI agent framework for building production-grade AI applications with built-in memory, tools,
+    and workflows.
+cat: code
+url: https://mastra.ai
+icon: fa-project-diagram
+scenes:
+  en:
+  - agent-framework
+  - typescript
+  - production
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Open Source

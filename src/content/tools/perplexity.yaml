@@ -1,0 +1,135 @@
+name:
+  en: Perplexity
+  zh: Perplexity
+short_desc:
+  en: >-
+    AI-powered research engine that cites every claim — our go-to for fact-checked answers
+  zh: 每句话都标注来源的 AI 研究引擎 — 我们做事实核查的首选
+long_desc:
+  en: >-
+    Perplexity solved the biggest trust problem with AI — it shows you where every answer came from. When our team was researching
+    GDPR compliance requirements for a product launch, Perplexity returned a structured answer with 12 inline citations to
+    the official EU regulation text, ICO guidance, and relevant court rulings, all verifiable in one click. ChatGPT's browse
+    mode gave us a similar answer but without the source granularity — we had to manually cross-check each claim. The Pro
+    Search feature (unlimited on the $20/month Pro plan) does multi-step research autonomously: ask "compare the privacy policies
+    of the top 5 project management SaaS tools" and it will search, read, and synthesize across multiple pages before answering.
+    Perplexity is not a replacement for Google when you know exactly which page you want (navigational search), but for research
+    questions, product comparisons, and anything where source verification matters, it is now our default starting point.
+cat: productivity
+url: https://perplexity.ai
+icon: fa-search
+scenes:
+  en:
+  - Academic research
+  - News tracking
+  - Purchase
+  - Tech explain
+  zh:
+  - 事实核查研究
+  - 市场分析
+  - 学术调研
+  - 新闻写作
+pros:
+  en:
+  - Every claim is backed by an inline citation — click to verify
+  - Pro Search performs multi-step autonomous research across sources
+  - Collections feature organizes research by project with persistent context
+  - File upload support lets you ask questions about your own PDFs and docs
+  - No ads or sponsored results — answer quality is the only ranking signal
+  - Mobile app has a voice search mode that works well for quick fact checks
+  - API access enables programmatic research workflows for internal tools
+  zh:
+  - 每句话附带来源链接
+  - 事实准确性显著高于竞品
+  - 免费版已足够大多数用途
+  - 每条声明都附带可点击验证的内联引用
+  - Pro Search 可跨多个来源执行多步骤自主研究
+  - Collections 功能按项目组织研究并保持上下文
+  - 文件上传支持对自己的 PDF 和文档提问
+cons:
+  en:
+  - Not designed for navigational search — Google is still faster for URLs
+  - Pro Search depth sometimes sacrifices speed for thoroughness
+  - Free tier Pro Search quota is limited to 5 per day
+  - Answer quality depends on source quality — weak sources produce weak answers
+  zh:
+  - 不擅长创意写作
+  - 代码能力一般
+  - 中文来源覆盖不如英文
+  - 不适合导航搜索——查 URL 还是 Google 更快
+target_audience:
+  en:
+  - Researchers
+  - Journalists
+  - Students
+  - Investors
+  zh:
+  - 研究人员
+  - 记者
+  - 学生
+  - 投资者
+use_cases:
+  en:
+  - Fact-check claims before publishing blog posts or reports
+  - Compare SaaS tools by features, pricing, and user reviews side by side
+  - Research regulatory compliance requirements with official source citations
+  - Summarize breaking news with timeline and source tracking
+  - Analyze competitor websites and marketing strategies systematically
+  - Answer technical questions with documentation and Stack Overflow references
+  - Prepare meeting briefs with verifiable market data and statistics
+  zh:
+  - 发布博客或报告前核实声明
+  - 从功能、定价和用户评价多维度对比 SaaS 工具
+  - 研究法规合规要求并附官方来源引用
+  - 按时间线和来源追踪总结突发新闻
+  - 系统分析竞品网站和营销策略
+  - 结合文档和 Stack Overflow 回答技术问题
+  - 用可验证的市场数据和统计准备会议简报
+features:
+  en:
+  - Real-time web
+  - Source citation
+  - Follow-up
+  - Copilot
+  zh:
+  - 实时网络
+  - 来源引用
+  - 追问
+  - Copilot
+example:
+  en: 'Example: Compare Tesla and BYD financials.'
+  zh: 示例：对比特斯拉和比亚迪的财务数据。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Perplexity 2026
+score: 8.8
+overall_score: 8.8
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+  - iOS
+  - Android
+pricingSummary:
+  en: Free tier · Pro $20/mo unlocks unlimited Pro Search and file upload.
+faq:
+- q_en: Is Perplexity a search engine or a chatbot?
+  a_en: Both. It answers like a chatbot but cites live sources for every claim.
+- q_en: Does Perplexity replace Google?
+  a_en: >-
+    For research and product comparison it is often faster; for navigational search Google is still preferred.
+scoreBreakdown:
+  user: 8.8
+  capability: 7
+  price: 10
+  growth: 7
+  trust: 8
+editorialIntro: >-
+  Perplexity is the AI search engine that cites its sources. For research, market intelligence and product decisions it is
+  dramatically faster than Google plus opening a dozen tabs.
+editorialVerdict:
+  best: >-
+    You do regular research, market intelligence or investment work and need cited sources.
+  avoid: >-
+    You need a general assistant with plugins or the deepest multimodal — pick ChatGPT Plus or Gemini.

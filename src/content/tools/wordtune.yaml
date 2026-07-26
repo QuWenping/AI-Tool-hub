@@ -1,0 +1,46 @@
+name:
+  en: Wordtune
+  zh: Wordtune
+short_desc:
+  en: AI sentence rewrite and expansion tool
+  zh: AI 句子改写和扩展工具
+long_desc:
+  en: >-
+    Wordtune rewrites, shortens, expands, or adjusts tone; browser extension works in real-time.
+cat: text
+url: https://www.wordtune.com
+icon: fa-text-height
+scenes:
+  en:
+  - Rewrite
+  - Expand
+  - Shorten
+  - Tone
+pros:
+  en:
+  - Real-time extension
+  - Multiple rewrite modes
+  - Clean UX
+cons:
+  en:
+  - Sentence-level only
+  - Premium paid
+target_audience:
+  en:
+  - Writers
+  - Professionals
+  - Non-native
+use_cases:
+  en:
+  - Email
+  - Docs
+  - Social
+  - Academic
+features:
+  en:
+  - Rewrite
+  - Expand
+  - Shorten
+  - Tone switch
+example:
+  en: 'Example: Rewrite a casual sentence into formal business tone.'

@@ -1,0 +1,24 @@
+name:
+  en: Textify
+  zh: Textify
+short_desc:
+  en: AI text simplifier
+  zh: AI 文本简化
+long_desc:
+  en: Simplify and summarize complex text with AI
+cat: text
+url: https://textify.com
+icon: fa-pen
+scenes:
+  en:
+  - simplify
+  - summarize
+  - text
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

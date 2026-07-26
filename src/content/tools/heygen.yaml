@@ -1,0 +1,184 @@
+name:
+  en: HeyGen
+  zh: HeyGen
+short_desc:
+  en: AI avatar and video localization platform
+  zh: AI 数字人和视频本地化平台
+long_desc:
+  en: >-
+    Heygen is known for avatars and video translation with lip-sync, great for global marketing and explainers.
+cat: video
+url: https://www.heygen.com
+icon: fa-user-tie
+scenes:
+  en:
+  - Video localization
+  - Avatar explainers
+  - Marketing
+  - Multilingual
+  zh:
+  - 视频本地化
+  - 多语言营销
+  - 全球培训
+  - 跨语言内容
+pros:
+  en:
+  - Strong lip-sync
+  - Video translation
+  - Natural avatars
+  zh:
+  - 视频口型同步翻译是杀手功能
+  - 多语言效果出色
+  - 数字人质量高
+cons:
+  en:
+  - Mid-high price
+  - Limited free
+  - Custom paid
+  zh:
+  - 价格偏高
+  - 免费版功能受限
+  - 自定义需付费
+target_audience:
+  en:
+  - Marketing
+  - E-com
+  - Content teams
+  - Training
+  zh:
+  - 营销
+  - 电商
+  - 内容团队
+  - 培训
+use_cases:
+  en:
+  - Localization
+  - Avatar explainers
+  - Global marketing
+  - Training
+  zh:
+  - 本地化
+  - 数字人讲解
+  - 全球营销
+  - 培训视频
+features:
+  en:
+  - Avatars
+  - Video translation
+  - Lip-sync
+  - Multilingual
+  zh:
+  - 数字人
+  - 视频翻译
+  - 口型同步
+  - 多语言
+example:
+  en: 'Example: Translate an English explainer into lip-synced Chinese.'
+  zh: 示例：将英文讲解视频翻译为带口型同步的中文。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: HeyGen 3.0 (2026-07)
+score: 8.1
+overall_score: 8.1
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+  - iOS
+  - Android
+pricingSummary:
+  en: >-
+    Free tier with 1 credit for demo. Creator at $24/mo (15 credits). Team at $120/mo (30 credits, 3 seats). Enterprise custom.
+    1 credit ≈ 1 minute of video.
+faq:
+- q_en: Is HeyGen free to use?
+  a_en: >-
+    HeyGen offers a free tier that includes 1 credit for testing the platform—enough to generate about 1 minute of video with
+    a stock avatar and voice. This is primarily a trial to evaluate quality before subscribing. The Creator plan at $24/month
+    includes 15 credits (approximately 15 minutes of video), and the Team plan at $120/month includes 30 credits across 3
+    editor seats. Credits do not roll over month to month. For serious production, you will need a paid plan since 1 credit
+    barely covers a single short-form video.
+- q_en: How good is HeyGen's voice cloning?
+  a_en: >-
+    HeyGen's voice cloning is among the best in the industry, requiring only 30 seconds of clean source audio to generate
+    a near-indistinguishable replica of your voice. The cloned voice captures tone, cadence, inflection, and emotional nuance
+    remarkably well. It supports 40+ languages, meaning you can speak English in the source recording and the clone will speak
+    fluent Mandarin, Spanish, or Japanese with your voice characteristics intact. Voice cloning is available on Creator plans
+    and above. For optimal results, record in a quiet room with a good microphone, speak naturally with normal pacing, and
+    avoid background noise or echo. The quality rivals ElevenLabs for short-duration speech and excels particularly in video
+    context where the avatar and voice sync together for a cohesive result.
+- q_en: What is HeyGen's URL-to-video feature?
+  a_en: >-
+    URL-to-video is HeyGen's standout feature that converts a web article or blog post link into a complete talking-head video
+    in minutes. Simply paste a URL, and HeyGen's AI extracts the key points from the article, writes a concise video script,
+    selects appropriate visuals from the article's images or stock footage, and delivers the content through a virtual news
+    anchor avatar. You can customize the avatar, voice, background, and script before generation. This is particularly valuable
+    for news publishers, content marketers, and bloggers who want to repurpose written content into video format for YouTube
+    Shorts, TikTok, and Instagram Reels without hiring a video production team or appearing on camera themselves.
+- q_en: Does HeyGen offer an API?
+  a_en: >-
+    Yes, HeyGen provides a REST API and SDK for programmatic video generation. The API supports creating videos with stock
+    or custom avatars, specifying scripts and voices, adding backgrounds, and controlling video settings like resolution and
+    aspect ratio. Common API use cases include personalized sales outreach videos generated from CRM data, automated customer
+    onboarding videos triggered by signup events, and bulk translation of existing videos into multiple languages. API access
+    is available on Team plans and above, with rate limits that scale with your plan tier. Documentation includes Python,
+    JavaScript, and Node.js SDK examples alongside detailed REST API reference.
+- q_en: What is HeyGen Avatar 3.0?
+  a_en: >-
+    Avatar 3.0 is HeyGen's latest avatar generation engine that introduces full-body gestures, walking animations, and natural
+    hand movements to AI avatars. Unlike earlier versions that were limited to upper-body talking-head format, Avatar 3.0
+    can simulate a person standing, gesturing with hands while speaking, walking across a virtual set, and showing more dynamic
+    body language. This dramatically expands the creative possibilities: you can now create virtual presenters that move around
+    a stage, product demonstration hosts that point to and interact with on-screen elements, or lifestyle influencers that
+    look natural in a variety of poses. Avatar 3.0 requires more processing credits than standard talking-head avatars and
+    is available on Creator plans and above.
+- q_en: How does HeyGen compare to Synthesia for enterprise use?
+  a_en: >-
+    For enterprise use, Synthesia generally has stronger compliance and security infrastructure with explicit SOC 2 Type II
+    certification, SSO integration across all paid plans, and more mature team management and workspace controls. HeyGen's
+    enterprise features are improving but currently offer less granular access control and compliance documentation. However,
+    HeyGen wins on creative output quality: Avatar 3.0 full-body gestures, superior voice cloning (30 seconds vs Synthesia's
+    longer required recording), and URL-to-video automation are features Synthesia lacks. For large enterprises where security
+    and compliance are paramount, Synthesia is the safer choice. For marketing teams and brand content studios within enterprises
+    who prioritize creative quality and viral potential, HeyGen's stronger expressiveness may justify the compliance trade-off.
+- q_en: Can I use HeyGen on mobile devices?
+  a_en: >-
+    Yes, HeyGen is available as a web application optimized for mobile browsers and has dedicated iOS and Android mobile apps.
+    The mobile experience focuses on quick video creation with pre-built templates: choose a template, type your script or
+    paste a URL, select an avatar, and generate a video optimized for vertical social media formats. Mobile apps support the
+    core features of avatar selection, script input, and video generation but advanced features like multi-scene Studio editing,
+    custom avatar creation from source video, and API integration are best handled on desktop. The mobile apps are ideal for
+    social media managers and creators who need to produce content quickly while on the go.
+- q_en: What types of videos work best with HeyGen?
+  a_en: >-
+    HeyGen excels at creator-focused and marketing content: short-form social media videos (TikTok, Instagram Reels, YouTube
+    Shorts) where expressive avatars and voice cloning create viral potential; personalized sales outreach videos where a
+    cloned face and voice deliver customized messages at scale; news-style reporting videos generated from article URLs with
+    a virtual anchor; product explainers and demo videos combining screen sharing with avatar narration; and multilingual
+    content localization where one source video is regenerated in 40+ languages while preserving the original voice characteristics.
+    HeyGen is less suited for long-form corporate training modules over 10 minutes due to credit costs and occasional lip-sync
+    drift, or for high-security enterprise environments requiring granular access controls.
+- q_en: How many languages does HeyGen support?
+  a_en: >-
+    HeyGen supports video generation in over 40 languages including English, Spanish, Mandarin Chinese, Japanese, Korean,
+    French, German, Portuguese, Arabic, Hindi, Italian, Dutch, Russian, Turkish, Vietnamese, Thai, Indonesian, and more. The
+    AI automatically adjusts the avatar's lip movements to match each language. The one-click translation feature lets you
+    take a video created in one language and regenerate it in multiple target languages while preserving the avatar and overall
+    presentation structure. Both the text script and the voice are translated and localized, making it practical for brands
+    and educators who need to reach global audiences without creating separate videos for each language from scratch.
+- q_en: What is the credit system and how does it work?
+  a_en: >-
+    HeyGen uses a credit-based pricing model where 1 credit typically generates approximately 1 minute of video using a stock
+    avatar and voice. Actual credit consumption varies by complexity: standard avatars cost 1 credit per minute, Avatar 3.0
+    full-body avatars cost 2 credits per minute, custom avatars cost 2 credits per minute, and premium voice cloning or custom
+    voices may add additional credit costs. Higher-resolution exports and special effects also consume extra credits. Credits
+    reset monthly and do not roll over. The Creator plan includes 15 credits per month, and the Team plan includes 30 credits
+    shared across 3 users. Unused credits are lost at the end of each billing cycle, making it important to plan production
+    volume against credit allocation.
+scoreBreakdown:
+  user: 8.5
+  capability: 8.3
+  price: 6.8
+  growth: 8.8
+  trust: 7.0

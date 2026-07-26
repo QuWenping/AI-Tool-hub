@@ -1,0 +1,111 @@
+name:
+  en: Descript
+  zh: Descript
+short_desc:
+  en: Revolutionary audio/video editor that works like a text doc
+  zh: 革命性的音视频编辑器 — 像编辑文档一样编辑音视频
+long_desc:
+  en: Descript lets you edit audio/video like a Word document.
+cat: audio
+url: https://descript.com
+icon: fa-waveform
+scenes:
+  en:
+  - Podcast edit
+  - YouTube edit
+  - Course post
+  - Team edit
+  zh:
+  - 播客编辑
+  - 视频教程
+  - 会议记录
+  - AI 配音
+pros:
+  en:
+  - 5-10x faster
+  - AI filler removal
+  - Studio Sound
+  - Screen record
+  zh:
+  - 文字编辑音视频效率翻倍
+  - 自动去填充词功能实用
+  - 免费版可完成基础工作
+  - 效率提升 5-10 倍
+cons:
+  en:
+  - Pro for advanced
+  - Multi-track weak
+  - Chinese errors
+  zh:
+  - 专业级调色和特效不如传统软件
+  - 中文转录准确率不如英文
+  - 高级功能需 Pro 版
+target_audience:
+  en:
+  - Podcasters
+  - YouTubers
+  - Course instructors
+  - Video marketers
+  zh:
+  - 播客创作者
+  - YouTuber
+  - 课程讲师
+  - 视频营销人员
+use_cases:
+  en:
+  - 90m in 1h
+  - Remove fillers
+  - Auto captions
+  - Remote collab
+  zh:
+  - 1 小时处理 90 分钟素材
+  - 移除填充词
+  - 自动字幕
+  - 远程协作
+features:
+  en:
+  - Text editing
+  - AI filler
+  - Studio Sound
+  - Auto captions
+  zh:
+  - 文字编辑
+  - AI 去填充词
+  - Studio Sound
+  - 自动字幕
+example:
+  en: 'Example: Delete text to remove audio.'
+  zh: 示例：删除文字即可删除对应音频。
+reviewed: true
+updatedAt: '2026-07-19'
+testedVersion: Descript 2026
+score: 8.6
+overall_score: 8.6
+quickFacts:
+  freeTier: true
+  hasApi: false
+  platforms:
+  - macOS
+  - Windows
+  - Web
+pricingSummary:
+  en: Free tier · Hobbyist $24/mo · Pro $33/mo.
+faq:
+- q_en: What is transcript-based editing?
+  a_en: You edit the transcript and Descript trims the audio/video to match.
+- q_en: Does Descript remove filler words?
+  a_en: Yes. Filler word removal is built in and works on speech in real time.
+scoreBreakdown:
+  user: 8.6
+  capability: 7
+  price: 10
+  growth: 5
+  trust: 8
+editorialIntro: >-
+  Descript works like a Word document for media: edit the transcript and the audio/video updates. AI filler-word removal,
+  Studio Sound and Edit for Clarity cut editing time by 5–10× on interview-style content.
+editorialVerdict:
+  best: >-
+    You edit audio or video regularly and want transcript-based workflows plus Studio Sound.
+  avoid: >-
+    You edit rarely (learning curve is too high) or you do music production (use a traditional DAW).

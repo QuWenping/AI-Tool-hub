@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import tools from "../../../data/tools.json";
+
+const workflows = [
+  {
+    title: "内容复用流水线",
+    description: "使用 Claude + ChatGPT + ElevenLabs 将一篇博客文章转化为社交帖子、通讯和视频脚本",
+    toolCount: 3
+  },
+  {
+    title: "SEO 内容引擎",
+    description: "关键词研究 → 大纲 → 草稿 → 优化，使用 ChatGPT + SurferSEO + Grammarly",
+    toolCount: 3
+  },
+  {
+    title: "设计到代码交付",
+    description: "Figma 模型 → AI 代码生成 → 审查，使用 Midjourney + Cursor + ChatGPT",
+    toolCount: 3
+  },
+  {
+    title: "客户支持自动化",
+    description: "工单分类 → 草拟回复 → 人工审核，使用 ChatGPT + Claude + Make",
+    toolCount: 3
+  },
+  {
+    title: "数据分析流水线",
+    description: "原始数据 → 清洗 → 可视化 → 报告，使用 ChatGPT Code Interpreter + Claude",
+    toolCount: 2
+  },
+  {
+    title: "视频制作套件",
+    description: "脚本 → 配音 → 剪辑 → 字幕，使用 Claude + ElevenLabs + Runway + Descript",
+    toolCount: 4
+  }
+];
+---
+
+<BaseLayout
+  title="AI 工作流 - 预构建的多工具自动化工作流"
+  description="预构建的多工具工作流，自动化你的日常任务。结合 ChatGPT、Claude、Midjourney、ElevenLabs 等工具。"
+>
+  <div class="page-container">
+    <h1 class="page-title">AI 工作流</h1>
+    <p class="page-lede">预构建的多工具工作流，自动化你的日常任务。</p>
+
+    <div class="card-grid">
+      {workflows.map(w => (
+        <div class="list-card">
+          <div class="card-head">{w.title}</div>
+          <p class="card-desc">{w.description}</p>
+          <span>{w.toolCount} 款工具</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

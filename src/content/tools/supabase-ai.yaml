@@ -1,0 +1,24 @@
+name:
+  en: Supabase AI
+  zh: Supabase AI
+short_desc:
+  en: AI-enhanced database
+  zh: AI 增强数据库
+long_desc:
+  en: Open-source Firebase alternative with AI vector search
+cat: code
+url: https://supabase.com
+icon: fa-database
+scenes:
+  en:
+  - backend
+  - vector-search
+  - database
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

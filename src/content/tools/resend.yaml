@@ -1,0 +1,24 @@
+name:
+  en: Resend
+  zh: Resend
+short_desc:
+  en: Developer email API
+  zh: 开发者邮件 API
+long_desc:
+  en: Modern email API with React templates and AI content
+cat: productivity
+url: https://resend.com
+icon: fa-envelope
+scenes:
+  en:
+  - email
+  - api
+  - dev
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

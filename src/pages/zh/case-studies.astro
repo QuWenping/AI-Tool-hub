@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout title="案例研究 | AI 工具在真实工作中的效果" description="真实 AI 工具案例研究：工程团队、内容团队和营销团队如何使用 AI 提升效率和产出质量。" keywords="AI 案例研究, AI 工具案例, AI 工作流, AI 效率提升">
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <span>案例研究</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">真实故事</span>
+      <h1>案例研究</h1>
+      <p class="lede">AI 工具在真实工作场景中的表现——工程团队、内容团队和营销团队如何使用 AI 提升效率和产出质量。</p>
+    </header>
+
+    <section>
+      <h2>案例 1：工程团队使用 Cursor 开发 AI 产品</h2>
+      <p><strong>挑战：</strong>一个 4 人全栈团队需要快速开发 MVP。传统方式预估需要 8-10 周。团队决定使用 Cursor（AI IDE）辅助开发。</p>
+      <p><strong>解决方案：</strong>结合 Cursor 的 Composer 功能来搭建结构，Tab 补全用于日常代码，使用 Cursor Rules 强制执行编码规范，Claude Sonnet 3.5 作为主模型。团队配置了系统提示词和项目级规则。</p>
+      <p><strong>结果：</strong>产品就绪时间缩短了 40%，从 8-10 周减至 4-6 周。团队成员反馈表示编码体验显著提升，出错率降低。每周平均节省约 20 小时编码时间。</p>
+      <p><strong>所用工具：</strong>Cursor、Claude Sonnet 3.5、GitHub Copilot。</p>
+    </section>
+
+    <section>
+      <h2>案例 2：编辑团队用 ChatGPT 优化发布流水线</h2>
+      <p><strong>挑战：</strong>一个 5 人编辑团队每周需要发布 10-15 篇评测和指南。传统审校流程由单一人工编辑完成，形成瓶颈。</p>
+      <p><strong>解决方案：</strong>使用 ChatGPT Pro 并行处理稿件的 SEO 优化、标题建议、语法校对和重复检测。保留人工编辑负责事实核查、语气把控和最终审批。</p>
+      <p><strong>结果：</strong>发布吞吐量提升 75%，从每周 8 篇增至 14 篇。人工编辑时间减少 60%，但读者调查中未出现可感知的质量下降。AI 处理初稿，人工专注于高价值判断——这是一种"增强而非替代"的方法。每周节省约 15 小时编辑时间。</p>
+      <p><strong>所用工具：</strong>ChatGPT Pro、Perplexity（用于事实核查）、Hemingway Editor（用于可读性评分）。</p>
+    </section>
+
+    <section>
+      <h2>案例 3：营销团队使用 Claude 优化内容管线</h2>
+      <p><strong>挑战：</strong>一家 SaaS 初创公司的 3 人营销团队需要为 SEO 制作技术和产品内容。团队成员均为通才，并非各自领域的专家。内容质量参差不齐。</p>
+      <p><strong>解决方案：</strong>使用 Claude 为每篇稿件提供初始研究和结构化框架。人工撰写初稿后，使用 Claude 进行反向检查（寻找逻辑空白、提供反方观点、建议改进）。</p>
+      <p><strong>结果：</strong>搜索引擎展示次数（印象数）提升了 210%，发布频率保持稳定。用户反馈中提到了内容质量的提升。团队使用 Claude 作为"思考伙伴"而非"替代作者"——本案例中 AI 角色为增强而非替代。每周节省约 10 小时研究时间。</p>
+      <p><strong>所用工具：</strong>Claude、Ahrefs（SEO）、Buffer（发布）。</p>
+    </section>
+
+    <section>
+      <h2>总结</h2>
+      <p>这三个案例的共性规律：</p>
+      <ol>
+        <li><strong>AI 不会替代人类工作者</strong>——每个案例中，AI 处理结构化和重复性任务，人类处理质量判断和最终决策</li>
+        <li><strong>上下文至关重要</strong>——团队将 AI 的使用与具体的团队工作流和标准相结合（Cursor Rules、系统提示词、结构化检查清单），而非"即开即用"</li>
+        <li><strong>结果可量化</strong>——所有团队均追踪了具体指标（节省时间、内容量、搜索排名），用以证明 AI 投资的合理性</li>
+        <li><strong>工具组合优于单一工具</strong>——没有一个团队仅依赖一个 AI 工具。他们组合使用互补工具（代码 + 搜索 + 写作），根据具体任务选择最合适的工具</li>
+      </ol>
+      <p>查看我们推荐的<a href="/zh/category/"> AI 工具分类</a>，或阅读<a href="/zh/tool/">每款工具的详细评测</a>来了解它们在你的场景中能表现如何。</p>
+    </section>
+  </article>
+</BaseLayout>

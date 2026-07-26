@@ -1,0 +1,24 @@
+name:
+  en: Sudowrite
+  zh: Sudowrite
+short_desc:
+  en: AI fiction writing
+  zh: AI 小说写作
+long_desc:
+  en: AI assistant for fiction writers with plot and character tools
+cat: text
+url: https://sudowrite.com
+icon: fa-book
+scenes:
+  en:
+  - fiction
+  - creative
+  - story
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

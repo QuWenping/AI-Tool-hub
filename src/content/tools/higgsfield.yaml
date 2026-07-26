@@ -1,0 +1,24 @@
+name:
+  en: Higgsfield
+  zh: Higgsfield
+short_desc:
+  en: AI video creation platform
+  zh: AI 视频创作平台
+long_desc:
+  en: Cinematic AI video creation with camera control
+cat: video
+url: https://higgsfield.ai
+icon: fa-video
+scenes:
+  en:
+  - video
+  - cinematic
+  - camera
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

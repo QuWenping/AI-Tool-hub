@@ -1,0 +1,24 @@
+name:
+  en: LOVO AI
+  zh: LOVO AI
+short_desc:
+  en: AI voiceover platform
+  zh: AI 配音平台
+long_desc:
+  en: Professional AI voiceover with 500+ voices
+cat: audio
+url: https://lovo.ai
+icon: fa-microphone
+scenes:
+  en:
+  - voice
+  - voiceover
+  - commercial
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

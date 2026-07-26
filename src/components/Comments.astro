@@ -9,6 +9,7 @@
  * 3. Replace repo / repoId / category / categoryId below
  */
 const { lang = "en" } = Astro.props;
+const isZh = lang === "zh";
 
 // Theme auto-switches based on current theme
 const lightTheme = "light";
@@ -38,8 +39,9 @@ const giscusConfig = {
 };
 ---
 <section class="comments-section">
-  <h2 data-i18n-en="Comments">Comments</h2>
-  <p class="comments-desc" data-i18n-en="Discuss this article. Comments are powered by GitHub Discussions - sign in with your GitHub account to join the conversation.">Discuss this article. Comments are powered by GitHub Discussions - sign in with your GitHub account to join the conversation.</p>
+  <h2>{isZh ? "评论" : "Comments"}</h2>
+  <p class="comments-desc">{isZh ? "讨论本文。评论由 GitHub Discussions 驱动——使用 GitHub 账号登录即可参与。"
+    : "Discuss this article. Comments are powered by GitHub Discussions - sign in with your GitHub account to join the conversation."}</p>
   <script
     src="https://giscus.app/client.js"
     data-repo={giscusConfig["data-repo"]}
@@ -58,7 +60,7 @@ const giscusConfig = {
     async={giscusConfig.async}
   ></script>
   <noscript>
-    <p class="comments-fallback" data-i18n-en="Please enable JavaScript to view comments.">Please enable JavaScript to view comments.</p>
+    <p class="comments-fallback">{isZh ? "请启用 JavaScript 查看评论。" : "Please enable JavaScript to view comments."}</p>
   </noscript>
 </section>
 

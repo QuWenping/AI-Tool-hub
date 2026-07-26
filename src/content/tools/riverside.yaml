@@ -1,0 +1,48 @@
+name:
+  en: Riverside
+  zh: Riverside
+short_desc:
+  en: AI-powered podcast and video recording + editing platform
+  zh: AI 驱动的播客和视频录制 + 编辑平台
+long_desc:
+  en: >-
+    Riverside is an AI-powered platform to record, edit, repurpose, and distribute studio-quality content as easily as if
+    you had a crew behind you.
+cat: audio
+url: https://riverside.fm
+icon: fa-microphone-lines
+scenes:
+  en:
+  - Podcast recording
+  - Video recording
+  - AI editing
+  - Distribution
+pros:
+  en:
+  - HD recording
+  - AI editing
+  - All-in-one
+  - Usable free
+cons:
+  en:
+  - Advanced paid
+  - Limited Chinese
+target_audience:
+  en:
+  - Podcasters
+  - YouTubers
+  - Marketing
+use_cases:
+  en:
+  - Podcasts
+  - Video
+  - Transcription
+  - Editing
+features:
+  en:
+  - HD recording
+  - AI transcription
+  - AI editing
+  - Distribution
+example:
+  en: 'Example: Record podcast → AI auto-transcribe+edit+generate short clips.'

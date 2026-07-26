@@ -1,0 +1,24 @@
+name:
+  en: ContentBot
+  zh: ContentBot
+short_desc:
+  en: AI content generation
+  zh: AI 内容生成
+long_desc:
+  en: AI article generation, summarization and rewriting
+cat: text
+url: https://contentbot.ai
+icon: fa-robot
+scenes:
+  en:
+  - content
+  - article
+  - generation
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

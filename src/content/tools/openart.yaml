@@ -1,0 +1,24 @@
+name:
+  en: OpenArt AI
+  zh: OpenArt AI
+short_desc:
+  en: AI image generation and editing
+  zh: AI 图像生成和编辑
+long_desc:
+  en: AI image generation with multiple models and styles
+cat: image
+url: https://openart.ai
+icon: fa-image
+scenes:
+  en:
+  - image
+  - editing
+  - creative
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

@@ -10,11 +10,20 @@ import IndustryStack from "../../components/ui/IndustryStack.astro";
 import SolutionSection from "../../components/ui/SolutionSection.astro";
 import ToolFAQ from "../../components/ui/ToolFAQ.astro";
 
+import { getTranslations } from "../../utils/i18n";
 export async function getStaticPaths() {
   return solutions.map(s => ({ params: { slug: s.slug }, props: { solution: s } }));
 }
 
 const { solution } = Astro.props;
+const pageLang = Astro.currentLocale || "en";
+const t = getTranslations("solutions", pageLang);
+
+
+function _td(obj, fallback) {
+  if (typeof obj === "object" && obj !== null) return obj[pageLang] || obj["en"] || fallback || "";
+  return obj || fallback || "";
+}
 
 const categoryLabels = { text: "Writing", image: "Image", code: "Coding", video: "Video", audio: "Audio", productivity: "Productivity" };
 
@@ -45,7 +54,7 @@ const relatedSolutions = relatedSolutionSlugs
 
 const taxonomyMap = new Map((taxonomy.tags || []).map(t => [t.slug, t]));
 const industryTagBadges = (solution.industryTags || [])
-  .map(t => taxonomyMap.get(t))
+  .map(slug => taxonomyMap.get(slug))
   .filter(Boolean);
 
 const siteUrl = "https://thebestaitoolsreview.com";
@@ -53,21 +62,21 @@ const pageUrl = `${siteUrl}/solutions/${solution.slug}/`;
 const updatedAt = solution.updatedAt || "2026-07-20";
 
 const tlDrItems = [
-  solution.audience?.en || `${solution.industry} teams applying AI.`,
-  `Recommended stack: ${stackTools.length} tools (${stackTools.slice(0,3).map(t => t.name).join(", ") || "curated"})`,
-  `Task areas covered: ${(solution.sections || []).length}`,
-  `Last reviewed: ${updatedAt}`
+  solution.audience?.zh && pageLang === "zh" ? solution.audience.zh : (solution.audience?.en || `${solution.industry} teams applying AI.`),
+  pageLang === "zh" ? `推荐技术栈：${stackTools.length} 款工具（${stackTools.slice(0,3).map(t => t.name).join(", ") || "精选"}）` : `Recommended stack: ${stackTools.length} tools (${stackTools.slice(0,3).map(t => t.name).join(", ") || "curated"})`,
+  pageLang === "zh" ? `覆盖任务领域：${(solution.sections || []).length} 个` : `Task areas covered: ${(solution.sections || []).length}`,
+  pageLang === "zh" ? `最后审查：${updatedAt}` : `Last reviewed: ${updatedAt}`
 ];
 
-const seoTitle = `Best AI Tools for ${solution.industry} in 2026: Stack & Use Cases`;
-const seoDescription = (solution.description || `Recommended AI stack and use cases for ${solution.industry.toLowerCase()} in 2026.`).slice(0, 158);
+const seoTitle = pageLang === "zh" ? `${solution.industry} 最佳 AI 工具：技术栈与用例` : `Best AI Tools for ${solution.industry} in 2026: Stack & Use Cases`;
+const seoDescription = (_td(solution.description) || `AI stack for ${solution.industry.toLowerCase()}.`).slice(0, 158);
 
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: siteUrl + "/" },
-    { "@type": "ListItem", position: 2, name: "Solutions", item: siteUrl + "/solutions/" },
+    { "@type": "ListItem", position: 1, name: t("home"), item: siteUrl + "/" },
+    { "@type": "ListItem", position: 2, name: t("breadcrumbSolutions"), item: siteUrl + "/solutions/" },
     { "@type": "ListItem", position: 3, name: solution.industry, item: pageUrl }
   ]
 };
@@ -75,15 +84,15 @@ const breadcrumbSchema = {
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: solution.title,
-  description: solution.description,
+  headline: _td(solution.title),
+  description: _td(solution.description),
   url: pageUrl,
   mainEntityOfPage: pageUrl,
   author: { "@type": "Organization", name: "AI Tool Hub Editorial", url: siteUrl },
   publisher: { "@type": "Organization", name: "AI Tool Hub", url: siteUrl, logo: { "@type": "ImageObject", url: siteUrl + "/logo.svg" } },
   datePublished: updatedAt,
   dateModified: updatedAt,
-  inLanguage: "en"
+  inLanguage: pageLang === "zh" ? "zh" : "en"
 };
 
 const itemListSchema = stackTools.length > 0 ? {
@@ -116,8 +125,8 @@ const bestRankingHref = {
   </Fragment>
   <article class="solution-detail">
     <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <a href="/">Home</a> &rsaquo;
-      <a href="/solutions/">Solutions</a> &rsaquo;
+      <a href="/">{t("home")}</a> &rsaquo;
+      <a href="/solutions/">{t("breadcrumbSolutions")}</a> &rsaquo;
       <span>{solution.industry}</span>
     </nav>
 
@@ -128,13 +137,13 @@ const bestRankingHref = {
           {industryTagBadges.map(tag => (
             <span class="industry-tag">{tag.label?.en || tag.slug}</span>
           ))}
-          <span class="solution-hero-updated">Updated {updatedAt}</span>
+          <span class="solution-hero-updated">{pageLang === "zh" ? `更新于 ${updatedAt}` : `Updated ${updatedAt}`}</span>
         </div>
-        <h1>{solution.title}</h1>
-        {solution.description && <p class="solution-hero-summary">{solution.description}</p>}
+        <h1>{_td(solution.title)}</h1>
+        {solution.description && <p class="solution-hero-summary">{_td(solution.description)}</p>}
         <div class="solution-hero-cta">
-          <a class="solution-hero-btn primary" href="#recommended-stack">See recommended stack</a>
-          {bestRankingHref && <a class="solution-hero-btn secondary" href={bestRankingHref}>Compare individual tools →</a>}
+          <a class="solution-hero-btn primary" href="#recommended-stack">{t("seeRecommendedStack")}</a>
+          {bestRankingHref && <a class="solution-hero-btn secondary" href={bestRankingHref}>{t("compareIndividualTools")}</a>}
         </div>
       </div>
     </header>
@@ -146,14 +155,14 @@ const bestRankingHref = {
     <section id="recommended-stack" class="solution-anchor">
       <IndustryStack
         tools={stackTools}
-        heading={`Recommended AI stack for ${solution.industry.toLowerCase()}`}
-        kicker="Recommended Stack"
+        heading={pageLang === "zh" ? `适用于 ${solution.industry.toLowerCase()} 的推荐 AI 技术栈` : `Recommended AI stack for ${solution.industry.toLowerCase()}`}
+        kicker={t("recommendedStackKicker")}
       />
     </section>
 
     {(solution.sections || []).length > 0 && (
       <section class="solution-tasks">
-        <h2>Task areas and recommended tools</h2>
+        <h2>{t("taskAreasHeading")}</h2>
         {(solution.sections || []).map(sec => (
           <SolutionSection
             heading={sec.heading}
@@ -165,35 +174,35 @@ const bestRankingHref = {
     )}
 
     <section class="solution-adoption">
-      <h2>How to adopt this stack</h2>
+      <h2>{t("howToAdoptHeading")}</h2>
       <ol class="adoption-path">
-        <li><strong>Start.</strong> Pick one general assistant from the stack, use it daily for two weeks, and standardize prompts your team can reuse.</li>
-        <li><strong>Automate.</strong> Add one automation tool (n8n or Make) and move a single repetitive workflow first, then expand.</li>
-        <li><strong>Govern.</strong> Store standards, brand voice and safety rules in a shared knowledge base (Notion AI or Dify). Keep a human in the loop for decisions with legal, safety or client impact.</li>
+        <li><strong>{t("startStep")}</strong> {t("startDesc")}</li>
+        <li><strong>{t("automateStep")}</strong> {t("automateDesc")}</li>
+        <li><strong>{t("governStep")}</strong> {t("governDesc")}</li>
       </ol>
     </section>
 
     <section class="solution-safety">
-      <h2>Safety, ethics and disclosure</h2>
+      <h2>{t("safetyHeading")}</h2>
       <ul>
-        <li>AI outputs must be verified against source documents or standards before being acted on.</li>
-        <li>For regulated or safety-critical decisions, licensed professionals remain accountable.</li>
-        <li>Do not upload confidential client data to consumer AI products; use enterprise plans with training turned off, or self-hosted alternatives.</li>
+        <li>{t("safety1")}</li>
+        <li>{t("safety2")}</li>
+        <li>{t("safety3")}</li>
       </ul>
     </section>
 
-    <ToolFAQ faqs={faqList} heading="Frequently asked questions" />
+    <ToolFAQ faqs={faqList} heading={t("faqHeading")} />
 
     {relatedSolutions.length > 0 && (
       <section class="solution-related">
-        <h2>Related solution pages</h2>
+        <h2>{t("relatedHeading")}</h2>
         <div class="related-grid">
           {relatedSolutions.map(r => (
             <a class="related-card" href={`/solutions/${r.slug}/`}>
               <div class="related-icon" aria-hidden="true"><i class={`fas ${r.icon || "fa-briefcase"}`}></i></div>
               <div>
-                <h3>{r.title}</h3>
-                {r.description && <p>{r.description}</p>}
+                <h3>{_td(r.title)}</h3>
+                {r.description && <p>{_td(r.description)}</p>}
               </div>
             </a>
           ))}
@@ -203,10 +212,10 @@ const bestRankingHref = {
 
     <section class="solution-cta">
       <div>
-        <h2>Not sure which tools to start with?</h2>
-        <p>Run the AI Stack Builder for a 3-step, budget-aware recommendation drawn from real tools in this directory.</p>
+        <h2>{t("notSureHeading")}</h2>
+        <p>{t("notSureDesc")}</p>
       </div>
-      <a class="solution-hero-btn primary" href="/#finder">Open the AI Stack Builder →</a>
+      <a class="solution-hero-btn primary" href="/#finder">{t("openStackBuilder")}</a>
     </section>
   </article>
 </BaseLayout>

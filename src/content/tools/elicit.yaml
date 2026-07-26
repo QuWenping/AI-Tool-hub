@@ -1,0 +1,58 @@
+name:
+  en: Elicit
+  zh: Elicit
+short_desc:
+  en: AI research assistant, automated literature review
+  zh: AI 研究助手，自动化文献综述
+long_desc:
+  en: >-
+    Elicit helps researchers auto-search papers, extract data, and do literature reviews; a research powerhouse.
+cat: productivity
+url: https://elicit.com
+icon: fa-magnifying-glass
+scenes:
+  en:
+  - Literature search
+  - Data extraction
+  - Reviews
+  - Paper analysis
+  zh:
+  - 文献综述
+  - 学术研究
+  - 论文检索
+  - 证据提取
+pros:
+  en:
+  - Academic-specific
+  - Auto data extraction
+  - Citation management
+  zh:
+  - 仅引用学术来源可信度高
+  - 自动提取论文关键发现
+  - 文献综述表格生成
+cons:
+  en:
+  - English papers only
+  - High price
+  zh:
+  - 非 STEM 领域覆盖较弱
+  - 中文论文覆盖不足
+target_audience:
+  en:
+  - Researchers
+  - Students
+  - Academics
+use_cases:
+  en:
+  - Lit review
+  - Data extraction
+  - Paper analysis
+  - Research
+features:
+  en:
+  - Paper search
+  - Data extraction
+  - Review gen
+  - Citations
+example:
+  en: 'Example: Search ''AI in education'' and extract key data from 20 papers.'

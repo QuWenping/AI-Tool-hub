@@ -1,0 +1,60 @@
+name:
+  en: Murf
+  zh: Murf
+short_desc:
+  en: AI voiceover studio for teams
+  zh: 面向团队的 AI 配音工作室
+long_desc:
+  en: >-
+    Murf offers natural voices and a collaborative studio for explainer and training videos.
+cat: audio
+url: https://murf.ai
+icon: fa-microphone
+scenes:
+  en:
+  - Explainers
+  - Training
+  - Ad voiceover
+  - Podcasts
+  zh:
+  - 团队配音协作
+  - 在线教育
+  - 企业培训
+  - 广告配音
+pros:
+  en:
+  - Natural voices
+  - Team collab
+  - Timeline editor
+  zh:
+  - 团队协作功能出色
+  - 语音库丰富
+  - 版本控制实用
+cons:
+  en:
+  - Mid-high price
+  - Cloning pricey
+  - Limited CN voices
+  zh:
+  - 语音质量略逊 ElevenLabs
+  - 中文声音自然度有待提升
+target_audience:
+  en:
+  - L&D
+  - Marketing
+  - Video makers
+  - Podcasters
+use_cases:
+  en:
+  - Explainers
+  - Training
+  - Ads
+  - Podcasts
+features:
+  en:
+  - TTS
+  - Timeline
+  - Collab
+  - Voice library
+example:
+  en: 'Example: Add natural narration to a product explainer.'

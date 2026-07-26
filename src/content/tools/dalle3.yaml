@@ -1,0 +1,135 @@
+name:
+  en: DALL-E 3
+  zh: DALL·E 3
+short_desc:
+  en: OpenAI AI image generator
+  zh: OpenAI AI 图像生成器
+long_desc:
+  en: >-
+    DALL-E 3 is integrated into ChatGPT Plus; best at following literal text prompts, easy to use.
+cat: image
+url: https://openai.com/dall-e-3
+icon: fa-image
+scenes:
+  en:
+  - Image gen
+  - Illustration
+  - Presentation
+  - Social
+pros:
+  en:
+  - Best prompt adherence
+  - ChatGPT integrated
+  - Easy to use
+  zh:
+  - 提示词依从性最佳
+  - ChatGPT 原生集成
+  - 上手简单
+cons:
+  en:
+  - ChatGPT Plus only
+  - Less artistic than MJ
+  - Strict filters
+  zh:
+  - 仅限 ChatGPT Plus
+  - 艺术性不如 Midjourney
+  - 内容过滤严格
+target_audience:
+  en:
+  - Non-designers
+  - Marketing
+  - Creators
+  zh:
+  - 非设计师
+  - 营销
+  - 创作者
+use_cases:
+  en:
+  - Illustration
+  - Social
+  - Presentations
+  - Creative
+  zh:
+  - 插图
+  - 社交媒体
+  - 演示文稿
+  - 创意
+features:
+  en:
+  - Text-to-image
+  - ChatGPT integrated
+  - Prompt adherence
+  - Easy
+  zh:
+  - 文生图
+  - ChatGPT 集成
+  - 提示词依从
+  - 易用
+example:
+  en: 'Example: ''a cat wearing a space helmet'' → precise generation.'
+  zh: 示例：'一只戴太空头盔的猫' → 精准生成。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: integrated image generation (2025-11 API)
+score: 8.7
+overall_score: 8.7
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+  - API
+pricingSummary:
+  en: >-
+    Pay-per-image: Standard 1024x1024 at $0.040/image, HD at $0.080/image; included in ChatGPT Plus ($20/mo) with daily limits.
+faq:
+- q_en: What makes integrated image generation better than DALL-E 2?
+  a_en: >-
+    integrated image generation dramatically improves prompt adherence—it follows complex instructions with multiple objects,
+    spatial relationships, and text rendering that DALL-E 2 often misinterpreted. It also integrates natively with ChatGPT
+    for conversational refinement, generates readable text within images, and produces more coherent multi-object scenes.
+- q_en: How much does integrated image generation cost?
+  a_en: >-
+    integrated image generation is available through ChatGPT Plus ($20/month) with daily generation limits. For API access,
+    pricing is per-image: Standard quality 1024x1024 at approximately $0.040, HD at $0.080. Volume discounts apply for enterprise
+    customers. The free ChatGPT tier allows 2 images per day.
+- q_en: Can integrated image generation generate text in images?
+  a_en: >-
+    Yes, integrated image generation is one of the few AI image generators that reliably produces readable, contextually accurate
+    text within images. It handles signs, logos, book titles, and short phrases. However, longer paragraphs or very small
+    text may still contain minor artifacts or spelling errors at the edges.
+- q_en: Does integrated image generation have an API?
+  a_en: >-
+    Yes, integrated image generation is available through the OpenAI Images API. Developers can generate images programmatically
+    with parameters for quality (standard/hd), size (1024x1024, 1792x1024, 1024x1792), and style (vivid/natural). All API-generated
+    images include C2PA metadata for provenance tracking.
+- q_en: Can I use integrated image generation images commercially?
+  a_en: >-
+    Yes, OpenAI grants full commercial usage rights for images generated via the API and ChatGPT. You own the images you create
+    and can use them for commercial purposes including merchandise, marketing, and book illustrations. However, you cannot
+    claim copyright over AI-generated images in most jurisdictions.
+- q_en: What image sizes does integrated image generation support?
+  a_en: >-
+    integrated image generation supports three aspect ratios: square 1024x1024, widescreen 1792x1024, and portrait 1024x1792.
+    These sizes provide flexibility for social media posts, website banners, and print materials. There is no upscaling or
+    higher resolution option natively; post-processing is needed for larger prints.
+- q_en: How does integrated image generation compare to Midjourney?
+  a_en: >-
+    integrated image generation excels at prompt understanding, text generation, and conversational iteration through ChatGPT.
+    Midjourney leads in photorealism, artistic aesthetics, and community-driven style exploration. integrated image generation
+    is better for precise, literal outputs; Midjourney is better for creative, atmospheric, and visually stunning results.
+- q_en: Can integrated image generation edit existing images?
+  a_en: >-
+    integrated image generation itself does not have native inpainting/outpainting in the ChatGPT interface. However, the
+    OpenAI API provides edit and variation endpoints for DALL-E 2 that work with uploaded images. For advanced editing, current-generation
+    models with vision (ChatGPT) can analyze images and generate new ones based on descriptions of desired changes.
+- q_en: Is integrated image generation safe for work environments?
+  a_en: >-
+    Yes, integrated image generation has robust content moderation that prevents generation of violent, hateful, or adult
+    content. It refuses prompts involving public figures and photorealistic faces of real individuals. For enterprise use,
+    OpenAI offers additional moderation controls and usage monitoring through the API dashboard.
+- q_en: What is the integrated image generation style parameter?
+  a_en: >-
+    The API offers two style presets: 'vivid' (default) generates hyper-real and dramatic images with enhanced colors and
+    lighting, while 'natural' produces more subdued, realistic-looking images closer to a natural photograph. Vivid works
+    best for marketing visuals; natural is preferred for documentation and reference images.

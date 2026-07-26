@@ -1,0 +1,57 @@
+name:
+  en: Uizard
+  zh: Uizard
+short_desc:
+  en: AI UI design tool, sketch to mockup
+  zh: AI UI 设计工具，草图转原型
+long_desc:
+  en: >-
+    Uizard turns hand-drawn sketches or text descriptions into editable UI mockups, great for quick prototyping.
+cat: image
+url: https://uizard.io
+icon: fa-pen-ruler
+scenes:
+  en:
+  - UI prototypes
+  - Sketch-to-design
+  - Landing pages
+  zh:
+  - UI 原型
+  - 草图数字化
+  - 快速设计
+  - 产品演示
+pros:
+  en:
+  - Sketch recognition
+  - Fast mockups
+  - Editable
+  zh:
+  - 草图转原型独一无二
+  - 截图转设计实用
+  - 上手简单
+cons:
+  en:
+  - Limited precision
+  - Paid export
+  zh:
+  - 不如 Figma 专业
+  - 设计自由度有限
+target_audience:
+  en:
+  - PMs
+  - Founders
+  - Designers
+use_cases:
+  en:
+  - UI protos
+  - Landing
+  - Demos
+  - Mockups
+features:
+  en:
+  - Sketch-to-UI
+  - Text-to-design
+  - Templates
+  - Editable
+example:
+  en: 'Example: Sketch a login page → auto-generate UI mockup.'

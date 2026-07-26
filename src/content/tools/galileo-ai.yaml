@@ -1,0 +1,46 @@
+name:
+  en: Galileo AI
+  zh: Galileo AI
+short_desc:
+  en: AI UI design generator
+  zh: AI UI 设计生成器
+long_desc:
+  en: >-
+    Galileo AI generates editable UI mockups from text descriptions; great for rapid prototyping.
+cat: image
+url: https://www.usegalileo.ai
+icon: fa-vector-square
+scenes:
+  en:
+  - UI design
+  - Prototypes
+  - Text-to-UI
+  - Mockups
+pros:
+  en:
+  - Text-to-UI
+  - Editable
+  - Beautiful design
+cons:
+  en:
+  - Young tool
+  - Limited export
+target_audience:
+  en:
+  - PMs
+  - Designers
+  - Founders
+use_cases:
+  en:
+  - UI protos
+  - Mockups
+  - Demos
+  - Product
+features:
+  en:
+  - Text-to-UI
+  - Editable
+  - Templates
+  - Export
+example:
+  en: 'Example: ''dashboard for analytics app'' → UI mockup.'

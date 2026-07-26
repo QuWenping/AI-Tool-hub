@@ -1,0 +1,24 @@
+name:
+  en: BHuman
+  zh: BHuman
+short_desc:
+  en: AI personalized video
+  zh: AI 个性化视频
+long_desc:
+  en: Generate personalized videos for each customer
+cat: video
+url: https://bhuman.ai
+icon: fa-user
+scenes:
+  en:
+  - personalized
+  - marketing
+  - video
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

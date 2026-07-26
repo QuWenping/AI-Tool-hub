@@ -1,0 +1,140 @@
+name:
+  en: Codeium
+  zh: Codeium
+short_desc:
+  en: Free AI code completion, Copilot alternative
+  zh: 免费 AI 代码补全，Copilot 的替代品
+long_desc:
+  en: >-
+    Codeium offers free AI code completion and chat, supporting 70+ languages and major IDEs.
+cat: code
+url: https://codeium.com
+icon: fa-bolt
+scenes:
+  en:
+  - Code completion
+  - AI chat
+  - Multi-language
+  zh:
+  - 代码补全
+  - 免费编程助手
+  - 多语言开发
+  - IDE 内聊天
+pros:
+  en:
+  - Strong free tier
+  - 70+ languages
+  - Wide IDE support
+  zh:
+  - 个人永久免费
+  - 支持 70+ 编程语言
+  - 补全速度快
+cons:
+  en:
+  - Agent features paid
+  - Less multi-file than Cursor
+  zh:
+  - 补全质量略逊 Copilot
+  - 高级功能需要企业版
+target_audience:
+  en:
+  - Devs
+  - Students
+  - Budget-conscious
+  zh:
+  - 开发者
+  - 学生
+  - 预算敏感用户
+use_cases:
+  en:
+  - Daily completion
+  - Quick protos
+  - Learning
+  zh:
+  - 日常补全
+  - 快速原型
+  - 学习编程
+features:
+  en:
+  - Completion
+  - AI chat
+  - 70+ langs
+  - Free
+  zh:
+  - 代码补全
+  - AI 聊天
+  - 70+ 语言
+  - 免费
+example:
+  en: 'Example: Use Codeium to complete a Python function in VS Code.'
+  zh: 示例：在 VS Code 中使用 Codeium 补全 Python 函数。
+reviewed: true
+updatedAt: '2026-07-21'
+testedVersion: Codeium 2026 (Individual Free)
+score: 8.2
+overall_score: 8.2
+quickFacts:
+  freeTier: true
+  hasApi: false
+  platforms:
+  - VS Code
+  - JetBrains
+  - Neovim
+  - Vim
+  - Emacs
+  - Sublime
+  - Xcode
+  - Chrome DevTools
+  - Cursor
+  - Windsurf
+pricingSummary:
+  en: >-
+    Individual completion + chat: free forever · Teams $12/seat/mo (SSO + shared context) · Enterprise custom (self-hosted,
+    air-gapped).
+faq:
+- q_en: Is Codeium really free?
+  a_en: >-
+    Yes for individuals. Unlimited code completion and chat with no credit card. Team collaboration, SSO, and shared context
+    libraries move to the $12/seat/month plan.
+- q_en: How does Codeium make money if it is free?
+  a_en: >-
+    Enterprise deals: self-hosted deployments for banks, defense, healthcare and other regulated industries. The Windsurf
+    IDE also monetizes power users on top of the same Codeium core.
+- q_en: How does Codeium compare with GitHub Copilot?
+  a_en: >-
+    Autocomplete quality is close in 2026. Codeium wins on price (free vs $10/month), language breadth and IDE coverage (10+
+    IDEs). Copilot has richer chat and multi-file features and deeper GitHub integration.
+- q_en: Does Codeium train on my code?
+  a_en: >-
+    By default no — telemetry only. Enterprise plans add contractual zero-data-retention and on-prem deployment for teams
+    that cannot send code to the public cloud.
+- q_en: Which IDEs does Codeium support?
+  a_en: >-
+    VS Code, JetBrains suite, Neovim, Vim, Emacs, Sublime, Xcode, Android Studio, Eclipse and Chrome DevTools. Codeium's Windsurf
+    editor is a full VS Code fork built on the same engine.
+- q_en: Can Codeium do multi-file refactor like Cursor?
+  a_en: >-
+    The free extension focuses on completion + single-file chat. For repo-wide agentic edits, upgrade to Codeium's Windsurf
+    IDE, which unlocks Cascade multi-file agent runs.
+- q_en: How many languages does Codeium support?
+  a_en: >-
+    Officially 70+, including Python, TypeScript/JavaScript, Go, Rust, Java, C#, C/C++, Kotlin, Swift, PHP, Ruby, Elixir,
+    Lua, and shell dialects. Quality is highest on the top 20 languages.
+- q_en: Is Codeium good for students?
+  a_en: >-
+    Yes — the free tier is one of the best deals in AI coding right now. No credit card, unlimited completion, works in VS
+    Code and JetBrains which most CS courses already use.
+- q_en: Can Codeium run offline?
+  a_en: >-
+    Individual plans require the cloud service. Enterprise plans offer on-prem servers so the entire completion pipeline can
+    run inside your VPC or fully air-gapped network.
+- q_en: Is Codeium the same as Windsurf?
+  a_en: >-
+    Same company, different products. Codeium is the free IDE extension focused on completion and chat. Windsurf is the paid
+    AI-native IDE with agentic Cascade workflows built on top of Codeium's engine.
+scoreBreakdown:
+  user: 8.2
+  capability: 7
+  price: 10
+  growth: 6
+  trust: 8

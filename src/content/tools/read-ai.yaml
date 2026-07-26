@@ -1,0 +1,58 @@
+name:
+  en: Read AI
+  zh: Read AI
+short_desc:
+  en: AI meeting analyzer, auto-summary + sentiment
+  zh: AI 会议分析，自动摘要 + 情绪分析
+long_desc:
+  en: >-
+    Read AI auto-joins meetings, generates summaries, action items, and participant sentiment analysis.
+cat: productivity
+url: https://read.ai
+icon: fa-eye
+scenes:
+  en:
+  - Meeting summary
+  - Action items
+  - Sentiment
+  - Reports
+  zh:
+  - 会议分析
+  - 团队效率
+  - 情绪跟踪
+  - 参与度监测
+pros:
+  en:
+  - Auto-join
+  - Sentiment analysis
+  - Detailed reports
+  zh:
+  - 会议效率分析独特
+  - 参与度和情绪指标有用
+  - 免费版可用
+cons:
+  en:
+  - Privacy concerns
+  - Weak Chinese
+  zh:
+  - 分析维度有时过度
+  - 中文会议分析不如英文
+target_audience:
+  en:
+  - Professionals
+  - Remote teams
+  - Managers
+use_cases:
+  en:
+  - Meetings
+  - Reports
+  - Actions
+  - Analysis
+features:
+  en:
+  - Meeting summary
+  - Actions
+  - Sentiment
+  - Auto-join
+example:
+  en: 'Example: Auto-generate summary+actions+sentiment for a 30-min meeting.'

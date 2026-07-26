@@ -1,0 +1,33 @@
+name:
+  en: LlamaIndex
+  zh: LlamaIndex
+short_desc:
+  en: Data framework for LLM applications and agents
+  zh: LLM 应用和智能体的数据框架
+long_desc:
+  en: >-
+    LlamaIndex is a leading framework for connecting private data with LLMs, providing data connectors, indexing, retrieval,
+    and agent tools. Supports 100+ data source integrations with out-of-the-box RAG pipelines. Ideal for building knowledge-enhanced
+    AI applications.
+cat: productivity
+url: https://www.llamaindex.ai
+icon: fa-database
+scenes:
+  en:
+  - RAG applications
+  - Knowledge base Q&A
+  - Data indexing
+  - Enterprise search
+pros:
+  en:
+  - 100+ data source connectors
+  - Mature and stable RAG pipelines
+  - Rich agent tools
+  - LlamaCloud provides managed service
+cons:
+  en:
+  - Many concepts, steep learning curve
+  - Some advanced features require payment
+  - Feature overlap with LangChain
+pricing:
+  en: Open source + LlamaCloud paid service

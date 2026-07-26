@@ -1,0 +1,24 @@
+name:
+  en: Zotero AI
+  zh: Zotero AI
+short_desc:
+  en: AI research assistant
+  zh: AI 研究助手
+long_desc:
+  en: AI-enhanced Zotero for research management
+cat: research
+url: https://zotero.org
+icon: fa-book
+scenes:
+  en:
+  - references
+  - research
+  - management
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

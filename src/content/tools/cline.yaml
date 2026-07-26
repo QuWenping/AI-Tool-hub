@@ -1,0 +1,144 @@
+name:
+  en: Cline
+  zh: Cline
+short_desc:
+  en: Autonomous coding agent for VS Code
+  zh: VS Code 中的自主编程智能体
+long_desc:
+  en: >-
+    Cline is an autonomous coding agent as a VS Code extension, running multi-step tasks in your terminal - open source.
+cat: code
+url: https://cline.bot
+icon: fa-code
+scenes:
+  en:
+  - Multi-file refactor
+  - Feature build
+  - Debugging
+  - Scaffolding
+  zh:
+  - 自主编程
+  - 功能实现
+  - 代码重构
+  - 自动化任务
+pros:
+  en:
+  - Autonomous steps
+  - Open source
+  - BYO model
+  - Terminal exec
+  zh:
+  - 高度自主可完成多步骤任务
+  - 免费开源
+  - VS Code 原生集成
+  - 可自选模型
+cons:
+  en:
+  - Needs your model API
+  - Token-heavy
+  - Review each step
+  zh:
+  - 需要自行管理 API 费用
+  - 自主模式下可能出错
+  - Token 消耗较大
+target_audience:
+  en:
+  - Devs
+  - Engineers
+  - Indie devs
+  - Tinkerers
+  zh:
+  - 开发者
+  - 工程师
+  - 独立开发者
+  - 技术爱好者
+use_cases:
+  en:
+  - Refactor
+  - Feature build
+  - Debugging
+  - Scaffolding
+  zh:
+  - 重构
+  - 功能开发
+  - 调试
+  - 脚手架搭建
+features:
+  en:
+  - Autonomous agent
+  - Terminal exec
+  - Multi-model
+  - Open source
+  zh:
+  - 自主 Agent
+  - 终端执行
+  - 多模型
+  - 开源
+example:
+  en: 'Example: Have Cline implement a feature from an issue and open a PR.'
+  zh: 示例：让 Cline 根据 Issue 实现功能并提交 PR。
+reviewed: true
+updatedAt: '2026-07-21'
+testedVersion: Cline 3.x (2026)
+score: 8.4
+overall_score: 8.4
+quickFacts:
+  freeTier: true
+  hasApi: false
+  platforms:
+  - VS Code
+  - Cursor
+  - Windsurf
+  - JetBrains (via Roo Code fork)
+pricingSummary:
+  en: >-
+    Extension itself is free and open-source; you pay only for the model API you choose (Claude Sonnet 4/OpenRouter/DeepSeek/local
+    via Ollama). Typical Sonnet 4 spend: $5–40/mo per developer.
+faq:
+- q_en: What exactly is Cline?
+  a_en: >-
+    A free, open-source VS Code extension that turns any LLM into an autonomous coding agent — it reads your workspace, proposes
+    edits, runs terminal commands and pauses for your approval at each risky step.
+- q_en: Does Cline require paying for a model?
+  a_en: >-
+    Yes for hosted models. You bring your own API key (Anthropic, OpenAI, Google, DeepSeek, OpenRouter). It also supports
+    local models via Ollama or LM Studio for zero-cost inference.
+- q_en: How does Cline compare to Cursor and Windsurf?
+  a_en: >-
+    Cursor and Windsurf are polished commercial IDE forks with bundled models; Cline is a free extension you drop into your
+    existing editor with a model of your choice. Cline is cheaper and more transparent; Cursor/Windsurf have smoother multi-file
+    editing UX.
+- q_en: Is Cline safe to run against my repo?
+  a_en: >-
+    Cline pauses before every terminal command and file write and asks for approval. Enable auto-approval only for scoped
+    read-only or test commands. Never point it at production credentials.
+- q_en: What models work best in Cline?
+  a_en: >-
+    Claude Sonnet 4 remains the default for planning and multi-file edits. DeepSeek-V3 is the cheapest workable option. Local
+    Qwen2.5-Coder or Llama-3.1-70B work for offline use if you have enough VRAM.
+- q_en: Can Cline read my whole codebase?
+  a_en: >-
+    It selectively reads files based on task context rather than indexing the whole repo. Provide focus paths in the prompt
+    or use its file-tree view to guide attention on large monorepos.
+- q_en: Does Cline work in JetBrains?
+  a_en: >-
+    Cline officially targets VS Code, Cursor and Windsurf (all VS Code forks). The community Roo Code fork exposes similar
+    capability to JetBrains and Zed via a bridge.
+- q_en: Is the token bill really high?
+  a_en: >-
+    Autonomous agents re-read files and re-plan each iteration, so token spend is 3–10× a single-shot completion. Use DeepSeek
+    or prompt caching in Anthropic to keep monthly cost under $40 for individual use.
+- q_en: Who is Cline best for?
+  a_en: >-
+    Developers who want autonomous agents but refuse to switch editors or lock into a bundled model, plus teams that need
+    transparent, auditable open-source tooling for compliance.
+- q_en: How is Cline different from Aider?
+  a_en: >-
+    Aider is a terminal-first pair-programming tool with tight Git integration. Cline lives inside VS Code and can drive the
+    terminal too but keeps the diff/preview UI. Aider is minimalist; Cline is more agentic and visual.
+scoreBreakdown:
+  user: 8.4
+  capability: 7
+  price: 10
+  growth: 6
+  trust: 8

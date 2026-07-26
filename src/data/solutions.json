@@ -2,8 +2,14 @@
   {
     "slug": "ai-for-developers",
     "industry": "Software Development",
-    "title": "AI Tools for Developers: Code, Test, and Ship Faster",
-    "description": "A complete guide to using AI for code generation, review, testing, documentation, and deployment automation in software development teams.",
+    "title": {
+      "en": "AI Tools for Developers: Code, Test, and Ship Faster",
+      "zh": "开发者 AI 工具：更快地编码、测试和交付"
+    },
+    "description": {
+      "en": "A complete guide to using AI for code generation, review, testing, documentation, and deployment automation in software development.",
+      "zh": "面向软件开发者的 AI 工具完整指南，涵盖代码生成、审查、测试、文档和部署自动化。"
+    },
     "icon": "code",
     "tools": [
       "Cursor",
@@ -117,13 +123,25 @@
       "bolt",
       "aider"
     ],
-    "updatedAt": "2026-07-20"
+    "updatedAt": "2026-07-20",
+    "title_en": "AI Tools for Developers: Code, Test, and Ship Faster",
+    "desc_en": "A complete guide to using AI for code generation, review, testing, documentation, and deployment automation in software development teams.",
+    "audience": {
+      "en": "Software developers and engineering teams",
+      "zh": "软件开发者与工程团队"
+    }
   },
   {
     "slug": "ai-for-marketing",
     "industry": "Marketing & Content",
-    "title": "AI Tools for Marketing: Content, SEO, and Campaigns at Scale",
-    "description": "How marketing teams use AI for content creation, SEO optimization, social media management, ad copy, and campaign analysis.",
+    "title": {
+      "en": "AI Tools for Marketing: Content, SEO, and Campaigns at Scale",
+      "zh": "营销 AI 工具：规模化内容、SEO 与营销活动"
+    },
+    "description": {
+      "en": "How marketing teams use AI for content creation, SEO optimization, social media, and campaign management.",
+      "zh": "营销团队如何利用 AI 进行内容创作、SEO 优化、社交媒体和营销活动管理。"
+    },
     "icon": "bullhorn",
     "tools": [
       "ChatGPT",
@@ -214,13 +232,25 @@
       "gamma",
       "jasper"
     ],
-    "updatedAt": "2026-07-20"
+    "updatedAt": "2026-07-20",
+    "title_en": "AI Tools for Marketing: Content, SEO, and Campaigns at Scale",
+    "desc_en": "How marketing teams use AI for content creation, SEO optimization, social media management, ad copy, and campaign analysis.",
+    "audience": {
+      "en": "Marketing teams and content creators",
+      "zh": "营销团队与内容创作者"
+    }
   },
   {
     "slug": "ai-for-education",
     "industry": "Education & Training",
-    "title": "AI Tools for Education: Teaching, Learning, and Administration",
-    "description": "How educators and institutions use AI for lesson planning, personalized learning paths, grading, content creation, and student engagement.",
+    "title": {
+      "en": "AI Tools for Education: Teaching, Learning, and Administration",
+      "zh": "教育 AI 工具：教学、学习与管理"
+    },
+    "description": {
+      "en": "How educators and institutions use AI for lesson planning, personalized learning, and academic administration.",
+      "zh": "教育工作者和机构如何利用 AI 进行课程规划、个性化学习和学术管理。"
+    },
     "icon": "graduation-cap",
     "tools": [
       "ChatGPT",
@@ -303,13 +333,25 @@
       "suno",
       "kling"
     ],
-    "updatedAt": "2026-07-20"
+    "updatedAt": "2026-07-20",
+    "title_en": "AI Tools for Education: Teaching, Learning, and Administration",
+    "desc_en": "How educators and institutions use AI for lesson planning, personalized learning paths, grading, content creation, and student engagement.",
+    "audience": {
+      "en": "Educators, students, and academic institutions",
+      "zh": "教育工作者、学生与学术机构"
+    }
   },
   {
     "slug": "ai-for-business",
     "industry": "Business & Operations",
-    "title": "AI Tools for Business: Automation, Analytics, and Growth",
-    "description": "How businesses use AI for process automation, data analysis, customer support, lead management, and strategic decision-making.",
+    "title": {
+      "en": "AI Tools for Business: Automation, Analytics, and Growth",
+      "zh": "商业 AI 工具：自动化、数据分析与增长"
+    },
+    "description": {
+      "en": "How businesses use AI for process automation, data analysis, customer service, and strategic decision-making.",
+      "zh": "企业如何利用 AI 进行流程自动化、数据分析、客户服务和战略决策。"
+    },
     "icon": "briefcase",
     "tools": [
       "n8n",
@@ -390,13 +432,25 @@
       "gemini",
       "make-com"
     ],
-    "updatedAt": "2026-07-20"
+    "updatedAt": "2026-07-20",
+    "title_en": "AI Tools for Business: Automation, Analytics, and Growth",
+    "desc_en": "How businesses use AI for process automation, data analysis, customer support, lead management, and strategic decision-making.",
+    "audience": {
+      "en": "Business owners, managers, and operations teams",
+      "zh": "企业主、管理者与运营团队"
+    }
   },
   {
     "slug": "ai-for-creatives",
     "industry": "Creative & Design",
-    "title": "AI Tools for Creatives: Image, Video, Audio, and Music Production",
-    "description": "How designers, filmmakers, musicians, and content creators use AI for image generation, video editing, voice synthesis, and music production.",
+    "title": {
+      "en": "AI Tools for Creatives: Image, Video, Audio, and Music Production",
+      "zh": "创意 AI 工具：图像、视频、音频与音乐制作"
+    },
+    "description": {
+      "en": "How designers, filmmakers, musicians, and content creators use AI for creative production.",
+      "zh": "设计师、电影制作人、音乐人和内容创作者如何利用 AI 进行创意制作。"
+    },
     "icon": "palette",
     "tools": [
       "Midjourney",
@@ -489,13 +543,25 @@
       "ideogram",
       "runway"
     ],
-    "updatedAt": "2026-07-20"
+    "updatedAt": "2026-07-20",
+    "title_en": "AI Tools for Creatives: Image, Video, Audio, and Music Production",
+    "desc_en": "How designers, filmmakers, musicians, and content creators use AI for image generation, video editing, voice synthesis, and music production.",
+    "audience": {
+      "en": "Designers, filmmakers, musicians, and content creators",
+      "zh": "设计师、电影制作人、音乐人与内容创作者"
+    }
   },
   {
     "slug": "ai-for-healthcare",
     "industry": "Healthcare & Medical",
-    "title": "AI Tools for Healthcare: Diagnosis, Documentation, and Patient Care",
-    "description": "How healthcare professionals use AI for medical imaging, clinical documentation, patient communication, and research.",
+    "title": {
+      "en": "AI Tools for Healthcare: Diagnosis, Documentation, and Patient Care",
+      "zh": "医疗 AI 工具：诊断、文档与患者护理"
+    },
+    "description": {
+      "en": "How healthcare professionals use AI for medical imaging, clinical documentation, and patient management.",
+      "zh": "医疗专业人员如何利用 AI 进行医学影像分析、临床文档编写和患者管理。"
+    },
     "icon": "heartbeat",
     "tools": [
       "ChatGPT",
@@ -575,13 +641,25 @@
       "kling",
       "dify"
     ],
-    "updatedAt": "2026-07-20"
+    "updatedAt": "2026-07-20",
+    "title_en": "AI Tools for Healthcare: Diagnosis, Documentation, and Patient Care",
+    "desc_en": "How healthcare professionals use AI for medical imaging, clinical documentation, patient communication, and research.",
+    "audience": {
+      "en": "Healthcare professionals and medical institutions",
+      "zh": "医疗专业人员与医疗机构"
+    }
   },
   {
     "slug": "ai-for-finance",
     "industry": "Finance & Accounting",
-    "title": "AI Tools for Finance: Analysis, Forecasting, and Automation",
-    "description": "How finance professionals use AI for data analysis, financial forecasting, report generation, and compliance monitoring.",
+    "title": {
+      "en": "AI Tools for Finance: Analysis, Forecasting, and Automation",
+      "zh": "金融 AI 工具：分析、预测与自动化"
+    },
+    "description": {
+      "en": "How finance professionals use AI for data analysis, financial forecasting, and process automation.",
+      "zh": "金融专业人员如何利用 AI 进行数据分析、财务预测和流程自动化。"
+    },
     "icon": "chart-line",
     "tools": [
       "ChatGPT",
@@ -660,13 +738,25 @@
       "n8n",
       "dify"
     ],
-    "updatedAt": "2026-07-20"
+    "updatedAt": "2026-07-20",
+    "title_en": "AI Tools for Finance: Analysis, Forecasting, and Automation",
+    "desc_en": "How finance professionals use AI for data analysis, financial forecasting, report generation, and compliance monitoring.",
+    "audience": {
+      "en": "Finance professionals and accounting teams",
+      "zh": "金融专业人员与财务团队"
+    }
   },
   {
     "slug": "ai-for-legal",
     "industry": "Legal & Compliance",
-    "title": "AI Tools for Legal: Research, Contract Review, and Document Automation",
-    "description": "How legal professionals use AI for legal research, contract analysis, document drafting, and compliance monitoring.",
+    "title": {
+      "en": "AI Tools for Legal: Research, Contract Review, and Document Automation",
+      "zh": "法律 AI 工具：研究、合同审查与文档自动化"
+    },
+    "description": {
+      "en": "How legal professionals use AI for legal research, contract analysis, and document automation.",
+      "zh": "法律专业人员如何利用 AI 进行法律研究、合同分析和文档自动化。"
+    },
     "icon": "gavel",
     "tools": [
       "Claude",
@@ -745,13 +835,25 @@
       "dify",
       "n8n"
     ],
-    "updatedAt": "2026-07-20"
+    "updatedAt": "2026-07-20",
+    "title_en": "AI Tools for Legal: Research, Contract Review, and Document Automation",
+    "desc_en": "How legal professionals use AI for legal research, contract analysis, document drafting, and compliance monitoring.",
+    "audience": {
+      "en": "Legal professionals and compliance teams",
+      "zh": "法律专业人员与合规团队"
+    }
   },
   {
     "slug": "ai-for-architecture",
     "industry": "Architecture",
-    "title": "AI Tools for Architects in 2026: Design, Visualization & Documentation",
-    "description": "How architects and design firms use AI tools for architectural concept design, 3D rendering and visualization, building code compliance checking (IBC, ADA, zoning), BIM documentation automation, and client presentation workflows — featuring Midjourney, ComfyUI, Flux, Claude, and n8n.",
+    "title": {
+      "en": "AI Tools for Architects in 2026: Design, Visualization & Documentation",
+      "zh": "2026 年建筑师 AI 工具：设计、可视化与文档"
+    },
+    "description": {
+      "en": "How architects and design firms use AI tools for architectural concept design, rendering, and documentation.",
+      "zh": "建筑师和设计公司如何利用 AI 工具进行建筑概念设计、渲染和文档编制。"
+    },
     "icon": "fa-drafting-compass",
     "tools": [
       "Midjourney",
@@ -869,7 +971,8 @@
     ],
     "updatedAt": "2026-07-23",
     "audience": {
-      "en": "Practicing architects, interior designers and urban designers."
+      "en": "Architects and design firms",
+      "zh": "建筑师与设计公司"
     },
     "stackRoles": {
       "midjourney": {
@@ -918,13 +1021,21 @@
       "Code compliance Q&A: Build a Dify RAG knowledge base with IBC, local zoning ordinances, and ADA Standards. Architects query specific provisions (e.g. 'minimum corridor width for Type II-B occupancy above 75 ft') and receive cited answers in seconds instead of manually searching code volumes.",
       "Client-ready presentation renders: Convert rough screenshots from Rhino or SketchUp into photorealistic marketing visuals with Midjourney or Flux — complete with entourage, landscaping, and atmospheric lighting — without engaging a professional rendering artist.",
       "Construction document automation: Use n8n to connect Revit schedules with specification templates, auto-generating door schedules, room finish schedules, and drawing index sheets while Claude drafts Division 00/01 specification sections."
-    ]
+    ],
+    "title_en": "AI Tools for Architects in 2026: Design, Visualization & Documentation",
+    "desc_en": "How architects and design firms use AI tools for architectural concept design, 3D rendering and visualization, building code compliance checking (IBC, ADA, zoning), BIM documentation automation, and client presentation workflows — featuring Midjourney, ComfyUI, Flux, Claude, and n8n."
   },
   {
     "slug": "ai-for-construction",
     "industry": "Construction Management",
-    "title": "AI Tools for Construction in 2026: Planning, Safety & Documentation",
-    "description": "How construction professionals use AI for project planning, safety monitoring, progress tracking, and quality control.",
+    "title": {
+      "en": "AI Tools for Construction in 2026: Planning, Safety & Documentation",
+      "zh": "2026 年施工 AI 工具：规划、安全与文档"
+    },
+    "description": {
+      "en": "How construction professionals use AI for project planning, safety monitoring, and construction documentation.",
+      "zh": "施工专业人员如何利用 AI 进行项目规划、安全监控和施工文档管理。"
+    },
     "icon": "fa-hard-hat",
     "tools": [
       "ChatGPT",
@@ -1041,7 +1152,8 @@
     ],
     "updatedAt": "2026-07-20",
     "audience": {
-      "en": "GC/CM teams, superintendents, safety and project management professionals."
+      "en": "Construction managers and site teams",
+      "zh": "施工管理者与现场团队"
     },
     "stackRoles": {
       "chatgpt": {
@@ -1082,13 +1194,21 @@
       "ai-for-architecture",
       "ai-for-engineers",
       "ai-for-bim"
-    ]
+    ],
+    "title_en": "AI Tools for Construction in 2026: Planning, Safety & Documentation",
+    "desc_en": "How construction professionals use AI for project planning, safety monitoring, progress tracking, and quality control."
   },
   {
     "slug": "ai-for-structural-engineers",
     "industry": "Structural Engineering",
-    "title": "AI Tools for Structural Engineers: Analysis, Design, and Calculation",
-    "description": "How structural engineers use AI for structural analysis optimization, load calculations, design verification, and documentation.",
+    "title": {
+      "en": "AI Tools for Structural Engineers: Analysis, Design, and Calculation",
+      "zh": "结构工程师 AI 工具：分析、设计与计算"
+    },
+    "description": {
+      "en": "How structural engineers use AI for structural analysis optimization, design iterations, and calculation automation.",
+      "zh": "结构工程师如何利用 AI 进行结构分析优化、设计迭代和计算自动化。"
+    },
     "icon": "fa-building",
     "tools": [
       "Claude",
@@ -1170,13 +1290,25 @@
       "n8n",
       "comfyui"
     ],
-    "updatedAt": "2026-07-20"
+    "updatedAt": "2026-07-20",
+    "title_en": "AI Tools for Structural Engineers: Analysis, Design, and Calculation",
+    "desc_en": "How structural engineers use AI for structural analysis optimization, load calculations, design verification, and documentation.",
+    "audience": {
+      "en": "Structural engineers and design consultants",
+      "zh": "结构工程师与设计顾问"
+    }
   },
   {
     "slug": "ai-for-civil-engineers",
     "industry": "Civil Engineering",
-    "title": "AI Tools for Civil Engineers: Site Design, Hydrology, and Infrastructure",
-    "description": "How civil engineers use AI for site analysis, drainage design, earthwork optimization, and infrastructure planning.",
+    "title": {
+      "en": "AI Tools for Civil Engineers: Site Design, Hydrology, and Infrastructure",
+      "zh": "土木工程师 AI 工具：场地设计、水文与基础设施"
+    },
+    "description": {
+      "en": "How civil engineers use AI for site analysis, drainage design, earthwork calculations, and infrastructure planning.",
+      "zh": "土木工程师如何利用 AI 进行场地分析、排水设计、土方计算和基础设施规划。"
+    },
     "icon": "fa-road",
     "tools": [
       "Claude",
@@ -1257,13 +1389,25 @@
       "n8n",
       "comfyui"
     ],
-    "updatedAt": "2026-07-20"
+    "updatedAt": "2026-07-20",
+    "title_en": "AI Tools for Civil Engineers: Site Design, Hydrology, and Infrastructure",
+    "desc_en": "How civil engineers use AI for site analysis, drainage design, earthwork optimization, and infrastructure planning.",
+    "audience": {
+      "en": "Civil engineers and infrastructure planners",
+      "zh": "土木工程师与基础设施规划者"
+    }
   },
   {
     "slug": "ai-for-hvac-engineers",
     "industry": "HVAC & MEP Engineering",
-    "title": "AI Tools for HVAC Engineers: Load Calculations, System Design, and Energy Analysis",
-    "description": "How HVAC and MEP engineers use AI for load calculations, equipment selection, energy modeling, and system optimization.",
+    "title": {
+      "en": "AI Tools for HVAC Engineers: Load Calculations, System Design, and Energy",
+      "zh": "暖通工程师 AI 工具：负荷计算、系统设计与能耗"
+    },
+    "description": {
+      "en": "How HVAC and MEP engineers use AI for load calculations, equipment selection, and energy optimization.",
+      "zh": "暖通和机电工程师如何利用 AI 进行负荷计算、设备选型和能耗优化。"
+    },
     "icon": "fa-wind",
     "tools": [
       "Claude",
@@ -1344,13 +1488,25 @@
       "n8n",
       "elevenlabs"
     ],
-    "updatedAt": "2026-07-20"
+    "updatedAt": "2026-07-20",
+    "title_en": "AI Tools for HVAC Engineers: Load Calculations, System Design, and Energy Analysis",
+    "desc_en": "How HVAC and MEP engineers use AI for load calculations, equipment selection, energy modeling, and system optimization.",
+    "audience": {
+      "en": "HVAC and MEP engineers",
+      "zh": "暖通与机电工程师"
+    }
   },
   {
     "slug": "ai-for-bim",
     "industry": "BIM & Digital Construction",
-    "title": "AI Tools for BIM Engineers: Model Management, Automation, and Collaboration",
-    "description": "How BIM engineers and coordinators use AI for model checking, clash detection, parameter automation, and project coordination.",
+    "title": {
+      "en": "AI Tools for BIM Engineers: Model Management, Automation, and Collaboration",
+      "zh": "BIM 工程师 AI 工具：模型管理、自动化与协作"
+    },
+    "description": {
+      "en": "How BIM engineers and coordinators use AI for model checking, clash detection, and collaboration.",
+      "zh": "BIM 工程师和协调员如何利用 AI 进行模型检查、碰撞检测和团队协作。"
+    },
     "icon": "fa-cubes",
     "tools": [
       "Claude",
@@ -1433,13 +1589,25 @@
       "comfyui",
       "gemini"
     ],
-    "updatedAt": "2026-07-20"
+    "updatedAt": "2026-07-20",
+    "title_en": "AI Tools for BIM Engineers: Model Management, Automation, and Collaboration",
+    "desc_en": "How BIM engineers and coordinators use AI for model checking, clash detection, parameter automation, and project coordination.",
+    "audience": {
+      "en": "BIM engineers and digital construction teams",
+      "zh": "BIM 工程师与数字化施工团队"
+    }
   },
   {
     "slug": "ai-for-industrial-design",
     "industry": "Industrial & Product Design",
-    "title": "AI Tools for Industrial Designers: Concept, Prototyping, and Manufacturing",
-    "description": "How industrial designers use AI for concept generation, 3D modeling, prototyping, and manufacturing documentation.",
+    "title": {
+      "en": "AI Tools for Industrial Designers: Concept, Prototyping, and Manufacturing",
+      "zh": "工业设计师 AI 工具：概念、原型与制造"
+    },
+    "description": {
+      "en": "How industrial designers use AI for concept generation, 3D modeling, prototyping, and manufacturing optimization.",
+      "zh": "工业设计师如何利用 AI 进行概念生成、3D 建模、原型设计和制造优化。"
+    },
     "icon": "fa-industry",
     "tools": [
       "Midjourney",
@@ -1521,20 +1689,33 @@
       "chatgpt",
       "v0-dev"
     ],
-    "updatedAt": "2026-07-20"
+    "updatedAt": "2026-07-20",
+    "title_en": "AI Tools for Industrial Designers: Concept, Prototyping, and Manufacturing",
+    "desc_en": "How industrial designers use AI for concept generation, 3D modeling, prototyping, and manufacturing documentation.",
+    "audience": {
+      "en": "Industrial designers and product teams",
+      "zh": "工业设计师与产品团队"
+    }
   },
   {
     "slug": "ai-for-engineers",
     "industry": "Engineering",
-    "title": "AI Tools for Engineers in 2026: Stack, Workflows & Use Cases",
-    "description": "Practical AI stack, workflows and prompts for structural, civil, HVAC and technical engineers.",
+    "title": {
+      "en": "AI Tools for Engineers in 2026: Stack, Workflows & Use Cases",
+      "zh": "2026 年工程师 AI 工具：技术栈、工作流与用例"
+    },
+    "description": {
+      "en": "Practical AI stack, workflows and prompts for structural, civil, HVAC and MEP engineers.",
+      "zh": "面向结构、土木、暖通和机电工程师的实用 AI 工具栈、工作流与提示词。"
+    },
     "icon": "fa-drafting-compass",
     "updatedAt": "2026-07-20",
     "industryTags": [
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers across structural, civil, MEP/HVAC and software-adjacent technical disciplines."
+      "en": "Engineering professionals across disciplines",
+      "zh": "各专业工程技术人员"
     },
     "toolIds": [
       "claude",
@@ -1678,20 +1859,29 @@
       "Notion AI",
       "GitHub Copilot",
       "Cursor"
-    ]
+    ],
+    "title_en": "AI Tools for Engineers in 2026: Stack, Workflows & Use Cases",
+    "desc_en": "Practical AI stack, workflows and prompts for structural, civil, HVAC and technical engineers."
   },
   {
     "slug": "ai-for-small-business",
     "industry": "Small Business",
-    "title": "AI Tools for Small Business in 2026: Stack, Workflows & Use Cases",
-    "description": "A practical AI stack for owner-operators and lean teams: marketing, sales, support and back-office automation.",
+    "title": {
+      "en": "AI Tools for Small Business in 2026: Stack, Workflows & Use Cases",
+      "zh": "2026 年小型企业 AI 工具：技术栈、工作流与用例"
+    },
+    "description": {
+      "en": "A practical AI stack for owner-operators and lean teams: marketing, sales, customer service, and operations.",
+      "zh": "面向个体经营者和精简团队的实用 AI 工具栈：营销、销售、客服和运营。"
+    },
     "icon": "fa-briefcase",
     "updatedAt": "2026-07-20",
     "industryTags": [
       "small-business"
     ],
     "audience": {
-      "en": "Owner-operators, founders and lean teams (1–20 people) doing multiple roles."
+      "en": "Small business owners and lean teams",
+      "zh": "小型企业主与精简团队"
     },
     "toolIds": [
       "chatgpt",
@@ -1835,13 +2025,21 @@
       "Fireflies",
       "Copy.ai",
       "PhotoRoom"
-    ]
+    ],
+    "title_en": "AI Tools for Small Business in 2026: Stack, Workflows & Use Cases",
+    "desc_en": "A practical AI stack for owner-operators and lean teams: marketing, sales, support and back-office automation."
   },
   {
     "slug": "ai-for-students",
     "industry": "Students & Learners",
-    "title": "AI Tools for Students in 2026: Stack, Workflows & Use Cases",
-    "description": "A responsible AI stack for students: research with citations, note-taking, writing polish, coding help and language study.",
+    "title": {
+      "en": "AI Tools for Students in 2026: Stack, Workflows & Use Cases",
+      "zh": "2026 年学生 AI 工具：技术栈、工作流与用例"
+    },
+    "description": {
+      "en": "A responsible AI stack for students: research with citations, note-taking, study aids, and writing assistance.",
+      "zh": "面向学生的负责任 AI 工具栈：带引用的研究、笔记、学习辅助和写作支持。"
+    },
     "icon": "fa-graduation-cap",
     "updatedAt": "2026-07-20",
     "industryTags": [
@@ -1849,7 +2047,8 @@
       "education"
     ],
     "audience": {
-      "en": "Undergraduate and graduate students, self-learners and language learners."
+      "en": "Students and lifelong learners",
+      "zh": "学生与终身学习者"
     },
     "toolIds": [
       "chatgpt",
@@ -2002,13 +2201,21 @@
       "Speechify",
       "Replit",
       "GitHub Copilot"
-    ]
+    ],
+    "title_en": "AI Tools for Students in 2026: Stack, Workflows & Use Cases",
+    "desc_en": "A responsible AI stack for students: research with citations, note-taking, writing polish, coding help and language study."
   },
   {
     "slug": "ai-for-mechanical-engineers",
     "industry": "Mechanical Engineering",
-    "title": "AI Tools for Mechanical Engineers: HVAC, Thermal & Fluid Systems",
-    "description": "Practical AI stack for mechanical engineers working on HVAC design, thermal analysis, fluid dynamics, and manufacturing systems.",
+    "title": {
+      "en": "AI Tools for Mechanical Engineers: HVAC, Thermal & Fluid Systems",
+      "zh": "机械工程师 AI 工具：暖通、热力与流体系统"
+    },
+    "description": {
+      "en": "Practical AI stack for mechanical engineers working on HVAC design, thermal analysis, and fluid systems.",
+      "zh": "面向暖通设计、热力分析和流体系统的机械工程师实用 AI 工具栈。"
+    },
     "icon": "fa-cogs",
     "faq": [
       {
@@ -2057,7 +2264,8 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline."
+      "en": "Mechanical engineers specializing in HVAC and thermal systems",
+      "zh": "暖通与热力系统机械工程师"
     },
     "toolIds": [
       "claude",
@@ -2155,13 +2363,21 @@
           "github-copilot"
         ]
       }
-    ]
+    ],
+    "title_en": "AI Tools for Mechanical Engineers: HVAC, Thermal & Fluid Systems",
+    "desc_en": "Practical AI stack for mechanical engineers working on HVAC design, thermal analysis, fluid dynamics, and manufacturing systems."
   },
   {
     "slug": "ai-for-electrical-engineers",
     "industry": "Electrical Engineering",
-    "title": "AI Tools for Electrical Engineers: Power, Controls & Systems",
-    "description": "AI stack for electrical engineers doing power systems, lighting design, controls, and building electrical systems.",
+    "title": {
+      "en": "AI Tools for Electrical Engineers: Power, Controls & Systems",
+      "zh": "电气工程师 AI 工具：电力、控制与系统"
+    },
+    "description": {
+      "en": "AI stack for electrical engineers doing power systems, lighting design, and control systems.",
+      "zh": "面向电力系统、照明设计和控制系统的电气工程师 AI 工具栈。"
+    },
     "icon": "fa-bolt",
     "faq": [
       {
@@ -2210,7 +2426,8 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline."
+      "en": "Electrical engineers and power systems designers",
+      "zh": "电气工程师与电力系统设计师"
     },
     "toolIds": [
       "claude",
@@ -2308,13 +2525,21 @@
           "github-copilot"
         ]
       }
-    ]
+    ],
+    "title_en": "AI Tools for Electrical Engineers: Power, Controls & Systems",
+    "desc_en": "AI stack for electrical engineers doing power systems, lighting design, controls, and building electrical systems."
   },
   {
     "slug": "ai-for-mep-engineers",
     "industry": "MEP Engineering",
-    "title": "AI Tools for MEP Engineers: Integrated Mechanical, Electrical & Plumbing",
-    "description": "Integrated AI stack for mechanical, electrical, and plumbing (MEP) engineers coordinating across building systems.",
+    "title": {
+      "en": "AI Tools for MEP Engineers: Integrated Mechanical, Electrical & Plumbing",
+      "zh": "机电工程师 AI 工具：暖通、电气与给排水集成"
+    },
+    "description": {
+      "en": "Integrated AI stack for mechanical, electrical, and plumbing (MEP) engineers working on building systems.",
+      "zh": "面向建筑系统的机电（暖通、电气、给排水）工程师集成 AI 工具栈。"
+    },
     "icon": "fa-drafting-compass",
     "faq": [
       {
@@ -2363,7 +2588,8 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline."
+      "en": "MEP engineers and building systems designers",
+      "zh": "机电工程师与建筑系统设计师"
     },
     "toolIds": [
       "claude",
@@ -2461,13 +2687,21 @@
           "gemini"
         ]
       }
-    ]
+    ],
+    "title_en": "AI Tools for MEP Engineers: Integrated Mechanical, Electrical & Plumbing",
+    "desc_en": "Integrated AI stack for mechanical, electrical, and plumbing (MEP) engineers coordinating across building systems."
   },
   {
     "slug": "ai-for-bridge-engineers",
     "industry": "Bridge Engineering",
-    "title": "AI Tools for Bridge Engineers: Design, Analysis & Inspection",
-    "description": "AI stack for bridge engineers focused on structural analysis, load rating, inspection documentation, and rehabilitation design.",
+    "title": {
+      "en": "AI Tools for Bridge Engineers: Design, Analysis & Inspection",
+      "zh": "桥梁工程师 AI 工具：设计、分析与检测"
+    },
+    "description": {
+      "en": "AI stack for bridge engineers focused on structural analysis, load rating, and condition inspection.",
+      "zh": "面向桥梁结构分析、荷载评级和状况检测的桥梁工程师 AI 工具栈。"
+    },
     "icon": "fa-road",
     "faq": [
       {
@@ -2516,7 +2750,8 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline."
+      "en": "Bridge engineers and structural inspectors",
+      "zh": "桥梁工程师与结构检测人员"
     },
     "toolIds": [
       "claude",
@@ -2614,13 +2849,21 @@
           "chatgpt"
         ]
       }
-    ]
+    ],
+    "title_en": "AI Tools for Bridge Engineers: Design, Analysis & Inspection",
+    "desc_en": "AI stack for bridge engineers focused on structural analysis, load rating, inspection documentation, and rehabilitation design."
   },
   {
     "slug": "ai-for-steel-detailers",
     "industry": "Steel Detailing",
-    "title": "AI Tools for Steel Detailers: Modeling, Detailing & Connection Design",
-    "description": "AI stack for steel detailers working on connection design, shop drawing production, and model coordination.",
+    "title": {
+      "en": "AI Tools for Steel Detailers: Modeling, Detailing & Connection Design",
+      "zh": "钢结构深化工程师 AI 工具：建模、详图与节点设计"
+    },
+    "description": {
+      "en": "AI stack for steel detailers working on connection design, shop drawings, and steel modeling.",
+      "zh": "面向节点设计、加工图和钢结构建模的深化工程师 AI 工具栈。"
+    },
     "icon": "fa-hard-hat",
     "faq": [
       {
@@ -2669,7 +2912,8 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline."
+      "en": "Steel detailers and fabrication teams",
+      "zh": "钢结构深化工程师与制造团队"
     },
     "toolIds": [
       "claude",
@@ -2767,13 +3011,21 @@
           "n8n"
         ]
       }
-    ]
+    ],
+    "title_en": "AI Tools for Steel Detailers: Modeling, Detailing & Connection Design",
+    "desc_en": "AI stack for steel detailers working on connection design, shop drawing production, and model coordination."
   },
   {
     "slug": "ai-for-surveyors",
     "industry": "Surveying",
-    "title": "AI Tools for Surveyors: Data Collection, Processing & Mapping",
-    "description": "AI stack for surveyors working on field data collection, point cloud processing, boundary analysis, and GIS mapping.",
+    "title": {
+      "en": "AI Tools for Surveyors: Data Collection, Processing & Mapping",
+      "zh": "测量师 AI 工具：数据采集、处理与制图"
+    },
+    "description": {
+      "en": "AI stack for surveyors working on field data collection, point cloud processing, and spatial mapping.",
+      "zh": "面向外业数据采集、点云处理和空间制图的测量师 AI 工具栈。"
+    },
     "icon": "fa-ruler-combined",
     "faq": [
       {
@@ -2822,7 +3074,8 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline."
+      "en": "Surveyors and geospatial professionals",
+      "zh": "测量师与地理空间专业人员"
     },
     "toolIds": [
       "claude",
@@ -2919,13 +3172,21 @@
           "gemini"
         ]
       }
-    ]
+    ],
+    "title_en": "AI Tools for Surveyors: Data Collection, Processing & Mapping",
+    "desc_en": "AI stack for surveyors working on field data collection, point cloud processing, boundary analysis, and GIS mapping."
   },
   {
     "slug": "ai-for-quantity-surveyors",
     "industry": "Quantity Surveying",
-    "title": "AI Tools for Quantity Surveyors: Estimating, Cost Planning & Procurement",
-    "description": "AI stack for quantity surveyors working on cost estimation, bill of quantities, procurement, and contract administration.",
+    "title": {
+      "en": "AI Tools for Quantity Surveyors: Estimating, Cost Planning & Procurement",
+      "zh": "造价工程师 AI 工具：估算、成本规划与采购"
+    },
+    "description": {
+      "en": "AI stack for quantity surveyors working on cost estimation, bill of quantities, and procurement.",
+      "zh": "面向成本估算、工程量清单和采购管理的造价工程师 AI 工具栈。"
+    },
     "icon": "fa-calculator",
     "faq": [
       {
@@ -2974,7 +3235,8 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline."
+      "en": "Quantity surveyors and cost consultants",
+      "zh": "造价工程师与成本顾问"
     },
     "toolIds": [
       "claude",
@@ -3072,13 +3334,21 @@
           "n8n"
         ]
       }
-    ]
+    ],
+    "title_en": "AI Tools for Quantity Surveyors: Estimating, Cost Planning & Procurement",
+    "desc_en": "AI stack for quantity surveyors working on cost estimation, bill of quantities, procurement, and contract administration."
   },
   {
     "slug": "ai-for-fire-protection-engineers",
     "industry": "Fire Protection Engineering",
-    "title": "AI Tools for Fire Protection Engineers: Sprinklers, Detection & Life Safety",
-    "description": "AI stack for fire protection engineers designing sprinkler systems, fire alarm, smoke control, and life safety systems.",
+    "title": {
+      "en": "AI Tools for Fire Protection Engineers: Sprinklers, Detection & Life Safety",
+      "zh": "消防工程师 AI 工具：喷淋、探测与生命安全"
+    },
+    "description": {
+      "en": "AI stack for fire protection engineers designing sprinkler systems, fire detection, and life safety systems.",
+      "zh": "面向喷淋系统、火灾探测和生命安全系统设计的消防工程师 AI 工具栈。"
+    },
     "icon": "fa-fire-extinguisher",
     "faq": [
       {
@@ -3127,7 +3397,8 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline."
+      "en": "Fire protection engineers and safety consultants",
+      "zh": "消防工程师与安全顾问"
     },
     "toolIds": [
       "claude",
@@ -3224,13 +3495,21 @@
           "gemini"
         ]
       }
-    ]
+    ],
+    "title_en": "AI Tools for Fire Protection Engineers: Sprinklers, Detection & Life Safety",
+    "desc_en": "AI stack for fire protection engineers designing sprinkler systems, fire alarm, smoke control, and life safety systems."
   },
   {
     "slug": "ai-for-plumbing-engineers",
     "industry": "Plumbing Engineering",
-    "title": "AI Tools for Plumbing Engineers: Design, Fixtures & Systems",
-    "description": "AI stack for plumbing engineers designing sanitary, storm, domestic water, and gas systems for buildings.",
+    "title": {
+      "en": "AI Tools for Plumbing Engineers: Design, Fixtures & Systems",
+      "zh": "给排水工程师 AI 工具：设计、卫生设备与系统"
+    },
+    "description": {
+      "en": "AI stack for plumbing engineers designing sanitary, storm, domestic water, and gas systems.",
+      "zh": "面向卫生排水、雨水、生活给水和燃气系统设计的给排水工程师 AI 工具栈。"
+    },
     "icon": "fa-faucet",
     "faq": [
       {
@@ -3279,7 +3558,8 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline."
+      "en": "Plumbing engineers and building services designers",
+      "zh": "给排水工程师与建筑设备设计师"
     },
     "toolIds": [
       "claude",
@@ -3377,13 +3657,21 @@
           "claude"
         ]
       }
-    ]
+    ],
+    "title_en": "AI Tools for Plumbing Engineers: Design, Fixtures & Systems",
+    "desc_en": "AI stack for plumbing engineers designing sanitary, storm, domestic water, and gas systems for buildings."
   },
   {
     "slug": "ai-for-project-engineers",
     "industry": "Project Engineering",
-    "title": "AI Tools for Project Engineers: Planning, Coordination & Delivery",
-    "description": "AI stack for project engineers managing technical coordination, document control, schedule tracking, and cross-discipline communication.",
+    "title": {
+      "en": "AI Tools for Project Engineers: Planning, Coordination & Delivery",
+      "zh": "项目工程师 AI 工具：规划、协调与交付"
+    },
+    "description": {
+      "en": "AI stack for project engineers managing technical coordination, documentation, and project delivery.",
+      "zh": "面向技术协调、文档管理和项目交付的项目工程师 AI 工具栈。"
+    },
     "icon": "fa-tasks",
     "faq": [
       {
@@ -3432,7 +3720,8 @@
       "engineering"
     ],
     "audience": {
-      "en": "Practicing engineers and technical professionals in this discipline."
+      "en": "Project engineers and delivery managers",
+      "zh": "项目工程师与交付经理"
     },
     "toolIds": [
       "claude",
@@ -3531,6 +3820,8 @@
           "notion-ai"
         ]
       }
-    ]
+    ],
+    "title_en": "AI Tools for Project Engineers: Planning, Coordination & Delivery",
+    "desc_en": "AI stack for project engineers managing technical coordination, document control, schedule tracking, and cross-discipline communication."
   }
 ]

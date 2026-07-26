@@ -1,0 +1,46 @@
+name:
+  en: Remove.bg
+  zh: Remove.bg
+short_desc:
+  en: One-click image background removal
+  zh: 一键图像背景去除
+long_desc:
+  en: >-
+    Remove.bg does one thing: remove image backgrounds in 5 seconds, clean results, API available.
+cat: image
+url: https://www.remove.bg
+icon: fa-eraser
+scenes:
+  en:
+  - Bg removal
+  - ID photos
+  - Product
+  - Avatars
+pros:
+  en:
+  - Fast
+  - Clean edges
+  - API available
+cons:
+  en:
+  - Limited free
+  - Bg removal only
+target_audience:
+  en:
+  - E-commerce
+  - Marketing
+  - Designers
+use_cases:
+  en:
+  - Bg removal
+  - ID photos
+  - Product
+  - Avatars
+features:
+  en:
+  - One-click removal
+  - API
+  - Batch
+  - HD
+example:
+  en: 'Example: Upload a photo → 5s transparent background.'

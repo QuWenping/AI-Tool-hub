@@ -1,0 +1,24 @@
+name:
+  en: Stability AI Developer
+  zh: Stability AI Developer
+short_desc:
+  en: Stable Diffusion API platform
+  zh: Stable Diffusion API 平台
+long_desc:
+  en: Developer API for Stable Diffusion models
+cat: image
+url: https://stability.ai/developer
+icon: fa-code
+scenes:
+  en:
+  - image
+  - api
+  - developer
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Pay per use

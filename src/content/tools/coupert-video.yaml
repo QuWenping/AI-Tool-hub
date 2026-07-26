@@ -1,0 +1,24 @@
+name:
+  en: Coupert Video
+  zh: Coupert Video
+short_desc:
+  en: AI product video maker
+  zh: AI 产品视频制作
+long_desc:
+  en: Create product demo videos with AI
+cat: video
+url: https://coupert.com
+icon: fa-video
+scenes:
+  en:
+  - video
+  - product
+  - demo
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

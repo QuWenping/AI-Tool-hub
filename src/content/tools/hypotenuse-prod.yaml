@@ -1,0 +1,24 @@
+name:
+  en: Hypotenuse Product
+  zh: Hypotenuse Product
+short_desc:
+  en: AI product descriptions
+  zh: AI 产品描述
+long_desc:
+  en: Batch product description generation for ecommerce
+cat: text
+url: https://hypotenuse.ai
+icon: fa-pen
+scenes:
+  en:
+  - ecommerce
+  - product
+  - batch
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

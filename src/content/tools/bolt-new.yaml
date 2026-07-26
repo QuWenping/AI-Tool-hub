@@ -1,0 +1,24 @@
+name:
+  en: Bolt.new
+  zh: Bolt.new
+short_desc:
+  en: AI full-stack app generator
+  zh: AI 全栈应用生成器
+long_desc:
+  en: Generate complete full-stack apps from descriptions
+cat: code
+url: https://bolt.new
+icon: fa-bolt
+scenes:
+  en:
+  - fullstack
+  - prototype
+  - mvp
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

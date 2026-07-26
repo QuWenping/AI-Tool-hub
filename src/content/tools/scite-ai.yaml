@@ -1,0 +1,24 @@
+name:
+  en: Scite
+  zh: Scite
+short_desc:
+  en: AI citation analysis
+  zh: AI 引文分析
+long_desc:
+  en: AI-powered citation analysis for research
+cat: research
+url: https://scite.ai
+icon: fa-search
+scenes:
+  en:
+  - citations
+  - analysis
+  - academic
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

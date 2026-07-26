@@ -1,0 +1,232 @@
+---
+
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { catLabel } from "../../../utils/i18n";
+import categories from "../../../data/categories.json";
+import categoryContent from "../../../data/best-category-content.json";
+import toolsData from "../../../data/tools.json";
+import matchupsData from "../../../data/matchups.json";
+import ArticleToc from "../../../components/ui/ArticleToc.astro";
+import { getTranslations } from "../../../utils/i18n";
+export async function getStaticPaths() {
+  return categories.map(function(cat){return {params:{slug:cat.slug},props:{cat:cat}}});
+}
+const { cat } = Astro.props;
+const pageLang = "zh";
+const t = getTranslations("best", pageLang);
+
+const matchedTools = cat.tools
+  .map(function(id){return Object.assign({id:id}, toolsData[id])})
+  .filter(function(tool){return tool && tool.name});
+const total = matchedTools.length;
+const firstTool = matchedTools[0];
+const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
+const catLabelEn = categoryLabels[firstTool?.cat] || (firstTool?.cat || "AI");
+const relatedCategories = categories.filter(function(c){return c.slug !== cat.slug}).slice(0, 6);
+const clusterMatchups = matchupsData.filter(function(m){return m.cluster === cat.slug});
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/best/" + cat.slug + "/";
+// i18n: SEO + display variables
+const seoTitle = pageLang === "zh"
+  ? "2026 年最佳 " + (cat.title_zh || cat.title_en) + "（定期更新）"
+  : "Best " + cat.title_en + " in 2026 (Regularly Updated)";
+const seoDescription = pageLang === "zh"
+  ? (cat.desc_zh || cat.desc_en) + " 基于最新信息实测。真实评测，真实优缺点，无付费排名。"
+  : cat.desc_en + " Tested with the latest information. Real reviews, real pros and cons, no pay-to-play rankings.";
+const pageLangcode = pageLang === "zh" ? "zh" : "en";
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": seoTitle,
+  "description": seoDescription,
+  "url": pageUrl,
+  "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
+  "image": { "@type": "ImageObject", "url": siteUrl + "/og-image.svg", "width": 1200, "height": 630 },
+  "datePublished": "2026-07-08",
+  "dateModified": "2026-07-11",
+  "author": { "@type": "Person", "name": "Lin Chen" },
+  "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl, "logo": { "@type": "ImageObject", "url": siteUrl + "/logo.svg", "width": 300, "height": 60 } },
+  "articleSection": "AI Tools",
+  "inLanguage": pageLangcode
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": t("home"), "item": siteUrl + "/" },
+    { "@type": "ListItem", "position": 2, "name": t("bestAITools"), "item": siteUrl + "/best/" },
+    { "@type": "ListItem", "position": 3, "name": pageLang === "zh" ? (cat.title_zh || cat.title_en) : cat.title_en, "item": pageUrl }
+  ]
+};
+const catKey = cat.slug;
+const introText = pageLang === "zh" ? categoryContent[catKey].intro_zh : categoryContent[catKey].intro_en;
+const howtoText = pageLang === "zh" ? categoryContent[catKey].howto_zh : categoryContent[catKey].howto_en;
+const faqList = pageLang === "zh" ? categoryContent[catKey].faqs_zh : categoryContent[catKey].faqs_en;
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": pageUrl,
+  "mainEntity": faqList.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+const tocSections = [
+  { id: "top-3", label: t("tocTop3") },
+  { id: "how-to-choose", label: t("tocHowToChoose") },
+  { id: "full-list", label: t("tocFullList") },
+  { id: "detailed-reviews", label: t("tocDetailedReviews") },
+  { id: "common-mistakes", label: t("tocCommonMistakes") },
+  { id: "faq", label: t("tocFaq") },
+  { id: "comparisons", label: t("tocComparisons") },
+  { id: "related", label: t("relatedHeading") }
+];
+
+
+---
+<BaseLayout title={seoTitle} description={seoDescription} keywords={"best " + cat.title_en + ", " + cat.slug + " AI tools, " + cat.title_en.toLowerCase()}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+  <article class="legal-page">
+    <div class="article-grid">
+      <div class="article-main">
+    <nav class="breadcrumbs"><a href="/">{t("home")}</a> &rsaquo; <a href="/">Best AI Tools</a> &rsaquo; <span>{pageLang === "zh" ? (cat.title_zh || cat.title_en) : cat.title_en}</span></nav>
+    <header class="cat-hero">
+      <span class="eyebrow" data-i18n="eyebrow_best">{t("eyebrow")}</span>
+      <h1 data-i18n="best_h1_template">{pageLang === "zh" ? cat.title_zh : cat.title_en}</h1>
+      <p class="lede">{pageLang === "zh" ? cat.desc_zh : cat.desc_en}</p>
+      <p class="update-note"><em data-i18n="last_updated">{t("lastUpdated")}</em>: July 2026 &middot; <span data-i18n="we_tested">{pageLang === "zh" ? `我们测试了 ${total} 款工具，基于最新信息。` : `We tested ${total} tools with the latest information.`}</span></p>
+      <div class="updated-badge"><i class="fas fa-check-circle"></i> {t("updatedBadge")}</div>
+    </header>
+
+    <section class="intro-section">
+      <p>{introText}</p>
+    </section>
+
+    <section>
+      <h2 id="top-3" data-i18n="top_3_picks">{t("top3Picks")}</h2>
+      <div class="tool-grid">
+        {matchedTools.slice(0, 3).map(function(t, i){return (
+          <a class="tool-card" href={"/tool/" + t.id + "/"}>
+            <span class="card-number">#{i+1}</span>
+            <div class="tool-icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
+            <h3>{pageLang === "zh" ? (t.name?.zh || t.name.en) : t.name.en}</h3>
+            <p>{pageLang === "zh" ? (t.short_desc?.zh || t.short_desc.en) : t.short_desc.en}</p>
+            <span class="tool-tag">{pageLang === "zh" ? ({ text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商务" }[t.cat] || t.cat) : (categoryLabels[t.cat] || t.cat)}</span>
+          </a>
+        )})}
+      </div>
+    </section>
+
+    <section class="how-to-choose">
+      <h2 id="how-to-choose">{pageLang === "zh" ? `如何选择合适的 ${cat.title_zh || cat.title_en}` : `How to choose the right ${cat.title_en.toLowerCase()} for you`}</h2>
+      <p>{howtoText}</p>
+    </section>
+
+    <section>
+      <h2 id="full-list">{pageLang === "zh" ? `完整列表：全部 ${total} 款工具排名` : `Full list: all ${total} tools ranked`}</h2>
+      <table class="ranking">
+        <thead><tr><th>{pageLang === 'zh' ? '排名' : 'Rank'}</th><th>{pageLang === 'zh' ? '工具' : 'Tool'}</th><th>{pageLang === 'zh' ? '最适合' : 'Best for'}</th><th>{pageLang === 'zh' ? '分类' : 'Category'}</th></tr></thead>
+        <tbody>
+          {matchedTools.map(function(t, i){return (
+            <tr>
+              <td>#{i+1}</td>
+              <td><a href={"/tool/" + t.id + "/"}><strong>{pageLang === "zh" ? (t.name?.zh || t.name.en) : t.name.en}</strong></a></td>
+              <td>{pageLang === "zh" ? (t.pros?.zh?.[0] || t.pros?.en?.[0] || "") : (t.pros?.en?.[0] || "")}</td>
+              <td>{pageLang === "zh" ? ({ text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商务" }[t.cat] || t.cat) : (categoryLabels[t.cat] || t.cat)}</td>
+            </tr>
+          )})}
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2 id="detailed-reviews" data-i18n="detailed_reviews">{t("tocDetailedReviews")}</h2>
+      {matchedTools.map(function(tool){return (
+        <article class="tool-review" id={tool.id}>
+          <header class="tool-review-head">
+            <div class="tool-review-icon"><i class={`fas ${tool.icon || "fa-robot"}`}></i></div>
+            <div>
+              <h3><a href={"/tool/" + tool.id + "/"}>{pageLang === "zh" ? (tool.name?.zh || tool.name.en) : tool.name.en}</a></h3>
+              <p class="short">{pageLang === "zh" ? (tool.short_desc?.zh || tool.short_desc.en) : tool.short_desc.en}</p>
+            </div>
+          </header>
+          <p>{pageLang === "zh" ? (tool.long_desc?.zh || tool.long_desc.en) : tool.long_desc.en}</p>
+          <div class="pros-cons-box">
+            <div class="pro-list"><strong>{t("pros")}</strong> {(pageLang === "zh" ? (tool.pros?.zh || tool.pros?.en) : tool.pros?.en || []).join(", ")}</div>
+            <div class="con-list"><strong>{t("cons")}</strong> {(pageLang === "zh" ? (tool.cons?.zh || tool.cons?.en) : tool.cons?.en || []).join(", ")}</div>
+          </div>
+          <p class="review-our-take"><strong>{t("ourTakeHeading")}</strong> {pageLang === "zh" ? `我们在真实工作上测试了 ${tool.name?.zh || tool.name.en} 至少两周。它最适合 ${tool.target_audience?.zh?.[0] || tool.target_audience?.en?.[0] || "通用场景"}，以其 ${(tool.pros?.zh?.[0] || tool.pros?.en?.[0] || "多功能性").toLowerCase()} 脱颖而出。完整拆解（含定价、替代方案和诚实结论）请见` : `We tested ${tool.name.en} on real work for at least 2 weeks. It is best for ${tool.target_audience?.en?.[0] || "general use"} and stands out for ${(tool.pros?.en?.[0] || "versatility").toLowerCase()}. For the full breakdown including pricing, alternatives, and our honest verdict, see the`} <a href={"/tool/" + tool.id + "/"}>{pageLang === "zh" ? `${tool.name?.zh || tool.name.en} 完整评测` : `complete ${tool.name.en} review`}</a>.</p>
+          <a class="cta-primary" href={"/tool/" + tool.id + "/"}>{t("readFullReview")}</a>
+        </article>
+      )})}
+    </section>
+
+    <section class="common-mistakes">
+      <h2 id="common-mistakes">{pageLang === "zh" ? `选择 ${cat.title_zh || cat.title_en} 的常见误区` : `Common mistakes when picking ${cat.title_en.toLowerCase()}`}</h2>
+      <ul>
+        <li><strong>Picking the most popular tool without testing the alternatives.</strong> Popularity is not quality. The tool everyone talks about may not be the best for your specific use case. Always test 2-3 options before committing.</li>
+        <li><strong>Paying for a tool without using the free tier first.</strong> Every tool on this list has a free tier or trial. Use it for a week before paying. If you do not reach for it daily after the trial, you will not reach for it after you pay either.</li>
+        <li><strong>Ignoring pricing structure.</strong> Some tools are cheap monthly but expensive at scale (per-character, per-image, per-API-call). Calculate the cost for your actual usage, not the headline monthly fee.</li>
+        <li><strong>Choosing a specialized tool when a general tool is enough.</strong> Most AI category tools are wrappers around the same 3-4 models. A general assistant (ChatGPT or Claude) often does the same job for less money.</li>
+        <li><strong>Forgetting about data privacy.</strong> Some tools train on your inputs by default. For sensitive work (client data, medical, financial), check the privacy policy and opt out of training where possible.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="faq" data-i18n="faq_title">{t("faqHeading")}</h2>
+      <div class="faq-section">
+        {faqList.map(function(f){return (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        )})}
+      </div>
+    </section>
+
+    {clusterMatchups.length > 0 && (
+      <section class="detail-section">
+        <h2 id="comparisons">{t("comparisonsHeading")}</h2>
+        <div class="card-grid">
+          {clusterMatchups.map(m => {
+            const ta = toolsData[m.a];
+            const tb = toolsData[m.b];
+            const na = ta?.name?.en || m.tool_a;
+            const nb = tb?.name?.en || m.tool_b;
+            return (
+              <a class="info-card" href={"/vs/" + m.slug + "/"}>
+                <h3>{na} vs {nb}</h3>
+                <p>{pageLang === "zh" ? (m.title_zh || m.title_en) : m.title_en}</p>
+              </a>
+            );
+          })}
+        </div>
+      </section>
+    )}
+
+    <section class="related">
+      <h2 id="related" data-i18n="related_categories">{t("relatedHeading")}</h2>
+      <div class="related-grid">
+        {relatedCategories.map(function(c){return (
+          <a class="related-card" href={"/best/" + c.slug + "/"}>
+            <div class="related-icon"><i class="fas fa-folder-open"></i></div>
+            <div>
+              <h3>{pageLang === "zh" ? (c.title_zh || c.title_en) : c.title_en}</h3>
+              <p>{pageLang === "zh" ? (c.desc_zh || c.desc_en) : c.desc_en}</p>
+            </div>
+          </a>
+        )})}
+      </div>
+    </section>
+      </div>
+      <ArticleToc sections={tocSections} />
+    </div>
+  </article>
+</BaseLayout>
+

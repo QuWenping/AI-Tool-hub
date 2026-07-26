@@ -1,0 +1,24 @@
+name:
+  en: Sider AI
+  zh: Sider AI
+short_desc:
+  en: Browser sidebar AI
+  zh: 浏览器侧边栏 AI
+long_desc:
+  en: Multi-model AI chat in browser sidebar
+cat: productivity
+url: https://sider.ai
+icon: fa-bars
+scenes:
+  en:
+  - browser
+  - ai-chat
+  - sidebar
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

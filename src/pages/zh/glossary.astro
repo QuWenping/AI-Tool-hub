@@ -1,0 +1,67 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+<BaseLayout title="AI 术语表 | AI 工具常用词汇解释" description="AI 工具领域常见术语简明解释：LLM、RAG、Agent、Token、Fine-tuning 等。适合新手和中级用户查阅。" keywords="AI 术语表, AI 词汇表, AI 术语解释, LLM 术语, AI 入门">
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <span>AI 术语表</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">学习资源</span>
+      <h1>AI 术语表</h1>
+      <p class="lede">AI 工具领域常见术语的简明解释。无论是刚开始了解 AI 工具，还是想要对比不同工具——先弄清楚术语能帮你更快做出正确选择。</p>
+    </header>
+
+    <section>
+      <h2>核心概念</h2>
+
+      <h3>LLM（Large Language Model，大语言模型）</h3>
+      <p>在大量文本数据上训练的人工智能模型，能够理解和生成人类语言。ChatGPT、Claude、Gemini 背后的引擎都是 LLM。</p>
+
+      <h3>Prompt（提示词）</h3>
+      <p>用户输入给 AI 模型的指令或问题。提示词的质量直接影响模型输出的质量。优秀的提示词通常包含：角色设定、背景信息、具体指令、输出格式要求、约束条件。</p>
+
+      <h3>Token（令牌）</h3>
+      <p>LLM 处理文本的最小单位。英文约 4 个字符对应 1 个 token，中文约 1-2 个字符对应 1 个 token。大多数 LLM 按 token 数量计费。</p>
+
+      <h3>RAG（Retrieval-Augmented Generation，检索增强生成）</h3>
+      <p>先检索相关文档/数据，再基于检索结果生成回答的技术。用于提高 AI 回答的准确性和时效性，减少"幻觉"。</p>
+
+      <h3>AI Agent（AI 智能体）</h3>
+      <p>能够自主执行多步骤任务的 AI 系统。与简单问答不同，Agent 可以：分解目标、使用工具（API、文件读写、网络搜索）、多步推理、保持记忆。</p>
+
+      <h3>Fine-tuning（微调）</h3>
+      <p>在预训练模型的基础上，用特定领域的数据进行额外训练，使模型更擅长该领域的任务。</p>
+
+      <h3>Hallucination（幻觉）</h3>
+      <p>AI 模型生成看似合理但实际错误或不存在的内容的现象。这是当前 LLM 的常见局限性，所以在关键场景下需要人工核实。</p>
+
+      <h3>Context Window（上下文窗口）</h3>
+      <p>LLM 单次可以"记住"的最大文本量。更大的上下文窗口意味着可以处理更长的文档或对话历史。例如 Gemini 1.5 Pro 支持 200 万 token 上下文。</p>
+
+      <h3>Multimodal（多模态）</h3>
+      <p>能够同时理解和处理多种数据类型（文本、图像、音频、视频）的 AI 模型。</p>
+
+      <h3>Zero-shot / Few-shot</h3>
+      <p>Zero-shot：不给示例，直接让模型执行任务。Few-shot：给少量示例（通常 3-5 个），让模型学习模式后执行。Few-shot 通常比 Zero-shot 效果好。</p>
+    </section>
+
+    <section>
+      <h2>工具与评测相关</h2>
+      <h3>API（Application Programming Interface，应用程序接口）</h3>
+      <p>允许开发者将 AI 模型集成到自己应用中的编程接口。大多数 LLM 提供 API 访问方式。</p>
+
+      <h3>Code Interpreter（代码解释器）</h3>
+      <p>AI 工具的一项功能，允许模型在受控环境中执行代码并返回结果。常用于数据分析、图表生成等任务。</p>
+
+      <h3>System Prompt（系统提示词）</h3>
+      <p>在用户输入之前传给模型的固定指令，用于设定模型的行为、风格和限制。用户通常看不到系统提示词。</p>
+
+      <h3>Temperature（温度）</h3>
+      <p>控制 AI 输出"创造性"的参数。低温度（如 0.1）使输出更确定性、更可预测；高温度（如 0.9）使输出更多样化、更有创意。</p>
+    </section>
+
+    <section>
+      <h2>继续学习</h2>
+      <p>阅读我们的<a href="/zh/tool/">详细工具评测</a>，了解每款 AI 工具的实际表现。或查看<a href="/zh/category/"> AI 工具分类页面</a>，按使用场景查找合适的工具。</p>
+    </section>
+  </article>
+</BaseLayout>

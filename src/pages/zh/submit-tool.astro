@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/submit-tool/";
+const faqSchema = {
+  "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,
+  "mainEntity":[
+    {"@type":"Question","name":"How long does the review process take?","acceptedAnswer":{"@type":"Answer","text":"Our standard review cycle is 4-6 weeks from submission to publication. This includes initial evaluation (1 week), hands-on testing (2 weeks), peer review (1 week), and editing/publication (1-2 weeks)."}},
+    {"@type":"Question","name":"Will you review my tool for free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Standard editorial reviews are completely free. We do not charge for reviews and never will. If you want expedited review or a sponsored review, see our sponsor page."}},
+    {"@type":"Question","name":"Does paying for a sponsored review guarantee a good rating?","acceptedAnswer":{"@type":"Answer","text":"No. Sponsored reviews are clearly marked as sponsored, and the editorial score is never affected by sponsorship. Our editorial independence is non-negotiable."}}
+  ]
+};
+---
+<BaseLayout title="提交 AI 工具 | 让你的 AI 工具被评测" description="提交你的 AI 工具到 AI Tool Hub 进行编辑评测。免费评测，详细流程，入选标准。4-6 周出结果。" keywords="提交 AI 工具, AI 工具评测, AI 工具收录, AI Tool Hub 提交">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <span>提交 AI 工具</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">开发者</span>
+      <h1>提交你的 AI 工具</h1>
+      <p class="lede">想让你的 AI 工具被我们评测？填写下方信息，我们会在 2 个工作日内确认收到。标准评测周期为 4-6 周。</p>
+    </header>
+
+    <section>
+      <h2>入选标准</h2>
+      <p>我们评测满足以下条件的 AI 工具：</p>
+      <ul>
+        <li>已公开发布且可正常使用</li>
+        <li>至少有 6 个月公开运营记录</li>
+        <li>有公开的隐私政策</li>
+        <li>有清晰的价值主张和用户群体</li>
+      </ul>
+      <p>我们不保证所有提交的工具都会被评测。如果不符合入选标准或不属于我们的覆盖范围（纯本地部署的企业软件、未公开运营的项目等），我们会邮件告知原因。</p>
+    </section>
+
+    <section>
+      <h2>评测流程</h2>
+      <ol>
+        <li><strong>提交</strong>——填写下方表单（即将上线），或发邮件到 <a href="mailto:quwenping2020@163.com">quwenping2020@163.com</a></li>
+        <li><strong>初步筛选</strong>——1 周内完成，判断是否符合入选标准</li>
+        <li><strong>实际测试</strong>——2 周深度使用，编辑完成真实场景下的测试</li>
+        <li><strong>交叉评审</strong>——另一位编辑独立验证评测结论</li>
+        <li><strong>发布</strong>——1-2 周内完成编辑和排版后上线</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>评测费用</h2>
+      <p><strong>标准编辑评测完全免费。</strong>我们不对评测收费，也永远不会收费。如果你想加快评测速度或进行赞助评测，请查看<a href="/zh/sponsor/">赞助合作</a>页面。</p>
+    </section>
+
+    <section>
+      <h2>提交方式</h2>
+      <p>提交表单即将上线。在此期间，请发送邮件到 <a href="mailto:quwenping2020@163.com">quwenping2020@163.com</a>，附上以下信息：</p>
+      <ul>
+        <li>工具名称和官网链接</li>
+        <li>一句话描述（你希望用户了解的最关键信息）</li>
+        <li>目标用户群体</li>
+        <li>定价信息（免费版和付费版）</li>
+        <li>与其他同类工具的差异化优势</li>
+        <li>联系方式（用于后续沟通）</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>常见问题</h2>
+      <h3>评测需要多长时间？</h3>
+      <p>标准评测周期为提交后 4-6 周。包括初步筛选（1 周）、实际测试（2 周）、交叉评审（1 周）和编辑发布（1-2 周）。</p>
+      <h3>评测免费吗？</h3>
+      <p>是的，标准编辑评测完全免费。我们不收费，也永远不会收费。</p>
+      <h3>付费赞助评测能保证好评吗？</h3>
+      <p>不能。赞助内容会明确标注，编辑评分不受赞助关系影响。我们的编辑独立性是不可触碰的底线。</p>
+    </section>
+  </article>
+</BaseLayout>

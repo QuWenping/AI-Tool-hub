@@ -1,0 +1,46 @@
+name:
+  en: Beautiful.ai
+  zh: Beautiful.ai
+short_desc:
+  en: AI-powered smart presentation tool
+  zh: AI 驱动的智能演示文稿工具
+long_desc:
+  en: >-
+    Beautiful.ai auto-formats presentations with AI-assisted design; built for business presentations.
+cat: productivity
+url: https://www.beautiful.ai
+icon: fa-presentation-screen
+scenes:
+  en:
+  - Presentations
+  - Proposals
+  - Reports
+  - Sales
+pros:
+  en:
+  - Auto-formatting
+  - Design rules
+  - Team collab
+cons:
+  en:
+  - Mid-high price
+  - Weak customization
+target_audience:
+  en:
+  - Sales
+  - PMs
+  - Managers
+use_cases:
+  en:
+  - Presentations
+  - Proposals
+  - Reports
+  - Sales
+features:
+  en:
+  - Auto-format
+  - AI design
+  - Templates
+  - Collab
+example:
+  en: 'Example: Input text → auto-formatted beautiful slides.'

@@ -1,0 +1,24 @@
+name:
+  en: Qodo
+  zh: Qodo
+short_desc:
+  en: AI code testing
+  zh: AI 代码测试
+long_desc:
+  en: AI-powered test generation and code analysis
+cat: code
+url: https://qodo.ai
+icon: fa-code
+scenes:
+  en:
+  - testing
+  - analysis
+  - generation
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

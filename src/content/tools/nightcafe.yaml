@@ -1,0 +1,24 @@
+name:
+  en: NightCafe
+  zh: NightCafe
+short_desc:
+  en: AI art generation community
+  zh: AI 艺术生成社区
+long_desc:
+  en: AI art generation with multiple styles and active community
+cat: image
+url: https://nightcafe.studio
+icon: fa-moon
+scenes:
+  en:
+  - art
+  - community
+  - creative
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

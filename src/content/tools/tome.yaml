@@ -1,0 +1,46 @@
+name:
+  en: Tome
+  zh: Tome
+short_desc:
+  en: AI presentation generator
+  zh: AI 演示文稿生成器
+long_desc:
+  en: >-
+    Tome uses AI to generate polished presentations from text/docs; great for quick proposals.
+cat: productivity
+url: https://tome.app
+icon: fa-presentation-screen
+scenes:
+  en:
+  - Presentations
+  - Proposals
+  - Reports
+  - Product
+pros:
+  en:
+  - Fast AI gen
+  - Beautiful design
+  - Interactive
+cons:
+  en:
+  - Limited export
+  - Weak customization
+target_audience:
+  en:
+  - Founders
+  - PMs
+  - Sales
+use_cases:
+  en:
+  - Proposals
+  - Presentations
+  - Reports
+  - Product
+features:
+  en:
+  - AI gen
+  - Templates
+  - Interactive
+  - Embed
+example:
+  en: 'Example: ''pitch deck for a SaaS startup'' → 8 slides.'

@@ -1,0 +1,24 @@
+name:
+  en: Shuffll
+  zh: Shuffll
+short_desc:
+  en: AI enterprise video
+  zh: AI 企业视频
+long_desc:
+  en: Enterprise AI video production platform
+cat: video
+url: https://shuffll.com
+icon: fa-video
+scenes:
+  en:
+  - enterprise
+  - marketing
+  - video
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

@@ -1,0 +1,24 @@
+name:
+  en: Hypotenuse AI
+  zh: Hypotenuse AI
+short_desc:
+  en: AI ecommerce content
+  zh: AI 电商内容
+long_desc:
+  en: AI content generation for ecommerce product descriptions
+cat: text
+url: https://hypotenuse.ai
+icon: fa-pen
+scenes:
+  en:
+  - ecommerce
+  - product
+  - content
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

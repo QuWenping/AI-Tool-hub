@@ -1,0 +1,24 @@
+name:
+  en: Wav2Lip
+  zh: Wav2Lip
+short_desc:
+  en: AI lip sync tool
+  zh: AI 口型同步工具
+long_desc:
+  en: Open-source lip sync from audio to video
+cat: video
+url: https://github.com/Rudrabha/Wav2Lip
+icon: fa-comment
+scenes:
+  en:
+  - lip-sync
+  - video
+  - open-source
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

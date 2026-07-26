@@ -1,0 +1,24 @@
+name:
+  en: TTSMaker
+  zh: TTSMaker
+short_desc:
+  en: Free online TTS
+  zh: 免费在线 TTS
+long_desc:
+  en: Free text-to-speech with multiple languages and voices
+cat: audio
+url: https://ttsmaker.com
+icon: fa-microphone
+scenes:
+  en:
+  - tts
+  - free
+  - online
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

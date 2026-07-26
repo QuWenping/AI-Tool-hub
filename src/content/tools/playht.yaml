@@ -1,0 +1,24 @@
+name:
+  en: PlayHT
+  zh: PlayHT
+short_desc:
+  en: AI text-to-speech
+  zh: AI 文字转语音
+long_desc:
+  en: Ultra-realistic AI voices with 800+ options
+cat: audio
+url: https://play.ht
+icon: fa-headphones
+scenes:
+  en:
+  - tts
+  - voiceover
+  - podcast
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

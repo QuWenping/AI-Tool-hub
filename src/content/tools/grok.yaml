@@ -1,0 +1,46 @@
+name:
+  en: Grok
+  zh: Grok
+short_desc:
+  en: AI assistant by xAI, integrated with X
+  zh: xAI 推出的 AI 助手，集成于 X 平台
+long_desc:
+  en: >-
+    Grok by xAI offers AI chat and search, integrated with X (Twitter), with iOS/Android apps and API access.
+cat: text
+url: https://grok.com
+icon: fa-comment-dots
+scenes:
+  en:
+  - AI chat
+  - Real-time search
+  - X platform
+  - API
+pros:
+  en:
+  - Real-time info
+  - X integration
+  - API available
+cons:
+  en:
+  - New tool
+  - Small ecosystem
+target_audience:
+  en:
+  - X users
+  - Devs
+  - Early adopters
+use_cases:
+  en:
+  - Chat
+  - Search
+  - API
+  - Social
+features:
+  en:
+  - AI chat
+  - Real-time search
+  - X integration
+  - API
+example:
+  en: 'Example: Search latest AI news with Grok on X.'

@@ -3,18 +3,17 @@
  * RelatedPosts.astro - Related posts recommendations
  * Based on tag matching + category matching
  */
-import posts from "../data/posts.json";
-const { currentSlug, currentCategory, currentTags = [], relatedSlugs = [], limit = 3 } = Astro.props;
+const { currentSlug, currentCategory, currentTags = [], relatedSlugs = [], limit = 3, posts = [] } = Astro.props;
 
 function getScoredPosts() {
   const scoredPosts = posts
     .filter(p => p.slug !== currentSlug)
     .map(p => {
       let score = 0;
-      if (p.category === currentCategory) score += 5;
-      const sharedTags = (p.tags || []).filter(t => currentTags.includes(t));
+      if (p.data.category === currentCategory) score += 5;
+      const sharedTags = (p.data.tags || []).filter(t => currentTags.includes(t));
       score += sharedTags.length * 2;
-      return { ...p, score };
+      return { ...p.data, slug: p.slug, score };
     })
     .filter(p => p.score > 0)
     .sort((a, b) => b.score - a.score);
@@ -25,7 +24,7 @@ function getScoredPosts() {
 let scoredPosts = getScoredPosts();
 if (scoredPosts.length === 0 && relatedSlugs.length > 0) {
   const slugSet = new Set(relatedSlugs.slice(0, limit));
-  scoredPosts = posts.filter(p => slugSet.has(p.slug)).map(p => ({ ...p, score: 1 }));
+  scoredPosts = posts.filter(p => slugSet.has(p.slug)).map(p => ({ ...p.data, slug: p.slug, score: 1 }));
 }
 ---
 {scoredPosts.length > 0 && (

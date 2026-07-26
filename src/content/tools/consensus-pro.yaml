@@ -1,0 +1,24 @@
+name:
+  en: Consensus Pro
+  zh: Consensus Pro
+short_desc:
+  en: AI research search pro
+  zh: AI 研究搜索专业版
+long_desc:
+  en: AI-powered academic search with consensus scoring
+cat: research
+url: https://consensus.app
+icon: fa-search
+scenes:
+  en:
+  - academic
+  - search
+  - consensus
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

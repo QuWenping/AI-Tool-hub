@@ -1,0 +1,134 @@
+name:
+  en: Otter
+  zh: Otter
+short_desc:
+  en: AI meeting notes and transcription
+  zh: AI 会议记录和实时转录
+long_desc:
+  en: >-
+    Otter transcribes meetings live, extracts action items - a long-standing pick for English meetings.
+cat: audio
+url: https://otter.ai
+icon: fa-sticky-note
+scenes:
+  en:
+  - Meeting notes
+  - Interview
+  - Lecture notes
+  - Action items
+  zh:
+  - 会议记录
+  - 实时转录
+  - 访谈整理
+  - 课堂笔记
+pros:
+  en:
+  - Live transcription
+  - Action items
+  - Calendar sync
+  zh:
+  - 转录准确率高
+  - 自动加入会议功能方便
+  - 说话人识别准确
+cons:
+  en:
+  - Weak Chinese
+  - Privacy concerns
+  - Paid tier
+  zh:
+  - 中文转录不如英文
+  - 高级功能需付费
+  - 隐私方面有顾虑
+target_audience:
+  en:
+  - Professionals
+  - Journalists
+  - Students
+  - Remote teams
+  zh:
+  - 职场人士
+  - 记者
+  - 学生
+  - 远程团队
+use_cases:
+  en:
+  - Meetings
+  - Interviews
+  - Lectures
+  - Actions
+  zh:
+  - 会议记录
+  - 访谈
+  - 讲座
+  - 行动项
+features:
+  en:
+  - Live transcription
+  - AI actions
+  - Calendar
+  - Summaries
+  zh:
+  - 实时转录
+  - AI 待办
+  - 日历集成
+  - 摘要
+example:
+  en: 'Example: Transcribe a Zoom meeting and pull action items.'
+  zh: 示例：转录 Zoom 会议并提取待办事项。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Latest stable (2026)
+score: 8.4
+overall_score: 8.4
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+  - iOS
+  - Android
+  - Chrome Extension
+  - API
+pricingSummary:
+  en: >-
+    Free tier with 300 min/month · Pro $16.99/seat/mo, Business $30/seat/mo unlock more minutes, AI chat, and team features.
+faq:
+- q_en: What is Otter?
+  a_en: >-
+    Otter.ai is an AI meeting transcription and note-taking service that joins Zoom, Google Meet, and Teams to capture conversations
+    in real time.
+- q_en: Is Otter free?
+  a_en: >-
+    Yes. The free plan includes 300 minutes per month; Pro starts at $16.99/seat/month with more minutes and AI features.
+- q_en: How accurate is Otter?
+  a_en: >-
+    Otter achieves high accuracy on clear English audio and improving accuracy on Mandarin and other major languages.
+- q_en: Does Otter have an AI chat?
+  a_en: >-
+    Yes. Otter AI Chat can answer questions across past meetings, draft follow-up emails, and generate status updates from
+    your meeting archive.
+- q_en: Can Otter join meetings automatically?
+  a_en: >-
+    Yes. Connect your calendar and Otter auto-joins Zoom, Google Meet, and Microsoft Teams meetings you host or are invited
+    to.
+- q_en: Does Otter have an API?
+  a_en: >-
+    Yes. Otter exposes a REST API and webhooks for paid plans, popular for piping transcripts into CRMs and note apps.
+- q_en: How is Otter different from Fireflies?
+  a_en: >-
+    Otter is a stronger individual note-taker with AI chat; Fireflies is stronger on CRM automation and team-wide search.
+- q_en: Does Otter support speaker identification?
+  a_en: >-
+    Yes. Otter detects and labels different speakers automatically and you can correct labels afterwards.
+- q_en: Is Otter suitable for lectures?
+  a_en: >-
+    Yes. Otter is widely used by students and academics; the free 300 min/month covers most semester workloads.
+- q_en: Who should use Otter?
+  a_en: >-
+    Students, journalists, researchers, and professionals who need reliable transcripts and searchable meeting history.
+scoreBreakdown:
+  user: 8.4
+  capability: 7.4
+  price: 9
+  growth: 8
+  trust: 8

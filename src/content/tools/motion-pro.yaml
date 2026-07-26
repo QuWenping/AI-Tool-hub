@@ -1,0 +1,24 @@
+name:
+  en: Motion Pro
+  zh: Motion Pro
+short_desc:
+  en: AI calendar pro
+  zh: AI 日历专业版
+long_desc:
+  en: AI-powered calendar with smart scheduling
+cat: productivity
+url: https://motion.ai
+icon: fa-calendar
+scenes:
+  en:
+  - calendar
+  - scheduling
+  - ai
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

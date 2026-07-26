@@ -1,0 +1,24 @@
+name:
+  en: Astria
+  zh: Astria
+short_desc:
+  en: Custom AI image generation
+  zh: 自定义 AI 图像生成
+long_desc:
+  en: Custom fine-tuned AI image generation for consistent brand visuals
+cat: image
+url: https://astria.ai
+icon: fa-image
+scenes:
+  en:
+  - image
+  - fine-tuning
+  - brand
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

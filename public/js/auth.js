@@ -9,17 +9,32 @@
 
   async function signInWithOAuth(provider) {
     try {
+      console.log(`[Auth] Starting ${provider} OAuth sign-in...`);
       const res = await fetch('/api/auth/signin', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ provider }),
+        credentials: 'include',
       });
+
+      console.log(`[Auth] Response status: ${res.status}`);
       const data = await res.json();
-      if (data.url) { window.location.href = data.url; }
-      else { alert('Sign in failed: ' + (data.error || 'Unknown error')); }
+      console.log(`[Auth] Response data:`, data);
+
+      if (data.url) {
+        console.log(`[Auth] Redirecting to OAuth provider...`);
+        window.location.href = data.url;
+      } else if (data.error) {
+        console.error(`[Auth] OAuth error:`, data.error);
+        const errorMsg = data.details || data.error || 'Unknown error';
+        alert(`Sign in failed:\n\n${errorMsg}\n\nPlease check:\n1. GitHub OAuth app is enabled in Supabase\n2. Callback URL matches your domain`);
+      } else {
+        console.error(`[Auth] Unexpected response:`, data);
+        alert('Sign in failed: Unexpected response from server');
+      }
     } catch (err) {
-      console.error('Sign in error:', err);
-      alert('Sign in failed. Please try again.');
+      console.error('[Auth] Exception:', err);
+      alert(`Sign in failed:\n\n${err.message}`);
     }
   }
 
@@ -29,23 +44,36 @@
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
+        credentials: 'include',
       });
       const data = await res.json();
       if (res.ok) {
         closeModal();
+        resetModal();
         await checkSession();
       } else {
-        if (data.error && data.error.toLowerCase().includes('invalid login credentials')) {
-          showSignupStatus('Account not found. Please sign up first.', 'error');
-          // Auto-switch to sign up after 2s
+        if (data.error && data.error.toLowerCase().includes('invalid')) {
+          const signupStatus = document.getElementById('create-account-status');
+          if (signupStatus) {
+            signupStatus.textContent = 'Account not found. Please sign up first.';
+            signupStatus.style.color = '#ef4444';
+          }
           setTimeout(() => switchToSignUp(), 2000);
         } else {
-          alert(data.error || 'Sign in failed');
+          const signupStatus = document.getElementById('create-account-status');
+          if (signupStatus) {
+            signupStatus.textContent = data.error || 'Sign in failed';
+            signupStatus.style.color = '#ef4444';
+          }
         }
       }
     } catch (err) {
       console.error('Email sign in error:', err);
-      alert('Sign in failed. Please try again.');
+      const signupStatus = document.getElementById('create-account-status');
+      if (signupStatus) {
+        signupStatus.textContent = 'Network error. Please try again.';
+        signupStatus.style.color = '#ef4444';
+      }
     }
   }
 
@@ -55,17 +83,33 @@
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),
+        credentials: 'include',
       });
       const data = await res.json();
       if (res.ok) {
         document.getElementById('signup-step-email').setAttribute('hidden', '');
         document.getElementById('signup-step-code').removeAttribute('hidden');
-        showSignupStatus('Code sent! Check your email.', 'success');
+        const status = document.getElementById('send-code-status');
+        if (status) {
+          status.textContent = 'Code sent! Check your email.';
+          status.style.color = '#22c55e';
+        }
+        setTimeout(() => {
+          if (status) status.textContent = '';
+        }, 5000);
       } else {
-        showSignupStatus(data.error || 'Failed to send code', 'error');
+        const status = document.getElementById('send-code-status');
+        if (status) {
+          status.textContent = data.error || 'Failed to send code';
+          status.style.color = '#ef4444';
+        }
       }
     } catch (err) {
-      showSignupStatus('Failed to send code. Try again.', 'error');
+      const status = document.getElementById('send-code-status');
+      if (status) {
+        status.textContent = 'Network error. Try again.';
+        status.style.color = '#ef4444';
+      }
     }
   }
 
@@ -75,43 +119,64 @@
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, token, password }),
+        credentials: 'include',
       });
       const data = await res.json();
       if (res.ok) {
         closeModal();
+        resetModal();
         await checkSession();
       } else {
-        showSignupStatus(data.error || 'Verification failed', 'error');
+        const status = document.getElementById('create-account-status');
+        if (status) {
+          status.textContent = data.error || 'Verification failed';
+          status.style.color = '#ef4444';
+        }
       }
     } catch (err) {
-      showSignupStatus('Verification failed. Try again.', 'error');
+      const status = document.getElementById('create-account-status');
+      if (status) {
+        status.textContent = 'Network error. Try again.';
+        status.style.color = '#ef4444';
+      }
     }
   }
 
   async function signOut() {
-    await fetch('/api/auth/signout', { method: 'POST' });
+    try {
+      await fetch('/api/auth/signout', { method: 'POST', credentials: 'include' });
+    } catch (err) {
+      console.error('Sign out error:', err);
+    }
     clearUser();
     updateUI(null);
   }
 
   async function checkSession() {
-    const accessToken = document.cookie.match(/sb-access-token=([^;]+)/)?.[1];
-    if (!accessToken) return;
     try {
-      const configRes = await fetch('/api/auth/config');
-      const config = await configRes.json();
-      const res = await fetch(`${config.supabaseUrl}/auth/v1/user`, {
-        headers: { Authorization: `Bearer ${accessToken}`, apikey: config.supabaseAnonKey },
+      const sessionRes = await fetch('/api/auth/session', {
+        method: 'GET',
+        credentials: 'include',
       });
-      if (res.ok) {
-        const user = await res.json();
-        setUser(user);
-        updateUI(user);
+
+      if (sessionRes.ok) {
+        const { user } = await sessionRes.json();
+        if (user) {
+          setUser(user);
+          updateUI(user);
+        } else {
+          clearUser();
+          updateUI(null);
+        }
       } else {
         clearUser();
         updateUI(null);
       }
-    } catch { /* Silently fail */ }
+    } catch (err) {
+      console.error('Session check error:', err);
+      clearUser();
+      updateUI(null);
+    }
   }
 
   function updateUI(user) {
@@ -134,13 +199,10 @@
   }
 
   function resetModal() {
-    // Reset to sign-in view
     document.getElementById('signin-form-view')?.removeAttribute('hidden');
     document.getElementById('signup-form-view')?.setAttribute('hidden', '');
-    // Reset signup steps
     document.getElementById('signup-step-email')?.removeAttribute('hidden');
     document.getElementById('signup-step-code')?.setAttribute('hidden', '');
-    // Clear all form fields
     document.querySelectorAll('.signin-email-form input, .signup-step input').forEach(i => i.value = '');
     document.getElementById('send-code-status') && (document.getElementById('send-code-status').textContent = '');
     document.getElementById('create-account-status') && (document.getElementById('create-account-status').textContent = '');
@@ -149,7 +211,6 @@
   function switchToSignUp() {
     document.getElementById('signin-form-view')?.setAttribute('hidden', '');
     document.getElementById('signup-form-view')?.removeAttribute('hidden');
-    // Reset signup steps
     document.getElementById('signup-step-email')?.removeAttribute('hidden');
     document.getElementById('signup-step-code')?.setAttribute('hidden', '');
     document.querySelectorAll('#signup-form-view input').forEach(i => i.value = '');
@@ -159,14 +220,6 @@
     document.getElementById('signup-form-view')?.setAttribute('hidden', '');
     document.getElementById('signin-form-view')?.removeAttribute('hidden');
     document.querySelectorAll('#signin-form-view input').forEach(i => i.value = '');
-  }
-
-  function showSignupStatus(msg, type) {
-    const el = document.getElementById('create-account-status');
-    if (el) {
-      el.textContent = msg;
-      el.style.color = type === 'error' ? '#ef4444' : '#22c55e';
-    }
   }
 
   let pendingEmail = '';
@@ -191,12 +244,24 @@
     });
 
     // GitHub buttons
-    document.getElementById('github-signin-btn')?.addEventListener('click', () => signInWithOAuth('github'));
-    document.getElementById('github-signup-btn')?.addEventListener('click', () => signInWithOAuth('github'));
+    document.getElementById('github-signin-btn')?.addEventListener('click', () => {
+      console.log('[UI] GitHub sign-in button clicked');
+      signInWithOAuth('github');
+    });
+    document.getElementById('github-signup-btn')?.addEventListener('click', () => {
+      console.log('[UI] GitHub sign-up button clicked');
+      signInWithOAuth('github');
+    });
 
     // Switch views
-    document.getElementById('switch-to-signup')?.addEventListener('click', (e) => { e.preventDefault(); switchToSignUp(); });
-    document.getElementById('switch-to-signin')?.addEventListener('click', (e) => { e.preventDefault(); switchToSignIn(); });
+    document.getElementById('switch-to-signup')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchToSignUp();
+    });
+    document.getElementById('switch-to-signin')?.addEventListener('click', (e) => {
+      e.preventDefault();
+      switchToSignIn();
+    });
 
     // Email sign-in
     document.getElementById('email-signin-form')?.addEventListener('submit', (e) => {
@@ -209,7 +274,14 @@
     // Send OTP
     document.getElementById('send-code-btn')?.addEventListener('click', () => {
       const email = document.getElementById('signup-email').value;
-      if (!email) { showSignupStatus('Please enter your email first', 'error'); return; }
+      if (!email) {
+        const status = document.getElementById('send-code-status');
+        if (status) {
+          status.textContent = 'Please enter your email first';
+          status.style.color = '#ef4444';
+        }
+        return;
+      }
       pendingEmail = email;
       sendOtp(email);
     });
@@ -218,15 +290,37 @@
     document.getElementById('create-account-btn')?.addEventListener('click', () => {
       const token = document.getElementById('signup-code').value;
       const password = document.getElementById('signup-password').value;
-      if (!token || !password) { showSignupStatus('Please fill in all fields', 'error'); return; }
-      if (password.length < 6) { showSignupStatus('Password must be at least 6 characters', 'error'); return; }
+      if (!token || !password) {
+        const status = document.getElementById('create-account-status');
+        if (status) {
+          status.textContent = 'Please fill in all fields';
+          status.style.color = '#ef4444';
+        }
+        return;
+      }
+      if (password.length < 6) {
+        const status = document.getElementById('create-account-status');
+        if (status) {
+          status.textContent = 'Password must be at least 6 characters';
+          status.style.color = '#ef4444';
+        }
+        return;
+      }
       createAccount(pendingEmail, token, password);
     });
 
-    // Allow Enter key on OTP/password fields
+    // Allow Enter key on password field
     document.getElementById('signup-password')?.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') document.getElementById('create-account-btn').click();
     });
+
+    // Auto-redirect from auth callback
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('error')) {
+      const error = urlParams.get('error');
+      alert('Authentication failed: ' + error);
+      window.history.replaceState({}, '', window.location.pathname);
+    }
 
     checkSession();
   }

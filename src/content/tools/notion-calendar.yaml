@@ -1,0 +1,24 @@
+name:
+  en: Notion Calendar
+  zh: Notion Calendar
+short_desc:
+  en: AI calendar by Notion
+  zh: Notion AI 日历
+long_desc:
+  en: Calendar integrated with Notion workspace
+cat: productivity
+url: https://notion.so/calendar
+icon: fa-calendar
+scenes:
+  en:
+  - calendar
+  - notion
+  - integration
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

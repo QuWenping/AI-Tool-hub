@@ -1,0 +1,24 @@
+name:
+  en: Lens AI
+  zh: Lens AI
+short_desc:
+  en: AI scholarly search
+  zh: AI 学术搜索
+long_desc:
+  en: AI-powered scholarly search and patent analysis
+cat: research
+url: https://lens.org
+icon: fa-search
+scenes:
+  en:
+  - scholarly
+  - patents
+  - search
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

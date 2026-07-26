@@ -1,0 +1,24 @@
+name:
+  en: D-ID Pro
+  zh: D-ID Pro
+short_desc:
+  en: AI video with talking avatars
+  zh: AI 数字人视频
+long_desc:
+  en: Create talking head videos from photos and text
+cat: video
+url: https://d-id.com
+icon: fa-user
+scenes:
+  en:
+  - avatar
+  - talking-head
+  - video
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

@@ -1,0 +1,24 @@
+name:
+  en: SeaArt AI
+  zh: SeaArt AI
+short_desc:
+  en: AI art generation platform
+  zh: AI 艺术生成平台
+long_desc:
+  en: AI art generation with community models and tools
+cat: image
+url: https://seaart.ai
+icon: fa-water
+scenes:
+  en:
+  - art
+  - community
+  - generation
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

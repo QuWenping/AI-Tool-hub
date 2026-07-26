@@ -1,0 +1,24 @@
+name:
+  en: Easy AI
+  zh: Easy AI
+short_desc:
+  en: Simple AI writer
+  zh: 简易 AI 写作
+long_desc:
+  en: Simple AI writing for social media and blogs
+cat: text
+url: https://easy-ai.com
+icon: fa-pen
+scenes:
+  en:
+  - social
+  - blog
+  - simple
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

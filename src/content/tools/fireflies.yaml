@@ -1,0 +1,137 @@
+name:
+  en: Fireflies
+  zh: Fireflies
+short_desc:
+  en: AI meeting assistant and conversation analytics
+  zh: AI 会议助手和对话分析
+long_desc:
+  en: >-
+    Fireflies joins meetings, transcribes and analyzes sales/customer calls - built for sales and support.
+cat: audio
+url: https://fireflies.ai
+icon: fa-headset
+scenes:
+  en:
+  - Sales calls
+  - Customer calls
+  - Conversation analytics
+  - Team collab
+  zh:
+  - 销售会议分析
+  - 团队协作
+  - 对话情报
+  - CRM 集成
+pros:
+  en:
+  - Auto-join
+  - Call analytics
+  - CRM integration
+  zh:
+  - 对话分析功能独特
+  - 销售场景优化
+  - CRM 集成完善
+cons:
+  en:
+  - Weak Chinese
+  - Paid tier
+  - Privacy config needed
+  zh:
+  - 转录准确率略低于 Otter
+  - 中文支持有限
+  - 需配置隐私设置
+target_audience:
+  en:
+  - Sales
+  - Support
+  - PMs
+  - Remote teams
+  zh:
+  - 销售
+  - 客服
+  - 产品经理
+  - 远程团队
+use_cases:
+  en:
+  - Sales calls
+  - Interviews
+  - Analytics
+  - Meetings
+  zh:
+  - 销售电话
+  - 访谈
+  - 分析
+  - 会议
+features:
+  en:
+  - Auto transcription
+  - Analytics
+  - CRM
+  - Summaries
+  zh:
+  - 自动转录
+  - 分析
+  - CRM 集成
+  - 摘要
+example:
+  en: 'Example: Auto-transcribe and analyze a sales call.'
+  zh: 示例：自动转录并分析销售电话。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Latest stable (2026)
+score: 8.5
+overall_score: 8.5
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+  - Chrome Extension
+  - API
+  - Mobile
+pricingSummary:
+  en: >-
+    Free tier with limited transcripts · Pro $10/seat/mo, Business $19/seat/mo, Enterprise custom unlock unlimited transcripts,
+    AI apps, and CRM sync.
+faq:
+- q_en: What is Fireflies?
+  a_en: >-
+    Fireflies.ai is an AI meeting assistant that records, transcribes, and summarises meetings across Zoom, Google Meet, Teams,
+    and Webex.
+- q_en: Is Fireflies free?
+  a_en: >-
+    Yes. The free plan includes a limited number of transcription credits; paid plans start at $10/seat/month.
+- q_en: How accurate is Fireflies transcription?
+  a_en: >-
+    Fireflies achieves high accuracy on clear English audio; noisy or accented audio benefits from manual speaker labelling
+    and post-editing.
+- q_en: Does Fireflies integrate with CRMs?
+  a_en: >-
+    Yes. Native integrations with Salesforce, HubSpot, Pipedrive, Zoho, and others auto-log meeting notes and call summaries
+    to the right record.
+- q_en: Can Fireflies answer questions about past meetings?
+  a_en: >-
+    Yes. AskFred is Fireflies' chat assistant that can search across your meeting archive and answer questions in natural
+    language.
+- q_en: Does Fireflies have an API?
+  a_en: >-
+    Yes. A REST API and webhooks are available, useful for piping meeting data into custom workflows or data warehouses.
+- q_en: Is Fireflies GDPR compliant?
+  a_en: >-
+    Yes. Fireflies offers GDPR-compliant data handling, SOC 2 Type II, and configurable data retention policies on Business
+    and above.
+- q_en: Can Fireflies detect action items?
+  a_en: >-
+    Yes. Fireflies auto-detects tasks and decisions in the transcript and surfaces them in the summary and in integrated CRMs.
+- q_en: Does Fireflies work in Chinese?
+  a_en: >-
+    Fireflies supports multiple languages including Mandarin, with quality improving for clearly pronounced audio.
+- q_en: Who should use Fireflies?
+  a_en: >-
+    Sales teams, customer success, recruiters, and anyone whose calendar is full of meetings they need to remember and act
+    on.
+scoreBreakdown:
+  user: 8.5
+  capability: 7.5
+  price: 9
+  growth: 8
+  trust: 8

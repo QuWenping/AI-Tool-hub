@@ -1,0 +1,58 @@
+name:
+  en: Writesonic
+  zh: Writesonic
+short_desc:
+  en: AI writing + SEO optimization platform
+  zh: AI 写作和 SEO 优化平台
+long_desc:
+  en: >-
+    Writesonic combines AI writing with SEO optimization for search-friendly blog and marketing content.
+cat: text
+url: https://writesonic.com
+icon: fa-keyboard
+scenes:
+  en:
+  - SEO blog
+  - Marketing copy
+  - Landing pages
+  - Ads
+  zh:
+  - SEO 内容
+  - 博客写作
+  - 营销文案
+  - 内容策略
+pros:
+  en:
+  - SEO integrated
+  - One-click blog
+  - Many templates
+  zh:
+  - SEO + AI 写作一体化
+  - 内容评分功能实用
+  - 模板库覆盖广
+cons:
+  en:
+  - Generic content
+  - Mid-high price
+  zh:
+  - 高级 SEO 功能需高价位套餐
+  - 中文 SEO 效果不确定
+target_audience:
+  en:
+  - Marketers
+  - SEO
+  - Bloggers
+use_cases:
+  en:
+  - SEO blog
+  - Ads
+  - Landing
+  - Marketing
+features:
+  en:
+  - AI writing
+  - SEO optimize
+  - Templates
+  - Batch gen
+example:
+  en: 'Example: One-click generate an SEO-optimized AI tool review.'

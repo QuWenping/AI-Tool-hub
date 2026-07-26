@@ -1,0 +1,24 @@
+name:
+  en: Sourcegraph Cody
+  zh: Sourcegraph Cody
+short_desc:
+  en: AI code search and intelligence
+  zh: AI 代码搜索和智能
+long_desc:
+  en: AI-powered code search and understanding across repositories
+cat: code
+url: https://sourcegraph.com
+icon: fa-code
+scenes:
+  en:
+  - code-search
+  - intelligence
+  - enterprise
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

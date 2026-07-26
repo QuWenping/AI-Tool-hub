@@ -1,0 +1,107 @@
+name:
+  en: Jasper
+  zh: Jasper
+short_desc:
+  en: Brand AI writing platform for marketing teams
+  zh: 面向营销团队的品牌 AI 写作平台
+long_desc:
+  en: Jasper is purpose-built for marketing teams, with brand voice and SEO mode.
+cat: text
+url: https://jasper.ai
+icon: fa-pen-fancy
+scenes:
+  en:
+  - Ad copy
+  - Brand content
+  - SEO blog
+  - Email seq
+  zh:
+  - 品牌营销
+  - 内容团队协作
+  - 广告文案
+  - SEO 内容
+pros:
+  en:
+  - Brand voice
+  - Rich templates
+  - Team collab
+  zh:
+  - 品牌声音一致性管理
+  - 团队协作功能完善
+  - 模板库覆盖常见营销场景
+cons:
+  en:
+  - Expensive
+  - Narrow use
+  - Team-only ROI
+  zh:
+  - $49/月起对个人偏高
+  - 中文支持有限
+  - 用途较窄
+target_audience:
+  en:
+  - Marketing teams
+  - Agencies
+  - Brand managers
+  zh:
+  - 营销团队
+  - 代理商
+  - 品牌经理
+use_cases:
+  en:
+  - Google Ads
+  - SEO blog
+  - Brand social
+  - Email seq
+  zh:
+  - Google 广告
+  - SEO 博客
+  - 品牌社交媒体
+  - 邮件序列
+features:
+  en:
+  - Brand voice
+  - Templates
+  - SEO mode
+  - Multi-lang
+  zh:
+  - 品牌语调
+  - 模板库
+  - SEO 模式
+  - 多语言
+example:
+  en: 'Example: Upload top blogs to learn brand voice.'
+  zh: 示例：上传顶级博客学习品牌语调。
+reviewed: true
+updatedAt: '2026-07-19'
+testedVersion: Jasper 2026
+score: 6.8
+overall_score: 6.8
+quickFacts:
+  freeTier: false
+  hasApi: true
+  platforms:
+  - Web
+  - API
+pricingSummary:
+  en: Creator $49/mo · Teams $125/mo · Business custom.
+faq:
+- q_en: Who is Jasper built for?
+  a_en: Marketing teams that need brand voice consistency across many writers.
+- q_en: Is Jasper worth it for individuals?
+  a_en: >-
+    For individuals, Claude Pro or ChatGPT Plus deliver similar output at lower cost.
+scoreBreakdown:
+  user: 6.8
+  capability: 7
+  price: 5
+  growth: 7
+  trust: 8
+editorialIntro: >-
+  Jasper is the AI writing platform built specifically for marketing teams. Brand voice training, marketing templates and
+  SEO mode become useful once you have three or more writers sharing a brand.
+editorialVerdict:
+  best: >-
+    You manage a marketing team of 3+ writers who need brand-voice consistency. Team plan starts at $125/month.
+  avoid: >-
+    You are an individual marketer — Claude Pro delivers similar output for less money.

@@ -1,0 +1,24 @@
+name:
+  en: Texta AI
+  zh: Texta AI
+short_desc:
+  en: AI article writer
+  zh: AI 文章写作
+long_desc:
+  en: AI article generation with SEO optimization
+cat: text
+url: https://texta.ai
+icon: fa-file-text
+scenes:
+  en:
+  - article
+  - seo
+  - generation
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

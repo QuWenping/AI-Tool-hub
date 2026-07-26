@@ -1,0 +1,133 @@
+name:
+  en: Pika
+  zh: Pika
+short_desc:
+  en: Easy AI short-video generator
+  zh: 简单易用的 AI 短视频生成器
+long_desc:
+  en: >-
+    Pika turns text/images into short video, focused on simplicity and social clips with a generous free tier.
+cat: video
+url: https://pika.art
+icon: fa-film
+scenes:
+  en:
+  - Social shorts
+  - Motion posters
+  - Image-to-video
+  - Creative clips
+  zh:
+  - 短视频创作
+  - 社交媒体
+  - 动态海报
+  - 快速原型
+pros:
+  en:
+  - Easiest start
+  - Generous free
+  - Social formats
+  zh:
+  - 上手难度最低
+  - 短视频成功率最高
+  - 价格合理
+cons:
+  en:
+  - Short clips
+  - Mid quality
+  - Limited control
+  zh:
+  - 视频长度有限
+  - 不支持专业编辑
+  - 画质中等
+target_audience:
+  en:
+  - Creators
+  - Marketers
+  - Indie
+  - SMB
+  zh:
+  - 创作者
+  - 营销人员
+  - 独立开发者
+  - 中小企业
+use_cases:
+  en:
+  - Social shorts
+  - Motion posters
+  - Creative ads
+  - Img-to-video
+  zh:
+  - 短视频
+  - 动态海报
+  - 创意广告
+  - 图片转视频
+features:
+  en:
+  - Text-to-video
+  - Image-to-video
+  - Effects
+  - Social export
+  zh:
+  - 文本转视频
+  - 图片转视频
+  - 特效
+  - 社交导出
+example:
+  en: 'Example: Turn a product image into a 3s motion clip.'
+  zh: 示例：将产品图片转为 3 秒动态视频。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Latest stable (2026)
+score: 8.2
+overall_score: 8.2
+quickFacts:
+  freeTier: true
+  hasApi: false
+  platforms:
+  - Web
+pricingSummary:
+  en: >-
+    Free tier with watermark · Standard $10/mo, Pro $35/mo, Premier $95/mo unlock more credits, higher resolution, and no
+    watermark.
+faq:
+- q_en: What is Pika?
+  a_en: >-
+    Pika is an AI video generation platform that turns text, image, and video prompts into short cinematic clips, with strong
+    motion and camera controls.
+- q_en: Is Pika free?
+  a_en: >-
+    Yes. The free plan produces watermarked clips; paid plans start at $10/month for higher resolution and no watermark.
+- q_en: How long can Pika videos be?
+  a_en: >-
+    Pika generates clips up to 10 seconds per generation on paid plans, which can be chained using Pikaffects or extended
+    in the timeline.
+- q_en: How does Pika compare to Sora?
+  a_en: >-
+    Pika emphasizes controllability — Pikaffects, motion strength, camera direction — while Sora leans on raw realism. Pika
+    is faster and cheaper for iterative work.
+- q_en: Does Pika support image-to-video?
+  a_en: >-
+    Yes. Image-to-video is one of Pika's strongest features: upload a still and Pika animates it with motion and camera prompts.
+- q_en: Can I edit an existing video with Pika?
+  a_en: >-
+    Yes. Pika lets you upload a video and apply Pikaffects to restyle, re-light, or extend it.
+- q_en: Does Pika have an API?
+  a_en: >-
+    Pika offers a developer API for paid accounts, suitable for batch rendering and app integration.
+- q_en: What is Pikaffects?
+  a_en: >-
+    Pikaffects are one-click video transformations like 'melt', 'inflate', 'crush', 'cake-ify' applied to uploaded clips or
+    images.
+- q_en: Can Pika generate sound?
+  a_en: >-
+    Pika focuses on visuals; audio is not generated. Pair with ElevenLabs for voice and Suno for music.
+- q_en: Who should use Pika?
+  a_en: >-
+    Creators and marketers producing short social clips, music videos, and stylized content where motion and effects matter
+    more than photorealism.
+scoreBreakdown:
+  user: 8.2
+  capability: 7.199999999999999
+  price: 9
+  growth: 8
+  trust: 8

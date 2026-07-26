@@ -1,0 +1,45 @@
+name:
+  en: AgentGPT
+  zh: AgentGPT
+short_desc:
+  en: In-browser AI agent platform
+  zh: 浏览器端 AI 智能体平台
+long_desc:
+  en: >-
+    AgentGPT lets you configure and run autonomous AI agents in the browser, no installation needed.
+cat: productivity
+url: https://agentgpt.reworkd.ai
+icon: fa-robot
+scenes:
+  en:
+  - Autonomous agent
+  - Research
+  - Content
+  - Automation
+pros:
+  en:
+  - Browser-based
+  - No install
+  - Free trial
+cons:
+  en:
+  - Unstable results
+  - Token-heavy
+target_audience:
+  en:
+  - Non-technical users
+  - Researchers
+use_cases:
+  en:
+  - Research
+  - Content
+  - Automation
+  - Tasks
+features:
+  en:
+  - Browser agent
+  - Autonomous
+  - Free trial
+  - Task mgmt
+example:
+  en: 'Example: ''Research competitors and generate report'' → AgentGPT auto-executes.'

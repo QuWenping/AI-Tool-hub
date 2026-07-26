@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ZhNotice from "../../components/ZhNotice.astro";
-import posts from "../../data/posts.json";
+import { getCollection } from 'astro:content';
 import toolsData from "../../data/tools.json";
 import solutionsData from "../../data/solutions.json";
 import Comments from "../../components/Comments.astro";
@@ -10,29 +9,33 @@ import Feedback from "../../components/Feedback.astro";
 
 const pageLang = Astro.currentLocale || "en";
 export async function getStaticPaths() {
+  const posts = await getCollection('blog');
   return posts.map(p => ({ params: { slug: p.slug }, props: { post: p } }));
 }
-const { post } = Astro.props;
-const zhAvailable = !!(post.title_zh || post.desc_zh || post.content_zh);
-const postTitle = pageLang === "zh" && post.title_zh ? post.title_zh : post.title_en;
-const postDesc = pageLang === "zh" && post.desc_zh ? post.desc_zh : post.desc_en;
-const postContent = pageLang === "zh" && post.content_zh ? post.content_zh : post.content_en;
-const relatedTools = (post.related_tools || []).map(tid => {
+const post = Astro.props.post;
+const postData = post.data;
+const postBody = post.body || '';
+const allBlogPosts = await getCollection('blog');
+const zhAvailable = !!(postData.title_zh || postData.desc_zh || postData.content_zh);
+const postTitle = pageLang === "zh" && postData.title_zh ? postData.title_zh : postData.title_en;
+const postDesc = pageLang === "zh" && postData.desc_zh ? postData.desc_zh : postData.desc_en;
+const postContent = pageLang === "zh" && postData.content_zh ? postData.content_zh : postBody;
+const relatedTools = (postData.related_tools || []).map(tid => {
   const t = toolsData[tid];
   return t ? { id: tid, name: t.name?.en || tid, icon: t.icon || "fa-robot" } : null;
 }).filter(Boolean);
-const relatedSolution = solutionsData.find(s => s.slug === post.related_solution);
+const relatedSolution = solutionsData.find(s => s.slug === postData.related_solution);
 const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/blog/" + post.slug + "/";
-const faqItems = post.faq && post.faq.length > 0 ? post.faq : [
-  { q: "What is " + post.title_en + "?", a: post.desc_en },
-  { q: "Who is this for?", a: "Anyone interested in " + post.category + " - " + post.desc_en },
+const faqItems = postData.faq && postData.faq.length > 0 ? postData.faq : [
+  { q: "What is " + postData.title_en + "?", a: postData.desc_en },
+  { q: "Who is this for?", a: "Anyone interested in " + postData.category + " - " + postData.desc_en },
   { q: "How was this content created?", a: "Our editorial team tested real AI tools on real work over multiple weeks before publishing this review." }
 ];
-const authorSchema = post.author_slug ? {
+const authorSchema = postData.author_slug ? {
   "@type": "Person",
   "name": "Lin Chen",
-  "url": siteUrl + "/author/" + post.author_slug + "/",
+  "url": siteUrl + "/author/" + postData.author_slug + "/",
   "jobTitle": "Lead Reviewer and Editor-in-Chief",
   "affiliation": {
     "@type": "Organization",
@@ -41,7 +44,7 @@ const authorSchema = post.author_slug ? {
   }
 } : {
   "@type": "Person",
-  "name": post.author || "AI Tool Hub Editorial"
+  "name": postData.author || "AI Tool Hub Editorial"
 };
 const articleSchema = {
   "@context": "https://schema.org",
@@ -52,12 +55,12 @@ const articleSchema = {
   "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
   "image": {
     "@type": "ImageObject",
-    "url": siteUrl + "/og-image.svg",
+    "url": postData.image ? siteUrl + postData.image : siteUrl + "/og-image.svg",
     "width": 1200,
     "height": 630
   },
-  "datePublished": post.date,
-  "dateModified": post.date,
+  "datePublished": postData.date,
+  "dateModified": postData.date,
   "author": authorSchema,
   "publisher": {
     "@type": "Organization",
@@ -65,8 +68,8 @@ const articleSchema = {
     "url": siteUrl,
     "logo": { "@type": "ImageObject", "url": siteUrl + "/logo.svg", "width": 300, "height": 60 }
   },
-  "articleSection": post.category,
-  "keywords": (post.tags || []).join(", "),
+  "articleSection": postData.category,
+  "keywords": (postData.tags || []).join(", "),
   "inLanguage": pageLang === "zh" ? "zh" : "en"
 };
 const breadcrumbSchema = {
@@ -75,7 +78,7 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl + "/" },
     { "@type": "ListItem", "position": 2, "name": "Blog", "item": siteUrl + "/blog/" },
-    { "@type": "ListItem", "position": 3, "name": post.title_en, "item": pageUrl }
+    { "@type": "ListItem", "position": 3, "name": postData.title_en, "item": pageUrl }
   ]
 };
 const faqSchema = {
@@ -89,13 +92,12 @@ const faqSchema = {
   }))
 };
 ---
-<BaseLayout title={postTitle} description={postDesc} keywords={post.tags?.join(", ") || postTitle} lang={pageLang}>
+<BaseLayout title={postTitle} description={postDesc} keywords={postData.tags?.join(", ") || postTitle} lang={pageLang} image={postData.image}>
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
   </Fragment>
-  {pageLang === "zh" && <ZhNotice hasTranslation={zhAvailable} />}
   <div class="article">
     <nav class="breadcrumbs">
       <a href="/">Home</a> &rsaquo;
@@ -104,19 +106,30 @@ const faqSchema = {
     </nav>
 
     <header class="article-header">
-      <span class="eyebrow">{post.category}</span>
+      <span class="eyebrow">{postData.category}</span>
       <h1>{postTitle}</h1>
       <p class="lede">{postDesc}</p>
       <div class="article-meta">
-        <span class="meta-item"><i class="far fa-calendar"></i> {post.date}</span>
-        <span class="meta-item"><i class="far fa-clock"></i> {post.read_time} read</span>
-        <span class="meta-item"><i class="far fa-user"></i> {post.author}</span>
+        <span class="meta-item"><i class="far fa-calendar"></i> {postData.date}</span>
+        <span class="meta-item"><i class="far fa-clock"></i> {postData.read_time} read</span>
+        <span class="meta-item"><i class="far fa-user"></i> {postData.author}</span>
         <span class="meta-item reviewer">
           <i class="fas fa-user-check"></i>
           Reviewed by <strong><a href="/author/lin-chen/">Lin Chen</a></strong>, Lead Reviewer (5+ years testing AI tools)
         </span>
       </div>
     </header>
+
+    {postData.image && (
+      <img
+        class="article-hero"
+        src={postData.image}
+        alt={postTitle}
+        width="1200"
+        height="630"
+        loading="eager"
+      />
+    )}
 
     <section class="article-body">
       {postContent && <Fragment set:html={postContent} />}
@@ -147,11 +160,11 @@ const faqSchema = {
       </section>
     )}
 
-    {post.tags && post.tags.length > 0 && (
+    {postData.tags && postData.tags.length > 0 && (
       <section class="section-mt">
         <h3>Tags</h3>
         <div class="audience-tags">
-          {post.tags.map(t => <span class="audience-tag">#{t}</span>)}
+          {postData.tags.map(t => <span class="audience-tag">#{t}</span>)}
         </div>
       </section>
     )}
@@ -161,7 +174,7 @@ const faqSchema = {
     </section>
 
     <Feedback slug={post.slug} lang={pageLang === "zh" ? "zh" : "en"} />
-    <RelatedPosts currentSlug={post.slug} currentCategory={post.category} currentTags={post.tags || []} relatedSlugs={post.related_posts || []} limit={3} />
+    <RelatedPosts posts={allBlogPosts} currentSlug={post.slug} currentCategory={postData.category} currentTags={postData.tags || []} relatedSlugs={postData.related_posts || []} limit={3} />
     <Comments lang={pageLang === "zh" ? "zh" : "en"} />
   </div>
 </BaseLayout>

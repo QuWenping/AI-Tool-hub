@@ -1,0 +1,24 @@
+name:
+  en: Trevor AI
+  zh: Trevor AI
+short_desc:
+  en: AI task planner
+  zh: AI 任务规划
+long_desc:
+  en: AI task planning and time blocking
+cat: productivity
+url: https://trevor.ai
+icon: fa-tasks
+scenes:
+  en:
+  - tasks
+  - planning
+  - time-blocking
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

@@ -1,0 +1,24 @@
+name:
+  en: Connected Papers
+  zh: Connected Papers
+short_desc:
+  en: AI paper graph
+  zh: AI 论文图谱
+long_desc:
+  en: Visual graph of related academic papers
+cat: research
+url: https://connectedpapers.com
+icon: fa-project-diagram
+scenes:
+  en:
+  - papers
+  - graph
+  - visual
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

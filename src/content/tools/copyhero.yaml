@@ -1,0 +1,24 @@
+name:
+  en: CopyHero
+  zh: CopyHero
+short_desc:
+  en: AI copywriting tool
+  zh: AI 文案工具
+long_desc:
+  en: AI copywriting for marketing and sales content
+cat: text
+url: https://copyhero.ai
+icon: fa-pen
+scenes:
+  en:
+  - copy
+  - marketing
+  - sales
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

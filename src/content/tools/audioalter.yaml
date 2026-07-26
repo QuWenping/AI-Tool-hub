@@ -1,0 +1,24 @@
+name:
+  en: AudioAlter
+  zh: AudioAlter
+short_desc:
+  en: Online audio editing
+  zh: 在线音频编辑
+long_desc:
+  en: Browser-based audio editing with multiple effects
+cat: audio
+url: https://audioalter.com
+icon: fa-waveform
+scenes:
+  en:
+  - editing
+  - effects
+  - online
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

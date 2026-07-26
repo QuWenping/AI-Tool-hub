@@ -1,0 +1,56 @@
+name:
+  en: Phind
+  zh: Phind
+short_desc:
+  en: AI search engine for developers
+  zh: 面向开发者的 AI 搜索引擎
+long_desc:
+  en: >-
+    Phind is an AI search engine designed for developers, answering coding questions with source citations.
+cat: text
+url: https://www.phind.com
+icon: fa-search
+scenes:
+  en:
+  - Coding search
+  - Tech Q&A
+  - Doc lookup
+  zh:
+  - 技术搜索
+  - 代码示例
+  - API 文档
+  - 调试帮助
+pros:
+  en:
+  - Dev-specific
+  - Cites sources
+  - Usable free
+  zh:
+  - 技术问题准确率高
+  - 带来源引用
+  - 代码示例直接可用
+cons:
+  en:
+  - Tech only
+  - Less depth than Perplexity
+  zh:
+  - 非技术问题不如 Perplexity
+  - 中文技术资源覆盖有限
+target_audience:
+  en:
+  - Devs
+  - Engineers
+  - Students
+use_cases:
+  en:
+  - Coding Q&A
+  - Tech search
+  - Learning
+features:
+  en:
+  - AI search
+  - Code answers
+  - Cites sources
+  - Free
+example:
+  en: 'Example: ''how to handle CORS in Express'' → code+sources.'

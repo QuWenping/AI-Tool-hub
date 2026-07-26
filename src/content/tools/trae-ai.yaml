@@ -1,0 +1,23 @@
+name:
+  en: Trae
+  zh: Trae
+short_desc:
+  en: ByteDance AI IDE
+  zh: 字节跳动 AI IDE
+long_desc:
+  en: ByteDance AI-first IDE for coding
+cat: code
+url: https://trae.ai
+icon: fa-code
+scenes:
+  en:
+  - ide
+  - ai-coding
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

@@ -1,0 +1,46 @@
+name:
+  en: Rytr
+  zh: Rytr
+short_desc:
+  en: Affordable AI writing assistant
+  zh: 经济实惠的 AI 写作助手
+long_desc:
+  en: >-
+    Rytr offers AI writing at extremely low cost for budget-conscious individuals and small teams.
+cat: text
+url: https://rytr.me
+icon: fa-pen-fancy
+scenes:
+  en:
+  - Email
+  - Social media
+  - Blog
+  - Ads
+pros:
+  en:
+  - Very cheap
+  - Usable free tier
+  - Multilingual
+cons:
+  en:
+  - Short output
+  - Average quality
+target_audience:
+  en:
+  - Individuals
+  - SMBs
+  - Budget-limited
+use_cases:
+  en:
+  - Social
+  - Email
+  - Ads
+  - Short copy
+features:
+  en:
+  - AI writing
+  - Multilingual
+  - Templates
+  - Free tier
+example:
+  en: 'Example: Generate 3 Instagram captions.'

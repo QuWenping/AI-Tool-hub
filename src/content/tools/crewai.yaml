@@ -1,0 +1,47 @@
+name:
+  en: CrewAI
+  zh: CrewAI
+short_desc:
+  en: Multi-agent collaboration framework, open source + enterprise
+  zh: 多智能体协作框架，开源 + 企业版
+long_desc:
+  en: >-
+    CrewAI lets you orchestrate multiple AI agents to collaborate on complex tasks, with open source framework and enterprise
+    management platform.
+cat: productivity
+url: https://www.crewai.com
+icon: fa-users-cog
+scenes:
+  en:
+  - Multi-agent
+  - Automation
+  - Enterprise
+  - Workflows
+pros:
+  en:
+  - Open source framework
+  - Multi-agent collab
+  - Enterprise
+cons:
+  en:
+  - Needs coding
+  - Complex setups hard
+target_audience:
+  en:
+  - Devs
+  - Enterprise
+  - Automation
+use_cases:
+  en:
+  - Automation
+  - Research
+  - Content
+  - Workflows
+features:
+  en:
+  - Multi-agent
+  - Open source
+  - Enterprise
+  - Discovery
+example:
+  en: 'Example: Orchestrate a 3-agent team: research+write+review.'

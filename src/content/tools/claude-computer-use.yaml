@@ -1,0 +1,34 @@
+name:
+  en: Claude Computer Use
+  zh: Claude Computer Use
+short_desc:
+  en: Anthropic computer use agent API
+  zh: Anthropic 计算机使用智能体 API
+long_desc:
+  en: >-
+    Claude Computer Use is an agent API from Anthropic that enables Claude to view screenshots, move the mouse, click, and
+    type to operate a computer. Suitable for building desktop automation agents, with Anthropic providing a secure sandbox
+    environment.
+cat: productivity
+url: https://docs.anthropic.com/en/docs/agents-and-tools/tool-use/computer-use
+icon: fa-desktop
+scenes:
+  en:
+  - Desktop automation
+  - Software operation
+  - Data entry
+  - Test automation
+pros:
+  en:
+  - Official Anthropic support
+  - Strong visual understanding
+  - Secure sandbox environment
+  - Operates real software directly
+cons:
+  en:
+  - Beta stage with limited features
+  - High API cost
+  - Slow operation speed
+  - Requires Anthropic API access
+pricing:
+  en: API usage-based (/M input, /M output)

@@ -1,0 +1,24 @@
+name:
+  en: LM Studio
+  zh: LM Studio
+short_desc:
+  en: Local LLM desktop app
+  zh: 本地 LLM 桌面应用
+long_desc:
+  en: Run local LLMs on your computer with GUI
+cat: code
+url: https://lmstudio.ai
+icon: fa-desktop
+scenes:
+  en:
+  - local-llm
+  - desktop
+  - gui
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

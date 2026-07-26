@@ -1,0 +1,24 @@
+name:
+  en: v0 by Vercel
+  zh: v0 by Vercel
+short_desc:
+  en: AI UI component generator
+  zh: AI UI 组件生成器
+long_desc:
+  en: Generate React/Tailwind UI from text descriptions
+cat: code
+url: https://v0.dev
+icon: fa-code
+scenes:
+  en:
+  - ui-gen
+  - react
+  - dev
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

@@ -1,0 +1,24 @@
+name:
+  en: Roo Code
+  zh: Roo Code
+short_desc:
+  en: AI coding extension
+  zh: AI 编程扩展
+long_desc:
+  en: AI coding assistant VS Code extension
+cat: code
+url: https://github.com/RooCodeInc/Roo-Code
+icon: fa-code
+scenes:
+  en:
+  - vscode
+  - extension
+  - ai-coding
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

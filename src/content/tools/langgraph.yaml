@@ -1,0 +1,32 @@
+name:
+  en: LangGraph
+  zh: LangGraph
+short_desc:
+  en: Stateful multi-agent orchestration framework by LangChain
+  zh: LangChain 推出的有状态多智能体编排框架
+long_desc:
+  en: >-
+    LangGraph is an agent orchestration framework from the LangChain team, supporting stateful graphs, cycles, human-in-the-loop,
+    and persistent memory. Ideal for building complex multi-step agent systems with streaming and parallel execution.
+cat: productivity
+url: https://github.com/langchain-ai/langgraph
+icon: fa-project-diagram
+scenes:
+  en:
+  - Multi-agent orchestration
+  - Complex workflows
+  - RAG enhancement
+  - Code execution
+pros:
+  en:
+  - Stateful graphs with cycles and branches
+  - Native human-in-the-loop support
+  - Persistent memory and checkpointing
+  - Deep LangChain ecosystem integration
+cons:
+  en:
+  - Steep learning curve
+  - Requires Python programming
+  - Debugging complex agent systems is challenging
+pricing:
+  en: Open source, free

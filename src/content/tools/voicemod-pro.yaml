@@ -1,0 +1,24 @@
+name:
+  en: Voicemod Pro
+  zh: Voicemod Pro
+short_desc:
+  en: Real-time voice changer
+  zh: 实时变声器专业版
+long_desc:
+  en: Real-time AI voice changing for gaming and streaming
+cat: audio
+url: https://voicemod.net
+icon: fa-microphone
+scenes:
+  en:
+  - voice-change
+  - gaming
+  - real-time
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

@@ -1,0 +1,46 @@
+name:
+  en: D-ID
+  zh: D-ID
+short_desc:
+  en: AI avatar portrait animation
+  zh: AI 虚拟人像动画
+long_desc:
+  en: >-
+    D-ID animates static portrait photos into talking avatars; great for customer service and marketing.
+cat: video
+url: https://www.d-id.com
+icon: fa-user
+scenes:
+  en:
+  - Avatars
+  - Customer service
+  - Marketing
+  - Training
+pros:
+  en:
+  - Natural avatar motion
+  - API available
+  - Enterprise-grade
+cons:
+  en:
+  - Expensive
+  - Head only
+target_audience:
+  en:
+  - Enterprise
+  - Marketing
+  - Support
+use_cases:
+  en:
+  - Avatars
+  - Support
+  - Training
+  - Marketing
+features:
+  en:
+  - Avatar anim
+  - AI voice
+  - API
+  - Multilingual
+example:
+  en: 'Example: Make an employee photo speak a product intro.'

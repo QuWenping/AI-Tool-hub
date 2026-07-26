@@ -1,0 +1,24 @@
+name:
+  en: Adobe Podcast Enhance
+  zh: Adobe Podcast Enhance
+short_desc:
+  en: AI podcast audio enhancement
+  zh: AI 播客音频增强
+long_desc:
+  en: Make ordinary mic recordings sound like studio quality
+cat: audio
+url: https://podcast.adobe.com/enhance
+icon: fa-microphone
+scenes:
+  en:
+  - enhancement
+  - podcast
+  - free
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

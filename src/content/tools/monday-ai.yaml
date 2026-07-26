@@ -1,0 +1,24 @@
+name:
+  en: Monday AI
+  zh: Monday AI
+short_desc:
+  en: AI project platform
+  zh: AI 项目平台
+long_desc:
+  en: AI-enhanced project management platform
+cat: productivity
+url: https://monday.com
+icon: fa-tasks
+scenes:
+  en:
+  - project
+  - management
+  - platform
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

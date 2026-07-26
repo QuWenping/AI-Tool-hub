@@ -1,0 +1,24 @@
+name:
+  en: Kaiber
+  zh: Kaiber
+short_desc:
+  en: AI video art generator
+  zh: AI 视频艺术生成器
+long_desc:
+  en: Transform images and text into artistic videos
+cat: video
+url: https://kaiber.ai
+icon: fa-video
+scenes:
+  en:
+  - video
+  - art
+  - creative
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

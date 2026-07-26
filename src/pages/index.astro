@@ -1,15 +1,125 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ZhNotice from "../components/ZhNotice.astro";
 import categoriesData from "../data/categories.json";
-import toolsData from "../data/tools.json";
+import { getCollection } from "astro:content";
 import matchupsData from "../data/matchups.json";
 import stackRecs from "../data/stack-recommendations.json";
 import "../styles/home.css";
 
+export const prerender = true;
+const allTools = await getCollection("tools");
+const toolsById = Object.fromEntries(allTools.map(t => [t.id, t]));
 const pageLang = Astro.currentLocale || "en";
 
-const visibleTools = Object.entries(toolsData).filter(([, tool]) => !tool.hidden);
+// ---- i18n dictionary for index page ----
+const T = {
+  // Hero
+  hero_badge:         { en: "🚀 NEW: AI Benchmark Lab v2.0", zh: "🚀 全新：AI 基准测试实验室 v2.0" },
+  hero_title_prefix:  { en: "Find Your Perfect", zh: "发现你的理想" },
+  hero_title_hl:      { en: "AI Stack", zh: "AI 工具组合" },
+  hero_subtitle:      { en: "Practical, hands-on AI tool reviews. Every recommendation backed by documented testing.", zh: "基于实测的 AI 工具评测。每条推荐都有实测数据支撑。" },
+  hero_btn_primary:   { en: "Find My AI Stack", zh: "找到我的 AI 工具组合" },
+  hero_btn_secondary: { en: "Explore All Tools", zh: "浏览全部工具" },
+  hero_stat_reviewed: { en: "AI Tools Reviewed", zh: "款 AI 工具已评测" },
+  hero_stat_hours:    { en: "Testing Hours", zh: "小时测试投入" },
+  hero_stat_compares: { en: "Comparisons", zh: "组对比评测" },
+
+  // Value section
+  value_kicker:  { en: "Why AI Tool Hub", zh: "为什么选择 AI Tool Hub" },
+  value_title:   { en: "Make confident AI decisions", zh: "做出有信心的 AI 决策" },
+  value_desc:    { en: "Practical research, clear comparisons, and workflows you can actually use.", zh: "实用研究、清晰对比、可落地的工具组合。" },
+  v1_title:      { en: "Real-World Testing", zh: "真实场景测试" },
+  v1_desc:       { en: "Every recommendation is based on practical tasks, not marketing claims.", zh: "每条推荐都基于实际任务测试，而非营销宣传。" },
+  v2_title:      { en: "Clear Benchmarks", zh: "清晰基准评测" },
+  v2_desc:       { en: "Compare quality, speed, cost, and usability with consistent criteria.", zh: "用统一标准比较质量、速度、成本和易用性。" },
+  v3_title:      { en: "Stack Builder", zh: "工具组合构建器" },
+  v3_desc:       { en: "Combine complementary tools into a focused workflow for your goals.", zh: "将互补工具组合成专注的工作流。" },
+  v4_title:      { en: "Always Current", zh: "持续更新" },
+  v4_desc:       { en: "We revisit leading tools as models, pricing, and features change.", zh: "随模型、定价和功能变化持续跟进头部工具。" },
+
+  // Finder section
+  finder_kicker:      { en: "AI Stack Finder", zh: "AI 工具组合查找器" },
+  finder_title:       { en: "Find your AI stack in 30 seconds", zh: "30 秒找到你的 AI 工具组合" },
+  finder_desc:        { en: "Choose one option in each group to get a personalized starting stack.", zh: "在每个分组中选择一项，获取个性化起始工具组合。" },
+  finder_step1:       { en: "Who are you?", zh: "你是谁？" },
+  finder_step2:       { en: "What's your goal?", zh: "你的目标是什么？" },
+  finder_step3:       { en: "What's your budget?", zh: "你的预算如何？" },
+  finder_opt_founder:    { en: "Founder", zh: "创业者" },
+  finder_opt_developer:  { en: "Developer", zh: "开发者" },
+  finder_opt_designer:   { en: "Designer", zh: "设计师" },
+  finder_opt_marketer:   { en: "Marketer", zh: "市场营销" },
+  finder_opt_savetime:    { en: "Save time", zh: "节省时间" },
+  finder_opt_automate:    { en: "Automate tasks", zh: "自动化任务" },
+  finder_opt_content:     { en: "Create content", zh: "创作内容" },
+  finder_opt_code:        { en: "Generate code", zh: "生成代码" },
+  finder_opt_free:        { en: "Free", zh: "免费" },
+  finder_opt_enterprise:  { en: "Enterprise", zh: "企业级" },
+  finder_result_label:    { en: "Your recommended stack", zh: "你的推荐工具组合" },
+  finder_result_title:    { en: "Answer three quick questions", zh: "回答三个简单问题" },
+  finder_result_desc:     { en: "Select role, goal and budget above. We'll match three complementary AI tools you can use immediately.", zh: "选择角色、目标和预算，我们将为你匹配三款可立即使用的互补 AI 工具。" },
+  finder_step_label_1:    { en: "1. Role", zh: "1. 角色" },
+  finder_step_label_2:    { en: "2. Goal", zh: "2. 目标" },
+  finder_step_label_3:    { en: "3. Budget", zh: "3. 预算" },
+  finder_monthly_cost:    { en: "Monthly cost", zh: "每月成本" },
+  finder_time_saved:      { en: "Time saved", zh: "节省时间" },
+  finder_explore_more:    { en: "Explore matching tools", zh: "浏览匹配的工具" },
+  finder_copy_share:      { en: "Copy share link", zh: "复制分享链接" },
+  finder_reset:           { en: "Reset", zh: "重新选择" },
+  finder_disclaimer:      { en: "Estimates are baselines from public plans. Your actual results depend on usage.", zh: "估算基于公开套餐价格，实际结果因使用情况而异。" },
+
+  // Category section
+  cat_kicker:     { en: "Explore by Category", zh: "按分类浏览" },
+  cat_title:      { en: "Find the right AI tool for your needs", zh: "找到适合你需求的 AI 工具" },
+  // cat_desc is dynamic - skip
+  cat_view_tools: { en: "View Tools", zh: "查看工具" },
+  cat_icons: {
+    text: { en: "Write smarter — grammar, research, editing, and content creation", zh: "更智能地写作 — 语法、研究、编辑和内容创作" },
+    image: { en: "Create visuals fast — photorealistic, artistic, graphic design, logos", zh: "快速创作视觉内容 — 写实、艺术、平面设计、Logo" },
+    code: { en: "Code faster — autocomplete, refactoring, debugging, API generation", zh: "更快速地编码 — 自动补全、重构、调试、API 生成" },
+    video: { en: "Produce video — social clips, ads, prototypes, cinematic shots", zh: "制作视频 — 社交媒体片段、广告、原型、电影级镜头" },
+    audio: { en: "Generate audio — voiceovers, music, podcasts, TTS, STT", zh: "生成音频 — 旁白、音乐、播客、文字转语音、语音转文字" },
+    productivity: { en: "Boost productivity — scheduling, notes, automation, project management", zh: "提升效率 — 日程、笔记、自动化、项目管理" },
+  },
+
+  // Tool section
+  tool_kicker:    { en: "Featured AI Tools", zh: "精选 AI 工具" },
+  tool_title:     { en: "AI tools our editors trust in 2026", zh: "编辑团队信赖的 2026 AI 工具" },
+  tool_view:      { en: "View tool ", zh: "查看工具 " },
+  tool_all:       { en: "Explore All Tools →", zh: "浏览全部工具 →" },
+
+  // Comparison section
+  comp_kicker:    { en: "Head-to-Head Comparisons", zh: "一对一对比评测" },
+  comp_title:     { en: "Which AI tool is right for you?", zh: "哪款 AI 工具适合你？" },
+  comp_view:      { en: "Read comparison →", zh: "阅读对比 →" },
+  comp_all:       { en: "View All Comparisons →", zh: "查看全部对比 →" },
+
+  // Guide section
+  guide_kicker:   { en: "Popular Guides", zh: "热门指南" },
+  guide_title:    { en: "Dive deeper into AI tools", zh: "深入了解 AI 工具" },
+  guide_read:     { en: "Read guide →", zh: "阅读指南 →" },
+
+  // Editorial log
+  edit_kicker:    { en: "Editorial Log", zh: "编辑日志" },
+  edit_title:     { en: "What's new in our tests", zh: "最新测试动态" },
+  edit_view:      { en: "View full changelog →", zh: "查看完整变更日志 →" },
+
+  // FAQ
+  faq_kicker:     { en: "FAQ", zh: "常见问题" },
+  faq_title:      { en: "Questions about AI tools", zh: "关于 AI 工具的常见问题" },
+};
+
+function _t(dict) {
+  if (typeof dict === "string") return dict;
+  return (pageLang === "zh" ? dict.zh : dict.en) || dict.en || "";
+}
+function _tn(tool, field) {
+  if (!tool) return "";
+  const obj = tool[field];
+  if (!obj) return "";
+  return pageLang === "zh" ? (obj.zh || obj.en || "") : (obj.en || "");
+}
+
+const visibleTools = allTools.filter(t => !t.data.hidden);
 const siteStats = {
   tools: visibleTools.length,
   categories: categoriesData.length,
@@ -18,9 +128,9 @@ const siteStats = {
 };
 
 const stackCatalog = stackRecs.tools
-  .filter(rec => toolsData[rec.toolId] && !toolsData[rec.toolId].hidden)
+  .filter(rec => toolsById[rec.toolId]?.data && !toolsById[rec.toolId]?.data?.hidden)
   .map(rec => {
-    const tool = toolsData[rec.toolId];
+    const tool = toolsById[rec.toolId]?.data;
     return {
       id: rec.toolId,
       name: tool.name?.en || rec.toolId,
@@ -45,36 +155,36 @@ const featuredToolMeta = [
   { id: "midjourney", rating: "9.5", price: "$10–96/mo", tags: ["Images", "Design", "Art"] },
   { id: "runway", rating: "9.1", price: "$12–76/mo", tags: ["Video", "Editing", "Effects"] },
   { id: "elevenlabs", rating: "9.4", price: "$5–330/mo", tags: ["Voice", "Audio", "TTS"] }
-].map(meta => ({ ...meta, tool: toolsData[meta.id] })).filter(item => item.tool);
+].map(meta => ({ ...meta, tool: toolsById[meta.id]?.data })).filter(item => item.tool);
 
 const popularComparisons = [
-  { slug: "chatgpt-vs-claude", title_en: "ChatGPT vs Claude", desc_en: "Pick the right general assistant" },
-  { slug: "midjourney-vs-stable-diffusion", title_en: "Midjourney vs Stable Diffusion", desc_en: "Paid polish vs open-source control" },
-  { slug: "cursor-vs-github-copilot", title_en: "Cursor vs GitHub Copilot", desc_en: "AI-native editor vs IDE plugin" },
-  { slug: "claude-vs-gemini", title_en: "Claude vs Gemini", desc_en: "Writing quality vs multimodal power" },
-  { slug: "elevenlabs-vs-chatgpt", title_en: "ElevenLabs vs ChatGPT Voice", desc_en: "Professional voice AI vs integrated voice" },
-  { slug: "sora-vs-runway", title_en: "Sora 2 vs Runway", desc_en: "Highest quality vs production tools" }
+  { slug: "chatgpt-vs-claude", title_en: "ChatGPT vs Claude", title_zh: "ChatGPT vs Claude", desc_en: "Pick the right general assistant", desc_zh: "选择正确的通用助手" },
+  { slug: "midjourney-vs-stable-diffusion", title_en: "Midjourney vs Stable Diffusion", title_zh: "Midjourney vs Stable Diffusion", desc_en: "Paid polish vs open-source control", desc_zh: "付费精修 vs 开源掌控" },
+  { slug: "cursor-vs-github-copilot", title_en: "Cursor vs GitHub Copilot", title_zh: "Cursor vs GitHub Copilot", desc_en: "AI-native editor vs IDE plugin", desc_zh: "AI 原生编辑器 vs IDE 插件" },
+  { slug: "claude-vs-gemini", title_en: "Claude vs Gemini", title_zh: "Claude vs Gemini", desc_en: "Writing quality vs multimodal power", desc_zh: "写作质量 vs 多模态能力" },
+  { slug: "elevenlabs-vs-chatgpt", title_en: "ElevenLabs vs ChatGPT Voice", title_zh: "ElevenLabs vs ChatGPT Voice", desc_en: "Professional voice AI vs integrated voice", desc_zh: "专业语音 AI vs 集成语音" },
+  { slug: "sora-vs-runway", title_en: "Sora 2 vs Runway", title_zh: "Sora 2 vs Runway", desc_en: "Highest quality vs production tools", desc_zh: "最高画质 vs 生产工具" }
 ];
 
 const popularGuides = [
-  { slug: "best-free-ai-tools-for-students-2026", title_en: "10 Best Free AI Tools for Students", desc_en: "Tested for two weeks on real assignments" },
-  { slug: "chatgpt-vs-claude-which-should-you-pick-2026", title_en: "ChatGPT vs Claude: Which to Pick?", desc_en: "Two weeks of side-by-side testing" },
-  { slug: "best-ai-image-generators-compared-2026", title_en: "Best AI Image Generators (2026)", desc_en: "Midjourney vs SD vs DALL-E vs Flux" }
+  { slug: "best-free-ai-tools-for-students-2026", title_en: "10 Best Free AI Tools for Students", title_zh: "最适合学生的 10 款免费 AI 工具", desc_en: "Tested for two weeks on real assignments", desc_zh: "在真实作业上测试两周" },
+  { slug: "chatgpt-vs-claude-which-should-you-pick-2026", title_en: "ChatGPT vs Claude: Which to Pick?", title_zh: "ChatGPT vs Claude：该选哪个？", desc_en: "Two weeks of side-by-side testing", desc_zh: "为期两周的并排对比测试" },
+  { slug: "best-ai-image-generators-compared-2026", title_en: "Best AI Image Generators (2026)", title_zh: "最佳 AI 图像生成器（2026）", desc_en: "Midjourney vs SD vs DALL-E vs Flux", desc_zh: "Midjourney vs SD vs DALL-E vs Flux" }
 ];
 
 const editorialLog = [
-  { date: "2026-07-15", title_en: "Added Gemini, Leonardo.AI, and Jasper", desc_en: "Three new tools passed our hands-on quality review." },
-  { date: "2026-07-10", title_en: "Re-tested the top writing tools", desc_en: "We refreshed rankings after another round of practical tests." },
-  { date: "2026-06-10", title_en: "Published our AI research tools guide", desc_en: "Twelve research tools tested on a real thesis workflow." }
+  { date: "2026-07-15", title_en: "Added Gemini, Leonardo.AI, and Jasper", title_zh: "新增 Gemini、Leonardo.AI 和 Jasper", desc_en: "Three new tools passed our hands-on quality review.", desc_zh: "三款新工具通过实测质量审核。" },
+  { date: "2026-07-10", title_en: "Re-tested the top writing tools", title_zh: "重新评测头部写作工具", desc_en: "We refreshed rankings after another round of practical tests.", desc_zh: "经过新一轮实测后更新排名。" },
+  { date: "2026-06-10", title_en: "Published our AI research tools guide", title_zh: "发布 AI 研究工具指南", desc_en: "Twelve research tools tested on a real thesis workflow.", desc_zh: "在真实论文工作流中测试了十二款研究工具。" }
 ];
 
 const faq = [
-  { q_en: "What are the best AI tools in 2026?", a_en: "Our top picks depend on the workflow you need — we recommend starting with our editor's picks (ChatGPT, Claude, Cursor, Midjourney, Runway, ElevenLabs) and then narrowing down via our tool finder. Every recommendation links to a hands-on review and the underlying test notes." },
-  { q_en: "How do you review AI tools?", a_en: "We run each tool through a fixed methodology: a real-world task from our editorial workflow, a side-by-side comparison against its closest peer, and a pricing/value check. Reviews link to the underlying test notes — read our methodology page for the full checklist." },
-  { q_en: "Are these AI tools tested before recommendation?", a_en: "Yes. No tool appears in our rankings without hands-on use. We keep a dated changelog of what we re-tested, what changed in the product, and how that changed our recommendation. Check the editorial log on this page for the latest runs." },
-  { q_en: "Which AI tools are best for business?", a_en: "It depends on the team. For customer-facing content, ChatGPT or Claude. For engineering productivity, Cursor or GitHub Copilot. For operations automation, n8n or CrewAI. Each pick is based on a documented workflow test — see our business and productivity categories for full breakdowns." },
-  { q_en: "What AI tools are free?", a_en: "Tools with a usable free tier or open-source distribution include ChatGPT, Claude, Gemini, Cursor (Hobby), Stable Diffusion, and Blender. Free tiers change frequently — we re-check them quarterly. See our free tools category for the current list with usage limits." },
-  { q_en: "How do AI tools improve productivity?", a_en: "Productivity gains come from removing repetitive work — drafting, summarizing, scheduling, code boilerplate — not from replacing judgment. Our testing tracks time saved per task and quality retained, not just speed. See our workflows section for tested stacks you can replicate." }
+  { q_en: "What are the best AI tools in 2026?", q_zh: "2026 年最好的 AI 工具有哪些？", a_en: "Our top picks depend on the workflow you need — we recommend starting with our editor's picks (ChatGPT, Claude, Cursor, Midjourney, Runway, ElevenLabs) and then narrowing down via our tool finder. Every recommendation links to a hands-on review and the underlying test notes.", a_zh: "我们的首选推荐取决于你的工作流需求——建议从编辑精选开始（ChatGPT、Claude、Cursor、Midjourney、Runway、ElevenLabs），然后通过工具查找器缩小范围。每条推荐都附有实测评测和底层测试记录。" },
+  { q_en: "How do you review AI tools?", q_zh: "你们如何评测 AI 工具？", a_en: "We run each tool through a fixed methodology: a real-world task from our editorial workflow, a side-by-side comparison against its closest peer, and a pricing/value check. Reviews link to the underlying test notes — read our methodology page for the full checklist.", a_zh: "每款工具都按照固定方法论测试：来自编辑工作流的真实任务、与最接近竞品的并排对比、以及定价/价值检查。评测附有底层测试记录——完整清单请查看方法论页面。" },
+  { q_en: "Are these AI tools tested before recommendation?", q_zh: "这些 AI 工具在推荐前都经过测试吗？", a_en: "Yes. No tool appears in our rankings without hands-on use. We keep a dated changelog of what we re-tested, what changed in the product, and how that changed our recommendation. Check the editorial log on this page for the latest runs.", a_zh: "是的。没有任何工具未经实测就出现在排名中。我们会记录每次重新测试、产品变化以及推荐调整的日期。最新测试结果请查看本页的编辑日志。" },
+  { q_en: "Which AI tools are best for business?", q_zh: "哪些 AI 工具最适合商业用途？", a_en: "It depends on the team. For customer-facing content, ChatGPT or Claude. For engineering productivity, Cursor or GitHub Copilot. For operations automation, n8n or CrewAI. Each pick is based on a documented workflow test — see our business and productivity categories for full breakdowns.", a_zh: "取决于团队。面向客户的内容用 ChatGPT 或 Claude，工程效率用 Cursor 或 GitHub Copilot，运营自动化用 n8n 或 CrewAI。每个选择都基于文档化的工作流测试——完整分解请查看商业和效率分类。" },
+  { q_en: "What AI tools are free?", q_zh: "有哪些免费的 AI 工具？", a_en: "Tools with a usable free tier or open-source distribution include ChatGPT, Claude, Gemini, Cursor (Hobby), Stable Diffusion, and Blender. Free tiers change frequently — we re-check them quarterly. See our free tools category for the current list with usage limits.", a_zh: "有可用免费套餐或开源分发的工具包括 ChatGPT、Claude、Gemini、Cursor（Hobby）、Stable Diffusion 和 Blender。免费套餐变化频繁——我们每季度复查一次。当前列表及使用限制请查看免费工具分类。" },
+  { q_en: "How do AI tools improve productivity?", q_zh: "AI 工具如何提升效率？", a_en: "Productivity gains come from removing repetitive work — drafting, summarizing, scheduling, code boilerplate — not from replacing judgment. Our testing tracks time saved per task and quality retained, not just speed. See our workflows section for tested stacks you can replicate.", a_zh: "效率提升来自于消除重复性工作——起草、总结、排程、代码模板——而非替代判断力。我们的测试追踪的是每项任务节省的时间和质量保持度，而不只是速度。可复制的工作流组合请查看工作流板块。" }
 ];
 
 const faqSchema = {
@@ -101,30 +211,29 @@ const seoDesc = pageLang === "zh"
   lang={pageLang}
 >
   <Fragment slot="head"><script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script></Fragment>
-  {pageLang === "zh" && <ZhNotice />}
   <div class="home-page">
     <section class="home-hero">
       <div class="home-shell hero-layout">
         <div class="hero-copy">
-          <div class="hero-badge" data-i18n-en="🚀 NEW: AI Benchmark Lab v2.0">🚀 NEW: AI Benchmark Lab v2.0</div>
-          <h1><span class="title-prefix" data-i18n-en="Find Your Perfect">Find Your Perfect</span> <span class="title-highlight" data-i18n-en="AI Stack">AI Stack</span></h1>
-          <p class="hero-subtitle" data-i18n-en="Practical, hands-on AI tool reviews. Every recommendation backed by documented testing.">Practical, hands-on AI tool reviews. Every recommendation backed by documented testing.</p>
+          <div class="hero-badge">{_t(T.hero_badge)}</div>
+          <h1><span class="title-prefix">{_t(T.hero_title_prefix)}</span> <span class="title-highlight">{_t(T.hero_title_hl)}</span></h1>
+          <p class="hero-subtitle">{_t(T.hero_subtitle)}</p>
           <div class="hero-actions">
-            <a class="home-button primary" href="#finder"><i class="fas fa-wand-magic-sparkles"></i><span data-i18n-en="Find My AI Stack">Find My AI Stack</span></a>
-            <a class="home-button secondary" href="#all-tools"><span data-i18n-en="Explore All Tools">Explore All Tools</span><i class="fas fa-arrow-right"></i></a>
+            <a class="home-button primary" href="#finder"><i class="fas fa-wand-magic-sparkles"></i><span>{_t(T.hero_btn_primary)}</span></a>
+            <a class="home-button secondary" href="#all-tools"><span>{_t(T.hero_btn_secondary)}</span><i class="fas fa-arrow-right"></i></a>
           </div>
           <div class="hero-stats" aria-label="Site statistics">
-            <div><strong>{siteStats.tools}+</strong><span data-i18n-en="AI Tools Reviewed">AI Tools Reviewed</span></div>
-            <div><a href="/methodology/"><strong>{siteStats.testHours}+</strong><span data-i18n-en="Testing Hours">Testing Hours</span></a></div>
-            <div><strong>{siteStats.comparisons}+</strong><span data-i18n-en="Comparisons">Comparisons</span></div>
+            <div><strong>{siteStats.tools}+</strong><span>{_t(T.hero_stat_reviewed)}</span></div>
+            <div><a href="/methodology/"><strong>{siteStats.testHours}+</strong><span>{_t(T.hero_stat_hours)}</span></a></div>
+            <div><strong>{siteStats.comparisons}+</strong><span>{_t(T.hero_stat_compares)}</span></div>
           </div>
         </div>
         <div class="hero-visual" aria-label="Featured AI tools">
           {featuredToolMeta.slice(0, 4).map(({ id, tool }) => (
             <a class="visual-tool" href={`/tool/${id}/`}>
               <span class="visual-icon"><i class={`fas ${tool.icon || "fa-robot"}`}></i></span>
-              <strong>{tool.name.en}</strong>
-              <span>{tool.short_desc.en}</span>
+              <strong>{_tn(tool, "name")}</strong>
+              <span>{_tn(tool, "short_desc")}</span>
             </a>
           ))}
         </div>
@@ -134,15 +243,15 @@ const seoDesc = pageLang === "zh"
     <section class="home-section value-section">
       <div class="home-shell">
         <div class="center-heading">
-          <span class="section-kicker" data-i18n-en="Why AI Tool Hub">Why AI Tool Hub</span>
-          <h2 data-i18n-en="Make confident AI decisions">Make confident AI decisions</h2>
-          <p data-i18n-en="Practical research, clear comparisons, and workflows you can actually use.">Practical research, clear comparisons, and workflows you can actually use.</p>
+          <span class="section-kicker">{_t(T.value_kicker)}</span>
+          <h2>{_t(T.value_title)}</h2>
+          <p>{_t(T.value_desc)}</p>
         </div>
         <div class="value-grid">
-          <article class="value-card"><i class="fas fa-check-circle"></i><h3 data-i18n-en="Real-World Testing">Real-World Testing</h3><p data-i18n-en="Every recommendation is based on practical tasks, not marketing claims.">Every recommendation is based on practical tasks, not marketing claims.</p></article>
-          <article class="value-card"><i class="fas fa-chart-line"></i><h3 data-i18n-en="Clear Benchmarks">Clear Benchmarks</h3><p data-i18n-en="Compare quality, speed, cost, and usability with consistent criteria.">Compare quality, speed, cost, and usability with consistent criteria.</p></article>
-          <article class="value-card"><i class="fas fa-layer-group"></i><h3 data-i18n-en="Stack Builder">Stack Builder</h3><p data-i18n-en="Combine complementary tools into a focused workflow for your goals.">Combine complementary tools into a focused workflow for your goals.</p></article>
-          <article class="value-card"><i class="fas fa-arrows-rotate"></i><h3 data-i18n-en="Always Current">Always Current</h3><p data-i18n-en="We revisit leading tools as models, pricing, and features change.">We revisit leading tools as models, pricing, and features change.</p></article>
+          <article class="value-card"><i class="fas fa-check-circle"></i><h3>{_t(T.v1_title)}</h3><p>{_t(T.v1_desc)}</p></article>
+          <article class="value-card"><i class="fas fa-chart-line"></i><h3>{_t(T.v2_title)}</h3><p>{_t(T.v2_desc)}</p></article>
+          <article class="value-card"><i class="fas fa-layer-group"></i><h3>{_t(T.v3_title)}</h3><p>{_t(T.v3_desc)}</p></article>
+          <article class="value-card"><i class="fas fa-arrows-rotate"></i><h3>{_t(T.v4_title)}</h3><p>{_t(T.v4_desc)}</p></article>
         </div>
       </div>
     </section>
@@ -150,38 +259,38 @@ const seoDesc = pageLang === "zh"
     <section class="home-section finder-section" id="finder">
       <div class="home-shell">
         <div class="section-heading">
-          <span class="section-kicker" data-i18n-en="AI Stack Finder">AI Stack Finder</span>
-          <h2 data-i18n-en="Find your AI stack in 30 seconds">Find your AI stack in 30 seconds</h2>
-          <p data-i18n-en="Choose one option in each group to get a personalized starting stack.">Choose one option in each group to get a personalized starting stack.</p>
+          <span class="section-kicker">{_t(T.finder_kicker)}</span>
+          <h2>{_t(T.finder_title)}</h2>
+          <p>{_t(T.finder_desc)}</p>
         </div>
         <div class="finder-card" id="stack-builder">
           <script type="application/json" id="stack-catalog" set:html={JSON.stringify(stackCatalog)}></script>
           <div class="finder-steps">
             <fieldset class="finder-step">
-              <legend><span>1</span><strong data-i18n-en="Who are you?">Who are you?</strong></legend>
+              <legend><span>1</span><strong>{_t(T.finder_step1)}</strong></legend>
               <div class="option-grid">
-                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="role" data-stack-value="founder" data-i18n-en="Founder">Founder</button>
-                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="role" data-stack-value="developer" data-i18n-en="Developer">Developer</button>
-                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="role" data-stack-value="designer" data-i18n-en="Designer">Designer</button>
-                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="role" data-stack-value="marketer" data-i18n-en="Marketer">Marketer</button>
+                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="role" data-stack-value="founder">{_t(T.finder_opt_founder)}</button>
+                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="role" data-stack-value="developer">{_t(T.finder_opt_developer)}</button>
+                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="role" data-stack-value="designer">{_t(T.finder_opt_designer)}</button>
+                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="role" data-stack-value="marketer">{_t(T.finder_opt_marketer)}</button>
               </div>
             </fieldset>
             <fieldset class="finder-step">
-              <legend><span>2</span><strong data-i18n-en="What's your goal?">What's your goal?</strong></legend>
+              <legend><span>2</span><strong>{_t(T.finder_step2)}</strong></legend>
               <div class="option-grid">
-                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="goal" data-stack-value="save-time" data-i18n-en="Save time">Save time</button>
-                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="goal" data-stack-value="automate" data-i18n-en="Automate tasks">Automate tasks</button>
-                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="goal" data-stack-value="create-content" data-i18n-en="Create content">Create content</button>
-                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="goal" data-stack-value="generate-code" data-i18n-en="Generate code">Generate code</button>
+                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="goal" data-stack-value="save-time">{_t(T.finder_opt_savetime)}</button>
+                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="goal" data-stack-value="automate">{_t(T.finder_opt_automate)}</button>
+                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="goal" data-stack-value="create-content">{_t(T.finder_opt_content)}</button>
+                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="goal" data-stack-value="generate-code">{_t(T.finder_opt_code)}</button>
               </div>
             </fieldset>
             <fieldset class="finder-step">
-              <legend><span>3</span><strong data-i18n-en="What's your budget?">What's your budget?</strong></legend>
+              <legend><span>3</span><strong>{_t(T.finder_step3)}</strong></legend>
               <div class="option-grid">
-                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="budget" data-stack-value="free" data-i18n-en="Free">Free</button>
+                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="budget" data-stack-value="free">{_t(T.finder_opt_free)}</button>
                 <button class="finder-option" type="button" aria-pressed="false" data-stack-group="budget" data-stack-value="0-50">$0–50/mo</button>
                 <button class="finder-option" type="button" aria-pressed="false" data-stack-group="budget" data-stack-value="50-200">$50–200/mo</button>
-                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="budget" data-stack-value="enterprise" data-i18n-en="Enterprise">Enterprise</button>
+                <button class="finder-option" type="button" aria-pressed="false" data-stack-group="budget" data-stack-value="enterprise">{_t(T.finder_opt_enterprise)}</button>
               </div>
             </fieldset>
             <div class="finder-progress" aria-live="polite">
@@ -191,92 +300,175 @@ const seoDesc = pageLang === "zh"
           </div>
           <aside class="finder-result" aria-live="polite" data-stack-result data-status="pending">
             <div class="finder-result-pending" data-stack-pending>
-              <span class="result-label" data-i18n-en="Your recommended stack">Your recommended stack</span>
-              <h3 data-i18n-en="Answer three quick questions">Answer three quick questions</h3>
-              <p data-i18n-en="Select role, goal and budget above. We'll match three complementary AI tools you can use immediately.">Select role, goal and budget above. We'll match three complementary AI tools you can use immediately.</p>
+              <span class="result-label">{_t(T.finder_result_label)}</span>
+              <h3>{_t(T.finder_result_title)}</h3>
+              <p>{_t(T.finder_result_desc)}</p>
               <div class="pending-preview">
-                <span><i class="fas fa-user-tie"></i><span data-i18n-en="1. Role">1. Role</span></span>
-                <span><i class="fas fa-bullseye"></i><span data-i18n-en="2. Goal">2. Goal</span></span>
-                <span><i class="fas fa-coins"></i><span data-i18n-en="3. Budget">3. Budget</span></span>
+                <span><i class="fas fa-user-tie"></i><span>{_t(T.finder_step_label_1)}</span></span>
+                <span><i class="fas fa-bullseye"></i><span>{_t(T.finder_step_label_2)}</span></span>
+                <span><i class="fas fa-coins"></i><span>{_t(T.finder_step_label_3)}</span></span>
               </div>
             </div>
             <div class="finder-result-ready" data-stack-ready hidden>
-              <span class="result-label" data-i18n-en="Your recommended stack">Your recommended stack</span>
+              <span class="result-label">{_t(T.finder_result_label)}</span>
               <h3 data-stack-title>A flexible stack for modern work</h3>
               <p data-stack-summary></p>
               <div class="stack-list" data-stack-list></div>
               <div class="stack-summary" data-stack-summary-block>
                 <div class="summary-item">
-                  <span class="summary-label" data-i18n-en="Monthly cost">Monthly cost</span>
+                  <span class="summary-label">{_t(T.finder_monthly_cost)}</span>
                   <strong data-stack-cost>—</strong>
                 </div>
                 <div class="summary-item">
-                  <span class="summary-label" data-i18n-en="Time saved">Time saved</span>
+                  <span class="summary-label">{_t(T.finder_time_saved)}</span>
                   <strong data-stack-hours>—</strong>
                 </div>
               </div>
               <div class="stack-actions">
-                <a class="home-button primary result-button" data-stack-explore href="#all-tools" data-i18n-en="Explore matching tools">Explore matching tools</a>
+                <a class="home-button primary result-button" data-stack-explore href="#all-tools">{_t(T.finder_explore_more)}</a>
                 <button type="button" class="stack-action" data-stack-share>
                   <i class="fas fa-share-nodes"></i>
-                  <span data-i18n-en="Copy share link">Copy share link</span>
+                  <span>{_t(T.finder_copy_share)}</span>
                 </button>
                 <button type="button" class="stack-action" data-stack-reset>
                   <i class="fas fa-arrow-rotate-left"></i>
-                  <span data-i18n-en="Reset">Reset</span>
+                  <span>{_t(T.finder_reset)}</span>
                 </button>
               </div>
-              <p class="stack-disclaimer" data-i18n-en="Estimates are baselines from public plans. Your actual results depend on usage.">Estimates are baselines from public plans. Your actual results depend on usage.</p>
+              <p class="stack-disclaimer">{_t(T.finder_disclaimer)}</p>
             </div>
           </aside>
         </div>
       </div>
     </section>
 
-    <section class="home-section featured-tools" id="featured-tools">
+    <section class="home-section cat-section">
       <div class="home-shell">
-        <div class="section-heading split-heading"><div><span class="section-kicker" data-i18n-en="Editor's Picks">Editor's Picks</span><h2 data-i18n-en="Featured AI tools">Featured AI tools</h2><p data-i18n-en="High-performing tools tested in real workflows.">High-performing tools tested in real workflows.</p></div><a href="#all-tools" data-i18n-en="View full directory →">View full directory →</a></div>
-        <div class="featured-tool-grid">
-          {featuredToolMeta.map(({ id, tool, rating, price, tags }) => (
-            <article class="featured-tool-card">
-              <div class="tool-card-top"><span class="featured-tool-icon"><i class={`fas ${tool.icon || "fa-robot"}`}></i></span><div class="featured-rating"><span>★★★★★</span><strong>{rating}</strong></div></div>
-              <h3>{tool.name.en}</h3>
-              <p>{tool.short_desc.en}</p>
-              <div class="featured-tags">{tags.map(tag => <span>{tag}</span>)}</div>
-              <div class="featured-tool-footer"><strong>{price}</strong><a href={`/tool/${id}/`} data-i18n-en="Learn more">Learn more</a></div>
-            </article>
+        <div class="center-heading">
+          <span class="section-kicker">{_t(T.cat_kicker)}</span>
+          <h2>{_t(T.cat_title)}</h2>
+        </div>
+        <div class="cat-grid">
+          {categoriesData.map(cat => (
+            <a class="cat-card" href={`/best/${cat.slug}/`}>
+              <span class="cat-icon"><i class={`fas ${cat.icon || "fa-folder"}`}></i></span>
+              <div class="cat-body">
+                <h3>{pageLang === "zh" ? (cat.title_zh || cat.title_en) : cat.title_en}</h3>
+                <p>{_t(T.cat_icons[cat.slug] || (pageLang === "zh" ? (cat.desc_zh || cat.desc_en) : cat.desc_en))}</p>
+                <span class="cat-cta">{_t(T.cat_view_tools)}<i class="fas fa-arrow-right"></i></span>
+              </div>
+            </a>
           ))}
         </div>
       </div>
     </section>
 
-    <section class="home-section benchmark-section" id="benchmarks">
+    <section class="home-section tool-section" id="all-tools">
       <div class="home-shell">
-        <div class="section-heading"><span class="section-kicker" data-i18n-en="Independent Benchmarks">Independent Benchmarks</span><h2 data-i18n-en="AI coding benchmark">AI coding benchmark</h2><p data-i18n-en="A practical snapshot based on accuracy, response speed, pricing, and daily usability.">A practical snapshot based on accuracy, response speed, pricing, and daily usability.</p></div>
-        <div class="benchmark-card"><div class="table-scroll"><table><thead><tr><th data-i18n-en="Tool">Tool</th><th data-i18n-en="Accuracy">Accuracy</th><th data-i18n-en="Average speed">Average speed</th><th data-i18n-en="Entry price">Entry price</th><th data-i18n-en="Overall">Overall</th></tr></thead><tbody><tr><td><a href="/tool/cursor/"><i class="fas fa-code"></i><strong>Cursor</strong></a></td><td><span class="score high">96%</span></td><td>2.1s</td><td>$20/mo</td><td><b>9.6</b></td></tr><tr><td><a href="/tool/claude/"><i class="fas fa-feather-alt"></i><strong>Claude</strong></a></td><td><span class="score high">94%</span></td><td>3.2s</td><td>$20/mo</td><td><b>9.3</b></td></tr><tr><td><a href="/tool/github-copilot/"><i class="fab fa-github"></i><strong>GitHub Copilot</strong></a></td><td><span class="score medium">89%</span></td><td>1.8s</td><td>$10/mo</td><td><b>8.8</b></td></tr></tbody></table></div></div>
+        <div class="section-heading">
+          <span class="section-kicker">{_t(T.tool_kicker)}</span>
+          <h2>{_t(T.tool_title)}</h2>
+        </div>
+        <div class="tool-grid">
+          {featuredToolMeta.map(({ id, tool, rating, price, tags }) => (
+            <a class="tool-card" href={`/tool/${id}/`}>
+              <div class="tool-card-header">
+                <span class="tool-card-icon"><i class={`fas ${tool.icon || "fa-robot"}`}></i></span>
+                <div>
+                  <h3>{_tn(tool, "name")}</h3>
+                  <span class="tool-card-rating"><i class="fas fa-star"></i> {rating}</span>
+                </div>
+              </div>
+              <p class="tool-card-desc">{_tn(tool, "short_desc")}</p>
+              <div class="tool-card-tags">{tags.map(t => (<span>{t}</span>))}</div>
+              <div class="tool-card-footer">
+                <span class="tool-card-price">{price}</span>
+                <span class="tool-card-cta">{_t(T.tool_view)}<i class="fas fa-arrow-right"></i></span>
+              </div>
+            </a>
+          ))}
+        </div>
+        <div class="section-footer">
+          <a class="home-button secondary" href="/tool/">{_t(T.tool_all)}</a>
+        </div>
       </div>
     </section>
 
-    <section class="home-section directory-section" id="all-tools">
+    <section class="home-section comp-section">
       <div class="home-shell">
-        <div class="section-heading center-heading"><span class="section-kicker" data-i18n-en="Complete Directory">Complete Directory</span><h2 data-i18n-en={`Explore ${siteStats.tools}+ AI tools`}>Explore {siteStats.tools}+ AI tools</h2><p data-i18n-en="Search by name or filter by category to find the right tool for your work.">Search by name or filter by category to find the right tool for your work.</p></div>
-        <div class="directory-controls"><label class="search-box" for="search-input"><i class="fas fa-search"></i><input id="search-input" type="search" placeholder="Search AI tools..." data-i18n-placeholder-en="Search AI tools..."></label><div class="category-list" aria-label="Tool categories"><button class="cat-btn active" type="button" data-category="all" data-i18n-en="All">All</button><button class="cat-btn" type="button" data-category="text" data-i18n-en="Writing">Writing</button><button class="cat-btn" type="button" data-category="image" data-i18n-en="Images">Images</button><button class="cat-btn" type="button" data-category="code" data-i18n-en="Coding">Coding</button><button class="cat-btn" type="button" data-category="video" data-i18n-en="Video">Video</button><button class="cat-btn" type="button" data-category="audio" data-i18n-en="Audio">Audio</button><button class="cat-btn" type="button" data-category="productivity" data-i18n-en="Business">Business</button></div></div>
-        <div id="tool-grid" class="directory-grid"></div>
-        <div id="tool-grid-more" class="directory-more"></div>
+        <div class="center-heading">
+          <span class="section-kicker">{_t(T.comp_kicker)}</span>
+          <h2>{_t(T.comp_title)}</h2>
+        </div>
+        <div class="comp-grid">
+          {popularComparisons.map(c => (
+            <a class="comp-card" href={`/vs/${c.slug}/`}>
+              <h3>{pageLang === "zh" ? (c.title_zh || c.title_en) : c.title_en}</h3>
+              <p>{pageLang === "zh" ? (c.desc_zh || c.desc_en) : c.desc_en}</p>
+              <span class="comp-cta">{_t(T.comp_view)}</span>
+            </a>
+          ))}
+        </div>
+        <div class="section-footer">
+          <a class="home-button secondary" href="/vs/">{_t(T.comp_all)}</a>
+        </div>
       </div>
     </section>
 
-    <section class="home-section discovery-section">
-      <div class="home-shell discovery-grid">
-        <div class="discovery-column"><div class="section-heading"><span class="section-kicker" data-i18n-en="Head-to-Head">Head-to-Head</span><h2 data-i18n-en="Popular comparisons">Popular comparisons</h2></div><div class="compact-link-grid">{popularComparisons.map(item => <a href={`/vs/${item.slug}/`}><span class="compact-icon"><i class="fas fa-scale-balanced"></i></span><div><h3 data-i18n-en={item.title_en} data-i18n-zh={item.title_zh}>{item.title_en}</h3><p data-i18n-en={item.desc_en} data-i18n-zh={item.desc_zh}>{item.desc_en}</p></div><i class="fas fa-arrow-right"></i></a>)}</div></div>
-        <div class="discovery-column"><div class="section-heading"><span class="section-kicker" data-i18n-en="Practical Guides">Practical Guides</span><h2 data-i18n-en="From the blog">From the blog</h2></div><div class="compact-link-grid">{popularGuides.map(item => <a href={`/blog/${item.slug}/`}><span class="compact-icon"><i class="fas fa-newspaper"></i></span><div><h3 data-i18n-en={item.title_en} data-i18n-zh={item.title_zh}>{item.title_en}</h3><p data-i18n-en={item.desc_en} data-i18n-zh={item.desc_zh}>{item.desc_en}</p></div><i class="fas fa-arrow-right"></i></a>)}</div><a class="text-link" href="/blog/" data-i18n-en="Read all guides →">Read all guides →</a></div>
+    <section class="home-section guide-section">
+      <div class="home-shell">
+        <div class="center-heading">
+          <span class="section-kicker">{_t(T.guide_kicker)}</span>
+          <h2>{_t(T.guide_title)}</h2>
+        </div>
+        <div class="guide-grid">
+          {popularGuides.map(g => (
+            <a class="guide-card" href={`/blog/${g.slug}/`}>
+              <h3>{pageLang === "zh" ? (g.title_zh || g.title_en) : g.title_en}</h3>
+              <p>{pageLang === "zh" ? (g.desc_zh || g.desc_en) : g.desc_en}</p>
+              <span class="guide-cta">{_t(T.guide_read)}</span>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
 
-    <section class="home-section updates-section"><div class="home-shell"><div class="section-heading center-heading"><span class="section-kicker" data-i18n-en="Editorial Updates">Editorial Updates</span><h2 data-i18n-en="What we're testing now">What we're testing now</h2></div><div class="update-grid">{editorialLog.map(item => <article><time>{item.date}</time><h3 data-i18n-en={item.title_en} data-i18n-zh={item.title_zh}>{item.title_en}</h3><p data-i18n-en={item.desc_en} data-i18n-zh={item.desc_zh}>{item.desc_en}</p></article>)}</div></div></section>
+    <section class="home-section editorial-section">
+      <div class="home-shell">
+        <div class="center-heading">
+          <span class="section-kicker">{_t(T.edit_kicker)}</span>
+          <h2>{_t(T.edit_title)}</h2>
+        </div>
+        <div class="editorial-grid">
+          {editorialLog.map(e => (
+            <div class="editorial-card">
+              <time datetime={e.date}>{e.date}</time>
+              <h3>{pageLang === "zh" ? (e.title_zh || e.title_en) : e.title_en}</h3>
+              <p>{pageLang === "zh" ? (e.desc_zh || e.desc_en) : e.desc_en}</p>
+            </div>
+          ))}
+        </div>
+        <div class="section-footer">
+          <a class="home-button secondary" href="/changelog/">{_t(T.edit_view)}</a>
+        </div>
+      </div>
+    </section>
 
-    <section class="home-section faq-section home-faq"><div class="home-shell narrow-shell"><div class="section-heading center-heading"><span class="section-kicker">FAQ</span><h2 data-i18n-en="Frequently asked questions">Frequently asked questions</h2></div>{faq.map(item => <details><summary data-i18n-en={item.q_en} data-i18n-zh={item.q_zh}>{item.q_en}</summary><p data-i18n-en={item.a_en} data-i18n-zh={item.a_zh}>{item.a_en}</p></details>)}</div></section>
-
-
+    <section class="home-section faq-section">
+      <div class="home-shell">
+        <div class="center-heading">
+          <span class="section-kicker">{_t(T.faq_kicker)}</span>
+          <h2>{_t(T.faq_title)}</h2>
+        </div>
+        <div class="faq-grid">
+          {faq.map((item, i) => (
+            <details class="faq-item">
+              <summary><strong>{pageLang === "zh" ? (item.q_zh || item.q_en) : item.q_en}</strong></summary>
+              <p>{pageLang === "zh" ? (item.a_zh || item.a_en) : item.a_en}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
   </div>
 </BaseLayout>

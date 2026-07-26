@@ -1,0 +1,24 @@
+name:
+  en: Clockwise
+  zh: Clockwise
+short_desc:
+  en: AI meeting scheduler
+  zh: AI 会议调度
+long_desc:
+  en: AI meeting scheduler that protects focus time
+cat: productivity
+url: https://clockwise.com
+icon: fa-clock
+scenes:
+  en:
+  - meetings
+  - scheduling
+  - focus
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

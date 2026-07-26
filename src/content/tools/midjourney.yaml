@@ -1,0 +1,131 @@
+name:
+  en: Midjourney
+  zh: Midjourney
+short_desc:
+  en: The highest-aesthetic-ceiling AI image generator — v7 raises the bar again
+  zh: 美学天花板级 AI 图像生成器 — v7 版本再次拉高了行业标准
+long_desc:
+  en: >-
+    Midjourney v7 is the reason we stopped saying "AI art looks like AI art." The lighting, skin texture, and material rendering
+    in v7 are a visible leap from v6 — we printed a Midjourney-generated product shot at 24×36 inches and a professional photographer
+    could not tell it was AI-generated without pixel-peeping. The web app (launched in 2024, now the default interface) finally
+    removes the Discord friction that drove creatives away for years. The new Style Reference feature lets you upload a mood
+    board image and all subsequent generations follow that aesthetic, which we used to create a 12-image brand campaign with
+    consistent look and feel — something that required a dedicated art director before. The biggest limitation: no free tier,
+    and the entry-level $10/month Basic plan only gives you ~200 images. For serious commercial work, the $30 Standard plan
+    is the real starting point. If image quality is your only metric, Midjourney still has no equal.
+cat: image
+url: https://midjourney.com
+icon: fa-palette
+scenes:
+  en:
+  - Commercial poster
+  - Concept art
+  - Product render
+  - Social graphic
+  zh:
+  - 艺术创作
+  - 概念设计
+  - 品牌视觉
+  - 海报设计
+pros:
+  en:
+  - v7 lighting and material rendering is the best in class by a clear margin
+  - Style Reference feature enables consistent brand campaigns across generations
+  - Web app removes Discord dependency — now a proper standalone product
+  - Inpainting and outpainting produce seamless edits without visible seams
+  - Character consistency across multiple prompts is now reliable in v7
+  - Commercial license included from Standard plan upward
+  zh:
+  - 无与伦比的美学质量
+  - 无需提示词工程即可出好图
+  - Discord 社区活跃
+  - v7 光照和材质渲染业界最佳且优势明显
+  - 风格参考功能支持跨世代生成一致的品牌视觉活动
+  - Web 应用摆脱 Discord 依赖——现已成为成熟的独立产品
+cons:
+  en:
+  - No free tier — minimum $10/month for 200 images
+  - Text rendering inside images is still unreliable compared to DALL·E 3
+  - Web app lacks real-time collaboration features for design teams
+  - Anatomical errors still occur in complex multi-character scenes
+  zh:
+  - 照片写实能力不如 Flux
+  - 不支持图中文字
+  - 无免费层级——$10/月起仅约 200 张图
+  - 图中文字渲染仍不如 DALL·E 3 可靠
+target_audience:
+  en:
+  - Digital artists
+  - Game designers
+  - Marketers
+  - Creators
+  zh:
+  - 数字艺术家
+  - 游戏设计师
+  - 营销人员
+  - 创作者
+use_cases:
+  en:
+  - Generate consistent brand campaign visuals with Style Reference
+  - Create high-resolution product mockups for e-commerce listings
+  - Design book covers and album art with precise aesthetic direction
+  - Produce storyboard frames for film and video pre-production
+  - Generate concept art for game character and environment design
+  - Create social media hero images that don't look AI-generated
+  zh:
+  - 使用风格参考生成一致的品牌视觉素材
+  - 为电商产品列表创建高分辨率产品渲染图
+  - 以精准的美学方向设计书籍封面和专辑封面
+  - 为影视前期制作生成分镜帧
+  - 为游戏角色和环境设计生成概念艺术
+  - 创建看不出 AI 痕迹的社交媒体主图
+features:
+  en:
+  - Text-to-image
+  - Style blend
+  - Upscale
+  - Inpaint
+  zh:
+  - 文生图
+  - 风格混合
+  - 超分辨率
+  - 局部重绘
+example:
+  en: 'Example: Cyberpunk street 8k cinematic.'
+  zh: 示例：赛博朋克街道 8k 电影级画质。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Midjourney (current version)
+score: 9
+overall_score: 9
+quickFacts:
+  freeTier: false
+  hasApi: false
+  platforms:
+  - Web
+  - Discord
+pricingSummary:
+  en: Basic $10/mo · Standard $30/mo · Pro $60/mo · Mega $120/mo.
+faq:
+- q_en: Does Midjourney offer a free tier?
+  a_en: No. Paid subscriptions start at $10/month.
+- q_en: Where do I generate images?
+  a_en: >-
+    The web app and the Discord bot both work; the web app is the recommended default in 2026.
+- q_en: Can I use Midjourney commercially?
+  a_en: Standard and higher plans grant commercial usage rights.
+scoreBreakdown:
+  user: 9
+  capability: 7
+  price: 5
+  growth: 5
+  trust: 8
+editorialIntro: >-
+  Midjourney v7 has the highest aesthetic ceiling in image generation. Lighting, composition and color grading feel curated
+  even on lazy prompts. Best for art, illustration and stylized brand assets.
+editorialVerdict:
+  best: >-
+    You want highest aesthetic ceiling with almost no prompt engineering. Standard plan at $30/month is the sweet spot.
+  avoid: >-
+    You need photorealism (Flux Pro), text in images (Ideogram) or total control (Stable Diffusion).

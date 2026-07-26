@@ -1,0 +1,171 @@
+name:
+  en: Synthesia
+  zh: Synthesia
+short_desc:
+  en: AI avatar video platform
+  zh: AI 数字人视频制作平台
+long_desc:
+  en: >-
+    Synthesia turns scripts into presenter-led videos with AI avatars - standard for training and marketing.
+cat: video
+url: https://www.synthesia.io
+icon: fa-user-tie
+scenes:
+  en:
+  - Training
+  - Product explainers
+  - Multilingual
+  - Marketing
+  zh:
+  - 企业培训
+  - 产品演示
+  - 多语言内容
+  - 内部沟通
+pros:
+  en:
+  - Natural avatars
+  - Full multilingual
+  - Enterprise-grade
+  zh:
+  - 数字人逼真度高
+  - 140+ 种语言支持
+  - 企业级安全合规
+cons:
+  en:
+  - Pricey
+  - Low creative freedom
+  - Custom needs enterprise
+  zh:
+  - $22/月个人版功能受限
+  - 不能替代真人出镜情感表达
+  - 创意自由度较低
+target_audience:
+  en:
+  - L&D
+  - HR
+  - Marketing
+  - PMs
+  zh:
+  - 学习与发展
+  - 人力资源
+  - 营销
+  - 产品经理
+use_cases:
+  en:
+  - Training
+  - Explainers
+  - Multilingual
+  - Marketing
+  zh:
+  - 培训课程
+  - 讲解视频
+  - 多语言内容
+  - 营销视频
+features:
+  en:
+  - Avatars
+  - Multilingual
+  - Templates
+  - Enterprise
+  zh:
+  - 数字人
+  - 多语言
+  - 模板库
+  - 企业版
+example:
+  en: 'Example: Turn a script into a multilingual training video.'
+  zh: 示例：将脚本转为多语言培训视频。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Synthesia (2026-07)
+score: 8.3
+overall_score: 8.3
+quickFacts:
+  freeTier: false
+  hasApi: true
+  platforms:
+  - Web
+pricingSummary:
+  en: >-
+    No free tier; demo video available. Starter at $22/mo (1 editor, 10 min video). Creator at $67/mo (3 editors, 30 min).
+    Enterprise custom pricing.
+faq:
+- q_en: Does Synthesia offer a free plan?
+  a_en: >-
+    No, Synthesia does not have a free subscription tier. You can create one free demo video to test the platform's avatar
+    quality and video generation capabilities before committing. Paid plans start at $22 per month for the Starter tier, which
+    includes one editor seat and 10 minutes of video generation per month with access to 125+ stock avatars and AI script
+    generation.
+- q_en: How many avatars does Synthesia have?
+  a_en: >-
+    Synthesia offers over 160 stock AI avatars covering a diverse range of ethnicities, ages, genders, and professional appearances
+    such as business formal, casual, and medical uniforms. The avatar library is continuously expanded with new additions
+    every month. Additionally, you can create custom avatars resembling yourself or brand representatives by submitting a
+    short video recording in a well-lit environment against a green or clean background.
+- q_en: What languages does Synthesia support?
+  a_en: >-
+    Synthesia supports video generation in over 140 languages and accents, including English (US, UK, Australian, Indian),
+    Spanish (Spain, Latin American), Mandarin Chinese, Japanese, Korean, French, German, Arabic, Hindi, and Portuguese. The
+    AI automatically adjusts the avatar's lip movements to match each language's phonetic patterns. The one-click translation
+    feature lets you take an existing English video and regenerate it with the same avatar and script translated into multiple
+    target languages while preserving natural lip-sync in each language.
+- q_en: Can I create a custom avatar that looks like me?
+  a_en: >-
+    Yes, Synthesia allows you to create custom avatars from a real-person video recording. You need to film yourself speaking
+    in a well-lit room against a plain green or clean background for approximately 2-5 minutes following Synthesia's recording
+    guidelines. The AI then processes this footage into a custom avatar that can deliver any script you type in supported
+    languages. Custom avatars are available on Creator plans and above, with each custom avatar counting toward your plan's
+    limit. Enterprise plans include more custom avatar slots and priority processing.
+- q_en: Is Synthesia suitable for enterprise use with security requirements?
+  a_en: >-
+    Yes, Synthesia is enterprise-ready with SOC 2 Type II compliance certification, meaning it meets rigorous standards for
+    data security, availability, and confidentiality. Enterprise plans include SSO (Single Sign-On) integration via SAML or
+    OIDC, custom data retention policies, dedicated account management, and the ability to create workspaces with role-based
+    access controls. All video generation and data processing occur on Synthesia's secure cloud infrastructure. Used by over
+    50,000 companies including Amazon, Xerox, and Tiffany & Co. for sensitive internal communications and training content.
+- q_en: What is the video quality and resolution of Synthesia exports?
+  a_en: >-
+    Synthesia exports videos in 1080p Full HD resolution at 30 frames per second in MP4 format. The avatar rendering quality
+    is photorealistic with smooth lip-sync and natural micro-expressions, though complex emotional ranges like anger, sadness,
+    or intense excitement can sometimes appear slightly artificial. Video backgrounds are customizable with brand colors,
+    uploaded images, screen recordings, or built-in virtual office settings. The platform automatically optimizes videos for
+    different aspect ratios including 16:9 (landscape), 9:16 (vertical for social media), and 1:1 (square). Audio quality
+    is clear with natural text-to-speech voices in multiple styles per language.
+- q_en: Does Synthesia have an API for programmatic video generation?
+  a_en: >-
+    Yes, Synthesia provides a REST API that enables programmatic video generation at scale. The API allows you to create videos
+    with custom avatars, scripts, backgrounds, and branding elements from your own applications or automated workflows. Common
+    use cases include generating personalized sales videos from CRM data, creating automated customer onboarding videos triggered
+    by signup events, and building internal dashboards that produce weekly video reports. API access is available on Creator
+    plans and above, with rate limits scaling by plan tier. The API documentation includes SDKs for Python, JavaScript, and
+    cURL examples.
+- q_en: How does Synthesia compare to HeyGen?
+  a_en: >-
+    Synthesia and HeyGen are the two leading AI avatar video platforms but serve slightly different niches. Synthesia excels
+    at enterprise-grade multilingual training and corporate communications with its SOC 2 compliance, 140+ languages, and
+    160+ avatars optimized for professional consistency. HeyGen offers a more creator-friendly experience with stronger voice
+    cloning, more expressive avatar animations, and better lip-sync for short-form social media content. For enterprises needing
+    secure, scalable, and compliant video production, Synthesia is the stronger choice. For individual creators or marketing
+    teams prioritizing expressiveness and viral potential, HeyGen may be more appealing. Both offer custom avatar creation
+    and API access, though Synthesia's enterprise security posture is more mature.
+- q_en: Can Synthesia videos include screen recordings?
+  a_en: >-
+    Yes, Synthesia supports screen recording with avatar overlay. You can record your screen (entire desktop, application
+    window, or browser tab) and place a talking avatar in the corner or alongside the recording to narrate what's happening
+    on screen. This is particularly useful for software product demos, tutorial walkthroughs, and internal tool training where
+    you want a human presence to guide viewers through complex interfaces. The screen recording feature is available on all
+    paid plans and can be combined with slide-based content, text overlays, and custom branding elements within a single video.
+- q_en: What is the maximum video length on Synthesia?
+  a_en: >-
+    Synthesia does not impose a hard limit on individual video length, but you are constrained by your monthly video generation
+    minutes. The Starter plan includes 10 minutes of total video generation per month, Creator includes 30 minutes, and Enterprise
+    plans offer custom minute allocations negotiated during onboarding. A single video can consume your entire monthly allocation
+    if desired. Each generated minute typically corresponds to approximately 150-180 words of script. For longer training
+    modules or courses, you can generate individual sections separately and combine them using external video editing software,
+    though this consumes minutes from your monthly pool.
+scoreBreakdown:
+  user: 8.8
+  capability: 8.5
+  price: 6.5
+  growth: 9.0
+  trust: 8.8

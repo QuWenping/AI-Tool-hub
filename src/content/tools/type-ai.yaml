@@ -1,0 +1,24 @@
+name:
+  en: Type AI
+  zh: Type AI
+short_desc:
+  en: AI typing assistant
+  zh: AI 打字助手
+long_desc:
+  en: AI typing and writing enhancement in any app
+cat: text
+url: https://type.ai
+icon: fa-pen
+scenes:
+  en:
+  - typing
+  - writing
+  - enhancement
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

@@ -1,0 +1,223 @@
+---
+
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import solutions from "../../../data/solutions.json";
+import toolsData from "../../../data/tools.json";
+import editorialData from "../../../data/tool-editorial.json";
+import taxonomy from "../../../data/industry-taxonomy.json";
+import TLDR from "../../../components/ui/TLDR.astro";
+import AdSlot from "../../../components/ui/AdSlot.astro";
+import IndustryStack from "../../../components/ui/IndustryStack.astro";
+import SolutionSection from "../../../components/ui/SolutionSection.astro";
+import ToolFAQ from "../../../components/ui/ToolFAQ.astro";
+
+import { getTranslations } from "../../../utils/i18n";
+export async function getStaticPaths() {
+  return solutions.map(s => ({ params: { slug: s.slug }, props: { solution: s } }));
+}
+
+const { solution } = Astro.props;
+const pageLang = "zh";
+const t = getTranslations("solutions", pageLang);
+
+
+function _td(obj, fallback) {
+  if (typeof obj === "object" && obj !== null) return obj[pageLang] || obj["en"] || fallback || "";
+  return obj || fallback || "";
+}
+
+const categoryLabels = { text: "Writing", image: "Image", code: "Coding", video: "Video", audio: "Audio", productivity: "Productivity" };
+
+function normaliseTool(id, role) {
+  const t = toolsData[id];
+  if (!t) return null;
+  return {
+    id,
+    name: t.name?.en || id,
+    description: t.short_desc?.en || "",
+    icon: t.icon || "fa-robot",
+    category: categoryLabels[t.cat] || t.cat,
+    role
+  };
+}
+
+const stackToolIds = solution.toolIds || [];
+const stackTools = stackToolIds
+  .map(id => normaliseTool(id, solution.stackRoles?.[id]?.en))
+  .filter(Boolean);
+
+const relatedWorkflows = [];
+
+const relatedSolutionSlugs = solution.relatedSolutionSlugs || [];
+const relatedSolutions = relatedSolutionSlugs
+  .map(slug => solutions.find(s => s.slug === slug))
+  .filter(Boolean);
+
+const taxonomyMap = new Map((taxonomy.tags || []).map(t => [t.slug, t]));
+const industryTagBadges = (solution.industryTags || [])
+  .map(slug => taxonomyMap.get(slug))
+  .filter(Boolean);
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = `${siteUrl}/solutions/${solution.slug}/`;
+const updatedAt = solution.updatedAt || "2026-07-20";
+
+const tlDrItems = [
+  solution.audience?.zh && pageLang === "zh" ? solution.audience.zh : (solution.audience?.en || `${solution.industry} teams applying AI.`),
+  pageLang === "zh" ? `推荐技术栈：${stackTools.length} 款工具（${stackTools.slice(0,3).map(t => t.name).join(", ") || "精选"}）` : `Recommended stack: ${stackTools.length} tools (${stackTools.slice(0,3).map(t => t.name).join(", ") || "curated"})`,
+  pageLang === "zh" ? `覆盖任务领域：${(solution.sections || []).length} 个` : `Task areas covered: ${(solution.sections || []).length}`,
+  pageLang === "zh" ? `最后审查：${updatedAt}` : `Last reviewed: ${updatedAt}`
+];
+
+const seoTitle = pageLang === "zh" ? `${solution.industry} 最佳 AI 工具：技术栈与用例` : `Best AI Tools for ${solution.industry} in 2026: Stack & Use Cases`;
+const seoDescription = (_td(solution.description) || `AI stack for ${solution.industry.toLowerCase()}.`).slice(0, 158);
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: t("home"), item: siteUrl + "/" },
+    { "@type": "ListItem", position: 2, name: t("breadcrumbSolutions"), item: siteUrl + "/solutions/" },
+    { "@type": "ListItem", position: 3, name: solution.industry, item: pageUrl }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: _td(solution.title),
+  description: _td(solution.description),
+  url: pageUrl,
+  mainEntityOfPage: pageUrl,
+  author: { "@type": "Organization", name: "AI Tool Hub Editorial", url: siteUrl },
+  publisher: { "@type": "Organization", name: "AI Tool Hub", url: siteUrl, logo: { "@type": "ImageObject", url: siteUrl + "/logo.svg" } },
+  datePublished: updatedAt,
+  dateModified: updatedAt,
+  inLanguage: pageLang === "zh" ? "zh" : "en"
+};
+
+const itemListSchema = stackTools.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: `${solution.industry} AI stack`,
+  itemListElement: stackTools.map((t, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: t.name,
+    url: `${siteUrl}/tool/${t.id}/`
+  }))
+} : null;
+
+const faqList = solution.faq || [];
+const isTargetPage = ["ai-for-architecture","ai-for-engineers","ai-for-construction","ai-for-small-business","ai-for-students"].includes(solution.slug);
+const bestRankingHref = {
+  "ai-for-students": "/best/students/",
+  "ai-for-small-business": "/best/small-business/",
+  "ai-for-architecture": "/best/",
+  "ai-for-engineers": "/best/developers/",
+  "ai-for-construction": "/best/"
+}[solution.slug];
+
+---
+<BaseLayout title={seoTitle} description={seoDescription} keywords={`${solution.industry} AI, AI for ${solution.industry.toLowerCase()}, AI stack, AI workflows`}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    {itemListSchema && <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>}
+  </Fragment>
+  <article class="solution-detail">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/">{t("home")}</a> &rsaquo;
+      <a href="/solutions/">{t("breadcrumbSolutions")}</a> &rsaquo;
+      <span>{solution.industry}</span>
+    </nav>
+
+    <header class="solution-hero">
+      <div class="solution-hero-copy">
+        <div class="solution-hero-tags">
+          <span class="status-badge status-badge--industry"><i class={`fas ${solution.icon || "fa-briefcase"}`} aria-hidden="true"></i> {solution.industry}</span>
+          {industryTagBadges.map(tag => (
+            <span class="industry-tag">{tag.label?.en || tag.slug}</span>
+          ))}
+          <span class="solution-hero-updated">{pageLang === "zh" ? `更新于 ${updatedAt}` : `Updated ${updatedAt}`}</span>
+        </div>
+        <h1>{_td(solution.title)}</h1>
+        {solution.description && <p class="solution-hero-summary">{_td(solution.description)}</p>}
+        <div class="solution-hero-cta">
+          <a class="solution-hero-btn primary" href="#recommended-stack">{t("seeRecommendedStack")}</a>
+          {bestRankingHref && <a class="solution-hero-btn secondary" href={bestRankingHref}>{t("compareIndividualTools")}</a>}
+        </div>
+      </div>
+    </header>
+
+    <TLDR items={tlDrItems} />
+
+    <AdSlot format="banner" label="Advertisement" />
+
+    <section id="recommended-stack" class="solution-anchor">
+      <IndustryStack
+        tools={stackTools}
+        heading={pageLang === "zh" ? `适用于 ${solution.industry.toLowerCase()} 的推荐 AI 技术栈` : `Recommended AI stack for ${solution.industry.toLowerCase()}`}
+        kicker={t("recommendedStackKicker")}
+      />
+    </section>
+
+    {(solution.sections || []).length > 0 && (
+      <section class="solution-tasks">
+        <h2>{t("taskAreasHeading")}</h2>
+        {(solution.sections || []).map(sec => (
+          <SolutionSection
+            heading={sec.heading}
+            content={sec.content}
+            tools={(sec.recommendedToolIds || []).map(id => normaliseTool(id, solution.stackRoles?.[id]?.en)).filter(Boolean)}
+          />
+        ))}
+      </section>
+    )}
+
+    <section class="solution-adoption">
+      <h2>{t("howToAdoptHeading")}</h2>
+      <ol class="adoption-path">
+        <li><strong>{t("startStep")}</strong> {t("startDesc")}</li>
+        <li><strong>{t("automateStep")}</strong> {t("automateDesc")}</li>
+        <li><strong>{t("governStep")}</strong> {t("governDesc")}</li>
+      </ol>
+    </section>
+
+    <section class="solution-safety">
+      <h2>{t("safetyHeading")}</h2>
+      <ul>
+        <li>{t("safety1")}</li>
+        <li>{t("safety2")}</li>
+        <li>{t("safety3")}</li>
+      </ul>
+    </section>
+
+    <ToolFAQ faqs={faqList} heading={t("faqHeading")} />
+
+    {relatedSolutions.length > 0 && (
+      <section class="solution-related">
+        <h2>{t("relatedHeading")}</h2>
+        <div class="related-grid">
+          {relatedSolutions.map(r => (
+            <a class="related-card" href={`/solutions/${r.slug}/`}>
+              <div class="related-icon" aria-hidden="true"><i class={`fas ${r.icon || "fa-briefcase"}`}></i></div>
+              <div>
+                <h3>{_td(r.title)}</h3>
+                {r.description && <p>{_td(r.description)}</p>}
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="solution-cta">
+      <div>
+        <h2>{t("notSureHeading")}</h2>
+        <p>{t("notSureDesc")}</p>
+      </div>
+      <a class="solution-hero-btn primary" href="/#finder">{t("openStackBuilder")}</a>
+    </section>
+  </article>
+</BaseLayout>

@@ -1,0 +1,24 @@
+name:
+  en: Ollama API
+  zh: Ollama API
+short_desc:
+  en: Local LLM runtime
+  zh: 本地 LLM 运行时
+long_desc:
+  en: Run LLMs locally with simple API
+cat: code
+url: https://ollama.com
+icon: fa-server
+scenes:
+  en:
+  - local-llm
+  - api
+  - self-hosted
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

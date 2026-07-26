@@ -24,7 +24,9 @@
       "grok",
       "you-com",
       "mistral"
-    ]
+    ],
+    "title_zh": "2026 年最佳 AI 写作工具",
+    "desc_zh": "AI 写作助手，用于对话交互、内容起草、编辑和头脑风暴。"
   },
   {
     "slug": "image",
@@ -47,7 +49,9 @@
       "letsenhance",
       "galileo-ai",
       "adobe-firefly"
-    ]
+    ],
+    "title_zh": "2026 年最佳 AI 图像生成器",
+    "desc_zh": "面向设计师、艺术家和创作者的文本到图像 AI 模型。"
   },
   {
     "slug": "code",
@@ -68,7 +72,9 @@
       "amazon-q",
       "cody",
       "ollama"
-    ]
+    ],
+    "title_zh": "2026 年最佳 AI 编程助手",
+    "desc_zh": "代码补全、重构和结对编程 AI 工具。"
   },
   {
     "slug": "video",
@@ -91,7 +97,9 @@
       "kapwing",
       "d-id",
       "capcut"
-    ]
+    ],
+    "title_zh": "2026 年最佳 AI 视频生成器",
+    "desc_zh": "面向视频创作者和营销人员的文本到视频 AI 工具。"
   },
   {
     "slug": "audio",
@@ -109,7 +117,9 @@
       "voicemod",
       "stable-audio",
       "riverside"
-    ]
+    ],
+    "title_zh": "2026 年最佳 AI 音频工具",
+    "desc_zh": "AI 语音生成、播客制作和音乐创作工具。"
   },
   {
     "slug": "productivity",
@@ -137,6 +147,8 @@
       "multion",
       "crewai",
       "huggingface"
-    ]
+    ],
+    "title_zh": "2026 年最佳 AI 效率工具",
+    "desc_zh": "用于笔记记录、智能搜索和任务自动化的 AI 工具。"
   }
 ]

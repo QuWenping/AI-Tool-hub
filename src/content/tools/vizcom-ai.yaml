@@ -1,0 +1,24 @@
+name:
+  en: Vizcom AI
+  zh: Vizcom AI
+short_desc:
+  en: AI sketch to render
+  zh: AI 草图转渲染
+long_desc:
+  en: Turn sketches into photorealistic renders
+cat: image
+url: https://vizcom.ai
+icon: fa-pencil
+scenes:
+  en:
+  - sketch
+  - render
+  - design
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

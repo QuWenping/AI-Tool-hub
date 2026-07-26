@@ -1,0 +1,24 @@
+name:
+  en: Bloop AI
+  zh: Bloop AI
+short_desc:
+  en: AI code search
+  zh: AI 代码搜索
+long_desc:
+  en: Natural language code search across your codebase
+cat: code
+url: https://bloop.ai
+icon: fa-search
+scenes:
+  en:
+  - search
+  - natural-language
+  - codebase
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

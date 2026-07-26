@@ -1,0 +1,46 @@
+name:
+  en: Let's Enhance
+  zh: Let's Enhance
+short_desc:
+  en: AI image upscaling + quality enhancement
+  zh: AI 图像放大 + 质量增强
+long_desc:
+  en: >-
+    Let's Enhance uses AI to upscale low-resolution images and enhance quality; popular for e-commerce and print.
+cat: image
+url: https://letsenhance.io
+icon: fa-expand
+scenes:
+  en:
+  - Upscaling
+  - Quality enhance
+  - Print
+  - E-commerce
+pros:
+  en:
+  - Good upscaling
+  - Batch processing
+  - API available
+cons:
+  en:
+  - Limited free
+  - Large images paid
+target_audience:
+  en:
+  - E-commerce
+  - Designers
+  - Photographers
+use_cases:
+  en:
+  - Upscale
+  - E-com
+  - Print
+  - Enhance
+features:
+  en:
+  - AI upscale
+  - Quality enhance
+  - Batch
+  - API
+example:
+  en: 'Example: Upscale a 500px image to 4K and enhance clarity.'

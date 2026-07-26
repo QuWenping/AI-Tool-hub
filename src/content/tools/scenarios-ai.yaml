@@ -1,0 +1,24 @@
+name:
+  en: Scenario AI
+  zh: Scenario AI
+short_desc:
+  en: AI game asset generator
+  zh: AI 游戏资产生成器
+long_desc:
+  en: Generate game assets with custom-trained AI models
+cat: image
+url: https://scenario.com
+icon: fa-gamepad
+scenes:
+  en:
+  - game
+  - assets
+  - 3d
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

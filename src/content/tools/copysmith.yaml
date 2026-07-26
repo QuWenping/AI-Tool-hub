@@ -1,0 +1,24 @@
+name:
+  en: Copysmith
+  zh: Copysmith
+short_desc:
+  en: AI ecommerce copy
+  zh: AI 电商文案
+long_desc:
+  en: AI product descriptions, ads and SEO content for ecommerce
+cat: text
+url: https://copysmith.ai
+icon: fa-copy
+scenes:
+  en:
+  - ecommerce
+  - ads
+  - seo
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

@@ -1,0 +1,24 @@
+name:
+  en: Stability API
+  zh: Stability API
+short_desc:
+  en: Stable Diffusion API service
+  zh: Stable Diffusion API 服务
+long_desc:
+  en: Official Stability AI API for SD models
+cat: image
+url: https://stability.ai
+icon: fa-image
+scenes:
+  en:
+  - api
+  - image
+  - generation
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Pay per use

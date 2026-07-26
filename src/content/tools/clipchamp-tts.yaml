@@ -1,0 +1,24 @@
+name:
+  en: Clipchamp TTS
+  zh: Clipchamp TTS
+short_desc:
+  en: Microsoft AI voice
+  zh: 微软 AI 语音
+long_desc:
+  en: Free AI voice generation in Microsoft Clipchamp
+cat: audio
+url: https://clipchamp.com
+icon: fa-microphone
+scenes:
+  en:
+  - tts
+  - free
+  - microsoft
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

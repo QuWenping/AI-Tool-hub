@@ -1,0 +1,47 @@
+name:
+  en: Ollama
+  zh: Ollama
+short_desc:
+  en: The easiest way to run open models locally
+  zh: 最简便的本地运行开源模型方式
+long_desc:
+  en: >-
+    Ollama lets you run Llama, DeepSeek, Mistral and other open models locally with one command, no GPU cluster needed.
+cat: code
+url: https://ollama.com
+icon: fa-terminal
+scenes:
+  en:
+  - Local LLM
+  - Privacy-sensitive
+  - Offline inference
+  - Dev testing
+pros:
+  en:
+  - One-line install
+  - Fully open source
+  - Privacy
+  - Free
+cons:
+  en:
+  - Needs local hardware
+  - Less capable than API models
+target_audience:
+  en:
+  - Devs
+  - Privacy-conscious
+  - Researchers
+use_cases:
+  en:
+  - Local inference
+  - Dev
+  - Privacy
+  - Testing
+features:
+  en:
+  - One-line install
+  - Multi-model
+  - Open source
+  - API
+example:
+  en: 'Example: ollama run llama3.2 → run Llama locally.'

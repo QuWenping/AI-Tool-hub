@@ -1,0 +1,24 @@
+name:
+  en: Anthropic API
+  zh: Anthropic API
+short_desc:
+  en: Claude API service
+  zh: Claude API 服务
+long_desc:
+  en: Official Claude API with 200K context
+cat: code
+url: https://anthropic.com
+icon: fa-code
+scenes:
+  en:
+  - api
+  - long-context
+  - code
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Pay per use

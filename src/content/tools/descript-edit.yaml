@@ -1,0 +1,24 @@
+name:
+  en: Descript
+  zh: Descript
+short_desc:
+  en: AI video/audio editing
+  zh: AI 视频/音频编辑
+long_desc:
+  en: Edit video by editing text with AI voice cloning
+cat: video
+url: https://descript.com
+icon: fa-film
+scenes:
+  en:
+  - editing
+  - podcast
+  - transcription
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

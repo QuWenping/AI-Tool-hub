@@ -1,0 +1,118 @@
+name:
+  en: GitHub Copilot
+  zh: GitHub Copilot
+short_desc:
+  en: AI pair programmer embedded in your IDE
+  zh: 嵌入 IDE 的 AI 结对编程助手
+long_desc:
+  en: >-
+    GitHub Copilot is deeply integrated into VS Code and JetBrains by GitHub and OpenAI.
+  zh: >-
+    GitHub Copilot 是 2026 年最成熟的 AI 代码补全工具，深度集成到 VS Code、JetBrains 和 Neovim 中。对学生和开源维护者免费，$10/月，是性价比最高的日常编码伴侣。
+cat: code
+url: https://github.com/features/copilot
+icon: fa-code
+scenes:
+  en:
+  - Boilerplate
+  - Test writing
+  - API examples
+  - Comments
+  zh:
+  - 代码补全
+  - IDE 内聊天
+  - 代码审查
+  - 文档生成
+pros:
+  en:
+  - Deep IDE
+  - 30+ languages
+  - Speeds up coding
+  zh:
+  - IDE 深度集成
+  - 支持 30+ 种编程语言
+  - 大幅提升编码速度
+cons:
+  en:
+  - Monthly fee
+  - Occasional bad code
+  - Occasional noise
+  zh:
+  - 不能跨文件重构
+  - 不接管终端或调试器
+  - 企业版价格较高
+target_audience:
+  en:
+  - Developers
+  - Data scientists
+  - DevOps
+  - Students
+  zh:
+  - 开发者
+  - 数据科学家
+  - DevOps 工程师
+  - 学生
+use_cases:
+  en:
+  - REST API
+  - Unit tests
+  - Explain legacy
+  - Language convert
+  zh:
+  - REST API 开发
+  - 单元测试编写
+  - 解读遗留代码
+  - 语言转换
+features:
+  en:
+  - Real-time
+  - Whole-function
+  - IDE chat
+  - Multi-language
+  zh:
+  - 实时补全
+  - 整函数生成
+  - IDE 聊天
+  - 多语言支持
+example:
+  en: 'Example: Auto-complete a function from a comment.'
+  zh: 示例：根据注释自动补全函数。
+reviewed: true
+updatedAt: '2026-07-19'
+testedVersion: GitHub Copilot (2026)
+score: 8.4
+overall_score: 8.4
+quickFacts:
+  freeTier: true
+  hasApi: false
+  platforms:
+  - VS Code
+  - JetBrains
+  - Neovim
+  - Visual Studio
+pricingSummary:
+  en: Free for verified students · Individual $10/mo · Business $19/mo.
+faq:
+- q_en: Is GitHub Copilot free?
+  a_en: >-
+    Free for verified students, open-source maintainers, and teachers. Others start at $10/month.
+- q_en: Does Copilot support multi-file editing?
+  a_en: >-
+    Copilot Chat handles some multi-file edits; for repo-wide agent work Cursor is more capable.
+- q_en: Which languages does Copilot support?
+  a_en: 30+ languages including Python, JavaScript/TypeScript, Go, Rust, Java and C#.
+scoreBreakdown:
+  user: 8.4
+  capability: 7
+  price: 10
+  growth: 6
+  trust: 8
+editorialIntro: >-
+  GitHub Copilot is still the gold standard for autocomplete inside your existing IDE. The free tier for verified students
+  is one of the best deals in tech; the $10/month Individual or $19/month Business plan add chat, multi-file edits and enterprise
+  controls.
+editorialVerdict:
+  best: >-
+    You want fast, accurate autocomplete inside the IDE you already use. Individual plan is $10/month; students are free.
+  avoid: >-
+    You regularly refactor across many files or want repo-wide agent workflows — Cursor is more capable.

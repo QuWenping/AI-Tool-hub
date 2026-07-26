@@ -1,0 +1,24 @@
+name:
+  en: TextCortex
+  zh: TextCortex
+short_desc:
+  en: AI rewriting assistant
+  zh: AI 改写助手
+long_desc:
+  en: AI rewriting, summarization and translation
+cat: text
+url: https://textcortex.com
+icon: fa-pen
+scenes:
+  en:
+  - rewrite
+  - summarize
+  - translate
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

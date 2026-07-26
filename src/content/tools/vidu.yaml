@@ -1,0 +1,46 @@
+name:
+  en: Vidu
+  zh: Vidu
+short_desc:
+  en: AI video generation by ShengShu Tech
+  zh: 生数科技推出的 AI 视频生成模型
+long_desc:
+  en: >-
+    Vidu is a Chinese AI video model supporting text-to-video and image-to-video; accessible in China.
+cat: video
+url: https://www.vidu.com
+icon: fa-film
+scenes:
+  en:
+  - Shorts
+  - Img-to-video
+  - CN prompts
+  - Social
+pros:
+  en:
+  - China accessible
+  - CN-friendly
+  - Good quality
+cons:
+  en:
+  - Young ecosystem
+  - Length limits
+target_audience:
+  en:
+  - Creators
+  - Social media
+  - Marketing
+use_cases:
+  en:
+  - Shorts
+  - Social
+  - Creative
+  - Ads
+features:
+  en:
+  - Text-to-video
+  - Img-to-video
+  - CN-optimized
+  - China access
+example:
+  en: 'Example: Describe an ocean scene, get a 4s clip.'

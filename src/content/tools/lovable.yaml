@@ -1,0 +1,128 @@
+name:
+  en: Lovable
+  zh: Lovable
+short_desc:
+  en: AI full-stack app builder, chat to app
+  zh: AI 全栈应用构建器，聊天即应用
+long_desc:
+  en: >-
+    Lovable generates full-stack apps (frontend+backend+DB) from natural language chat, deployable.
+cat: code
+url: https://lovable.dev
+icon: fa-heart
+scenes:
+  en:
+  - Full-stack apps
+  - MVPs
+  - Internal tools
+  zh:
+  - 创业 MVP
+  - 全栈应用
+  - 无代码开发
+  - 快速验证
+pros:
+  en:
+  - Full-stack gen
+  - Easy deploy
+  - Fast iterate
+  zh:
+  - 聊天即应用零门槛
+  - 全栈生成
+  - 部署一键完成
+cons:
+  en:
+  - Complex projects limited
+  - Less code control
+  zh:
+  - 代码质量不确定
+  - 不适合复杂业务逻辑
+target_audience:
+  en:
+  - Non-technical
+  - PMs
+  - Founders
+  zh:
+  - 非技术人员
+  - 产品经理
+  - 创业者
+use_cases:
+  en:
+  - MVPs
+  - Internal tools
+  - Protos
+  - SaaS
+  zh:
+  - MVPs
+  - 内部工具
+  - 原型
+  - SaaS
+features:
+  en:
+  - Chat-to-app
+  - Full-stack
+  - Deploy
+  - Supabase
+  zh:
+  - 对话转应用
+  - 全栈
+  - 部署
+  - Supabase
+example:
+  en: 'Example: ''build a todo app with auth'' → full app.'
+  zh: 示例：'构建一个带认证的待办应用' → 完整应用。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Lovable 2026
+score: 8.3
+overall_score: 8.3
+quickFacts:
+  freeTier: true
+  hasApi: false
+  platforms:
+  - Web Browser
+pricingSummary:
+  en: Free tier (limited) · Starter $20/mo · Launch $50/mo · Scale $100/mo.
+faq:
+- q_en: What makes Lovable different from Bolt?
+  a_en: >-
+    Lovable is built around Supabase, so user auth, database, and storage are included from the start. Bolt is better for
+    Node.js/React apps without a database. Lovable is stronger for SaaS MVPs.
+- q_en: Can non-technical founders use Lovable?
+  a_en: >-
+    Yes. The chat-to-app interface lets you describe your idea in plain English. Lovable generates the full stack, deploys
+    it, and gives you a live URL.
+- q_en: Does Lovable support custom domains?
+  a_en: >-
+    Yes. Paid plans support custom domains. The free tier gives you a lovable.app subdomain.
+- q_en: Can I export the code from Lovable?
+  a_en: >-
+    Yes. You can export the full project to a GitHub repository and continue developing locally or with your team.
+- q_en: What tech stack does Lovable use?
+  a_en: >-
+    React + TypeScript frontend, Supabase for backend (PostgreSQL, auth, storage), and Tailwind CSS. Deployed on Lovable's
+    hosting infrastructure.
+- q_en: Is Lovable good for internal tools?
+  a_en: >-
+    Yes. With Supabase's built-in auth and row-level security, you can build internal dashboards, admin panels, and CRUD apps
+    quickly.
+- q_en: How does Lovable pricing compare to Bolt?
+  a_en: >-
+    Starter at $20/mo is similar to Bolt Pro. Launch at $50/mo adds more generous limits. Both are comparable for MVP development.
+- q_en: Can Lovable handle complex logic?
+  a_en: >-
+    It handles CRUD, auth flows, and basic business logic well. For complex algorithms or custom API integrations, you may
+    need to extend the generated code.
+- q_en: Does Lovable have a mobile app?
+  a_en: >-
+    No. Lovable generates web apps that are responsive and mobile-friendly. For native mobile apps, consider React Native
+    or Flutter.
+- q_en: Who should use Lovable?
+  a_en: >-
+    Non-technical founders building SaaS MVPs, product teams prototyping with real data, and anyone who needs a full-stack
+    app with a database without writing backend code.
+scoreBreakdown:
+  user: 8.3
+  capability: 7
+  price: 10
+  growth: 5
+  trust: 8

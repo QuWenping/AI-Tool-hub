@@ -1,0 +1,24 @@
+name:
+  en: Windsurf Editor
+  zh: Windsurf Editor
+short_desc:
+  en: AI-first code editor
+  zh: AI 优先代码编辑器
+long_desc:
+  en: Codeium AI-first IDE with integrated AI assistant
+cat: code
+url: https://codeium.com/windsurf
+icon: fa-wind
+scenes:
+  en:
+  - ide
+  - ai-coding
+  - editor
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

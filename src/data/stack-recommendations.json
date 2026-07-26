@@ -17,7 +17,8 @@
       "monthlyCost": 20,
       "freeTier": true,
       "stackRole": {
-        "en": "General Intelligence"
+        "en": "General Intelligence",
+        "zh": "通用智能助手"
       },
       "hoursSaved": 8
     },
@@ -37,7 +38,8 @@
       "monthlyCost": 20,
       "freeTier": true,
       "stackRole": {
-        "en": "Writing & Research"
+        "en": "Writing & Research",
+        "zh": "写作与研究"
       },
       "hoursSaved": 7,
       "priority": 1
@@ -58,7 +60,8 @@
       "monthlyCost": 20,
       "freeTier": true,
       "stackRole": {
-        "en": "Multimodal Assistant"
+        "en": "Multimodal Assistant",
+        "zh": "多模态助手"
       },
       "hoursSaved": 6
     },
@@ -75,7 +78,8 @@
       "monthlyCost": 20,
       "freeTier": true,
       "stackRole": {
-        "en": "AI-Native Coding"
+        "en": "AI-Native Coding",
+        "zh": "AI 原生编程"
       },
       "hoursSaved": 10
     },
@@ -90,7 +94,8 @@
       "monthlyCost": 10,
       "freeTier": true,
       "stackRole": {
-        "en": "IDE Autocomplete"
+        "en": "IDE Autocomplete",
+        "zh": "IDE 自动补全"
       },
       "hoursSaved": 8
     },
@@ -107,7 +112,8 @@
       "monthlyCost": 15,
       "freeTier": true,
       "stackRole": {
-        "en": "Agentic Coding"
+        "en": "Agentic Coding",
+        "zh": "智能体编程"
       },
       "hoursSaved": 9
     },
@@ -124,7 +130,8 @@
       "monthlyCost": 30,
       "freeTier": false,
       "stackRole": {
-        "en": "Image Generation"
+        "en": "Image Generation",
+        "zh": "图像生成"
       },
       "hoursSaved": 6
     },
@@ -142,7 +149,8 @@
       "monthlyCost": 13,
       "freeTier": true,
       "stackRole": {
-        "en": "Design Platform"
+        "en": "Design Platform",
+        "zh": "设计平台"
       },
       "hoursSaved": 5
     },
@@ -158,7 +166,8 @@
       "monthlyCost": 0,
       "freeTier": true,
       "stackRole": {
-        "en": "Open-Source Image Gen"
+        "en": "Open-Source Image Gen",
+        "zh": "开源图像生成"
       },
       "hoursSaved": 4
     },
@@ -176,7 +185,8 @@
       "monthlyCost": 5,
       "freeTier": true,
       "stackRole": {
-        "en": "AI Voice Synthesis"
+        "en": "AI Voice Synthesis",
+        "zh": "AI 语音合成"
       },
       "hoursSaved": 4
     },
@@ -195,7 +205,8 @@
       "monthlyCost": 20,
       "freeTier": true,
       "stackRole": {
-        "en": "AI Research Engine"
+        "en": "AI Research Engine",
+        "zh": "AI 研究引擎"
       },
       "hoursSaved": 5,
       "priority": 1
@@ -215,7 +226,8 @@
       "monthlyCost": 10,
       "freeTier": false,
       "stackRole": {
-        "en": "AI Workspace"
+        "en": "AI Workspace",
+        "zh": "AI 工作空间"
       },
       "hoursSaved": 6
     },
@@ -232,7 +244,8 @@
       "monthlyCost": 9,
       "freeTier": true,
       "stackRole": {
-        "en": "Workflow Automation"
+        "en": "Workflow Automation",
+        "zh": "工作流自动化"
       },
       "hoursSaved": 8
     },
@@ -248,7 +261,8 @@
       "monthlyCost": 0,
       "freeTier": true,
       "stackRole": {
-        "en": "Open-Source Automation"
+        "en": "Open-Source Automation",
+        "zh": "开源自动化"
       },
       "hoursSaved": 7
     },
@@ -265,7 +279,8 @@
       "monthlyCost": 10,
       "freeTier": true,
       "stackRole": {
-        "en": "Meeting Intelligence"
+        "en": "Meeting Intelligence",
+        "zh": "会议智能分析"
       },
       "hoursSaved": 4
     },
@@ -282,7 +297,8 @@
       "monthlyCost": 49,
       "freeTier": false,
       "stackRole": {
-        "en": "Marketing Copy"
+        "en": "Marketing Copy",
+        "zh": "营销文案"
       },
       "hoursSaved": 6
     },
@@ -299,7 +315,8 @@
       "monthlyCost": 10,
       "freeTier": true,
       "stackRole": {
-        "en": "AI Music Generation"
+        "en": "AI Music Generation",
+        "zh": "AI 音乐生成"
       },
       "hoursSaved": 3
     },
@@ -317,7 +334,8 @@
       "monthlyCost": 24,
       "freeTier": true,
       "stackRole": {
-        "en": "Audio/Video Editor"
+        "en": "Audio/Video Editor",
+        "zh": "音视频编辑器"
       },
       "hoursSaved": 5
     },
@@ -334,7 +352,8 @@
       "monthlyCost": 35,
       "freeTier": true,
       "stackRole": {
-        "en": "AI Video Production"
+        "en": "AI Video Production",
+        "zh": "AI 视频制作"
       },
       "hoursSaved": 5
     },
@@ -353,7 +372,8 @@
       "monthlyCost": 20,
       "freeTier": true,
       "stackRole": {
-        "en": "AI UI Generator"
+        "en": "AI UI Generator",
+        "zh": "AI UI 生成器"
       },
       "hoursSaved": 7
     },
@@ -372,7 +392,8 @@
       "monthlyCost": 20,
       "freeTier": true,
       "stackRole": {
-        "en": "No-Code App Builder"
+        "en": "No-Code App Builder",
+        "zh": "无代码应用构建器"
       },
       "hoursSaved": 7
     },
@@ -390,7 +411,8 @@
       "monthlyCost": 20,
       "freeTier": true,
       "stackRole": {
-        "en": "Full-Stack AI Coding"
+        "en": "Full-Stack AI Coding",
+        "zh": "全栈 AI 编程"
       },
       "hoursSaved": 9
     },
@@ -407,7 +429,8 @@
       "monthlyCost": 36,
       "freeTier": true,
       "stackRole": {
-        "en": "AI Copywriting"
+        "en": "AI Copywriting",
+        "zh": "AI 文案撰写"
       },
       "hoursSaved": 5
     },
@@ -425,7 +448,8 @@
       "monthlyCost": 10,
       "freeTier": true,
       "stackRole": {
-        "en": "Paraphrasing & Polish"
+        "en": "Paraphrasing & Polish",
+        "zh": "改写与润色"
       },
       "hoursSaved": 3
     },
@@ -442,7 +466,8 @@
       "monthlyCost": 0,
       "freeTier": true,
       "stackRole": {
-        "en": "AI App Builder"
+        "en": "AI App Builder",
+        "zh": "AI 应用构建器"
       },
       "hoursSaved": 6
     },
@@ -461,7 +486,8 @@
       "monthlyCost": 12,
       "freeTier": true,
       "stackRole": {
-        "en": "AI Writing Assistant"
+        "en": "AI Writing Assistant",
+        "zh": "AI 写作助手"
       },
       "hoursSaved": 4
     },
@@ -479,7 +505,8 @@
       "monthlyCost": 9,
       "freeTier": true,
       "stackRole": {
-        "en": "AI Photo Editor"
+        "en": "AI Photo Editor",
+        "zh": "AI 照片编辑器"
       },
       "hoursSaved": 3
     },
@@ -496,7 +523,8 @@
       "monthlyCost": 0,
       "freeTier": true,
       "stackRole": {
-        "en": "Reasoning & Coding"
+        "en": "Reasoning & Coding",
+        "zh": "推理与编程"
       },
       "hoursSaved": 5
     },
@@ -513,7 +541,8 @@
       "monthlyCost": 25,
       "freeTier": true,
       "stackRole": {
-        "en": "Browser IDE + AI"
+        "en": "Browser IDE + AI",
+        "zh": "浏览器 IDE + AI"
       },
       "hoursSaved": 6
     },
@@ -530,7 +559,8 @@
       "monthlyCost": 30,
       "freeTier": true,
       "stackRole": {
-        "en": "No-Code Automation"
+        "en": "No-Code Automation",
+        "zh": "无代码自动化"
       },
       "hoursSaved": 7
     }

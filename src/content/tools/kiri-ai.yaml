@@ -1,0 +1,24 @@
+name:
+  en: Kiri AI
+  zh: Kiri AI
+short_desc:
+  en: AI image generation platform
+  zh: AI 图像生成平台
+long_desc:
+  en: AI image generation with fast inference and style control
+cat: image
+url: https://kiri.ai
+icon: fa-image
+scenes:
+  en:
+  - image
+  - generation
+  - style
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

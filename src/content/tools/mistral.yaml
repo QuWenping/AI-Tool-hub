@@ -1,0 +1,47 @@
+name:
+  en: Mistral
+  zh: Mistral
+short_desc:
+  en: Leading European open-source AI model company
+  zh: 领先的欧洲开源 AI 模型公司
+long_desc:
+  en: >-
+    Mistral AI is a leading European AI company offering high-performance open models (Mistral/Large) and the Le Chat interface.
+cat: text
+url: https://chat.mistral.ai
+icon: fa-wind
+scenes:
+  en:
+  - AI chat
+  - Open models
+  - API
+  - EU compliance
+pros:
+  en:
+  - Open models
+  - Fast
+  - EU compliant
+  - Cheap API
+cons:
+  en:
+  - Less known than GPT/Claude
+  - Weak multimodal
+target_audience:
+  en:
+  - European users
+  - Devs
+  - OSS fans
+use_cases:
+  en:
+  - Chat
+  - API
+  - EU compliance
+  - Open source
+features:
+  en:
+  - Open models
+  - Le Chat
+  - API
+  - Fast
+example:
+  en: 'Example: Generate a French email quickly with Le Chat.'

@@ -1,0 +1,24 @@
+name:
+  en: Fathom
+  zh: Fathom
+short_desc:
+  en: AI meeting assistant
+  zh: AI 会议助手
+long_desc:
+  en: Auto record, transcribe and extract action items
+cat: productivity
+url: https://fathom.video
+icon: fa-video
+scenes:
+  en:
+  - meeting
+  - transcription
+  - actions
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

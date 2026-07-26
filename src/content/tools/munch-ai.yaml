@@ -1,0 +1,24 @@
+name:
+  en: Munch
+  zh: Munch
+short_desc:
+  en: AI long to short video
+  zh: AI 长视频转短视频
+long_desc:
+  en: AI clips most shareable segments from long videos
+cat: video
+url: https://getmunch.com
+icon: fa-scissors
+scenes:
+  en:
+  - short-video
+  - social
+  - repurposing
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

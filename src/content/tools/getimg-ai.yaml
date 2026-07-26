@@ -1,0 +1,24 @@
+name:
+  en: GetImg AI
+  zh: GetImg AI
+short_desc:
+  en: AI image generation toolkit
+  zh: AI 图像生成工具集
+long_desc:
+  en: AI image generation and editing toolkit with inpainting
+cat: image
+url: https://getimg.ai
+icon: fa-image
+scenes:
+  en:
+  - image
+  - editing
+  - inpainting
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

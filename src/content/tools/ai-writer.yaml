@@ -1,0 +1,24 @@
+name:
+  en: AI-Writer
+  zh: AI-Writer
+short_desc:
+  en: AI article generator
+  zh: AI 文章生成器
+long_desc:
+  en: Generate cited academic and informational articles
+cat: text
+url: https://ai-writer.com
+icon: fa-file-text
+scenes:
+  en:
+  - article
+  - academic
+  - generation
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

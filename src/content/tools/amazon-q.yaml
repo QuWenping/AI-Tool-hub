@@ -1,0 +1,134 @@
+name:
+  en: Amazon Q
+  zh: Amazon Q
+short_desc:
+  en: AWS AI coding assistant
+  zh: AWS AI 编程助手
+long_desc:
+  en: >-
+    Amazon Q is AWS's AI assistant for coding and operations in the IDE and AWS console.
+cat: code
+url: https://aws.amazon.com/q
+icon: fa-aws
+scenes:
+  en:
+  - Code gen
+  - AWS ops
+  - Code review
+  - Migration
+pros:
+  en:
+  - Deep AWS integration
+  - Enterprise security
+  - Free tier
+  zh:
+  - 深度 AWS 集成
+  - 企业级安全
+  - 免费层级
+cons:
+  en:
+  - AWS ecosystem lock-in
+  - Weak for non-AWS
+  zh:
+  - AWS 生态绑定
+  - 非 AWS 场景较弱
+target_audience:
+  en:
+  - AWS devs
+  - Enterprise
+  - DevOps
+  zh:
+  - AWS 开发者
+  - 企业用户
+  - DevOps
+use_cases:
+  en:
+  - Coding
+  - AWS ops
+  - Migration
+  - Review
+  zh:
+  - 编程
+  - AWS 运维
+  - 迁移
+  - 代码审查
+features:
+  en:
+  - Code gen
+  - AWS integration
+  - Security
+  - Free tier
+  zh:
+  - 代码生成
+  - AWS 集成
+  - 安全
+  - 免费层级
+example:
+  en: 'Example: Generate an AWS Lambda function with Amazon Q in the IDE.'
+  zh: 示例：在 IDE 中使用 Amazon Q 生成 AWS Lambda 函数。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Amazon Q Developer (2026-07)
+score: 7.9
+overall_score: 7.9
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+  - Desktop
+  - API
+pricingSummary:
+  en: >-
+    Free tier for individual developers with unlimited code suggestions. Pro tier at $19/user/month adds advanced security
+    scanning and custom policy enforcement.
+faq:
+- q_en: What is the difference between Amazon Q and GitHub Copilot?
+  a_en: >-
+    Amazon Q is optimized for the AWS ecosystem with deep knowledge of AWS services, infrastructure-as-code generation, and
+    built-in security vulnerability scanning. GitHub Copilot offers broader general-purpose coding support with faster suggestion
+    speeds and a larger developer community.
+- q_en: Is Amazon Q Developer really free?
+  a_en: >-
+    Yes, the Individual Tier of Amazon Q Developer is completely free with no time limits, providing unlimited code suggestions,
+    reference tracking, and up to 50 security scans per month. No credit card is required for registration.
+- q_en: What IDEs does Amazon Q support?
+  a_en: >-
+    Amazon Q supports Visual Studio Code, all JetBrains IDEs including IntelliJ IDEA, PyCharm, WebStorm, and GoLand, AWS Cloud9,
+    JupyterLab notebooks, and the command line through AWS CLI integration. It also works directly in the AWS Management Console
+    for infrastructure-related queries.
+- q_en: Can Amazon Q write infrastructure-as-code?
+  a_en: >-
+    Yes, Amazon Q excels at generating infrastructure-as-code for AWS CDK, CloudFormation, and Terraform. You can describe
+    your desired cloud architecture in plain English and Q generates properly configured templates with best-practice security
+    settings, IAM roles with least-privilege permissions, VPC networking configurations, and auto-scaling policies.
+- q_en: Does Amazon Q do security scanning?
+  a_en: >-
+    Yes, security scanning is one of Amazon Q's strongest differentiating features. It scans your code in real-time for OWASP
+    Top 10 vulnerabilities, AWS security best practice violations, cryptographic library weaknesses, hardcoded credentials,
+    and sensitive data exposure.
+- q_en: What is Amazon Q code transformation?
+  a_en: >-
+    Code Transformation is a unique Amazon Q feature that automates major codebase upgrade projects. It handles Java version
+    upgrades including Java 8 to 17 and Java 11 to 21, .NET Framework to cross-platform .NET migrations, and legacy language
+    modernization.
+- q_en: How does Amazon Q handle code privacy?
+  a_en: >-
+    Amazon Q operates with a strong privacy model by design. By default, your code snippets and context are not stored or
+    used for model training purposes. The Professional Tier allows organizations to optionally opt into code sharing for service
+    improvement.
+- q_en: Can I use Amazon Q without AWS?
+  a_en: >-
+    Yes, you can use Amazon Q Developer's basic code suggestion and chat features without deploying any resources to AWS.
+    The IDE plugin works independently for general-purpose coding across Python, JavaScript, TypeScript, Java, C#, and other
+    popular languages.
+- q_en: Does Amazon Q generate unit tests?
+  a_en: >-
+    Amazon Q can generate unit tests through both its chat interface and inline code suggestions. Test quality is solid for
+    straightforward functions, service methods, and API endpoints. For complex business logic with multiple edge cases, generated
+    tests typically need manual refinement to achieve adequate coverage.
+- q_en: Is Amazon Q suitable for enterprise teams?
+  a_en: >-
+    Yes, Amazon Q Developer is purpose-built for enterprise adoption with SSO and SAML integration, organization-wide policy
+    management through a central admin console, usage analytics dashboards for tracking developer productivity metrics, and
+    full AWS CloudTrail audit logging for compliance requirements.

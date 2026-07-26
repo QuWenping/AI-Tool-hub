@@ -1,0 +1,117 @@
+name:
+  en: Gemini
+  zh: Gemini
+short_desc:
+  en: Google multimodal AI assistant
+  zh: Google 多模态 AI 助手
+long_desc:
+  en: Gemini by Google DeepMind natively supports text, images, video, and audio.
+  zh: >-
+    Google 的多模态 AI 助手，深度集成 Google 生态（Gmail、Drive、YouTube），原生支持图像、视频和音频理解。对于已经使用 Google Workspace 的用户来说，它是自然的第一选择。
+cat: text
+url: https://gemini.google.com
+icon: fa-brain
+scenes:
+  en:
+  - Video analysis
+  - Codebase understanding
+  - Real-time research
+  - Multilingual
+  zh:
+  - Google 生态集成
+  - 多模态分析
+  - 长文档处理
+  - 网页搜索
+pros:
+  en:
+  - Native multimodal
+  - Google Search
+  - Massive context
+  - Gemini Live
+  zh:
+  - Google 生态深度集成
+  - 原生多模态能力
+  - 免费版性能出色
+  - 超长上下文窗口
+cons:
+  en:
+  - Region limits
+  - Mechanical style
+  - Weak image gen
+  zh:
+  - 中文创意写作能力一般
+  - 部分功能仅限特定地区
+  - 图像生成能力较弱
+target_audience:
+  en:
+  - Researchers
+  - Analysts
+  - Students
+  - PMs
+  zh:
+  - 研究人员
+  - 分析师
+  - 学生
+  - 产品经理
+use_cases:
+  en:
+  - Video Q&A
+  - Meeting analysis
+  - Cross-doc research
+  - Voice brainstorm
+  zh:
+  - 视频问答
+  - 会议分析
+  - 跨文档研究
+  - 语音头脑风暴
+features:
+  en:
+  - 2M context
+  - Native video
+  - Google Search
+  - Gemini Live
+  zh:
+  - 200 万上下文
+  - 原生视频理解
+  - Google 搜索集成
+  - Gemini Live
+example:
+  en: 'Example: Upload a 1-hour meeting and ask for a summary.'
+  zh: 示例：上传 1 小时会议录音并请求摘要。
+reviewed: true
+updatedAt: '2026-07-19'
+testedVersion: Gemini (latest generation) Pro
+score: 8.6
+overall_score: 8.6
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+  - iOS
+  - Android
+pricingSummary:
+  en: Generous free tier · Gemini Advanced $20/mo unlocks 2M context and Gemini Live.
+faq:
+- q_en: What can Gemini do that ChatGPT cannot?
+  a_en: >-
+    Native video understanding, a 2-million-token context window, and deep Google Search integration.
+- q_en: Does Gemini support voice?
+  a_en: Yes. Gemini Live offers real-time voice conversations with natural intonation.
+- q_en: Is Gemini free?
+  a_en: >-
+    Base Gemini is free. Gemini Advanced costs $20/month for higher limits and features.
+scoreBreakdown:
+  user: 8.6
+  capability: 7
+  price: 10
+  growth: 7
+  trust: 8
+editorialIntro: >-
+  Gemini 2.5 Pro is Google's flagship multimodal assistant. The 2M-token context window is the largest in the industry, the
+  Google Search integration is the deepest, and Gemini Live delivers the most natural-sounding voice mode.
+editorialVerdict:
+  best: >-
+    You work with multimodal content (video, audio, images) or live research; Google Search integration is deepest and Gemini
+    Live is the best voice mode.
+  avoid: Your main workload is long-form English writing — Claude reads more naturally.

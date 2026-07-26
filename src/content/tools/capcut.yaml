@@ -1,0 +1,137 @@
+name:
+  en: CapCut
+  zh: CapCut
+short_desc:
+  en: AI-powered video editor for social media creation
+  zh: AI 驱动的视频编辑器，适合社交媒体创作
+long_desc:
+  en: >-
+    CapCut is an AI-powered photo and video editor with built-in AI tools, designed for YouTube, Instagram, and TikTok content
+    creation.
+cat: video
+url: https://www.capcut.com
+icon: fa-scissors
+scenes:
+  en:
+  - Social video
+  - YouTube
+  - TikTok
+  - Editing
+pros:
+  en:
+  - Usable free
+  - Many AI tools
+  - Mobile app
+  zh:
+  - 免费版实用
+  - AI 工具丰富
+  - 移动端支持
+cons:
+  en:
+  - Advanced paid
+  - Export watermark (free)
+  zh:
+  - 高级功能付费
+  - 免费版有水印
+target_audience:
+  en:
+  - Creators
+  - TikTokers
+  - Marketing
+  zh:
+  - 创作者
+  - 抖音创作者
+  - 营销
+use_cases:
+  en:
+  - Social video
+  - Editing
+  - Subtitles
+  - TikTok
+  zh:
+  - 社交视频
+  - 剪辑
+  - 字幕
+  - 抖音
+features:
+  en:
+  - AI editing
+  - Auto subtitles
+  - Templates
+  - Mobile
+  zh:
+  - AI 编辑
+  - 自动字幕
+  - 模板
+  - 移动端
+example:
+  en: 'Example: Auto-generate subtitles and edit short video with CapCut AI.'
+  zh: 示例：使用剪映 AI 自动生成字幕并编辑短视频。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: CapCut Desktop 5.8 (2026-07)
+score: 8.4
+overall_score: 8.4
+quickFacts:
+  freeTier: true
+  hasApi: false
+  platforms:
+  - Web
+  - iOS
+  - Android
+  - Desktop
+pricingSummary:
+  en: >-
+    Free tier with core editing and basic AI features. Pro at $7.99/mo unlocks all AI effects, premium assets, cloud storage,
+    and no watermark.
+faq:
+- q_en: Is CapCut completely free?
+  a_en: >-
+    CapCut offers a generous free tier including basic editing, auto-captions, standard effects, and 1080p export. The Pro
+    subscription at $7.99 per month unlocks all AI features, premium templates, stock assets, 4K export resolution, cloud
+    storage, and removes the CapCut watermark from exports that use Pro assets. Most casual creators find the free tier sufficient
+    for their regular content needs.
+- q_en: How does CapCut AI video generator work?
+  a_en: >-
+    CapCut's AI Video Generator accepts text prompts and produces short video clips typically 5 to 15 seconds long with AI-generated
+    visuals. You describe a scene in natural language, and the system generates matching footage.
+- q_en: Can CapCut remove background without green screen?
+  a_en: >-
+    Yes, CapCut's AI background removal feature can separate subjects from backgrounds without requiring a green screen setup.
+    It performs best on people and clear foreground objects with distinct edges. The Pro version includes an advanced cutout
+    feature for custom object selection.
+- q_en: Does CapCut have desktop apps?
+  a_en: >-
+    Yes, CapCut offers native desktop applications for both Windows and macOS, downloadable from the official capcut.com website.
+    The desktop version supports multi-track timeline editing, keyframe animation, LUT-based color grading, and delivers significantly
+    better performance for 4K video editing compared to the mobile or web versions.
+- q_en: Is CapCut safe to use for business?
+  a_en: >-
+    CapCut's terms of service allow commercial use of content you create with the application. However, as a ByteDance product
+    with server infrastructure potentially located in China, some organizations especially those in government, defense, finance,
+    and other regulated industries explicitly prohibit CapCut on work devices due to data privacy and compliance policies.
+- q_en: How accurate are CapCut's auto-captions?
+  a_en: >-
+    CapCut's auto-caption accuracy exceeds 95 percent for clear English speech recorded in quiet environments, placing it
+    among the best in consumer video editors. It supports over 20 languages including Chinese, Spanish, Japanese, Korean,
+    and Arabic.
+- q_en: What is CapCut's template ecosystem?
+  a_en: >-
+    CapCut hosts thousands of user-created and official templates that provide pre-built video structures including motion
+    graphics, transitions, beat-synchronized music, and text animations. You simply drop your own clips into template placeholders
+    and export.
+- q_en: Can CapCut export without watermark?
+  a_en: >-
+    Free tier exports appear without watermark when your project uses only free assets and effects. The CapCut watermark appears
+    specifically when you incorporate Pro-exclusive templates, effects, or stock media. Pro subscribers at $7.99 per month
+    can export completely watermark-free regardless of which assets were used.
+- q_en: Does CapCut support multi-track editing?
+  a_en: >-
+    Yes, CapCut's desktop and mobile applications both support multiple video and audio tracks with a traditional timeline
+    interface. You can layer video clips for picture-in-picture effects, add overlay text and stickers, stack audio tracks
+    including voiceover narration, background music, and sound effects, and adjust each track independently with precise timing.
+- q_en: How does CapCut compare to Premiere Pro?
+  a_en: >-
+    CapCut prioritizes speed and accessibility with AI-powered one-click effects, auto-captions, and templates, making it
+    ideal for social media creators who need quick turnaround. Adobe Premiere Pro offers vastly deeper professional tools
+    for color grading, audio mixing, multi-camera editing, and collaborative team workflows.

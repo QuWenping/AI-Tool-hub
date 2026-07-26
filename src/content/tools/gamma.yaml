@@ -1,0 +1,130 @@
+name:
+  en: Gamma
+  zh: Gamma
+short_desc:
+  en: AI one-click presentations and pages
+  zh: AI 一键生成演示文稿和页面
+long_desc:
+  en: >-
+    Gamma turns outlines or text into polished decks/pages/docs - fast for proposals and pitches.
+cat: productivity
+url: https://gamma.app
+icon: fa-display
+scenes:
+  en:
+  - Decks
+  - Proposal pages
+  - Pitches
+  - Docs
+  zh:
+  - 演示文稿生成
+  - 快速提案
+  - 网页式文档
+  - 会议材料
+pros:
+  en:
+  - One-click
+  - Nice templates
+  - Export PPT/web
+  zh:
+  - 生成速度快几秒出稿
+  - 设计品味好
+  - 支持多种导出格式
+cons:
+  en:
+  - Limited fine control
+  - Free watermark
+  - Occasional layout
+  zh:
+  - 高度定制能力有限
+  - 复杂图表不如手动制作
+  - 免费版有水印
+target_audience:
+  en:
+  - PMs
+  - Marketing
+  - Sales
+  - Consultants
+  zh:
+  - 产品经理
+  - 营销
+  - 销售
+  - 咨询顾问
+use_cases:
+  en:
+  - Pitches
+  - Decks
+  - Proposals
+  - Docs
+  zh:
+  - 演示提案
+  - 幻灯片
+  - 方案书
+  - 文档
+features:
+  en:
+  - AI gen
+  - Templates
+  - Web/PPT export
+  - Collab
+  zh:
+  - AI 生成
+  - 模板
+  - Web/PPT 导出
+  - 协作
+example:
+  en: 'Example: Turn an outline into a 10-page proposal.'
+  zh: 示例：将大纲转为 10 页提案。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Latest stable (2026)
+score: 8.6
+overall_score: 8.6
+quickFacts:
+  freeTier: true
+  hasApi: false
+  platforms:
+  - Web
+pricingSummary:
+  en: >-
+    Free tier with 400 AI credits · Plus $8/seat/mo, Pro $16/seat/mo unlock more AI credits, custom branding, analytics, and
+    priority queue.
+faq:
+- q_en: What is Gamma?
+  a_en: >-
+    Gamma is an AI presentation tool that generates full slide decks from a text prompt, then lets you edit them in a Notion-like
+    interface.
+- q_en: Is Gamma free?
+  a_en: Yes. Free users get 400 AI credits to start; paid plans start at $8/seat/month.
+- q_en: How does Gamma compare to PowerPoint?
+  a_en: >-
+    Gamma is faster for first drafts from a prompt; PowerPoint still wins on pixel-perfect control and complex animations
+    for enterprise decks.
+- q_en: Can I export Gamma decks to PowerPoint?
+  a_en: >-
+    Yes. Gamma exports to PPTX and PDF; web links can also be shared as interactive presentations.
+- q_en: Does Gamma support custom branding?
+  a_en: >-
+    Yes. Pro and above let you upload logos, brand colors, and fonts that apply across all generated decks.
+- q_en: Can Gamma generate from a document?
+  a_en: >-
+    Yes. Paste a document or import a URL and Gamma will summarise it into a structured deck.
+- q_en: Does Gamma have an API?
+  a_en: >-
+    An API is available for paid accounts, useful for embedding Gamma generation inside SaaS workflows.
+- q_en: Is Gamma good for internal updates?
+  a_en: >-
+    Yes. Many teams use Gamma to turn weekly notes or dashboards into fast status decks; engagement analytics on Pro help
+    track reads.
+- q_en: Does Gamma support collaboration?
+  a_en: Yes. Real-time co-editing and comments work like in Notion or Google Docs.
+- q_en: Who should use Gamma?
+  a_en: >-
+    Anyone who needs to turn ideas into a polished deck in minutes, not hours — and is willing to trade pixel-perfect control
+    for speed.
+scoreBreakdown:
+  user: 8.6
+  capability: 7.6
+  price: 9
+  growth: 8
+  trust: 8

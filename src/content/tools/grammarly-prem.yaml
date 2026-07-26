@@ -1,0 +1,24 @@
+name:
+  en: Grammarly Premium
+  zh: Grammarly Premium
+short_desc:
+  en: AI grammar and style
+  zh: AI 语法和风格优化
+long_desc:
+  en: Advanced grammar checking, style suggestions and AI rewriting
+cat: text
+url: https://grammarly.com
+icon: fa-check
+scenes:
+  en:
+  - grammar
+  - style
+  - proofread
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

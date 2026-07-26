@@ -1,0 +1,134 @@
+name:
+  en: Flux
+  zh: Flux
+short_desc:
+  en: Photorealistic image model by Black Forest Labs
+  zh: Black Forest Labs 推出的照片级写实图像模型
+long_desc:
+  en: >-
+    Flux by Black Forest Labs is known for photorealism and prompt adherence; pay per image, no subscription.
+cat: image
+url: https://blackforestlabs.ai
+icon: fa-mountain
+scenes:
+  en:
+  - Realistic portraits
+  - Product shots
+  - Commercial photo
+  - Concept
+  zh:
+  - 产品摄影
+  - 电商展示
+  - 照片写实
+  - 建筑渲染
+pros:
+  en:
+  - Photorealistic
+  - Pay per image
+  - Strong prompt adherence
+  zh:
+  - 照片写实效果最佳
+  - 细节和纹理渲染出色
+  - 架构和室内设计表现出色
+cons:
+  en:
+  - Weaker stylized
+  - Via third-party APIs
+  - No built-in editor
+  zh:
+  - 艺术创意性不如 Midjourney
+  - 使用成本较高
+  - 需通过第三方 API 使用
+target_audience:
+  en:
+  - Photographers
+  - E-com
+  - Designers
+  - Marketers
+  zh:
+  - 摄影师
+  - 电商从业者
+  - 设计师
+  - 营销人员
+use_cases:
+  en:
+  - Product
+  - Portraits
+  - Commercial
+  - Concept
+  zh:
+  - 产品图
+  - 人像
+  - 商业用途
+  - 概念设计
+features:
+  en:
+  - Realism
+  - High-res
+  - Pay per image
+  - Variants
+  zh:
+  - 照片写实
+  - 高分辨率
+  - 按图付费
+  - 变体生成
+example:
+  en: 'Example: Generate a photorealistic coffee cup product shot.'
+  zh: 示例：生成一张照片级真实的咖啡杯产品图。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Latest stable (2026)
+score: 8.7
+overall_score: 8.7
+quickFacts:
+  freeTier: false
+  hasApi: true
+  platforms:
+  - Web
+  - API
+pricingSummary:
+  en: >-
+    Black Forest Labs API: Pro ~$0.05 per image at 1MP. Free credits on signup; otherwise usage-based.
+faq:
+- q_en: What is Flux?
+  a_en: >-
+    Flux is a family of image generation models from Black Forest Labs, the team behind Stable Diffusion. Flux.1 ships in
+    Pro, Dev, and Schnell variants.
+- q_en: Is Flux better than Midjourney?
+  a_en: >-
+    Flux.1 Pro produces competitive photorealism and excellent prompt adherence; Midjourney still leads in painterly aesthetics.
+    Choose by use case.
+- q_en: How much does Flux cost?
+  a_en: >-
+    Flux is usage-based via the Black Forest Labs API. Flux.1 Pro is roughly $0.05 per 1MP image; Schnell (faster) is cheaper.
+- q_en: Does Flux have a free tier?
+  a_en: >-
+    Sign-up credits are available, after which it is paid. The open-weight Schnell and Dev variants can be self-hosted for
+    free on your own GPUs.
+- q_en: Can I self-host Flux?
+  a_en: >-
+    Yes. The non-commercial FLUX.1 [schnell] and FLUX.1 [dev] weights are released under Apache 2.0 / FLUX.1-dev Non-Commercial
+    License respectively.
+- q_en: What integrations support Flux?
+  a_en: >-
+    Flux is available on Replicate, fal.ai, Together AI, and through ComfyUI, with new integrations shipping monthly.
+- q_en: Is Flux good for typography in images?
+  a_en: >-
+    Flux.1 is markedly better at rendering legible text in images than earlier open models, but Ideogram still leads at very
+    long or multilingual strings.
+- q_en: How big is Flux's model?
+  a_en: >-
+    FLUX.1 [pro] is a 12B parameter rectified flow transformer. Dev and Schnell are similar scale with different training
+    recipes.
+- q_en: Does Flux support LoRA and ControlNet?
+  a_en: >-
+    The open-weight Dev variant supports LoRA training and ControlNet-style conditioning through ComfyUI and diffusers.
+- q_en: Who should use Flux?
+  a_en: >-
+    Teams that need a flexible image model with both an API and self-hosting path, especially if text-in-image accuracy matters.
+scoreBreakdown:
+  user: 8.7
+  capability: 7.699999999999999
+  price: 7
+  growth: 8
+  trust: 8

@@ -1,9 +1,10 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ZhNotice from "../../components/ZhNotice.astro";
 import tools from "../../data/tools.json";
+import { getTranslations } from "../../utils/i18n";
 
 const pageLang = Astro.currentLocale || "en";
+const t = getTranslations("prompts", pageLang);
 
 const prompts = [
   {
@@ -37,12 +38,8 @@ const prompts = [
     tags: ["Career", "ChatGPT"]
   }
 ];
-const seoTitle = pageLang === "zh"
-  ? "AI 提示词库 - ChatGPT、Claude 等实测提示词"
-  : "AI Prompt Library - Battle-Tested Prompts for ChatGPT, Claude & More";
-const seoDesc = pageLang === "zh"
-  ? "ChatGPT、Claude 等 LLM 的实测提示词。复制、调整，获得更好结果。"
-  : "Battle-tested prompts for ChatGPT, Claude, and other LLMs. Copy, tweak, and get better results.";
+const seoTitle = t("seoTitle");
+const seoDesc = t("seoDescEn");
 ---
 
 <BaseLayout
@@ -50,7 +47,6 @@ const seoDesc = pageLang === "zh"
   description={seoDesc}
   lang={pageLang}
 >
-  {pageLang === "zh" && <ZhNotice />}
   <div class="page-container">
     <h1 class="page-title">AI Prompt Library</h1>
     <p class="page-lede">Battle-tested prompts for ChatGPT, Claude, and other LLMs. Copy, tweak, and get better results.</p>

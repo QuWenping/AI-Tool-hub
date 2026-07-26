@@ -1,0 +1,24 @@
+name:
+  en: Baseten
+  zh: Baseten
+short_desc:
+  en: ML model deployment platform
+  zh: ML 模型部署平台
+long_desc:
+  en: Deploy and serve ML models with serverless infrastructure
+cat: image
+url: https://baseten.co
+icon: fa-server
+scenes:
+  en:
+  - ml
+  - deployment
+  - api
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

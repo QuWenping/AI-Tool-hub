@@ -1,0 +1,24 @@
+name:
+  en: TensorGen
+  zh: TensorGen
+short_desc:
+  en: AI image generator
+  zh: AI 图像生成器
+long_desc:
+  en: Fast AI image generation with multiple models
+cat: image
+url: https://tensorgen.com
+icon: fa-image
+scenes:
+  en:
+  - image
+  - generation
+  - fast
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

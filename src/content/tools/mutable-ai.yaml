@@ -1,0 +1,24 @@
+name:
+  en: Mutable AI
+  zh: Mutable AI
+short_desc:
+  en: AI codebase editing
+  zh: AI 代码库编辑
+long_desc:
+  en: AI-powered codebase modification and feature addition
+cat: code
+url: https://mutable.ai
+icon: fa-code
+scenes:
+  en:
+  - editing
+  - features
+  - automation
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

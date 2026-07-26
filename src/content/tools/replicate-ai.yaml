@@ -1,0 +1,24 @@
+name:
+  en: Replicate
+  zh: Replicate
+short_desc:
+  en: Run ML models via API
+  zh: 通过 API 运行 ML 模型
+long_desc:
+  en: Run open-source ML models via simple API calls
+cat: image
+url: https://replicate.com
+icon: fa-server
+scenes:
+  en:
+  - ml
+  - api
+  - models
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Pay per use

@@ -1,0 +1,45 @@
+name:
+  en: Lindy
+  zh: Lindy
+short_desc:
+  en: AI personal assistant agent
+  zh: AI 个人助理智能体
+long_desc:
+  en: >-
+    Lindy is an AI personal assistant that auto-handles email, calendar, meetings, and daily tasks.
+cat: productivity
+url: https://www.lindy.ai
+icon: fa-robot
+scenes:
+  en:
+  - Email handling
+  - Scheduling
+  - Meetings
+  - Automation
+pros:
+  en:
+  - Automates daily
+  - Calendar+email integrated
+  - Easy setup
+cons:
+  en:
+  - Young tool
+  - Limited features
+target_audience:
+  en:
+  - Professionals
+  - Managers
+use_cases:
+  en:
+  - Email
+  - Schedule
+  - Meetings
+  - Efficiency
+features:
+  en:
+  - Email automation
+  - Calendar
+  - Meetings
+  - AI assistant
+example:
+  en: 'Example: Lindy auto-replies to email+schedules meetings+preps agendas.'

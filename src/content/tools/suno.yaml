@@ -1,0 +1,110 @@
+name:
+  en: Suno
+  zh: Suno
+short_desc:
+  en: AI music generator from text to full songs
+  zh: 文本到完整歌曲的 AI 音乐生成器
+long_desc:
+  en: Suno generates complete songs with vocals, lyrics, and arrangement.
+cat: audio
+url: https://suno.ai
+icon: fa-music
+scenes:
+  en:
+  - Video BGM
+  - Podcast intro
+  - Ad jingle
+  - Song proto
+  zh:
+  - 音乐创作
+  - 背景音乐
+  - 歌曲生成
+  - 社交媒体配乐
+pros:
+  en:
+  - Full song
+  - Chinese lyrics
+  - Generous free
+  - Fast
+  zh:
+  - 几秒钟出完整歌曲
+  - v4 音质大幅提升
+  - 上手难度几乎为零
+  - 支持中文歌词
+cons:
+  en:
+  - Limited control
+  - Commercial paid
+  - Vocal off-key
+  zh:
+  - 音乐结构比较模板化
+  - 人声中文发音不够自然
+  - 精细控制有限
+target_audience:
+  en:
+  - Creators
+  - Indie musicians
+  - Video creators
+  - Ad creatives
+  zh:
+  - 创作者
+  - 独立音乐人
+  - 视频创作者
+  - 广告创意人
+use_cases:
+  en:
+  - Short video BGM
+  - Ad jingle
+  - Blog to song
+  - Podcast intro
+  zh:
+  - 短视频 BGM
+  - 广告配乐
+  - 博客转歌曲
+  - 播客片头
+features:
+  en:
+  - Full song
+  - Custom lyrics
+  - Style tags
+  - Long form
+  zh:
+  - 完整歌曲
+  - 自定义歌词
+  - 风格标签
+  - 长格式
+example:
+  en: 'Example: Generate Chinese folk about autumn in Beijing.'
+  zh: 示例：生成一首关于北京秋天的中国风歌曲。
+reviewed: true
+updatedAt: '2026-07-19'
+testedVersion: Suno v4
+score: 8.4
+overall_score: 8.4
+quickFacts:
+  freeTier: true
+  hasApi: false
+  platforms:
+  - Web
+  - iOS
+pricingSummary:
+  en: Free daily credits · Pro $10/mo · Premier $30/mo.
+faq:
+- q_en: Can I use Suno tracks commercially?
+  a_en: Paid plans grant commercial usage rights.
+- q_en: Does Suno work in Chinese?
+  a_en: Yes. Chinese lyrics generate cleanly in Suno v4.
+scoreBreakdown:
+  user: 8.4
+  capability: 7
+  price: 10
+  growth: 5
+  trust: 8
+editorialIntro: >-
+  Suno v4 can produce a complete song — vocals, lyrics, arrangement — from a short text description, and it is the only AI
+  music tool in 2026 whose output we would publish. Chinese-language songs generate cleanly.
+editorialVerdict:
+  best: >-
+    You need custom music or jingles for videos, podcasts or personal projects. Free tier covers hobby use.
+  avoid: >-
+    You need a specific song by a specific artist — AI music tools cannot deliver that.

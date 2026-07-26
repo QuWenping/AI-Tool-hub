@@ -1,0 +1,46 @@
+name:
+  en: Voicemod
+  zh: Voicemod
+short_desc:
+  en: Real-time AI voice changer
+  zh: 实时 AI 变声器
+long_desc:
+  en: >-
+    Voicemod changes your voice in real-time; popular for gaming, streaming, and social entertainment.
+cat: audio
+url: https://www.voicemod.net
+icon: fa-microphone-lines
+scenes:
+  en:
+  - Gaming
+  - Streaming
+  - Social
+  - Entertainment
+pros:
+  en:
+  - Real-time change
+  - Many voice effects
+  - Usable free
+cons:
+  en:
+  - Entertainment only
+  - Weak Chinese
+target_audience:
+  en:
+  - Gamers
+  - Streamers
+  - Entertainment
+use_cases:
+  en:
+  - Gaming
+  - Streaming
+  - Social
+  - Fun
+features:
+  en:
+  - Real-time change
+  - Sound effects
+  - Free tier
+  - Integration
+example:
+  en: 'Example: Chat in Discord with a robot voice.'

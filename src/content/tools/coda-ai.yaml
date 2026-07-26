@@ -1,0 +1,59 @@
+name:
+  en: Coda AI
+  zh: Coda AI
+short_desc:
+  en: AI docs + database + automation platform
+  zh: AI 文档 + 数据库 + 自动化平台
+long_desc:
+  en: >-
+    Coda AI combines docs, tables, and automation; AI assistant generates content, analyzes data, and automates workflows
+    in-doc.
+cat: productivity
+url: https://coda.io
+icon: fa-table
+scenes:
+  en:
+  - Team docs
+  - Data mgmt
+  - Automation
+  - SOPs
+  zh:
+  - 结构化文档
+  - 数据驱动写作
+  - 工作流自动化
+  - 团队协作
+pros:
+  en:
+  - Docs+data unified
+  - AI automation
+  - Rich templates
+  zh:
+  - 文档 + 数据库结合强大
+  - AI 数据分析功能
+  - 自动化工作流灵活
+cons:
+  en:
+  - Learning curve
+  - Less simple than Notion
+  zh:
+  - 学习成本高于 Notion
+  - 移动端体验一般
+target_audience:
+  en:
+  - Teams
+  - Operations
+  - PMs
+use_cases:
+  en:
+  - Projects
+  - SOPs
+  - Data
+  - Automation
+features:
+  en:
+  - AI assistant
+  - Docs+tables
+  - Automation
+  - Templates
+example:
+  en: 'Example: Use AI to auto-fill a project tracking table.'

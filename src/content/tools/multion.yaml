@@ -1,0 +1,45 @@
+name:
+  en: MultiOn
+  zh: MultiOn
+short_desc:
+  en: AI browser agent, automates web tasks
+  zh: AI 浏览器智能体，自动执行网页任务
+long_desc:
+  en: >-
+    MultiOn is a browser AI agent that auto-clicks, fills forms, orders, and compares prices; replaces manual web tasks.
+cat: productivity
+url: https://www.multion.ai
+icon: fa-globe
+scenes:
+  en:
+  - Web automation
+  - Price compare
+  - Ordering
+  - Form filling
+pros:
+  en:
+  - Auto web tasks
+  - Saves time
+  - Browser extension
+cons:
+  en:
+  - Young tool
+  - Occasional wrong actions
+target_audience:
+  en:
+  - Online shoppers
+  - Efficiency seekers
+use_cases:
+  en:
+  - Shopping
+  - Compare
+  - Forms
+  - Automation
+features:
+  en:
+  - Browser agent
+  - Auto actions
+  - Extension
+  - AI
+example:
+  en: 'Example: ''Buy cheapest USB-C cable on Amazon'' → auto search+order.'

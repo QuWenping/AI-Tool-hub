@@ -1,0 +1,24 @@
+name:
+  en: BigMP4
+  zh: BigMP4
+short_desc:
+  en: AI video upscale
+  zh: AI 视频放大
+long_desc:
+  en: AI-powered video upscaling and enhancement
+cat: video
+url: https://bigmp4.com
+icon: fa-video
+scenes:
+  en:
+  - video
+  - upscale
+  - enhance
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

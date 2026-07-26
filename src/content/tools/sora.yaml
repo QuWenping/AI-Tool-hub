@@ -1,0 +1,108 @@
+name:
+  en: Sora
+  zh: Sora
+short_desc:
+  en: OpenAI text-to-video generation model
+  zh: OpenAI 文本到视频生成模型
+long_desc:
+  en: Sora by OpenAI generates up to 60 seconds of high-quality video.
+cat: video
+url: https://openai.com/sora
+icon: fa-video
+scenes:
+  en:
+  - Ad creative
+  - Storyboard
+  - Short video
+  - Product demo
+  zh:
+  - 广告创意
+  - 社交媒体内容
+  - 概念验证
+  - 影视预演
+pros:
+  en:
+  - Unprecedented length
+  - Realistic physics
+  - Cinematic
+  zh:
+  - 视频质量在同级中最高
+  - 20 秒输出时长远超竞品
+  - 前所未有的视频时长
+cons:
+  en:
+  - Not widely open
+  - Slow
+  - Complex physics glitches
+  zh:
+  - 定价较高
+  - 迭代成本累积快
+  - 长视频中仍有可见瑕疵
+target_audience:
+  en:
+  - Filmmakers
+  - Ad creatives
+  - Social media
+  - Game devs
+  zh:
+  - 电影制作人
+  - 广告创意人
+  - 社交媒体运营
+  - 游戏开发者
+use_cases:
+  en:
+  - Trailers
+  - Social ads
+  - Scene proto
+  - Game cutscenes
+  zh:
+  - 预告片
+  - 社交广告
+  - 场景原型
+  - 游戏过场动画
+features:
+  en:
+  - 60s video
+  - Physics
+  - Camera control
+  - Character consistency
+  zh:
+  - 60 秒视频
+  - 物理模拟
+  - 摄像机控制
+  - 角色一致性
+example:
+  en: 'Example: A stylish woman walking in neon-lit Tokyo.'
+  zh: 示例：一位时尚女性在霓虹灯照亮的东京街头行走。
+reviewed: true
+updatedAt: '2026-07-19'
+testedVersion: Sora 2 (2026)
+score: 8.2
+overall_score: 8.2
+quickFacts:
+  freeTier: false
+  hasApi: false
+  platforms:
+  - Web
+pricingSummary:
+  en: ChatGPT Plus $20/mo includes limited access · Pro tiers scale to $200/mo.
+faq:
+- q_en: Is Sora available to everyone?
+  a_en: >-
+    Availability depends on region and OpenAI’s rollout; check the official announcement.
+- q_en: What clip length does Sora support?
+  a_en: Up to 20 seconds per clip with strong character/physics consistency.
+scoreBreakdown:
+  user: 8.2
+  capability: 7
+  price: 5
+  growth: 5
+  trust: 8
+editorialIntro: >-
+  Sora 2 is OpenAI's text-to-video model and the current quality leader in 2026. Physics understanding, character consistency
+  and 20-second clip length lead the category, though the price ceiling and safety filters are aggressive.
+editorialVerdict:
+  best: >-
+    Quality is the priority and the budget exists — cinematic shots, character consistency and 20s clips beat the field.
+  avoid: >-
+    You need editing tools or 5–10s social clips — Runway or Pika are faster and cheaper.

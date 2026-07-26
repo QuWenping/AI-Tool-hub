@@ -1,0 +1,45 @@
+name:
+  en: Cody
+  zh: Cody
+short_desc:
+  en: AI coding assistant by Sourcegraph
+  zh: Sourcegraph 推出的 AI 编程助手
+long_desc:
+  en: >-
+    Cody uses AI to understand your entire codebase, supporting search, completion, explanation, and refactoring.
+cat: code
+url: https://sourcegraph.com/cody
+icon: fa-code-branch
+scenes:
+  en:
+  - Code understanding
+  - Completion
+  - Search
+  - Refactor
+pros:
+  en:
+  - Full codebase context
+  - Sourcegraph integrated
+  - Multi-model
+cons:
+  en:
+  - Less intuitive than Cursor
+  - Enterprise pricey
+target_audience:
+  en:
+  - Devs
+  - Large teams
+use_cases:
+  en:
+  - Coding
+  - Understanding
+  - Search
+  - Refactor
+features:
+  en:
+  - Codebase understanding
+  - Completion
+  - Search
+  - Multi-model
+example:
+  en: 'Example: ''Where is this function called?'' → Cody searches entire codebase.'

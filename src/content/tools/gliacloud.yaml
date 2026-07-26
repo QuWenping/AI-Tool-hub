@@ -1,0 +1,24 @@
+name:
+  en: GliaCloud
+  zh: GliaCloud
+short_desc:
+  en: AI video generation
+  zh: AI 视频生成
+long_desc:
+  en: AI video generation from text and data
+cat: video
+url: https://gliacloud.com
+icon: fa-video
+scenes:
+  en:
+  - generation
+  - text-to-video
+  - data
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

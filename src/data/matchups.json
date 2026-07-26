@@ -6,7 +6,8 @@
     "tool_a": "Cursor",
     "tool_b": "Windsurf",
     "title_en": "Cursor vs Windsurf (2026): Which AI Code Editor Wins?",
-    "cluster": "code"
+    "cluster": "code",
+    "title_zh": "Cursor vs Windsurf（2026）：哪个 AI 代码编辑器更胜一筹？"
   },
   {
     "slug": "cursor-vs-claude-code",
@@ -15,7 +16,8 @@
     "tool_a": "Cursor",
     "tool_b": "Claude Code",
     "title_en": "Cursor vs Claude Code (2026): IDE Agent vs Chat Agent",
-    "cluster": "code"
+    "cluster": "code",
+    "title_zh": "Cursor vs Claude Code（2026）：IDE 智能体 vs 对话智能体"
   },
   {
     "slug": "cursor-vs-github-copilot-2026",
@@ -24,7 +26,8 @@
     "tool_a": "Cursor",
     "tool_b": "GitHub Copilot",
     "title_en": "Cursor vs GitHub Copilot (2026): The Definitive Comparison",
-    "cluster": "code"
+    "cluster": "code",
+    "title_zh": "Cursor vs GitHub Copilot（2026）：权威对比"
   },
   {
     "slug": "cursor-vs-aider",
@@ -33,7 +36,8 @@
     "tool_a": "Cursor",
     "tool_b": "Aider",
     "title_en": "Cursor vs Aider (2026): GUI Editor vs CLI Agent",
-    "cluster": "code"
+    "cluster": "code",
+    "title_zh": "Cursor vs Aider（2026）：GUI 编辑器 vs CLI 智能体"
   },
   {
     "slug": "windsurf-vs-cline",
@@ -42,7 +46,8 @@
     "tool_a": "Windsurf",
     "tool_b": "Cline",
     "title_en": "Windsurf vs Cline (2026): Which AI Coding Agent Is Right for You?",
-    "cluster": "code"
+    "cluster": "code",
+    "title_zh": "Windsurf vs Cline（2026）：哪个 AI 编程智能体适合你？"
   },
   {
     "slug": "replit-vs-bolt",
@@ -51,7 +56,8 @@
     "tool_a": "Replit",
     "tool_b": "Bolt",
     "title_en": "Replit vs Bolt (2026): Browser-Based AI Development Compared",
-    "cluster": "code"
+    "cluster": "code",
+    "title_zh": "Replit vs Bolt（2026）：浏览器端 AI 开发对比"
   },
   {
     "slug": "v0-vs-lovable",
@@ -60,7 +66,8 @@
     "tool_a": "v0",
     "tool_b": "Lovable",
     "title_en": "v0 vs Lovable (2026): AI Frontend Builders Face Off",
-    "cluster": "code"
+    "cluster": "code",
+    "title_zh": "v0 vs Lovable（2026）：AI 前端构建器对决"
   },
   {
     "slug": "midjourney-vs-dalle3",
@@ -69,7 +76,8 @@
     "tool_a": "Midjourney",
     "tool_b": "DALL-E 3",
     "title_en": "Midjourney vs DALL-E 3 (2026): Which AI Image Generator Is Better?",
-    "cluster": "image"
+    "cluster": "image",
+    "title_zh": "Midjourney vs DALL·E 3（2026）：哪个 AI 图像生成器更强？"
   },
   {
     "slug": "midjourney-vs-flux",
@@ -78,7 +86,8 @@
     "tool_a": "Midjourney",
     "tool_b": "Flux",
     "title_en": "Midjourney vs Flux (2026): Aesthetics vs Photorealism",
-    "cluster": "image"
+    "cluster": "image",
+    "title_zh": "Midjourney vs Flux（2026）：艺术美感 vs 照片写实"
   },
   {
     "slug": "ideogram-vs-midjourney",
@@ -87,7 +96,8 @@
     "tool_a": "Ideogram",
     "tool_b": "Midjourney",
     "title_en": "Ideogram vs Midjourney (2026): Text-in-Image vs Pure Art",
-    "cluster": "image"
+    "cluster": "image",
+    "title_zh": "Ideogram vs Midjourney（2026）：图中文字 vs 纯艺术"
   },
   {
     "slug": "sora-vs-runway",
@@ -96,7 +106,8 @@
     "tool_a": "Sora",
     "tool_b": "Runway",
     "title_en": "Sora vs Runway (2026): OpenAI vs the Veteran",
-    "cluster": "video"
+    "cluster": "video",
+    "title_zh": "Sora vs Runway（2026）：OpenAI 新秀 vs 老牌劲旅"
   },
   {
     "slug": "sora-vs-kling",
@@ -105,7 +116,8 @@
     "tool_a": "Sora",
     "tool_b": "Kling",
     "title_en": "Sora vs Kling (2026): Quality Leader vs Budget Champion",
-    "cluster": "video"
+    "cluster": "video",
+    "title_zh": "Sora vs Kling（2026）：质量标杆 vs 性价比之王"
   },
   {
     "slug": "runway-vs-pika",
@@ -114,6 +126,7 @@
     "tool_a": "Runway",
     "tool_b": "Pika",
     "title_en": "Runway vs Pika (2026): Production Tool vs Social Clip Machine",
-    "cluster": "video"
+    "cluster": "video",
+    "title_zh": "Runway vs Pika（2026）：专业制作 vs 社交短视频"
   }
 ]

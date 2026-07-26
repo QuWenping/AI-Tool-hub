@@ -1,61 +1,66 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { catLabel } from "../../utils/i18n";
 import categories from "../../data/categories.json";
 import toolsData from "../../data/tools.json";
+import { getTranslations } from "../../utils/i18n";
 export async function getStaticPaths() {
   return categories.map(cat => ({ params: { slug: cat.slug }, props: { cat } }));
 }
 const { cat } = Astro.props;
+const pageLang = Astro.currentLocale || "en";
+const t = getTranslations("category", pageLang);
+
 const categoryLabels = { text: "Writing", image: "Image", code: "Coding", video: "Video", audio: "Audio", productivity: "Productivity" };
 const matchedTools = cat.tools
   .map(id => ({ id, ...toolsData[id] }))
-  .filter(t => t && t.name);
+  .filter(tool => tool && tool.name);
 const total = matchedTools.length;
 const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/category/" + cat.slug + "/";
 const itemListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": cat.title_en,
-  "description": cat.desc_en,
+  "name": pageLang === "zh" ? (cat.title_zh || cat.title_en) : cat.title_en,
+  "description": pageLang === "zh" ? (cat.desc_zh || cat.desc_en) : cat.desc_en,
   "url": pageUrl,
   "numberOfItems": total,
   "itemListElement": matchedTools.map((t, i) => ({
     "@type": "ListItem", "position": i + 1,
-    "name": t.name?.en || t.id,
+    "name": pageLang === "zh" ? (t.name?.zh || t.name?.en || t.id) : (t.name?.en || t.id),
     "url": siteUrl + "/tool/" + t.id + "/"
   }))
 };
 const breadcrumb = {
   "@context": "https://schema.org", "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl + "/" },
-    { "@type": "ListItem", "position": 2, "name": "Categories", "item": siteUrl + "/category/" },
-    { "@type": "ListItem", "position": 3, "name": cat.title_en, "item": pageUrl }
+    { "@type": "ListItem", "position": 1, "name": t("home"), "item": siteUrl + "/" },
+    { "@type": "ListItem", "position": 2, "name": t("categoriesBreadcrumb"), "item": siteUrl + "/category/" },
+    { "@type": "ListItem", "position": 3, "name": pageLang === "zh" ? (cat.title_zh || cat.title_en) : cat.title_en, "item": pageUrl }
   ]
 };
 const cleanTitle = cat.title_en.replace(/^Best\s+/i, "").replace(/\s+in\s+2026$/i, "");
 ---
-<BaseLayout title={`${cleanTitle} — Complete Directory (${total} Tools)`} description={`${cat.desc_en} Browse all ${total} tools in this category.`} keywords={`${cleanTitle}, AI tools, ${cat.slug}`}>
+<BaseLayout title={pageLang === "zh" ? `${cat.title_zh ? cat.title_zh.replace(/^Best\s+/i, "").replace(/\s+in\s+2026$/i, "") : cleanTitle} — 完整目录（${total} 款工具）` : `${cleanTitle} — Complete Directory (${total} Tools)`} description={pageLang === "zh" ? `${cat.desc_zh || cat.desc_en} 浏览本分类全部 ${total} 款工具。` : `${cat.desc_en} Browse all ${total} tools in this category.`} keywords={`${cleanTitle}, AI tools, ${cat.slug}`}>
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
   </Fragment>
   <div class="page-container">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/category/">Categories</a> &rsaquo; <span>{cleanTitle}</span></nav>
-    <h1 class="page-title">{cleanTitle}</h1>
-    <p class="page-lede">{cat.desc_en} {total} tools listed below. For our ranked recommendations, see <a href={`/best/${cat.slug}/`}>Best {cleanTitle}</a>.</p>
+    <nav class="breadcrumbs"><a href="/">{t("home")}</a> &rsaquo; <a href="/category/">{t("categoriesBreadcrumb")}</a> &rsaquo; <span>{pageLang === "zh" ? (cat.title_zh ? cat.title_zh.replace(/^Best\s+/i, "").replace(/\s+in\s+2026$/i, "") : cleanTitle) : cleanTitle}</span></nav>
+    <h1 class="page-title">{pageLang === "zh" ? (cat.title_zh ? cat.title_zh.replace(/^Best\s+/i, "").replace(/\s+in\s+2026$/i, "") : cleanTitle) : cleanTitle}</h1>
+    <p class="page-lede">{pageLang === "zh" ? `${cat.desc_zh || cat.desc_en} 以下列出 ${total} 款工具。查看我们的排名推荐，详见 <a href={"/best/" + cat.slug + "/"}>最佳 ${cat.title_zh ? cat.title_zh.replace(/^Best\s+/i, "").replace(/\s+in\s+2026$/i, "") : cleanTitle}</a>` : `${cat.desc_en} ${total} tools listed below. For our ranked recommendations, see <a href={"/best/" + cat.slug + "/"}>Best ${cleanTitle}</a>`}.</p>
 
     <div class="card-grid">
       {matchedTools.map(t => (
         <a class="list-card" href={`/tool/${t.id}/`}>
           <div class="card-head">
-            <h3>{t.name?.en || t.id}</h3>
-            <span class="tag-pill">{categoryLabels[t.cat] || t.cat || "AI"}</span>
+            <h3>{pageLang === "zh" ? (t.name?.zh || t.name?.en || t.id) : (t.name?.en || t.id)}</h3>
+            <span class="tag-pill">{pageLang === "zh" ? catLabel(t.cat, "zh") : (categoryLabels[t.cat] || t.cat || "AI")}</span>
           </div>
-          <p class="card-desc">{t.short_desc?.en || ""}</p>
+          <p class="card-desc">{pageLang === "zh" ? (t.short_desc?.zh || t.short_desc?.en || "") : (t.short_desc?.en || "")}</p>
           <div class="tag-row">
-            <span class="tool-pill">{t.pricing?.en || "Various"}</span>
+            <span class="tool-pill">{pageLang === "zh" ? (t.pricing?.zh || t.pricing?.en || "多种") : (t.pricing?.en || "Various")}</span>
             {(t.scenes?.en || []).slice(0, 2).map(s => <span class="tag-chip">{s}</span>)}
           </div>
         </a>
@@ -63,7 +68,7 @@ const cleanTitle = cat.title_en.replace(/^Best\s+/i, "").replace(/\s+in\s+2026$/
     </div>
 
     <div class="list-footer">
-      <p>Looking for our top picks? <a href={`/best/${cat.slug}/`}>See our ranked Best {cleanTitle} →</a></p>
+      <p>{pageLang === "zh" ? `想看我们的首选推荐？<a href={"/best/" + cat.slug + "/"}>查看最佳 ${cat.title_zh ? cat.title_zh.replace(/^Best\s+/i, "").replace(/\s+in\s+2026$/i, "") : cleanTitle} 排名 →</a>` : `Looking for our top picks? <a href={"/best/" + cat.slug + "/"}>See our ranked Best ${cleanTitle} →</a>`}</p>
     </div>
   </div>
 </BaseLayout>

@@ -1,0 +1,24 @@
+name:
+  en: Motion AI
+  zh: Motion AI
+short_desc:
+  en: AI calendar and task manager
+  zh: AI 日历和任务管理
+long_desc:
+  en: AI-powered calendar that auto-schedules tasks
+cat: productivity
+url: https://motion.ai
+icon: fa-calendar
+scenes:
+  en:
+  - calendar
+  - scheduling
+  - tasks
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

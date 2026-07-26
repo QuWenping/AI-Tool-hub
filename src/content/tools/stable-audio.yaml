@@ -1,0 +1,46 @@
+name:
+  en: Stable Audio
+  zh: Stable Audio
+short_desc:
+  en: Music and sound effect generation by Stability AI
+  zh: Stability AI 的音乐和音效生成
+long_desc:
+  en: >-
+    Stable Audio generates music and sound effects with AI; great for video scoring and game development.
+cat: audio
+url: https://stableaudio.com
+icon: fa-waveform
+scenes:
+  en:
+  - BGM
+  - Sound effects
+  - Games
+  - Video
+pros:
+  en:
+  - High quality
+  - Commercial use
+  - Open model
+cons:
+  en:
+  - Weak vocals
+  - Paid for long audio
+target_audience:
+  en:
+  - Video makers
+  - Game devs
+  - Creators
+use_cases:
+  en:
+  - BGM
+  - SFX
+  - Games
+  - Video
+features:
+  en:
+  - Music gen
+  - SFX
+  - Commercial
+  - Open source
+example:
+  en: 'Example: Generate 30s sci-fi game background music.'

@@ -1,29 +1,44 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { catLabel } from "../../utils/i18n";
 import categories from "../../data/categories.json";
+import categoryContent from "../../data/best-category-content.json";
 import toolsData from "../../data/tools.json";
 import matchupsData from "../../data/matchups.json";
 import ArticleToc from "../../components/ui/ArticleToc.astro";
+import { getTranslations } from "../../utils/i18n";
 export async function getStaticPaths() {
   return categories.map(function(cat){return {params:{slug:cat.slug},props:{cat:cat}}});
 }
 const { cat } = Astro.props;
+const pageLang = Astro.currentLocale || "en";
+const t = getTranslations("best", pageLang);
+
 const matchedTools = cat.tools
   .map(function(id){return Object.assign({id:id}, toolsData[id])})
-  .filter(function(t){return t && t.name});
+  .filter(function(tool){return tool && tool.name});
 const total = matchedTools.length;
 const firstTool = matchedTools[0];
 const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
-const catLabel = categoryLabels[firstTool?.cat] || (firstTool?.cat || "AI");
+const catLabelEn = categoryLabels[firstTool?.cat] || (firstTool?.cat || "AI");
 const relatedCategories = categories.filter(function(c){return c.slug !== cat.slug}).slice(0, 6);
 const clusterMatchups = matchupsData.filter(function(m){return m.cluster === cat.slug});
 const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/best/" + cat.slug + "/";
+// i18n: SEO + display variables
+const seoTitle = pageLang === "zh"
+  ? "2026 年最佳 " + (cat.title_zh || cat.title_en) + "（定期更新）"
+  : "Best " + cat.title_en + " in 2026 (Regularly Updated)";
+const seoDescription = pageLang === "zh"
+  ? (cat.desc_zh || cat.desc_en) + " 基于最新信息实测。真实评测，真实优缺点，无付费排名。"
+  : cat.desc_en + " Tested with the latest information. Real reviews, real pros and cons, no pay-to-play rankings.";
+const pageLangcode = pageLang === "zh" ? "zh" : "en";
+
 const articleSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Best " + cat.title_en + " in 2026 (Regularly Updated)",
-  "description": cat.desc_en + " Tested with the latest information. Real reviews, real pros and cons, no pay-to-play rankings.",
+  "headline": seoTitle,
+  "description": seoDescription,
   "url": pageUrl,
   "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
   "image": { "@type": "ImageObject", "url": siteUrl + "/og-image.svg", "width": 1200, "height": 630 },
@@ -32,98 +47,21 @@ const articleSchema = {
   "author": { "@type": "Person", "name": "Lin Chen" },
   "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl, "logo": { "@type": "ImageObject", "url": siteUrl + "/logo.svg", "width": 300, "height": 60 } },
   "articleSection": "AI Tools",
-  "inLanguage": "en"
+  "inLanguage": pageLangcode
 };
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl + "/" },
-    { "@type": "ListItem", "position": 2, "name": "Best AI Tools", "item": siteUrl + "/best/" },
-    { "@type": "ListItem", "position": 3, "name": cat.title_en, "item": pageUrl }
+    { "@type": "ListItem", "position": 1, "name": t("home"), "item": siteUrl + "/" },
+    { "@type": "ListItem", "position": 2, "name": t("bestAITools"), "item": siteUrl + "/best/" },
+    { "@type": "ListItem", "position": 3, "name": pageLang === "zh" ? (cat.title_zh || cat.title_en) : cat.title_en, "item": pageUrl }
   ]
-};
-const intros = {
-  text: "If you have ever pasted a paragraph into ChatGPT and gotten back something that sounds like a corporate brochure, you already know the difference between a generic AI writing tool and a good one. The good ones do not just write faster - they preserve your voice, follow your instructions, and produce something you would actually publish without rewriting 80% of it. After testing 22 writing-focused AI tools over 60 days on real client work, here is the short list that survived.",
-  image: "We paid for every major AI image generator in 2026 and generated 100+ test images on each. The gap between technically can make an image and actually produces something I would use is enormous - and it is not always correlated with price. Here is the honest ranking, based on what each tool is genuinely good at rather than what their marketing says.",
-  code: "The honest truth about AI coding tools in 2026: there are only two you should pay for, and the right one depends on whether you live inside your editor or live in a chat. Everything else is either a free trial of one of these two or a wrapper. Here is what we use daily after 90 days of testing on a real production app.",
-  video: "AI video in 2026 is where image generation was in early 2023 - exciting, fast-moving, and genuinely useful for a specific set of use cases. The output is no longer obviously AI for short clips, but long-form narrative is still years away. Here is the short list of tools that actually shipped production-ready video in 2026, ranked by what they are good at.",
-  audio: "AI voice generation crossed the indistinguishable from a real voice actor threshold in late 2025, and the 2026 market is now segmented by use case rather than quality (everyone is good enough for English narration). The differences are in languages, voice cloning, latency, and price-per-character. Here is the honest ranking.",
-  productivity: "Productivity is the messiest category in AI - it covers everything from note-taking to scheduling to project management to search. Most productivity AI tools are wrappers around the same 3-4 underlying models with a UI. Here is the small list that genuinely fits into a real workflow, not the ones that just look good in a demo.",
-  students: "Every month, a new 10 AI tools every student needs listicle shows up. Most of them list the same five paid tools with a use the free trial footnote. This list is different: we tested the free tiers of 22 popular AI tools on real student work for two full weeks. No paid upgrades, no credit card. Here are the 10 that actually held up.",
-  "content-writing": "Content writing is a different beast from general writing - it has a specific shape (hook, value, CTA), a specific rhythm, and specific requirements (SEO, brand voice, format). Most AI writing tools are tuned for general text, not the specific demands of a blog post or a sales page. Here is the small list of tools that survived 30+ days of real client work.",
-  developers: "Developer AI tools in 2026 are mostly about one decision: do you stay in your existing IDE and get autocomplete, or do you switch to a new editor that does more. The answer depends on how much multi-file work you do and how much you trust the AI to make changes. Here is what 8 of our engineer friends actually use after 6 months of testing.",
-  free: "Free AI tools in 2026 are surprisingly capable - the free tier of the major assistants now runs models that would have cost $20/month 18 months ago. The catch is the usage caps. Here is the honest ranking of the free tiers that actually let you get work done, not the ones that lock you out after 3 messages.",
-  "image-generation": "We subscribed to every major text-to-image model in 2026 and ran the same 25 prompts on each. The result: there is no single best image generator. The right answer depends on what you are making - photorealism, art, graphic design, anime, or text-in-image. Here is the honest breakdown by use case.",
-  "video-generation": "We generated 50+ short videos across every major AI video model in 2026. The output is genuinely useful for social content, ads, and prototypes - but the differences between platforms are large, and the pricing is all over the map. Here is the honest ranking by use case, with real before/after quality notes.",
-  marketing: "We rebuilt our marketing team workflow with AI in 2026. The team is 3 people, the monthly bill is $687, and the added pipeline in Q1 was $42K MRR. Here are the 8 tools that actually moved the needle on traffic, conversions, and time saved - ranked by ROI, not hype.",
-  "small-business": "We rebuilt our small business workflow with AI tools over 90 days. The team is 8 people, the monthly bill is $385, and we saved ~22 hours per week. Here are the 10 tools that actually paid for themselves, ranked by ROI rather than by what was trending on Twitter.",
-  designers: "We tested 18 AI design tools in 2026 with three product designers. Most were toys - impressive demos, no real workflow integration, output that looks AI on second glance. Here are the 7 that actually fit into a real design workflow, ranked by how often we open them during the workday.",
-  seo: "We rebuilt our SEO workflow with AI in 2026 and tracked the impact for 6 months. Organic traffic is up 187%, the team is 3x more productive, and the monthly tool bill is $1,143. Here are the tools that actually moved rankings, with the real before/after data.",
-  research: "Academic research is one of the areas where AI is genuinely transformative in 2026 - the tools can do the discovery, the extraction, the citation management, the literature review. They cannot do the thinking or the writing for you. Here are the 6 tools that actually save hours (not just minutes) on a real thesis chapter.",
-  social: "Social media in 2026 is driven by short-form video, and AI tools are now good enough to be the default for ideation, drafting, and asset generation. Here are the tools that survived 60 days of daily use on real social campaigns.",
-  ecommerce: "E-commerce is one of the highest-ROI use cases for AI - product descriptions, customer service, personalization, and ad creative all benefit. Here are the tools that actually shipped measurable results for online stores in 2026, ranked by impact.",
-  podcasters: "We rebuilt a 5-episode podcast with AI tools in Q2 2026. The total bill is $163/month, and the production time per episode dropped from ~25 hours to ~9 hours. Here are the 7 tools that actually cut production time in half without hurting quality.",
-  design: "Design is one of the categories where AI has had the most uneven impact - some tools are genuinely transformative, others are toys that produce AI-looking output. Here are the 7 tools that survived 30+ days of real use with three product designers.",
-  email: "Email is the highest-ROI AI use case for most businesses - the writing volume is high, the formats are repeatable, and the personal productivity gain is immediate. Here are the tools that actually moved the needle in 2026.",
-  translation: "AI translation in 2026 is solved for major languages but still has edge cases for tone, cultural context, and technical jargon. Here is the honest ranking of the tools that ship reliable translations without embarrassing you."
-};
-const howtos = {
-  text: "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
-  image: "The first question is: do you need a one-off image or a steady production workflow? For one-offs, Midjourney or DALL-E inside ChatGPT are the right defaults. For production (e-commerce, blog headers, social at scale), look at the model style control and pricing-per-image. The second question is whether you need photorealism (Flux), pure aesthetics (Midjourney), or text in images (Ideogram) - these are the three poles that matter.",
-  code: "The decision is mostly about workflow shape. If you want tab-to-accept autocomplete that lives inside VS Code, GitHub Copilot is the right pick - especially because it is free for students. If you regularly refactor across files, debug a codebase you do not fully know, or want to chat with your code, Cursor is the only tool that does this well. Many serious developers keep both.",
-  video: "Start with the use case. For a 5-10 second ad clip or social hook, Runway Gen-3 or Pika are the right defaults. For a 20-second cinematic shot, Sora 2 is the quality leader. For animating a still image (the cheapest, highest-ROI use case), Luma Dream Machine is the specialist. Most teams end up using 2-3 of these in combination.",
-  audio: "If you are making a podcast, audiobook, or YouTube video, ElevenLabs is the default - the quality is the highest and the free tier is enough to test. If you are building a production app that needs TTS at scale, PlayHT is cheaper at volume. If you need real-time voice for a conversational agent, LMNT or OpenAI Realtime API are the right picks.",
-  productivity: "For most people, the right answer is one general assistant (ChatGPT or Claude) used daily for 2-3 weeks, plus one specialized tool that solves a specific pain point. The specialized tool depends on what you actually do - if you live in Notion, Notion AI. If you do research, Perplexity. The trap is buying 5 productivity tools and using none of them."
 };
 const catKey = cat.slug;
-const introText = intros[catKey] || intros.text;
-const howtoText = howtos[catKey] || howtos.text;
-const faqs = {
-  text: [
-    { q: "What is the best free AI writing tool in 2026?", a: "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles." },
-    { q: "Is Claude better than ChatGPT for writing?", a: "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin." },
-    { q: "How much do AI writing tools cost in 2026?", a: "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month." },
-    { q: "Can AI writing tools replace a human writer?", a: "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer." }
-  ],
-  image: [
-    { q: "What is the best AI image generator in 2026?", a: "There is no single best - it depends on what you are making. Midjourney v7 is best for art and aesthetics, Flux Pro for photorealism, DALL-E 3 for following literal prompts, Ideogram for text-in-image, Stable Diffusion for custom styles and total control." },
-    { q: "Is Midjourney still the best in 2026?", a: "For pure aesthetic quality on a vague prompt, yes. For specific use cases (photorealism, text in images, custom styles), other models are now better. Midjourney v7 is also the easiest to use without prompt engineering." },
-    { q: "Can I use AI-generated images commercially?", a: "It depends on the model. Adobe Firefly is the only major model with a clear commercial license (trained on licensed content). Midjourney, DALL-E, and Stable Diffusion have unresolved legal questions - check the latest terms before using generated images in client work." },
-    { q: "How much do AI image tools cost?", a: "Midjourney is $10-60/month. DALL-E is included with ChatGPT Plus ($20/month). Stable Diffusion is free if you have a GPU, or $0.30-0.50/hour on cloud GPUs. Flux is pay-per-image (~$0.05). Ideogram is free with daily limits or $7-16/month for more." }
-  ],
-  code: [
-    { q: "What is the best AI coding tool for beginners?", a: "GitHub Copilot - it is free for students with a verified email, $10/month otherwise, and lives inside VS Code where most beginners already work. Cursor is more powerful but has a steeper learning curve." },
-    { q: "Is Cursor worth $20/month?", a: "For full-time developers, yes - the multi-file editing and codebase chat cut enough time to pay for itself in the first week. For hobbyists, the free tier of GitHub Copilot is enough." },
-    { q: "Can AI coding tools replace a developer?", a: "No. They are productivity multipliers (25-40% faster on most tasks) but they still produce subtle bugs in security-sensitive code about 5% of the time. Treat them as a fast junior developer who needs code review." },
-    { q: "What is the best free AI coding tool?", a: "GitHub Copilot is free for verified students and open-source maintainers. For everyone else, the free tier of Cursor is enough for hobby projects. Codeium is a good free alternative for autocomplete." }
-  ],
-  video: [
-    { q: "What is the best AI video generator in 2026?", a: "For highest quality, Sora 2 ($20-200/month). For production workflows, Runway Gen-3 ($15-95/month). For free experimentation, Kling ($0-66/month). For animating stills, Luma Dream Machine ($24-96/month). For social clips, Pika ($10-95/month)." },
-    { q: "Can AI video replace a real camera?", a: "Not yet. For 5-10 second clips, AI video is genuinely good enough for ads, social, and prototypes. For anything longer or with real human motion, the artifacts are still visible. Use AI video for what it is good at, not for what it cannot do." },
-    { q: "How long can AI video clips be in 2026?", a: "Sora 2 supports up to 20 seconds at high quality. Runway Gen-3 supports 10 seconds. Most other tools are limited to 4-8 seconds. You can stitch clips together in a video editor for longer sequences." },
-    { q: "Is AI video cheap?", a: "The free tiers are usable for experimentation. Production-quality AI video costs $20-200/month for the tool subscription, plus the time to iterate. For a 60-second ad, budget $50-200 in tool costs and 3-5 hours of iteration time." }
-  ],
-  audio: [
-    { q: "What is the best AI voice generator in 2026?", a: "ElevenLabs for quality, voice cloning, and emotional range. PlayHT for high-volume API use. LMNT for real-time applications. OpenAI Realtime API for conversational agents." },
-    { q: "Can AI voices replace voice actors?", a: "For narration, audiobooks, and most non-emotional content, yes - the quality is indistinguishable from a real voice actor. For songs, extreme emotional range, and specific character voices, no. The ethics of voice cloning also matter - always get consent." },
-    { q: "How much do AI voice tools cost?", a: "ElevenLabs is $5-330/month depending on usage. PlayHT is $31-99/month. OpenAI Realtime is pay-per-use (~$0.06/min input, $0.24/min output). Free tiers exist for experimentation." },
-    { q: "What is the best free AI voice tool?", a: "ElevenLabs free tier (10 minutes/month, watermarked) is enough for short projects. For unlimited use, open-source Whisper + a TTS model on your own hardware is free but requires setup." }
-  ],
-  productivity: [
-    { q: "What is the best AI productivity tool?", a: "There is no single best - it depends on your workflow. For general use, ChatGPT or Claude. For research, Perplexity. For note-taking, Notion AI. The trap is buying 5 tools and using none of them - start with one." },
-    { q: "Will AI productivity tools save me time?", a: "Yes, but only if you actually use them. Our data shows ~22 hours/week saved for an 8-person team, but that requires daily use. If you only open a tool once a week, the friction of context-switching eats the time savings." },
-    { q: "How much should I spend on AI productivity tools?", a: "For an individual: $20-40/month is the minimum viable stack. For a team: $100-500/month depending on size. The right way to think about it: each tool should pay for itself within 1 month of consistent use, or you stop paying." },
-    { q: "Are AI productivity tools worth it for a small business?", a: "Yes - the ROI is one of the highest of any software category. Our 8-person team saves 22 hours/week on $385/month in tool costs, which is a 11x return. The key is to start with one general tool, build the habit, then add specialized tools." }
-  ],
-  students: [
-    { q: "What is the best free AI tool for students?", a: "ChatGPT free (GPT-4o mini) for general writing, Perplexity free for research with sources, Claude free for long readings. Together they cover 80% of what you need for free." },
-    { q: "Is it cheating to use AI for schoolwork?", a: "It depends on your school policy. Most schools in 2026 allow AI for editing, brainstorming, and explaining concepts you do not understand. They do not allow AI to write essays you submit as your own. Always check your school specific policy." },
-    { q: "Can AI help me study?", a: "Yes, in many ways: generating flashcards from your notes, explaining difficult concepts in simpler terms, creating practice problems, summarizing long readings, and translating foreign-language sources. The best study AI tools in 2026 are ChatGPT, Perplexity, and Anki for spaced repetition." },
-    { q: "What is the best AI tool for math homework?", a: "Google Gemini (free, 1.5 Flash) is the best for step-by-step math solutions. Photomath is the best for showing work on handwritten problems. For statistics, ChatGPT with the Advanced Data Analysis mode is the right pick." }
-  ]
-};
-const faqList = faqs[catKey] || faqs.text;
+const introText = pageLang === "zh" ? categoryContent[catKey].intro_zh : categoryContent[catKey].intro_en;
+const howtoText = pageLang === "zh" ? categoryContent[catKey].howto_zh : categoryContent[catKey].howto_en;
+const faqList = pageLang === "zh" ? categoryContent[catKey].faqs_zh : categoryContent[catKey].faqs_en;
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -135,18 +73,18 @@ const faqSchema = {
   }))
 };
 const tocSections = [
-  { id: "top-3", label: "Top 3 picks" },
-  { id: "how-to-choose", label: "How to choose" },
-  { id: "full-list", label: "Full ranked list" },
-  { id: "detailed-reviews", label: "Detailed reviews" },
-  { id: "common-mistakes", label: "Common mistakes" },
-  { id: "faq", label: "FAQ" },
-  { id: "comparisons", label: "Comparisons" },
-  { id: "related", label: "Related categories" }
+  { id: "top-3", label: t("tocTop3") },
+  { id: "how-to-choose", label: t("tocHowToChoose") },
+  { id: "full-list", label: t("tocFullList") },
+  { id: "detailed-reviews", label: t("tocDetailedReviews") },
+  { id: "common-mistakes", label: t("tocCommonMistakes") },
+  { id: "faq", label: t("tocFaq") },
+  { id: "comparisons", label: t("tocComparisons") },
+  { id: "related", label: t("relatedHeading") }
 ];
 
 ---
-<BaseLayout title={"Best " + cat.title_en + " in 2026 (Regularly Updated)"} description={cat.desc_en + " Tested with the latest information. Real reviews, real pros and cons, no pay-to-play rankings."} keywords={"best " + cat.title_en + ", " + cat.slug + " AI tools, " + cat.title_en.toLowerCase()}>
+<BaseLayout title={seoTitle} description={seoDescription} keywords={"best " + cat.title_en + ", " + cat.slug + " AI tools, " + cat.title_en.toLowerCase()}>
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
@@ -155,13 +93,13 @@ const tocSections = [
   <article class="legal-page">
     <div class="article-grid">
       <div class="article-main">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/">Best AI Tools</a> &rsaquo; <span>{cat.title_en}</span></nav>
+    <nav class="breadcrumbs"><a href="/">{t("home")}</a> &rsaquo; <a href="/">Best AI Tools</a> &rsaquo; <span>{pageLang === "zh" ? (cat.title_zh || cat.title_en) : cat.title_en}</span></nav>
     <header class="cat-hero">
-      <span class="eyebrow" data-i18n="eyebrow_best">Best of 2026</span>
-      <h1 data-i18n="best_h1_template">{cat.title_en}</h1>
-      <p class="lede">{cat.desc_en}</p>
-      <p class="update-note"><em data-i18n="last_updated">Last updated</em>: July 2026 &middot; <span data-i18n="we_tested">{`We tested ${total} tools with the latest information.`}</span></p>
-      <div class="updated-badge"><i class="fas fa-check-circle"></i> Updated &middot; Updated July 2026</div>
+      <span class="eyebrow" data-i18n="eyebrow_best">{t("eyebrow")}</span>
+      <h1 data-i18n="best_h1_template">{pageLang === "zh" ? cat.title_zh : cat.title_en}</h1>
+      <p class="lede">{pageLang === "zh" ? cat.desc_zh : cat.desc_en}</p>
+      <p class="update-note"><em data-i18n="last_updated">{t("lastUpdated")}</em>: July 2026 &middot; <span data-i18n="we_tested">{pageLang === "zh" ? `我们测试了 ${total} 款工具，基于最新信息。` : `We tested ${total} tools with the latest information.`}</span></p>
+      <div class="updated-badge"><i class="fas fa-check-circle"></i> {t("updatedBadge")}</div>
     </header>
 
     <section class="intro-section">
@@ -169,36 +107,36 @@ const tocSections = [
     </section>
 
     <section>
-      <h2 id="top-3" data-i18n="top_3_picks">Top 3 Picks</h2>
+      <h2 id="top-3" data-i18n="top_3_picks">{t("top3Picks")}</h2>
       <div class="tool-grid">
         {matchedTools.slice(0, 3).map(function(t, i){return (
           <a class="tool-card" href={"/tool/" + t.id + "/"}>
             <span class="card-number">#{i+1}</span>
             <div class="tool-icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
-            <h3>{t.name.en}</h3>
-            <p>{t.short_desc.en}</p>
-            <span class="tool-tag">{categoryLabels[t.cat] || t.cat}</span>
+            <h3>{pageLang === "zh" ? (t.name?.zh || t.name.en) : t.name.en}</h3>
+            <p>{pageLang === "zh" ? (t.short_desc?.zh || t.short_desc.en) : t.short_desc.en}</p>
+            <span class="tool-tag">{pageLang === "zh" ? ({ text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商务" }[t.cat] || t.cat) : (categoryLabels[t.cat] || t.cat)}</span>
           </a>
         )})}
       </div>
     </section>
 
     <section class="how-to-choose">
-      <h2 id="how-to-choose">How to choose the right {cat.title_en.toLowerCase()} for you</h2>
+      <h2 id="how-to-choose">{pageLang === "zh" ? `如何选择合适的 ${cat.title_zh || cat.title_en}` : `How to choose the right ${cat.title_en.toLowerCase()} for you`}</h2>
       <p>{howtoText}</p>
     </section>
 
     <section>
-      <h2 id="full-list">Full list: all {total} tools ranked</h2>
+      <h2 id="full-list">{pageLang === "zh" ? `完整列表：全部 ${total} 款工具排名` : `Full list: all ${total} tools ranked`}</h2>
       <table class="ranking">
-        <thead><tr><th>Rank</th><th>Tool</th><th>Best for</th><th>Category</th></tr></thead>
+        <thead><tr><th>{pageLang === 'zh' ? '排名' : 'Rank'}</th><th>{pageLang === 'zh' ? '工具' : 'Tool'}</th><th>{pageLang === 'zh' ? '最适合' : 'Best for'}</th><th>{pageLang === 'zh' ? '分类' : 'Category'}</th></tr></thead>
         <tbody>
           {matchedTools.map(function(t, i){return (
             <tr>
               <td>#{i+1}</td>
-              <td><a href={"/tool/" + t.id + "/"}><strong>{t.name.en}</strong></a></td>
-              <td>{t.pros?.en?.[0] || ""}</td>
-              <td>{categoryLabels[t.cat] || t.cat}</td>
+              <td><a href={"/tool/" + t.id + "/"}><strong>{pageLang === "zh" ? (t.name?.zh || t.name.en) : t.name.en}</strong></a></td>
+              <td>{pageLang === "zh" ? (t.pros?.zh?.[0] || t.pros?.en?.[0] || "") : (t.pros?.en?.[0] || "")}</td>
+              <td>{pageLang === "zh" ? ({ text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商务" }[t.cat] || t.cat) : (categoryLabels[t.cat] || t.cat)}</td>
             </tr>
           )})}
         </tbody>
@@ -206,29 +144,29 @@ const tocSections = [
     </section>
 
     <section>
-      <h2 id="detailed-reviews" data-i18n="detailed_reviews">Detailed reviews</h2>
-      {matchedTools.map(function(t){return (
-        <article class="tool-review" id={t.id}>
+      <h2 id="detailed-reviews" data-i18n="detailed_reviews">{t("tocDetailedReviews")}</h2>
+      {matchedTools.map(function(tool){return (
+        <article class="tool-review" id={tool.id}>
           <header class="tool-review-head">
-            <div class="tool-review-icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
+            <div class="tool-review-icon"><i class={`fas ${tool.icon || "fa-robot"}`}></i></div>
             <div>
-              <h3><a href={"/tool/" + t.id + "/"}>{t.name.en}</a></h3>
-              <p class="short">{t.short_desc.en}</p>
+              <h3><a href={"/tool/" + tool.id + "/"}>{pageLang === "zh" ? (tool.name?.zh || tool.name.en) : tool.name.en}</a></h3>
+              <p class="short">{pageLang === "zh" ? (tool.short_desc?.zh || tool.short_desc.en) : tool.short_desc.en}</p>
             </div>
           </header>
-          <p>{t.long_desc.en}</p>
+          <p>{pageLang === "zh" ? (tool.long_desc?.zh || tool.long_desc.en) : tool.long_desc.en}</p>
           <div class="pros-cons-box">
-            <div class="pro-list"><strong>Pros:</strong> {(t.pros?.en || []).join(", ")}</div>
-            <div class="con-list"><strong>Cons:</strong> {(t.cons?.en || []).join(", ")}</div>
+            <div class="pro-list"><strong>{t("pros")}</strong> {(pageLang === "zh" ? (tool.pros?.zh || tool.pros?.en) : tool.pros?.en || []).join(", ")}</div>
+            <div class="con-list"><strong>{t("cons")}</strong> {(pageLang === "zh" ? (tool.cons?.zh || tool.cons?.en) : tool.cons?.en || []).join(", ")}</div>
           </div>
-          <p class="review-our-take"><strong>Our take:</strong> We tested {t.name.en} on real work for at least 2 weeks. It is best for {t.target_audience?.en?.[0] || "general use"} and stands out for {(t.pros?.en?.[0] || "versatility").toLowerCase()}. For the full breakdown including pricing, alternatives, and our honest verdict, see the <a href={"/tool/" + t.id + "/"}>complete {t.name.en} review</a>.</p>
-          <a class="cta-primary" href={"/tool/" + t.id + "/"}>Read full review</a>
+          <p class="review-our-take"><strong>{t("ourTakeHeading")}</strong> {pageLang === "zh" ? `我们在真实工作上测试了 ${tool.name?.zh || tool.name.en} 至少两周。它最适合 ${tool.target_audience?.zh?.[0] || tool.target_audience?.en?.[0] || "通用场景"}，以其 ${(tool.pros?.zh?.[0] || tool.pros?.en?.[0] || "多功能性").toLowerCase()} 脱颖而出。完整拆解（含定价、替代方案和诚实结论）请见` : `We tested ${tool.name.en} on real work for at least 2 weeks. It is best for ${tool.target_audience?.en?.[0] || "general use"} and stands out for ${(tool.pros?.en?.[0] || "versatility").toLowerCase()}. For the full breakdown including pricing, alternatives, and our honest verdict, see the`} <a href={"/tool/" + tool.id + "/"}>{pageLang === "zh" ? `${tool.name?.zh || tool.name.en} 完整评测` : `complete ${tool.name.en} review`}</a>.</p>
+          <a class="cta-primary" href={"/tool/" + tool.id + "/"}>{t("readFullReview")}</a>
         </article>
       )})}
     </section>
 
     <section class="common-mistakes">
-      <h2 id="common-mistakes">Common mistakes when picking {cat.title_en.toLowerCase()}</h2>
+      <h2 id="common-mistakes">{pageLang === "zh" ? `选择 ${cat.title_zh || cat.title_en} 的常见误区` : `Common mistakes when picking ${cat.title_en.toLowerCase()}`}</h2>
       <ul>
         <li><strong>Picking the most popular tool without testing the alternatives.</strong> Popularity is not quality. The tool everyone talks about may not be the best for your specific use case. Always test 2-3 options before committing.</li>
         <li><strong>Paying for a tool without using the free tier first.</strong> Every tool on this list has a free tier or trial. Use it for a week before paying. If you do not reach for it daily after the trial, you will not reach for it after you pay either.</li>
@@ -239,7 +177,7 @@ const tocSections = [
     </section>
 
     <section>
-      <h2 id="faq" data-i18n="faq_title">Frequently asked questions</h2>
+      <h2 id="faq" data-i18n="faq_title">{t("faqHeading")}</h2>
       <div class="faq-section">
         {faqList.map(function(f){return (
           <details>
@@ -252,7 +190,7 @@ const tocSections = [
 
     {clusterMatchups.length > 0 && (
       <section class="detail-section">
-        <h2 id="comparisons">Head-to-head comparisons</h2>
+        <h2 id="comparisons">{t("comparisonsHeading")}</h2>
         <div class="card-grid">
           {clusterMatchups.map(m => {
             const ta = toolsData[m.a];
@@ -262,7 +200,7 @@ const tocSections = [
             return (
               <a class="info-card" href={"/vs/" + m.slug + "/"}>
                 <h3>{na} vs {nb}</h3>
-                <p>{m.title_en}</p>
+                <p>{pageLang === "zh" ? (m.title_zh || m.title_en) : m.title_en}</p>
               </a>
             );
           })}
@@ -271,14 +209,14 @@ const tocSections = [
     )}
 
     <section class="related">
-      <h2 id="related" data-i18n="related_categories">Related categories</h2>
+      <h2 id="related" data-i18n="related_categories">{t("relatedHeading")}</h2>
       <div class="related-grid">
         {relatedCategories.map(function(c){return (
           <a class="related-card" href={"/best/" + c.slug + "/"}>
             <div class="related-icon"><i class="fas fa-folder-open"></i></div>
             <div>
-              <h3>{c.title_en}</h3>
-              <p>{c.desc_en}</p>
+              <h3>{pageLang === "zh" ? (c.title_zh || c.title_en) : c.title_en}</h3>
+              <p>{pageLang === "zh" ? (c.desc_zh || c.desc_en) : c.desc_en}</p>
             </div>
           </a>
         )})}

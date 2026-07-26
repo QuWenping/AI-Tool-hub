@@ -1,0 +1,7 @@
+﻿15:06:08 [types] Generated 515ms
+15:06:08 [build] output: "hybrid"
+15:06:08 [build] directory: C:\Users\qiura\Projects\active\AIToolHub\dist\
+15:06:08 [build] adapter: @astrojs/node
+15:06:08 [build] Collecting build info...
+15:06:08 [build] ✓ Completed in 530ms.
+15:06:08 [build] Building hybrid entrypoints...

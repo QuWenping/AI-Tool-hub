@@ -1,0 +1,24 @@
+name:
+  en: Veracode
+  zh: Veracode
+short_desc:
+  en: Application security
+  zh: 应用安全
+long_desc:
+  en: AI-enhanced application security testing
+cat: code
+url: https://veracode.com
+icon: fa-shield
+scenes:
+  en:
+  - security
+  - appsec
+  - testing
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

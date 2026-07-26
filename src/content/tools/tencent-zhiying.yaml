@@ -1,0 +1,24 @@
+name:
+  en: Tencent Zhiying
+  zh: 腾讯智影
+short_desc:
+  en: Tencent AI video platform
+  zh: 腾讯 AI 视频平台
+long_desc:
+  en: Tencent AI digital human and video generation
+cat: video
+url: https://zenvideo.qq.com
+icon: fa-video
+scenes:
+  en:
+  - digital-human
+  - video
+  - chinese
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

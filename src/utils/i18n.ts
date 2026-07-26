@@ -5,9 +5,52 @@
  * zh fields may be empty; this module falls back to en automatically.
  */
 
+import enTranslations from "../i18n/en.json";
+import zhTranslations from "../i18n/zh.json";
+
 type LocaleMap = Record<string, string | undefined> | undefined;
 
+/**
+ * Get translations for a given page/namespace.
+ * Returns a function t(key, params?) that resolves the translation.
+ *
+ * Usage:
+ *   const t = getTranslations("best", pageLang);
+ *   t("top3Picks")  // "Top 3 Picks" or "TOP 3 精选"
+ *   t("howToChoose", { category: "Writing" })
+ */
+export function getTranslations(
+  namespace: string,
+  lang: string,
+): (key: string, params?: Record<string, string | number>) => string {
+  const dict = lang === "zh" ? zhTranslations : enTranslations;
+  const ns = (dict as any)[namespace] || {};
+
+  return (key: string, params?: Record<string, string | number>): string => {
+    let value = ns[key];
+    // Fallback to en if key missing in zh
+    if ((value === undefined || value === null || value === "") && lang === "zh") {
+      value = (enTranslations as any)[namespace]?.[key];
+    }
+    if (value === undefined || value === null) {
+      // Try common namespace as fallback
+      const common = (dict as any).common || {};
+      const enCommon = (enTranslations as any).common || {};
+      value = common[key] || enCommon[key] || key;
+    }
+    // String interpolation
+    if (typeof value === "string" && params) {
+      return value.replace(/\{(\w+)\}/g, (_: string, p: string) => String(params[p] ?? `{${p}}`));
+    }
+    return String(value ?? key);
+  };
+}
+
 function getByPath(obj: any, path: string): any {
+  // Direct hit: key exists as-is, don't split by dot
+  if (obj && Object.prototype.hasOwnProperty.call(obj, path)) {
+    return obj[path];
+  }
   return path.split(".").reduce((o, k) => (o ?? {})[k], obj);
 }
 
@@ -40,7 +83,7 @@ export function ta(obj: any, path: string, lang: string): string[] {
 
   const langKey = `${path}.${lang || "en"}`;
   const langVal = getByPath(obj, langKey);
-  if (Array.isArray(langVal) && langVal.length > 0) return langVal;
+  if (Array.isArray(langVal) && langVal.filter(Boolean).length > 0) return langVal;
 
   const enKey = `${path}.en`;
   const enVal = getByPath(obj, enKey);
@@ -95,8 +138,8 @@ export function navLabel(key: string, lang: string): string {
 
 /** Category labels */
 export const categoryLabels: Record<string, Record<string, string>> = {
-  en: { text: "Writing", image: "Image", code: "Coding", video: "Video", audio: "Audio", productivity: "Productivity" },
-  zh: { text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "效率" },
+  en: { text: "Writing", image: "Image", code: "Coding", video: "Video", audio: "Audio", productivity: "Productivity", research: "Research" },
+  zh: { text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "效率", research: "研究" },
 };
 
 /** Get a category label */

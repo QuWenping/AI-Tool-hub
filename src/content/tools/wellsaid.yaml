@@ -1,0 +1,24 @@
+name:
+  en: WellSaid Labs
+  zh: WellSaid Labs
+short_desc:
+  en: Enterprise AI voice
+  zh: 企业级 AI 语音
+long_desc:
+  en: Enterprise AI voice for training and education
+cat: audio
+url: https://wellsaidlabs.com
+icon: fa-microphone
+scenes:
+  en:
+  - enterprise
+  - training
+  - narration
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

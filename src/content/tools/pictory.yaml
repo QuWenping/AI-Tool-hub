@@ -1,0 +1,24 @@
+name:
+  en: Pictory
+  zh: Pictory
+short_desc:
+  en: AI article to video
+  zh: AI 文章转视频
+long_desc:
+  en: Auto-convert long text to short video content
+cat: video
+url: https://pictory.ai
+icon: fa-film
+scenes:
+  en:
+  - text-to-video
+  - short-video
+  - repurposing
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

@@ -1,0 +1,282 @@
+[
+  {
+    "file": "agnes-ai-review-free-omni-modal-api-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "ai-coding-workflow-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "ai-image-generation-best-practices-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "ai-meeting-assistant-guide-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "ai-music-creation-beginners-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "ai-video-creation-guide-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "bolt-vs-lovable.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "bonsai-27b-on-device-ai-phone-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "build-ai-agent-no-code-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "chatgpt-vs-claude-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "chatgpt-vs-deepseek.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "claude-vs-gemini-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "comfyui-vs-automatic1111-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "cursor-vs-aider.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "cursor-vs-claude-code.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "cursor-vs-github-copilot-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "cursor-vs-github-copilot.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "cursor-vs-windsurf.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "descript-vs-capcut-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "elevenlabs-vs-playht-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "fireflies-vs-otter.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "gemini-vs-chatgpt-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "ideogram-vs-midjourney.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "leonardo-vs-canva-ai.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "midjourney-vs-dalle-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "midjourney-vs-dalle3.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "midjourney-vs-flux.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "notion-ai-vs-coda-ai-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "perplexity-vs-chatgpt-2026.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "replit-vs-bolt.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "runway-vs-pika.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "sora-vs-kling.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "sora-vs-runway.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "v0-vs-lovable.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  },
+  {
+    "file": "windsurf-vs-cline.md",
+    "status": "MISSING_FIELD",
+    "zh_length": 0,
+    "en_length": 0,
+    "issue": "缺少 content_zh 字段",
+    "zh_preview": "(不存在)"
+  }
+]

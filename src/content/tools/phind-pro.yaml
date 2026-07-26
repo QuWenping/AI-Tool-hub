@@ -1,0 +1,24 @@
+name:
+  en: Phind Pro
+  zh: Phind Pro
+short_desc:
+  en: AI dev search engine
+  zh: AI 开发者搜索引擎
+long_desc:
+  en: AI search engine designed for developers
+cat: code
+url: https://phind.com
+icon: fa-code
+scenes:
+  en:
+  - dev-search
+  - code
+  - debugging
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

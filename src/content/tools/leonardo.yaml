@@ -1,0 +1,107 @@
+name:
+  en: Leonardo.AI
+  zh: Leonardo.AI
+short_desc:
+  en: AI image generation platform for games and design
+  zh: 面向游戏和设计的 AI 图像生成平台
+long_desc:
+  en: Leonardo.AI focuses on games, character design, and concept art.
+cat: image
+url: https://leonardo.ai
+icon: fa-paint-brush
+scenes:
+  en:
+  - Game art
+  - Concept scenes
+  - 3D textures
+  - E-com images
+  zh:
+  - 游戏资产
+  - 角色设计
+  - 概念艺术
+pros:
+  en:
+  - Style consistency
+  - Powerful canvas
+  - Generous free
+  zh:
+  - 角色风格一致性最佳
+  - 游戏和设计场景优化
+  - 慷慨的免费层级
+cons:
+  en:
+  - Less versatile
+  - Steep curve
+  - Paid features
+  zh:
+  - 通用美学不如 Midjourney
+  - 免费版有水印
+  - 通用性较差
+target_audience:
+  en:
+  - Game artists
+  - Character designers
+  - Concept artists
+  - 3D modelers
+  zh:
+  - 游戏美术师
+  - 角色设计师
+  - 概念艺术家
+  - 3D 建模师
+use_cases:
+  en:
+  - Consistent art
+  - 3D renders
+  - Arch concepts
+  - E-com models
+  zh:
+  - 一致风格
+  - 3D 渲染
+  - 建筑概念
+  - 电商模型
+features:
+  en:
+  - Canvas editor
+  - Alchemy mode
+  - 3D textures
+  - Model tuning
+  zh:
+  - 画布编辑器
+  - Alchemy 模式
+  - 3D 纹理
+  - 模型微调
+example:
+  en: 'Example: Upload sketch to generate 4 concept variants.'
+  zh: 示例：上传草图生成 4 个概念变体。
+reviewed: true
+updatedAt: '2026-07-19'
+testedVersion: Leonardo.AI 2026
+score: 8.2
+overall_score: 8.2
+quickFacts:
+  freeTier: true
+  hasApi: true
+  platforms:
+  - Web
+pricingSummary:
+  en: Free daily credits · Apprentice $12/mo · Artisan $30/mo · Maestro $60/mo.
+faq:
+- q_en: What is Leonardo best for?
+  a_en: >-
+    Game art, character design and concept art; Alchemy mode keeps style consistency across generations.
+- q_en: Is there a free plan?
+  a_en: Yes, with daily credits refreshed automatically.
+scoreBreakdown:
+  user: 8.2
+  capability: 7
+  price: 10
+  growth: 7
+  trust: 8
+editorialIntro: >-
+  Leonardo.AI is the specialist for game art, character design and concept art. Alchemy mode maintains style consistency across
+  generations, Canvas is the most polished in-app editor, and the free tier is generous.
+editorialVerdict:
+  best: >-
+    You are a game artist, character designer or concept artist and value consistent style across generations.
+  avoid: >-
+    Your work is generic image generation for blogs/social — Midjourney or DALL-E is simpler.

@@ -1,0 +1,24 @@
+name:
+  en: Twipu
+  zh: Twipu
+short_desc:
+  en: AI video subtitles
+  zh: AI 视频字幕
+long_desc:
+  en: Auto-generate video subtitles in multiple languages
+cat: video
+url: https://twipu.com
+icon: fa-video
+scenes:
+  en:
+  - video
+  - subtitles
+  - translation
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

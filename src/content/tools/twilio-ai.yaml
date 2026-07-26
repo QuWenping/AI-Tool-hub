@@ -1,0 +1,24 @@
+name:
+  en: Twilio AI
+  zh: Twilio AI
+short_desc:
+  en: AI communication API
+  zh: AI 通信 API
+long_desc:
+  en: AI-powered voice, messaging and customer service API
+cat: productivity
+url: https://twilio.com
+icon: fa-phone
+scenes:
+  en:
+  - communication
+  - voice
+  - api
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Pay per use

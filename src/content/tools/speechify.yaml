@@ -1,0 +1,46 @@
+name:
+  en: Speechify
+  zh: Speechify
+short_desc:
+  en: AI text-to-speech reader
+  zh: AI 文字转语音阅读器
+long_desc:
+  en: >-
+    Speechify turns any text (docs/web/books) into natural speech for faster reading.
+cat: audio
+url: https://speechify.com
+icon: fa-headphones
+scenes:
+  en:
+  - Audiobooks
+  - Doc reading
+  - Learning
+  - Accessibility
+pros:
+  en:
+  - Natural voices
+  - Cross-platform
+  - Celebrity voices
+cons:
+  en:
+  - Mid-high price
+  - Limited CN voices
+target_audience:
+  en:
+  - Students
+  - Commuters
+  - Dyslexic readers
+use_cases:
+  en:
+  - Audiobooks
+  - Learning
+  - Docs
+  - Accessibility
+features:
+  en:
+  - TTS
+  - Multi-platform
+  - OCR
+  - Celebrity voices
+example:
+  en: 'Example: Convert a 5000-word article to speech.'

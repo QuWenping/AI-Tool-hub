@@ -1,0 +1,24 @@
+name:
+  en: Shorts AI
+  zh: Shorts AI
+short_desc:
+  en: AI short video generator
+  zh: AI 短视频生成器
+long_desc:
+  en: Generate vertical short-form videos with AI
+cat: video
+url: https://shorts.ai
+icon: fa-video
+scenes:
+  en:
+  - video
+  - short-form
+  - social
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

@@ -1,0 +1,48 @@
+name:
+  en: Hugging Face
+  zh: Hugging Face
+short_desc:
+  en: AI model hub, the GitHub of open models
+  zh: AI 模型中心，开源模型的 GitHub
+long_desc:
+  en: >-
+    Hugging Face is the largest AI model/dataset/app hosting platform, the core of open source AI community, maintainer of
+    Transformers library.
+cat: productivity
+url: https://huggingface.co
+icon: fa-face-smile
+scenes:
+  en:
+  - Model hosting
+  - Datasets
+  - Spaces demos
+  - Transformers
+pros:
+  en:
+  - Largest model library
+  - Open community
+  - Free hosting
+  - Transformers
+cons:
+  en:
+  - Needs tech skills
+  - Resource limits
+target_audience:
+  en:
+  - AI researchers
+  - Devs
+  - OSS community
+use_cases:
+  en:
+  - Model hosting
+  - Research
+  - Demos
+  - Open source
+features:
+  en:
+  - Model hub
+  - Datasets
+  - Spaces
+  - Transformers
+example:
+  en: 'Example: Deploy a Llama model demo on Hugging Face.'

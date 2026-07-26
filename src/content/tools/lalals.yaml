@@ -1,0 +1,24 @@
+name:
+  en: Lalals
+  zh: Lalals
+short_desc:
+  en: AI voice cloning music
+  zh: AI 声音克隆音乐
+long_desc:
+  en: AI voice cloning for music covers
+cat: audio
+url: https://lalals.com
+icon: fa-music
+scenes:
+  en:
+  - voice-clone
+  - music
+  - cover
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

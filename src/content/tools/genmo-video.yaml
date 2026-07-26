@@ -1,0 +1,24 @@
+name:
+  en: Genmo Video
+  zh: Genmo Video
+short_desc:
+  en: AI 3D and video generation
+  zh: AI 3D 和视频生成
+long_desc:
+  en: Interactive 3D and video generation from text
+cat: video
+url: https://genmo.ai
+icon: fa-video
+scenes:
+  en:
+  - 3d
+  - video
+  - interactive
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

@@ -1,0 +1,24 @@
+name:
+  en: Continue
+  zh: Continue
+short_desc:
+  en: Open-source AI code assistant
+  zh: 开源 AI 代码助手
+long_desc:
+  en: Open-source AI coding assistant for VS Code and JetBrains
+cat: code
+url: https://continue.dev
+icon: fa-code
+scenes:
+  en:
+  - vscode
+  - ai-coding
+  - open-source
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

@@ -1,0 +1,23 @@
+name:
+  en: Wisecut
+  zh: Wisecut
+short_desc:
+  en: AI auto video editing
+  zh: AI 自动视频编辑
+long_desc:
+  en: Auto-remove pauses and silences from video
+cat: video
+url: https://wisecut.video
+icon: fa-scissors
+scenes:
+  en:
+  - auto-edit
+  - content-creation
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

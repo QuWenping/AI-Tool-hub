@@ -1,0 +1,563 @@
+15:18:26 [types] Generated 523ms
+15:18:26 [build] output: "hybrid"
+15:18:26 [build] directory: C:\Users\qiura\Projects\active\AIToolHub\dist\
+15:18:26 [build] adapter: @astrojs/node
+15:18:26 [build] Collecting build info...
+15:18:26 [build] ✓ Completed in 543ms.
+15:18:27 [build] Building hybrid entrypoints...
+15:18:29 [vite] [32m✓ built in 2.22s[39m
+15:18:29 [build] ✓ Completed in 2.24s.
+
+ prerendering static routes 
+15:18:29 ▶ src/pages/about.astro
+15:18:29   └─ /about/index.html (+154ms)
+15:18:29 ▶ src/pages/accessibility.astro
+15:18:29   └─ /accessibility/index.html (+2ms)
+15:18:29 ▶ src/pages/advertise.astro
+15:18:29   └─ /advertise/index.html (+2ms)
+15:18:29 ▶ src/pages/alternatives/[slug].astro
+15:18:29   ├─ /alternatives/claude/index.html (+4ms)
+15:18:29   ├─ /alternatives/gemini/index.html (+2ms)
+15:18:29   ├─ /alternatives/github-copilot/index.html (+2ms)
+15:18:29   ├─ /alternatives/cursor/index.html (+2ms)
+15:18:29   ├─ /alternatives/sora/index.html (+2ms)
+15:18:29   ├─ /alternatives/runway/index.html (+2ms)
+15:18:29   ├─ /alternatives/midjourney/index.html (+2ms)
+15:18:29   ├─ /alternatives/stable-diffusion/index.html (+2ms)
+15:18:29   ├─ /alternatives/leonardo/index.html (+2ms)
+15:18:29   ├─ /alternatives/elevenlabs/index.html (+2ms)
+15:18:29   ├─ /alternatives/suno/index.html (+2ms)
+15:18:29   ├─ /alternatives/descript/index.html (+2ms)
+15:18:29   ├─ /alternatives/notion-ai/index.html (+2ms)
+15:18:29   ├─ /alternatives/perplexity/index.html (+2ms)
+15:18:29   ├─ /alternatives/jasper/index.html (+2ms)
+15:18:29   ├─ /alternatives/chatgpt/index.html (+2ms)
+15:18:29   ├─ /alternatives/hostinger/index.html (+2ms)
+15:18:29   ├─ /alternatives/ideogram/index.html (+2ms)
+15:18:29   ├─ /alternatives/krea/index.html (+1ms)
+15:18:29   ├─ /alternatives/flux/index.html (+2ms)
+15:18:29   ├─ /alternatives/pika/index.html (+2ms)
+15:18:29   ├─ /alternatives/luma/index.html (+1ms)
+15:18:29   ├─ /alternatives/kling/index.html (+1ms)
+15:18:29   ├─ /alternatives/hailuo/index.html (+2ms)
+15:18:29   ├─ /alternatives/synthesia/index.html (+2ms)
+15:18:29   ├─ /alternatives/heygen/index.html (+1ms)
+15:18:29   ├─ /alternatives/play-ht/index.html (+1ms)
+15:18:29   ├─ /alternatives/otter/index.html (+1ms)
+15:18:29   ├─ /alternatives/fireflies/index.html (+1ms)
+15:18:29   ├─ /alternatives/gamma/index.html (+1ms)
+15:18:29   ├─ /alternatives/cline/index.html (+2ms)
+15:18:29   ├─ /alternatives/windsurf/index.html (+1ms)
+15:18:29   ├─ /alternatives/aider/index.html (+1ms)
+15:18:29   ├─ /alternatives/codeium/index.html (+1ms)
+15:18:29   ├─ /alternatives/replit/index.html (+2ms)
+15:18:29   ├─ /alternatives/v0/index.html (+2ms)
+15:18:29   ├─ /alternatives/lovable/index.html (+1ms)
+15:18:29   ├─ /alternatives/deepseek/index.html (+2ms)
+15:18:29   ├─ /alternatives/copy-ai/index.html (+1ms)
+15:18:29   ├─ /alternatives/canva-ai/index.html (+2ms)
+15:18:29   ├─ /alternatives/bolt/index.html (+1ms)
+15:18:29   ├─ /alternatives/udio/index.html (+1ms)
+15:18:29   ├─ /alternatives/comfyui/index.html (+1ms)
+15:18:29   ├─ /alternatives/dalle3/index.html (+3ms)
+15:18:29   ├─ /alternatives/amazon-q/index.html (+2ms)
+15:18:29   ├─ /alternatives/adobe-firefly/index.html (+2ms)
+15:18:29   ├─ /alternatives/capcut/index.html (+2ms)
+15:18:29   ├─ /alternatives/assembly-ai/index.html (+1ms)
+15:18:29   └─ /alternatives/agnes-ai/index.html (+1ms)
+15:18:29 ▶ src/pages/author/[slug].astro
+15:18:29   ├─ /author/lin-chen/index.html (+2ms)
+15:18:29   ├─ /author/marcus-webb/index.html (+1ms)
+15:18:29   ├─ /author/sofia-reyes/index.html (+1ms)
+15:18:29   ├─ /author/daniel-park/index.html (+1ms)
+15:18:29   └─ /author/aisha-patel/index.html (+1ms)
+15:18:29 ▶ src/pages/best/[slug].astro
+15:18:29   ├─ /best/text/index.html (+3ms)
+15:18:29   ├─ /best/image/index.html (+2ms)
+15:18:29   ├─ /best/code/index.html (+2ms)
+15:18:29   ├─ /best/video/index.html (+2ms)
+15:18:29   ├─ /best/audio/index.html (+2ms)
+15:18:29   └─ /best/productivity/index.html (+2ms)
+15:18:29 ▶ src/pages/best/ai-agents.astro
+15:18:29   └─ /best/ai-agents/index.html (+2ms)
+15:18:29 ▶ src/pages/blog/[slug].astro
+15:18:29   ├─ /blog/agnes-ai-review-free-omni-modal-api-2026/index.html (+3ms)
+15:18:29   ├─ /blog/ai-coding-workflow-2026/index.html (+1ms)
+15:18:29   ├─ /blog/ai-image-generation-best-practices-2026/index.html (+2ms)
+15:18:29   ├─ /blog/ai-meeting-assistant-guide-2026/index.html (+2ms)
+15:18:29   ├─ /blog/ai-music-creation-beginners-2026/index.html (+1ms)
+15:18:29   ├─ /blog/ai-video-creation-guide-2026/index.html (+1ms)
+15:18:29   ├─ /blog/bolt-vs-lovable/index.html (+2ms)
+15:18:29   ├─ /blog/bonsai-27b-on-device-ai-phone-2026/index.html (+2ms)
+15:18:29   ├─ /blog/build-ai-agent-no-code-2026/index.html (+1ms)
+15:18:29   ├─ /blog/chatgpt-vs-claude-2026/index.html (+2ms)
+15:18:29   ├─ /blog/chatgpt-vs-deepseek/index.html (+2ms)
+15:18:29   ├─ /blog/claude-vs-gemini-2026/index.html (+2ms)
+15:18:29   ├─ /blog/comfyui-vs-automatic1111-2026/index.html (+1ms)
+15:18:29   ├─ /blog/cursor-vs-aider/index.html (+1ms)
+15:18:29   ├─ /blog/cursor-vs-claude-code/index.html (+2ms)
+15:18:29   ├─ /blog/cursor-vs-github-copilot-2026/index.html (+2ms)
+15:18:29   ├─ /blog/cursor-vs-github-copilot/index.html (+2ms)
+15:18:29   ├─ /blog/cursor-vs-windsurf/index.html (+3ms)
+15:18:29   ├─ /blog/descript-vs-capcut-2026/index.html (+2ms)
+15:18:29   ├─ /blog/elevenlabs-vs-playht-2026/index.html (+2ms)
+15:18:29   ├─ /blog/fireflies-vs-otter/index.html (+2ms)
+15:18:29   ├─ /blog/gemini-vs-chatgpt-2026/index.html (+1ms)
+15:18:29   ├─ /blog/ideogram-vs-midjourney/index.html (+1ms)
+15:18:29   ├─ /blog/leonardo-vs-canva-ai/index.html (+1ms)
+15:18:29   ├─ /blog/midjourney-vs-dalle-2026/index.html (+1ms)
+15:18:29   ├─ /blog/midjourney-vs-dalle3/index.html (+2ms)
+15:18:29   ├─ /blog/midjourney-vs-flux/index.html (+3ms)
+15:18:29   ├─ /blog/notion-ai-vs-coda-ai-2026/index.html (+2ms)
+15:18:29   ├─ /blog/perplexity-vs-chatgpt-2026/index.html (+2ms)
+15:18:29   ├─ /blog/replit-vs-bolt/index.html (+1ms)
+15:18:29   ├─ /blog/runway-vs-pika/index.html (+1ms)
+15:18:29   ├─ /blog/sora-vs-kling/index.html (+1ms)
+15:18:29   ├─ /blog/sora-vs-runway/index.html (+1ms)
+15:18:29   ├─ /blog/v0-vs-lovable/index.html (+1ms)
+15:18:29   └─ /blog/windsurf-vs-cline/index.html (+2ms)
+15:18:29 ▶ src/pages/blog/index.astro
+15:18:29   └─ /blog/index.html (+6ms)
+15:18:29 ▶ src/pages/case-studies.astro
+15:18:29   └─ /case-studies/index.html (+3ms)
+15:18:29 ▶ src/pages/category/[slug].astro
+15:18:29   ├─ /category/text/index.html (+4ms)
+15:18:29   ├─ /category/image/index.html (+4ms)
+15:18:29   ├─ /category/code/index.html (+3ms)
+15:18:29   ├─ /category/video/index.html (+3ms)
+15:18:29   ├─ /category/audio/index.html (+2ms)
+15:18:29   └─ /category/productivity/index.html (+3ms)
+15:18:29 ▶ src/pages/category/[slug].astro
+15:18:29   ├─ /zh/category/text/index.html15:18:29 [WARN] `Astro.request.headers` is unavailable in "static" output mode, and in prerendered pages within "hybrid" and "server" output modes. If you need access to request headers, make sure that `output` is configured as either `"server"` or `output: "hybrid"` in your config file, and that the page accessing the headers is rendered on-demand.
+ (+7ms)
+15:18:29   ├─ /zh/category/image/index.html15:18:29 [WARN] `Astro.request.headers` is unavailable in "static" output mode, and in prerendered pages within "hybrid" and "server" output modes. If you need access to request headers, make sure that `output` is configured as either `"server"` or `output: "hybrid"` in your config file, and that the page accessing the headers is rendered on-demand.
+ (+8ms)
+15:18:29   ├─ /zh/category/code/index.html15:18:29 [WARN] `Astro.request.headers` is unavailable in "static" output mode, and in prerendered pages within "hybrid" and "server" output modes. If you need access to request headers, make sure that `output` is configured as either `"server"` or `output: "hybrid"` in your config file, and that the page accessing the headers is rendered on-demand.
+ (+4ms)
+15:18:29   ├─ /zh/category/video/index.html15:18:29 [WARN] `Astro.request.headers` is unavailable in "static" output mode, and in prerendered pages within "hybrid" and "server" output modes. If you need access to request headers, make sure that `output` is configured as either `"server"` or `output: "hybrid"` in your config file, and that the page accessing the headers is rendered on-demand.
+ (+7ms)
+15:18:29   ├─ /zh/category/audio/index.html15:18:29 [WARN] `Astro.request.headers` is unavailable in "static" output mode, and in prerendered pages within "hybrid" and "server" output modes. If you need access to request headers, make sure that `output` is configured as either `"server"` or `output: "hybrid"` in your config file, and that the page accessing the headers is rendered on-demand.
+ (+3ms)
+15:18:30   └─ /zh/category/productivity/index.html15:18:30 [WARN] `Astro.request.headers` is unavailable in "static" output mode, and in prerendered pages within "hybrid" and "server" output modes. If you need access to request headers, make sure that `output` is configured as either `"server"` or `output: "hybrid"` in your config file, and that the page accessing the headers is rendered on-demand.
+ (+2ms)
+15:18:30 ▶ src/pages/category/index.astro
+15:18:30   └─ /category/index.html (+1ms)
+15:18:30 λ src/pages/changelog.xml.ts
+15:18:30   └─ /changelog.xml (+1ms)
+15:18:30 ▶ src/pages/changelog.astro
+15:18:30   └─ /changelog/index.html (+2ms)
+15:18:30 ▶ src/pages/contact.astro
+15:18:30   └─ /contact/index.html (+1ms)
+15:18:30 ▶ src/pages/editorial-guidelines.astro
+15:18:30   └─ /editorial-guidelines/index.html (+1ms)
+15:18:30 ▶ src/pages/glossary.astro
+15:18:30   └─ /glossary/index.html (+2ms)
+15:18:30 ▶ src/pages/index.astro
+15:18:30   └─ /index.html (+4ms)
+15:18:30 ▶ src/pages/index.astro
+15:18:30   └─ /zh/index.html15:18:30 [WARN] `Astro.request.headers` is unavailable in "static" output mode, and in prerendered pages within "hybrid" and "server" output modes. If you need access to request headers, make sure that `output` is configured as either `"server"` or `output: "hybrid"` in your config file, and that the page accessing the headers is rendered on-demand.
+ (+3ms)
+15:18:30 ▶ src/pages/methodology.astro
+15:18:30   └─ /methodology/index.html (+2ms)
+15:18:30 ▶ src/pages/newsletter.astro
+15:18:30   └─ /newsletter/index.html (+2ms)
+15:18:30 ▶ src/pages/press-kit.astro
+15:18:30   └─ /press-kit/index.html (+1ms)
+15:18:30 ▶ src/pages/privacy.astro
+15:18:30   └─ /privacy/index.html (+2ms)
+15:18:30 ▶ src/pages/prompts/index.astro
+15:18:30   └─ /prompts/index.html (+2ms)
+15:18:30 λ src/pages/rss.xml.ts
+15:18:30   └─ /rss.xml (+5ms)
+15:18:30 ▶ src/pages/solutions/[slug].astro
+15:18:30   ├─ /solutions/ai-for-developers/index.html (+3ms)
+15:18:30   ├─ /solutions/ai-for-marketing/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-education/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-business/index.html (+1ms)
+15:18:30   ├─ /solutions/ai-for-creatives/index.html (+4ms)
+15:18:30   ├─ /solutions/ai-for-healthcare/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-finance/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-legal/index.html (+1ms)
+15:18:30   ├─ /solutions/ai-for-architecture/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-construction/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-structural-engineers/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-civil-engineers/index.html (+1ms)
+15:18:30   ├─ /solutions/ai-for-hvac-engineers/index.html (+1ms)
+15:18:30   ├─ /solutions/ai-for-bim/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-industrial-design/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-engineers/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-small-business/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-students/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-mechanical-engineers/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-electrical-engineers/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-mep-engineers/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-bridge-engineers/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-steel-detailers/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-surveyors/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-quantity-surveyors/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-fire-protection-engineers/index.html (+2ms)
+15:18:30   ├─ /solutions/ai-for-plumbing-engineers/index.html (+2ms)
+15:18:30   └─ /solutions/ai-for-project-engineers/index.html (+2ms)
+15:18:30 ▶ src/pages/solutions/index.astro
+15:18:30   └─ /solutions/index.html (+2ms)
+15:18:30 ▶ src/pages/sponsor.astro
+15:18:30   └─ /sponsor/index.html (+2ms)
+15:18:30 ▶ src/pages/submit-sitemap.astro
+15:18:30   └─ /submit-sitemap/index.html (+1ms)
+15:18:30 ▶ src/pages/submit-tool.astro
+15:18:30   └─ /submit-tool/index.html (+2ms)
+15:18:30 ▶ src/pages/team.astro
+15:18:30   └─ /team/index.html (+2ms)
+15:18:30 ▶ src/pages/terms.astro
+15:18:30   └─ /terms/index.html (+1ms)
+15:18:30 ▶ src/pages/tool/[slug].astro
+15:18:30   ├─ /tool/claude/index.html (+4ms)
+15:18:30   ├─ /tool/gemini/index.html (+2ms)
+15:18:30   ├─ /tool/github-copilot/index.html (+2ms)
+15:18:30   ├─ /tool/cursor/index.html (+2ms)
+15:18:30   ├─ /tool/sora/index.html (+2ms)
+15:18:30   ├─ /tool/runway/index.html (+2ms)
+15:18:30   ├─ /tool/midjourney/index.html (+3ms)
+15:18:30   ├─ /tool/stable-diffusion/index.html (+3ms)
+15:18:30   ├─ /tool/leonardo/index.html (+2ms)
+15:18:30   ├─ /tool/elevenlabs/index.html (+2ms)
+15:18:30   ├─ /tool/suno/index.html (+2ms)
+15:18:30   ├─ /tool/descript/index.html (+2ms)
+15:18:30   ├─ /tool/notion-ai/index.html (+2ms)
+15:18:30   ├─ /tool/perplexity/index.html (+2ms)
+15:18:30   ├─ /tool/jasper/index.html (+2ms)
+15:18:30   ├─ /tool/chatgpt/index.html (+2ms)
+15:18:30   ├─ /tool/hostinger/index.html (+2ms)
+15:18:30   ├─ /tool/ideogram/index.html (+2ms)
+15:18:30   ├─ /tool/krea/index.html (+2ms)
+15:18:30   ├─ /tool/flux/index.html (+2ms)
+15:18:30   ├─ /tool/pika/index.html (+2ms)
+15:18:30   ├─ /tool/luma/index.html (+2ms)
+15:18:30   ├─ /tool/kling/index.html (+2ms)
+15:18:30   ├─ /tool/hailuo/index.html (+2ms)
+15:18:30   ├─ /tool/synthesia/index.html (+2ms)
+15:18:30   ├─ /tool/heygen/index.html (+2ms)
+15:18:30   ├─ /tool/play-ht/index.html (+2ms)
+15:18:30   ├─ /tool/otter/index.html (+2ms)
+15:18:30   ├─ /tool/fireflies/index.html (+2ms)
+15:18:30   ├─ /tool/gamma/index.html (+2ms)
+15:18:30   ├─ /tool/cline/index.html (+2ms)
+15:18:30   ├─ /tool/windsurf/index.html (+2ms)
+15:18:30   ├─ /tool/aider/index.html (+2ms)
+15:18:30   ├─ /tool/codeium/index.html (+2ms)
+15:18:30   ├─ /tool/replit/index.html (+2ms)
+15:18:30   ├─ /tool/v0/index.html (+2ms)
+15:18:30   ├─ /tool/lovable/index.html (+2ms)
+15:18:30   ├─ /tool/deepseek/index.html (+2ms)
+15:18:30   ├─ /tool/copy-ai/index.html (+3ms)
+15:18:30   ├─ /tool/canva-ai/index.html (+3ms)
+15:18:30   ├─ /tool/bolt/index.html (+2ms)
+15:18:30   ├─ /tool/udio/index.html (+2ms)
+15:18:30   ├─ /tool/comfyui/index.html (+2ms)
+15:18:30   ├─ /tool/dalle3/index.html (+2ms)
+15:18:30   ├─ /tool/amazon-q/index.html (+2ms)
+15:18:30   ├─ /tool/adobe-firefly/index.html (+2ms)
+15:18:30   ├─ /tool/capcut/index.html (+2ms)
+15:18:30   ├─ /tool/assembly-ai/index.html (+2ms)
+15:18:30   └─ /tool/agnes-ai/index.html (+2ms)
+15:18:30 ▶ src/pages/tools/ai-background-remover.astro
+15:18:30   └─ /tools/ai-background-remover/index.html (+1ms)
+15:18:30 ▶ src/pages/tools/ai-detector.astro
+15:18:30   └─ /tools/ai-detector/index.html (+1ms)
+15:18:30 ▶ src/pages/tools/image-upscaler.astro
+15:18:30   └─ /tools/image-upscaler/index.html (+1ms)
+15:18:30 ▶ src/pages/tools/json-formatter.astro
+15:18:30   └─ /tools/json-formatter/index.html (+1ms)
+15:18:30 ▶ src/pages/tools/markdown-editor.astro
+15:18:30   └─ /tools/markdown-editor/index.html (+1ms)
+15:18:30 ▶ src/pages/tools/ocr-text-recognizer.astro
+15:18:30   └─ /tools/ocr-text-recognizer/index.html (+1ms)
+15:18:30 ▶ src/pages/tools/pdf-to-markdown.astro
+15:18:30   └─ /tools/pdf-to-markdown/index.html (+1ms)
+15:18:30 ▶ src/pages/tools/prompt-optimizer.astro
+15:18:30   └─ /tools/prompt-optimizer/index.html (+1ms)
+15:18:30 ▶ src/pages/tools/regex-generator.astro
+15:18:30   └─ /tools/regex-generator/index.html (+1ms)
+15:18:30 ▶ src/pages/tools/seo-title-generator.astro
+15:18:30   └─ /tools/seo-title-generator/index.html (+1ms)
+15:18:30 ▶ src/pages/tools/token-calculator.astro
+15:18:30   └─ /tools/token-calculator/index.html (+1ms)
+15:18:30 ▶ src/pages/vs/[slug].astro
+15:18:30   ├─ /vs/cursor-vs-windsurf/index.html (+3ms)
+15:18:30   ├─ /vs/cursor-vs-claude-code/index.html (+2ms)
+15:18:30   ├─ /vs/cursor-vs-github-copilot-2026/index.html (+2ms)
+15:18:30   ├─ /vs/cursor-vs-aider/index.html (+1ms)
+15:18:30   ├─ /vs/windsurf-vs-cline/index.html (+1ms)
+15:18:30   ├─ /vs/replit-vs-bolt/index.html (+1ms)
+15:18:30   ├─ /vs/v0-vs-lovable/index.html (+1ms)
+15:18:30   ├─ /vs/midjourney-vs-dalle3/index.html (+1ms)
+15:18:30   ├─ /vs/midjourney-vs-flux/index.html (+2ms)
+15:18:30   ├─ /vs/ideogram-vs-midjourney/index.html (+2ms)
+15:18:30   ├─ /vs/sora-vs-runway/index.html (+2ms)
+15:18:30   ├─ /vs/sora-vs-kling/index.html (+2ms)
+15:18:30   └─ /vs/runway-vs-pika/index.html (+1ms)
+15:18:30 ▶ src/pages/workflows/index.astro
+15:18:30   └─ /workflows/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/about.astro
+15:18:30   └─ /zh/about/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/accessibility.astro
+15:18:30   └─ /zh/accessibility/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/advertise.astro
+15:18:30   └─ /zh/advertise/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/alternatives/[slug].astro
+15:18:30   ├─ /zh/alternatives/claude/index.html (+2ms)
+15:18:30   ├─ /zh/alternatives/gemini/index.html (+2ms)
+15:18:30   ├─ /zh/alternatives/github-copilot/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/cursor/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/sora/index.html (+2ms)
+15:18:30   ├─ /zh/alternatives/runway/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/midjourney/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/stable-diffusion/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/leonardo/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/elevenlabs/index.html (+2ms)
+15:18:30   ├─ /zh/alternatives/suno/index.html (+2ms)
+15:18:30   ├─ /zh/alternatives/descript/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/notion-ai/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/perplexity/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/jasper/index.html (+2ms)
+15:18:30   ├─ /zh/alternatives/chatgpt/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/hostinger/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/ideogram/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/krea/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/flux/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/pika/index.html (+2ms)
+15:18:30   ├─ /zh/alternatives/luma/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/kling/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/hailuo/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/synthesia/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/heygen/index.html (+2ms)
+15:18:30   ├─ /zh/alternatives/play-ht/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/otter/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/fireflies/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/gamma/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/cline/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/windsurf/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/aider/index.html (+2ms)
+15:18:30   ├─ /zh/alternatives/codeium/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/replit/index.html (+2ms)
+15:18:30   ├─ /zh/alternatives/v0/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/lovable/index.html (+2ms)
+15:18:30   ├─ /zh/alternatives/deepseek/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/copy-ai/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/canva-ai/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/bolt/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/udio/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/comfyui/index.html (+2ms)
+15:18:30   ├─ /zh/alternatives/dalle3/index.html (+2ms)
+15:18:30   ├─ /zh/alternatives/amazon-q/index.html (+2ms)
+15:18:30   ├─ /zh/alternatives/adobe-firefly/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/capcut/index.html (+1ms)
+15:18:30   ├─ /zh/alternatives/assembly-ai/index.html (+1ms)
+15:18:30   └─ /zh/alternatives/agnes-ai/index.html (+2ms)
+15:18:30 ▶ src/pages/zh/author/[slug].astro
+15:18:30 ▶ src/pages/zh/best/[slug].astro
+15:18:30   ├─ /zh/best/text/index.html (+3ms)
+15:18:30   ├─ /zh/best/image/index.html (+2ms)
+15:18:30   ├─ /zh/best/code/index.html (+2ms)
+15:18:30   ├─ /zh/best/video/index.html (+2ms)
+15:18:30   ├─ /zh/best/audio/index.html (+3ms)
+15:18:30   └─ /zh/best/productivity/index.html (+2ms)
+15:18:30 ▶ src/pages/zh/best/ai-agents.astro
+15:18:30   └─ /zh/best/ai-agents/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/blog/[slug].astro
+15:18:30   ├─ /zh/blog/agnes-ai-review-free-omni-modal-api-2026/index.html (+2ms)
+15:18:30   ├─ /zh/blog/ai-coding-workflow-2026/index.html (+1ms)
+15:18:30   ├─ /zh/blog/ai-image-generation-best-practices-2026/index.html (+1ms)
+15:18:30   ├─ /zh/blog/ai-meeting-assistant-guide-2026/index.html (+2ms)
+15:18:30   ├─ /zh/blog/ai-music-creation-beginners-2026/index.html (+1ms)
+15:18:30   ├─ /zh/blog/ai-video-creation-guide-2026/index.html (+1ms)
+15:18:30   ├─ /zh/blog/bolt-vs-lovable/index.html (+1ms)
+15:18:30   ├─ /zh/blog/bonsai-27b-on-device-ai-phone-2026/index.html (+1ms)
+15:18:30   ├─ /zh/blog/build-ai-agent-no-code-2026/index.html (+1ms)
+15:18:30   ├─ /zh/blog/chatgpt-vs-claude-2026/index.html (+2ms)
+15:18:30   ├─ /zh/blog/chatgpt-vs-deepseek/index.html (+1ms)
+15:18:30   ├─ /zh/blog/claude-vs-gemini-2026/index.html (+1ms)
+15:18:30   ├─ /zh/blog/comfyui-vs-automatic1111-2026/index.html (+1ms)
+15:18:30   ├─ /zh/blog/cursor-vs-aider/index.html (+1ms)
+15:18:30   ├─ /zh/blog/cursor-vs-claude-code/index.html (+1ms)
+15:18:30   ├─ /zh/blog/cursor-vs-github-copilot-2026/index.html (+1ms)
+15:18:30   ├─ /zh/blog/cursor-vs-github-copilot/index.html (+1ms)
+15:18:30   ├─ /zh/blog/cursor-vs-windsurf/index.html (+1ms)
+15:18:30   ├─ /zh/blog/descript-vs-capcut-2026/index.html (+2ms)
+15:18:30   ├─ /zh/blog/elevenlabs-vs-playht-2026/index.html (+2ms)
+15:18:30   ├─ /zh/blog/fireflies-vs-otter/index.html (+1ms)
+15:18:30   ├─ /zh/blog/gemini-vs-chatgpt-2026/index.html (+1ms)
+15:18:30   ├─ /zh/blog/ideogram-vs-midjourney/index.html (+2ms)
+15:18:30   ├─ /zh/blog/leonardo-vs-canva-ai/index.html (+1ms)
+15:18:30   ├─ /zh/blog/midjourney-vs-dalle-2026/index.html (+1ms)
+15:18:30   ├─ /zh/blog/midjourney-vs-dalle3/index.html (+2ms)
+15:18:30   ├─ /zh/blog/midjourney-vs-flux/index.html (+1ms)
+15:18:30   ├─ /zh/blog/notion-ai-vs-coda-ai-2026/index.html (+1ms)
+15:18:30   ├─ /zh/blog/perplexity-vs-chatgpt-2026/index.html (+2ms)
+15:18:30   ├─ /zh/blog/replit-vs-bolt/index.html (+2ms)
+15:18:30   ├─ /zh/blog/runway-vs-pika/index.html (+2ms)
+15:18:30   ├─ /zh/blog/sora-vs-kling/index.html (+1ms)
+15:18:30   ├─ /zh/blog/sora-vs-runway/index.html (+1ms)
+15:18:30   ├─ /zh/blog/v0-vs-lovable/index.html (+1ms)
+15:18:30   └─ /zh/blog/windsurf-vs-cline/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/blog/index.astro
+15:18:30   └─ /zh/blog/index.html (+2ms)
+15:18:30 ▶ src/pages/zh/case-studies.astro
+15:18:30   └─ /zh/case-studies/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/category/index.astro
+15:18:30   └─ /zh/category/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/changelog.astro
+15:18:30   └─ /zh/changelog/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/contact.astro
+15:18:30   └─ /zh/contact/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/editorial-guidelines.astro
+15:18:30   └─ /zh/editorial-guidelines/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/glossary.astro
+15:18:30   └─ /zh/glossary/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/methodology.astro
+15:18:30   └─ /zh/methodology/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/newsletter.astro
+15:18:30   └─ /zh/newsletter/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/press-kit.astro
+15:18:30   └─ /zh/press-kit/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/privacy.astro
+15:18:30   └─ /zh/privacy/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/prompts/index.astro
+15:18:30   └─ /zh/prompts/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/solutions/[slug].astro
+15:18:30   ├─ /zh/solutions/ai-for-developers/index.html (+4ms)
+15:18:30   ├─ /zh/solutions/ai-for-marketing/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-education/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-business/index.html (+1ms)
+15:18:30   ├─ /zh/solutions/ai-for-creatives/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-healthcare/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-finance/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-legal/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-architecture/index.html (+3ms)
+15:18:30   ├─ /zh/solutions/ai-for-construction/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-structural-engineers/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-civil-engineers/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-hvac-engineers/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-bim/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-industrial-design/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-engineers/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-small-business/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-students/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-mechanical-engineers/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-electrical-engineers/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-mep-engineers/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-bridge-engineers/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-steel-detailers/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-surveyors/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-quantity-surveyors/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-fire-protection-engineers/index.html (+2ms)
+15:18:30   ├─ /zh/solutions/ai-for-plumbing-engineers/index.html (+2ms)
+15:18:30   └─ /zh/solutions/ai-for-project-engineers/index.html (+2ms)
+15:18:30 ▶ src/pages/zh/solutions/index.astro
+15:18:30   └─ /zh/solutions/index.html (+2ms)
+15:18:30 ▶ src/pages/zh/sponsor.astro
+15:18:30   └─ /zh/sponsor/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/submit-sitemap.astro
+15:18:30   └─ /zh/submit-sitemap/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/submit-tool.astro
+15:18:30   └─ /zh/submit-tool/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/team.astro
+15:18:30   └─ /zh/team/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/terms.astro
+15:18:30   └─ /zh/terms/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/tool/[slug].astro
+15:18:30   ├─ /zh/tool/claude/index.html (+3ms)
+15:18:30   ├─ /zh/tool/gemini/index.html (+2ms)
+15:18:30   ├─ /zh/tool/github-copilot/index.html (+2ms)
+15:18:30   ├─ /zh/tool/cursor/index.html (+2ms)
+15:18:30   ├─ /zh/tool/sora/index.html (+4ms)
+15:18:30   ├─ /zh/tool/runway/index.html (+2ms)
+15:18:30   ├─ /zh/tool/midjourney/index.html (+2ms)
+15:18:30   ├─ /zh/tool/stable-diffusion/index.html (+2ms)
+15:18:30   ├─ /zh/tool/leonardo/index.html (+4ms)
+15:18:30   ├─ /zh/tool/elevenlabs/index.html (+2ms)
+15:18:30   ├─ /zh/tool/suno/index.html (+2ms)
+15:18:30   ├─ /zh/tool/descript/index.html (+2ms)
+15:18:30   ├─ /zh/tool/notion-ai/index.html (+2ms)
+15:18:30   ├─ /zh/tool/perplexity/index.html (+2ms)
+15:18:30   ├─ /zh/tool/jasper/index.html (+2ms)
+15:18:30   ├─ /zh/tool/chatgpt/index.html (+2ms)
+15:18:30   ├─ /zh/tool/hostinger/index.html (+2ms)
+15:18:30   ├─ /zh/tool/ideogram/index.html (+2ms)
+15:18:30   ├─ /zh/tool/krea/index.html (+2ms)
+15:18:30   ├─ /zh/tool/flux/index.html (+2ms)
+15:18:30   ├─ /zh/tool/pika/index.html (+2ms)
+15:18:30   ├─ /zh/tool/luma/index.html (+2ms)
+15:18:30   ├─ /zh/tool/kling/index.html (+2ms)
+15:18:30   ├─ /zh/tool/hailuo/index.html (+2ms)
+15:18:30   ├─ /zh/tool/synthesia/index.html (+2ms)
+15:18:30   ├─ /zh/tool/heygen/index.html (+2ms)
+15:18:30   ├─ /zh/tool/play-ht/index.html (+2ms)
+15:18:30   ├─ /zh/tool/otter/index.html (+2ms)
+15:18:30   ├─ /zh/tool/fireflies/index.html (+2ms)
+15:18:30   ├─ /zh/tool/gamma/index.html (+2ms)
+15:18:30   ├─ /zh/tool/cline/index.html (+3ms)
+15:18:30   ├─ /zh/tool/windsurf/index.html (+2ms)
+15:18:30   ├─ /zh/tool/aider/index.html (+2ms)
+15:18:30   ├─ /zh/tool/codeium/index.html (+4ms)
+15:18:30   ├─ /zh/tool/replit/index.html (+2ms)
+15:18:30   ├─ /zh/tool/v0/index.html (+3ms)
+15:18:30   ├─ /zh/tool/lovable/index.html (+2ms)
+15:18:30   ├─ /zh/tool/deepseek/index.html (+2ms)
+15:18:30   ├─ /zh/tool/copy-ai/index.html (+2ms)
+15:18:30   ├─ /zh/tool/canva-ai/index.html (+2ms)
+15:18:30   ├─ /zh/tool/bolt/index.html (+2ms)
+15:18:30   ├─ /zh/tool/udio/index.html (+2ms)
+15:18:30   ├─ /zh/tool/comfyui/index.html (+2ms)
+15:18:30   ├─ /zh/tool/dalle3/index.html (+2ms)
+15:18:30   ├─ /zh/tool/amazon-q/index.html (+2ms)
+15:18:30   ├─ /zh/tool/adobe-firefly/index.html (+2ms)
+15:18:30   ├─ /zh/tool/capcut/index.html (+2ms)
+15:18:30   ├─ /zh/tool/assembly-ai/index.html (+2ms)
+15:18:30   └─ /zh/tool/agnes-ai/index.html (+2ms)
+15:18:30 ▶ src/pages/zh/tools/ai-background-remover.astro
+15:18:30   └─ /zh/tools/ai-background-remover/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/tools/ai-detector.astro
+15:18:30   └─ /zh/tools/ai-detector/index.html (+2ms)
+15:18:30 ▶ src/pages/zh/tools/image-upscaler.astro
+15:18:30   └─ /zh/tools/image-upscaler/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/tools/json-formatter.astro
+15:18:30   └─ /zh/tools/json-formatter/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/tools/markdown-editor.astro
+15:18:30   └─ /zh/tools/markdown-editor/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/tools/ocr-text-recognizer.astro
+15:18:30   └─ /zh/tools/ocr-text-recognizer/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/tools/pdf-to-markdown.astro
+15:18:30   └─ /zh/tools/pdf-to-markdown/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/tools/prompt-optimizer.astro
+15:18:30   └─ /zh/tools/prompt-optimizer/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/tools/regex-generator.astro
+15:18:30   └─ /zh/tools/regex-generator/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/tools/seo-title-generator.astro
+15:18:30   └─ /zh/tools/seo-title-generator/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/tools/token-calculator.astro
+15:18:30   └─ /zh/tools/token-calculator/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/vs/[slug].astro
+15:18:30   ├─ /zh/vs/cursor-vs-windsurf/index.html (+2ms)
+15:18:30   ├─ /zh/vs/cursor-vs-claude-code/index.html (+1ms)
+15:18:30   ├─ /zh/vs/cursor-vs-github-copilot-2026/index.html (+1ms)
+15:18:30   ├─ /zh/vs/cursor-vs-aider/index.html (+1ms)
+15:18:30   ├─ /zh/vs/windsurf-vs-cline/index.html (+2ms)
+15:18:30   ├─ /zh/vs/replit-vs-bolt/index.html (+1ms)
+15:18:30   ├─ /zh/vs/v0-vs-lovable/index.html (+1ms)
+15:18:30   ├─ /zh/vs/midjourney-vs-dalle3/index.html (+2ms)
+15:18:30   ├─ /zh/vs/midjourney-vs-flux/index.html (+1ms)
+15:18:30   ├─ /zh/vs/ideogram-vs-midjourney/index.html (+1ms)
+15:18:30   ├─ /zh/vs/sora-vs-runway/index.html (+1ms)
+15:18:30   ├─ /zh/vs/sora-vs-kling/index.html (+1ms)
+15:18:30   └─ /zh/vs/runway-vs-pika/index.html (+1ms)
+15:18:30 ▶ src/pages/zh/workflows/index.astro
+15:18:30   └─ /zh/workflows/index.html (+1ms)
+15:18:30 ✓ Completed in 1.26s.
+
+15:18:30 [build] Rearranging server assets...
+15:18:30 [@astrojs/sitemap] `sitemap-index.xml` created at `dist\client`
+15:18:30 [build] Server built in 4.58s
+15:18:30 [build] Complete!
+
+BUILD SUCCESS

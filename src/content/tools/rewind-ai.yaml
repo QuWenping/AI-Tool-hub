@@ -1,0 +1,24 @@
+name:
+  en: Rewind AI
+  zh: Rewind AI
+short_desc:
+  en: AI life search engine
+  zh: AI 生活搜索引擎
+long_desc:
+  en: Search through everything you have seen on your computer
+cat: productivity
+url: https://rewind.ai
+icon: fa-undo
+scenes:
+  en:
+  - search
+  - productivity
+  - memory
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

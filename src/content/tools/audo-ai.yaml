@@ -1,0 +1,24 @@
+name:
+  en: Audo AI
+  zh: Audo AI
+short_desc:
+  en: AI audio noise removal
+  zh: AI 音频降噪
+long_desc:
+  en: Auto-remove background noise from recordings
+cat: audio
+url: https://audo.ai
+icon: fa-volume-up
+scenes:
+  en:
+  - noise-removal
+  - cleanup
+  - podcast
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

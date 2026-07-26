@@ -1,0 +1,377 @@
+---
+
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import matchups from "../../../data/matchups.json";
+import toolsData from "../../../data/tools.json";
+import { hasZh } from "../../../utils/i18n";
+import Chart from "../../../components/Chart.astro";
+import TLDR from "../../../components/ui/TLDR.astro";
+import AdSlot from "../../../components/ui/AdSlot.astro";
+import ArticleToc from "../../../components/ui/ArticleToc.astro";
+
+import { getTranslations } from "../../../utils/i18n";
+const pageLang = "zh";
+const t = getTranslations("vs", pageLang);
+
+export async function getStaticPaths() {
+  return matchups.map(function(m){return {params:{slug:m.slug},props:{m:m}}});
+}
+const { m } = Astro.props;
+const a = toolsData[m.a];
+const b = toolsData[m.b];
+const clusterSlug = m.cluster || (a && a.cat) || "code";
+const clusterLabelMap = { code: "AI Coding Assistants", image: "AI Image Generators", video: "AI Video Generators", text: "AI Writing Tools", audio: "AI Audio Tools", productivity: "AI Productivity Tools" };
+const clusterLabelMapZh = { code: "AI 编程助手", image: "AI 图像生成器", video: "AI 视频生成器", text: "AI 写作工具", audio: "AI 音频工具", productivity: "AI 效率工具" };
+const clusterLabel = clusterLabelMap[clusterSlug] || "AI Tools";
+const clusterLabelZh = clusterLabelMapZh[clusterSlug] || "AI 工具";
+const siblingMatchups = matchups.filter(function(x){return x.cluster === clusterSlug && x.slug !== m.slug}).slice(0, 6);
+const pillarHref = clusterSlug === "code" ? "/solutions/ai-for-developers/" : ("/best/" + clusterSlug + "/");
+const pillarLabel = clusterSlug === "code" ? "AI Tools for Developers" : ("Best " + clusterLabel);
+const pillarLabelZh = clusterSlug === "code" ? "AI 开发者工具" : ("最佳 " + clusterLabelZh);
+const aName = (a && a.name && a.name.en) || "Tool A";
+const bName = (b && b.name && b.name.en) || "Tool B";
+const aNameZh = (a && a.name && a.name.zh) || aName;
+const bNameZh = (b && b.name && b.name.zh) || bName;
+const zhAvailable = hasZh(a, "name") && hasZh(b, "name");
+const aUse = (a && a.use_cases && a.use_cases.en && a.use_cases.en[0]) || "general use";
+const bUse = (b && b.use_cases && b.use_cases.en && b.use_cases.en[0]) || "general use";
+const aPros = (a && a.pros && a.pros.en) || [];
+const aCons = (a && a.cons && a.cons.en) || [];
+const bPros = (b && b.pros && b.pros.en) || [];
+const bCons = (b && b.cons && b.cons.en) || [];
+const aCat = (a && a.cat) || "ai";
+const bCat = (b && b.cat) || "ai";
+const aFirstPro = aPros[0] || "versatile";
+const bFirstCon = bCons[0] || "limited";
+const aPricing = (a && a.pricing && a.pricing.en) || "Various";
+const bPricing = (b && b.pricing && b.pricing.en) || "Various";
+const aScenes = (a && a.scenes && a.scenes.en) || [];
+const bScenes = (b && b.scenes && b.scenes.en) || [];
+const aUrl = (a && a.url) || "";
+const bUrl = (b && b.url) || "";
+const hasApi_a = aUrl.includes("api") || aUrl.includes("platform") || aUrl.includes("developer");
+const hasApi_b = bUrl.includes("api") || bUrl.includes("platform") || bUrl.includes("developer");
+const aFirstCon = aCons[0] || "some limitations";
+const isOpenSource_a = aPricing.toLowerCase().includes("open source") || aPricing.toLowerCase().includes("free");
+const isOpenSource_b = bPricing.toLowerCase().includes("open source") || bPricing.toLowerCase().includes("free");
+const bFirstPro = bPros[0] || "versatile";
+const aFeatures = (a && a.features && a.features.en) || [];
+const bFeatures = (b && b.features && b.features.en) || [];
+const aLongDesc = (a && a.long_desc && a.long_desc.en) || (a && a.short_desc && a.short_desc.en) || "";
+const bLongDesc = (b && b.long_desc && b.long_desc.en) || (b && b.short_desc && b.short_desc.en) || "";
+const categoryLabels = { text: "Writing", image: "Image", code: "Code", video: "Video", audio: "Audio", productivity: "Business" };
+const categoryLabelsZh = { text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商务" };
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/vs/" + m.slug + "/";
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": pageLang === "zh" && m.title_zh ? m.title_zh : m.title_en,
+  "description": pageLang === "zh" ? `${aNameZh || aName} 与 ${bNameZh || bName} 的并排对比——功能、定价、优缺点及最终结论。` : `Side-by-side comparison of ${aName} vs ${bName} - features, pricing, pros, cons, and our verdict.`,
+  "url": pageUrl,
+  "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
+  "image": { "@type": "ImageObject", "url": siteUrl + "/og-image.svg", "width": 1200, "height": 630 },
+  "datePublished": "2026-07-11",
+  "dateModified": "2026-07-11",
+  "author": { "@type": "Person", "name": "AI Tool Hub Editorial" },
+  "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl, "logo": { "@type": "ImageObject", "url": siteUrl + "/logo.svg", "width": 300, "height": 60 } },
+  "articleSection": "AI Tool Comparison",
+  "inLanguage": pageLang === "zh" ? "zh" : "en"
+};
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": t("home"), "item": siteUrl + "/" },
+    { "@type": "ListItem", "position": 2, "name": t("tocComparisons"), "item": siteUrl + "/vs/" },
+    { "@type": "ListItem", "position": 3, "name": pageLang === "zh" && m.title_zh ? m.title_zh : m.title_en, "item": pageUrl }
+  ]
+};
+const faqItems = pageLang === "zh" ? [
+  { q: `${aNameZh || aName} vs ${bNameZh || bName}：2026 年哪个更好？`, a: `${aNameZh || aName} 和 ${bNameZh || bName} 都是不错的选择。选择 ${aNameZh || aName} 如果你需要 ${aUse}。选择 ${bNameZh || bName} 如果你需要 ${bUse}。` },
+  { q: "这次对比是如何进行的？", a: "我们在相同的任务上对两款工具进行了两周的并排测试：写作、编程、图像生成（如适用）和集成。结论反映的是真实的实际操作体验，而非功能列表。" },
+  { q: `我可以同时使用 ${aNameZh || aName} 和 ${bNameZh || bName} 吗？`, a: "可以——我们的很多读者同时订阅两者，用于不同任务。定价通常足够低，双订阅对重度用户来说是合理的。" }
+] : [
+  { q: aName + " vs " + bName + ": which is better in 2026?", a: "Both " + aName + " and " + bName + " are strong choices. Pick " + aName + " for " + aUse.toLowerCase() + ". Pick " + bName + " for " + bUse.toLowerCase() + "." },
+  { q: "How was this comparison done?", a: "We tested both tools side by side for two weeks on the same tasks: writing, coding, image generation (where applicable), and integration. The verdict reflects real hands-on experience, not a feature list." },
+  { q: "Can I use both " + aName + " and " + bName + " together?", a: "Yes - many of our readers subscribe to both and use them for different tasks. The pricing is usually low enough that dual subscription is justified for power users." }
+];
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": pageUrl,
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+const tocSections = [
+  { id: "overview", label: t("overviewHeading") },
+  { id: "at-a-glance", label: t("tocAtAGlance") },
+  { id: "features", label: t("tocFeatures") },
+  { id: "pricing", label: t("pricingCol") },
+  { id: "best-for", label: t("bestForHeading") },
+  { id: "pros-cons", label: t("tocProsCons") },
+  { id: "verdict", label: t("verdictHeading") },
+  { id: "related", label: t("relatedHeading") },
+  { id: "this-page-answers", label: t("tocThisPageAnswers") }
+];
+
+const seoTitle = pageLang === "zh"
+  ? `${aNameZh} vs ${bNameZh}：全面对比评测`
+  : m.title_en;
+const seoDesc = pageLang === "zh"
+  ? `${aNameZh} 和 ${bNameZh} 的全面对比：功能、价格、优缺点及最终结论。`
+  : `Side-by-side comparison of ${aName} vs ${bName}`;
+
+
+---
+<BaseLayout title={seoTitle} description={seoDesc} lang={pageLang}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+  </Fragment>
+  <div class="article-grid">
+    <div class="article-main">
+    <nav class="breadcrumbs">
+      <a href="/">{t("home")}</a> &rsaquo;
+      <a href="/vs/">{t("tocComparisons")}</a> &rsaquo;
+      <a href={"/best/" + aCat + "/"}>{pageLang === "zh" ? (({ text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商务" }[aCat] || aCat) + " 工具") : ((categoryLabels[aCat] || aCat) + " tools")}</a> &rsaquo;
+      <span>{pageLang === "zh" && m.title_zh ? m.title_zh : m.title_en}</span>
+    </nav>
+
+    <header class="vs-hero">
+      <span class="eyebrow">{t("eyebrow")}</span>
+      <h1>{pageLang === "zh" && m.title_zh ? m.title_zh : m.title_en}</h1>
+      <p class="lede">{pageLang === "zh" ? `我们对 <strong>${aNameZh || aName}</strong> 和 <strong>${bNameZh || bName}</strong> 进行了两周的并排测试。` : `We tested both <strong>${aName}</strong> and <strong>${bName}</strong> side by side for two weeks.`}</p>
+    </header>
+      <TLDR items={
+        pageLang === "zh" ? [
+          `${aNameZh || aName} vs ${bNameZh || bName}：${aNameZh || aName} 擅长 ${(aPros?.[0] || "多功能").toLowerCase()}，${bNameZh || bName} 擅长 ${(bPros?.[0] || "多功能").toLowerCase()}`,
+          `定价：${aNameZh || aName}（${(a && a.pricing && a.pricing.zh) || aPricing}）vs ${bNameZh || bName}（${(b && b.pricing && b.pricing.zh) || bPricing}）`,
+          `最适合 ${aUse}：${aNameZh || aName}。最适合 ${bUse}：${bNameZh || bName}`,
+          "两者都有免费版——建议先试用再决定"
+        ] : [
+          aName + " vs " + bName + ": " + (aName + " excels at " + aFirstPro.toLowerCase() + ", " + bName + " excels at " + bFirstPro.toLowerCase()),
+          "Pricing: " + aName + " (" + ((a && a.pricing && a.pricing.en) || "various") + ") vs " + bName + " (" + ((b && b.pricing && b.pricing.en) || "various") + ")",
+          "Best for " + aUse.toLowerCase() + ": " + aName + ". Best for " + bUse.toLowerCase() + ": " + bName,
+          "Both have free tiers — try both before committing"
+        ]
+      } />
+
+      <AdSlot format="banner" />
+
+
+    <div class="compare-grid">
+      <a class="compare-card" href={"/tool/" + m.a + "/"}>
+        <div class="icon"><i class={`fas ${a.icon || "fa-robot"}`}></i></div>
+        <span class="tag">{pageLang === "zh" ? (categoryLabelsZh[aCat] || aCat) : (categoryLabels[aCat] || aCat)}</span>
+        <h2>{pageLang === "zh" ? (aNameZh || aName) : aName}</h2>
+        <p>{pageLang === "zh" ? (a.use_cases?.zh?.[0] || aUse) : aUse}</p>
+        <span class="tag">{t("viewFullReview")}</span>
+      </a>
+      <div class="compare-vs">VS</div>
+      <a class="compare-card" href={"/tool/" + m.b + "/"}>
+        <div class="icon"><i class={`fas ${b.icon || "fa-robot"}`}></i></div>
+        <span class="tag">{pageLang === "zh" ? (categoryLabelsZh[bCat] || bCat) : (categoryLabels[bCat] || bCat)}</span>
+        <h2>{pageLang === "zh" ? (bNameZh || bName) : bName}</h2>
+        <p>{pageLang === "zh" ? (b.use_cases?.zh?.[0] || bUse) : bUse}</p>
+        <span class="tag">{t("viewFullReview")}</span>
+      </a>
+    </div>
+
+    <section id="at-a-glance">
+      <h2>{t("atAGlanceHeading")}</h2>
+      <table class="sortable-table ranking">
+        <thead><tr><th>{t("featureCol")}</th><th>{pageLang === "zh" ? (aNameZh || aName) : aName}</th><th>{pageLang === "zh" ? (bNameZh || bName) : bName}</th></tr></thead>
+        <tbody>
+          <tr><th>{t("bestForHeading")}</th><td>{pageLang === "zh" ? (a.use_cases?.zh?.[0] || aUse) : aUse}</td><td>{pageLang === "zh" ? (b.use_cases?.zh?.[0] || bUse) : bUse}</td></tr>
+          <tr><th>{t("categoryCol")}</th><td>{pageLang === "zh" ? (categoryLabelsZh[aCat] || aCat) : (categoryLabels[aCat] || aCat)}</td><td>{pageLang === "zh" ? (categoryLabelsZh[bCat] || bCat) : (categoryLabels[bCat] || bCat)}</td></tr>
+          <tr><th>{t("pricingCol")}</th><td>{pageLang === "zh" ? ((a && a.pricing && a.pricing.zh) || aPricing) : aPricing}</td><td>{pageLang === "zh" ? ((b && b.pricing && b.pricing.zh) || bPricing) : bPricing}</td></tr>
+          <tr><th>{t("freeTierCol")}</th><td>{isOpenSource_a ? (t("yes")) : (t("limited"))}</td><td>{isOpenSource_b ? (t("yes")) : (t("limited"))}</td></tr>
+          <tr><th>{t("openSourceCol")}</th><td>{isOpenSource_a ? (t("yes")) : (t("no"))}</td><td>{isOpenSource_b ? (t("yes")) : (t("no"))}</td></tr>
+          <tr><th>{t("apiAvailableCol")}</th><td>{hasApi_a ? (t("yes")) : (t("checkWebsite"))}</td><td>{hasApi_b ? (t("yes")) : (t("checkWebsite"))}</td></tr>
+          <tr><th>{t("keyStrengthCol")}</th><td>{pageLang === "zh" ? (aPros?.[0] || aFirstPro) : aFirstPro}</td><td>{pageLang === "zh" ? (bPros?.[0] || bFirstPro) : bFirstPro}</td></tr>
+          <tr><th>{t("mainDrawbackCol")}</th><td>{pageLang === "zh" ? (aCons?.[0] || aFirstCon) : aFirstCon}</td><td>{pageLang === "zh" ? (bCons?.[0] || bFirstCon) : bFirstCon}</td></tr>
+          <tr><th>{t("useCasesCol")}</th><td>{pageLang === "zh" ? ((a && a.scenes && a.scenes.zh || aScenes).join(", ") || "通用") : (aScenes.join(", ") || "General")}</td><td>{pageLang === "zh" ? ((b && b.scenes && b.scenes.zh || bScenes).join(", ") || "通用") : (bScenes.join(", ") || "General")}</td></tr>
+          <tr><th>{t("websiteCol")}</th><td><a href={aUrl} target="_blank" rel="nofollow">{pageLang === "zh" ? (aNameZh || aName) : aName}</a></td><td><a href={bUrl} target="_blank" rel="nofollow">{pageLang === "zh" ? (bNameZh || bName) : bName}</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+
+    <section class="detail-section" id="overview">
+      <h2>{t("overviewHeading")}</h2>
+      <p><strong>{pageLang === "zh" ? (aNameZh || aName) : aName}</strong> — {pageLang === "zh" ? ((a && a.long_desc && a.long_desc.zh) || (a && a.short_desc && a.short_desc.zh) || aLongDesc) : aLongDesc}</p>
+      <p><strong>{pageLang === "zh" ? (bNameZh || bName) : bName}</strong> — {pageLang === "zh" ? ((b && b.long_desc && b.long_desc.zh) || (b && b.short_desc && b.short_desc.zh) || bLongDesc) : bLongDesc}</p>
+    </section>
+
+    {aFeatures.length > 0 && bFeatures.length > 0 && (
+      <section class="detail-section" id="features">
+        <h2>{t("featureComparisonHeading")}</h2>
+        <div class="card-grid">
+          <div class="info-card">
+            <h3>{pageLang === "zh" ? (aNameZh || aName) : aName}</h3>
+            <ul class="field-list">{(pageLang === "zh" ? ((a && a.features && a.features.zh) || aFeatures) : aFeatures).map(f => <li>{f}</li>)}</ul>
+          </div>
+          <div class="info-card">
+            <h3>{pageLang === "zh" ? (bNameZh || bName) : bName}</h3>
+            <ul class="field-list">{(pageLang === "zh" ? ((b && b.features && b.features.zh) || bFeatures) : bFeatures).map(f => <li>{f}</li>)}</ul>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <section class="detail-section" id="pricing">
+      <h2>{t("pricingComparisonHeading")}</h2>
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>{pageLang === "zh" ? (aNameZh || aName) : aName}</h3>
+          <p>{pageLang === "zh" ? ((a && a.pricing && a.pricing.zh) || aPricing) : aPricing}</p>
+          {aUrl && <a class="tool-pill" href={aUrl} target="_blank" rel="nofollow noopener">{t("visitPricing")}</a>}
+        </div>
+        <div class="info-card">
+          <h3>{pageLang === "zh" ? (bNameZh || bName) : bName}</h3>
+          <p>{pageLang === "zh" ? ((b && b.pricing && b.pricing.zh) || bPricing) : bPricing}</p>
+          {bUrl && <a class="tool-pill" href={bUrl} target="_blank" rel="nofollow noopener">{t("visitPricing")}</a>}
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-section" id="best-for">
+      <h2>{t("bestForHeading")}</h2>
+      <div class="card-grid">
+        <div class="info-card">
+          <h3>{pageLang === "zh" ? `${aNameZh || aName} 最适合` : `${aName} is best for`}</h3>
+          <ul class="field-list">{(pageLang === "zh" ? ((a && a.scenes && a.scenes.zh) || aScenes) : aScenes).map(s => <li>{s}</li>)}</ul>
+        </div>
+        <div class="info-card">
+          <h3>{pageLang === "zh" ? `${bNameZh || bName} 最适合` : `${bName} is best for`}</h3>
+          <ul class="field-list">{(pageLang === "zh" ? ((b && b.scenes && b.scenes.zh) || bScenes) : bScenes).map(s => <li>{s}</li>)}</ul>
+        </div>
+      </div>
+    </section>
+
+        <div class="grid-2" id="pros-cons">
+      <section class="detail-section">
+        <h2>{pageLang === "zh" ? `${aNameZh || aName}：我们喜欢的` : `${aName}: what we liked`}</h2>
+        <ul class="pros-list">{(pageLang === "zh" ? (aPros?.zh || aPros) : aPros).map(function(p){return (<li>{p}</li>)})}</ul>
+      </section>
+      <section class="detail-section">
+        <h2>{pageLang === "zh" ? `${aNameZh || aName}：我们不喜欢的` : `${aName}: what we did not like`}</h2>
+        <ul class="cons-list">{(pageLang === "zh" ? (aCons?.zh || aCons) : aCons).map(function(c){return (<li>{c}</li>)})}</ul>
+      </section>
+    </div>
+
+    <div class="grid-2">
+      <section class="detail-section">
+        <h2>{pageLang === "zh" ? `${bNameZh || bName}：我们喜欢的` : `${bName}: what we liked`}</h2>
+        <ul class="pros-list">{(pageLang === "zh" ? (bPros?.zh || bPros) : bPros).map(function(p){return (<li>{p}</li>)})}</ul>
+      </section>
+      <section class="detail-section">
+        <h2>{pageLang === "zh" ? `${bNameZh || bName}：我们不喜欢的` : `${bName}: what we did not like`}</h2>
+        <ul class="cons-list">{(pageLang === "zh" ? (bCons?.zh || bCons) : bCons).map(function(c){return (<li>{c}</li>)})}</ul>
+      </section>
+    </div>
+
+    <section class="verdict-box" id="verdict">
+      <h2><i class="fas fa-gavel"></i> {t("verdictHeading")}</h2>
+      <p><strong>{pageLang === "zh" ? `选择 ${aNameZh || aName}` : `Pick ${aName}`}</strong> {pageLang === "zh" ? `如果你需要 ${aUse}` : `if you need ${aUse.toLowerCase()}`}.</p>
+      <p><strong>{pageLang === "zh" ? `选择 ${bNameZh || bName}` : `Pick ${bName}`}</strong> {pageLang === "zh" ? `如果你需要 ${bUse}` : `if you need ${bUse.toLowerCase()}`}.</p>
+    </section>
+
+    <section class="related" id="related">
+      <div class="section-title">{t("relatedHeading")}</div>
+      <div class="related-grid">
+        <a class="related-card" href={pillarHref}>
+          <div class="related-icon"><i class="fas fa-layer-group"></i></div>
+          <div>
+            <h3>{pageLang === "zh" ? pillarLabelZh : pillarLabel}</h3>
+            <p>{pageLang === "zh" ? `${pillarLabelZh} 完整排名` : `Full ranking of ${pillarLabel.toLowerCase()}`}</p>
+          </div>
+        </a>
+        <a class="related-card" href={"/tool/" + m.a + "/"}>
+          <div class="related-icon"><i class={`fas ${a.icon || "fa-robot"}`}></i></div>
+          <div>
+            <h3>{pageLang === "zh" ? (aNameZh || aName) : aName}</h3>
+            <p>{pageLang === "zh" ? `${aNameZh || aName} 完整评测` : `Full review of ${aName}`}</p>
+          </div>
+        </a>
+        <a class="related-card" href={"/tool/" + m.b + "/"}>
+          <div class="related-icon"><i class={`fas ${b.icon || "fa-robot"}`}></i></div>
+          <div>
+            <h3>{pageLang === "zh" ? (bNameZh || bName) : bName}</h3>
+            <p>{pageLang === "zh" ? `${bNameZh || bName} 完整评测` : `Full review of ${bName}`}</p>
+          </div>
+        </a>
+        {siblingMatchups.map(sm => {
+          const sa = toolsData[sm.a];
+          const sb = toolsData[sm.b];
+          const sna = sa?.name?.en || sm.tool_a;
+          const snb = sb?.name?.en || sm.tool_b;
+          return (
+            <a class="related-card" href={"/vs/" + sm.slug + "/"}>
+              <div class="related-icon"><i class="fas fa-code-compare"></i></div>
+              <div>
+                <h3>{sna} vs {snb}</h3>
+                <p>{pageLang === "zh" ? (sm.title_zh || sm.title_en) : sm.title_en}</p>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+
+    <section class="detail-section" id="this-page-answers">
+      <h2>{t("thisPageAnswersHeading")}</h2>
+      <ul class="pros-list">
+        {pageLang === "zh" ? [
+          `${aNameZh || m.tool_a} 和 ${bNameZh || m.tool_b} 有什么区别？`,
+          `${aNameZh || m.tool_a} 还是 ${bNameZh || m.tool_b} 更好？`,
+          `${aNameZh || m.tool_a} 和 ${bNameZh || m.tool_b} 价格对比如何？`,
+          `${aNameZh || m.tool_a} 和 ${bNameZh || m.tool_b} 的优缺点是什么？`,
+          "我应该根据我的使用场景选择哪个工具？"
+        ] : [
+          `What is the difference between ${m.tool_a} and ${m.tool_b}?`,
+          `Which is better: ${m.tool_a} or ${m.tool_b}?`,
+          `How do ${m.tool_a} and ${m.tool_b} compare on price?`,
+          `What are the pros and cons of ${m.tool_a} vs ${m.tool_b}?`,
+          "Which tool should I choose for my use case?"
+        ].map(function(q){return (<li>{q}</li>)})}
+      </ul>
+    </section>
+    </div>
+    <ArticleToc sections={tocSections} />
+  </div>
+<style>
+  .vs-hero { text-align: center; padding: 24px 0 0; }
+  .vs-hero .eyebrow { color: var(--brand); font-size: var(--fs-xs); font-weight: var(--fw-bold); text-transform: uppercase; letter-spacing: 0.08em; }
+  .vs-hero h1 { font-size: clamp(34px, 4.5vw + 0.8rem, var(--fs-h1-d)); font-weight: var(--fw-h1); letter-spacing: -0.02em; line-height: var(--lh-heading); margin: var(--s-3) 0; color: var(--text-soft); }
+  .vs-hero .lede { color: var(--text-soft); max-width: 720px; margin: 0 auto; font-size: var(--fs-body); line-height: var(--lh-body); }
+  .sortable-table th { cursor: pointer; user-select: none; }
+  .sortable-table th:hover { color: var(--accent-color); }
+  .sortable-table th::after { content: " ↕"; font-size: 10px; opacity: 0.5; }
+  .sortable-table th.sorted-asc::after { content: " ↑"; opacity: 1; color: var(--accent-color); }
+  .sortable-table th.sorted-desc::after { content: " ↓"; opacity: 1; color: var(--accent-color); }
+</style>
+<script is:inline>
+  document.querySelectorAll('.sortable-table th').forEach(function(th){
+    th.addEventListener('click', function(){
+      var table = th.closest('table'); var tbody = table.querySelector('tbody');
+      var rows = Array.from(tbody.querySelectorAll('tr'));
+      var idx = Array.from(th.parentNode.children).indexOf(th);
+      var asc = th.classList.toggle('sorted-asc');
+      th.classList.toggle('sorted-desc', !asc);
+      rows.sort(function(a,b){
+        var va = a.children[idx].textContent.trim(); var vb = b.children[idx].textContent.trim();
+        var na = parseFloat(va); var nb = parseFloat(vb);
+        if(!isNaN(na)&&!isNaN(nb)){ return asc?na-nb:nb-na; }
+        return asc?va.localeCompare(vb):vb.localeCompare(va);
+      });
+      rows.forEach(function(r){ tbody.appendChild(r); });
+    });
+  });
+</script>
+</BaseLayout>

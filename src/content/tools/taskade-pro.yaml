@@ -1,0 +1,24 @@
+name:
+  en: Taskade Pro
+  zh: Taskade Pro
+short_desc:
+  en: AI project management
+  zh: AI 项目管理专业版
+long_desc:
+  en: AI project management with auto-generated workflows
+cat: productivity
+url: https://taskade.com
+icon: fa-list
+scenes:
+  en:
+  - project
+  - management
+  - ai
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

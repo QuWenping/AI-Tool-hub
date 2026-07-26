@@ -1,0 +1,58 @@
+name:
+  en: Taskade
+  zh: Taskade
+short_desc:
+  en: AI team collaboration and project management
+  zh: AI 团队协作和项目管理
+long_desc:
+  en: >-
+    Taskade combines AI assistant with project management, supporting tasks, notes, mind maps, and team collab.
+cat: productivity
+url: https://www.taskade.com
+icon: fa-tasks
+scenes:
+  en:
+  - Project mgmt
+  - Task mgmt
+  - Team collab
+  - Mind maps
+  zh:
+  - 项目管理
+  - 团队协作
+  - AI 工作流
+  - 思维导图
+pros:
+  en:
+  - AI integrated
+  - Generous free
+  - Multi-view
+  zh:
+  - 项目管理和 AI 一体化
+  - AI 自动生成项目计划
+  - 价格合理
+cons:
+  en:
+  - Less flexible than Notion
+  - Fewer integrations
+  zh:
+  - 项目管理深度不如 Asana
+  - AI 功能不如独立工具
+target_audience:
+  en:
+  - Teams
+  - PMs
+  - Remote workers
+use_cases:
+  en:
+  - Projects
+  - Tasks
+  - Collab
+  - Notes
+features:
+  en:
+  - AI assistant
+  - Task mgmt
+  - Mind maps
+  - Collab
+example:
+  en: 'Example: Use AI to auto-break a project into a task list.'

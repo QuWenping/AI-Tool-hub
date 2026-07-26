@@ -1,0 +1,24 @@
+name:
+  en: Asana AI
+  zh: Asana AI
+short_desc:
+  en: AI work management
+  zh: AI 工作管理
+long_desc:
+  en: AI-powered work management and project tracking
+cat: productivity
+url: https://asana.com
+icon: fa-tasks
+scenes:
+  en:
+  - project
+  - tracking
+  - management
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

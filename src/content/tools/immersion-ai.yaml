@@ -1,0 +1,24 @@
+name:
+  en: Immersion AI
+  zh: Immersion AI
+short_desc:
+  en: AI immersive video
+  zh: AI 沉浸式视频
+long_desc:
+  en: AI-generated immersive and 360 video content
+cat: video
+url: https://immersion.ai
+icon: fa-video
+scenes:
+  en:
+  - video
+  - '360'
+  - immersive
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Paid

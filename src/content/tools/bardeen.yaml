@@ -1,0 +1,46 @@
+name:
+  en: Bardeen
+  zh: Bardeen
+short_desc:
+  en: Browser AI automation tool
+  zh: 浏览器 AI 自动化工具
+long_desc:
+  en: >-
+    Bardeen is a browser extension that uses AI to automate repetitive tasks (data scraping, form filling, notifications).
+cat: productivity
+url: https://bardeen.ai
+icon: fa-bolt
+scenes:
+  en:
+  - Browser automation
+  - Data scraping
+  - Forms
+  - Notifications
+pros:
+  en:
+  - Runs in browser
+  - Usable free
+  - No-code
+cons:
+  en:
+  - Browser only
+  - Weak for complex
+target_audience:
+  en:
+  - Sales
+  - Operations
+  - Marketing
+use_cases:
+  en:
+  - Scraping
+  - Forms
+  - Notifications
+  - Automation
+features:
+  en:
+  - Browser automation
+  - AI
+  - No-code
+  - Free
+example:
+  en: 'Example: Auto-scrape LinkedIn search results to Google Sheets.'

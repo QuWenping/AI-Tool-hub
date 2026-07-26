@@ -1,0 +1,24 @@
+name:
+  en: Zed
+  zh: Zed
+short_desc:
+  en: High-performance editor
+  zh: 高性能编辑器
+long_desc:
+  en: Rust-built high-performance code editor with AI
+cat: code
+url: https://zed.dev
+icon: fa-code
+scenes:
+  en:
+  - editor
+  - performance
+  - rust
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

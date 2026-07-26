@@ -1,4 +1,5 @@
 {
+  "_comment": "MIGRATED: data now in src/content/tools/",
   "chatgpt": {
     "reviewed": true,
     "updatedAt": "2026-07-23",
@@ -44,6 +45,11 @@
     },
     "long_desc": {
       "en": "ChatGPT remains the most versatile AI assistant on the market in 2026, powered by current-generation models and backed by OpenAI's ecosystem of DALL·E image generation, web browsing with live citations, Code Interpreter for data analysis, and a mature voice mode with real-time conversational capabilities. It serves as the daily driver for millions of professionals, students, and creators who need a single tool that handles writing, coding, research, image creation, and real-time conversation without switching contexts. The plugin ecosystem and custom GPTs extend its reach into specialized workflows, from legal document review to SEO content strategy, while the recently expanded memory feature allows persistent personalization across sessions. While its writing style can feel formulaic compared to more prose-focused alternatives like Claude, its breadth of multimodal capabilities remains unmatched at the $20/month price point. For general-purpose productivity, rapid prototyping, and technical problem-solving, ChatGPT is the safest and most capable starting point for most users, balancing cutting-edge performance with broad accessibility. The recently introduced real-time camera mode further extends its utility into visual problem-solving — pointing your phone at a math equation or a broken appliance and getting step-by-step guidance makes ChatGPT genuinely useful in physical-world contexts beyond the screen."
+    },
+    "editorialIntro": "ChatGPT is the AI assistant that started the generative AI boom in late 2022 and remains the most widely used AI product in 2026. The free tier ships GPT-4o mini, and the $20/month Plus plan unlocks GPT-5, image generation, voice mode, and Advanced Data Analysis.",
+    "editorialVerdict": {
+      "best": "You want one assistant that does everything well — plugins, image generation, voice mode — for a fair $20/month.",
+      "avoid": "You publish long-form writing (Claude reads more naturally) or work primarily with video/audio input (Gemini's multimodal is stronger)."
     }
   },
   "claude": {
@@ -91,6 +97,11 @@
     },
     "long_desc": {
       "en": "Claude, developed by Anthropic with a focus on safety and helpfulness, is the AI assistant professionals turn to when writing quality and nuanced reasoning are paramount. Powered by Claude (latest generation) Sonnet and Opus models with a class-leading 200K token context window, it excels at long-form writing, deep document analysis, complex multi-step reasoning, and maintaining consistency across book-length materials. Its prose is consistently rated as the most natural and human-like among leading AI chatbots — a critical advantage for content creators, lawyers, academics, and marketers who need output that doesn't read like AI-generated text. The Artifacts feature enables interactive in-chat experiences like diagrams, dashboards, and fully functional mini-applications directly within the conversation panel. Claude's Projects feature supports team collaboration with shared knowledge bases and custom instructions. Its key limitation is the absence of native web browsing and image generation capabilities, making it a text-centric tool. For writing-intensive professionals who prioritize output quality and depth over multimodal versatility, Claude delivers top-tier performance at $20/month. Organizations in regulated industries — legal, healthcare, and financial services — particularly value Claude's constitutional AI approach, which provides more predictable behavior and stronger safeguards against harmful outputs compared to models without explicit safety training frameworks."
+    },
+    "editorialIntro": "Claude is Anthropic's answer to ChatGPT. In our long-form writing tests it produced the most natural English output among general assistants, and the 200K-token context window lets you paste 100+ pages in one prompt.",
+    "editorialVerdict": {
+      "best": "You write for a living. Long context, Artifacts and natural writing style are best-in-class at $20/month Pro.",
+      "avoid": "You rely on real-time web search (Perplexity or Gemini fit better) or need voice/image tools (ChatGPT Plus is more well-rounded)."
     }
   },
   "gemini": {
@@ -133,6 +144,11 @@
     },
     "long_desc": {
       "en": "Google's Gemini (formerly Bard) has matured into a formidable AI assistant, leveraging Google's unparalleled infrastructure — Search grounding with real-time citations, YouTube integration, Workspace connectivity across Docs and Sheets, and a 2-million-token context window on Ultra models that dwarfs every competitor by an order of magnitude. In 2026, Gemini shines brightest for users deeply embedded in the Google ecosystem: researchers who need real-time web-grounded answers with verifiable sources, teams collaborating in Google Docs and Sheets, and developers using Gemini Code Assist. Its multimodal capabilities — native image, video, and audio understanding — are genuinely first-class, and the Deep Research feature autonomously browses dozens of web pages to produce structured, cited reports in minutes. Limitations include less polished creative writing compared to Claude, occasional factual drift when not grounded in Search, and ongoing product fragmentation across Workspace, AI Studio, and Vertex AI. At $19.99/month for Google One AI Premium including 2TB storage, it's a compelling bundle for Google power users who want an integrated assistant across their entire digital life. The Gemini mobile app further strengthens its value proposition with Gemini Live, enabling natural voice conversations that feel remarkably fluid — ask follow-up questions, interrupt mid-response, or share your camera feed for real-time visual analysis, all within a single continuous conversation."
+    },
+    "editorialIntro": "Gemini 2.5 Pro is Google's flagship multimodal assistant. The 2M-token context window is the largest in the industry, the Google Search integration is the deepest, and Gemini Live delivers the most natural-sounding voice mode.",
+    "editorialVerdict": {
+      "best": "You work with multimodal content (video, audio, images) or live research; Google Search integration is deepest and Gemini Live is the best voice mode.",
+      "avoid": "Your main workload is long-form English writing — Claude reads more naturally."
     }
   },
   "github-copilot": {
@@ -176,6 +192,11 @@
     },
     "long_desc": {
       "en": "GitHub Copilot remains the most widely adopted AI coding assistant in 2026, deeply integrated into the GitHub ecosystem and available as a first-class extension across every major editor — VS Code, JetBrains IDEs, Neovim, Xcode, and Azure Data Studio — making it the most editor-agnostic option on the market. Its core strength lies in context-aware, frictionless code completions that feel like a natural extension of the developer's thought process, predicting not just the next token but entire functions and patterns based on surrounding code, imports, and even related files in the repository. Copilot Chat adds conversational AI within the editor for explaining code, suggesting refactors, and generating tests, while deep integration with GitHub Issues, Pull Requests, and Actions creates an end-to-end development workflow from issue triage through code review. The $10/month individual plan (free for verified students, teachers, and open-source maintainers) makes it the most affordable entry point into AI-assisted professional coding. Its main weakness compared to agentic tools like Cursor is the relatively limited cross-file awareness and the absence of autonomous multi-file refactoring — Copilot primarily works within the current file's context and cannot independently plan or execute coordinated changes across a project. For developers who want an AI assistant that enhances rather than fundamentally transforms their existing workflow, and the freedom to use it across any editor they prefer, Copilot is the pragmatic, ecosystem-wide choice."
+    },
+    "editorialIntro": "GitHub Copilot is still the gold standard for autocomplete inside your existing IDE. The free tier for verified students is one of the best deals in tech; the $10/month Individual or $19/month Business plan add chat, multi-file edits and enterprise controls.",
+    "editorialVerdict": {
+      "best": "You want fast, accurate autocomplete inside the IDE you already use. Individual plan is $10/month; students are free.",
+      "avoid": "You regularly refactor across many files or want repo-wide agent workflows — Cursor is more capable."
     }
   },
   "cursor": {
@@ -218,6 +239,11 @@
     },
     "long_desc": {
       "en": "Cursor is an AI-first code editor built as a fork of VS Code, designed from the ground up for AI-assisted software development rather than bolting AI onto an existing editor. Its standout feature is Agent mode, which combines full codebase indexing with autonomous multi-file refactoring — understanding dependency graphs, locating all affected files, and executing coordinated cross-file changes that traditional autocomplete tools simply cannot perform. The Ctrl+K inline editing lets developers describe changes in natural language and see them applied instantly, while the AI-powered terminal catches and explains errors in real time. Cursor supports multiple AI models (current-generation models, Claude (latest generation)) letting teams choose the best model per task, and the .cursorrules file enables precise project-specific AI behavior customization for consistent team conventions. The main tradeoff is editor lock-in: Cursor works only in its own fork, not in JetBrains, Neovim, or other editors. At $20/month, it's best suited for full-stack developers and engineering teams who do heavy refactoring across large codebases and want AI deeply woven into their editing experience rather than accessed through a sidebar panel. Tab completions also handle boilerplate generation and repetitive patterns, while the recently added bug-finding mode automatically identifies potential issues in changed code before you commit, adding a lightweight code review layer directly into the editing flow."
+    },
+    "editorialIntro": "Cursor is a VS Code fork with GPT-4-level AI, codebase chat, and multi-file agent mode built in. It can refactor across dozens of files, generate whole features from a description, and chat about your entire codebase.",
+    "editorialVerdict": {
+      "best": "You are a full-time developer refactoring code, debugging unfamiliar codebases and shipping features every week. The $20/month Pro plan pays back within days.",
+      "avoid": "You only code a few hours a week or you refuse to leave JetBrains — stick with Copilot."
     }
   },
   "midjourney": {
@@ -259,6 +285,11 @@
     },
     "long_desc": {
       "en": "Midjourney (current version) remains the gold standard for AI image generation in 2026, prized for its unmatched photorealism, artistic composition, and nuanced lighting quality that consistently outperforms competitors in blind comparison tests. Its Style Reference (--sref) and Character Reference features enable consistent visual identity across entire project series — brand packages, character sheets, product photography sets — a critical capability for professional creative workflows that no competitor has fully matched at equivalent quality. Operating primarily through Discord with a growing web alpha (midjourney.com), the tool has a steeper learning curve due to its parameter-based prompt syntax (--ar for aspect ratio, --stylize for artistic intensity, --chaos for variation), but the output quality consistently justifies the learning investment. Text rendering within images remains a known weak point compared to integrated image generation, with roughly 30% of text-containing prompts producing garbled or misaligned results. Plans start at $10/month (Basic) with unlimited Relaxed mode available at $30/month on the Standard tier. Midjourney is the definitive choice for visual artists, professional photographers, creative directors, and brand designers who refuse to compromise on image quality. The Moodboard feature, introduced in v7, lets users upload reference images to define the overall aesthetic direction of a project — essentially creating a visual brief that guides all subsequent generations toward a cohesive look, which significantly reduces the iterative back-and-forth in commercial branding work."
+    },
+    "editorialIntro": "Midjourney v7 has the highest aesthetic ceiling in image generation. Lighting, composition and color grading feel curated even on lazy prompts. Best for art, illustration and stylized brand assets.",
+    "editorialVerdict": {
+      "best": "You want highest aesthetic ceiling with almost no prompt engineering. Standard plan at $30/month is the sweet spot.",
+      "avoid": "You need photorealism (Flux Pro), text in images (Ideogram) or total control (Stable Diffusion)."
     }
   },
   "stable-diffusion": {
@@ -301,6 +332,11 @@
     },
     "long_desc": {
       "en": "Stable Diffusion remains the cornerstone of open-source AI image generation in 2026, offering unparalleled flexibility for developers, researchers, and creators who need full control over every aspect of their generation pipeline — from model weights to inference parameters. Unlike cloud-only alternatives, it can run entirely locally on consumer hardware (8GB+ VRAM recommended for SDXL and popular derivatives), making it the essential foundation for privacy-sensitive projects, custom model fine-tuning with proprietary datasets, and building image generation capabilities into applications without per-generation API costs or usage limits. The ecosystem surrounding it is vast and thriving: thousands of community-trained LoRAs for specialized styles and subjects, ControlNet for precise pose, depth, and composition control, inpainting and outpainting, and deep integration with ComfyUI's node-based workflow editor. The tradeoff is genuine complexity — achieving Midjourney-level output requires substantial technical expertise in model selection, prompt engineering, negative prompting, and post-processing techniques. For developers building AI-powered products, researchers experimenting with generative architectures, and creators who value ownership and total customizability over out-of-the-box polish, Stable Diffusion provides the essential open foundation. The open-weight model architecture also enables academic reproducibility — researchers can inspect, modify, and build upon the actual model weights rather than treating the system as a black box behind an API, which has made Stable Diffusion the default platform for published generative AI research worldwide."
+    },
+    "editorialIntro": "Stable Diffusion 3.5 is the strongest open-source image model. Pick it when you need total control, custom styles, or zero per-image cost — and are comfortable with LoRAs, ControlNets and a decent GPU.",
+    "editorialVerdict": {
+      "best": "You want total control, custom styles or zero per-image cost, and you can handle LoRAs, ControlNets and a decent GPU.",
+      "avoid": "Command-line tools and GPU setup are a barrier — use Midjourney or DALL-E."
     }
   },
   "leonardo": {
@@ -334,6 +370,11 @@
       "price": 10,
       "growth": 7,
       "trust": 8
+    },
+    "editorialIntro": "Leonardo.AI is the specialist for game art, character design and concept art. Alchemy mode maintains style consistency across generations, Canvas is the most polished in-app editor, and the free tier is generous.",
+    "editorialVerdict": {
+      "best": "You are a game artist, character designer or concept artist and value consistent style across generations.",
+      "avoid": "Your work is generic image generation for blogs/social — Midjourney or DALL-E is simpler."
     }
   },
   "sora": {
@@ -370,6 +411,11 @@
     },
     "long_desc": {
       "en": "OpenAI's Sora entered the AI video generation arena in late 2024 and has rapidly evolved through multiple iterations into one of the most capable text-to-video models available, with a distinctive focus on cinematic quality and physical coherence. Its core strength lies in generating longer, more physically coherent video clips with impressive world-model-like behavior — objects fall with plausible gravity, liquids splash with natural fluid dynamics, fabrics move and drape naturally, and lighting remains remarkably consistent across frames — effects that many competitors still struggle to replicate reliably. Sora's image-to-video capability allows extending still photographs and illustrations into dynamic scenes with controlled motion, and its storyboard feature supports multi-shot sequences with consistent characters, settings, and lighting across distinct shots. The main limitations are availability (gated behind ChatGPT Plus and Pro subscriptions with usage caps), generation speed (rendering can take several minutes per clip), and cost structure (Pro tier at $200/month for priority access and higher limits). Sora is best suited for filmmakers, creative agencies, and professional content creators who need cinematic-quality video generation and are willing to invest in premium capabilities backed by OpenAI's continued rapid iteration and infrastructure."
+    },
+    "editorialIntro": "Sora 2 is OpenAI's text-to-video model and the current quality leader in 2026. Physics understanding, character consistency and 20-second clip length lead the category, though the price ceiling and safety filters are aggressive.",
+    "editorialVerdict": {
+      "best": "Quality is the priority and the budget exists — cinematic shots, character consistency and 20s clips beat the field.",
+      "avoid": "You need editing tools or 5–10s social clips — Runway or Pika are faster and cheaper."
     }
   },
   "runway": {
@@ -407,6 +453,11 @@
     },
     "long_desc": {
       "en": "Runway has evolved from an early AI video pioneer into a comprehensive creative suite, with current-generation video models Alpha as its flagship video generation model and a growing toolkit that spans far beyond generation. What sets Runway apart from model-only competitors is its integrated approach: rather than offering just an API or a generation interface, it provides a full creative production environment with video generation, AI-powered motion tracking, green screen removal, audio cleanup and enhancement, and collaborative project management — all in one platform designed for creative teams. The current-generation video models model produces high-quality, stylistically controllable video with notably strong temporal consistency, delivering far fewer jarring frame transitions than earlier generations. Runway is particularly popular among video editors, motion designers, and advertising creatives who value workflow integration and team collaboration over chasing the highest possible benchmark scores. Key limitations include relatively high pricing that scales with usage (starting at $15/month with limited generation credits), noticeable rendering queue times during peak usage periods, and less realistic human motion compared to Kling or Sora in certain challenging scenarios like complex dance or athletic movements. For creative professionals who want video AI tightly embedded in their existing production pipeline, Runway's suite approach is uniquely valuable."
+    },
+    "editorialIntro": "Runway is the veteran of AI video and still the most production-ready tool in the category. Gen-3 Alpha plus motion brush, inpainting, storyboard and Gen-3 upscale make it the default for creators who ship more than one-off clips.",
+    "editorialVerdict": {
+      "best": "You are a creative professional shipping ads, music videos or short films. Motion brush, inpainting and storyboard are unmatched.",
+      "avoid": "You only need one-off social clips or the tightest budget — Kling free tier or Hailuo covers that."
     }
   },
   "elevenlabs": {
@@ -444,6 +495,11 @@
     },
     "long_desc": {
       "en": "ElevenLabs is the undisputed industry leader in AI text-to-speech and voice synthesis, delivering the most natural-sounding synthetic voices available in 2026 with emotional range, pacing control, and accent fidelity that consistently set the benchmark. Its standout capabilities include one-minute voice cloning with near-indistinguishable fidelity from the original speaker, fine-grained emotional range control across happiness, sadness, urgency, and calmness, and purpose-built tools for audiobook production (Projects with multi-chapter management), professional dubbing (Dubbing Studio with timing alignment), and long-form narration with sustained consistency. The voice library offers thousands of community-contributed and professionally designed voices across 29 languages, all maintaining excellent quality and naturalness. Its API is developer-friendly with integration times measured in hours rather than days, and pricing is aggressively competitive — starting with a generous free tier (10K characters per month) and scaling to just $5/month for the Starter plan. Key limitations include narrower language coverage (29 languages versus PlayHT's 140+), less mature enterprise-grade API infrastructure (no webhooks, limited SLAs), and the current absence of real-time conversational AI agent capabilities. For content creators, indie developers, audiobook producers, and anyone who needs the highest-quality AI voices, ElevenLabs is the definitive choice."
+    },
+    "editorialIntro": "ElevenLabs v3 delivers the most realistic text-to-speech in 2026. Voice cloning needs only 30 seconds of reference audio, 29 languages are supported natively, and emotional range is a genuine step up from prior versions.",
+    "editorialVerdict": {
+      "best": "Voice quality matters — audiobooks, podcasts, YouTube narration. Starter $5/month is enough for hobbyists.",
+      "avoid": "You need production-scale TTS at the lowest per-character price — PlayHT is cheaper."
     }
   },
   "suno": {
@@ -481,6 +537,11 @@
     },
     "long_desc": {
       "en": "Suno has transformed AI music generation from an entertaining novelty into a genuinely useful creative tool that professional musicians and hobbyists alike incorporate into their workflows. Its v4 model can generate complete, structured songs — including original lyrics, expressive vocals across multiple styles, full instrumentation, and production-quality arrangement — from a simple text prompt describing genre and mood or from custom user-written lyrics, spanning genres from pop, rock, and hip-hop to classical, jazz, and experimental electronic music. What distinguishes Suno from general-purpose audio generators is its deep focus on musicality: song structure (verse-chorus-bridge-outro), genre-specific production conventions, and vocal expressiveness including vibrato and dynamic range are rendered with a level of competence that surprises even professional producers. The platform includes a library of user creations for inspiration, stem separation for remixing, and community discovery features. Its limitations include occasional vocal artifacts (odd pronunciations, pitch instability on sustained notes), genre blending that sometimes produces musically incoherent results, and a production quality ceiling that — while genuinely impressive for AI — doesn't yet match professional studio recording and mastering chains. At $10/month for the Pro plan with 500 song generations, Suno is an essential creative tool for songwriters sketching ideas, content creators needing royalty-free background music, and anyone curious about AI's creative musical frontier."
+    },
+    "editorialIntro": "Suno v4 can produce a complete song — vocals, lyrics, arrangement — from a short text description, and it is the only AI music tool in 2026 whose output we would publish. Chinese-language songs generate cleanly.",
+    "editorialVerdict": {
+      "best": "You need custom music or jingles for videos, podcasts or personal projects. Free tier covers hobby use.",
+      "avoid": "You need a specific song by a specific artist — AI music tools cannot deliver that."
     }
   },
   "descript": {
@@ -519,6 +580,11 @@
     },
     "long_desc": {
       "en": "Descript reimagines audio and video editing through a radically different paradigm: edit your media by editing the transcript, as easily as editing a document — delete a sentence in the transcript and the corresponding video segment disappears automatically. In 2026, its AI capabilities have expanded dramatically: Studio Sound removes background noise, room echo, and microphone artifacts with a single click using neural processing, AI Voices can generate remarkably realistic voiceovers including a custom clone of your own voice after a short training session, and the AI Actions feature automates tedious editing tasks like removing filler words, generating social-media-ready highlight clips, and creating show notes and summaries. Descript is purpose-built for podcasters, video creators, marketers, and educators who need to produce polished, professional content quickly without investing weeks learning traditional timeline-based editing software. Its real-time multiplayer collaboration and project sharing features make it especially valuable for distributed content teams working asynchronously. The main tradeoffs are that it isn't designed for high-end color grading, complex visual effects, or multi-camera editing workflows, export times can become noticeably long for hour-plus video projects, and the automatic transcription accuracy — while good — still requires manual review for proper names, technical terminology, and accented speech. At $24/month for the Creator plan, Descript is a genuine productivity multiplier for content-first creators who live in the edit."
+    },
+    "editorialIntro": "Descript works like a Word document for media: edit the transcript and the audio/video updates. AI filler-word removal, Studio Sound and Edit for Clarity cut editing time by 5–10× on interview-style content.",
+    "editorialVerdict": {
+      "best": "You edit audio or video regularly and want transcript-based workflows plus Studio Sound.",
+      "avoid": "You edit rarely (learning curve is too high) or you do music production (use a traditional DAW)."
     }
   },
   "notion-ai": {
@@ -559,6 +625,11 @@
     },
     "long_desc": {
       "en": "Notion AI integrates artificial intelligence directly into Notion's all-in-one workspace — documents, databases, wikis, and project management — providing AI assistance that understands your team's entire knowledge base rather than operating as a disconnected external tool. Its AI writing assistant can draft, summarize, translate, and improve text inline across any page, while the Q&A feature answers questions by searching across all pages and databases in your workspace, effectively turning your company wiki into an intelligent knowledge retrieval system. For teams already using Notion as their central knowledge hub and collaboration platform, the AI add-on transforms it from a static document repository into an intelligent assistant that can generate meeting agendas from past notes, summarize lengthy threaded discussions, autofill database properties based on content patterns, and surface relevant historical decisions during current planning. The $10 per member per month add-on pricing is reasonable for teams that use Notion heavily, though the per-seat model can accumulate significant costs for larger organizations. Key limitations include weaker native automation capabilities (often requiring Zapier or Make for multi-step workflows beyond Notion's built-in automations), occasional AI hallucinations when answering questions about workspace content that requires precise factual retrieval, and less powerful formula and relational database computation compared to dedicated platforms like Airtable or Coda."
+    },
+    "editorialIntro": "Notion AI is the writing/summarization layer inside Notion. If your team already runs on Notion, the $10/user/month add-on is the highest-value line item on this list because it happens where the work is.",
+    "editorialVerdict": {
+      "best": "Your team already runs on Notion — $10/user/month AI happens exactly where the work is.",
+      "avoid": "You do not use Notion — pay a general assistant instead."
     }
   },
   "perplexity": {
@@ -597,6 +668,11 @@
     },
     "long_desc": {
       "en": "Perplexity has established itself as the leading AI-powered answer engine, combining large language model reasoning with real-time, multi-source web search to deliver cited, verifiable answers rather than confident-sounding speculation. Unlike traditional chatbots that generate responses from training data cutoffs alone, Perplexity actively searches the live web for each query, synthesizes information from multiple independent sources in parallel, and provides inline citations for every factual claim — making it particularly valuable for academic research, journalism, fact-checking, market analysis, and any professional task where source traceability matters. Its Pro search feature performs multi-step reasoning across dozens of sources to answer complex multi-part questions, and the Collections feature allows users to organize research threads and share curated knowledge bases. The platform also offers specialized focus modes for academic papers, video content, and social media discussions. Key limitations include occasional source quality degradation when the top results are from lower-authority websites, noticeably slower response times compared to instant chatbot replies (the search-and-synthesize process introduces latency), and less capable creative writing or open-ended coding compared to dedicated models like current-generation models or Claude. At $20/month for Pro with unlimited searches, Perplexity is the essential research companion for journalists, analysts, graduate students, and anyone who needs answers they can verify rather than trust."
+    },
+    "editorialIntro": "Perplexity is the AI search engine that cites its sources. For research, market intelligence and product decisions it is dramatically faster than Google plus opening a dozen tabs.",
+    "editorialVerdict": {
+      "best": "You do regular research, market intelligence or investment work and need cited sources.",
+      "avoid": "You need a general assistant with plugins or the deepest multimodal — pick ChatGPT Plus or Gemini."
     }
   },
   "jasper": {
@@ -631,6 +707,11 @@
       "price": 5,
       "growth": 7,
       "trust": 8
+    },
+    "editorialIntro": "Jasper is the AI writing platform built specifically for marketing teams. Brand voice training, marketing templates and SEO mode become useful once you have three or more writers sharing a brand.",
+    "editorialVerdict": {
+      "best": "You manage a marketing team of 3+ writers who need brand-voice consistency. Team plan starts at $125/month.",
+      "avoid": "You are an individual marketer — Claude Pro delivers similar output for less money."
     }
   },
   "hostinger": {
@@ -664,6 +745,11 @@
       "price": 5,
       "growth": 5,
       "trust": 8
+    },
+    "editorialIntro": "Hostinger is the low-cost hosting provider we recommend for small sites: cheapest tier in the category, easy hPanel control panel, WordPress one-click install. Traffic-heavy sites eventually outgrow the entry-level plans.",
+    "editorialVerdict": {
+      "best": "You are launching a small site or side project and want the lowest price on the market.",
+      "avoid": "You run high-traffic or mission-critical apps — Cloudways or Vercel are better fits."
     }
   },
   "deepseek": {

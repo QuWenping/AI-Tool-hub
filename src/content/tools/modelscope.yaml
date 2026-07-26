@@ -1,0 +1,24 @@
+name:
+  en: ModelScope
+  zh: ModelScope
+short_desc:
+  en: AI model hub
+  zh: AI 模型中心
+long_desc:
+  en: Open-source AI model sharing platform with 1000+ models
+cat: image
+url: https://modelscope.cn
+icon: fa-database
+scenes:
+  en:
+  - models
+  - open-source
+  - community
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Free

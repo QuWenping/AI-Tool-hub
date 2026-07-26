@@ -1,0 +1,24 @@
+name:
+  en: Vance AI
+  zh: Vance AI
+short_desc:
+  en: AI photo enhancer
+  zh: AI 照片增强器
+long_desc:
+  en: 'AI photo enhancement: upscale, sharpen, denoise'
+cat: image
+url: https://vanceai.com
+icon: fa-image
+scenes:
+  en:
+  - enhance
+  - upscale
+  - photo
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

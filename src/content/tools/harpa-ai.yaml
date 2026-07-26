@@ -1,0 +1,24 @@
+name:
+  en: Harpa AI
+  zh: Harpa AI
+short_desc:
+  en: AI web automation
+  zh: AI 网页自动化
+long_desc:
+  en: Browser extension for web monitoring and data extraction
+cat: productivity
+url: https://harpa.ai
+icon: fa-robot
+scenes:
+  en:
+  - automation
+  - monitoring
+  - data
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

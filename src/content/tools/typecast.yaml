@@ -1,0 +1,24 @@
+name:
+  en: Typecast
+  zh: Typecast
+short_desc:
+  en: AI voice acting
+  zh: AI 配音表演
+long_desc:
+  en: AI voice acting for characters and narration
+cat: audio
+url: https://typecast.ai
+icon: fa-microphone
+scenes:
+  en:
+  - voice
+  - character
+  - acting
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

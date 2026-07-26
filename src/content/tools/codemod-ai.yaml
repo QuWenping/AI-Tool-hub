@@ -1,0 +1,24 @@
+name:
+  en: Codemod
+  zh: Codemod
+short_desc:
+  en: AI code migration
+  zh: AI 代码迁移
+long_desc:
+  en: Automated codebase migration and refactoring
+cat: code
+url: https://codemod.com
+icon: fa-code
+scenes:
+  en:
+  - migration
+  - refactor
+  - automation
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

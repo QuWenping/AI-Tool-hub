@@ -1,0 +1,111 @@
+name:
+  en: Notion AI
+  zh: Notion AI
+short_desc:
+  en: Smart writing and knowledge management inside your workflow
+  zh: 嵌入工作流的智能写作和知识管理
+long_desc:
+  en: Notion AI is built into Notion, helping write notes and summarize meetings.
+cat: productivity
+url: https://notion.so/product/ai
+icon: fa-sticky-note
+scenes:
+  en:
+  - Meeting extract
+  - Note tidy
+  - Instant translate
+  - DB analysis
+  zh:
+  - 知识管理
+  - 会议记录总结
+  - 项目文档生成
+  - 写作辅助
+pros:
+  en:
+  - Deep integration
+  - No switching
+  - Team collab
+  zh:
+  - 零上下文切换工作流嵌入
+  - Q&A 功能可基于数据库回答
+  - 写作辅助质量好
+cons:
+  en:
+  - Extra cost
+  - Slow on long
+  - Notion lock-in
+  zh:
+  - AI 能力不如 ChatGPT/Claude
+  - 必须已使用 Notion 才值得
+  - 额外费用不菲
+target_audience:
+  en:
+  - PMs
+  - Teams
+  - Writers
+  - Knowledge workers
+  zh:
+  - 产品经理
+  - 团队
+  - 作家
+  - 知识工作者
+use_cases:
+  en:
+  - Meeting to action
+  - Proposal draft
+  - Doc translate
+  - Weekly report
+  zh:
+  - 会议转待办
+  - 提案草稿
+  - 文档翻译
+  - 周报生成
+features:
+  en:
+  - Inline AI
+  - Meeting summary
+  - DB fill
+  - Translation
+  zh:
+  - 内联 AI
+  - 会议摘要
+  - 数据库填充
+  - 翻译
+example:
+  en: 'Example: Tidy meeting notes and extract action items.'
+  zh: 示例：整理会议笔记并提取待办事项。
+reviewed: true
+updatedAt: '2026-07-19'
+testedVersion: Notion AI 2026
+score: 8.2
+overall_score: 8.2
+quickFacts:
+  freeTier: false
+  hasApi: false
+  platforms:
+  - Web
+  - macOS
+  - Windows
+  - iOS
+  - Android
+pricingSummary:
+  en: $10/user/month add-on to any Notion plan.
+faq:
+- q_en: Do I need Notion to use Notion AI?
+  a_en: Yes. Notion AI is an add-on inside the Notion workspace.
+- q_en: Is Notion AI worth it?
+  a_en: >-
+    For teams already using Notion for docs, yes — it summarizes and drafts inside your existing knowledge base.
+scoreBreakdown:
+  user: 8.2
+  capability: 7
+  price: 5
+  growth: 6
+  trust: 8
+editorialIntro: >-
+  Notion AI is the writing/summarization layer inside Notion. If your team already runs on Notion, the $10/user/month add-on
+  is the highest-value line item on this list because it happens where the work is.
+editorialVerdict:
+  best: >-
+    Your team already runs on Notion — $10/user/month AI happens exactly where the work is.
+  avoid: You do not use Notion — pay a general assistant instead.

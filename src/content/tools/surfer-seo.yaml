@@ -1,0 +1,46 @@
+name:
+  en: Surfer SEO
+  zh: Surfer SEO
+short_desc:
+  en: AI-driven SEO content optimization platform
+  zh: AI 驱动的 SEO 内容优化平台
+long_desc:
+  en: >-
+    Surfer SEO analyzes search results to recommend keywords, structure, and word count for higher rankings.
+cat: text
+url: https://surferseo.com
+icon: fa-chart-line
+scenes:
+  en:
+  - SEO optimize
+  - Content audit
+  - Keyword research
+  - SERP analysis
+pros:
+  en:
+  - Data-driven
+  - Accurate SERP analysis
+  - Jasper integration
+cons:
+  en:
+  - Expensive
+  - Learning curve
+target_audience:
+  en:
+  - SEO
+  - Content marketers
+  - Bloggers
+use_cases:
+  en:
+  - SEO
+  - Audit
+  - Keywords
+  - Ranking
+features:
+  en:
+  - SERP analysis
+  - Content score
+  - Keyword tips
+  - Audit
+example:
+  en: 'Example: Analyze ''best AI tools'' SERP and get optimization tips.'

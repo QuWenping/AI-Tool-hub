@@ -1,0 +1,132 @@
+name:
+  en: Hailuo
+  zh: Hailuo
+short_desc:
+  en: MiniMax Hailuo AI video
+  zh: MiniMax 推出的 Hailuo AI 视频生成
+long_desc:
+  en: >-
+    Hailuo AI video by MiniMax excels at lively character motion and coherent shots; accessible in China.
+cat: video
+url: https://hailuoai.video
+icon: fa-video
+scenes:
+  en:
+  - Character animation
+  - Shorts
+  - Img-to-video
+  - Social
+  zh:
+  - 中文视频生成
+  - 内容创作
+  - 营销素材
+  - 动画制作
+pros:
+  en:
+  - Lively motion
+  - Coherent shots
+  - China accessible
+  - Free trial
+  zh:
+  - 视频画质出色
+  - 中文理解准确
+  - 价格有竞争力
+  - 国内可直接访问
+cons:
+  en:
+  - Short clips
+  - Paid tier
+  - Prompt skill needed
+  zh:
+  - 国际知名度较低
+  - 部分功能仍在迭代
+  - 片段较短
+target_audience:
+  en:
+  - Creators
+  - Indie
+  - Marketers
+  - Designers
+  zh:
+  - 创作者
+  - 独立开发者
+  - 营销人员
+  - 设计师
+use_cases:
+  en:
+  - Character anim
+  - Social shorts
+  - Img-to-video
+  - Creative ads
+  zh:
+  - 角色动画
+  - 短视频
+  - 图片转视频
+  - 创意广告
+features:
+  en:
+  - Text-to-video
+  - Img-to-video
+  - Character motion
+  - Coherent shots
+  zh:
+  - 文本转视频
+  - 图片转视频
+  - 角色动画
+  - 连贯镜头
+example:
+  en: 'Example: Generate a coherent clip of a running character.'
+  zh: 示例：生成一个角色奔跑的连贯视频片段。
+reviewed: true
+updatedAt: '2026-07-23'
+testedVersion: Latest stable (2026)
+score: 8.1
+overall_score: 8.1
+quickFacts:
+  freeTier: true
+  hasApi: false
+  platforms:
+  - Web
+pricingSummary:
+  en: >-
+    Free tier with daily generations · Standard $9.90/mo, Pro $29.90/mo, Premier $59.90/mo unlock more credits, longer clips,
+    and higher resolution.
+faq:
+- q_en: What is Hailuo?
+  a_en: >-
+    Hailuo AI is MiniMax's text-to-video and image-to-video product, offering competitive quality at very low or zero cost
+    for short clips.
+- q_en: Is Hailuo free?
+  a_en: >-
+    Yes. Hailuo offers a generous free tier that has historically been the cheapest credible way to get AI video clips in
+    2026.
+- q_en: How does Hailuo compare to Sora?
+  a_en: >-
+    Hailuo delivers competitive realism and human motion at a fraction of the price; Sora still leads on prompt fidelity and
+    longer coherent shots.
+- q_en: How long can Hailuo videos be?
+  a_en: >-
+    Hailuo generates clips around 6 seconds per generation; you can extend or stitch them in the editor.
+- q_en: Does Hailuo support image-to-video?
+  a_en: >-
+    Yes. Image-to-video is a core path, popular for animating product photos and portraits.
+- q_en: Does Hailuo have an API?
+  a_en: >-
+    An API exists for enterprise partners; consumer API access has been expanding region by region through 2026.
+- q_en: How good is Hailuo at human motion?
+  a_en: >-
+    Hailuo is competitive with Kling and Luma on natural motion, especially for portrait and upper-body shots.
+- q_en: Can Hailuo make vertical videos?
+  a_en: >-
+    Yes. Vertical (9:16) is a first-class aspect ratio in Hailuo, ideal for TikTok, Reels, and Shorts.
+- q_en: Can Hailuo generate sound?
+  a_en: Hailuo focuses on visuals; pair with ElevenLabs for voice and Suno for music.
+- q_en: Who should use Hailuo?
+  a_en: >-
+    Creators who want the cheapest credible AI video for social clips, without paying Sora-tier prices.
+scoreBreakdown:
+  user: 8.1
+  capability: 7.1
+  price: 9
+  growth: 8
+  trust: 8

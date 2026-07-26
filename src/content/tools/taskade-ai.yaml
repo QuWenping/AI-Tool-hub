@@ -1,0 +1,24 @@
+name:
+  en: Taskade AI
+  zh: Taskade AI
+short_desc:
+  en: AI workspace and tasks
+  zh: AI 工作空间和任务
+long_desc:
+  en: AI-powered workspace for tasks, notes and mind maps
+cat: productivity
+url: https://taskade.com
+icon: fa-tasks
+scenes:
+  en:
+  - tasks
+  - notes
+  - mind-map
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

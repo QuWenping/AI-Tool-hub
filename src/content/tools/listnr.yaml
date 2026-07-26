@@ -1,0 +1,23 @@
+name:
+  en: Listnr
+  zh: Listnr
+short_desc:
+  en: AI TTS generator
+  zh: AI TTS 生成器
+long_desc:
+  en: AI text-to-speech with 600+ voices in 140+ languages
+cat: audio
+url: https://listnr.tech
+icon: fa-headphones
+scenes:
+  en:
+  - tts
+  - voiceover
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

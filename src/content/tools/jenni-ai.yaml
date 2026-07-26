@@ -1,0 +1,46 @@
+name:
+  en: Jenni AI
+  zh: Jenni AI
+short_desc:
+  en: AI academic writing assistant
+  zh: AI 学术写作助手
+long_desc:
+  en: >-
+    Jenni AI is designed for academic writing with citation management, literature review, and AI continuation.
+cat: text
+url: https://jenni.ai
+icon: fa-graduation-cap
+scenes:
+  en:
+  - Papers
+  - Literature review
+  - Citations
+  - Continuation
+pros:
+  en:
+  - Academic-specific
+  - Citation management
+  - Anti-plagiarism
+cons:
+  en:
+  - Academic only
+  - Mid-high price
+target_audience:
+  en:
+  - Students
+  - Researchers
+  - Academics
+use_cases:
+  en:
+  - Papers
+  - Reviews
+  - Citations
+  - Academic
+features:
+  en:
+  - AI continue
+  - Citations
+  - Lit review
+  - Anti-plagiarism
+example:
+  en: 'Example: Write a literature review with auto-citations.'

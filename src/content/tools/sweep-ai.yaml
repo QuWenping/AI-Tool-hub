@@ -1,0 +1,24 @@
+name:
+  en: Sweep AI
+  zh: Sweep AI
+short_desc:
+  en: AI GitHub assistant
+  zh: AI GitHub 助手
+long_desc:
+  en: AI that turns issues into pull requests
+cat: code
+url: https://sweep.dev
+icon: fa-code
+scenes:
+  en:
+  - github
+  - pr
+  - automation
+pros:
+  en:
+  - See review
+cons:
+  en:
+  - See review
+pricing:
+  en: Freemium

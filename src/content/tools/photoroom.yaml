@@ -1,0 +1,46 @@
+name:
+  en: PhotoRoom
+  zh: PhotoRoom
+short_desc:
+  en: AI product photos, background removal, editing
+  zh: AI 产品照片、背景去除和编辑
+long_desc:
+  en: >-
+    PhotoRoom removes backgrounds and generates professional product photos in one click; popular for e-commerce and social.
+cat: image
+url: https://www.photoroom.com
+icon: fa-camera
+scenes:
+  en:
+  - Product photos
+  - Background removal
+  - Social
+  - Batch
+pros:
+  en:
+  - Excellent bg removal
+  - One-click product shots
+  - Mobile app
+cons:
+  en:
+  - Advanced paid
+  - Batch needs subscription
+target_audience:
+  en:
+  - E-commerce
+  - Creators
+  - SMBs
+use_cases:
+  en:
+  - Product
+  - E-com
+  - Social
+  - Bg removal
+features:
+  en:
+  - Bg removal
+  - AI product shots
+  - Batch
+  - Mobile
+example:
+  en: 'Example: Remove product background and replace with white/scenic.'
