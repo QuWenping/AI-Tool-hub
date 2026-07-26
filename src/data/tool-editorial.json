@@ -6252,5 +6252,48 @@
       "best": "You need enterprise api, clean content extraction.",
       "avoid": "You need developer-focused, not consumer-facing."
     }
+  },
+  "sourcegraph": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Sourcegraph Cody (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web",
+        "VS Code",
+        "JetBrains"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier available · Pro plans for teams and enterprise."
+    },
+    "faq": [
+      {
+        "q_en": "What is Sourcegraph Cody best for?",
+        "a_en": "AI-powered code search and intelligence across repositories with deep codebase understanding."
+      },
+      {
+        "q_en": "Is Sourcegraph Cody free?",
+        "a_en": "Cody offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Sourcegraph Cody combines AI code search with an intelligent coding assistant, helping developers understand, write, and refactor code across entire codebases."
+    },
+    "editorialIntro": "Sourcegraph Cody is an AI coding assistant with codebase-wide context. AI-powered code search and intelligence across repositories.",
+    "editorialVerdict": {
+      "best": "You need full codebase context and AI-powered code search across repositories.",
+      "avoid": "You need a more polished AI code editor experience like Cursor."
+    }
   }
 }

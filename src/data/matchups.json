@@ -178,5 +178,15 @@
     "cluster": "code",
     "title_en": "GitHub Copilot vs Aider (2026): IDE AI Assistant vs Terminal Pair Programmer",
     "title_zh": "GitHub Copilot vs Aider（2026）：IDE AI 助手 vs 终端结对编程"
+  },
+  {
+    "slug": "sourcegraph-vs-cursor",
+    "tool_a": "Sourcegraph Cody",
+    "tool_b": "Cursor",
+    "a": "sourcegraph",
+    "b": "cursor",
+    "cluster": "code",
+    "title_en": "Sourcegraph Cody vs Cursor (2026): Code Intelligence vs AI Code Editor",
+    "title_zh": "Sourcegraph Cody vs Cursor（2026）：代码智能 vs AI 代码编辑器"
   }
 ]

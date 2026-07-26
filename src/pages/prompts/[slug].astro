@@ -178,6 +178,22 @@ const promptData: Record<string, any> = {
     exampleOutput: "## Project Setup: React + TypeScript + Express\n### Directory Structure\n```\nproject/\n├── client/        (React + Vite)\n├── server/        (Express + TypeScript)\n├── shared/        (Types, utils)\n├── .github/       (CI workflows)\n```\n### Dependencies\n- Frontend: React 18, React Router, Tailwind\n- Backend: Express, Prisma, Zod\n- Dev: ESLint, Prettier, Husky\n### Configuration\n- TypeScript strict mode enabled\n- Prettier + ESLint with auto-format on save\n- GitHub Actions: lint, test, build pipeline",
     relatedTools: ["cursor", "github-copilot"],
   },
+  "any-churn-pred": {
+    title: "AI Churn Prediction Prompt",
+    description: "A structured prompt template for using AI to build churn prediction models and analyze customer retention patterns. Covers feature engineering, model selection, and actionable retention strategies.",
+    tags: ["Business", "Data", "ChatGPT"],
+    useCase: "Data analysts, product managers, and customer success teams predicting customer churn and designing data-driven retention campaigns.",
+    exampleOutput: "## Churn Prediction Analysis\n### Key Features Identified\n- Days since last login (weight: 0.32)\n- Support tickets opened (weight: 0.24)\n- Feature adoption score (weight: 0.18)\n### High-Risk Segment\n- 1,240 users (14.2% of base) with >60% churn probability\n### Recommended Actions\n- Automated re-engagement email at 7-day inactivity threshold\n- Priority support routing for 3+ open tickets",
+    relatedTools: ["chatgpt", "claude"],
+  },
+  "claude-exec-sum": {
+    title: "Claude Executive Summary Prompt",
+    description: "A prompt template for using Claude to generate concise, professional executive summaries from lengthy reports, meeting transcripts, and research documents. Optimized for Claude's long-context strengths.",
+    tags: ["Writing", "Claude", "Business"],
+    useCase: "Executives, managers, and consultants who need distilled insights from lengthy documents — board papers, research reports, meeting notes, and project documentation.",
+    exampleOutput: "## Executive Summary\n### Bottom Line Up Front\nQ3 revenue grew 12% YoY to $48.2M, driven by enterprise segment expansion (+22%). Operating margin improved to 18.4% from 15.1%.\n### Key Decisions Required\n1. Approve $3.5M investment in APAC market entry (Q4)\n2. Extend CTO search timeline by 30 days\n### Risks to Watch\n- Supply chain lead times increased 8 days\n- Competitive pricing pressure in SMB segment",
+    relatedTools: ["claude", "chatgpt"],
+  },
   "any-risk-reg": {
     title: "AI Risk Register Prompt",
     description: "A comprehensive prompt for generating AI project risk registers. Covers data privacy risks, model bias, security vulnerabilities, compliance gaps, and mitigation strategies.",
@@ -196,6 +212,7 @@ export async function getStaticPaths() {
     "cursor-graphql-s", "cursor-debug-strategy", "windsurf-fullstack",
     "any-orchestration-d", "chatgpt-learning", "midjourney-info-bg", "deepseek-opt",
     "cursor-new-project-setup", "any-risk-reg",
+    "any-churn-pred", "claude-exec-sum",
   ];
   return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }
