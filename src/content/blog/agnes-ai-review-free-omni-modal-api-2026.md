@@ -1,4 +1,5 @@
 ---
+image: "/images/blog/agnes-ai-review-2026/hero.png"
 
 title_en: 'Agnes AI Review 2026: Free Omni-Modal API? Features, Pricing &'
 desc_en: 'In-depth Agnes AI review for 2026: is the free omni-modal API worth it? See features, pricing, and honest comparison vs current-generation models, Claude,.'
