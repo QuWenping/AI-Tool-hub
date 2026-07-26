@@ -168,5 +168,22 @@
     ],
     "title_zh": "2026 年最佳 AI 播客工具",
     "desc_zh": "用于播客录制、剪辑、转录和发布的 AI 工具。"
+  },
+  {
+    "slug": "video-generation",
+    "title_en": "Best AI Video Generation Tools in 2026",
+    "desc_en": "AI tools for text-to-video, image-to-video, and AI video generation — create videos from prompts, images, or script templates.",
+    "tools": [
+      "sora",
+      "kling",
+      "pika",
+      "runway",
+      "luma",
+      "pixverse",
+      "fliki",
+      "invideo"
+    ],
+    "title_zh": "2026 年最佳 AI 视频生成工具",
+    "desc_zh": "用于文本转视频、图片转视频和 AI 视频生成的工具——从提示词、图像或脚本模板创建视频。"
   }
 ]

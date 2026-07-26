@@ -158,5 +158,25 @@
     "cluster": "image",
     "title_en": "Midjourney vs Canva AI (2026): Professional AI Art vs All-in-One Design",
     "title_zh": "Midjourney vs Canva AI（2026）：专业 AI 绘画 vs 一站式设计平台"
+  },
+  {
+    "slug": "stable-diffusion-vs-canva-ai",
+    "tool_a": "Stable Diffusion",
+    "tool_b": "Canva AI",
+    "a": "stable-diffusion",
+    "b": "canva-ai",
+    "cluster": "image",
+    "title_en": "Stable Diffusion vs Canva AI (2026): Open-Source AI Art vs All-in-One Design",
+    "title_zh": "Stable Diffusion vs Canva AI（2026）：开源 AI 绘画 vs 一站式设计平台"
+  },
+  {
+    "slug": "github-copilot-vs-aider",
+    "tool_a": "GitHub Copilot",
+    "tool_b": "Aider",
+    "a": "github-copilot",
+    "b": "aider",
+    "cluster": "code",
+    "title_en": "GitHub Copilot vs Aider (2026): IDE AI Assistant vs Terminal Pair Programmer",
+    "title_zh": "GitHub Copilot vs Aider（2026）：IDE AI 助手 vs 终端结对编程"
   }
 ]

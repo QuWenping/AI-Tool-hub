@@ -170,6 +170,22 @@ const promptData: Record<string, any> = {
     exampleOutput: "## DeepSeek Optimization Guide\n### Model Selection\n- V3: Chat, content generation, code completion ($0.14/M input)\n- R1: Math proofs, multi-file refactors, architecture planning ($0.55/M input)\n### Cost Strategies\n- Use V3 for drafts, R1 for final review (3:1 ratio saves 60%)\n- Enable prompt caching for repeated system instructions\n### Context Window\n- Chunk documents at 32K tokens for V3, 64K for R1\n- Use sliding window for long conversations",
     relatedTools: ["deepseek", "cline"],
   },
+  "cursor-new-project-setup": {
+    title: "Cursor New Project Setup Prompt",
+    description: "A structured prompt for using Cursor to scaffold and configure new development projects. Covers tech stack selection, project structure, dependency setup, CI/CD pipeline, and environment configuration.",
+    tags: ["Coding", "Cursor", "Setup"],
+    useCase: "Developers starting new projects from scratch who want Cursor to generate the entire project skeleton, including configs, directory structure, and initial boilerplate.",
+    exampleOutput: "## Project Setup: React + TypeScript + Express\n### Directory Structure\n```\nproject/\n├── client/        (React + Vite)\n├── server/        (Express + TypeScript)\n├── shared/        (Types, utils)\n├── .github/       (CI workflows)\n```\n### Dependencies\n- Frontend: React 18, React Router, Tailwind\n- Backend: Express, Prisma, Zod\n- Dev: ESLint, Prettier, Husky\n### Configuration\n- TypeScript strict mode enabled\n- Prettier + ESLint with auto-format on save\n- GitHub Actions: lint, test, build pipeline",
+    relatedTools: ["cursor", "github-copilot"],
+  },
+  "any-risk-reg": {
+    title: "AI Risk Register Prompt",
+    description: "A comprehensive prompt for generating AI project risk registers. Covers data privacy risks, model bias, security vulnerabilities, compliance gaps, and mitigation strategies.",
+    tags: ["Business", "Claude", "Governance"],
+    useCase: "AI project managers, compliance officers, and engineering leads creating risk registers for AI systems, especially those facing regulatory review.",
+    exampleOutput: "## AI Risk Register\n### Risk 1: Training Data Privacy\n- Severity: High\n- Likelihood: Medium\n- Impact: GDPR non-compliance, fines up to 4% revenue\n- Mitigation: Data anonymization pipeline, retention limits\n### Risk 2: Model Hallucination in Production\n- Severity: High\n- Likelihood: High\n- Impact: Incorrect outputs affecting user decisions\n- Mitigation: Human-in-the-loop review, confidence thresholds\n### Risk 3: Prompt Injection\n- Severity: Critical\n- Likelihood: Medium\n- Impact: Unauthorized data access\n- Mitigation: Input sanitization, role-based access control",
+    relatedTools: ["claude", "chatgpt"],
+  },
 };
 
 export async function getStaticPaths() {
@@ -179,6 +195,7 @@ export async function getStaticPaths() {
     "claude-metaphor", "cursor-merge-conf", "mj-cozy-room", "claude-offboard", "any-customer-research", "chatgpt-cover-letter",
     "cursor-graphql-s", "cursor-debug-strategy", "windsurf-fullstack",
     "any-orchestration-d", "chatgpt-learning", "midjourney-info-bg", "deepseek-opt",
+    "cursor-new-project-setup", "any-risk-reg",
   ];
   return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }

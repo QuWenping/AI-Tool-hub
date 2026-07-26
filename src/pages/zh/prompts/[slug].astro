@@ -170,6 +170,22 @@ const promptDataZh: Record<string, any> = {
     exampleOutput: "## DeepSeek 优化指南\n### 模型选择\n- V3：对话、内容生成、代码补全（$0.14/M 输入）\n- R1：数学证明、多文件重构、架构规划（$0.55/M 输入）\n### 成本策略\n- 草稿用 V3，终审用 R1（3:1 比例节省 60%）\n- 对重复系统指令启用 Prompt 缓存\n### 上下文窗口\n- V3 文档分块 32K tokens，R1 分块 64K\n- 长对话使用滑动窗口",
     relatedTools: ["deepseek", "cline"],
   },
+  "cursor-new-project-setup": {
+    title: "Cursor 新项目搭建提示词",
+    description: "使用 Cursor 搭建和配置新开发项目的结构化提示词模板。涵盖技术栈选择、项目结构、依赖安装、CI/CD 流水线和环境配置。",
+    tags: ["编程", "Cursor", "搭建"],
+    useCase: "从零开始新项目的开发者，希望 Cursor 生成完整的项目骨架，包括配置文件、目录结构和初始样板代码。",
+    exampleOutput: "## 项目搭建：React + TypeScript + Express\n### 目录结构\n```\nproject/\n├── client/        (React + Vite)\n├── server/        (Express + TypeScript)\n├── shared/        (类型、工具)\n├── .github/       (CI 工作流)\n```\n### 依赖\n- 前端：React 18、React Router、Tailwind\n- 后端：Express、Prisma、Zod\n- 开发：ESLint、Prettier、Husky\n### 配置\n- TypeScript 严格模式开启\n- Prettier + ESLint 保存自动格式化\n- GitHub Actions：lint、测试、构建流水线",
+    relatedTools: ["cursor", "github-copilot"],
+  },
+  "any-risk-reg": {
+    title: "AI 风险登记册提示词",
+    description: "生成 AI 项目风险登记册的综合提示词模板。涵盖数据隐私风险、模型偏见、安全漏洞、合规差距及缓解策略。",
+    tags: ["商业", "Claude", "治理"],
+    useCase: "AI 项目经理、合规官和技术负责人为 AI 系统创建风险登记册，特别是在面临监管审查的场景。",
+    exampleOutput: "## AI 风险登记册\n### 风险 1：训练数据隐私\n- 严重性：高\n- 可能性：中\n- 影响：违反 GDPR，罚款高达营收 4%\n- 缓解：数据匿名化流水线、保留期限\n### 风险 2：生产环境模型幻觉\n- 严重性：高\n- 可能性：高\n- 影响：错误输出影响用户决策\n- 缓解：人工审核环节、置信度阈值\n### 风险 3：提示注入\n- 严重性：严重\n- 可能性：中\n- 影响：未授权数据访问\n- 缓解：输入净化、基于角色的访问控制",
+    relatedTools: ["claude", "chatgpt"],
+  },
 };
 
 export async function getStaticPaths() {
@@ -180,6 +196,7 @@ export async function getStaticPaths() {
     "chatgpt-cover-letter", "cursor-graphql-s",
     "cursor-debug-strategy", "windsurf-fullstack", "any-orchestration-d",
     "chatgpt-learning", "midjourney-info-bg", "deepseek-opt",
+    "cursor-new-project-setup", "any-risk-reg",
   ];
   return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }
