@@ -80,9 +80,9 @@ const ogImage = image ? siteUrl + image : siteUrl + "/og-image.svg";
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content={image ? fullTitle : "AI Tool Hub - Best AI Tools Directory"}>
   <meta property="og:site_name" content="AI Tool Hub">
-  <link rel="alternate" hreflang="en" href={enPageUrl}>
-  <link rel="alternate" hreflang="zh" href={zhPageUrl}>
-  <link rel="alternate" hreflang="x-default" href={enPageUrl}>
+  <link rel="alternate" hreflang="en" href={siteUrl + enPageUrl}>
+  <link rel="alternate" hreflang="zh" href={siteUrl + zhPageUrl}>
+  <link rel="alternate" hreflang="x-default" href={siteUrl + enPageUrl}>
   <meta property="og:locale" content={lang === "zh" ? "zh_CN" : "en_US"}>
   {ogType === "article" && <meta property="article:author" content={articleAuthor || "AI Tool Hub Editorial"}>}
 

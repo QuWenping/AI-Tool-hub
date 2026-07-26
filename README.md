@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_e3aad7a488cc11f1b66e525400e6dd8f
+    ReservedCode1: Lz3vWAKn5YFVH6PBfiEfNTbh6YA13MS1e2Q4VuiPmHgPEw1XeQ2zXjocjikHfJR18uKDtYv9lV7yuxu0CCDCynRuEOdv3+9ws8npwwcZjCPBDCETsRLbY3L03R6DGYBVsUmycqanWYIwrYMJOFZT4rzm7TcgTUUeFotNPhnUV56kagiFV3yz76H+E8Y=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_e3aad7a488cc11f1b66e525400e6dd8f
+    ReservedCode2: Lz3vWAKn5YFVH6PBfiEfNTbh6YA13MS1e2Q4VuiPmHgPEw1XeQ2zXjocjikHfJR18uKDtYv9lV7yuxu0CCDCynRuEOdv3+9ws8npwwcZjCPBDCETsRLbY3L03R6DGYBVsUmycqanWYIwrYMJOFZT4rzm7TcgTUUeFotNPhnUV56kagiFV3yz76H+E8Y=
+---
+
 # AI Tool Hub
 
 The Best AI Tools Review — 程序化 SEO 驱动的 AI 工具评测与对比站。
@@ -86,3 +97,4 @@ src/
 ├── i18n/                  en.json + zh.json
 └── utils/                 i18n helpers
 ```
+*（内容由AI生成，仅供参考）*
