@@ -1,0 +1,151 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import toolsData from "../../data/tools.json";
+
+const toolIds = [
+  "asana-ai", "monday-ai", "-clickup-ai", "notion-ai", "taskade-ai",
+  "zapier", "n8n", "make-com", "airtable-ai", "coda-ai",
+  "perplexity", "gamma", "beautiful-ai", "fireflies", "tldv"
+];
+const tools = toolIds.map(id => ({ id, ...toolsData[id] })).filter(t => t && t.name);
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/use-cases/construction-ai-tools/";
+
+const sceneGroups = [
+  {
+    name: "Project Scheduling & Task Management",
+    desc: "Keep construction projects on track with AI-powered scheduling, resource allocation, and task prioritization. Automate status updates, identify schedule risks, and coordinate subcontractors across multiple job sites.",
+    tools: ["asana-ai", "monday-ai", "-clickup-ai", "notion-ai", "taskade-ai"]
+  },
+  {
+    name: "Workflow Automation & Integration",
+    desc: "Connect Procore, PlanGrid, Bluebeam, and other construction software with your project management and accounting tools. Automate RFI tracking, submittal workflows, and daily report generation without custom development.",
+    tools: ["zapier", "n8n", "make-com", "airtable-ai", "coda-ai"]
+  },
+  {
+    name: "Meeting Intelligence & Documentation",
+    desc: "Automatically transcribe construction coordination meetings, extract action items, and generate daily reports. AI meeting assistants capture decisions, assign responsibilities, and ensure nothing falls through the cracks.",
+    tools: ["fireflies", "tldv", "perplexity", "gamma", "beautiful-ai"]
+  }
+];
+
+const faqItems = [
+  {
+    q: "Can AI manage a construction project end-to-end?",
+    a: "No. AI tools assist project managers by automating administrative tasks, tracking action items, and flagging schedule risks. Construction project management requires on-site judgment, stakeholder negotiation, safety oversight, and real-time problem-solving that AI cannot replace. AI reduces administrative burden by 30-50%, letting PMs focus on high-value activities."
+  },
+  {
+    q: "Which AI tools integrate with Procore?",
+    a: "Zapier and Make offer Procore integrations for automating issue tracking, RFI workflows, and document management. n8n can be configured with Procore's API for custom automations. Notion AI and Airtable AI can consume Procore exports for reporting and analysis. Direct AI features in Procore are still limited as of 2026."
+  },
+  {
+    q: "How can AI improve construction safety?",
+    a: "Current AI tools support safety indirectly: (1) AI meeting assistants automatically capture and track safety discussion items from toolbox talks and coordination meetings, (2) project management AI flags overdue safety inspections and training certifications, (3) research tools like Perplexity provide quick access to OSHA regulations and safety standards. Computer vision AI for on-site safety monitoring is a separate category of tools not covered here."
+  },
+  {
+    q: "What AI tools are best for construction documentation?",
+    a: "For meeting documentation: Fireflies and tl;dv for automatic transcription and action item extraction. For daily reports: Notion AI to generate structured reports from voice notes or bullet points. For client/stakeholder presentations: Gamma and Beautiful.ai for rapid deck creation from project data. For RFI and submittal tracking: Airtable AI with automated status workflows."
+  },
+  {
+    q: "Is AI practical for small-to-medium construction firms?",
+    a: "Yes, and the ROI is often higher for smaller firms. A solo PM at a small GC can use Notion AI ($10/mo AI add-on) and Fireflies (free tier / $10/mo) to automate meeting notes and task tracking — saving 5-8 hours per week on administrative work. The total tool cost of $20-50/month is trivial compared to the labor savings."
+  }
+];
+
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"AI Tools for Construction Projects 2026: Scheduling, Automation & Documentation","description":"Best AI tools for construction project management: Asana AI, Zapier, Fireflies, Notion AI, and more. Automate scheduling, RFI tracking, meeting documentation, and workflows.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Use Cases","item":siteUrl+"/use-cases/"},{"@type":"ListItem","position":3,"name":"Construction","item":pageUrl}] };
+---
+
+<BaseLayout
+  title="AI Tools for Construction Projects 2026 | Scheduling, Automation & Documentation"
+  description="Best AI tools for construction project management: Asana AI, Zapier, Fireflies, Notion AI, and more. Automate scheduling, RFI tracking, meeting documentation, and construction workflows."
+  keywords="construction AI tools, AI construction management, Procore AI integration, construction scheduling AI, meeting transcription construction, AI for general contractors"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/use-cases/">Use Cases</a> &rsaquo; <span>Construction</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Use Case</span>
+      <h1>AI Tools for Construction Projects 2026</h1>
+      <p>15 tools for scheduling, workflow automation, and construction documentation — built for general contractors, project managers, and site supervisors.</p>
+    </header>
+
+    <section class="article-body">
+      <p>Construction projects generate enormous amounts of administrative work: daily reports, RFI tracking, submittal logs, meeting minutes, schedule updates, and stakeholder communications. AI tools don't pour concrete or erect steel — but they eliminate hours of paperwork every day, letting construction professionals focus on what happens on site.</p>
+
+      <h2>Why Construction Teams Need AI Tools</h2>
+      <p>Three construction workflow pain points AI addresses:</p>
+      <ul>
+        <li><strong>Paperwork burden:</strong> Project managers and superintendents spend 20-40% of their week on documentation. AI tools automate meeting transcription, daily report generation, and status tracking, cutting that time in half.</li>
+        <li><strong>Cross-platform chaos:</strong> Construction data lives in Procore, PlanGrid, Bluebeam, Sage, Viewpoint, and dozens of spreadsheets. AI automation tools connect these systems so data flows without manual re-entry.</li>
+        <li><strong>Meeting fatigue:</strong> Coordination meetings, OAC meetings, and subcontractor check-ins produce critical decisions that get lost in handwritten notes. AI meeting assistants capture every commitment and automatically assign follow-ups.</li>
+      </ul>
+
+      <h2>AI Tools by Construction Workflow</h2>
+
+      {sceneGroups.map(group => (
+        <section>
+          <h3>{group.name}</h3>
+          <p>{group.desc}</p>
+          <div class="tool-grid">
+            {group.tools.map(tid => {
+              const tool = tools.find(t => t.id === tid);
+              if (!tool) return null;
+              return (
+                <article class="tool-card">
+                  <div class="tool-icon"><i class={`fas ${tool.icon || "fa-robot"}`}></i></div>
+                  <h4><a href={`/tools/${tool.id}/`}>{tool.name.en}</a></h4>
+                  <p>{tool.short_desc?.en || ""}</p>
+                  <span class="tool-tag">{tool.cat}</span>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+      ))}
+
+      <h2>Comparison Table</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Tool</th><th>Best For</th><th>Pricing</th><th>Construction Integration</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Notion AI</strong></td><td>Daily reports, project wiki, punch lists</td><td>Free / $10/mo AI add-on</td><td>Manual export from Procore</td></tr>
+            <tr><td><strong>Asana AI</strong></td><td>Schedule with AI risk detection</td><td>Free / $11-25/mo</td><td>Zapier/Make connectors</td></tr>
+            <tr><td><strong>Fireflies</strong></td><td>OAC meeting transcription & action items</td><td>Free / $10-19/mo</td><td>Zoom/Teams/Meet native</td></tr>
+            <tr><td><strong>Zapier</strong></td><td>Connect Procore to PM & accounting tools</td><td>Free / $20-69/mo</td><td>Procore, Sage, Viewpoint</td></tr>
+            <tr><td><strong>Airtable AI</strong></td><td>RFI & submittal tracking database</td><td>Free / $20-45/mo</td><td>Zapier/Make connectors</td></tr>
+            <tr><td><strong>n8n</strong></td><td>Custom construction automations (self-hosted)</td><td>Free (self-hosted)</td><td>API-based, custom nodes</td></tr>
+            <tr><td><strong>Gamma</strong></td><td>Owner presentations, progress reports</td><td>Free / $10-20/mo</td><td>Manual data import</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Recommended Construction AI Workflow</h2>
+      <ol>
+        <li><strong>Automate meeting intelligence:</strong> Deploy Fireflies or tl;dv for all OAC meetings, coordination meetings, and subcontractor check-ins. AI captures every decision and extracts action items automatically — no more deciphering handwritten notes.</li>
+        <li><strong>Centralize project tracking:</strong> Set up Notion AI with project dashboards for RFI status, submittal logs, punch lists, and daily reports. Use AI to auto-generate structured daily reports from bullet-point notes dictated after a site walk.</li>
+        <li><strong>Connect your tech stack:</strong> Use Zapier or n8n to sync issues from Procore into Airtable AI, schedule updates into Asana AI, and cost data into your accounting system. Eliminate double data entry across platforms.</li>
+        <li><strong>Streamline stakeholder communication:</strong> Pull project data into Gamma to auto-generate monthly owner reports with charts, milestone tracking, and photo documentation — replacing hours of manual PowerPoint work.</li>
+      </ol>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-section">
+        {faqItems.map(f => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

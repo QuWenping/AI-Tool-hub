@@ -7,6 +7,10 @@
       "includeFiles": "dist/**"
     }
   },
+  "redirects": [
+    { "source": "/tool/:slug*", "destination": "/tools/:slug*", "statusCode": 301 },
+    { "source": "/zh/tool/:slug*", "destination": "/zh/tools/:slug*", "statusCode": 301 }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/api/index" }
   ]

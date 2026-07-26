@@ -3727,5 +3727,187 @@
       "growth": 8.5,
       "trust": 7.5
     }
+  },
+  "autogpt": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "AutoGPT 0.5.x (AutoGPT Platform)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "Desktop",
+        "Self-hosted"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Open-source (free self-hosted) · Cloud Platform from $10/mo for agents with GPT-4 access."
+    },
+    "faq": [
+      {
+        "q_en": "What is AutoGPT best used for?",
+        "a_en": "AutoGPT excels at autonomous multi-step tasks: market research that requires browsing dozens of sites, competitive analysis across multiple data sources, and complex data gathering workflows where you define the goal and let the agent figure out the steps."
+      },
+      {
+        "q_en": "How does AutoGPT compare to ChatGPT?",
+        "a_en": "AutoGPT is autonomous — it chains multiple actions without per-step human input — while ChatGPT is conversational (one prompt, one response). AutoGPT is better for complex research workflows; ChatGPT is better for quick questions, writing, and creative tasks."
+      },
+      {
+        "q_en": "Is AutoGPT free?",
+        "a_en": "The open-source version is free to self-host, but you need your own OpenAI API key (which incurs usage costs). The AutoGPT Cloud Platform starts at $10/month and includes API access."
+      },
+      {
+        "q_en": "Does AutoGPT require coding knowledge?",
+        "a_en": "Self-hosting requires basic command-line skills and Python setup. The AutoGPT Cloud Platform is web-based and requires no coding — you configure agents through a visual interface."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7,
+      "capability": 8,
+      "price": 9,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "AutoGPT is the open-source autonomous AI agent that started the 'agent' trend in 2023. Unlike conversational chatbots, AutoGPT operates on a goal-based model: you define an objective, and the agent autonomously plans, executes, and iterates through multi-step workflows — browsing the web, running code, reading files, and refining its approach based on intermediate results. It was built on top of GPT-4 and uses a 'chain of thought' approach where the agent breaks down complex goals into sub-tasks, executes them, learns from the output, and adjusts its strategy. The open-source version requires technical setup (Python, Docker, API keys) but gives you full control over the agent's behavior and data. The AutoGPT Cloud Platform (launched in 2024) removes the hosting burden with a visual agent builder, pre-built templates for common workflows, and built-in integrations. AutoGPT is best suited for autonomous web research, data gathering, competitive analysis, and any task where you can define the end goal but not every intermediate step. Its limitations include occasional looping behavior (the agent gets stuck repeating the same action), higher token consumption than manual prompting (since the agent explores multiple paths), and inconsistent results for tasks requiring precise, non-iterative execution."
+    },
+    "editorialIntro": "AutoGPT pioneered autonomous AI agents. Instead of one-shot Q&A, you hand it a goal and it chains together web searches, code execution, and file operations until the job is done — think of it as a junior analyst who works unsupervised on research tasks.",
+    "editorialVerdict": "Best for autonomous research and data gathering"
+  },
+  "taskade-ai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Taskade AI (latest generation) 2026",
+    "score": 8.2,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "iOS",
+        "Android",
+        "Desktop"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier for individuals · Pro $8/mo · Business $16/user/mo with AI agents and unlimited projects."
+    },
+    "faq": [
+      {
+        "q_en": "What makes Taskade AI different from Notion?",
+        "a_en": "Taskade AI focuses on action-oriented workflows with built-in AI agents that can generate task lists, meeting agendas, and project plans from natural language. Notion is a document-first platform with AI layered on top. Taskade's AI agents can actively monitor and update tasks, while Notion AI is more passive (summarizing, translating, editing)."
+      },
+      {
+        "q_en": "Can Taskade AI replace a project manager?",
+        "a_en": "Taskade AI can automate administrative project management tasks — generating status reports, tracking deadlines, and suggesting task dependencies — but it cannot replace the strategic decision-making, stakeholder management, and team motivation that human project managers provide."
+      },
+      {
+        "q_en": "Does Taskade AI integrate with other tools?",
+        "a_en": "Taskade integrates with Slack, Google Calendar, Zoom, and Zapier (which opens connections to 5000+ apps). Native integrations include GitHub, GitLab, and Figma for development and design teams."
+      },
+      {
+        "q_en": "Is Taskade AI worth it for small teams?",
+        "a_en": "Yes. At $16/user/month for the Business plan, Taskade AI is one of the most affordable AI-powered project management tools. The AI agents alone (automated task generation, meeting summaries, project templates) can save 3-5 hours per person per week."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8,
+      "capability": 8,
+      "price": 9,
+      "growth": 8,
+      "trust": 8
+    },
+    "long_desc": {
+      "en": "Taskade AI is a project management and collaboration platform that deeply integrates AI agents into every layer of the workflow — from task generation to progress tracking to automated reporting. Unlike traditional PM tools where AI is an afterthought add-on, Taskade was rebuilt around its AI capabilities: natural language task creation ('plan a 3-week product launch'), AI agents that monitor project boards and flag at-risk tasks, automatic meeting note generation linked to specific projects, and mind-map-to-task-list conversion powered by AI. The platform supports five visualization modes (list, board, calendar, mind map, org chart) that all sync in real-time, so team members can view the same project in their preferred format. Taskade AI agents are customizable: you define the agent's role, knowledge base, and behavior, then deploy it to a project where it operates autonomously — generating sub-tasks, checking for duplicate work, summarizing weekly progress, and suggesting resource allocation. Its built-in video chat with AI transcription means remote teams can hold planning sessions directly in Taskade and leave with structured, categorized action items. The pricing is aggressive versus competitors: the Pro plan is $8/month (versus Notion AI's $10 add-on on top of a $10 base plan). Its trade-off is a smaller template ecosystem and fewer native integrations than incumbents like Monday.com or Asana."
+    },
+    "editorialIntro": "Taskade AI embeds AI agents directly into project management — ask it to 'plan a product launch' and it generates the full task breakdown with dependencies, then monitors progress and flags risks automatically.",
+    "editorialVerdict": "Best AI-native project management at budget pricing"
+  },
+  "asana-ai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Asana Intelligence 2026",
+    "score": 8.5,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "iOS",
+        "Android"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free for up to 10 users · Starter $11/user/mo · Advanced $25/user/mo (includes Asana Intelligence)."
+    },
+    "faq": [
+      {
+        "q_en": "What can Asana Intelligence actually do?",
+        "a_en": "Asana Intelligence provides: (1) smart project summaries that generate status updates from task data, (2) natural language goal-setting where you type objectives and it creates structured work breakdowns, (3) workload recommendations that suggest task reassignment when team members are over capacity, and (4) predictive deadline alerts that flag tasks likely to miss deadlines before they slip."
+      },
+      {
+        "q_en": "How does Asana AI compare to Monday.com AI?",
+        "a_en": "Asana AI is stronger for cross-functional enterprise teams with complex dependencies and reporting needs. Monday.com AI is more visual and better suited for marketing/creative teams. At the Advanced tier ($25/user/mo), Asana includes AI in the base price, while Monday.com requires an AI add-on."
+      },
+      {
+        "q_en": "Is Asana AI available on the free plan?",
+        "a_en": "No. Asana Intelligence (AI features) requires the Advanced plan at $25/user/month or the Enterprise plan. The free and Starter plans have standard Asana features without AI capabilities."
+      },
+      {
+        "q_en": "Can Asana AI create project plans from scratch?",
+        "a_en": "Yes. With Asana Intelligence Goals, you describe the project objective in natural language (e.g., 'launch a mobile app refresh by Q4') and the AI generates a structured project with tasks, milestones, dependencies, and suggested assignees based on your team's historical work patterns."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 9,
+      "capability": 8,
+      "price": 7,
+      "growth": 8,
+      "trust": 9
+    },
+    "long_desc": {
+      "en": "Asana AI (branded as Asana Intelligence) brings generative AI into one of the most established enterprise project management platforms. With over 130,000 paying organizations, Asana's AI layer benefits from an enormous training corpus: billions of tasks, projects, and workflow patterns that inform its predictions and recommendations. The AI features launched in phases: smart status (auto-generates project status updates from task completion data), smart goals (creates structured OKRs and work breakdowns from natural language descriptions), smart answers (natural language queries about project status, deadlines, and blockers — 'which projects owned by the design team are at risk this month?'), and smart workflows (suggests process improvements based on observed bottlenecks). Asana Intelligence is included in the Advanced tier ($25/user/mo), making it competitive against Monday.com and ClickUp that charge extra for AI. Its strength is enterprise-grade reliability: SOC 2 compliance, admin controls for AI feature enablement, and granular data residency options. The trade-off is that Asana's AI features are more conservative than newer AI-native competitors — it won't autonomously restructure your project or reassign tasks without human approval, which is a feature for compliance-heavy organizations but a limitation for teams wanting maximum automation. Asana's 300+ native integrations (including Salesforce, Jira, ServiceNow, and Tableau) make it the right choice for large organizations where AI-powered project insights need to pull from multiple enterprise systems."
+    },
+    "editorialIntro": "Asana Intelligence embeds AI into enterprise project management with billions of historical tasks training its predictions. Ask natural language questions about project health and get status reports, risk alerts, and resourcing recommendations generated automatically.",
+    "editorialVerdict": "Best enterprise PM AI with compliance-grade reliability"
+  },
+  "lovo-ai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "LOVO AI Genny (2026-07)",
+    "score": 8.0,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "Desktop"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free trial (14 days). Basic $24/mo · Pro $48/mo · Enterprise custom."
+    },
+    "faq": [
+      {
+        "q_en": "How many voices does LOVO AI offer?",
+        "a_en": "500+ voices across 100+ languages, with emotional tone control and custom voice cloning available on Pro plan."
+      },
+      {
+        "q_en": "Is LOVO AI good for YouTube voiceovers?",
+        "a_en": "Yes. LOVO's realistic voices, multi-voice project support, and integrated video editor make it a strong choice for YouTube creators and podcasters."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.0,
+      "capability": 7,
+      "price": 8,
+      "growth": 6,
+      "trust": 8
+    },
+    "long_desc": {
+      "en": "LOVO AI is a comprehensive AI voiceover and text-to-speech platform that combines a library of 500+ realistic AI voices across 100+ languages with an integrated video editor for creating professional voiceovers directly within the platform. Its flagship voice generator, Genny, offers fine-grained control over pronunciation, emphasis, speed, and emotional tone — users can inject pauses, adjust pitch, and control the emotional delivery of individual phrases, making it particularly well-suited for commercial voiceovers, e-learning narration, explainer videos, and podcast production. The platform's voice cloning feature (available on Pro plan) creates a custom digital voice from as little as 10 minutes of reference audio, and unlike many competitors, LOVO includes royalty-free background music and sound effects libraries built directly into the editor. The video editor supports timeline-based multi-track editing where users can align voiceover tracks with visuals, add subtitles, and export directly to popular formats — a feature that sets LOVO apart from pure TTS tools that require switching to separate video editing software. However, the UI can feel dated compared to newer tools, and the Pro plan's $48/month price point is higher than some competitors offering comparable voice quality."
+    }
   }
 }

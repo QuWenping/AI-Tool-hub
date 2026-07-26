@@ -1,0 +1,145 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import toolsData from "../../../data/tools.json";
+
+const relatedToolIds = ["chatgpt", "claude", "notion-ai", "gamma", "canva-ai", "beautiful-ai"];
+const relatedTools = relatedToolIds.map(id => ({ id, ...toolsData[id] })).filter(t => t && t.name);
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/templates/resume-modern-ai/";
+
+const faqItemsZh = [
+  { q: "我应该用 AI 写简历吗？", a: "可以，但需谨慎。AI 在结构化、格式化和建议有力的动词方面表现出色。但你应始终用具体的成就和指标来个性化内容。招聘人员能识别出 AI 生成的通用简历。" },
+  { q: "AI 能帮我对特定岗位定制简历吗？", a: "完全可以。将岗位描述与基础简历一起粘贴，AI 工具可以高亮相关关键词、建议改写以匹配岗位要求，并识别应强调的技能。这是 AI 在简历方面最强大的用例之一。" },
+  { q: "AI 优化的简历应使用什么格式？", a: "使用干净的单栏布局，配合标准章节标题（个人总结、工作经历、技能、教育背景）。避免复杂的表格、多栏或图形，以免干扰 ATS 解析。本模板遵循 ATS 最佳实践。" },
+  { q: "如何用 AI 通过 ATS（求职者追踪系统）？", a: "关键是关键词匹配。从岗位描述中提取关键词，确保它们自然地出现在简历中，使用标准章节标题，保存为 PDF 或 DOCX。AI 工具可以分析岗位描述并建议添加哪些关键词。" }
+];
+
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItemsZh.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"现代 AI 简历模板 — 免费、ATS 优化","description":"一份干净专业的简历模板，针对 AI 工具和 ATS 系统优化。包含使用 ChatGPT、Claude 等 AI 工具撰写出色简历的指南。","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-14","dateModified":"2026-07-14","inLanguage":"zh" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":siteUrl+"/zh/"},{"@type":"ListItem","position":2,"name":"模板","item":siteUrl+"/zh/templates/"},{"@type":"ListItem","position":3,"name":"现代 AI 简历","item":pageUrl}] };
+---
+
+<BaseLayout title="现代 AI 简历模板 — 免费、ATS 优化 | AI Tool Hub" description="一份干净专业的简历模板，针对 AI 工具和 ATS 优化。免费使用，附 ChatGPT、Claude 等工具使用指南。" keywords="AI简历模板, 现代简历, ATS简历, ChatGPT简历, AI求职工具" lang="zh">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/templates/">模板</a> &rsaquo; <span>现代 AI 简历</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">免费模板</span>
+      <h1>现代 AI 简历模板</h1>
+      <p>一份干净、ATS 优化的简历模板，专为 ChatGPT 和 Claude 等 AI 工具设计。复制模板，填写你的信息，获取 AI 驱动的改进建议。</p>
+    </header>
+    <section class="article-body">
+
+      <h2>模板</h2>
+      <pre class="prompt-block"><code># [你的姓名]
+[城市] | [邮箱] | [电话] | [LinkedIn 链接] | [作品集/GitHub]
+
+## 个人总结
+[2-3 句话，突出你的工作年限、核心技能和职业成就。尽可能包含量化指标。]
+
+## 技能
+**技术技能：** [技能 1]、[技能 2]、[技能 3]、[技能 4]
+**工具与平台：** [工具 1]、[工具 2]、[工具 3]
+**语言能力：** [语言 1]（母语）、[语言 2]（工作流利）
+
+## 工作经历
+
+### [职位名称] | [公司名称]
+[年 月] – [年 月] | [地点]
+- 通过 [采取的行动] 实现了 [X% 提升 / ¥Y 节省]
+- 领导 [团队/项目]，成果为 [可衡量的结果]
+- 实施 [系统/流程]，带来了 [量化的成果]
+- 与 [团队/利益相关者] 协作，达成 [成果]
+
+### [上一职位] | [上一公司]
+[年 月] – [年 月] | [地点]
+- [包含指标的成就]
+- [有影响力的项目]
+- [有结果的职责]
+
+## 教育背景
+
+### [学位名称] | [大学名称]
+[年份] | [GPA 如 3.5+]
+
+## 证书
+- [证书名称] — [颁发机构]（[年份]）
+
+## 项目经历
+### [项目名称]
+- 使用 [技术栈] 构建了 [什么]，取得了 [结果/影响]
+- [GitHub/演示链接（如有）]</code></pre>
+
+      <h2>如何使用 AI 配合此模板</h2>
+      <ol>
+        <li><strong>复制模板</strong>并粘贴到 ChatGPT、Claude 或任何 AI 写作工具中。</li>
+        <li><strong>填写你的信息</strong>——将方括号中的占位符替换为你的真实信息。</li>
+        <li><strong>粘贴岗位描述</strong>并告诉 AI："根据这个岗位定制这份简历。建议添加关键词和更有力的动词。"</li>
+        <li><strong>审阅并个性化</strong>——AI 建议只是起点。加入你独特的表达方式并核实所有陈述。</li>
+        <li><strong>导出为 PDF</strong>——PDF 保留格式，是求职申请的行业标准。</li>
+      </ol>
+
+      <h2>简历定制的 AI 提示词</h2>
+      <pre class="prompt-block"><code>你是一位专业的简历教练和 ATS 优化专家。我将提供我的简历和一份岗位描述。你的任务：
+
+1. 从岗位描述中找出我的简历缺少的 5 个关键词
+2. 建议添加或改写 3 条要点，使用更有力的动词
+3. 推荐一句更好地匹配该岗位的个人总结改写
+4. 标记任何警告信号（空白期、不清晰的指标、弱动词）
+
+不要编造经历。只建议对我已有内容的改写。
+
+这是我的简历：
+[粘贴简历]
+
+这是岗位描述：
+[粘贴 JD]</code></pre>
+
+      <h2>ATS 优化清单</h2>
+      <ul>
+        <li><strong>标准章节标题</strong>——使用"工作经历"而非"我在哪工作过"</li>
+        <li><strong>避免表格或多栏</strong>——ATS 解析器难以处理多栏布局</li>
+        <li><strong>岗位描述中的关键词</strong>——包含雇主使用的准确措辞</li>
+        <li><strong>量化成就</strong>——数字更醒目："增加 30% 收入"优于"提升了销售"</li>
+        <li><strong>干净格式</strong>——使用标准字体（Arial、微软雅黑）。正文中不要使用图标。</li>
+        <li><strong>文件格式</strong>——推荐 PDF。DOCX 也可接受。避免 Pages 或 ODT。</li>
+        <li><strong>长度</strong>——10 年以下经验 1 页，10 年以上 2 页</li>
+      </ul>
+
+      <h2>简历制作相关 AI 工具</h2>
+      <div class="card-grid">
+        {relatedTools.map(t => (
+          <a class="list-card" href={"/zh/tools/" + t.id + "/"}>
+            <div class="card-head">
+              <div class="tool-icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
+              <div>
+                <h3>{t.name?.zh || t.name?.en}</h3>
+                <p class="card-desc">{t.short_desc?.zh || t.short_desc?.en || ''}</p>
+              </div>
+            </div>
+            {t.pros && (
+              <div class="card-desc"><strong>最适合：</strong> {(t.pros?.zh || t.pros?.en || [])[0]}</div>
+            )}
+          </a>
+        ))}
+      </div>
+
+      <h2>常见问题</h2>
+      <div class="card-grid">
+        {faqItemsZh.map(f => (
+          <div class="info-card">
+            <h3>{f.q}</h3>
+            <p>{f.a}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="back-link"><a href="/zh/templates/">全部模板</a></p>
+    </section>
+  </div>
+</BaseLayout>

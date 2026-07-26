@@ -51,7 +51,7 @@ const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","i
             {ft.tools.map(tid => {
               const tool = tools.find(t => t.id === tid);
               return tool ? (
-                <a class="tool-pill" href={"/tool/" + tid + "/"}>{tool.name.en}</a>
+                <a class="tool-pill" href={"/tools/" + tid + "/"}>{tool.name.en}</a>
               ) : null
             })}
           </div>
@@ -61,7 +61,7 @@ const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","i
       <h2>All AI Agent Tools</h2>
       <div class="card-grid">
         {tools.map(t => (
-          <a class="list-card" href={"/tool/" + t.id + "/"}>
+          <a class="list-card" href={"/tools/" + t.id + "/"}>
             <div class="card-head">
               <div>
                 <h3>{t.name.en}</h3>

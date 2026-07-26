@@ -1,0 +1,152 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import toolsData from "../../../data/tools.json";
+import categories from "../../../data/categories.json";
+
+const codeCat = categories.find(c => c.slug === "code");
+const toolIds = codeCat ? codeCat.tools : ["github-copilot","cursor","cline","windsurf","aider","codeium","replit","v0","lovable","bolt","tabnine","amazon-q","cody","ollama"];
+const tools = toolIds.map(id => ({ id, ...toolsData[id] })).filter(t => t && t.name);
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/best/ai-coding-assistants/";
+
+const faqItemsZh = [
+  { q: "2026 年最好的 AI 编程助手是什么？", a: "GitHub Copilot 在 IDE 集成和生态系统成熟度方面领先，Cursor 在代理工作流和重构方面表现出色，Windsurf 提供最慷慨的免费版。最佳选择取决于你的技术栈和工作流程。" },
+  { q: "AI 编程助手值得付费吗？", a: "对专业开发者来说值得。日常任务的效率提升（20-40%）远超每月 $10-20 的成本。建议先从免费版开始，遇到限制后再升级。" },
+  { q: "AI 编程助手能替代初级开发者吗？", a: "不能。它们通过处理样板代码和常规任务来增强开发者能力，但无法替代人类开发者的判断力、架构决策和调试直觉。把它们看作快速的结对编程伙伴，而非替代品。" },
+  { q: "哪个 AI 编程助手的代码补全最好？", a: "GitHub Copilot 凭借其深度 VS Code 集成和上下文感知能力在线内补全方面领先。Cursor 的 Tab 补全紧随其后。Windsurf 的补全质量也在快速提升。" },
+  { q: "最好的免费 AI 编程助手是什么？", a: "Windsurf 提供最慷慨的免费版（含代理模式）。Cline 和 Aider 自带 API 密钥即可免费使用。Amazon Q Developer 对个人开发者免费且内置 AWS 集成。" },
+  { q: "AI 编程助手如何处理隐私？", a: "大多数提供选项：GitHub Copilot Business/Enterprise 排除训练数据。Cursor 提供隐私模式。如需最大隐私，考虑使用 Ollama 配合本地模型或 Tabnine 的本地部署。" }
+];
+
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItemsZh.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"2026 年最佳 AI 编程助手：GitHub Copilot vs Cursor vs Windsurf 全面对比","description":"14 款 AI 编程助手全面对比评测：GitHub Copilot、Cursor、Windsurf、Cline、Aider 等。真实测试，客观排名。","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-14","dateModified":"2026-07-14","inLanguage":"zh" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":siteUrl+"/zh/"},{"@type":"ListItem","position":2,"name":"最佳 AI 工具","item":siteUrl+"/zh/best/"},{"@type":"ListItem","position":3,"name":"AI 编程助手","item":pageUrl}] };
+
+const topPicks = ["github-copilot", "cursor", "windsurf"];
+const topTools = topPicks.map(id => tools.find(t => t.id === id)).filter(Boolean);
+
+const comparisonData = [
+  { feature: "内联补全", github_copilot: "优秀", cursor: "优秀", windsurf: "很好", cline: "不支持", aider: "不支持" },
+  { feature: "代理模式", github_copilot: "良好", cursor: "优秀", windsurf: "优秀", cline: "优秀", aider: "优秀" },
+  { feature: "多文件编辑", github_copilot: "良好", cursor: "优秀", windsurf: "很好", cline: "很好", aider: "良好" },
+  { feature: "免费版", github_copilot: "有限（学生）", cursor: "有限（Hobby）", windsurf: "慷慨", cline: "免费（自带密钥）", aider: "免费（自带密钥）" },
+  { feature: "IDE 支持", github_copilot: "VS Code, JetBrains, Neovim", cursor: "Cursor IDE（VS Code 分支）", windsurf: "Windsurf IDE（VS Code 分支）", cline: "VS Code", aider: "终端（任意编辑器）" },
+  { feature: "最适合", github_copilot: "企业团队", cursor: "独立开发者", windsurf: "预算敏感", cline: "模型灵活性", aider: "终端原生工作流" },
+];
+
+const scoring = [
+  { tool: "GitHub Copilot", score: 9.3, completion: 9.5, agent: 8.0, integration: 9.5, pricing: 8.0, privacy: 8.5 },
+  { tool: "Cursor", score: 9.2, completion: 9.0, agent: 9.5, integration: 8.5, pricing: 8.5, privacy: 8.0 },
+  { tool: "Windsurf", score: 8.5, completion: 8.0, agent: 9.0, integration: 8.0, pricing: 9.0, privacy: 8.0 },
+  { tool: "Cline", score: 8.2, completion: 6.0, agent: 9.0, integration: 7.0, pricing: 9.5, privacy: 9.0 },
+  { tool: "Aider", score: 8.0, completion: 5.0, agent: 8.5, integration: 6.5, pricing: 9.5, privacy: 9.5 },
+];
+---
+
+<BaseLayout title="2026 年最佳 AI 编程助手 | Copilot vs Cursor vs Windsurf 全面对比" description="14 款 AI 编程助手全面对比评测。真实测试，客观排名。涵盖 GitHub Copilot、Cursor、Windsurf、Cline、Aider 等。" keywords="AI编程助手, 最佳代码AI, GitHub Copilot, Cursor, Windsurf, AI结对编程" lang="zh">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/best/">最佳 AI 工具</a> &rsaquo; <span>AI 编程助手</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">AI 编程助手</span>
+      <h1>2026 年最佳 AI 编程助手</h1>
+      <p>14 款工具在真实项目上测试：代码补全、重构、调试和代理工作流。客观排名，无付费排名。</p>
+      <p class="update-note"><em>更新于</em>：2026 年 7 月 &middot; 我们在生产代码库上测试了所有工具至少两周。</p>
+    </header>
+    <section class="article-body">
+
+      <h2>Top 3 AI 编程助手</h2>
+      <div class="tool-grid">
+        {topTools.map((t, i) => (
+          <a class="tool-card" href={"/zh/tools/" + t.id + "/"}>
+            <span class="card-number">#{i+1}</span>
+            <div class="tool-icon"><i class={`fas ${t.icon || "fa-code"}`}></i></div>
+            <h3>{t.name?.zh || t.name?.en}</h3>
+            <p>{t.short_desc?.zh || t.short_desc?.en || ''}</p>
+            {t.pricing && <span class="tool-tag">{typeof t.pricing === 'string' ? t.pricing : t.pricing?.zh || t.pricing?.en || '多种'}</span>}
+          </a>
+        ))}
+      </div>
+
+      <h2>对比表格</h2>
+      <div style="overflow-x:auto;">
+        <table class="ranking">
+          <thead><tr><th>功能</th><th>GitHub Copilot</th><th>Cursor</th><th>Windsurf</th><th>Cline</th><th>Aider</th></tr></thead>
+          <tbody>
+            {comparisonData.map(row => (
+              <tr><th>{row.feature}</th><td>{row.github_copilot}</td><td>{row.cursor}</td><td>{row.windsurf}</td><td>{row.cline}</td><td>{row.aider}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2>评分详情（满分 10 分）</h2>
+      <div style="overflow-x:auto;">
+        <table class="ranking">
+          <thead><tr><th>工具</th><th>总分</th><th>补全</th><th>代理</th><th>集成</th><th>价格</th><th>隐私</th></tr></thead>
+          <tbody>
+            {scoring.map(s => (
+              <tr><th>{s.tool}</th><td><strong>{s.score}</strong></td><td>{s.completion}</td><td>{s.agent}</td><td>{s.integration}</td><td>{s.pricing}</td><td>{s.privacy}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2>全部 AI 编程助手</h2>
+      <div class="card-grid">
+        {tools.map(t => (
+          <a class="list-card" href={"/zh/tools/" + t.id + "/"}>
+            <div class="card-head">
+              <div>
+                <h3>{t.name?.zh || t.name?.en}</h3>
+                <p class="card-desc">{t.short_desc?.zh || t.short_desc?.en || ''}</p>
+              </div>
+              <span class="tool-pill">{typeof t.pricing === 'string' ? t.pricing : t.pricing?.zh || t.pricing?.en || '多种'}</span>
+            </div>
+            {t.pros && (
+              <div class="card-desc"><strong>优点：</strong> {(t.pros?.zh || t.pros?.en || []).slice(0, 2).join('、')}</div>
+            )}
+          </a>
+        ))}
+      </div>
+
+      <h2>如何选择 AI 编程助手</h2>
+      <ol>
+        <li><strong>企业团队已有 GitHub 工作流？</strong> GitHub Copilot 是最稳妥的选择，拥有最佳的 IDE 集成和管理控制。</li>
+        <li><strong>独立开发者追求最高效率？</strong> Cursor 的代理模式和 Composer 在复杂重构和多文件修改方面无与伦比。</li>
+        <li><strong>预算有限？</strong> Windsurf 的免费版最慷慨。Cline 和 Aider 自带 API 密钥即可免费使用。</li>
+        <li><strong>终端原生开发者？</strong> Aider 是最好的 CLI 优先工具，可通过终端与任何编辑器配合使用。</li>
+        <li><strong>追求最大隐私？</strong> Ollama 配合本地模型，或 Tabnine 的本地部署。代码不会离开你的机器。</li>
+        <li><strong>全栈 Web 应用生成？</strong> Replit、v0、Lovable 和 Bolt 可从提示词生成完整应用。</li>
+      </ol>
+
+      <h2>常见问题</h2>
+      <div class="card-grid">
+        {faqItemsZh.map(f => (
+          <div class="info-card">
+            <h3>{f.q}</h3>
+            <p>{f.a}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="qa-box">
+        <h3>本页回答</h3>
+        <ul>
+          <li>2026 年最好的 AI 编程助手有哪些？</li>
+          <li>GitHub Copilot、Cursor 和 Windsurf 如何对比？</li>
+          <li>哪个 AI 编程助手的代理模式最好？</li>
+          <li>最好的免费 AI 编程助手是什么？</li>
+          <li>AI 编程助手要花多少钱？</li>
+        </ul>
+      </div>
+
+      <p class="back-link"><a href="/zh/best/">全部最佳 AI 工具</a></p>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { catLabel } from "../../../utils/i18n";
+import categories from "../../../data/categories.json";
+import toolsData from "../../../data/tools.json";
+import { getTranslations } from "../../../utils/i18n";
+
+export async function getStaticPaths() {
+  return categories.map(cat => ({ params: { slug: cat.slug }, props: { cat } }));
+}
+
+const { cat } = Astro.props;
+const pageLang = "zh";
+const t = getTranslations("category", pageLang);
+
+const categoryLabels: Record<string, string> = { text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "效率" };
+const matchedTools = cat.tools
+  .map(id => ({ id, ...toolsData[id] }))
+  .filter(tool => tool && tool.name);
+const total = matchedTools.length;
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/category/" + cat.slug + "/";
+const itemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": cat.title_zh || cat.title_en,
+  "description": cat.desc_zh || cat.desc_en,
+  "url": pageUrl,
+  "numberOfItems": total,
+  "inLanguage": "zh",
+  "itemListElement": matchedTools.map((t, i) => ({
+    "@type": "ListItem", "position": i + 1,
+    "name": t.name?.zh || t.name?.en || t.id,
+    "url": siteUrl + "/zh/tools/" + t.id + "/"
+  }))
+};
+const breadcrumb = {
+  "@context": "https://schema.org", "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "首页", "item": siteUrl + "/zh/" },
+    { "@type": "ListItem", "position": 2, "name": "分类", "item": siteUrl + "/zh/category/" },
+    { "@type": "ListItem", "position": 3, "name": cat.title_zh || cat.title_en, "item": pageUrl }
+  ]
+};
+const cleanTitle = (cat.title_zh || cat.title_en).replace(/^Best\s+/i, "").replace(/2026\s*年\s*最佳\s*/i, "").replace(/2026\s*最佳\s*/i, "").replace(/\s+in\s+2026$/i, "").replace(/^\s+|\s+$/g, "");
+---
+
+<BaseLayout title={`${cleanTitle} — 完整目录（${total} 款工具）`} description={`${cat.desc_zh || cat.desc_en} 浏览本分类全部 ${total} 款工具。`} keywords={`${cleanTitle}, AI工具, ${cat.slug}`} lang={pageLang}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="page-container">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/category/">分类</a> &rsaquo; <span>{cleanTitle}</span></nav>
+    <h1 class="page-title">{cleanTitle}</h1>
+    <p class="page-lede">{cat.desc_zh || cat.desc_en} 以下列出 {total} 款工具。查看我们的排名推荐，详见 <a href={"/zh/best/" + cat.slug + "/"}>最佳 {cleanTitle}</a>。</p>
+
+    <div class="card-grid">
+      {matchedTools.map(t => (
+        <a class="list-card" href={`/zh/tools/${t.id}/`}>
+          <div class="card-head">
+            <h3>{t.name?.zh || t.name?.en || t.id}</h3>
+            <span class="tag-pill">{catLabel(t.cat, "zh")}</span>
+          </div>
+          <p class="card-desc">{t.short_desc?.zh || t.short_desc?.en || ""}</p>
+          <div class="tag-row">
+            <span class="tool-pill">{t.pricing?.zh || t.pricing?.en || "多种"}</span>
+            {(t.scenes?.zh || t.scenes?.en || []).slice(0, 2).map(s => <span class="tag-chip">{s}</span>)}
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="list-footer">
+      <p>想看我们的首选推荐？<a href={"/zh/best/" + cat.slug + "/"}>查看最佳 {cleanTitle} 排名 →</a></p>
+    </div>
+  </div>
+</BaseLayout>

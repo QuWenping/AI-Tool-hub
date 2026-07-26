@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const vsPages = [
+  { slug: "chatgpt-vs-claude", title: "ChatGPT vs Claude", desc: "Comparing the two leading AI chatbots on reasoning, coding, creativity, and pricing." },
+  { slug: "cursor-vs-github-copilot", title: "Cursor vs GitHub Copilot", desc: "Which AI coding assistant wins for agent workflows, inline completions, and daily development?" },
+  { slug: "midjourney-vs-dalle-3", title: "Midjourney vs DALL-E 3", desc: "Image generation showdown: realism, prompt adherence, artistic style, and pricing." },
+  { slug: "claude-vs-gemini", title: "Claude vs Gemini", desc: "Anthropic vs Google: which AI model is better for long documents, coding, and analysis?" },
+  { slug: "chatgpt-vs-gemini", title: "ChatGPT vs Gemini", desc: "OpenAI vs Google head-to-head on writing, research, coding, and multimodality." },
+  { slug: "notion-vs-obsidian", title: "Notion vs Obsidian", desc: "All-in-one workspace vs local-first knowledge base. Which fits your workflow?" },
+  { slug: "windsurf-vs-cursor", title: "Windsurf vs Cursor", desc: "Two VS Code forks battle for the best AI-first IDE experience." },
+  { slug: "elevenlabs-vs-play-ht", title: "ElevenLabs vs Play.ht", desc: "AI voice generation: quality, cloning accuracy, languages, and pricing compared." },
+  { slug: "runway-vs-pika", title: "Runway vs Pika", desc: "AI video generation tools compared on realism, motion quality, and creative control." },
+  { slug: "suno-vs-udio", title: "Suno vs Udio", desc: "AI music generation: which creates better songs, handles genres, and offers better stems?" },
+  { slug: "perplexity-vs-chatgpt", title: "Perplexity vs ChatGPT", desc: "Research-focused AI vs general-purpose AI: accuracy, citations, and depth." },
+  { slug: "lovable-vs-bolt", title: "Lovable vs Bolt", desc: "AI app builders: which generates better full-stack applications from prompts?" },
+];
+
+const pageLang = Astro.currentLocale || "en";
+---
+
+<BaseLayout title="AI Tool Comparisons — ChatGPT vs Claude, Cursor vs Copilot &amp; More" description="In-depth head-to-head comparisons of leading AI tools. ChatGPT vs Claude, Cursor vs GitHub Copilot, Midjourney vs DALL-E 3, and more." keywords="AI tool comparison, ChatGPT vs Claude, Cursor vs Copilot, AI tools compared" lang={pageLang}>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <span>AI Tool Comparisons</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Comparisons</span>
+      <h1>AI Tool Comparisons</h1>
+      <p>Head-to-head comparisons of the most popular AI tools. We test them on real tasks and give honest verdicts — no paid placements, no bias.</p>
+    </header>
+    <section class="article-body">
+
+      <div class="card-grid">
+        {vsPages.map(page => (
+          <a class="list-card" href={`/vs/${page.slug}/`}>
+            <div class="card-head">
+              <div>
+                <h3>{page.title}</h3>
+                <p class="card-desc">{page.desc}</p>
+              </div>
+              <span class="tool-pill">VS</span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <h2>How We Compare AI Tools</h2>
+      <p>Every comparison follows a consistent methodology:</p>
+      <ol>
+        <li><strong>Real-world testing</strong> — We use each tool for at least 2 weeks on actual tasks</li>
+        <li><strong>Side-by-side benchmarks</strong> — Same prompts, same tasks, same evaluation criteria</li>
+        <li><strong>Feature-by-feature breakdown</strong> — Not just overall scores, but detailed comparison tables</li>
+        <li><strong>Pricing transparency</strong> — Up-to-date pricing with free tier analysis</li>
+        <li><strong>Use case recommendations</strong> — When to choose each tool based on your specific needs</li>
+      </ol>
+
+      <p class="back-link"><a href="/">Back to Home</a></p>
+    </section>
+  </div>
+</BaseLayout>

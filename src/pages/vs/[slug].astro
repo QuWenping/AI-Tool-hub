@@ -163,7 +163,7 @@ const seoDesc = pageLang === "zh"
 
 
     <div class="compare-grid">
-      <a class="compare-card" href={"/tool/" + m.a + "/"}>
+      <a class="compare-card" href={"/tools/" + m.a + "/"}>
         <div class="icon"><i class={`fas ${a.icon || "fa-robot"}`}></i></div>
         <span class="tag">{pageLang === "zh" ? (categoryLabelsZh[aCat] || aCat) : (categoryLabels[aCat] || aCat)}</span>
         <h2>{pageLang === "zh" ? (aNameZh || aName) : aName}</h2>
@@ -171,7 +171,7 @@ const seoDesc = pageLang === "zh"
         <span class="tag">{t("viewFullReview")}</span>
       </a>
       <div class="compare-vs">VS</div>
-      <a class="compare-card" href={"/tool/" + m.b + "/"}>
+      <a class="compare-card" href={"/tools/" + m.b + "/"}>
         <div class="icon"><i class={`fas ${b.icon || "fa-robot"}`}></i></div>
         <span class="tag">{pageLang === "zh" ? (categoryLabelsZh[bCat] || bCat) : (categoryLabels[bCat] || bCat)}</span>
         <h2>{pageLang === "zh" ? (bNameZh || bName) : bName}</h2>
@@ -290,14 +290,14 @@ const seoDesc = pageLang === "zh"
             <p>{pageLang === "zh" ? `${pillarLabelZh} 完整排名` : `Full ranking of ${pillarLabel.toLowerCase()}`}</p>
           </div>
         </a>
-        <a class="related-card" href={"/tool/" + m.a + "/"}>
+        <a class="related-card" href={"/tools/" + m.a + "/"}>
           <div class="related-icon"><i class={`fas ${a.icon || "fa-robot"}`}></i></div>
           <div>
             <h3>{pageLang === "zh" ? (aNameZh || aName) : aName}</h3>
             <p>{pageLang === "zh" ? `${aNameZh || aName} 完整评测` : `Full review of ${aName}`}</p>
           </div>
         </a>
-        <a class="related-card" href={"/tool/" + m.b + "/"}>
+        <a class="related-card" href={"/tools/" + m.b + "/"}>
           <div class="related-icon"><i class={`fas ${b.icon || "fa-robot"}`}></i></div>
           <div>
             <h3>{pageLang === "zh" ? (bNameZh || bName) : bName}</h3>

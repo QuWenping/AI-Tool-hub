@@ -1,0 +1,147 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import toolsData from "../../data/tools.json";
+
+const pageLang = Astro.currentLocale || "en";
+
+const relatedToolIds = ["chatgpt", "claude", "notion-ai", "gamma", "canva-ai", "beautiful-ai"];
+const relatedTools = relatedToolIds.map(id => ({ id, ...toolsData[id] })).filter(t => t && t.name);
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/templates/resume-modern-ai/";
+
+const faqItems = [
+  { q: "Should I use AI to write my resume?", a: "Yes, but with caution. AI is excellent for structuring, formatting, and suggesting strong action verbs. However, you should always personalize the content with your specific achievements and metrics. Recruiters can spot generic AI-written resumes." },
+  { q: "Can AI help me tailor my resume for a specific job?", a: "Absolutely. Paste the job description along with your base resume, and AI tools can highlight relevant keywords, suggest rephrasing to match the job requirements, and identify skills you should emphasize. This is one of AI's strongest resume use cases." },
+  { q: "What format should I use for an AI-optimized resume?", a: "Use a clean, single-column layout with standard section headings (Summary, Experience, Skills, Education). Avoid complex tables, columns, or graphics that confuse ATS parsers. This template follows ATS best practices." },
+  { q: "How do I beat ATS (Applicant Tracking Systems) with AI?", a: "The key is keyword matching. Extract keywords from the job description, ensure they appear naturally in your resume, use standard section headings, and save as PDF or DOCX. AI tools can analyze a job description and suggest which keywords to add." }
+];
+
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Modern AI Resume Template — Free, ATS-Optimized","description":"A clean, professional resume template optimized for AI tools and ATS. Includes guidance on using ChatGPT, Claude, and other AI tools to write a standout resume.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-14","dateModified":"2026-07-14" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Templates","item":siteUrl+"/templates/"},{"@type":"ListItem","position":3,"name":"Modern AI Resume","item":pageUrl}] };
+---
+
+<BaseLayout title="Modern AI Resume Template — Free, ATS-Optimized | AI Tool Hub" description="A clean, professional resume template optimized for AI tools and ATS systems. Free to use with guidance for ChatGPT, Claude, and more." keywords="AI resume template, modern resume, ATS resume, ChatGPT resume, AI career tools" lang={pageLang}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/templates/">Templates</a> &rsaquo; <span>Modern AI Resume</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Free Template</span>
+      <h1>Modern AI Resume Template</h1>
+      <p>A clean, ATS-optimized resume template designed to work with AI tools like ChatGPT and Claude. Copy the template, fill in your details, and get AI-powered suggestions for improvement.</p>
+    </header>
+    <section class="article-body">
+
+      <h2>Template</h2>
+      <pre class="prompt-block"><code># [YOUR FULL NAME]
+[City, State] | [Email] | [Phone] | [LinkedIn URL] | [Portfolio/GitHub]
+
+## PROFESSIONAL SUMMARY
+[2-3 sentences highlighting your years of experience, key skills, and career achievements. Include metrics where possible.]
+
+## SKILLS
+**Technical:** [Skill 1], [Skill 2], [Skill 3], [Skill 4]
+**Tools & Platforms:** [Tool 1], [Tool 2], [Tool 3]
+**Languages:** [Language 1] (Native), [Language 2] (Professional)
+
+## PROFESSIONAL EXPERIENCE
+
+### [Job Title] | [Company Name]
+[Month Year] – [Month Year] | [Location]
+- Achieved [X% improvement / $Y savings] by [action you took]
+- Led [team/project] resulting in [measurable outcome]
+- Implemented [system/process] that [quantified result]
+- Collaborated with [teams/stakeholders] to [outcome]
+
+### [Previous Job Title] | [Previous Company]
+[Month Year] – [Month Year] | [Location]
+- [Achievement with metric]
+- [Project with impact]
+- [Responsibility with result]
+
+## EDUCATION
+
+### [Degree Name] | [University Name]
+[Year] | [GPA if 3.5+]
+
+## CERTIFICATIONS
+- [Certification Name] — [Issuing Organization] ([Year])
+
+## PROJECTS
+### [Project Name]
+- Built [what] using [technologies] that [result/impact]
+- [Link to GitHub/demo if applicable]</code></pre>
+
+      <h2>How to Use This Template with AI</h2>
+      <ol>
+        <li><strong>Copy the template</strong> above and paste it into ChatGPT, Claude, or any AI writing tool.</li>
+        <li><strong>Fill in your details</strong> — replace the bracketed placeholders with your real information.</li>
+        <li><strong>Paste a job description</strong> and ask the AI: "Tailor this resume for this job. Suggest keyword additions and stronger action verbs."</li>
+        <li><strong>Review and personalize</strong> — AI suggestions are a starting point. Add your unique voice and verify all claims.</li>
+        <li><strong>Export as PDF</strong> — PDF preserves formatting and is the industry standard for job applications.</li>
+      </ol>
+
+      <h2>AI Prompt for Resume Tailoring</h2>
+      <pre class="prompt-block"><code>You are a professional resume coach and ATS optimization expert. I will provide my resume and a job description. Your task:
+
+1. Identify the top 5 keywords from the job description that my resume is missing
+2. Suggest 3 bullet points to add or rewrite with stronger action verbs
+3. Recommend a one-sentence summary rewrite that better matches the role
+4. Flag any red flags (gaps, unclear metrics, weak verbs)
+
+Do NOT fabricate experience. Only suggest rewrites of what I already have.
+
+Here is my resume:
+[PASTE RESUME]
+
+Here is the job description:
+[PASTE JD]</code></pre>
+
+      <h2>ATS Optimization Checklist</h2>
+      <ul>
+        <li><strong>Standard section headings</strong> — Use "Professional Experience" not "Where I've Worked"</li>
+        <li><strong>No tables or columns</strong> — ATS parsers struggle with multi-column layouts</li>
+        <li><strong>Keywords from the job description</strong> — Include exact phrases the employer uses</li>
+        <li><strong>Quantified achievements</strong> — Numbers stand out: "Increased revenue 30%" beats "Improved sales"</li>
+        <li><strong>Clean formatting</strong> — Use standard fonts (Arial, Calibri, Helvetica). No icons in body text.</li>
+        <li><strong>File format</strong> — PDF is preferred. DOCX is acceptable. Avoid Pages or ODT.</li>
+        <li><strong>Length</strong> — 1 page for &lt;10 years experience, 2 pages for 10+ years</li>
+      </ul>
+
+      <h2>Related AI Tools for Resume Building</h2>
+      <div class="card-grid">
+        {relatedTools.map(t => (
+          <a class="list-card" href={"/tools/" + t.id + "/"}>
+            <div class="card-head">
+              <div class="tool-icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
+              <div>
+                <h3>{t.name?.en}</h3>
+                <p class="card-desc">{t.short_desc?.en || ''}</p>
+              </div>
+            </div>
+            {t.pros?.en && (
+              <div class="card-desc"><strong>Best for:</strong> {t.pros.en[0]}</div>
+            )}
+          </a>
+        ))}
+      </div>
+
+      <h2>FAQ</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card">
+            <h3>{f.q}</h3>
+            <p>{f.a}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="back-link"><a href="/templates/">All Templates</a></p>
+    </section>
+  </div>
+</BaseLayout>

@@ -112,7 +112,7 @@ const tocSections = [
       <h2 id="top-3" data-i18n="top_3_picks">{t("top3Picks")}</h2>
       <div class="tool-grid">
         {matchedTools.slice(0, 3).map(function(t, i){return (
-          <a class="tool-card" href={"/tool/" + t.id + "/"}>
+          <a class="tool-card" href={"/tools/" + t.id + "/"}>
             <span class="card-number">#{i+1}</span>
             <div class="tool-icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
             <h3>{pageLang === "zh" ? (t.name?.zh || t.name.en) : t.name.en}</h3>
@@ -136,7 +136,7 @@ const tocSections = [
           {matchedTools.map(function(t, i){return (
             <tr>
               <td>#{i+1}</td>
-              <td><a href={"/tool/" + t.id + "/"}><strong>{pageLang === "zh" ? (t.name?.zh || t.name.en) : t.name.en}</strong></a></td>
+              <td><a href={"/tools/" + t.id + "/"}><strong>{pageLang === "zh" ? (t.name?.zh || t.name.en) : t.name.en}</strong></a></td>
               <td>{pageLang === "zh" ? (t.pros?.zh?.[0] || t.pros?.en?.[0] || "") : (t.pros?.en?.[0] || "")}</td>
               <td>{pageLang === "zh" ? ({ text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商务" }[t.cat] || t.cat) : (categoryLabels[t.cat] || t.cat)}</td>
             </tr>
@@ -152,7 +152,7 @@ const tocSections = [
           <header class="tool-review-head">
             <div class="tool-review-icon"><i class={`fas ${tool.icon || "fa-robot"}`}></i></div>
             <div>
-              <h3><a href={"/tool/" + tool.id + "/"}>{pageLang === "zh" ? (tool.name?.zh || tool.name.en) : tool.name.en}</a></h3>
+              <h3><a href={"/tools/" + tool.id + "/"}>{pageLang === "zh" ? (tool.name?.zh || tool.name.en) : tool.name.en}</a></h3>
               <p class="short">{pageLang === "zh" ? (tool.short_desc?.zh || tool.short_desc.en) : tool.short_desc.en}</p>
             </div>
           </header>
@@ -161,8 +161,8 @@ const tocSections = [
             <div class="pro-list"><strong>{t("pros")}</strong> {(pageLang === "zh" ? (tool.pros?.zh || tool.pros?.en) : tool.pros?.en || []).join(", ")}</div>
             <div class="con-list"><strong>{t("cons")}</strong> {(pageLang === "zh" ? (tool.cons?.zh || tool.cons?.en) : tool.cons?.en || []).join(", ")}</div>
           </div>
-          <p class="review-our-take"><strong>{t("ourTakeHeading")}</strong> {pageLang === "zh" ? `我们在真实工作上测试了 ${tool.name?.zh || tool.name.en} 至少两周。它最适合 ${tool.target_audience?.zh?.[0] || tool.target_audience?.en?.[0] || "通用场景"}，以其 ${(tool.pros?.zh?.[0] || tool.pros?.en?.[0] || "多功能性").toLowerCase()} 脱颖而出。完整拆解（含定价、替代方案和诚实结论）请见` : `We tested ${tool.name.en} on real work for at least 2 weeks. It is best for ${tool.target_audience?.en?.[0] || "general use"} and stands out for ${(tool.pros?.en?.[0] || "versatility").toLowerCase()}. For the full breakdown including pricing, alternatives, and our honest verdict, see the`} <a href={"/tool/" + tool.id + "/"}>{pageLang === "zh" ? `${tool.name?.zh || tool.name.en} 完整评测` : `complete ${tool.name.en} review`}</a>.</p>
-          <a class="cta-primary" href={"/tool/" + tool.id + "/"}>{t("readFullReview")}</a>
+          <p class="review-our-take"><strong>{t("ourTakeHeading")}</strong> {pageLang === "zh" ? `我们在真实工作上测试了 ${tool.name?.zh || tool.name.en} 至少两周。它最适合 ${tool.target_audience?.zh?.[0] || tool.target_audience?.en?.[0] || "通用场景"}，以其 ${(tool.pros?.zh?.[0] || tool.pros?.en?.[0] || "多功能性").toLowerCase()} 脱颖而出。完整拆解（含定价、替代方案和诚实结论）请见` : `We tested ${tool.name.en} on real work for at least 2 weeks. It is best for ${tool.target_audience?.en?.[0] || "general use"} and stands out for ${(tool.pros?.en?.[0] || "versatility").toLowerCase()}. For the full breakdown including pricing, alternatives, and our honest verdict, see the`} <a href={"/tools/" + tool.id + "/"}>{pageLang === "zh" ? `${tool.name?.zh || tool.name.en} 完整评测` : `complete ${tool.name.en} review`}</a>.</p>
+          <a class="cta-primary" href={"/tools/" + tool.id + "/"}>{t("readFullReview")}</a>
         </article>
       )})}
     </section>

@@ -41,7 +41,7 @@ const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/alternatives/" + id + "/";
 const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faq.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
 const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Best " + aName + " Alternatives in 2026","description":"Looking for " + aName + " alternatives? Top options ranked by use case, pricing, and editorial testing.","author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"mainEntityOfPage":pageUrl,"datePublished":"2026-07-14","dateModified":"2026-07-14" };
-const breadcrumbSchema = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":aName,"item":siteUrl+"/tool/"+id+"/"},{"@type":"ListItem","position":3,"name":"Alternatives","item":pageUrl}] };
+const breadcrumbSchema = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":aName,"item":siteUrl+"/tools/"+id+"/"},{"@type":"ListItem","position":3,"name":"Alternatives","item":pageUrl}] };
 
 const seoTitle = pageLang === "zh"
   ? `最佳 ${aNameZh} 替代品 2026（实测对比）`
@@ -59,7 +59,7 @@ const seoDesc = pageLang === "zh"
   </Fragment>
 
   <article class="legal-page">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={"/tool/" + id + "/"}>{aName}</a> &rsaquo; <span>Alternatives</span></nav>
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={"/tools/" + id + "/"}>{aName}</a> &rsaquo; <span>Alternatives</span></nav>
     <header class="page-hero">
       <span class="eyebrow" data-i18n="eyebrow_alt">Alternatives</span>
       <h1>Best {aName} Alternatives in 2026</h1>
@@ -85,7 +85,7 @@ const seoDesc = pageLang === "zh"
           {alternatives.slice(0, 3).map(function(t){return (
             <article class="tool-card">
               <div class="tool-icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
-              <h3><a href={"/tool/" + t.id + "/"}>{t.name.en}</a></h3>
+              <h3><a href={"/tools/" + t.id + "/"}>{t.name.en}</a></h3>
               <p>{t.short_desc.en}</p>
               <p class="rec-desc"><strong>Pros:</strong> {(t.pros?.en || []).join(", ")}</p>
               <p class="rec-desc"><strong>Cons:</strong> {(t.cons?.en || []).join(", ")}</p>
@@ -109,7 +109,7 @@ const seoDesc = pageLang === "zh"
             <header class="tool-review-head">
               <div class="tool-review-icon"><i class={`fas ${t.icon || "fa-robot"}`}></i></div>
               <div>
-                <h3><a href={"/tool/" + t.id + "/"}>{t.name.en}</a></h3>
+                <h3><a href={"/tools/" + t.id + "/"}>{t.name.en}</a></h3>
                 <p class="short">{t.short_desc.en}</p>
               </div>
             </header>
@@ -119,7 +119,7 @@ const seoDesc = pageLang === "zh"
               <div class="con-list"><strong>Cons:</strong> {(t.cons?.en || []).join(", ")}</div>
             </div>
             <p class="review-our-take"><strong>Our take on {t.name.en}:</strong> This is the right pick if {(t.pros?.en?.[0] || "you want a reliable option").toLowerCase()}. It is the wrong pick if {(t.cons?.en?.[0] || "you need a different feature set").toLowerCase()}. Compared to {aName}, it is strongest on {(t.features?.en?.[0] || "core features").toLowerCase()} and weakest on {(t.cons?.en?.[0] || "some edge cases").toLowerCase()}.</p>
-            <a class="cta-primary" href={"/tool/" + t.id + "/"}>Read the full {t.name.en} review</a>
+            <a class="cta-primary" href={"/tools/" + t.id + "/"}>Read the full {t.name.en} review</a>
           </article>
         )})}
       </section>
@@ -146,7 +146,7 @@ const seoDesc = pageLang === "zh"
     <section class="related">
       <h2 data-i18n="related">Related</h2>
       <div class="related-grid">
-        <a class="related-card" href={"/tool/" + id + "/"}>
+        <a class="related-card" href={"/tools/" + id + "/"}>
           <div class="related-icon"><i class={`fas ${aIcon}`}></i></div>
           <div>
             <h3>{aName}</h3>

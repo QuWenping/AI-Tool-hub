@@ -1,0 +1,178 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const promptDataZh: Record<string, any> = {
+  "cursor-middleware": {
+    title: "Cursor 中间件提示词指南",
+    description: "编写有效的 Cursor 中间件提示词的综合指南，涵盖自定义 AI 行为、规则执行和 IDE 工作流自动化。",
+    tags: ["编程", "Cursor", "中间件"],
+    useCase: "配置 Cursor 中间件层的开发者，用于执行代码标准、自动化工作流和定制团队项目的 AI 行为。",
+    exampleOutput: "## Cursor 中间件配置\n- 规则：强制执行 TypeScript 严格模式\n- 触发器：文件保存时\n- 操作：运行 `tsc --noEmit` 并内联报告错误\n- 规则：使用 Prettier 自动格式化\n- 触发器：提交前\n- 操作：格式化所有暂存文件",
+    relatedTools: ["cursor", "github-copilot"],
+  },
+  "any-k8s": {
+    title: "Kubernetes AI 提示词指南",
+    description: "使用 AI 管理 Kubernetes 集群、调试 Pod、优化部署和编写基础设施即代码的通用提示词模板。",
+    tags: ["运维", "Claude", "Kubernetes"],
+    useCase: "DevOps 工程师和 SRE 使用 AI 排查 Kubernetes 问题、生成 Helm 图表和优化集群配置。",
+    exampleOutput: "## K8s 故障排查\n- Pod `api-gateway-7f8b9` 处于 CrashLoopBackOff\n- 根因：缺少 ConfigMap `app-config`\n- 修复：`kubectl create configmap app-config --from-file=config.yaml`\n- 验证：配置注入后 Pod 正常运行",
+    relatedTools: ["claude", "chatgpt"],
+  },
+  "perplexity-deep-dive": {
+    title: "Perplexity 深度研究提示词",
+    description: "使用 Perplexity AI 进行深度研究会议的提示词模板，最大化引用质量、来源多样性和分析深度。",
+    tags: ["研究", "Perplexity", "分析"],
+    useCase: "研究人员、分析师和学生需要在复杂主题上进行深入、引用充分的研究。",
+    exampleOutput: "## 研究发现：CRISPR 基因编辑\n### 来源（15 篇同行评审）\n1. Doudna & Charpentier (Nature, 2020)\n2. Liu Lab (Science, 2023)\n### 关键洞察\n- 碱基编辑在人体细胞中效率达 78%\n- 先导编辑将脱靶效应降低 92%\n- 临床试验：12 项进行中（镰状细胞病、β-地中海贫血）",
+    relatedTools: ["perplexity", "chatgpt"],
+  },
+  "chatgpt-simplify": {
+    title: "ChatGPT 内容简化提示词",
+    description: "使用 ChatGPT 将复杂技术内容简化为清晰易懂的解释，同时保持准确性和细节。",
+    tags: ["写作", "ChatGPT", "教育"],
+    useCase: "技术写作者、教育工作者和内容创作者将复杂主题转化为初学者友好的解释。",
+    exampleOutput: "## 原文（12 年级阅读水平）\n'该实现采用基于 Transformer 架构的多头自注意力机制...'\n## 简化后（8 年级）\n'该系统使用特殊设计，可以同时关注输入的不同部分，就像同时读多个句子而不是逐字逐句阅读。'",
+    relatedTools: ["chatgpt", "claude"],
+  },
+  "any-data-quality": {
+    title: "AI 数据质量保证提示词",
+    description: "使用 AI 审核、验证和提升数据集质量的综合提示词模板。涵盖完整性、一致性、准确性检查和自动化修复建议。",
+    tags: ["数据", "Claude", "ChatGPT"],
+    useCase: "数据工程师和分析师需要验证大型数据集、识别异常并使用 AI 生成数据质量报告。",
+    exampleOutput: "## 数据质量报告\n- 完整性：94.2%（5 列中有 2,340 个缺失值）\n- 一致性：87.1%（'created_at' 列日期格式不匹配）\n- 准确性：96.8%（'age' 列存在超出范围的值）\n- 建议：统一日期格式，对数值字段使用中位数填充缺失值",
+    relatedTools: ["claude", "chatgpt"],
+  },
+  "any-whitepaper": {
+    title: "AI 白皮书生成提示词",
+    description: "使用 AI 生成专业白皮书的结构化提示词。包含执行摘要、问题陈述、方法论、发现和建议等部分。",
+    tags: ["写作", "商业", "ChatGPT"],
+    useCase: "内容营销人员、研究人员和商业分析师创建技术白皮书、研究报告和思想领导力内容。",
+    exampleOutput: "## 执行摘要\n[问题和解决方案的简明概述]\n## 问题陈述\n[当前市场挑战及数据支撑]\n## 方法论\n[研究方法和使用的 AI 工具]\n## 关键发现\n[数据驱动的洞察]\n## 建议\n[可操作的后续步骤]",
+    relatedTools: ["chatgpt", "claude", "perplexity"],
+  },
+  "any-governance-d": {
+    title: "AI 治理文档提示词",
+    description: "生成 AI 治理框架、政策文件和合规检查清单的提示词模板。涵盖数据隐私、模型透明度、偏见监控和审计追踪。",
+    tags: ["商业", "Claude", "治理"],
+    useCase: "合规官、AI 伦理团队和法务部门记录 AI 治理政策并确保合规。",
+    exampleOutput: "## AI 治理框架\n### 1. 数据隐私\n- 数据分类层级\n- 同意管理程序\n### 2. 模型透明度\n- 文档标准\n- 可解释性要求\n### 3. 偏见监控\n- 测试协议\n- 缓解策略\n### 4. 审计追踪\n- 日志要求\n- 审查频率",
+    relatedTools: ["claude", "chatgpt"],
+  },
+  "cursor-refactor-agent": {
+    title: "Cursor 重构代理提示词",
+    description: "使用 Cursor 代理模式进行大规模代码重构的专用提示词。处理类提取、方法分解、接口隔离和测试迁移。",
+    tags: ["编程", "Cursor"],
+    useCase: "软件开发人员重构遗留代码库、改进代码架构或迁移到新模式。",
+    exampleOutput: "## 重构计划\n1. 从 `UserController` 提取 `AuthService` 类\n2. 将 `processOrder` 分解为 `validateOrder`、`calculateTotal`、`applyDiscount`\n3. 创建 `PaymentGateway` 接口\n4. 迁移单元测试到新结构\n## 预估影响：减少 340 行代码，3 个新类，1 个新接口",
+    relatedTools: ["cursor", "github-copilot"],
+  },
+  "claude-metaphor": {
+    title: "Claude 隐喻与类比提示词",
+    description: "利用 Claude 优势为技术概念、演示文稿和教育内容生成创意隐喻和类比的提示词。",
+    tags: ["写作", "Claude", "教育"],
+    useCase: "教育工作者、技术作家和演示者通过令人难忘的隐喻和类比来解释复杂概念。",
+    exampleOutput: "## 隐喻：AI 训练\n训练 AI 模型就像教孩子阅读。首先，你给他们看成千上万本图画书（训练数据）。他们学习模式——'猫'出现在毛茸茸的四足动物旁边（模式识别）。最终他们能阅读从未见过的新书（泛化）。但有时他们仍会把'read'读错（模型幻觉）。",
+    relatedTools: ["claude", "chatgpt"],
+  },
+  "cursor-merge-conf": {
+    title: "Cursor 合并冲突解决提示词",
+    description: "使用 Cursor 智能解决 Git 合并冲突的提示词模板。分析冲突双方，建议最佳解决方案并解释权衡。",
+    tags: ["编程", "Cursor", "Git"],
+    useCase: "处理复杂合并冲突的开发者，希望在保留双方意图的前提下获得 AI 辅助解决方案。",
+    exampleOutput: "## 冲突分析\n- 文件：`src/utils/auth.ts`\n- 分支 A（feature/oauth）：添加了 OAuth2 流程\n- 分支 B（main）：重构了认证中间件\n## 建议解决方案\n合并两者：保留 B 的重构中间件，使用新中间件模式集成 A 的 OAuth2 流程。",
+    relatedTools: ["cursor", "github-copilot"],
+  },
+  "mj-cozy-room": {
+    title: "Midjourney 温馨房间提示词",
+    description: "使用 Midjourney 生成温馨舒适房间内部的精选提示词。包含灯光、色彩、装饰风格和相机角度参数。",
+    tags: ["图像", "Midjourney"],
+    useCase: "室内设计师、概念艺术家和内容创作者为情绪板和演示生成温暖的房间可视化效果。",
+    exampleOutput: "生成的图像：阳光照亮的阅读角落，破旧的皮扶手椅，落地书架，木边桌上的热咖啡，午后温暖的光线透过亚麻窗帘，hygge 美学，Canon EOS R5 35mm f/1.4，照片级真实渲染。",
+    relatedTools: ["midjourney", "dalle3"],
+  },
+  "claude-offboard": {
+    title: "Claude 员工离职提示词",
+    description: "使用 Claude 生成全面的员工离职清单和文档。涵盖 IT 权限撤销、知识转移、离职面谈和合规要求。",
+    tags: ["商业", "Claude", "HR"],
+    useCase: "HR 专业人员和 IT 管理员管理员工离职，需要结构化的完整离职程序。",
+    exampleOutput: "## 离职清单\n### IT（第 0 天）\n- [ ] 撤销邮箱访问\n- [ ] 禁用 VPN/SSH 密钥\n- [ ] 从 Slack/Teams 移除\n### 知识转移（第 1-5 天）\n- [ ] 文档交接会议\n- [ ] 转移项目所有权\n### 离职面谈（第 5 天）\n- [ ] 进行结构化面谈\n- [ ] 收回公司设备",
+    relatedTools: ["claude", "notion-ai"],
+  },
+  "any-customer-research": {
+    title: "AI 客户研究提示词",
+    description: "使用 AI 进行客户研究分析的提示词模板。将访谈记录、调查数据和支持工单综合为可操作的洞察和用户画像。",
+    tags: ["商业", "ChatGPT", "研究"],
+    useCase: "产品经理、UX 研究人员和营销人员分析客户反馈以识别模式、痛点和机会。",
+    exampleOutput: "## 客户研究总结\n### 主要痛点\n1. 入门复杂性（42% 受访者）\n2. 集成摩擦（31%）\n### 用户画像\n- '效率 Emma'：高级用户，重视快捷方式\n- '谨慎 Carlos'：需要详尽文档\n### 关键机会\n- 简化初始设置向导\n- 添加原生 Slack 集成",
+    relatedTools: ["chatgpt", "claude", "notion-ai"],
+  },
+};
+
+export async function getStaticPaths() {
+  const slugs = [
+    "cursor-middleware", "any-k8s", "perplexity-deep-dive", "chatgpt-simplify",
+    "any-data-quality", "any-whitepaper", "any-governance-d", "cursor-refactor-agent",
+    "claude-metaphor", "cursor-merge-conf", "mj-cozy-room", "claude-offboard", "any-customer-research",
+  ];
+  return slugs.map(slug => ({ params: { slug }, props: { slug } }));
+}
+
+const { slug } = Astro.props;
+const pageLang = "zh";
+const pd = promptDataZh[slug] || { title: slug.replace(/-/g, ' '), description: '', tags: [], useCase: '', exampleOutput: '', relatedTools: [] };
+const title = pd.title;
+const description = pd.description || '';
+const tags = pd.tags || [];
+---
+
+<BaseLayout title={`${title} — AI 提示词模板`} description={description} lang={pageLang}>
+  <article class="legal-page">
+    <nav class="breadcrumbs">
+      <a href="/zh/">首页</a> &rsaquo;
+      <a href="/zh/prompts/">AI 提示词</a> &rsaquo;
+      <span>{title}</span>
+    </nav>
+    <header class="page-hero">
+      <span class="eyebrow">提示词</span>
+      <h1>{title}</h1>
+      <p class="lede">{description}</p>
+      {tags.length > 0 && (
+        <div style="margin-top: 12px;">
+          {tags.map((tag: string) => <span class="tag">{tag}</span>)}
+        </div>
+      )}
+    </header>
+    <section class="article-body">
+      <h2>提示词模板</h2>
+      <pre class="prompt-block"><code>{pd.title}</code></pre>
+      <h2>使用场景</h2>
+      <p>{pd.useCase}</p>
+      <h2>示例输出</h2>
+      <pre class="prompt-block"><code>{pd.exampleOutput}</code></pre>
+      {pd.relatedTools && pd.relatedTools.length > 0 && (
+        <>
+          <h2>相关工具</h2>
+          <div class="tag-row">
+            {pd.relatedTools.map((tid: string) => (
+              <a class="tool-pill" href={`/zh/tools/${tid}/`}>{tid}</a>
+            ))}
+          </div>
+        </>
+      )}
+    </section>
+    <section class="related" style="margin-top: 48px;">
+      <h2>更多提示词</h2>
+      <div class="related-grid">
+        {Object.keys(promptDataZh).filter(s => s !== slug).slice(0, 6).map(s => (
+          <a class="related-card" href={`/zh/prompts/${s}/`}>
+            <div class="related-icon"><i class="fas fa-terminal"></i></div>
+            <div>
+              <h3>{promptDataZh[s]?.title || s.replace(/-/g, ' ')}</h3>
+              <p>{(promptDataZh[s]?.description || '').slice(0, 80)}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </article>
+</BaseLayout>

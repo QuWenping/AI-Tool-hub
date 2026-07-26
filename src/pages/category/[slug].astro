@@ -28,7 +28,7 @@ const itemListSchema = {
   "itemListElement": matchedTools.map((t, i) => ({
     "@type": "ListItem", "position": i + 1,
     "name": pageLang === "zh" ? (t.name?.zh || t.name?.en || t.id) : (t.name?.en || t.id),
-    "url": siteUrl + "/tool/" + t.id + "/"
+    "url": siteUrl + "/tools/" + t.id + "/"
   }))
 };
 const breadcrumb = {
@@ -53,7 +53,7 @@ const cleanTitle = cat.title_en.replace(/^Best\s+/i, "").replace(/\s+in\s+2026$/
 
     <div class="card-grid">
       {matchedTools.map(t => (
-        <a class="list-card" href={`/tool/${t.id}/`}>
+        <a class="list-card" href={`/tools/${t.id}/`}>
           <div class="card-head">
             <h3>{pageLang === "zh" ? (t.name?.zh || t.name?.en || t.id) : (t.name?.en || t.id)}</h3>
             <span class="tag-pill">{pageLang === "zh" ? catLabel(t.cat, "zh") : (categoryLabels[t.cat] || t.cat || "AI")}</span>

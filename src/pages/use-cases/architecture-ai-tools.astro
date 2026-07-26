@@ -1,0 +1,152 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import toolsData from "../../data/tools.json";
+
+const toolIds = [
+  "midjourney", "dalle3", "stable-diffusion", "leonardo", "ideogram",
+  "figma-ai", "uizard", "galileo-ai", "vizcom-ai", "getimg-ai",
+  "gamma", "beautiful-ai", "canva-ai", "removebg", "photoroom"
+];
+const tools = toolIds.map(id => ({ id, ...toolsData[id] })).filter(t => t && t.name);
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/use-cases/architecture-ai-tools/";
+
+const sceneGroups = [
+  {
+    name: "Concept & Ideation",
+    desc: "Generate architectural concepts, mood boards, and design iterations from text descriptions. Rapidly explore styles, materials, and forms before committing to detailed design work.",
+    tools: ["midjourney", "dalle3", "stable-diffusion", "leonardo", "ideogram"]
+  },
+  {
+    name: "Presentation & Visualization",
+    desc: "Create compelling client presentations, renderings, and visual materials. Turn rough sketches into polished visuals without specialized 3D rendering skills.",
+    tools: ["gamma", "beautiful-ai", "canva-ai", "getimg-ai", "removebg"]
+  },
+  {
+    name: "Design & Prototyping",
+    desc: "Transform wireframes into high-fidelity UI mockups, generate design systems, and prototype architectural interfaces and dashboards.",
+    tools: ["figma-ai", "uizard", "galileo-ai", "vizcom-ai", "photoroom"]
+  }
+];
+
+const faqItems = [
+  {
+    q: "Can AI replace architects?",
+    a: "No. AI tools augment architects by handling repetitive visualization tasks, generating design options, and streamlining presentation workflows. Creative direction, client relationships, code compliance, and structural judgment remain firmly in the architect's domain. Think of AI as a junior designer who can produce 50 concept variations overnight — you still decide which ones are worth developing."
+  },
+  {
+    q: "Which AI tool is best for architectural rendering?",
+    a: "Midjourney and DALL-E 3 lead for photorealistic architectural visualization. Midjourney excels at atmospheric, artistic renderings with strong material representation. DALL-E 3 offers more precise control over composition and can follow detailed architectural prompts. For quick ideation, Leonardo.AI provides architecture-specific models and faster generation."
+  },
+  {
+    q: "Are AI-generated architectural images usable in client presentations?",
+    a: "Yes, with caveats. AI-generated images are excellent for early-stage concept presentations and mood exploration. They should be clearly labeled as conceptual renders. For construction documents or permit submissions, AI images are not a substitute for technical drawings, BIM models, or professionally produced renderings."
+  },
+  {
+    q: "Can AI help with BIM and Revit workflows?",
+    a: "Current AI tools do not directly integrate with Revit or BIM authoring tools for model creation. However, AI can assist with: (1) generating texture maps and material libraries for BIM rendering, (2) analyzing project documentation for inconsistencies, (3) automating repetitive CAD cleanup tasks, and (4) generating design option studies that inform BIM modeling decisions."
+  },
+  {
+    q: "What is the cost to use AI tools for architecture?",
+    a: "Entry level is free: Canva AI, Stable Diffusion (self-hosted), and free tiers of Leonardo.AI cover basic needs. Professional use runs $10-60/month per tool. A typical architecture firm might spend $200-400/month across 4-5 tools for a team of 5-10 architects. This replaces costs previously spent on stock imagery, basic 3D rendering, and manual presentation design."
+  }
+];
+
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Best AI Tools for Architects 2026: Design, Rendering & Visualization","description":"Complete guide to AI tools for architects: Midjourney, DALL-E, Stable Diffusion, Figma AI, and more. Compare rendering, ideation, and presentation tools for architectural workflows.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Use Cases","item":siteUrl+"/use-cases/"},{"@type":"ListItem","position":3,"name":"Architecture","item":pageUrl}] };
+---
+
+<BaseLayout
+  title="Best AI Tools for Architects 2026 | Design, Rendering & Visualization"
+  description="Complete guide to AI tools for architects: Midjourney, DALL-E, Stable Diffusion, Figma AI, and more. Compare rendering, ideation, and presentation tools for architectural workflows."
+  keywords="AI architecture tools, architectural rendering AI, Midjourney architecture, AI design tools, architectural visualization, AI for architects"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/use-cases/">Use Cases</a> &rsaquo; <span>Architecture</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Use Case</span>
+      <h1>Best AI Tools for Architects 2026</h1>
+      <p>15 tools across concept ideation, presentation, and design prototyping — tested for real architectural workflows.</p>
+    </header>
+
+    <section class="article-body">
+      <p>Architecture is undergoing an AI transformation. From generating hundreds of concept variations in minutes to automating presentation design, AI tools are compressing workflows that used to take weeks into hours. This guide covers the best AI tools for architects in 2026, organized by the three phases where AI delivers the most impact: concept ideation, visualization, and design prototyping.</p>
+
+      <h2>Why Architects Need AI Tools</h2>
+      <p>Architectural practice involves three time-consuming bottlenecks that AI directly addresses:</p>
+      <ul>
+        <li><strong>Design exploration:</strong> Clients want options. AI generates dozens of concept variations from a single prompt, giving you more material for design reviews without spending days on each variation.</li>
+        <li><strong>Visualization:</strong> Turning sketches and ideas into compelling visuals for clients and stakeholders. AI rendering tools produce photorealistic images in seconds rather than hours.</li>
+        <li><strong>Presentation:</strong> Compiling design narratives, mood boards, and client decks. AI presentation tools automate layout, image editing, and content structuring.</li>
+      </ul>
+
+      <h2>AI Tools by Architectural Workflow Phase</h2>
+
+      {sceneGroups.map(group => (
+        <section>
+          <h3>{group.name}</h3>
+          <p>{group.desc}</p>
+          <div class="tool-grid">
+            {group.tools.map(tid => {
+              const tool = tools.find(t => t.id === tid);
+              if (!tool) return null;
+              return (
+                <article class="tool-card">
+                  <div class="tool-icon"><i class={`fas ${tool.icon || "fa-robot"}`}></i></div>
+                  <h4><a href={`/tools/${tool.id}/`}>{tool.name.en}</a></h4>
+                  <p>{tool.short_desc?.en || ""}</p>
+                  <span class="tool-tag">{tool.cat}</span>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+      ))}
+
+      <h2>Comparison Table</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Tool</th><th>Best For</th><th>Pricing</th><th>Learning Curve</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Midjourney</strong></td><td>Atmospheric renderings, material studies</td><td>$10-60/mo</td><td>Medium</td></tr>
+            <tr><td><strong>DALL-E 3</strong></td><td>Precise prompt-driven compositions</td><td>Included in ChatGPT Plus ($20/mo)</td><td>Low</td></tr>
+            <tr><td><strong>Stable Diffusion</strong></td><td>Self-hosted, unlimited generation</td><td>Free (self-hosted)</td><td>High</td></tr>
+            <tr><td><strong>Leonardo.AI</strong></td><td>Architecture-specific models</td><td>Free tier / $12-60/mo</td><td>Low-Medium</td></tr>
+            <tr><td><strong>Figma AI</strong></td><td>UI/UX for architectural apps & dashboards</td><td>Free / $12-45/mo</td><td>Medium</td></tr>
+            <tr><td><strong>Gamma</strong></td><td>Client presentations & pitch decks</td><td>Free / $10-20/mo</td><td>Low</td></tr>
+            <tr><td><strong>Canva AI</strong></td><td>Quick visual materials & mood boards</td><td>Free / $13/mo Pro</td><td>Low</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Recommended Workflow</h2>
+      <p>For a typical architectural design cycle, we recommend this tool stack:</p>
+      <ol>
+        <li><strong>Ideation:</strong> Start with Midjourney or DALL-E 3 to generate 20-30 concept variations from your design brief. Use Leonardo.AI for quick iterations with architecture-tuned models.</li>
+        <li><strong>Refinement:</strong> Select the top 3-5 concepts and refine them in Stable Diffusion with ControlNet for precise composition control.</li>
+        <li><strong>Presentation:</strong> Assemble the selected concepts in Gamma or Beautiful.ai for client presentation decks. Use Canva AI for supplementary mood boards and material palettes.</li>
+        <li><strong>Prototyping:</strong> If your project includes digital interfaces (smart building dashboards, tenant apps), use Figma AI and Uizard for UI design and prototyping.</li>
+      </ol>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-section">
+        {faqItems.map(f => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

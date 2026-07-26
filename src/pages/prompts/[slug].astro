@@ -1,0 +1,178 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const promptData: Record<string, any> = {
+  "cursor-middleware": {
+    title: "Cursor Middleware Prompt Guide",
+    description: "A comprehensive guide to writing effective Cursor middleware prompts for custom AI behaviors, rule enforcement, and workflow automation in your IDE.",
+    tags: ["Coding", "Cursor", "Middleware"],
+    useCase: "Developers configuring Cursor's middleware layer to enforce code standards, automate workflows, and customize AI behavior for team projects.",
+    exampleOutput: "## Cursor Middleware Configuration\n- Rule: Enforce TypeScript strict mode\n- Trigger: On file save\n- Action: Run `tsc --noEmit` and report errors inline\n- Rule: Auto-format with Prettier\n- Trigger: Before commit\n- Action: Format all staged files",
+    relatedTools: ["cursor", "github-copilot"],
+  },
+  "any-k8s": {
+    title: "Kubernetes AI Prompt Guide",
+    description: "An all-purpose prompt template for using AI to manage Kubernetes clusters, debug pods, optimize deployments, and write infrastructure-as-code.",
+    tags: ["DevOps", "Claude", "Kubernetes"],
+    useCase: "DevOps engineers and SREs using AI to troubleshoot Kubernetes issues, generate Helm charts, and optimize cluster configurations.",
+    exampleOutput: "## K8s Troubleshooting\n- Pod `api-gateway-7f8b9` in CrashLoopBackOff\n- Root cause: Missing ConfigMap `app-config`\n- Fix: `kubectl create configmap app-config --from-file=config.yaml`\n- Verified: Pod running after config injection",
+    relatedTools: ["claude", "chatgpt"],
+  },
+  "perplexity-deep-dive": {
+    title: "Perplexity Deep Dive Prompt",
+    description: "A prompt template for conducting deep research sessions with Perplexity AI, maximizing citation quality, source diversity, and analytical depth.",
+    tags: ["Research", "Perplexity", "Analysis"],
+    useCase: "Researchers, analysts, and students who need thorough, well-cited research on complex topics using Perplexity's search-backed AI.",
+    exampleOutput: "## Research Findings: CRISPR Gene Editing\n### Sources (15 peer-reviewed)\n1. Doudna & Charpentier (Nature, 2020)\n2. Liu Lab (Science, 2023)\n### Key Insights\n- Base editing achieves 78% efficiency in human cells\n- Off-target effects reduced 92% with prime editing\n- Clinical trials: 12 active (sickle cell, beta-thalassemia)",
+    relatedTools: ["perplexity", "chatgpt"],
+  },
+  "chatgpt-simplify": {
+    title: "ChatGPT Content Simplification Prompt",
+    description: "A prompt for using ChatGPT to simplify complex technical content into clear, accessible explanations without losing accuracy or nuance.",
+    tags: ["Writing", "ChatGPT", "Education"],
+    useCase: "Technical writers, educators, and content creators translating complex topics into beginner-friendly explanations.",
+    exampleOutput: "## Original (12th grade reading level)\n'The implementation utilizes a transformer-based architecture with multi-head self-attention mechanisms...'\n## Simplified (8th grade)\n'The system uses a special design that lets it focus on different parts of the input at the same time, like reading multiple sentences at once instead of one word at a time.'",
+    relatedTools: ["chatgpt", "claude"],
+  },
+  "any-data-quality": {
+    title: "AI Data Quality Assurance Prompt",
+    description: "A comprehensive prompt template for using AI to audit, validate, and improve data quality across datasets. Covers completeness, consistency, accuracy checks, and automated remediation suggestions.",
+    tags: ["Data", "Claude", "ChatGPT"],
+    useCase: "Data engineers and analysts who need to validate large datasets, identify anomalies, and generate data quality reports using AI assistance.",
+    exampleOutput: "## Data Quality Report\n- Completeness: 94.2% (2,340 missing values in 5 columns)\n- Consistency: 87.1% (date format mismatch in column 'created_at')\n- Accuracy: 96.8% (out-of-range values in 'age' column)\n- Recommendations: Standardize date formats, impute missing values using median for numeric fields",
+    relatedTools: ["claude", "chatgpt"],
+  },
+  "any-whitepaper": {
+    title: "AI Whitepaper Generator Prompt",
+    description: "A structured prompt for generating professional whitepapers using AI. Includes sections for executive summary, problem statement, methodology, findings, and recommendations.",
+    tags: ["Writing", "Business", "ChatGPT"],
+    useCase: "Content marketers, researchers, and business analysts creating technical whitepapers, research reports, and thought leadership content.",
+    exampleOutput: "## Executive Summary\n[Concise overview of the problem and solution]\n## Problem Statement\n[Current market challenge with data]\n## Methodology\n[Research approach and AI tools used]\n## Key Findings\n[Data-driven insights]\n## Recommendations\n[Actionable next steps]",
+    relatedTools: ["chatgpt", "claude", "perplexity"],
+  },
+  "any-governance-d": {
+    title: "AI Governance Documentation Prompt",
+    description: "A prompt template for generating AI governance frameworks, policy documents, and compliance checklists. Covers data privacy, model transparency, bias monitoring, and audit trails.",
+    tags: ["Business", "Claude", "Governance"],
+    useCase: "Compliance officers, AI ethics teams, and legal departments documenting AI governance policies and ensuring regulatory compliance.",
+    exampleOutput: "## AI Governance Framework\n### 1. Data Privacy\n- Data classification tiers\n- Consent management procedures\n### 2. Model Transparency\n- Documentation standards\n- Explainability requirements\n### 3. Bias Monitoring\n- Testing protocols\n- Mitigation strategies\n### 4. Audit Trail\n- Logging requirements\n- Review cadence",
+    relatedTools: ["claude", "chatgpt"],
+  },
+  "cursor-refactor-agent": {
+    title: "Cursor Refactor Agent Prompt",
+    description: "A specialized prompt for using Cursor's agent mode to perform large-scale code refactoring. Handles class extraction, method decomposition, interface segregation, and test migration.",
+    tags: ["Coding", "Cursor"],
+    useCase: "Software developers refactoring legacy codebases, improving code architecture, or migrating to new patterns using Cursor's agent capabilities.",
+    exampleOutput: "## Refactoring Plan\n1. Extract `AuthService` class from `UserController`\n2. Decompose `processOrder` into `validateOrder`, `calculateTotal`, `applyDiscount`\n3. Create `PaymentGateway` interface\n4. Migrate unit tests to new structure\n## Estimated Impact: 340 lines reduced, 3 new classes, 1 new interface",
+    relatedTools: ["cursor", "github-copilot"],
+  },
+  "claude-metaphor": {
+    title: "Claude Metaphor & Analogy Prompt",
+    description: "A prompt designed to leverage Claude's strengths in generating creative metaphors and analogies for technical concepts, presentations, and educational content.",
+    tags: ["Writing", "Claude", "Education"],
+    useCase: "Educators, technical writers, and presenters explaining complex concepts through memorable metaphors and analogies.",
+    exampleOutput: "## Metaphor: AI Training\nTraining an AI model is like teaching a child to read. First, you show them thousands of picture books (training data). They learn patterns — 'cat' appears near furry four-legged animals (pattern recognition). Eventually, they can read new books they've never seen before (generalization). But sometimes they still mispronounce 'read' as 'red' (model hallucination).",
+    relatedTools: ["claude", "chatgpt"],
+  },
+  "cursor-merge-conf": {
+    title: "Cursor Merge Conflict Resolution Prompt",
+    description: "A prompt template for using Cursor to intelligently resolve Git merge conflicts. Analyzes both sides of conflicts, suggests optimal resolutions, and explains trade-offs.",
+    tags: ["Coding", "Cursor", "Git"],
+    useCase: "Developers dealing with complex merge conflicts who want AI-assisted resolution that preserves intent from both branches.",
+    exampleOutput: "## Conflict Analysis\n- File: `src/utils/auth.ts`\n- Branch A (feature/oauth): Added OAuth2 flow\n- Branch B (main): Refactored auth middleware\n## Suggested Resolution\nMerge both: keep refactored middleware from B, integrate OAuth2 flow from A using new middleware pattern.",
+    relatedTools: ["cursor", "github-copilot"],
+  },
+  "mj-cozy-room": {
+    title: "Midjourney Cozy Room Prompt",
+    description: "A curated prompt for generating cozy, atmospheric room interiors with Midjourney. Includes lighting, color palette, decor style, and camera angle parameters.",
+    tags: ["Image", "Midjourney"],
+    useCase: "Interior designers, concept artists, and content creators generating warm, inviting room visualizations for mood boards and presentations.",
+    exampleOutput: "Image generated: A sunlit reading nook with a worn leather armchair, floor-to-ceiling bookshelves, a steaming mug on a wooden side table, warm afternoon light filtering through linen curtains, hygge aesthetic, Canon EOS R5 35mm f/1.4, photorealistic render.",
+    relatedTools: ["midjourney", "dalle3"],
+  },
+  "claude-offboard": {
+    title: "Claude Employee Offboarding Prompt",
+    description: "A prompt for generating comprehensive employee offboarding checklists and documentation using Claude. Covers IT access revocation, knowledge transfer, exit interviews, and compliance.",
+    tags: ["Business", "Claude", "HR"],
+    useCase: "HR professionals and IT administrators managing employee departures who need structured, thorough offboarding procedures.",
+    exampleOutput: "## Offboarding Checklist\n### IT (Day 0)\n- [ ] Revoke email access\n- [ ] Disable VPN/SSH keys\n- [ ] Remove from Slack/Teams\n### Knowledge Transfer (Days 1-5)\n- [ ] Document handoff meeting\n- [ ] Transfer project ownership\n### Exit Interview (Day 5)\n- [ ] Conduct structured interview\n- [ ] Collect company equipment",
+    relatedTools: ["claude", "notion-ai"],
+  },
+  "any-customer-research": {
+    title: "AI Customer Research Prompt",
+    description: "A prompt template for conducting AI-powered customer research analysis. Synthesizes interview transcripts, survey data, and support tickets into actionable insights and personas.",
+    tags: ["Business", "ChatGPT", "Research"],
+    useCase: "Product managers, UX researchers, and marketers analyzing customer feedback to identify patterns, pain points, and opportunities.",
+    exampleOutput: "## Customer Research Summary\n### Top Pain Points\n1. Onboarding complexity (42% of respondents)\n2. Integration friction (31%)\n### User Personas\n- 'Efficiency Emma': Power user, values shortcuts\n- 'Careful Carlos': Needs extensive documentation\n### Key Opportunities\n- Simplify initial setup wizard\n- Add native Slack integration",
+    relatedTools: ["chatgpt", "claude", "notion-ai"],
+  },
+};
+
+export async function getStaticPaths() {
+  const slugs = [
+    "cursor-middleware", "any-k8s", "perplexity-deep-dive", "chatgpt-simplify",
+    "any-data-quality", "any-whitepaper", "any-governance-d", "cursor-refactor-agent",
+    "claude-metaphor", "cursor-merge-conf", "mj-cozy-room", "claude-offboard", "any-customer-research",
+  ];
+  return slugs.map(slug => ({ params: { slug }, props: { slug } }));
+}
+
+const { slug } = Astro.props;
+const pageLang = Astro.currentLocale || "en";
+const pd = promptData[slug] || { title: slug.replace(/-/g, ' '), description: '', tags: [], useCase: '', exampleOutput: '', relatedTools: [] };
+const title = pd.title;
+const description = pd.description || '';
+const tags = pd.tags || [];
+---
+
+<BaseLayout title={`${title} — AI Prompt Template`} description={description} lang={pageLang}>
+  <article class="legal-page">
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> &rsaquo;
+      <a href="/prompts/">AI Prompts</a> &rsaquo;
+      <span>{title}</span>
+    </nav>
+    <header class="page-hero">
+      <span class="eyebrow">Prompts</span>
+      <h1>{title}</h1>
+      <p class="lede">{description}</p>
+      {tags.length > 0 && (
+        <div style="margin-top: 12px;">
+          {tags.map((tag: string) => <span class="tag">{tag}</span>)}
+        </div>
+      )}
+    </header>
+    <section class="article-body">
+      <h2>Prompt Template</h2>
+      <pre class="prompt-block"><code>{pd.title}</code></pre>
+      <h2>Use Case</h2>
+      <p>{pd.useCase}</p>
+      <h2>Example Output</h2>
+      <pre class="prompt-block"><code>{pd.exampleOutput}</code></pre>
+      {pd.relatedTools && pd.relatedTools.length > 0 && (
+        <>
+          <h2>Related Tools</h2>
+          <div class="tag-row">
+            {pd.relatedTools.map((tid: string) => (
+              <a class="tool-pill" href={`/tools/${tid}/`}>{tid}</a>
+            ))}
+          </div>
+        </>
+      )}
+    </section>
+    <section class="related" style="margin-top: 48px;">
+      <h2>More Prompts</h2>
+      <div class="related-grid">
+        {Object.keys(promptData).filter(s => s !== slug).slice(0, 6).map(s => (
+          <a class="related-card" href={`/prompts/${s}/`}>
+            <div class="related-icon"><i class="fas fa-terminal"></i></div>
+            <div>
+              <h3>{promptData[s]?.title || s.replace(/-/g, ' ')}</h3>
+              <p>{(promptData[s]?.description || '').slice(0, 80)}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </article>
+</BaseLayout>

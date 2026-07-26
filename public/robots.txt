@@ -1,3 +1,6 @@
 User-agent: *
+Disallow: /.env
+Disallow: /wp-admin
+Disallow: /api/auth
 Allow: /
-Sitemap: https://thebestaitoolsreview.com/sitemap-index.xml
+Sitemap: https://ai-tool-hub-self.vercel.app/sitemap-index.xml

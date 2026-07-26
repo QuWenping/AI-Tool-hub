@@ -106,7 +106,7 @@ for (const [id, tool] of Object.entries(toolsData) as [string, any][]) {
       icon.className = `fas ${tool.icon}`;
 
       const link = clone.querySelector(".card-link") as HTMLAnchorElement;
-      link.href = `/zh/tool/${id}/`;
+      link.href = `/zh/tools/${id}/`;
       link.textContent = tool.name_zh;
 
       const desc = clone.querySelector(".card-desc")!;

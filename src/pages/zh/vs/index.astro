@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const vsPages = [
+  { slug: "chatgpt-vs-claude", title: "ChatGPT vs Claude", desc: "两大领先 AI 聊天机器人在推理、编程、创意和价格方面的对比。" },
+  { slug: "cursor-vs-github-copilot", title: "Cursor vs GitHub Copilot", desc: "哪个 AI 编程助手在代理工作流、内联补全和日常开发中更胜一筹？" },
+  { slug: "midjourney-vs-dalle-3", title: "Midjourney vs DALL-E 3", desc: "图像生成对决：真实感、提示词遵循度、艺术风格和价格。" },
+  { slug: "claude-vs-gemini", title: "Claude vs Gemini", desc: "Anthropic vs Google：哪个 AI 模型在处理长文档、编程和分析方面更好？" },
+  { slug: "chatgpt-vs-gemini", title: "ChatGPT vs Gemini", desc: "OpenAI vs Google 在写作、研究、编程和多模态方面的正面对决。" },
+  { slug: "notion-vs-obsidian", title: "Notion vs Obsidian", desc: "一体化工作空间 vs 本地优先知识库。哪个更适合你的工作流？" },
+  { slug: "windsurf-vs-cursor", title: "Windsurf vs Cursor", desc: "两个 VS Code 分支争夺最佳 AI 优先 IDE 体验。" },
+  { slug: "elevenlabs-vs-play-ht", title: "ElevenLabs vs Play.ht", desc: "AI 语音生成：音质、克隆精度、语言和价格全面对比。" },
+  { slug: "runway-vs-pika", title: "Runway vs Pika", desc: "AI 视频生成工具对比：真实感、动作质量和创意控制。" },
+  { slug: "suno-vs-udio", title: "Suno vs Udio", desc: "AI 音乐生成：哪个创作更好的歌曲，能处理更多风格，提供更好的分轨？" },
+  { slug: "perplexity-vs-chatgpt", title: "Perplexity vs ChatGPT", desc: "研究导向 AI vs 通用 AI：准确性、引用和深度。" },
+  { slug: "lovable-vs-bolt", title: "Lovable vs Bolt", desc: "AI 应用构建工具：哪个能从提示词生成更好的全栈应用？" },
+];
+---
+
+<BaseLayout title="AI 工具对比 — ChatGPT vs Claude、Cursor vs Copilot 等" description="领先 AI 工具的深度一对一对比评测。ChatGPT vs Claude、Cursor vs GitHub Copilot、Midjourney vs DALL-E 3 等。" keywords="AI工具对比, ChatGPT vs Claude, Cursor vs Copilot, AI工具评测" lang="zh">
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <span>AI 工具对比</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">对比评测</span>
+      <h1>AI 工具对比</h1>
+      <p>最受欢迎的 AI 工具一对一对比评测。我们在真实任务上测试并给出客观判断——无付费排名，无偏见。</p>
+    </header>
+    <section class="article-body">
+
+      <div class="card-grid">
+        {vsPages.map(page => (
+          <a class="list-card" href={`/zh/vs/${page.slug}/`}>
+            <div class="card-head">
+              <div>
+                <h3>{page.title}</h3>
+                <p class="card-desc">{page.desc}</p>
+              </div>
+              <span class="tool-pill">VS</span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <h2>我们的对比方法论</h2>
+      <p>每篇对比都遵循一致的流程：</p>
+      <ol>
+        <li><strong>真实场景测试</strong>——我们在实际任务上使用每个工具至少两周</li>
+        <li><strong>并排基准测试</strong>——相同的提示词、相同的任务、相同的评估标准</li>
+        <li><strong>逐功能拆解</strong>——不仅看总分，还有详细的对比表格</li>
+        <li><strong>价格透明</strong>——最新价格和免费版分析</li>
+        <li><strong>场景推荐</strong>——根据你的具体需求选择哪个工具</li>
+      </ol>
+
+      <p class="back-link"><a href="/zh/">返回首页</a></p>
+    </section>
+  </div>
+</BaseLayout>

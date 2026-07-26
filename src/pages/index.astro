@@ -137,7 +137,7 @@ const stackCatalog = stackRecs.tools
       description: tool.short_desc?.en || "",
       icon: tool.icon || "fa-robot",
       cat: tool.cat || "productivity",
-      href: `/tool/${rec.toolId}/`,
+      href: `/tools/${rec.toolId}/`,
       roles: rec.roles || [],
       goals: rec.goals || [],
       monthlyCost: typeof rec.monthlyCost === "number" ? rec.monthlyCost : 0,
@@ -230,7 +230,7 @@ const seoDesc = pageLang === "zh"
         </div>
         <div class="hero-visual" aria-label="Featured AI tools">
           {featuredToolMeta.slice(0, 4).map(({ id, tool }) => (
-            <a class="visual-tool" href={`/tool/${id}/`}>
+            <a class="visual-tool" href={`/tools/${id}/`}>
               <span class="visual-icon"><i class={`fas ${tool.icon || "fa-robot"}`}></i></span>
               <strong>{_tn(tool, "name")}</strong>
               <span>{_tn(tool, "short_desc")}</span>
@@ -371,7 +371,7 @@ const seoDesc = pageLang === "zh"
         </div>
         <div class="tool-grid">
           {featuredToolMeta.map(({ id, tool, rating, price, tags }) => (
-            <a class="tool-card" href={`/tool/${id}/`}>
+            <a class="tool-card" href={`/tools/${id}/`}>
               <div class="tool-card-header">
                 <span class="tool-card-icon"><i class={`fas ${tool.icon || "fa-robot"}`}></i></span>
                 <div>
@@ -389,7 +389,7 @@ const seoDesc = pageLang === "zh"
           ))}
         </div>
         <div class="section-footer">
-          <a class="home-button secondary" href="/tool/">{_t(T.tool_all)}</a>
+          <a class="home-button secondary" href="/tools/">{_t(T.tool_all)}</a>
         </div>
       </div>
     </section>
