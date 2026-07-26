@@ -73,8 +73,8 @@ const breadcrumbSchema = {
               <span class="solution-card-icon" aria-hidden="true"><i class={`fas ${s.icon || "fa-briefcase"}`}></i></span>
               <span class="solution-card-industry">{s.industry}</span>
             </div>
-            <h3>{s.title}</h3>
-            {s.description && <p>{s.description}</p>}
+            <h3>{s.title?.en || s.title}</h3>
+            {s.description && <p>{s.description?.en || s.description}</p>}
             <div class="solution-card-meta">
               <span>{(s.toolIds || []).length} tools</span>
               <span>{(s.workflows || []).length} workflows</span>
@@ -94,8 +94,8 @@ const breadcrumbSchema = {
               <span class="solution-card-icon" aria-hidden="true"><i class={`fas ${s.icon || "fa-briefcase"}`}></i></span>
               <span class="solution-card-industry">{s.industry}</span>
             </div>
-            <h3>{s.title}</h3>
-            {s.description && <p>{s.description}</p>}
+            <h3>{s.title?.en || s.title}</h3>
+            {s.description && <p>{s.description?.en || s.description}</p>}
             <div class="solution-card-meta">
               <span>{(s.toolIds || []).length} tools</span>
               <span>{(s.workflows || []).length} workflows</span>
