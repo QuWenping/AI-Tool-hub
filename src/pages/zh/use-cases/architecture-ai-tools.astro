@@ -1,0 +1,148 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import toolsData from "../../../data/tools.json";
+
+const toolIds = [
+  "midjourney", "dalle3", "stability-ai", "leonardo-ai", "adobe-firefly",
+  "recraft", "figma-ai", "uizard", "galileo-ai", "gamma",
+  "beautiful-ai", "canva-ai", "photoroom", "removebg", "letsenhance"
+];
+const tools = toolIds.map(id => ({ id, ...toolsData[id] })).filter(t => t && t.name);
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/use-cases/architecture-ai-tools/";
+
+const sceneGroups = [
+  {
+    name: "概念创意与渲染",
+    desc: "AI 图像生成工具可在数分钟内生成数十种建筑概念变体。使用 Midjourney、DALL-E 3、Stable Diffusion 和 Leonardo.AI 快速迭代设计方向，探索材质、光线和空间关系——比传统建模快 10-50 倍。",
+    tools: ["midjourney", "dalle3", "stability-ai", "leonardo-ai", "adobe-firefly"]
+  },
+  {
+    name: "可视化与内容创作",
+    desc: "专为建筑可视化定制的 AI 工具：Recraft 快速生成图表与轴测图，Adobe Firefly 进行 AI 驱动的图像编辑与风格迁移，Canva AI 用于情绪板和材料调色板，Photoroom 与 RemoveBG 一键去除图像背景，LetsEnhance 提升渲染图分辨率。",
+    tools: ["recraft", "adobe-firefly", "canva-ai", "photoroom", "removebg", "letsenhance"]
+  },
+  {
+    name: "演示与设计原型",
+    desc: "将概念转化为客户汇报方案。Gamma 和 Beautiful.ai 从设计摘要自动生成演示文稿，Figma AI 用于智能建筑 App / 租户面板的 UI 设计，Uizard 将草图转化为交互原型，Galileo AI 从文本描述生成 UI 设计。",
+    tools: ["gamma", "beautiful-ai", "figma-ai", "uizard", "galileo-ai"]
+  }
+];
+
+const faqItems = [
+  {
+    q: "AI 能替代建筑师吗？",
+    a: "不能。AI 工具协助建筑师加速概念探索、渲染和演示准备。建筑设计需要专业判断、法规合规理解、结构逻辑、人文敏感性和创意愿景——这些都是 AI 无法复制的。AI 减少花在重复迭代和手动渲染上的时间，让建筑师聚焦于高价值的设计决策。"
+  },
+  {
+    q: "哪种 AI 工具最适合建筑渲染？",
+    a: "Midjourney 擅长氛围渲染和材质研究；DALL-E 3 在精确构图方面表现更好；Stable Diffusion 结合 ControlNet 提供精确构图控制；Leonardo.AI 提供专为建筑调优的模型。对大多数事务所而言，推荐从 Midjourney 搭配 DALL-E 3 开始。"
+  },
+  {
+    q: "建筑类的 AI 工具价格贵吗？",
+    a: "不贵。本条推荐的工具大多有免费版或入门版，起价 10-20 美元/月。单个建筑师每月花费 30-50 美元即可搭建完整工具栈。收益在于：概念迭代速度提升 10 倍、手动渲染时间减少、客户方案质量更好。"
+  },
+  {
+    q: "推荐什么样的建筑 AI 工作流程？",
+    a: "首先在 Midjourney 或 DALL-E 3 中从设计摘要生成 20-30 个概念变体。筛选前 3-5 个概念后，在 Stable Diffusion 中使用 ControlNet 进行精确构图控制。最后将选定概念整理进 Gamma 客户演示方案，并用 Canva AI 制作情绪板。如需数字界面（智能建筑仪表盘），使用 Figma AI 和 Uizard 进行设计与原型。"
+  }
+];
+
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"2026 年建筑设计师最佳 AI 工具 | 设计、渲染与可视化","description":"建筑设计师 AI 工具完整指南：Midjourney、DALL-E、Stable Diffusion、Figma AI 等。对比渲染、创意和演示工具，优化建筑工作流程。","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":siteUrl},{"@type":"ListItem","position":2,"name":"使用场景","item":siteUrl+"/zh/use-cases/"},{"@type":"ListItem","position":3,"name":"建筑设计","item":pageUrl}] };
+---
+
+<BaseLayout
+  title="2026 年建筑设计师最佳 AI 工具 | 设计、渲染与可视化"
+  description="建筑设计师 AI 工具完整指南：Midjourney、DALL-E、Stable Diffusion、Figma AI 等。对比渲染、创意和演示工具，优化建筑工作流程。"
+  keywords="AI 建筑工具, 建筑渲染 AI, Midjourney 建筑, AI 设计工具, 建筑可视化, 建筑师 AI"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/use-cases/">使用场景</a> &rsaquo; <span>建筑设计</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">使用场景</span>
+      <h1>2026 年建筑设计师最佳 AI 工具</h1>
+      <p>15 款工具覆盖概念创意、演示和设计原型 —— 针对真实建筑工作流程测试验证。</p>
+    </header>
+
+    <section class="article-body">
+      <p>建筑设计正在经历 AI 变革。从几分钟内生成了数百个概念变体，到自动完成演示设计，AI 工具将曾经需要数周的工作压缩为数小时。本指南涵盖 2026 年建筑设计师最佳 AI 工具，按 AI 影响最大的三个阶段组织：概念创意、可视化和设计原型。</p>
+
+      <h2>为什么建筑师需要 AI 工具</h2>
+      <p>建筑实践涉及三个耗时瓶颈，AI 可以直接解决：</p>
+      <ul>
+        <li><strong>设计探索：</strong>客户需要方案选项。AI 可根据单个提示词生成数十个概念变体，为设计评审提供更多素材，无需在每个方案上耗费数天时间。</li>
+        <li><strong>可视化：</strong>将草图和构思转化为引人注目的视觉效果，便于客户和利益相关方理解。AI 渲染工具可在数秒内生成照片级真实感图像，而非数小时。</li>
+        <li><strong>演示：</strong>编排设计叙事、情绪板和客户方案册。AI 演示工具自动化排版、图像编辑和内容结构组织。</li>
+      </ul>
+
+      <h2>按建筑工作流程阶段划分的 AI 工具</h2>
+
+      {sceneGroups.map(group => (
+        <section>
+          <h3>{group.name}</h3>
+          <p>{group.desc}</p>
+          <div class="tool-grid">
+            {group.tools.map(tid => {
+              const tool = tools.find(t => t.id === tid);
+              if (!tool) return null;
+              return (
+                <article class="tool-card">
+                  <div class="tool-icon"><i class={`fas ${tool.icon || "fa-robot"}`}></i></div>
+                  <h4><a href={`/zh/tools/${tool.id}/`}>{tool.name.zh || tool.name.en}</a></h4>
+                  <p>{tool.short_desc?.zh || tool.short_desc?.en || ""}</p>
+                  <span class="tool-tag">{tool.cat}</span>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+      ))}
+
+      <h2>对比表</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>工具</th><th>最佳用途</th><th>价格</th><th>学习难度</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Midjourney</strong></td><td>氛围渲染、材质研究</td><td>$10-60/月</td><td>中等</td></tr>
+            <tr><td><strong>DALL-E 3</strong></td><td>精确提示词驱动构图</td><td>包含于 ChatGPT Plus ($20/月)</td><td>低</td></tr>
+            <tr><td><strong>Stable Diffusion</strong></td><td>自托管、无限生成</td><td>免费（自托管）</td><td>高</td></tr>
+            <tr><td><strong>Leonardo.AI</strong></td><td>建筑专用模型</td><td>免费版 / $12-60/月</td><td>低-中等</td></tr>
+            <tr><td><strong>Figma AI</strong></td><td>智能建筑 App 与仪表盘 UI/UX</td><td>免费 / $12-45/月</td><td>中等</td></tr>
+            <tr><td><strong>Gamma</strong></td><td>客户演示与方案册</td><td>免费 / $10-20/月</td><td>低</td></tr>
+            <tr><td><strong>Canva AI</strong></td><td>快速视觉素材与情绪板</td><td>免费 / $13/月 Pro</td><td>低</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>推荐工作流程</h2>
+      <p>针对典型建筑设计周期，我们推荐以下工具栈：</p>
+      <ol>
+        <li><strong>创意：</strong>从 Midjourney 或 DALL-E 3 开始，根据设计摘要生成 20-30 个概念变体。使用 Leonardo.AI 结合建筑调优模型进行快速迭代。</li>
+        <li><strong>精细化：</strong>选出前 3-5 个概念后，在 Stable Diffusion 中使用 ControlNet 进行精确构图控制。</li>
+        <li><strong>演示：</strong>将选定的概念整理进 Gamma 或 Beautiful.ai 制作客户演示方案。使用 Canva AI 制作补充情绪板和材质调色板。</li>
+        <li><strong>原型：</strong>若项目含数字界面（智能建筑仪表盘、租户 App），使用 Figma AI 和 Uizard 进行 UI 设计与原型。</li>
+      </ol>
+
+      <h2>常见问题</h2>
+      <div class="faq-section">
+        {faqItems.map(f => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

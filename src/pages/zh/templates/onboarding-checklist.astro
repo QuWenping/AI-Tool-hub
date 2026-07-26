@@ -1,0 +1,153 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/templates/onboarding-checklist/";
+
+const faqItemsZh = [
+  { q: "什么是 AI 项目上线检查清单？", a: "一份结构化的检查清单，涵盖将新 AI 工具成功引入团队工作流所需的每个步骤——从安全审查和数据访问，到培训、试点推广和 ROI 衡量。它能防止在缺乏适当治理的情况下盲目采用 AI 工具。" },
+  { q: "不同 AI 工具需要不同的检查清单吗？", a: "对于大多数 SaaS AI 工具，核心检查清单是通用的。对于访问敏感数据或需要广泛权限 API 密钥的工具，应添加额外的安全验证步骤。对于开源自部署工具，需添加基础设施和维护项目。" },
+  { q: "AI 上线通常需要多长时间？", a: "对于简单工具（如个人使用的 ChatGPT），1-2 天即可完成。对于需要与现有系统集成的团队工具（如全工程团队的 AI 编程助手），需预留 2-4 周用于安全审查、试点测试和培训。" },
+  { q: "团队引入 AI 时最大的错误是什么？", a: "跳过试点阶段。团队通常一次性向所有人推广 AI 工具，然后发现问题（输出质量差、安全隐患、工作流中断）后丧失信任。先用 3-5 名活跃用户试点 2 周，能在全面推广前解决 80% 的问题。" }
+];
+
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItemsZh.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"AI 项目上线检查清单模板","description":"一份全面的 AI 工具团队引入检查清单模板，涵盖安全审查、数据访问、培训、试点推广和 ROI 衡量。","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26","inLanguage":"zh" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":siteUrl+"/zh/"},{"@type":"ListItem","position":2,"name":"模板","item":siteUrl+"/zh/templates/"},{"@type":"ListItem","position":3,"name":"AI 项目上线检查清单","item":pageUrl}] };
+---
+
+<BaseLayout title="AI 项目上线检查清单模板 | AI Tool Hub" description="一份全面的 AI 工具团队引入检查清单模板，涵盖安全审查、数据访问、培训、试点推广和 ROI 衡量。" keywords="AI上线检查清单, AI工具引入, AI项目管理, AI治理模板" lang="zh">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/templates/">模板</a> &rsaquo; <span>AI 项目上线检查清单</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">免费模板</span>
+      <h1>AI 项目上线检查清单模板</h1>
+      <p>一份将新 AI 工具引入团队的分步检查清单。涵盖安全审查、数据治理、试点推广、培训和 ROI 衡量——负责任地采用 AI 所需的一切。</p>
+    </header>
+    <section class="article-body">
+
+      <h2>检查清单</h2>
+      <pre class="prompt-block"><code># AI 项目上线检查清单
+## 项目：[工具名称] | 负责人：[姓名] | 日期：[YYYY-MM-DD]
+
+---
+
+## 第一阶段：前期准备（第 1 周）
+
+### 1.1 业务论证
+- [ ] 明确该 AI 工具解决的核心问题
+- [ ] 确定主要用户及其工作流
+- [ ] 设定可衡量的成功标准（如任务完成速度提升 30%）
+- [ ] 估算成本：每席位价格 × 团队人数 × 12 个月
+
+### 1.2 安全与合规
+- [ ] 审查 AI 工具的数据处理政策（GDPR、等保、SOC 2）
+- [ ] 确认数据存储和处理位置（区域、子处理商）
+- [ ] 验证是否可退出模型训练（不将你的数据用于训练）
+- [ ] 检查团队版是否支持 SSO/SAML
+- [ ] 记录将发送给 AI 的数据类型（文件、代码、凭证）
+
+### 1.3 访问与权限
+- [ ] 定义基于角色的访问控制（管理员、用户、查看者）
+- [ ] 设置 API 密钥管理（轮换计划、最小权限范围）
+- [ ] 创建共享凭证库条目
+
+---
+
+## 第二阶段：试点（第 2-3 周）
+
+### 2.1 试点设置
+- [ ] 选择 3-5 名代表不同使用场景的试点用户
+- [ ] 创建共享反馈渠道（企业微信、飞书、Notion）
+- [ ] 记录试点成功阈值（如 NPS > 40、任务时间 -20%）
+
+### 2.2 培训
+- [ ] 举办 30 分钟启动会议，涵盖：
+  - [ ] 用真实案例演示核心工作流
+  - [ ] 最佳实践和提示词技巧
+  - [ ] 已知局限和边界情况
+- [ ] 分发快速参考指南（1 页 PDF 或 Notion 文档）
+- [ ] 每团队指定一名"先行者"作为第一联系人
+
+### 2.3 每日检查
+- [ ] 收集每日反馈：有效的地方、出问题的地方、意外发现
+- [ ] 在共享追踪器中记录所有问题并标注严重级别
+- [ ] 在 24 小时内将阻塞性问题上报至工具供应商
+
+---
+
+## 第三阶段：全面推广（第 4 周）
+
+### 3.1 Go/No-Go 决策
+- [ ] 对照成功标准审查试点结果
+- [ ] 解决所有严重和高级别问题
+- [ ] 获得以下签批：[安全] [IT] [团队负责人] [财务]
+
+### 3.2 推广
+- [ ] 为所有团队成员配置许可证
+- [ ] 举办全员培训会议（录制供异步观看）
+- [ ] 更新新员工入职文档
+- [ ] 在团队频道中发布推广公告，附带快速入门链接
+
+### 3.3 集成
+- [ ] 将 AI 工具与现有系统对接：
+  - [ ] SSO / 身份提供商
+  - [ ] 项目管理工具（Jira、飞书、Asana）
+  - [ ] 沟通平台（企业微信、飞书、Slack）
+- [ ] 设置自动化使用报告（每周仪表盘）
+
+---
+
+## 第四阶段：持续运营（持续进行）
+
+### 4.1 监控
+- [ ] 每周：审查使用指标和采用率
+- [ ] 每月：收集用户 NPS 或满意度调查
+- [ ] 每季度：对照初始业务论证重新评估 ROI
+
+### 4.2 优化
+- [ ] 维护常见任务的共享提示词库
+- [ ] 每月举办"技巧分享"会议（15 分钟）
+- [ ] 跟踪供应商更新和新功能；每季度评估
+
+### 4.3 退出（如需）
+- [ ] 取消前导出所有团队数据
+- [ ] 撤销 API 密钥和 SSO 访问权限
+- [ ] 记录经验教训供未来工具选型参考</code></pre>
+
+      <h2>如何使用此检查清单</h2>
+      <ol>
+        <li><strong>复制模板</strong>到你的项目管理工具中（Notion、飞书文档或腾讯文档）。</li>
+        <li><strong>填写表头</strong>——工具名称、负责人和目标日期。</li>
+        <li><strong>按阶段推进</strong>——第一阶段必须完成后再开始试点。</li>
+        <li><strong>使用复选框</strong>作为团队站会中的实时追踪器，完成即打勾。</li>
+        <li><strong>按工具定制</strong>——对于 AI 编程工具，增加代码审查集成检查。对于内容工具，增加品牌调性对齐检查。</li>
+      </ol>
+
+      <h2>何时调整此检查清单</h2>
+      <ul>
+        <li><strong>个人工具（ChatGPT、Claude）：</strong>跳过完整试点阶段，聚焦安全审查和个人使用指南。</li>
+        <li><strong>团队工具（Cursor、Notion AI）：</strong>执行完整检查清单。试点阶段对团队工具至关重要。</li>
+        <li><strong>企业工具（自定义 LLM 部署）：</strong>增加数据本地化、供应商风险评估和法务审查阶段。</li>
+        <li><strong>开源工具：</strong>增加基础设施需求、维护负担和社区健康度检查。</li>
+      </ul>
+
+      <h2>常见问题</h2>
+      <div class="card-grid">
+        {faqItemsZh.map(f => (
+          <div class="info-card">
+            <h3>{f.q}</h3>
+            <p>{f.a}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="back-link"><a href="/zh/templates/">全部模板</a></p>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,151 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import toolsData from "../../../data/tools.json";
+
+const toolIds = [
+  "asana-ai", "monday-ai", "-clickup-ai", "notion-ai", "taskade-ai",
+  "zapier", "n8n", "make-com", "airtable-ai", "coda-ai",
+  "perplexity", "gamma", "beautiful-ai", "fireflies", "tldv"
+];
+const tools = toolIds.map(id => ({ id, ...toolsData[id] })).filter(t => t && t.name);
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/use-cases/construction-ai-tools/";
+
+const sceneGroups = [
+  {
+    name: "项目进度与任务管理",
+    desc: "利用 AI 驱动的排程、资源分配和任务优先级管理，确保施工项目按计划推进。自动更新状态、识别进度风险，并跨多个工地协调分包商。",
+    tools: ["asana-ai", "monday-ai", "-clickup-ai", "notion-ai", "taskade-ai"]
+  },
+  {
+    name: "工作流自动化与集成",
+    desc: "将 Procore、PlanGrid、Bluebeam 等施工软件与项目管理和财务工具相连接。无需定制开发即可自动完成 RFI 跟踪、提交工作流和日报生成。",
+    tools: ["zapier", "n8n", "make-com", "airtable-ai", "coda-ai"]
+  },
+  {
+    name: "会议智能与文档",
+    desc: "自动转录施工协调会议、提取行动项并生成日报。AI 会议助手捕获决策、分配责任人，确保无遗漏。",
+    tools: ["fireflies", "tldv", "perplexity", "gamma", "beautiful-ai"]
+  }
+];
+
+const faqItems = [
+  {
+    q: "AI 能端到端管理施工项目吗？",
+    a: "不能。AI 工具协助项目经理自动化行政事务、追踪行动项并标记进度风险。施工项目管理需要现场判断、利益相关方谈判、安全监督和实时问题解决——AI 无法替代。AI 将行政负担降低 30-50%，让项目经理聚焦高价值活动。"
+  },
+  {
+    q: "哪些 AI 工具与 Procore 集成？",
+    a: "Zapier 和 Make 提供 Procore 集成，用于自动化问题追踪、RFI 工作流和文档管理。n8n 可通过 Procore API 配置自定义自动化。Notion AI 和 Airtable AI 可消费 Procore 导出数据进行报告和分析。截至 2026 年，Procore 中原生 AI 功能仍然有限。"
+  },
+  {
+    q: "AI 如何提升施工安全？",
+    a: "当前 AI 工具间接支持安全：(1) AI 会议助手自动捕获并追踪工具箱会议和协调会议中的安全议题，(2) 项目管理 AI 标记逾期的安全检查和培训认证，(3) Perplexity 等研究工具快速查阅 OSHA 法规和安全标准。用于现场安全监控的计算机视觉 AI 属于独立工具类别，不在本文涵盖范围内。"
+  },
+  {
+    q: "施工文档用哪些 AI 工具最好？",
+    a: "会议文档：Fireflies 和 tl;dv 用于自动转录和行动项提取。日报：Notion AI 根据语音备忘或要点生成结构化报告。客户/利益相关方演示：Gamma 和 Beautiful.ai 根据项目数据快速创建方案册。RFI 和提交追踪：Airtable AI 配合自动状态工作流。"
+  },
+  {
+    q: "对中小型施工企业来说，AI 实用吗？",
+    a: "实用，且投资回报率常常更高。小型总承包的独立项目经理可使用 Notion AI（$10/月 AI 附加）和 Fireflies（免费版 / $10/月）自动化会议纪要和任务追踪——每周节省 5-8 小时行政工作。每月 $20-50 的工具总成本与人力节省相比微不足道。"
+  }
+];
+
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"2026 年施工项目 AI 工具 | 排程、自动化与文档","description":"施工项目管理最佳 AI 工具：Asana AI、Zapier、Fireflies、Notion AI 等。自动化排程、RFI 追踪、会议文档和工作流程。","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":siteUrl},{"@type":"ListItem","position":2,"name":"使用场景","item":siteUrl+"/zh/use-cases/"},{"@type":"ListItem","position":3,"name":"工程施工","item":pageUrl}] };
+---
+
+<BaseLayout
+  title="2026 年施工项目 AI 工具 | 排程、自动化与文档"
+  description="施工项目管理最佳 AI 工具：Asana AI、Zapier、Fireflies、Notion AI 等。自动化排程、RFI 追踪、会议文档和施工工作流程。"
+  keywords="施工 AI 工具, AI 施工管理, Procore AI 集成, 施工排程 AI, 会议转录施工, 总承包商 AI"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/use-cases/">使用场景</a> &rsaquo; <span>工程施工</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">使用场景</span>
+      <h1>2026 年施工项目 AI 工具</h1>
+      <p>15 款工具覆盖排程、工作流自动化和施工文档 —— 为总承包商、项目经理和现场监理量身打造。</p>
+    </header>
+
+    <section class="article-body">
+      <p>施工项目产生海量行政工作：日报、RFI 追踪、提交日志、会议纪要、进度更新和利益相关方沟通。AI 工具不浇混凝土也不竖钢结构——但它们每天可消除数小时的文书工作，让施工专业人员聚焦现场事务。</p>
+
+      <h2>为什么施工团队需要 AI 工具</h2>
+      <p>AI 解决的三个施工工作流程痛点：</p>
+      <ul>
+        <li><strong>文书负担：</strong>项目经理和监理每周 20-40% 的时间用于文档工作。AI 工具自动化会议转录、日报生成和状态追踪，将这部分时间减半。</li>
+        <li><strong>跨平台混乱：</strong>施工数据分散在 Procore、PlanGrid、Bluebeam、Sage、Viewpoint 和大量电子表格中。AI 自动化工具连接这些系统，使数据无需手动重新录入即可流动。</li>
+        <li><strong>会议疲劳：</strong>协调会议、OAC 会议和分包商检查会产生关键决策，却淹没在手写笔记中。AI 会议助手捕获每项承诺并自动分配后续任务。</li>
+      </ul>
+
+      <h2>按施工工作流程划分的 AI 工具</h2>
+
+      {sceneGroups.map(group => (
+        <section>
+          <h3>{group.name}</h3>
+          <p>{group.desc}</p>
+          <div class="tool-grid">
+            {group.tools.map(tid => {
+              const tool = tools.find(t => t.id === tid);
+              if (!tool) return null;
+              return (
+                <article class="tool-card">
+                  <div class="tool-icon"><i class={`fas ${tool.icon || "fa-robot"}`}></i></div>
+                  <h4><a href={`/zh/tools/${tool.id}/`}>{tool.name.zh || tool.name.en}</a></h4>
+                  <p>{tool.short_desc?.zh || tool.short_desc?.en || ""}</p>
+                  <span class="tool-tag">{tool.cat}</span>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+      ))}
+
+      <h2>对比表</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>工具</th><th>最佳用途</th><th>价格</th><th>施工集成度</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Notion AI</strong></td><td>日报、项目百科、整改清单</td><td>免费 / $10/月 AI 附加</td><td>从 Procore 手动导出</td></tr>
+            <tr><td><strong>Asana AI</strong></td><td>带 AI 风险检测的进度管理</td><td>免费 / $11-25/月</td><td>Zapier/Make 连接器</td></tr>
+            <tr><td><strong>Fireflies</strong></td><td>OAC 会议转录与行动项</td><td>免费 / $10-19/月</td><td>原生支持 Zoom/Teams/Meet</td></tr>
+            <tr><td><strong>Zapier</strong></td><td>连接 Procore 至项目管理和财务工具</td><td>免费 / $20-69/月</td><td>Procore、Sage、Viewpoint</td></tr>
+            <tr><td><strong>Airtable AI</strong></td><td>RFI 与提交追踪数据库</td><td>免费 / $20-45/月</td><td>Zapier/Make 连接器</td></tr>
+            <tr><td><strong>n8n</strong></td><td>自定义施工自动化（自托管）</td><td>免费（自托管）</td><td>基于 API，可自定义节点</td></tr>
+            <tr><td><strong>Gamma</strong></td><td>业主演示和进度报告</td><td>免费 / $10-20/月</td><td>手动数据导入</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>推荐施工 AI 工作流程</h2>
+      <ol>
+        <li><strong>自动化会议智能：</strong>为所有 OAC 会议、协调会议和分包商检查部署 Fireflies 或 tl;dv。AI 自动捕获每项决策并提取行动项——不再需要破解手写笔记。</li>
+        <li><strong>集中化项目追踪：</strong>在 Notion AI 中设置项目仪表盘，涵盖 RFI 状态、提交日志、整改清单和日报。使用 AI 根据现场巡查后的要点笔记自动生成结构化日报。</li>
+        <li><strong>连接技术栈：</strong>使用 Zapier 或 n8n 将 Procore 中的问题同步到 Airtable AI、进度更新同步到 Asana AI、成本数据同步到财务系统。消除跨平台重复数据录入。</li>
+        <li><strong>简化利益相关方沟通：</strong>提取项目数据到 Gamma，自动生成含图表、里程碑追踪和现场照片的月度业主报告——替代数小时的手动 PowerPoint 工作。</li>
+      </ol>
+
+      <h2>常见问题</h2>
+      <div class="faq-section">
+        {faqItems.map(f => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

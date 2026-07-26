@@ -1,0 +1,154 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const pageLang = Astro.currentLocale || "en";
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/templates/onboarding-checklist/";
+
+const faqItems = [
+  { q: "What is an AI project onboarding checklist?", a: "A structured checklist that covers every step needed to successfully bring a new AI tool into your team's workflow — from security review and data access to training, pilot rollout, and measuring ROI. It prevents the common mistake of adopting AI tools without proper governance." },
+  { q: "Do I need a different checklist for different AI tools?", a: "The core checklist is universal for most SaaS AI tools. For tools that access sensitive data or require API keys with broad permissions, you should add additional security verification steps. For open-source self-hosted tools, add infrastructure and maintenance items." },
+  { q: "How long does AI onboarding typically take?", a: "For simple tools (e.g. ChatGPT for individual use), the checklist can be completed in 1-2 days. For team-wide tools that integrate with existing systems (e.g. an AI coding assistant for the entire engineering team), budget 2-4 weeks accounting for security review, pilot testing, and training." },
+  { q: "What's the biggest mistake teams make when onboarding AI?", a: "Skipping the pilot phase. Teams often roll out an AI tool to everyone at once, discover a problem (bad outputs, security concern, workflow disruption), and then lose trust. A 2-week pilot with 3-5 engaged users catches 80% of issues before full rollout." }
+];
+
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"AI Project Onboarding Checklist Template","description":"A comprehensive checklist template for onboarding new AI tools into your team. Covers security review, data access, training, pilot rollout, and ROI measurement.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Templates","item":siteUrl+"/templates/"},{"@type":"ListItem","position":3,"name":"AI Project Onboarding Checklist","item":pageUrl}] };
+---
+
+<BaseLayout title="AI Project Onboarding Checklist Template | AI Tool Hub" description="A comprehensive checklist template for onboarding new AI tools into your team. Covers security review, data access, training, pilot rollout, and ROI measurement." keywords="AI onboarding checklist, AI tool adoption, AI project management, AI governance template" lang={pageLang}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/templates/">Templates</a> &rsaquo; <span>AI Project Onboarding Checklist</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Free Template</span>
+      <h1>AI Project Onboarding Checklist Template</h1>
+      <p>A step-by-step checklist for bringing new AI tools into your team. Covers security review, data governance, pilot rollout, training, and ROI measurement — everything you need to adopt AI responsibly.</p>
+    </header>
+    <section class="article-body">
+
+      <h2>The Checklist</h2>
+      <pre class="prompt-block"><code># AI PROJECT ONBOARDING CHECKLIST
+## Project: [Tool Name] | Owner: [Name] | Date: [YYYY-MM-DD]
+
+---
+
+## PHASE 1: PRE-ONBOARDING (Week 1)
+
+### 1.1 Business Case
+- [ ] Define the core problem this AI tool solves
+- [ ] Identify the primary users and their workflow
+- [ ] Set measurable success criteria (e.g., 30% faster task completion)
+- [ ] Estimate cost: per-seat pricing x team size x 12 months
+
+### 1.2 Security & Compliance
+- [ ] Review the AI tool's data handling policy (GDPR, SOC 2, HIPAA)
+- [ ] Confirm where data is stored and processed (region, subprocessors)
+- [ ] Verify opt-out of model training on your data
+- [ ] Check SSO/SAML availability for team plans
+- [ ] Document what data will be sent to the AI (files, code, credentials)
+
+### 1.3 Access & Permissions
+- [ ] Define role-based access control (admin, user, viewer)
+- [ ] Set up API key management (rotation schedule, least-privilege scope)
+- [ ] Create a shared credentials vault entry
+
+---
+
+## PHASE 2: PILOT (Weeks 2-3)
+
+### 2.1 Pilot Setup
+- [ ] Select 3-5 pilot users representing different use cases
+- [ ] Create a shared feedback channel (Slack, Teams, Notion)
+- [ ] Document the pilot success threshold (e.g., NPS > 40, task time -20%)
+
+### 2.2 Training
+- [ ] Run a 30-minute kickoff session covering:
+  - [ ] Core workflows with real examples
+  - [ ] Best practices and prompt tips
+  - [ ] Known limitations and edge cases
+- [ ] Share a quick-reference guide (1-page PDF or Notion doc)
+- [ ] Assign a "champion" per team as the first point of contact
+
+### 2.3 Daily Check-ins
+- [ ] Collect daily feedback: what worked, what broke, what was surprising
+- [ ] Log all issues in a shared tracker with severity labels
+- [ ] Escalate blocking issues to the tool vendor within 24 hours
+
+---
+
+## PHASE 3: FULL ROLLOUT (Week 4)
+
+### 3.1 Go/No-Go Decision
+- [ ] Review pilot results against success criteria
+- [ ] Address all critical and high-severity issues
+- [ ] Get sign-off from: [Security] [IT] [Team Lead] [Finance]
+
+### 3.2 Rollout
+- [ ] Provision licenses for all team members
+- [ ] Run a full-team training session (record for async viewers)
+- [ ] Update onboarding docs for new hires
+- [ ] Announce the rollout in the team channel with quick-start links
+
+### 3.3 Integration
+- [ ] Connect the AI tool to existing systems:
+  - [ ] SSO / identity provider
+  - [ ] Project management tool (Jira, Linear, Asana)
+  - [ ] Communication platform (Slack, Teams)
+- [ ] Set up automated usage reporting (weekly dashboard)
+
+---
+
+## PHASE 4: SUSTAIN (Ongoing)
+
+### 4.1 Monitoring
+- [ ] Weekly: Review usage metrics and adoption rate
+- [ ] Monthly: Collect NPS or satisfaction survey from users
+- [ ] Quarterly: Re-evaluate ROI against initial business case
+
+### 4.2 Optimization
+- [ ] Maintain a shared prompt library for common tasks
+- [ ] Host monthly "tips & tricks" session (15 min)
+- [ ] Track vendor updates and new features; evaluate quarterly
+
+### 4.3 Offboarding (if needed)
+- [ ] Export all team data before cancellation
+- [ ] Revoke API keys and SSO access
+- [ ] Document lessons learned for future tool selection</code></pre>
+
+      <h2>How to Use This Checklist</h2>
+      <ol>
+        <li><strong>Copy the template</strong> into your project management tool (Notion, Confluence, or Google Docs).</li>
+        <li><strong>Fill in the header</strong> with the tool name, owner, and target date.</li>
+        <li><strong>Work through each phase</strong> sequentially — Phase 1 must be complete before starting the pilot.</li>
+        <li><strong>Use the checkboxes</strong> as a live tracker during team standups. Mark items complete as you go.</li>
+        <li><strong>Customize per tool</strong> — for AI coding tools, add code-review integration checks. For content tools, add brand voice alignment checks.</li>
+      </ol>
+
+      <h2>When to Adapt This Checklist</h2>
+      <ul>
+        <li><strong>Individual tools (ChatGPT, Claude):</strong> Skip the full pilot phase. Focus on security review and personal usage guidelines.</li>
+        <li><strong>Team tools (Cursor, Notion AI):</strong> Run the full checklist. The pilot phase is critical for team tools.</li>
+        <li><strong>Enterprise tools (custom LLM deployment):</strong> Add data residency, vendor risk assessment, and legal review phases.</li>
+        <li><strong>Open-source tools:</strong> Add infrastructure requirements, maintenance burden, and community health checks.</li>
+      </ul>
+
+      <h2>FAQ</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card">
+            <h3>{f.q}</h3>
+            <p>{f.a}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="back-link"><a href="/templates/">All Templates</a></p>
+    </section>
+  </div>
+</BaseLayout>

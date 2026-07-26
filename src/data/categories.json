@@ -150,5 +150,23 @@
     ],
     "title_zh": "2026 年最佳 AI 效率工具",
     "desc_zh": "用于笔记记录、智能搜索和任务自动化的 AI 工具。"
+  },
+  {
+    "slug": "podcasters",
+    "title_en": "Best AI Tools for Podcasters in 2026",
+    "desc_en": "AI tools for podcast recording, editing, transcription, and publishing.",
+    "tools": [
+      "elevenlabs",
+      "otter",
+      "fireflies",
+      "murf",
+      "play-ht",
+      "riverside",
+      "speechify",
+      "descript",
+      "kapwing"
+    ],
+    "title_zh": "2026 年最佳 AI 播客工具",
+    "desc_zh": "用于播客录制、剪辑、转录和发布的 AI 工具。"
   }
 ]

@@ -1,0 +1,155 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import toolsData from "../../../data/tools.json";
+
+const toolIds = [
+  "cursor", "github-copilot", "windsurf", "claude", "chatgpt",
+  "perplexity", "consensus", "elicit", "scite-ai", "researchrabbit",
+  "notion-ai", "gamma", "zapier", "n8n"
+];
+const tools = toolIds.map(id => ({ id, ...toolsData[id] })).filter(t => t && t.name);
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/use-cases/engineering-ai-tools/";
+
+const sceneGroups = [
+  {
+    name: "代码与计算",
+    desc: "面向工程计算的 AI 编程助手：编写仿真脚本、自动化数据处理、生成可视化图表、调试复杂数值代码。覆盖从 MATLAB/Python 分析到全栈工程工具。",
+    tools: ["cursor", "github-copilot", "windsurf", "claude", "chatgpt"]
+  },
+  {
+    name: "研究与文献综述",
+    desc: "使用 AI 工具加速工程研究：搜索学术数据库、跨论文综合研究成果、识别研究空白、生成带规范引用的结构化文献综述。",
+    tools: ["perplexity", "consensus", "elicit", "scite-ai", "researchrabbit"]
+  },
+  {
+    name: "文档与工作流",
+    desc: "生成技术报告、自动化工程文档、构建数据处理流水线、根据分析结果制作专业演示文档。",
+    tools: ["notion-ai", "gamma", "zapier", "n8n"]
+  }
+];
+
+const faqItems = [
+  {
+    q: "AI 能替代工程师吗？",
+    a: "不能。AI 工具增强工程师的能力：加速计算、自动化文献综述、简化文档流程。工程需要专业判断、安全关键决策、法规合规理解和创造性问题解决——AI 无法复制这些能力。AI 减少花在常规任务上的时间，使工程师能专注于高价值的设计与分析工作。"
+  },
+  {
+    q: "哪种 AI 编程工具最适合工程计算（MATLAB、Python、Fortran）？",
+    a: "Cursor 和 GitHub Copilot 均良好支持 Python——现代工程计算的主流语言。对于 MATLAB，ChatGPT 和 Claude 更强大，因为它们在 MATLAB 语法和工具箱方面训练数据更广。对于遗留 Fortran 代码库（常见于航空航天和土木工程），Claude 的长上下文窗口有助于理解大型、相互关联的子程序文件。Windsurf 的 Cascade 模式特别适合跨多个分析脚本和数据文件的工程项目。"
+  },
+  {
+    q: "AI 工具能处理 FEA/CFD 仿真设置吗？",
+    a: "AI 工具可协助前处理（网格生成脚本、边界条件定义、材料属性赋值）和后处理（结果可视化、报告生成）。它们不能替代 ANSYS、Abaqus 或 OpenFOAM 等经过验证的 FEA/CFD 求解器。使用 AI 编写输入文件、自动化参数化研究和生成分析报告——而非替代求解器本身。"
+  },
+  {
+    q: "AI 如何协助工程文献综述？",
+    a: "AI 研究工具将文献综述从数周的项目压缩为数天。Elicit 和 Consensus 检索数百万篇论文，提取关键发现、方法和结果并整理成结构化表格。Scite.ai 提供引用上下文——显示后续论文是支持还是反驳某个结论。Perplexity Deep Dive 将数十篇论文的研究成果综合为连贯摘要，附来源引用。"
+  },
+  {
+    q: "AI 工具在工程计算中是否足够精确？",
+    a: "AI 工具应视为助手而非计算器。它们可以生成计算脚本并建议方法，但每个数值输出必须独立验证。对于关键计算（结构、热学、流体），使用 AI 草拟方法和编写代码框架，然后在信任结果之前与已知解析解或基准案例进行验证。"
+  },
+  {
+    q: "工程团队最佳 AI 工具栈是什么？",
+    a: "实用的工具栈：Cursor 或 GitHub Copilot 用于日常编码和脚本编写；Perplexity Pro 和 Consensus 用于研究与文献综述；Notion AI 用于集中化技术文档和项目百科；Gamma 用于客户和利益相关方演示；n8n 或 Zapier 用于自动化仿真工具、数据库和报告平台之间的数据流。每位工程师月费 $50-150，视工具选择而定。"
+  }
+];
+
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"2026 年工程师 AI 工具 | 设计、分析与自动化","description":"工程师最佳 AI 工具：Cursor 用于编程、Perplexity 用于研究、Consensus 用于文献综述等。加速工程设计、仿真和文档工作流程。","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":siteUrl},{"@type":"ListItem","position":2,"name":"使用场景","item":siteUrl+"/zh/use-cases/"},{"@type":"ListItem","position":3,"name":"工程设计","item":pageUrl}] };
+---
+
+<BaseLayout
+  title="2026 年工程师 AI 工具 | 设计、分析与自动化"
+  description="工程师最佳 AI 工具：Cursor 用于编程、Perplexity 用于研究、Consensus 用于文献综述等。加速工程设计、仿真和文档工作流程。"
+  keywords="AI 工程工具, 工程师 AI, 工程 AI, MATLAB AI, FEA AI, CFD AI, 工程研究 AI, 编程 AI 工程师"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/use-cases/">使用场景</a> &rsaquo; <span>工程设计</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">使用场景</span>
+      <h1>2026 年工程师 AI 工具</h1>
+      <p>14 款工具覆盖编程、研究和文档 —— 针对机械、土木、电气和航空航天工程工作流程精选。</p>
+    </header>
+
+    <section class="article-body">
+      <p>工程跨越结构分析、电路设计、计算流体力学和系统工程等多元学科。共通的是工作流程：建模问题、计算求解、验证结果、记录发现。AI 工具加速这个循环的每个阶段——从编写仿真代码到综合研究文献再到生成技术报告。</p>
+
+      <h2>为什么工程师需要 AI 工具</h2>
+      <p>AI 解决的三个工程工作流程痛点：</p>
+      <ul>
+        <li><strong>计算脚本：</strong>工程师编写成千上万行 Python、MATLAB 和遗留 Fortran 代码进行分析。AI 编程助手减少样板代码、建议优化方法，比手动排查更快地调试数值错误。</li>
+        <li><strong>文献负担：</strong>跟上跨领域广泛的研究动态几乎不可能。AI 研究工具扫描数千篇论文，提取方法和结果，并识别哪些发现被后续工作支持或反驳。</li>
+        <li><strong>文档开销：</strong>技术报告、设计评审演示和计算文件包消耗大量时间。AI 文档工具根据分析输出生成结构化报告，自动化重复排版任务。</li>
+      </ul>
+
+      <h2>按工程工作流程划分的 AI 工具</h2>
+
+      {sceneGroups.map(group => (
+        <section>
+          <h3>{group.name}</h3>
+          <p>{group.desc}</p>
+          <div class="tool-grid">
+            {group.tools.map(tid => {
+              const tool = tools.find(t => t.id === tid);
+              if (!tool) return null;
+              return (
+                <article class="tool-card">
+                  <div class="tool-icon"><i class={`fas ${tool.icon || "fa-robot"}`}></i></div>
+                  <h4><a href={`/zh/tools/${tool.id}/`}>{tool.name.zh || tool.name.en}</a></h4>
+                  <p>{tool.short_desc?.zh || tool.short_desc?.en || ""}</p>
+                  <span class="tool-tag">{tool.cat}</span>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+      ))}
+
+      <h2>对比表</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>工具</th><th>最佳用途</th><th>价格</th><th>工程相关性</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Cursor</strong></td><td>Python/MATLAB 脚本编写与仿真代码</td><td>免费 / $20/月 Pro</td><td>高 —— Agent 模式支持多文件项目</td></tr>
+            <tr><td><strong>GitHub Copilot</strong></td><td>快速行内代码补全</td><td>$10/月 / $19/月 Business</td><td>高 —— 广泛的编程语言支持</td></tr>
+            <tr><td><strong>Claude</strong></td><td>长上下文分析、遗留代码</td><td>免费 / $20/月 Pro</td><td>高 —— 可处理大型 Fortran 文件</td></tr>
+            <tr><td><strong>Consensus</strong></td><td>带证据分级的文献综述</td><td>免费 / $9-13/月</td><td>高 —— 工程论文数据库</td></tr>
+            <tr><td><strong>Elicit</strong></td><td>系统化文献提取</td><td>免费 / $10-50/月</td><td>高 —— 结构化论文分析</td></tr>
+            <tr><td><strong>Scite</strong></td><td>引用上下文与验证</td><td>$20/月</td><td>中等 —— 引用前验证声明</td></tr>
+            <tr><td><strong>Notion AI</strong></td><td>技术文档与设计百科</td><td>免费 / $10/月 AI 附加</td><td>中等 —— 结构化工程文档</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>推荐工程 AI 工作流程</h2>
+      <ol>
+        <li><strong>研究与基准：</strong>在编写代码之前，使用 Consensus 和 Elicit 调研问题的现有方法。在数分钟内从已发表论文中提取方法、性能指标和局限性。</li>
+        <li><strong>代码开发：</strong>使用 Cursor Agent 模式处理多文件工程项目。用自然语言描述分析需求（"使用有限差分法设置一个带有 Dirichlet 边界条件的二维热传导求解器"），审查生成的代码，并用具体优化进行迭代。</li>
+        <li><strong>验证：</strong>使用 ChatGPT 或 Claude 生成基准案例的解析解。在将代码用于生产分析前，将仿真结果与已知解进行对比。</li>
+        <li><strong>文档：</strong>将分析结果和关键发现输入 Notion AI，生成结构化技术报告。使用 Gamma 将技术发现转化为可直接用于设计评审的演示幻灯片。</li>
+      </ol>
+
+      <h2>常见问题</h2>
+      <div class="faq-section">
+        {faqItems.map(f => (
+          <details>
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

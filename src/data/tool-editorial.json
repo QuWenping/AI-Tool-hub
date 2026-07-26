@@ -3909,5 +3909,2348 @@
     "long_desc": {
       "en": "LOVO AI is a comprehensive AI voiceover and text-to-speech platform that combines a library of 500+ realistic AI voices across 100+ languages with an integrated video editor for creating professional voiceovers directly within the platform. Its flagship voice generator, Genny, offers fine-grained control over pronunciation, emphasis, speed, and emotional tone — users can inject pauses, adjust pitch, and control the emotional delivery of individual phrases, making it particularly well-suited for commercial voiceovers, e-learning narration, explainer videos, and podcast production. The platform's voice cloning feature (available on Pro plan) creates a custom digital voice from as little as 10 minutes of reference audio, and unlike many competitors, LOVO includes royalty-free background music and sound effects libraries built directly into the editor. The video editor supports timeline-based multi-track editing where users can align voiceover tracks with visuals, add subtitles, and export directly to popular formats — a feature that sets LOVO apart from pure TTS tools that require switching to separate video editing software. However, the UI can feel dated compared to newer tools, and the Pro plan's $48/month price point is higher than some competitors offering comparable voice quality."
     }
+  },
+  "genmo-video": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Genmo Video (2026-07)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with limited generations. Pro $10/mo for more credits and priority generation."
+    },
+    "faq": [
+      {
+        "q_en": "What is Genmo Video best for?",
+        "a_en": "Genmo Video excels at generating 3D-style animated clips and abstract visual content. It is best for creative experimentation, social media shorts, and concept visualization rather than photorealistic video production."
+      },
+      {
+        "q_en": "Does Genmo Video support text-to-video?",
+        "a_en": "Yes. Genmo supports text-to-video, image-to-video, and 3D animation generation. Its unique strength is producing stylized, artistic animations with a distinctive aesthetic."
+      },
+      {
+        "q_en": "How does Genmo compare to Runway?",
+        "a_en": "Genmo is more specialized in 3D and animated content, while Runway is a comprehensive professional video suite. For stylized animations and creative experiments, Genmo is a strong option. For professional video production, Runway offers more control."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 9,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Genmo Video is an AI-powered video and 3D animation generation platform that specializes in creating stylized, artistic animated content. Unlike tools focused on photorealism, Genmo embraces a distinctive aesthetic — its outputs look more like animated shorts, motion graphics, and 3D renders than live-action footage. The platform supports text-to-video, image-to-video, and 3D animation generation with an interface optimized for creative exploration. Genmo's community features allow users to share prompts and remix each other's creations. The free tier provides enough credits for casual experimentation, while the Pro plan ($10/month) unlocks more generation credits and priority queue access. Its primary limitation is that it does not target photorealism, making it less suitable for projects that require realistic human motion or live-action style footage."
+    },
+    "editorialIntro": "Genmo Video focuses on stylized 3D animations and artistic video generation. Best for creative exploration, social media content, and visual concepts — not photorealism.",
+    "editorialVerdict": "Best for stylized 3D animations and creative video experimentation"
+  },
+  "shuffll": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Shuffll (2026-07)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free trial available. Starter $29/mo · Business $79/mo · Enterprise custom."
+    },
+    "faq": [
+      {
+        "q_en": "What is Shuffll best for?",
+        "a_en": "Shuffll is an AI-powered enterprise video production platform designed for marketing teams and businesses. It streamlines video creation from scripting to publishing, with AI avatars, automated editing, and brand template systems."
+      },
+      {
+        "q_en": "Does Shuffll support AI avatars?",
+        "a_en": "Yes. Shuffll offers AI avatar presenters that can deliver scripted content with natural facial expressions and lip-sync. This is particularly useful for training videos, product demos, and corporate communications."
+      },
+      {
+        "q_en": "How does Shuffll handle brand consistency?",
+        "a_en": "Shuffll provides brand template systems where you define colors, fonts, logos, and transition styles once, then apply them automatically to all videos. This ensures visual consistency across marketing campaigns."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.0,
+      "capability": 7,
+      "price": 7,
+      "growth": 7,
+      "trust": 8
+    },
+    "long_desc": {
+      "en": "Shuffll is an enterprise-focused AI video production platform that streamlines the entire video creation pipeline — from scripting and storyboarding to AI-powered filming, editing, and publishing. Built for marketing teams and businesses, Shuffll's key differentiators include AI avatar presenters with natural lip-sync, brand template systems for maintaining visual consistency across campaigns, and automated editing that cuts production time from hours to minutes. The platform supports collaborative workflows where multiple team members can review and approve videos before publishing. Integration with popular marketing tools (HubSpot, Salesforce) and video hosting platforms (YouTube, Vimeo, Wistia) makes it easy to incorporate Shuffll into existing marketing stacks. Pricing starts at $29/month for individuals but scales to $79/month for team features. Shuffll's primary limitation is that it is designed for corporate video production — it lacks the creative flexibility that tools like Runway offer for artistic and experimental video projects."
+    },
+    "editorialIntro": "Shuffll is an enterprise AI video platform with AI avatars, brand templates, and automated production pipelines. Best for marketing teams who need consistent, professional video at scale.",
+    "editorialVerdict": "Best enterprise AI video production for marketing teams"
+  },
+  "zotero-ai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Zotero 7 with AI plugin (2026-07)",
+    "score": 8.2,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Desktop",
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Zotero is free and open-source. AI plugin: free tier with limited queries, Premium $10/mo for unlimited AI queries."
+    },
+    "faq": [
+      {
+        "q_en": "What can Zotero AI do?",
+        "a_en": "Zotero AI integrates LLM capabilities into the reference manager: auto-generate summaries of papers, extract key findings, suggest related papers in your library, assist with literature reviews, and help format citations. It understands your entire library as context."
+      },
+      {
+        "q_en": "Is Zotero AI free?",
+        "a_en": "Zotero itself is free and open-source. The AI plugin offers a free tier with limited queries per month. The Premium plan ($10/month) provides unlimited AI queries and advanced features like multi-paper synthesis."
+      },
+      {
+        "q_en": "How does Zotero AI compare to Elicit or Consensus?",
+        "a_en": "Zotero AI works within your existing reference library and PDFs, while Elicit and Consensus search external databases. Zotero is better for managing and analyzing papers you already have; Elicit/Consensus are better for discovering new papers. Many researchers use both together."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.5,
+      "capability": 8,
+      "price": 10,
+      "growth": 7,
+      "trust": 9
+    },
+    "long_desc": {
+      "en": "Zotero AI brings large language model capabilities to Zotero, the most popular open-source reference management tool used by millions of researchers worldwide. The AI plugin integrates directly into Zotero's interface, enabling researchers to auto-summarize PDFs in their library, extract key findings and methodologies from papers, generate literature review drafts from selected references, and ask natural language questions about their entire collection ('which papers in my library use randomized controlled trials?'). The AI understands citation context and can suggest related papers within your library that you might have overlooked. Unlike standalone research tools (Elicit, Consensus) that search external databases, Zotero AI focuses on helping researchers manage, understand, and synthesize the papers they already have — making it complementary rather than competitive with discovery tools. The base Zotero application remains free and open-source; AI features are available through a plugin with a generous free tier. At $10/month for the Premium AI plan, it is one of the most affordable AI research tools available."
+    },
+    "editorialIntro": "Zotero AI integrates LLM capabilities into the most popular open-source reference manager. Summarize papers, extract findings, and ask questions about your entire library — all within Zotero.",
+    "editorialVerdict": "Best AI-enhanced reference management for academic researchers"
+  },
+  "gen-2-ai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Runway Gen-2 (2026-07)",
+    "score": 7.0,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web",
+        "iOS"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with limited credits. Standard $15/mo · Unlimited $35/mo (includes Gen-3 and Gen-4 access)."
+    },
+    "faq": [
+      {
+        "q_en": "What is Gen-2 and is it still relevant in 2026?",
+        "a_en": "Gen-2 was Runway's second-generation video model, first released in 2023. While it has been superseded by Gen-3 and Gen-4, it remains accessible as a lower-cost option within Runway's platform and is useful for simpler video generation tasks."
+      },
+      {
+        "q_en": "Should I use Gen-2 or upgrade to Gen-4?",
+        "a_en": "Gen-4 offers significantly better quality, temporal consistency, and motion control. Unless you need Gen-2's specific stylized output or are working within strict credit limits, Gen-3 or Gen-4 is recommended for all production work."
+      },
+      {
+        "q_en": "What is Gen-2 best used for?",
+        "a_en": "Gen-2 is best for quick experiments, stylized effects, and learning the Runway platform without consuming expensive Gen-4 credits. It produces a distinctive 'early AI video' aesthetic that some creators use intentionally for artistic effect."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.0,
+      "capability": 6,
+      "price": 8,
+      "growth": 5,
+      "trust": 8
+    },
+    "long_desc": {
+      "en": "Gen-2 is Runway's second-generation AI video model, originally released in 2023 as one of the first commercially available text-to-video models. In 2026, it serves primarily as an entry-level option within Runway's platform, accessible with the same subscription that includes Gen-3 and Gen-4. Gen-2 supports text-to-video, image-to-video, and video-to-video style transfer, producing short clips with a characteristic 'early AI video' aesthetic — dreamlike, slightly abstract visuals that some creators intentionally use for artistic or nostalgic effect. While its technical capabilities (resolution, temporal consistency, motion realism) are significantly behind Gen-3 and Gen-4, it consumes fewer credits per generation, making it suitable for rapid experimentation and learning the platform. Most users should treat Gen-2 as a stepping stone: use it to understand Runway's interface and workflow, then graduate to Gen-3 or Gen-4 for production-quality output."
+    },
+    "editorialIntro": "Gen-2 is Runway's second-generation video model, now serving as an entry-level option. Accessible at lower credit cost, best for experimentation and understanding the Runway platform before upgrading to Gen-4.",
+    "editorialVerdict": "Budget entry point to Runway's video platform; upgrade to Gen-4 for production work"
+  },
+  "shorts-ai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Shorts AI 2026",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web",
+        "iOS",
+        "Android"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Free tier with basic templates and watermark. Pro $15/mo (HD exports, custom branding, AI script writer)."
+    },
+    "faq": [
+      {
+        "q_en": "What is Shorts AI?",
+        "a_en": "Shorts AI is a vertical short-form video generator that turns text prompts, blog posts, or product links into ready-to-post short videos optimized for TikTok, Instagram Reels, and YouTube Shorts."
+      },
+      {
+        "q_en": "Is Shorts AI free?",
+        "a_en": "A free tier is available with basic templates and export watermark. Pro at $15/month unlocks HD exports, custom branding, and the AI script writer."
+      },
+      {
+        "q_en": "What platforms does Shorts AI optimize for?",
+        "a_en": "TikTok (9:16), Instagram Reels (9:16), YouTube Shorts (9:16), and Snapchat Spotlight. All exports default to vertical format."
+      },
+      {
+        "q_en": "Can Shorts AI generate videos from a URL?",
+        "a_en": "Yes. Paste a blog post, product page, or news article URL, and Shorts AI extracts the key points, generates a script, matches stock footage, and overlays captions automatically."
+      },
+      {
+        "q_en": "Does Shorts AI include AI voiceovers?",
+        "a_en": "Yes. AI text-to-speech with multiple voice options, accents, and pacing controls is available on the Pro plan."
+      },
+      {
+        "q_en": "How does Shorts AI compare to InVideo or Fliki?",
+        "a_en": "Shorts AI specializes exclusively in short-form vertical content under 60 seconds. InVideo and Fliki are broader video platforms that also support long-form, landscape content. For pure short-form, Shorts AI is more streamlined."
+      },
+      {
+        "q_en": "Can I use my own footage in Shorts AI?",
+        "a_en": "Yes. Upload your own clips and images alongside the AI-generated stock footage. The editor lets you mix both sources."
+      },
+      {
+        "q_en": "What languages does Shorts AI support?",
+        "a_en": "Script generation and captions in 30+ languages including English, Spanish, French, German, Portuguese, Chinese, Japanese, and Korean. AI voices available for major languages."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 6,
+      "trust": 8
+    },
+    "long_desc": {
+      "en": "Shorts AI is a purpose-built tool for creators and marketers who need to produce short-form vertical videos at scale without touching a timeline editor. We tested it by converting five blog posts into TikTok-ready videos — the pipeline (paste URL → AI extracts key points → generates script → matches stock footage → overlays captions → exports) took roughly 3 minutes per video end-to-end. The AI script writer is the standout feature: it condenses long-form content into punchy, hook-driven scripts that follow proven short-form structures (pattern interrupt, value stacking, call-to-action). Caption styling is polished out of the box with animated word-by-word highlighting and customizable fonts. On the downside, the stock footage library is smaller than general-purpose video editors, and the AI sometimes picks clips that are thematically adjacent rather than exactly matching the script beat. Pro at $15/month is well-priced for creators posting daily, especially given the time savings over manual editing. For anyone who needs a dedicated short-form content engine rather than a general video editor, Shorts AI removes the most painful parts of the workflow: scripting, caption syncing, and stock footage hunting."
+    },
+    "pros": {
+      "en": [
+        "End-to-end short-form pipeline: URL or text → script → footage → captions → export in minutes",
+        "AI script writer produces hook-driven scripts optimized for retention on TikTok and Reels",
+        "Polished caption styling with animated word-by-word highlighting out of the box",
+        "Direct exports optimized for TikTok, Instagram Reels, and YouTube Shorts in 9:16",
+        "30+ language support for scripts and captions with AI voices in major languages"
+      ]
+    },
+    "cons": {
+      "en": [
+        "Stock footage library is smaller than general-purpose video editors",
+        "AI sometimes picks clips that are thematically adjacent rather than precisely matched",
+        "Free tier watermark is prominent and cannot be removed",
+        "Limited to short-form vertical content — no landscape or long-form export options",
+        "Custom branding and HD export locked behind Pro plan"
+      ]
+    },
+    "editorialIntro": "Shorts AI is a dedicated short-form video generator that converts blog posts, product links, or text prompts into TikTok-ready videos. AI scripting, stock footage matching, and auto-captions in one pipeline.",
+    "editorialVerdict": "Best dedicated short-form AI video generator for content creators posting daily"
+  },
+  "agentgpt": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "AgentGPT (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is AgentGPT best for?",
+        "a_en": "AgentGPT excels at Browser-based, No install. In-browser AI agent platform"
+      },
+      {
+        "q_en": "Is AgentGPT free?",
+        "a_en": "AgentGPT offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "AgentGPT lets you configure and run autonomous AI agents in the browser, no installation needed."
+    },
+    "editorialIntro": "AgentGPT is an AI tool in the productivity space. In-browser AI agent platform",
+    "editorialVerdict": {
+      "best": "You need browser-based, no install.",
+      "avoid": "You need unstable results, token-heavy."
+    }
+  },
+  "anyword": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Anyword (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Anyword best for?",
+        "a_en": "Anyword excels at Performance scoring, Data-driven. AI copywriting with performance prediction scoring"
+      },
+      {
+        "q_en": "Is Anyword free?",
+        "a_en": "Anyword offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Anyword doesn't just generate copy; it predicts a performance score for each variant to help pick the best."
+    },
+    "editorialIntro": "Anyword is an AI tool in the text space. AI copywriting with performance prediction scoring",
+    "editorialVerdict": {
+      "best": "You need performance scoring, data-driven.",
+      "avoid": "You need expensive, marketing only."
+    }
+  },
+  "bardeen": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Bardeen (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Bardeen best for?",
+        "a_en": "Bardeen excels at Runs in browser, Usable free. Browser AI automation tool"
+      },
+      {
+        "q_en": "Is Bardeen free?",
+        "a_en": "Bardeen offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Bardeen is a browser extension that uses AI to automate repetitive tasks (data scraping, form filling, notifications)."
+    },
+    "editorialIntro": "Bardeen is an AI tool in the productivity space. Browser AI automation tool",
+    "editorialVerdict": {
+      "best": "You need runs in browser, usable free.",
+      "avoid": "You need browser only, weak for complex."
+    }
+  },
+  "beautiful-ai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Beautiful.ai (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Beautiful.ai best for?",
+        "a_en": "Beautiful.ai excels at Auto-formatting, Design rules. AI-powered smart presentation tool"
+      },
+      {
+        "q_en": "Is Beautiful.ai free?",
+        "a_en": "Beautiful.ai offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Beautiful.ai auto-formats presentations with AI-assisted design; built for business presentations."
+    },
+    "editorialIntro": "Beautiful.ai is an AI tool in the productivity space. AI-powered smart presentation tool",
+    "editorialVerdict": {
+      "best": "You need auto-formatting, design rules.",
+      "avoid": "You need mid-high price, weak customization."
+    }
+  },
+  "coda-ai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Coda AI (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Coda AI best for?",
+        "a_en": "Coda AI excels at Docs+data unified, AI automation. AI docs + database + automation platform"
+      },
+      {
+        "q_en": "Is Coda AI free?",
+        "a_en": "Coda AI offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Coda AI combines docs, tables, and automation; AI assistant generates content, analyzes data, and automates workflows in-doc."
+    },
+    "editorialIntro": "Coda AI is an AI tool in the productivity space. AI docs + database + automation platform",
+    "editorialVerdict": {
+      "best": "You need docs+data unified, ai automation.",
+      "avoid": "You need learning curve, less simple than notion."
+    }
+  },
+  "cody": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Cody (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Cody best for?",
+        "a_en": "Cody excels at Full codebase context, Sourcegraph integrated. AI coding assistant by Sourcegraph"
+      },
+      {
+        "q_en": "Is Cody free?",
+        "a_en": "Cody offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Cody uses AI to understand your entire codebase, supporting search, completion, explanation, and refactoring."
+    },
+    "editorialIntro": "Cody is an AI tool in the code space. AI coding assistant by Sourcegraph",
+    "editorialVerdict": {
+      "best": "You need full codebase context, sourcegraph integrated.",
+      "avoid": "You need less intuitive than cursor, enterprise pricey."
+    }
+  },
+  "consensus": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Consensus (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Consensus best for?",
+        "a_en": "Consensus excels at Academic-specific, Reliable citations. AI academic paper search engine"
+      },
+      {
+        "q_en": "Is Consensus free?",
+        "a_en": "Consensus offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Consensus uses AI to search academic papers, answering scientific questions with paper citations."
+    },
+    "editorialIntro": "Consensus is an AI tool in the productivity space. AI academic paper search engine",
+    "editorialVerdict": {
+      "best": "You need academic-specific, reliable citations.",
+      "avoid": "You need english papers only, limited depth."
+    }
+  },
+  "crewai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "CrewAI (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is CrewAI best for?",
+        "a_en": "CrewAI excels at Open source framework, Multi-agent collab. Multi-agent collaboration framework, open source + enterprise"
+      },
+      {
+        "q_en": "Is CrewAI free?",
+        "a_en": "CrewAI offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "CrewAI lets you orchestrate multiple AI agents to collaborate on complex tasks, with open source framework and enterprise management platform."
+    },
+    "editorialIntro": "CrewAI is an AI tool in the productivity space. Multi-agent collaboration framework, open source + enterprise",
+    "editorialVerdict": {
+      "best": "You need open source framework, multi-agent collab.",
+      "avoid": "You need needs coding, complex setups hard."
+    }
+  },
+  "d-id": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "D-ID (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": true,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is D-ID best for?",
+        "a_en": "D-ID excels at Natural avatar motion, API available. AI avatar portrait animation"
+      },
+      {
+        "q_en": "Is D-ID free?",
+        "a_en": "D-ID offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "D-ID animates static portrait photos into talking avatars; great for customer service and marketing."
+    },
+    "editorialIntro": "D-ID is an AI tool in the video space. AI avatar portrait animation",
+    "editorialVerdict": {
+      "best": "You need natural avatar motion, api available.",
+      "avoid": "You need expensive, head only."
+    }
+  },
+  "dify": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Dify (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Dify best for?",
+        "a_en": "Dify excels at Open source, Visual builder. Open-source LLMOps + AI app development platform"
+      },
+      {
+        "q_en": "Is Dify free?",
+        "a_en": "Dify offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Dify lets you visually build AI apps (chatbots, workflows, agents) with self-hosting option."
+    },
+    "editorialIntro": "Dify is an AI tool in the productivity space. Open-source LLMOps + AI app development platform",
+    "editorialVerdict": {
+      "best": "You need open source, visual builder.",
+      "avoid": "You need needs tech skills, young ecosystem."
+    }
+  },
+  "elicit": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Elicit (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Elicit best for?",
+        "a_en": "Elicit excels at Academic-specific, Auto data extraction. AI research assistant, automated literature review"
+      },
+      {
+        "q_en": "Is Elicit free?",
+        "a_en": "Elicit offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Elicit helps researchers auto-search papers, extract data, and do literature reviews; a research powerhouse."
+    },
+    "editorialIntro": "Elicit is an AI tool in the productivity space. AI research assistant, automated literature review",
+    "editorialVerdict": {
+      "best": "You need academic-specific, auto data extraction.",
+      "avoid": "You need english papers only, high price."
+    }
+  },
+  "figma-ai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Figma AI (2026)",
+    "score": 8.0,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Figma AI best for?",
+        "a_en": "Figma AI excels at Built into Figma, Designer-friendly. AI design assistant built into Figma"
+      },
+      {
+        "q_en": "Is Figma AI free?",
+        "a_en": "Figma AI offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.0,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Figma AI provides text-to-UI, auto-rename layers, content fill, and more inside the design tool."
+    },
+    "editorialIntro": "Figma AI is an AI tool in the image space. AI design assistant built into Figma",
+    "editorialVerdict": {
+      "best": "You need built into figma, designer-friendly.",
+      "avoid": "You need limited ai features, requires figma paid."
+    }
+  },
+  "fliki": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Fliki (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Fliki best for?",
+        "a_en": "Fliki excels at Text-to-video, Natural voiceover. Text to video with AI voiceover"
+      },
+      {
+        "q_en": "Is Fliki free?",
+        "a_en": "Fliki offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Fliki turns text/blogs into short videos with AI voiceover and stock footage; popular for social marketing."
+    },
+    "editorialIntro": "Fliki is an AI tool in the video space. Text to video with AI voiceover",
+    "editorialVerdict": {
+      "best": "You need text-to-video, natural voiceover.",
+      "avoid": "You need average visual quality, repetitive stock."
+    }
+  },
+  "frase": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Frase (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Frase best for?",
+        "a_en": "Frase excels at Research+writing unified, Cheaper than Surfer. AI content research + optimization in one"
+      },
+      {
+        "q_en": "Is Frase free?",
+        "a_en": "Frase offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Frase combines SERP research and AI writing from topic to draft in one platform."
+    },
+    "editorialIntro": "Frase is an AI tool in the text space. AI content research + optimization in one",
+    "editorialVerdict": {
+      "best": "You need research+writing unified, cheaper than surfer.",
+      "avoid": "You need ai writing quality average."
+    }
+  },
+  "galileo-ai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Galileo AI (2026)",
+    "score": 8.0,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": true,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Galileo AI best for?",
+        "a_en": "Galileo AI excels at Text-to-UI, Editable. AI UI design generator"
+      },
+      {
+        "q_en": "Is Galileo AI free?",
+        "a_en": "Galileo AI offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.0,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Galileo AI generates editable UI mockups from text descriptions; great for rapid prototyping."
+    },
+    "editorialIntro": "Galileo AI is an AI tool in the image space. AI UI design generator",
+    "editorialVerdict": {
+      "best": "You need text-to-ui, editable.",
+      "avoid": "You need young tool, limited export."
+    }
+  },
+  "genmo": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Genmo (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Genmo best for?",
+        "a_en": "Genmo excels at Unique 3D gen, Free trial. AI video + 3D generation"
+      },
+      {
+        "q_en": "Is Genmo free?",
+        "a_en": "Genmo offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Genmo generates video and 3D assets with AI; great for creative and game development."
+    },
+    "editorialIntro": "Genmo is an AI tool in the video space. AI video + 3D generation",
+    "editorialVerdict": {
+      "best": "You need unique 3d gen, free trial.",
+      "avoid": "You need quality varies, small ecosystem."
+    }
+  },
+  "grammarly-ai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Grammarly AI (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Grammarly AI best for?",
+        "a_en": "Grammarly AI excels at Cross-platform, Real-time. AI grammar check + writing enhancement"
+      },
+      {
+        "q_en": "Is Grammarly AI free?",
+        "a_en": "Grammarly AI offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Grammarly AI checks grammar, polishes text, adjusts tone; browser extension works everywhere."
+    },
+    "editorialIntro": "Grammarly AI is an AI tool in the text space. AI grammar check + writing enhancement",
+    "editorialVerdict": {
+      "best": "You need cross-platform, real-time.",
+      "avoid": "You need advanced paid, weak chinese."
+    }
+  },
+  "grok": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Grok (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": true,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Grok best for?",
+        "a_en": "Grok excels at Real-time info, X integration. AI assistant by xAI, integrated with X"
+      },
+      {
+        "q_en": "Is Grok free?",
+        "a_en": "Grok offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Grok by xAI offers AI chat and search, integrated with X (Twitter), with iOS/Android apps and API access."
+    },
+    "editorialIntro": "Grok is an AI tool in the text space. AI assistant by xAI, integrated with X",
+    "editorialVerdict": {
+      "best": "You need real-time info, x integration.",
+      "avoid": "You need new tool, small ecosystem."
+    }
+  },
+  "huggingface": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Hugging Face (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Hugging Face best for?",
+        "a_en": "Hugging Face excels at Largest model library, Open community. AI model hub, the GitHub of open models"
+      },
+      {
+        "q_en": "Is Hugging Face free?",
+        "a_en": "Hugging Face offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Hugging Face is the largest AI model/dataset/app hosting platform, the core of open source AI community, maintainer of Transformers library."
+    },
+    "editorialIntro": "Hugging Face is an AI tool in the productivity space. AI model hub, the GitHub of open models",
+    "editorialVerdict": {
+      "best": "You need largest model library, open community.",
+      "avoid": "You need needs tech skills, resource limits."
+    }
+  },
+  "invideo-ai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Invideo AI (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Invideo AI best for?",
+        "a_en": "Invideo AI excels at One-click video, Voiceover+subtitles. Text prompt to full video with voiceover and subtitles"
+      },
+      {
+        "q_en": "Is Invideo AI free?",
+        "a_en": "Invideo AI offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Invideo AI turns a single prompt into a complete video with voiceover, subtitles, and stock footage."
+    },
+    "editorialIntro": "Invideo AI is an AI tool in the video space. Text prompt to full video with voiceover and subtitles",
+    "editorialVerdict": {
+      "best": "You need one-click video, voiceover+subtitles.",
+      "avoid": "You need limited creative control, mid-high price."
+    }
+  },
+  "jenni-ai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Jenni AI (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Jenni AI best for?",
+        "a_en": "Jenni AI excels at Academic-specific, Citation management. AI academic writing assistant"
+      },
+      {
+        "q_en": "Is Jenni AI free?",
+        "a_en": "Jenni AI offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Jenni AI is designed for academic writing with citation management, literature review, and AI continuation."
+    },
+    "editorialIntro": "Jenni AI is an AI tool in the text space. AI academic writing assistant",
+    "editorialVerdict": {
+      "best": "You need academic-specific, citation management.",
+      "avoid": "You need academic only, mid-high price."
+    }
+  },
+  "kapwing": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Kapwing (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Kapwing best for?",
+        "a_en": "Kapwing excels at Browser-based, Many AI tools. Online AI video editor"
+      },
+      {
+        "q_en": "Is Kapwing free?",
+        "a_en": "Kapwing offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Kapwing is a browser video editor with AI tools (auto subtitles, background removal, translation)."
+    },
+    "editorialIntro": "Kapwing is an AI tool in the video space. Online AI video editor",
+    "editorialVerdict": {
+      "best": "You need browser-based, many ai tools.",
+      "avoid": "You need free has watermark, slow for big projects."
+    }
+  },
+  "letsenhance": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Let's Enhance (2026)",
+    "score": 8.0,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Let's Enhance best for?",
+        "a_en": "Let's Enhance excels at Good upscaling, Batch processing. AI image upscaling + quality enhancement"
+      },
+      {
+        "q_en": "Is Let's Enhance free?",
+        "a_en": "Let's Enhance offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.0,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Let's Enhance uses AI to upscale low-resolution images and enhance quality; popular for e-commerce and print."
+    },
+    "editorialIntro": "Let's Enhance is an AI tool in the image space. AI image upscaling + quality enhancement",
+    "editorialVerdict": {
+      "best": "You need good upscaling, batch processing.",
+      "avoid": "You need limited free, large images paid."
+    }
+  },
+  "lindy": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Lindy (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Lindy best for?",
+        "a_en": "Lindy excels at Automates daily, Calendar+email integrated. AI personal assistant agent"
+      },
+      {
+        "q_en": "Is Lindy free?",
+        "a_en": "Lindy offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Lindy is an AI personal assistant that auto-handles email, calendar, meetings, and daily tasks."
+    },
+    "editorialIntro": "Lindy is an AI tool in the productivity space. AI personal assistant agent",
+    "editorialVerdict": {
+      "best": "You need automates daily, calendar+email integrated.",
+      "avoid": "You need young tool, limited features."
+    }
+  },
+  "make-com": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Make (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Make best for?",
+        "a_en": "Make excels at 1500+ integrations, Visual. Visual automation and integration platform"
+      },
+      {
+        "q_en": "Is Make free?",
+        "a_en": "Make offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Make (formerly Integromat) is a visual automation platform connecting 1500+ apps with AI modules."
+    },
+    "editorialIntro": "Make is an AI tool in the productivity space. Visual automation and integration platform",
+    "editorialVerdict": {
+      "best": "You need 1500+ integrations, visual.",
+      "avoid": "You need expensive for complex, learning curve."
+    }
+  },
+  "mem": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Mem (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Mem best for?",
+        "a_en": "Mem excels at Auto-organize, AI search. AI notes app, auto-organized"
+      },
+      {
+        "q_en": "Is Mem free?",
+        "a_en": "Mem offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Mem is an AI-powered notes app that auto-organizes, connects, and searches your notes."
+    },
+    "editorialIntro": "Mem is an AI tool in the productivity space. AI notes app, auto-organized",
+    "editorialVerdict": {
+      "best": "You need auto-organize, ai search.",
+      "avoid": "You need less flexible than notion, fewer features."
+    }
+  },
+  "mistral": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Mistral (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": true,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Mistral best for?",
+        "a_en": "Mistral excels at Open models, Fast. Leading European open-source AI model company"
+      },
+      {
+        "q_en": "Is Mistral free?",
+        "a_en": "Mistral offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Mistral AI is a leading European AI company offering high-performance open models (Mistral/Large) and the Le Chat interface."
+    },
+    "editorialIntro": "Mistral is an AI tool in the text space. Leading European open-source AI model company",
+    "editorialVerdict": {
+      "best": "You need open models, fast.",
+      "avoid": "You need less known than gpt/claude, weak multimodal."
+    }
+  },
+  "multion": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "MultiOn (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is MultiOn best for?",
+        "a_en": "MultiOn excels at Auto web tasks, Saves time. AI browser agent, automates web tasks"
+      },
+      {
+        "q_en": "Is MultiOn free?",
+        "a_en": "MultiOn offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "MultiOn is a browser AI agent that auto-clicks, fills forms, orders, and compares prices; replaces manual web tasks."
+    },
+    "editorialIntro": "MultiOn is an AI tool in the productivity space. AI browser agent, automates web tasks",
+    "editorialVerdict": {
+      "best": "You need auto web tasks, saves time.",
+      "avoid": "You need young tool, occasional wrong actions."
+    }
+  },
+  "murf": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Murf (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Murf best for?",
+        "a_en": "Murf excels at Natural voices, Team collab. AI voiceover studio for teams"
+      },
+      {
+        "q_en": "Is Murf free?",
+        "a_en": "Murf offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Murf offers natural voices and a collaborative studio for explainer and training videos."
+    },
+    "editorialIntro": "Murf is an AI tool in the audio space. AI voiceover studio for teams",
+    "editorialVerdict": {
+      "best": "You need natural voices, team collab.",
+      "avoid": "You need mid-high price, cloning pricey."
+    }
+  },
+  "ollama": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Ollama (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Ollama best for?",
+        "a_en": "Ollama excels at One-line install, Fully open source. The easiest way to run open models locally"
+      },
+      {
+        "q_en": "Is Ollama free?",
+        "a_en": "Ollama offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Ollama lets you run Llama, DeepSeek, Mistral and other open models locally with one command, no GPU cluster needed."
+    },
+    "editorialIntro": "Ollama is an AI tool in the code space. The easiest way to run open models locally",
+    "editorialVerdict": {
+      "best": "You need one-line install, fully open source.",
+      "avoid": "You need needs local hardware, less capable than api models."
+    }
+  },
+  "phind": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Phind (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Phind best for?",
+        "a_en": "Phind excels at Dev-specific, Cites sources. AI search engine for developers"
+      },
+      {
+        "q_en": "Is Phind free?",
+        "a_en": "Phind offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Phind is an AI search engine designed for developers, answering coding questions with source citations."
+    },
+    "editorialIntro": "Phind is an AI tool in the text space. AI search engine for developers",
+    "editorialVerdict": {
+      "best": "You need dev-specific, cites sources.",
+      "avoid": "You need tech only, less depth than perplexity."
+    }
+  },
+  "photoroom": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "PhotoRoom (2026)",
+    "score": 8.0,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is PhotoRoom best for?",
+        "a_en": "PhotoRoom excels at Excellent bg removal, One-click product shots. AI product photos, background removal, editing"
+      },
+      {
+        "q_en": "Is PhotoRoom free?",
+        "a_en": "PhotoRoom offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.0,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "PhotoRoom removes backgrounds and generates professional product photos in one click; popular for e-commerce and social."
+    },
+    "editorialIntro": "PhotoRoom is an AI tool in the image space. AI product photos, background removal, editing",
+    "editorialVerdict": {
+      "best": "You need excellent bg removal, one-click product shots.",
+      "avoid": "You need advanced paid, batch needs subscription."
+    }
+  },
+  "quillbot": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "QuillBot (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is QuillBot best for?",
+        "a_en": "QuillBot excels at Good paraphrasing, Usable free tier. AI paraphrasing, polishing, and summarizing tool"
+      },
+      {
+        "q_en": "Is QuillBot free?",
+        "a_en": "QuillBot offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "QuillBot excels at paraphrasing, polishing, summarizing, and grammar checking; popular with students and writers."
+    },
+    "editorialIntro": "QuillBot is an AI tool in the text space. AI paraphrasing, polishing, and summarizing tool",
+    "editorialVerdict": {
+      "best": "You need good paraphrasing, usable free tier.",
+      "avoid": "You need long text limited, originality average."
+    }
+  },
+  "read-ai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Read AI (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Read AI best for?",
+        "a_en": "Read AI excels at Auto-join, Sentiment analysis. AI meeting analyzer, auto-summary + sentiment"
+      },
+      {
+        "q_en": "Is Read AI free?",
+        "a_en": "Read AI offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Read AI auto-joins meetings, generates summaries, action items, and participant sentiment analysis."
+    },
+    "editorialIntro": "Read AI is an AI tool in the productivity space. AI meeting analyzer, auto-summary + sentiment",
+    "editorialVerdict": {
+      "best": "You need auto-join, sentiment analysis.",
+      "avoid": "You need privacy concerns, weak chinese."
+    }
+  },
+  "removebg": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Remove.bg (2026)",
+    "score": 8.0,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": true,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Remove.bg best for?",
+        "a_en": "Remove.bg excels at Fast, Clean edges. One-click image background removal"
+      },
+      {
+        "q_en": "Is Remove.bg free?",
+        "a_en": "Remove.bg offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.0,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Remove.bg does one thing: remove image backgrounds in 5 seconds, clean results, API available."
+    },
+    "editorialIntro": "Remove.bg is an AI tool in the image space. One-click image background removal",
+    "editorialVerdict": {
+      "best": "You need fast, clean edges.",
+      "avoid": "You need limited free, bg removal only."
+    }
+  },
+  "riverside": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Riverside (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Riverside best for?",
+        "a_en": "Riverside excels at HD recording, AI editing. AI-powered podcast and video recording + editing platform"
+      },
+      {
+        "q_en": "Is Riverside free?",
+        "a_en": "Riverside offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Riverside is an AI-powered platform to record, edit, repurpose, and distribute studio-quality content as easily as if you had a crew behind you."
+    },
+    "editorialIntro": "Riverside is an AI tool in the audio space. AI-powered podcast and video recording + editing platform",
+    "editorialVerdict": {
+      "best": "You need hd recording, ai editing.",
+      "avoid": "You need advanced paid, limited chinese."
+    }
+  },
+  "rytr": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Rytr (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Rytr best for?",
+        "a_en": "Rytr excels at Very cheap, Usable free tier. Affordable AI writing assistant"
+      },
+      {
+        "q_en": "Is Rytr free?",
+        "a_en": "Rytr offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Rytr offers AI writing at extremely low cost for budget-conscious individuals and small teams."
+    },
+    "editorialIntro": "Rytr is an AI tool in the text space. Affordable AI writing assistant",
+    "editorialVerdict": {
+      "best": "You need very cheap, usable free tier.",
+      "avoid": "You need short output, average quality."
+    }
+  },
+  "speechify": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Speechify (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Speechify best for?",
+        "a_en": "Speechify excels at Natural voices, Cross-platform. AI text-to-speech reader"
+      },
+      {
+        "q_en": "Is Speechify free?",
+        "a_en": "Speechify offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Speechify turns any text (docs/web/books) into natural speech for faster reading."
+    },
+    "editorialIntro": "Speechify is an AI tool in the audio space. AI text-to-speech reader",
+    "editorialVerdict": {
+      "best": "You need natural voices, cross-platform.",
+      "avoid": "You need mid-high price, limited cn voices."
+    }
+  },
+  "stable-audio": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Stable Audio (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Stable Audio best for?",
+        "a_en": "Stable Audio excels at High quality, Commercial use. Music and sound effect generation by Stability AI"
+      },
+      {
+        "q_en": "Is Stable Audio free?",
+        "a_en": "Stable Audio offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Stable Audio generates music and sound effects with AI; great for video scoring and game development."
+    },
+    "editorialIntro": "Stable Audio is an AI tool in the audio space. Music and sound effect generation by Stability AI",
+    "editorialVerdict": {
+      "best": "You need high quality, commercial use.",
+      "avoid": "You need weak vocals, paid for long audio."
+    }
+  },
+  "sudowrite": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Sudowrite (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Sudowrite best for?",
+        "a_en": "Sudowrite excels at Built for fiction, Strong continuation. AI fiction and creative writing assistant"
+      },
+      {
+        "q_en": "Is Sudowrite free?",
+        "a_en": "Sudowrite offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Sudowrite is designed for fiction/story writers with continuation, rewrite, character development, and plot suggestions."
+    },
+    "editorialIntro": "Sudowrite is an AI tool in the text space. AI fiction and creative writing assistant",
+    "editorialVerdict": {
+      "best": "You need built for fiction, strong continuation.",
+      "avoid": "You need english only excellent, mid-high price."
+    }
+  },
+  "surfer-seo": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Surfer SEO (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Surfer SEO best for?",
+        "a_en": "Surfer SEO excels at Data-driven, Accurate SERP analysis. AI-driven SEO content optimization platform"
+      },
+      {
+        "q_en": "Is Surfer SEO free?",
+        "a_en": "Surfer SEO offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Surfer SEO analyzes search results to recommend keywords, structure, and word count for higher rankings."
+    },
+    "editorialIntro": "Surfer SEO is an AI tool in the text space. AI-driven SEO content optimization platform",
+    "editorialVerdict": {
+      "best": "You need data-driven, accurate serp analysis.",
+      "avoid": "You need expensive, learning curve."
+    }
+  },
+  "tabnine": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Tabnine (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Tabnine best for?",
+        "a_en": "Tabnine excels at Local deploy, Privacy protection. AI code completion, privacy-focused"
+      },
+      {
+        "q_en": "Is Tabnine free?",
+        "a_en": "Tabnine offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Tabnine offers AI code completion with local model deployment options, focused on enterprise data privacy."
+    },
+    "editorialIntro": "Tabnine is an AI tool in the code space. AI code completion, privacy-focused",
+    "editorialVerdict": {
+      "best": "You need local deploy, privacy protection.",
+      "avoid": "You need less capable than copilot, no agent."
+    }
+  },
+  "taskade": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Taskade (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Taskade best for?",
+        "a_en": "Taskade excels at AI integrated, Generous free. AI team collaboration and project management"
+      },
+      {
+        "q_en": "Is Taskade free?",
+        "a_en": "Taskade offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Taskade combines AI assistant with project management, supporting tasks, notes, mind maps, and team collab."
+    },
+    "editorialIntro": "Taskade is an AI tool in the productivity space. AI team collaboration and project management",
+    "editorialVerdict": {
+      "best": "You need ai integrated, generous free.",
+      "avoid": "You need less flexible than notion, fewer integrations."
+    }
+  },
+  "tome": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Tome (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Tome best for?",
+        "a_en": "Tome excels at Fast AI gen, Beautiful design. AI presentation generator"
+      },
+      {
+        "q_en": "Is Tome free?",
+        "a_en": "Tome offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Tome uses AI to generate polished presentations from text/docs; great for quick proposals."
+    },
+    "editorialIntro": "Tome is an AI tool in the productivity space. AI presentation generator",
+    "editorialVerdict": {
+      "best": "You need fast ai gen, beautiful design.",
+      "avoid": "You need limited export, weak customization."
+    }
+  },
+  "uizard": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Uizard (2026)",
+    "score": 8.0,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Uizard best for?",
+        "a_en": "Uizard excels at Sketch recognition, Fast mockups. AI UI design tool, sketch to mockup"
+      },
+      {
+        "q_en": "Is Uizard free?",
+        "a_en": "Uizard offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 8.0,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Uizard turns hand-drawn sketches or text descriptions into editable UI mockups, great for quick prototyping."
+    },
+    "editorialIntro": "Uizard is an AI tool in the image space. AI UI design tool, sketch to mockup",
+    "editorialVerdict": {
+      "best": "You need sketch recognition, fast mockups.",
+      "avoid": "You need limited precision, paid export."
+    }
+  },
+  "vidu": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Vidu (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Vidu best for?",
+        "a_en": "Vidu excels at China accessible, CN-friendly. AI video generation by ShengShu Tech"
+      },
+      {
+        "q_en": "Is Vidu free?",
+        "a_en": "Vidu offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Vidu is a Chinese AI video model supporting text-to-video and image-to-video; accessible in China."
+    },
+    "editorialIntro": "Vidu is an AI tool in the video space. AI video generation by ShengShu Tech",
+    "editorialVerdict": {
+      "best": "You need china accessible, cn-friendly.",
+      "avoid": "You need young ecosystem, length limits."
+    }
+  },
+  "viggle": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Viggle (2026)",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Viggle best for?",
+        "a_en": "Viggle excels at Lively results, Usable free. AI character animation, make photos dance"
+      },
+      {
+        "q_en": "Is Viggle free?",
+        "a_en": "Viggle offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Viggle turns character photos into action/dance animations; viral on social media."
+    },
+    "editorialIntro": "Viggle is an AI tool in the video space. AI character animation, make photos dance",
+    "editorialVerdict": {
+      "best": "You need lively results, usable free.",
+      "avoid": "You need limited resolution, needs clear subject."
+    }
+  },
+  "voicemod": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Voicemod (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Voicemod best for?",
+        "a_en": "Voicemod excels at Real-time change, Many voice effects. Real-time AI voice changer"
+      },
+      {
+        "q_en": "Is Voicemod free?",
+        "a_en": "Voicemod offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Voicemod changes your voice in real-time; popular for gaming, streaming, and social entertainment."
+    },
+    "editorialIntro": "Voicemod is an AI tool in the audio space. Real-time AI voice changer",
+    "editorialVerdict": {
+      "best": "You need real-time change, many voice effects.",
+      "avoid": "You need entertainment only, weak chinese."
+    }
+  },
+  "wordtune": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Wordtune (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Wordtune best for?",
+        "a_en": "Wordtune excels at Real-time extension, Multiple rewrite modes. AI sentence rewrite and expansion tool"
+      },
+      {
+        "q_en": "Is Wordtune free?",
+        "a_en": "Wordtune offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Wordtune rewrites, shortens, expands, or adjusts tone; browser extension works in real-time."
+    },
+    "editorialIntro": "Wordtune is an AI tool in the text space. AI sentence rewrite and expansion tool",
+    "editorialVerdict": {
+      "best": "You need real-time extension, multiple rewrite modes.",
+      "avoid": "You need sentence-level only, premium paid."
+    }
+  },
+  "writesonic": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "Writesonic (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is Writesonic best for?",
+        "a_en": "Writesonic excels at SEO integrated, One-click blog. AI writing + SEO optimization platform"
+      },
+      {
+        "q_en": "Is Writesonic free?",
+        "a_en": "Writesonic offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "Writesonic combines AI writing with SEO optimization for search-friendly blog and marketing content."
+    },
+    "editorialIntro": "Writesonic is an AI tool in the text space. AI writing + SEO optimization platform",
+    "editorialVerdict": {
+      "best": "You need seo integrated, one-click blog.",
+      "avoid": "You need generic content, mid-high price."
+    }
+  },
+  "you-com": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "You.com (2026)",
+    "score": 7.8,
+    "quickFacts": {
+      "freeTier": false,
+      "hasApi": true,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Starting at free tier with paid plans available."
+    },
+    "faq": [
+      {
+        "q_en": "What is You.com best for?",
+        "a_en": "You.com excels at Enterprise API, Clean content extraction. Web search APIs for AI applications"
+      },
+      {
+        "q_en": "Is You.com free?",
+        "a_en": "You.com offers a free tier with limited features. Paid plans unlock premium capabilities."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.8,
+      "capability": 7,
+      "price": 8,
+      "growth": 7,
+      "trust": 7
+    },
+    "long_desc": {
+      "en": "You.com provides web search, content extraction, and grounded answer APIs for AI agents and LLMs, serving enterprises like OpenAI and Amazon."
+    },
+    "editorialIntro": "You.com is an AI tool in the text space. Web search APIs for AI applications",
+    "editorialVerdict": {
+      "best": "You need enterprise api, clean content extraction.",
+      "avoid": "You need developer-focused, not consumer-facing."
+    }
   }
 }

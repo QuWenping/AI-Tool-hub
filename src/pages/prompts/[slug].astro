@@ -106,13 +106,79 @@ const promptData: Record<string, any> = {
     exampleOutput: "## Customer Research Summary\n### Top Pain Points\n1. Onboarding complexity (42% of respondents)\n2. Integration friction (31%)\n### User Personas\n- 'Efficiency Emma': Power user, values shortcuts\n- 'Careful Carlos': Needs extensive documentation\n### Key Opportunities\n- Simplify initial setup wizard\n- Add native Slack integration",
     relatedTools: ["chatgpt", "claude", "notion-ai"],
   },
+  "chatgpt-cover-letter": {
+    title: "ChatGPT Cover Letter Prompt",
+    description: "A structured prompt template for using ChatGPT to generate tailored, professional cover letters that match job descriptions and highlight relevant experience.",
+    tags: ["Writing", "ChatGPT", "Career"],
+    useCase: "Job seekers who need to quickly generate customized cover letters for multiple applications. The prompt ensures each letter is tailored to the specific job description, company, and role requirements.",
+    exampleOutput: "## Cover Letter\n[Your Name]\n[Your Contact Info]\n\nDear [Hiring Manager Name],\n\nI am writing to express my enthusiastic interest in the [Position] role at [Company]. With [X] years of experience in [relevant field] and a proven track record of [key achievement], I am confident I can deliver immediate value to your team.\n\n[Body paragraph connecting specific job requirements to your experience]\n\n[Closing paragraph with call to action]",
+    relatedTools: ["chatgpt", "claude"],
+  },
+  "cursor-graphql-s": {
+    title: "Cursor GraphQL Schema Prompt",
+    description: "A specialized prompt for efficiently generating, optimizing, and debugging GraphQL schemas in Cursor. Covers type definitions, resolver implementation, and performance tuning.",
+    tags: ["Coding", "Cursor", "GraphQL"],
+    useCase: "Backend developers building GraphQL APIs with Cursor AI assistance, needing rapid generation of type-safe schemas, resolvers, and queries.",
+    exampleOutput: "## GraphQL Schema Generated\n```graphql\ntype User {\n  id: ID!\n  name: String!\n  email: String!\n  posts: [Post!]!\n}\n\ntype Post {\n  id: ID!\n  title: String!\n  content: String!\n  author: User!\n}\n\ntype Query {\n  users: [User!]!\n  user(id: ID!): User\n  posts: [Post!]!\n}\n```",
+    relatedTools: ["cursor", "github-copilot"],
+  },
+  "cursor-debug-strategy": {
+    title: "Cursor Debug Strategy Prompt",
+    description: "A systematic prompt for using Cursor to diagnose and fix complex bugs. Covers root cause analysis, breakpoint strategy, log tracing, and regression testing.",
+    tags: ["Coding", "Cursor", "Debugging"],
+    useCase: "Developers troubleshooting elusive production bugs who need structured AI-assisted debugging workflows with hypothesis-driven root cause analysis.",
+    exampleOutput: "## Debug Strategy\n### Symptom\n- API returns 500 on `/checkout` after payment gateway upgrade\n### Hypothesis\n1. Payment response payload schema changed (most likely)\n2. Webhook signature validation failing\n### Investigation\n- Added structured logging to `handlePaymentResponse()`\n- Traced: `payment.body.amount` is now nested under `payment.body.charge.amount`\n- Fix: Updated schema mapping in 2 files\n### Verification\n- Unit tests pass, integration test covers new schema",
+    relatedTools: ["cursor", "github-copilot"],
+  },
+  "windsurf-fullstack": {
+    title: "Windsurf Fullstack Development Prompt",
+    description: "A prompt template for using Windsurf Cascade to build fullstack applications. Covers frontend scaffolding, API design, database integration, and deployment.",
+    tags: ["Coding", "Windsurf", "Fullstack"],
+    useCase: "Fullstack developers leveraging Windsurf's Cascade agent for end-to-end feature development from database schema to frontend components.",
+    exampleOutput: "## Fullstack Feature: User Dashboard\n### Backend\n- REST API: `GET /api/dashboard/stats`\n- Database: PostgreSQL `user_stats` table with migration\n- Auth middleware: JWT verification\n### Frontend\n- React component: `Dashboard.tsx` with chart integration\n- State management: React Query for data fetching\n- Responsive layout with Tailwind\n### Testing\n- API integration tests passed\n- Component renders with mock data",
+    relatedTools: ["windsurf", "cursor"],
+  },
+  "any-orchestration-d": {
+    title: "AI Orchestration Design Prompt",
+    description: "A prompt for designing multi-agent AI orchestration systems. Covers agent roles, task decomposition, communication protocols, and workflow state management.",
+    tags: ["Business", "Claude", "Architecture"],
+    useCase: "AI architects and engineering leads designing multi-agent systems with defined roles, handoff protocols, and error recovery strategies.",
+    exampleOutput: "## Orchestration Design\n### Agents\n1. Planner Agent: Task decomposition, dependency mapping\n2. Executor Agent: Code generation, terminal operations\n3. Reviewer Agent: Code quality checks, security audit\n### Communication Protocol\n- Message format: JSON with `{intent, payload, context}`\n- Handoff rules: Executor → Reviewer on file write\n### Workflow State\n- Redis-backed state store with checkpointing\n- Error recovery: retry with exponential backoff (max 3)",
+    relatedTools: ["claude", "chatgpt"],
+  },
+  "chatgpt-learning": {
+    title: "ChatGPT Learning Assistant Prompt",
+    description: "A prompt template for using ChatGPT as a personalized learning tutor. Covers Socratic questioning, spaced repetition scheduling, concept mapping, and progress assessment.",
+    tags: ["Education", "ChatGPT", "Learning"],
+    useCase: "Students and self-learners using ChatGPT to master complex subjects through structured, adaptive tutoring sessions with active recall techniques.",
+    exampleOutput: "## Learning Plan: Machine Learning Basics\n### Session 1: Supervised vs Unsupervised Learning\n- Socratic prompt: 'What patterns do you notice in this labeled dataset?'\n- Concept check: 3 multiple-choice questions\n### Session 2: Linear Regression\n- Prerequisite check: statistics fundamentals\n- Guided exercise: build regression from scratch\n### Progress\n- Mastery score: 7/10 → review bias-variance tradeoff\n- Spaced repetition: Revisit in 3 days",
+    relatedTools: ["chatgpt", "claude", "perplexity"],
+  },
+  "midjourney-info-bg": {
+    title: "Midjourney Infographic Background Prompt",
+    description: "A prompt for generating clean, professional infographic backgrounds with Midjourney. Covers color schemes, layout composition, data visualization styling, and negative space management.",
+    tags: ["Image", "Midjourney", "Design"],
+    useCase: "Designers and content creators generating infographic and presentation backgrounds that maintain visual hierarchy and data readability.",
+    exampleOutput: "## Generated Infographic Background\n- Style: Clean corporate, subtle grid overlay\n- Color palette: Navy #1a365d, Teal #2c7a7b, White space 40%\n- Layout: 3-column grid with header band, muted icon placeholders\n- Technical: --ar 16:9 --stylize 200 --v 7\n## Use Case\n- Drop into Canva/PPT as background layer\n- Add text and charts on top; high contrast for readability",
+    relatedTools: ["midjourney", "canva-ai"],
+  },
+  "deepseek-opt": {
+    title: "DeepSeek Optimization Prompt",
+    description: "A prompt for optimizing DeepSeek usage — model selection (V3 vs R1), cost-efficient API patterns, context window strategies, and self-hosting configuration.",
+    tags: ["Coding", "DeepSeek", "Optimization"],
+    useCase: "Developers and teams using DeepSeek API or self-hosting who need to maximize performance-per-dollar across coding, reasoning, and multilingual tasks.",
+    exampleOutput: "## DeepSeek Optimization Guide\n### Model Selection\n- V3: Chat, content generation, code completion ($0.14/M input)\n- R1: Math proofs, multi-file refactors, architecture planning ($0.55/M input)\n### Cost Strategies\n- Use V3 for drafts, R1 for final review (3:1 ratio saves 60%)\n- Enable prompt caching for repeated system instructions\n### Context Window\n- Chunk documents at 32K tokens for V3, 64K for R1\n- Use sliding window for long conversations",
+    relatedTools: ["deepseek", "cline"],
+  },
 };
 
 export async function getStaticPaths() {
   const slugs = [
     "cursor-middleware", "any-k8s", "perplexity-deep-dive", "chatgpt-simplify",
     "any-data-quality", "any-whitepaper", "any-governance-d", "cursor-refactor-agent",
-    "claude-metaphor", "cursor-merge-conf", "mj-cozy-room", "claude-offboard", "any-customer-research",
+    "claude-metaphor", "cursor-merge-conf", "mj-cozy-room", "claude-offboard", "any-customer-research", "chatgpt-cover-letter",
+    "cursor-graphql-s", "cursor-debug-strategy", "windsurf-fullstack",
+    "any-orchestration-d", "chatgpt-learning", "midjourney-info-bg", "deepseek-opt",
   ];
   return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }

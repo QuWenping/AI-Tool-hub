@@ -106,6 +106,70 @@ const promptDataZh: Record<string, any> = {
     exampleOutput: "## 客户研究总结\n### 主要痛点\n1. 入门复杂性（42% 受访者）\n2. 集成摩擦（31%）\n### 用户画像\n- '效率 Emma'：高级用户，重视快捷方式\n- '谨慎 Carlos'：需要详尽文档\n### 关键机会\n- 简化初始设置向导\n- 添加原生 Slack 集成",
     relatedTools: ["chatgpt", "claude", "notion-ai"],
   },
+  "chatgpt-cover-letter": {
+    title: "ChatGPT 求职信提示词",
+    description: "使用 ChatGPT 生成量身定制的专业求职信的结构化提示词模板，匹配职位描述并突出相关经验。",
+    tags: ["写作", "ChatGPT", "职业"],
+    useCase: "求职者需要快速生成针对多个职位的定制求职信。该提示词确保每封信都针对具体的职位描述、公司和岗位要求量身定制。",
+    exampleOutput: "## 求职信\n[您的姓名]\n[您的联系方式]\n\n尊敬的 [招聘经理姓名]：\n\n我怀着极大的热情申请 [公司] 的 [职位] 岗位。凭借 [X] 年在 [相关领域] 的经验以及在 [关键成就] 方面的良好记录，我坚信能够为您的团队带来即时价值。\n\n[连接具体岗位要求与您经验的主体段落]\n\n[带有行动号召的结尾段落]",
+    relatedTools: ["chatgpt", "claude"],
+  },
+  "cursor-graphql-s": {
+    title: "Cursor GraphQL Schema 提示词",
+    description: "在 Cursor 中高效生成、优化和调试 GraphQL Schema 的专用提示词模板，涵盖类型定义、解析器实现和性能优化。",
+    tags: ["编程", "Cursor", "GraphQL"],
+    useCase: "使用 Cursor AI 编写 GraphQL API 的后端开发者，需要快速生成类型安全的 Schema、解析器和查询。",
+    exampleOutput: "## GraphQL Schema 生成\n```graphql\ntype User {\n  id: ID!\n  name: String!\n  email: String!\n  posts: [Post!]!\n}\n\ntype Post {\n  id: ID!\n  title: String!\n  content: String!\n  author: User!\n}\n\ntype Query {\n  users: [User!]!\n  user(id: ID!): User\n  posts: [Post!]!\n}\n```",
+    relatedTools: ["cursor", "github-copilot"],
+  },
+  "cursor-debug-strategy": {
+    title: "Cursor 调试策略提示词",
+    description: "使用 Cursor 系统化诊断和修复复杂 Bug 的提示词模板，涵盖根因分析、断点策略、日志追踪和回归测试。",
+    tags: ["编程", "Cursor", "调试"],
+    useCase: "排查棘手生产 Bug 的开发者，需要结构化的 AI 辅助调试工作流，基于假设驱动的根因分析。",
+    exampleOutput: "## 调试策略\n### 症状\n- 支付网关升级后 `/checkout` API 返回 500\n### 假设\n1. 支付响应负载 Schema 变更（最可能）\n2. Webhook 签名验证失败\n### 调查\n- 在 `handlePaymentResponse()` 中添加结构化日志\n- 追踪到：`payment.body.amount` 现在嵌套在 `payment.body.charge.amount` 下\n- 修复：更新 2 个文件中的 Schema 映射\n### 验证\n- 单元测试通过，集成测试覆盖新 Schema",
+    relatedTools: ["cursor", "github-copilot"],
+  },
+  "windsurf-fullstack": {
+    title: "Windsurf 全栈开发提示词",
+    description: "使用 Windsurf Cascade 构建全栈应用的提示词模板，涵盖前端脚手架、API 设计、数据库集成和部署。",
+    tags: ["编程", "Windsurf", "全栈"],
+    useCase: "全栈开发者利用 Windsurf 的 Cascade 代理进行端到端功能开发，从数据库 Schema 到前端组件。",
+    exampleOutput: "## 全栈功能：用户仪表盘\n### 后端\n- REST API：`GET /api/dashboard/stats`\n- 数据库：PostgreSQL `user_stats` 表及迁移\n- 认证中间件：JWT 验证\n### 前端\n- React 组件：`Dashboard.tsx` 集成图表\n- 状态管理：React Query 数据获取\n- 响应式布局，使用 Tailwind\n### 测试\n- API 集成测试通过\n- 组件使用模拟数据正常渲染",
+    relatedTools: ["windsurf", "cursor"],
+  },
+  "any-orchestration-d": {
+    title: "AI 编排设计提示词",
+    description: "设计多智能体 AI 编排系统的提示词模板，涵盖代理角色、任务分解、通信协议和工作流状态管理。",
+    tags: ["商业", "Claude", "架构"],
+    useCase: "AI 架构师和技术负责人设计多智能体系统，定义角色、交接协议和错误恢复策略。",
+    exampleOutput: "## 编排设计\n### 代理\n1. 规划代理：任务分解、依赖映射\n2. 执行代理：代码生成、终端操作\n3. 审查代理：代码质量检查、安全审计\n### 通信协议\n- 消息格式：JSON `{intent, payload, context}`\n- 交接规则：执行 → 审查（文件写入时）\n### 工作流状态\n- Redis 状态存储，带检查点\n- 错误恢复：指数退避重试（最多 3 次）",
+    relatedTools: ["claude", "chatgpt"],
+  },
+  "chatgpt-learning": {
+    title: "ChatGPT 学习助手提示词",
+    description: "使用 ChatGPT 作为个性化学习导师的提示词模板，涵盖苏格拉底式提问、间隔重复安排、概念映射和进度评估。",
+    tags: ["教育", "ChatGPT", "学习"],
+    useCase: "学生和自学者通过结构化、自适应的辅导课程，使用主动回忆技术掌握复杂学科。",
+    exampleOutput: "## 学习计划：机器学习基础\n### 第 1 课：监督学习 vs 无监督学习\n- 苏格拉底式提问：「你在标注数据集中观察到了什么模式？」\n- 概念检查：3 道选择题\n### 第 2 课：线性回归\n- 前置知识检查：统计学基础\n- 引导练习：从零构建回归模型\n### 进度\n- 掌握度：7/10 → 复习偏差-方差权衡\n- 间隔重复：3 天后重新回顾",
+    relatedTools: ["chatgpt", "claude", "perplexity"],
+  },
+  "midjourney-info-bg": {
+    title: "Midjourney 信息图背景提示词",
+    description: "使用 Midjourney 生成专业信息图背景的提示词模板，涵盖配色方案、布局构图、数据可视化样式和留白管理。",
+    tags: ["图像", "Midjourney", "设计"],
+    useCase: "设计师和内容创作者生成信息图和演示文稿背景，保持视觉层次和数据可读性。",
+    exampleOutput: "## 生成的信息图背景\n- 风格：简洁商务风，叠加细微网格\n- 配色：深蓝 #1a365d，青色 #2c7a7b，留白 40%\n- 布局：3 列网格 + 页眉条，简约图标占位\n- 参数：--ar 16:9 --stylize 200 --v 7\n## 用途\n- 拖入 Canva/PPT 作为背景层\n- 上层叠加文字和图表，高对比度保证可读性",
+    relatedTools: ["midjourney", "canva-ai"],
+  },
+  "deepseek-opt": {
+    title: "DeepSeek 优化提示词",
+    description: "优化 DeepSeek 使用的提示词模板——模型选择（V3 vs R1）、高性价比 API 模式、上下文窗口策略和自部署配置。",
+    tags: ["编程", "DeepSeek", "优化"],
+    useCase: "使用 DeepSeek API 或自部署的开发者团队，需要在编程、推理和多语言任务中最大化性价比。",
+    exampleOutput: "## DeepSeek 优化指南\n### 模型选择\n- V3：对话、内容生成、代码补全（$0.14/M 输入）\n- R1：数学证明、多文件重构、架构规划（$0.55/M 输入）\n### 成本策略\n- 草稿用 V3，终审用 R1（3:1 比例节省 60%）\n- 对重复系统指令启用 Prompt 缓存\n### 上下文窗口\n- V3 文档分块 32K tokens，R1 分块 64K\n- 长对话使用滑动窗口",
+    relatedTools: ["deepseek", "cline"],
+  },
 };
 
 export async function getStaticPaths() {
@@ -113,6 +177,9 @@ export async function getStaticPaths() {
     "cursor-middleware", "any-k8s", "perplexity-deep-dive", "chatgpt-simplify",
     "any-data-quality", "any-whitepaper", "any-governance-d", "cursor-refactor-agent",
     "claude-metaphor", "cursor-merge-conf", "mj-cozy-room", "claude-offboard", "any-customer-research",
+    "chatgpt-cover-letter", "cursor-graphql-s",
+    "cursor-debug-strategy", "windsurf-fullstack", "any-orchestration-d",
+    "chatgpt-learning", "midjourney-info-bg", "deepseek-opt",
   ];
   return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }

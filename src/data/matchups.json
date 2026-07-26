@@ -128,5 +128,35 @@
     "title_en": "Runway vs Pika (2026): Production Tool vs Social Clip Machine",
     "cluster": "video",
     "title_zh": "Runway vs Pika（2026）：专业制作 vs 社交短视频"
+  },
+  {
+    "slug": "otter-vs-fireflies",
+    "tool_a": "Otter",
+    "tool_b": "Fireflies",
+    "a": "otter",
+    "b": "fireflies",
+    "cluster": "audio",
+    "title_en": "Otter vs Fireflies (2026): Which AI Meeting Assistant Wins?",
+    "title_zh": "Otter vs Fireflies（2026）：哪款 AI 会议助手更胜一筹？"
+  },
+  {
+    "slug": "copy-ai-vs-jasper",
+    "tool_a": "Copy.ai",
+    "tool_b": "Jasper",
+    "a": "copy-ai",
+    "b": "jasper",
+    "cluster": "text",
+    "title_en": "Copy.ai vs Jasper (2026): AI Marketing Copy Platform Showdown",
+    "title_zh": "Copy.ai vs Jasper（2026）：AI 营销文案平台对决"
+  },
+  {
+    "slug": "midjourney-vs-canva-ai",
+    "tool_a": "Midjourney",
+    "tool_b": "Canva AI",
+    "a": "midjourney",
+    "b": "canva-ai",
+    "cluster": "image",
+    "title_en": "Midjourney vs Canva AI (2026): Professional AI Art vs All-in-One Design",
+    "title_zh": "Midjourney vs Canva AI（2026）：专业 AI 绘画 vs 一站式设计平台"
   }
 ]
