@@ -276,5 +276,35 @@
     "cluster": "audio",
     "title_en": "TTSMaker vs Murf",
     "title_zh": "TTSMaker vs Murf"
+  },
+  {
+    "slug": "gamma-vs-coda-ai",
+    "a": "gamma",
+    "b": "coda-ai",
+    "tool_a": "Gamma",
+    "tool_b": "Coda AI",
+    "title_en": "Gamma vs Coda AI (2026): Presentation AI vs Document AI",
+    "cluster": "productivity",
+    "title_zh": "Gamma vs Coda AI（2026）：演示文稿 AI vs 文档 AI"
+  },
+  {
+    "slug": "kling-vs-sora",
+    "a": "kling",
+    "b": "sora",
+    "tool_a": "Kling",
+    "tool_b": "Sora",
+    "title_en": "Kling vs Sora (2026): Budget Champion vs Quality Leader",
+    "cluster": "video",
+    "title_zh": "Kling vs Sora（2026）：性价比之王 vs 质量标杆"
+  },
+  {
+    "slug": "langgraph-vs-crewai",
+    "a": "langgraph",
+    "b": "crewai",
+    "tool_a": "LangGraph",
+    "tool_b": "CrewAI",
+    "title_en": "LangGraph vs CrewAI (2026): Graph-Based vs Role-Based AI Agents",
+    "cluster": "code",
+    "title_zh": "LangGraph vs CrewAI（2026）：图驱动 vs 角色驱动 AI 智能体"
   }
 ]

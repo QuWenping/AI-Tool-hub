@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+const title = "LangGraph 客户支持自动化工作流";
+---
+
+<BaseLayout title={title} description="使用 LangGraph 构建智能客户支持自动化系统。多智能体工作流，包含工单分类、知识检索、人工升级和解决方案追踪。">
+  <article class="legal-page">
+    <nav class="breadcrumbs">
+      <a href="/zh/">首页</a> &rsaquo;
+      <a href="/zh/workflows/">AI 工作流</a> &rsaquo;
+      <span>{title}</span>
+    </nav>
+    <header class="page-hero">
+      <span class="eyebrow">工作流</span>
+      <h1>{title}</h1>
+      <p class="lede">使用 LangGraph 构建智能客户支持自动化系统。包含多智能体编排，支持工单分类路由、知识库检索、人工升级和自动化解决方案追踪。</p>
+    </header>
+    <section class="article-body">
+      <h2>概述</h2>
+      <p>此 LangGraph 工作流实现了完整的客户支持流程。它使用基于图的状态机，将工单依次通过分类、知识检索、回复生成和必要时的人工升级等环节进行路由处理。</p>
+
+      <h2>工作流步骤</h2>
+      <ol>
+        <li><strong>工单接收</strong>: 通过 API、邮件或聊天集成接收客户查询。</li>
+        <li><strong>意图分类</strong>: LLM 驱动的分类器对问题进行分类（账单、技术、账户、通用）。</li>
+        <li><strong>知识检索</strong>: 搜索内部知识库和文档，查找相关解决方案。</li>
+        <li><strong>回复生成</strong>: 使用检索到的知识和对话历史起草上下文相关的回复。</li>
+        <li><strong>置信度检查</strong>: 评估回复质量；低置信度的回答将转接至人工客服。</li>
+        <li><strong>解决方案追踪</strong>: 记录解决状态、更新工单系统并收集反馈。</li>
+      </ol>
+
+      <h2>所需工具</h2>
+      <ul>
+        <li>LangGraph（用于有状态智能体工作流的 Python 框架）</li>
+        <li>OpenAI API 或 Anthropic API（用于 LLM 能力）</li>
+        <li>向量数据库（Pinecone、Chroma 或 pgvector）用于知识检索</li>
+        <li>工单系统集成（Zendesk、Intercom 或自定义 API）</li>
+      </ul>
+
+      <h2>适用场景</h2>
+      <ul>
+        <li>SaaS 公司自动化一线支持，缩短响应时间</li>
+        <li>电商平台处理订单状态、退换货和产品咨询</li>
+        <li>内部 IT 帮助台自动路由技术问题并提供解决方案</li>
+      </ul>
+    </section>
+  </article>
+</BaseLayout>

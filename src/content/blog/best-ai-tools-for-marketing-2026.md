@@ -17,6 +17,7 @@ Content remains the fuel of modern marketing, but manual creation cannot scale. 
 
 - **ChatGPT + Claude**: General-purpose content engines for blog posts, ad copy, email sequences, and landing pages. Use ChatGPT for creative briefs and Claude for long-form whitepapers and research synthesis.
 - **Canva AI**: Visual content at scale — social media graphics, presentations, and short-form video templates with AI-assisted design suggestions.
+- **<a href="/blog/agnes-ai-review-free-omni-modal-api-2026/">Agnes AI</a>**: Free omni-modal API for text, image, and video generation — ideal for prototyping marketing assets without budget.
 - **Jasper**: Enterprise-grade AI copywriting with brand voice training, campaign templates, and multi-channel content orchestration.
 
 ## Marketing Automation

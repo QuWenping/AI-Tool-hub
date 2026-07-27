@@ -278,6 +278,8 @@ content_zh: |
 </tbody>
 </table>
 
+<p><strong>Free multi-modal option:</strong> For those who need both video and image generation without a subscription, <a href="/blog/agnes-ai-review-free-omni-modal-api-2026/">Agnes AI</a> offers a free omni-modal API. While its video quality does not match the specialized tools below, it is unique in providing text, image, and video generation through one free endpoint. Read our full review for benchmark data.</p>
+
 <h2>The AI Video Landscape in 2026: What's Actually Possible</h2>
 
 <p>Let's set realistic expectations. Based on our testing, AI video in 2026 feels comparable to early mainstream AI image generation: impressive but still requiring human direction. Here's what each major tool can do today:</p>

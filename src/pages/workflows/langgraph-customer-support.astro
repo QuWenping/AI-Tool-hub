@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "LangGraph Customer Support Automation Workflow";
+---
+
+<BaseLayout title={title} description="Build an intelligent customer support automation system using LangGraph. Multi-agent workflow with triage, knowledge retrieval, escalation, and resolution tracking.">
+  <article class="legal-page">
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> &rsaquo;
+      <a href="/workflows/">AI Workflows</a> &rsaquo;
+      <span>{title}</span>
+    </nav>
+    <header class="page-hero">
+      <span class="eyebrow">Workflows</span>
+      <h1>{title}</h1>
+      <p class="lede">Build an intelligent customer support automation system using LangGraph. Features multi-agent orchestration with triage routing, knowledge base retrieval, human escalation, and automated resolution tracking.</p>
+    </header>
+    <section class="article-body">
+      <h2>Overview</h2>
+      <p>This LangGraph workflow implements a complete customer support pipeline. It uses a graph-based state machine to route tickets through classification, knowledge retrieval, response generation, and human escalation when needed.</p>
+
+      <h2>Workflow Steps</h2>
+      <ol>
+        <li><strong>Ticket Intake</strong>: Receives customer query via API, email, or chat integration.</li>
+        <li><strong>Intent Classification</strong>: LLM-powered classifier categorizes the issue (billing, technical, account, general).</li>
+        <li><strong>Knowledge Retrieval</strong>: Searches internal knowledge base and documentation for relevant solutions.</li>
+        <li><strong>Response Generation</strong>: Drafts a contextual response using retrieved knowledge and conversation history.</li>
+        <li><strong>Confidence Check</strong>: Evaluates response quality; low-confidence answers route to human agent.</li>
+        <li><strong>Resolution Tracking</strong>: Logs resolution status, updates ticket system, and collects feedback.</li>
+      </ol>
+
+      <h2>Tools Required</h2>
+      <ul>
+        <li>LangGraph (Python framework for stateful agent workflows)</li>
+        <li>OpenAI API or Anthropic API for LLM capabilities</li>
+        <li>Vector database (Pinecone, Chroma, or pgvector) for knowledge retrieval</li>
+        <li>Ticketing system integration (Zendesk, Intercom, or custom API)</li>
+      </ul>
+
+      <h2>Use Cases</h2>
+      <ul>
+        <li>SaaS companies automating tier-1 support to reduce response time</li>
+        <li>E-commerce platforms handling order status, returns, and product questions</li>
+        <li>Internal IT help desks routing technical issues with automated solutions</li>
+      </ul>
+    </section>
+  </article>
+</BaseLayout>

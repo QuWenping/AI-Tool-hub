@@ -317,6 +317,9 @@ content_zh: |
 <h3>Which integrates better with daily productivity tools?</h3>
 <p>Gemini 3 by a wide margin. Native integration with Gmail, Drive, Docs, Sheets, Calendar, and YouTube makes Gemini a true productivity assistant. Claude has no equivalent productivity suite integration.</p>
 
+<h3>Is there a free alternative to both?</h3>
+<p>Yes. <a href="/blog/agnes-ai-review-free-omni-modal-api-2026/">Agnes AI</a> offers completely free text, image, and video generation through a single omni-modal API. While it does not match Claude's coding depth or Gemini's Google Workspace integration, it is a strong option for general-purpose AI tasks and prototyping without a subscription. See our full review for benchmark results and limitations.</p>
+
 <h2>Sources</h2>
 <table>
 <tr><th>Official Documentation</th><th>Community Discussion</th><th>Methodology Note</th></tr>

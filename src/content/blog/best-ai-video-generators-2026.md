@@ -192,4 +192,4 @@ CapCut's AI video features are deeply integrated into a full mobile and desktop 
 
 **Choose CapCut if:** You're a beginner or social media creator who wants everything in one app. The integrated editor, templates, and AI features provide the fastest path from idea to published content.
 
-**Budget tip:** Start with CapCut's free tier to learn AI video basics. Graduate to Runway's $15/month plan once you hit CapCut's creative ceiling. Add Kling or Sora for specific strengths when needed.
+**Budget tip:** For a completely free option covering both video and image generation, check our <a href="/blog/agnes-ai-review-free-omni-modal-api-2026/">Agnes AI</a> review before committing to a paid plan. Start with CapCut's free tier to learn AI video basics. Graduate to Runway's $15/month plan once you hit CapCut's creative ceiling. Add Kling or Sora for specific strengths when needed.

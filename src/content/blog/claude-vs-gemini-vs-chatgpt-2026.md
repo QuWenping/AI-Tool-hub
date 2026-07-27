@@ -125,4 +125,6 @@ All three cost $20/month for their premium tier, making the decision purely abou
 
 **Choose ChatGPT if:** You want one assistant that does everything well. The combination of DALL-E images, voice mode, Code Interpreter, plugins, and custom GPTs makes ChatGPT Plus the best value proposition for most users. If you only have budget for one AI subscription, this is it.
 
+**Free alternative:** If you are prototyping on a zero budget, <a href="/blog/agnes-ai-review-free-omni-modal-api-2026/">Agnes AI</a> offers free text, image, and video generation through a single API — not a replacement for these premium assistants, but a valuable sandbox before committing to a paid plan.
+
 **Pro tip:** Many power users in 2026 subscribe to two services — typically ChatGPT Plus for daily productivity and multimodal tasks, plus Claude Pro for serious writing and document work. At $40/month total, this combination covers nearly every AI use case.

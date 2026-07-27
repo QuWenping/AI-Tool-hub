@@ -335,6 +335,8 @@ content_zh: |
 <h2>FAQ</h2>
 <h3>Should I subscribe to both?</h3>
 <p>Many professionals do. A common pattern: use Claude for writing, document analysis, and learning; use ChatGPT for coding, image generation, web research, and quick voice queries. At $40/month total (two $20 subscriptions), it's still cheaper than most SaaS tools. If your work spans both writing-heavy and technical tasks, the combined subscription is worth considering. If you must choose one, take ChatGPT for versatility or Claude for writing quality.</p>
+<p><strong>Free alternative:</strong> If you are not ready to commit to a paid plan, <a href="/blog/agnes-ai-review-free-omni-modal-api-2026/">Agnes AI</a> offers completely free text, image, and video generation through a single omni-modal API. Read our full review to see if it meets your needs before subscribing to Claude or ChatGPT.</p>
+
 <h3>Which is better for non-native English speakers?</h3>
 <p>ChatGPT generally performs better for non-native speakers due to its broader language support, web browsing (which can pull in native-language sources), and longer history of multilingual training. Claude's writing quality advantage is most pronounced in English; for other languages, the gap narrows or reverses in ChatGPT's favor.</p>
 <h3>Does Claude's larger context window actually matter?</h3>

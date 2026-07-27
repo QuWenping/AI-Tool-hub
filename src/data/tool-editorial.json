@@ -6370,5 +6370,8 @@
       "en": "For anyone working with open-source image generation, CivitAI is essential infrastructure. The model discovery UX is best-in-class, the community is active and helpful, and the free tier is genuinely generous. The only real limitation is that it is not a model training platform - you will need to train elsewhere and upload to CivitAI for sharing.",
       "zh": "对于任何从事开源图像生成的人来说，CivitAI 是必不可少的基础设施。模型发现体验业界领先，社区活跃且乐于助人，免费版真正慷慨。唯一的实际限制是它不是模型训练平台——你需要在他处训练后上传到 CivitAI 分享。"
     }
+  },
+  "langgraph": {
+    "reviewed": true
   }
 }

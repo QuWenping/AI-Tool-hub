@@ -376,6 +376,8 @@ content_zh: |
 <li><strong>Post-generation editing is the real differentiator.</strong> Tools with inpainting, outpainting, and variation controls (Midjourney, Stable Diffusion) reduced repeated generation cycles.</li>
 <li><strong>Commercial licensing varies significantly.</strong> Adobe Firefly had the clearest commercial terms; other platforms required careful reading of current policies.</li>
 </ul>
+<p>For those exploring free multi-modal image generation, <a href="/blog/agnes-ai-review-free-omni-modal-api-2026/">Agnes AI</a> provides text, image, and video generation through a single free API. While it does not replace dedicated tools like Midjourney for professional work, it is a solid starting point for prototyping and experimentation.</p>
+
 <h2>Master the Art of Prompt Engineering</h2>
 
 <p>One of the most important factors in image quality is your prompt. Here is a framework that works across all major tools:</p>
