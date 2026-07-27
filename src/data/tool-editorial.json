@@ -6373,5 +6373,44 @@
   },
   "langgraph": {
     "reviewed": true
+  },
+  "katteb": {
+    "reviewed": true,
+    "updatedAt": "2026-07-27",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Freemium with paid plans for advanced features."
+    },
+    "faq": [
+      {
+        "q_en": "What is Katteb?",
+        "a_en": "Katteb is an AI content writing tool with built-in fact-checking capabilities."
+      },
+      {
+        "q_en": "Is Katteb free?",
+        "a_en": "Yes, Katteb offers a freemium tier with basic content generation features."
+      },
+      {
+        "q_en": "What makes Katteb different?",
+        "a_en": "Katteb's key differentiator is its fact-checking feature that verifies AI-generated content against reliable sources."
+      }
+    ],
+    "scoreBreakdown": {
+      "user": 7.5,
+      "capability": 7.0,
+      "price": 8.0,
+      "growth": 6.5,
+      "trust": 7.5
+    },
+    "long_desc": {
+      "en": "AI content writing with fact-checking"
+    }
   }
 }

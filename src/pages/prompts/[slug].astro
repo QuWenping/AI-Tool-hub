@@ -227,6 +227,63 @@ const promptData: Record<string, any> = {
     relatedTools: ["chatgpt", "cursor", "github-copilot"],
   },
 
+
+    "any-feature-store": {
+    title: "AI Feature Store Prompt",
+    description: "A prompt template for designing and implementing AI feature stores. Covers feature engineering pipelines, online/offline serving, feature versioning, and integration with ML model training workflows.",
+    tags: ["Data", "MLOps", "ChatGPT"],
+    useCase: "ML engineers and data platform teams building feature stores to serve features for real-time inference and batch training in production ML systems.",
+    exampleOutput: "## Feature Store Design\n### Feature Groups\n- User profile features (demographics, preferences)\n- Behavioral features (click history, session data)\n- Contextual features (device, location, time)\n### Serving Layer\n- Online store: Redis, latency <5ms\n- Offline store: Parquet/S3 for batch training\n### Versioning\n- Feature version: user_embedding_v3\n- Backfill pipeline: Spark job, 2hr SLA",
+    relatedTools: ["chatgpt", "claude"],
+  },
+  "any-sql-schema": {
+    title: "SQL Schema Prompt",
+    description: "A prompt for generating optimized SQL database schemas. Covers normalization, indexing strategies, relationship design, migration planning, and performance optimization.",
+    tags: ["Coding", "SQL", "ChatGPT"],
+    useCase: "Backend developers and data engineers designing relational database schemas for new applications or migrating legacy databases.",
+    exampleOutput: "## Schema: E-Commerce Database\n```sql\nCREATE TABLE users (\n  id BIGSERIAL PRIMARY KEY,\n  email VARCHAR(255) UNIQUE NOT NULL,\n  created_at TIMESTAMPTZ DEFAULT NOW()\n);\nCREATE TABLE orders (\n  id BIGSERIAL PRIMARY KEY,\n  user_id BIGINT REFERENCES users(id),\n  total DECIMAL(10,2),\n  status VARCHAR(20) DEFAULT 'pending'\n);\nCREATE INDEX idx_orders_user_id ON orders(user_id);\n```",
+    relatedTools: ["chatgpt", "cursor", "claude"],
+  },
+  "chatgpt-networking": {
+    title: "ChatGPT Networking Prompt",
+    description: "A prompt for using ChatGPT to draft professional networking messages, LinkedIn connection requests, follow-up emails, and event outreach templates.",
+    tags: ["Career", "ChatGPT", "Networking"],
+    useCase: "Professionals building their network who need personalized, context-aware outreach messages that sound authentic and increase response rates.",
+    exampleOutput: "## LinkedIn Connection Request\nHi [Name], I came across your talk on [Topic] at [Event] and was really impressed by your insights on [Specific Point]. I'm also working in [Field] and would love to connect and follow your work. Best, [Your Name]\n\n## Follow-up Email (Post-Conference)\nSubject: Great meeting you at [Conference]!\nHi [Name], it was great chatting with you about [Topic] at [Conference] yesterday. I'd love to continue the conversation -- would you be open to a 15-minute virtual coffee next week?",
+    relatedTools: ["chatgpt", "claude"],
+  },
+  "mj-tech-render": {
+    title: "Midjourney Tech Render Prompt",
+    description: "A prompt for generating high-quality technical product renders with Midjourney. Covers lighting setups, material definitions, camera angles, and post-processing styles for hardware and industrial design visualization.",
+    tags: ["Image", "Midjourney", "Design"],
+    useCase: "Product designers, hardware startups, and industrial designers creating photorealistic product renders for pitch decks, marketing materials, and prototyping.",
+    exampleOutput: "## Tech Render: Smart Watch\n- Style: Apple-style product photography\n- Lighting: Studio softbox, rim light for edge definition\n- Materials: Brushed aluminum case, sapphire glass, fluoroelastomer band\n- Camera: 85mm macro, f/8, shallow depth of field on dial\n- Background: Gradient dark grey to black, subtle reflection on surface\n--ar 4:5 --stylize 150 --v 7",
+    relatedTools: ["midjourney", "dalle3"],
+  },
+  "any-agent-memory": {
+    title: "Agent Memory Prompt",
+    description: "A prompt template for designing AI agent memory architectures. Covers short-term context windows, long-term vector stores, episodic memory, and retrieval-augmented generation (RAG) strategies.",
+    tags: ["Architecture", "Claude", "AI Agents"],
+    useCase: "AI engineers and architects designing memory systems for autonomous agents that need to retain context across sessions and learn from past interactions.",
+    exampleOutput: "## Agent Memory Architecture\n### Short-term Memory\n- Sliding context window: last 10 turns\n- Token budget: 8K tokens\n### Long-term Memory\n- Vector DB: Pinecone, embedding dimension 1536\n- Chunking: 512 tokens with 64-token overlap\n### Episodic Memory\n- Store key decisions and outcomes as structured JSON\n- Retrieval: semantic search + recency boost\n### Consolidation\n- Nightly batch: summarize daily interactions into long-term store\n- Pruning: remove redundant memories older than 30 days",
+    relatedTools: ["claude", "chatgpt"],
+  },
+  "chatgpt-diff-instruction": {
+    title: "ChatGPT Diff Instruction Prompt",
+    description: "A prompt for using ChatGPT to generate precise code diffs and apply targeted changes to existing codebases. Handles refactoring, bug fixes, and feature additions with minimal collateral changes.",
+    tags: ["Coding", "ChatGPT", "Git"],
+    useCase: "Developers who need AI to produce clean, minimal diffs that can be directly applied as patches or easily reviewed in pull requests.",
+    exampleOutput: "## Diff: Fix rate limiter bug\n```diff\n--- a/src/middleware/rateLimiter.ts\n+++ b/src/middleware/rateLimiter.ts\n@@ -12,7 +12,7 @@\n   const key = `${req.ip}:${req.path}`;\n   const current = await redis.get(key);\n-  if (current && parseInt(current) > limit) {\n+  if (current && parseInt(current) >= limit) {\n     return res.status(429).json({ error: 'Too many requests' });\n   }\n```\n### Impact: 1 line changed, off-by-one error fixed.",
+    relatedTools: ["chatgpt", "cursor", "claude"],
+  },
+  "claude-arch-doc": {
+    title: "Claude Architecture Doc Prompt",
+    description: "A prompt for using Claude to generate comprehensive software architecture documentation. Covers system design diagrams (text-based), component descriptions, data flow, API contracts, and deployment architecture.",
+    tags: ["Architecture", "Claude", "Documentation"],
+    useCase: "Software architects and tech leads who need to produce thorough architecture decision records (ADRs), system design docs, and technical specifications.",
+    exampleOutput: "## Architecture: Microservices E-Commerce Platform\n### System Overview\n- API Gateway (Kong) routes to 12 microservices\n- Event bus (Kafka) for async communication\n- Service mesh (Istio) for observability\n### Component: Order Service\n- Responsibility: Order lifecycle management\n- Database: PostgreSQL with read replicas\n- Dependencies: Inventory Service, Payment Service\n### Data Flow\n1. Client -> API Gateway -> Order Service\n2. Order Service -> Kafka (order.created event)\n3. Inventory Service consumes event, reserves stock\n### ADR-004: Chose Kafka over RabbitMQ\n- Rationale: Better replay capabilities, higher throughput for order events",
+    relatedTools: ["claude", "chatgpt"],
+  },
 };
 
 export async function getStaticPaths() {
@@ -241,6 +298,9 @@ export async function getStaticPaths() {
     "any-comms-plan", "chatgpt-pr-desc", "any-coding-roadmap",
     "any-etl-spec2", "mj-landscape", "any-kb-structure", "any-react-pat",
     "chatgpt-biz-plan", "cursor-worker",
+
+    "any-feature-store", "any-sql-schema", "chatgpt-networking", "mj-tech-render",
+    "any-agent-memory", "chatgpt-diff-instruction", "claude-arch-doc",
   ];
   return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }
