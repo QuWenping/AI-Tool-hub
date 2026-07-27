@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "n8n RSS to Blog Post Automation Workflow";
+---
+
+<BaseLayout title={title} description="Automatically convert RSS feed items into formatted blog posts using n8n automation workflow. AI-powered content transformation with publishing-ready output.">
+  <article class="legal-page">
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> &rsaquo;
+      <a href="/workflows/">AI Workflows</a> &rsaquo;
+      <span>{title}</span>
+    </nav>
+    <header class="page-hero">
+      <span class="eyebrow">Workflows</span>
+      <h1>{title}</h1>
+      <p class="lede">Automatically convert RSS feed items into formatted blog posts using n8n. Includes AI-powered content rewriting, SEO metadata generation, and CMS publishing.</p>
+    </header>
+    <section class="article-body">
+      <h2>Overview</h2>
+      <p>This n8n workflow monitors one or more RSS feeds, extracts new articles, and transforms them into publish-ready blog posts using AI. It handles content summarization, formatting, SEO metadata, and automated CMS or email output.</p>
+
+      <h2>Workflow Steps</h2>
+      <ol>
+        <li><strong>RSS Trigger</strong>: Polls configured RSS feeds at your chosen interval.</li>
+        <li><strong>Duplicate Check</strong>: Compares against previously processed items to avoid republishing.</li>
+        <li><strong>Content Extraction</strong>: Fetches full article text from each RSS item URL.</li>
+        <li><strong>AI Rewriting</strong>: Sends content to ChatGPT or Claude API for summarization and style formatting.</li>
+        <li><strong>SEO Generation</strong>: Creates meta title, description, and tags automatically.</li>
+        <li><strong>Output</strong>: Pushes to WordPress, Webflow, Markdown file, or email digest based on your configuration.</li>
+      </ol>
+
+      <h2>Tools Required</h2>
+      <ul>
+        <li>n8n (self-hosted or cloud)</li>
+        <li>OpenAI API or Anthropic API key</li>
+        <li>CMS integration (WordPress, Webflow, or file output)</li>
+      </ul>
+
+      <h2>Use Cases</h2>
+      <ul>
+        <li>Content curation sites that aggregate industry news</li>
+        <li>Personal newsletters that summarize daily RSS feeds</li>
+        <li>Internal knowledge bases that auto-sync with external sources</li>
+      </ul>
+    </section>
+  </article>
+</BaseLayout>

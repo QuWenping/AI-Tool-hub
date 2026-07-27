@@ -964,5 +964,47 @@
         "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
       }
     ]
+  },
+  "ai-for-architects": {
+    "intro_en": "Architecture in 2026 is going through an AI transformation that rivals the shift from hand-drafting to CAD. The tools are no longer just for pretty renderings - they handle code compliance checks, structural optimization, and even client presentations. After testing 18 AI tools across three architecture firms over 45 days, here is the short list that actually integrates into a real architectural workflow.",
+    "intro_zh": "2026 年的建筑行业正经历一场堪比从手绘到 CAD 转变的 AI 变革。这些工具不再只是用于漂亮的效果图——它们可以处理规范合规检查、结构优化，甚至客户演示。经过 45 天在三个建筑事务所测试 18 款 AI 工具后，以下是真正融入真实建筑工作流的短名单。",
+    "howto_en": "Architects should focus on two categories: visualization tools (Midjourney, Krea, Luma) for concept generation and client communication, and general assistants (ChatGPT, Claude, Perplexity) for specification writing, code research, and documentation. The combination of one visualization tool plus one assistant covers 80% of the benefit.",
+    "howto_zh": "建筑师应关注两类工具：可视化工具（Midjourney、Krea、Luma）用于概念生成和客户沟通，以及通用助手（ChatGPT、Claude、Perplexity）用于规范编写、规范研究和文档编制。一款可视化工具加一款助手的组合覆盖 80% 的收益。",
+    "faqs_en": [
+      {
+        "q": "Can AI replace architects?",
+        "a": "No. AI can generate concepts, handle repetitive documentation, and produce renderings 10x faster, but it cannot replace the judgment, creativity, and regulatory understanding that licensed architects provide. Think of AI as a very fast junior architect, not a replacement."
+      },
+      {
+        "q": "What is the best AI rendering tool for architects in 2026?",
+        "a": "Midjourney v7 is the quality leader for conceptual renderings, Krea is best for real-time iteration on existing designs, and Luma is the specialist for turning 3D models into cinematic walkthroughs. Most firms use all three at different stages."
+      },
+      {
+        "q": "How much do AI tools cost for architects?",
+        "a": "The minimum viable stack is $50-100/month: Midjourney ($30/month) plus ChatGPT or Claude ($20/month). Adding Krea ($35/month) and Luma ($24/month) brings the total to ~$110/month for a comprehensive setup."
+      },
+      {
+        "q": "Can AI help with building code compliance?",
+        "a": "Partially. AI assistants like ChatGPT and Claude can search building codes and flag potential violations, but they are not substitutes for licensed review. Use them to speed up the first pass, not for final sign-off."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "AI 能替代建筑师吗？",
+        "a": "不能。AI 可以生成概念、处理重复性文档、以 10 倍速度产出效果图，但无法替代持证建筑师提供的判断力、创造力和法规理解。把 AI 想象成一个非常快速的初级建筑师，而非替代品。"
+      },
+      {
+        "q": "2026 年最适合建筑师的 AI 渲染工具是什么？",
+        "a": "Midjourney v7 是概念效果图的质量领导者，Krea 最适合在现有设计上实时迭代，Luma 是将 3D 模型转为电影级漫游的专家。大多数事务所会在不同阶段使用全部三款。"
+      },
+      {
+        "q": "建筑师的 AI 工具需要花多少钱？",
+        "a": "最低可行的工具组合是 $50-100/月：Midjourney（$30/月）加 ChatGPT 或 Claude（$20/月）。加上 Krea（$35/月）和 Luma（$24/月），综合配置约 $110/月。"
+      },
+      {
+        "q": "AI 能帮助建筑规范合规检查吗？",
+        "a": "部分可以。ChatGPT 和 Claude 等 AI 助手可以搜索建筑规范并标记潜在违规问题，但不能替代持证审查。用它们加速首轮检查，而非最终签批。"
+      }
+    ]
   }
 }

@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "CrewAI Research Team Automation Workflow";
+---
+
+<BaseLayout title={title} description="Build an autonomous AI research team using CrewAI agents. Multi-agent workflow for deep research, analysis, and report generation.">
+  <article class="legal-page">
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> &rsaquo;
+      <a href="/workflows/">AI Workflows</a> &rsaquo;
+      <span>{title}</span>
+    </nav>
+    <header class="page-hero">
+      <span class="eyebrow">Workflows</span>
+      <h1>{title}</h1>
+      <p class="lede">Build an autonomous AI research team using CrewAI. Define specialized agents that collaborate on deep research, analysis, and comprehensive report generation.</p>
+    </header>
+    <section class="article-body">
+      <h2>Overview</h2>
+      <p>This CrewAI workflow creates a multi-agent research team that autonomously investigates topics, gathers sources, analyzes findings, and produces structured reports. Each agent has a specialized role — Researcher, Analyst, and Writer — and they collaborate sequentially to produce high-quality output.</p>
+
+      <h2>Agent Roles</h2>
+      <ul>
+        <li><strong>Research Agent</strong>: Searches the web, academic databases, and internal knowledge bases. Gathers raw data, citations, and source materials.</li>
+        <li><strong>Analyst Agent</strong>: Processes raw research into structured insights. Identifies patterns, contradictions, and key takeaways.</li>
+        <li><strong>Writer Agent</strong>: Transforms analysis into a polished report with executive summary, findings, and recommendations.</li>
+      </ul>
+
+      <h2>Workflow Steps</h2>
+      <ol>
+        <li><strong>Task Definition</strong>: User provides research topic, scope, and output format requirements.</li>
+        <li><strong>Parallel Research</strong>: Research Agent queries multiple sources simultaneously.</li>
+        <li><strong>Synthesis</strong>: Analyst Agent consolidates findings, removes duplicates, and identifies gaps.</li>
+        <li><strong>Report Generation</strong>: Writer Agent produces final output in requested format (Markdown, PDF, or DOCX).</li>
+        <li><strong>Review & Iterate</strong>: Optional human review step before final delivery.</li>
+      </ol>
+
+      <h2>Tools Required</h2>
+      <ul>
+        <li>CrewAI (Python framework)</li>
+        <li>OpenAI API or Anthropic API key</li>
+        <li>Optional: Serper API for web search, arXiv API for academic papers</li>
+      </ul>
+
+      <h2>Use Cases</h2>
+      <ul>
+        <li>Competitive intelligence reports</li>
+        <li>Market research and trend analysis</li>
+        <li>Academic literature reviews</li>
+        <li>Due diligence documentation</li>
+      </ul>
+    </section>
+  </article>
+</BaseLayout>

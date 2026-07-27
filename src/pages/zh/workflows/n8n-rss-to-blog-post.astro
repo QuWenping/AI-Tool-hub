@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+const title = "n8n RSS 自动转博客文章工作流";
+---
+
+<BaseLayout title={title} description="使用 n8n 自动化工作流自动将 RSS 订阅源内容转换为格式化博客文章。AI 驱动的内容转换，输出可直接发布。">
+  <article class="legal-page">
+    <nav class="breadcrumbs">
+      <a href="/zh/">首页</a> &rsaquo;
+      <a href="/zh/workflows/">AI 工作流</a> &rsaquo;
+      <span>{title}</span>
+    </nav>
+    <header class="page-hero">
+      <span class="eyebrow">工作流</span>
+      <h1>{title}</h1>
+      <p class="lede">使用 n8n 自动将 RSS 订阅源内容转换为格式化博客文章。包含 AI 内容改写、SEO 元数据生成和 CMS 发布。</p>
+    </header>
+    <section class="article-body">
+      <h2>概述</h2>
+      <p>此 n8n 工作流监控一个或多个 RSS 订阅源，提取新文章，并使用 AI 将其转化为可直接发布的博客文章。它处理内容摘要、格式化、SEO 元数据和自动 CMS 或邮件输出。</p>
+
+      <h2>工作流步骤</h2>
+      <ol>
+        <li><strong>RSS 触发器</strong>: 按设定的时间间隔轮询配置的 RSS 订阅源。</li>
+        <li><strong>去重检查</strong>: 与已处理条目进行比对，避免重复发布。</li>
+        <li><strong>内容提取</strong>: 从每个 RSS 条目的 URL 获取完整文章文本。</li>
+        <li><strong>AI 改写</strong>: 将内容发送到 ChatGPT 或 Claude API 进行摘要和风格格式化。</li>
+        <li><strong>SEO 生成</strong>: 自动创建元标题、描述和标签。</li>
+        <li><strong>输出</strong>: 根据配置推送到 WordPress、Webflow、Markdown 文件或邮件摘要。</li>
+      </ol>
+
+      <h2>所需工具</h2>
+      <ul>
+        <li>n8n（自托管或云端）</li>
+        <li>OpenAI API 或 Anthropic API 密钥</li>
+        <li>CMS 集成（WordPress、Webflow 或文件输出）</li>
+      </ul>
+
+      <h2>适用场景</h2>
+      <ul>
+        <li>聚合行业新闻的内容策展网站</li>
+        <li>总结每日 RSS 订阅的个人简报</li>
+        <li>与外部源自动同步的内部知识库</li>
+      </ul>
+    </section>
+  </article>
+</BaseLayout>

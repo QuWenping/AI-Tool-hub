@@ -202,6 +202,31 @@ const promptData: Record<string, any> = {
     exampleOutput: "## AI Risk Register\n### Risk 1: Training Data Privacy\n- Severity: High\n- Likelihood: Medium\n- Impact: GDPR non-compliance, fines up to 4% revenue\n- Mitigation: Data anonymization pipeline, retention limits\n### Risk 2: Model Hallucination in Production\n- Severity: High\n- Likelihood: High\n- Impact: Incorrect outputs affecting user decisions\n- Mitigation: Human-in-the-loop review, confidence thresholds\n### Risk 3: Prompt Injection\n- Severity: Critical\n- Likelihood: Medium\n- Impact: Unauthorized data access\n- Mitigation: Input sanitization, role-based access control",
     relatedTools: ["claude", "chatgpt"],
   },
+  "any-comms-plan": {
+    title: "AI Communications Plan Prompt",
+    description: "A strategic prompt template for generating comprehensive communications plans using AI. Covers stakeholder mapping, messaging frameworks, channel strategy, timeline, and crisis communication protocols.",
+    tags: ["Business", "ChatGPT", "Marketing"],
+    useCase: "Communications managers, PR professionals, and marketing leads creating multi-channel communications strategies for product launches, corporate announcements, and brand campaigns.",
+    exampleOutput: "## Communications Plan: Product Launch Q3 2026\n### Stakeholder Map\n- Primary: Existing customers (email + in-app), Tech press (press release + embargo)\n- Secondary: Industry analysts, Social media followers\n### Key Messages\n1. '3x faster than previous version'\n2. 'Enterprise-grade security, now included'\n### Channel Strategy\n- Week 1: Teaser campaign (social + blog)\n- Week 2: Press embargo + customer early access\n- Week 3: Public launch + paid media\n### Crisis Protocol\n- Spokesperson: CMO\n- Approval chain: Legal → VP Comms → CEO",
+    relatedTools: ["chatgpt", "claude"],
+  },
+  "chatgpt-pr-desc": {
+    title: "ChatGPT PR Description Prompt",
+    description: "A prompt template for using ChatGPT to write compelling pull request descriptions from git diffs, commit history, and ticket context. Produces structured PR descriptions with summary, changes, testing, and screenshots sections.",
+    tags: ["Coding", "ChatGPT", "Git"],
+    useCase: "Developers who want to save time writing PR descriptions. The prompt generates clear, structured descriptions that help reviewers understand the context and changes quickly.",
+    exampleOutput: "## PR: Add OAuth2 Social Login (fixes #342)\n### Summary\nImplemented Google and GitHub OAuth2 login flows with JWT token issuance.\n### Changes\n- New `OAuthService` class with provider abstraction\n- Added `/auth/google` and `/auth/github` callback routes\n- Updated user schema with `oauth_provider` and `oauth_id` fields\n- Database migration: `20260727_add_oauth_fields.sql`\n### Testing\n- [x] Unit tests for OAuthService (12 cases)\n- [x] Integration test with mock OAuth provider\n- [x] Manual test: Google + GitHub login flow\n### Screenshots\n[Login page with new social buttons]\n[JWT token in response headers]",
+    relatedTools: ["chatgpt", "cursor"],
+  },
+  "any-coding-roadmap": {
+    title: "AI Coding Roadmap Prompt",
+    description: "A prompt for generating personalized coding learning roadmaps using AI. Covers skill assessment, learning path design, project milestones, resource curation, and progress tracking.",
+    tags: ["Education", "ChatGPT", "Coding"],
+    useCase: "Self-taught developers, coding bootcamp students, and career switchers who need structured learning plans tailored to their current level and target role.",
+    exampleOutput: "## Coding Roadmap: Frontend to Full-Stack (12 weeks)\n### Current Level\n- HTML/CSS: Proficient\n- JavaScript: Intermediate (ES6+, async/await)\n- React: Basic (components, hooks)\n### Week 1-4: Backend Foundations\n- Node.js + Express basics\n- REST API design principles\n- PostgreSQL + Prisma ORM\n- Project: Build a task management API\n### Week 5-8: Advanced Topics\n- Authentication (JWT, OAuth)\n- File uploads + cloud storage\n- Testing (Jest, Supertest)\n- Project: E-commerce backend with auth\n### Week 9-12: DevOps & Deployment\n- Docker + containerization\n- CI/CD with GitHub Actions\n- AWS/Cloud deployment\n- Final Project: Full-stack SaaS MVP",
+    relatedTools: ["chatgpt", "cursor", "github-copilot"],
+  },
+
 };
 
 export async function getStaticPaths() {
@@ -213,6 +238,7 @@ export async function getStaticPaths() {
     "any-orchestration-d", "chatgpt-learning", "midjourney-info-bg", "deepseek-opt",
     "cursor-new-project-setup", "any-risk-reg",
     "any-churn-pred", "claude-exec-sum",
+    "any-comms-plan", "chatgpt-pr-desc", "any-coding-roadmap",
   ];
   return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }

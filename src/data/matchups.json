@@ -188,5 +188,93 @@
     "cluster": "code",
     "title_en": "Sourcegraph Cody vs Cursor (2026): Code Intelligence vs AI Code Editor",
     "title_zh": "Sourcegraph Cody vs Cursor（2026）：代码智能 vs AI 代码编辑器"
+  },
+  {
+    "slug": "jasper-vs-phind",
+    "a": "jasper",
+    "b": "phind",
+    "cluster": "text",
+    "title_en": "Jasper vs Phind",
+    "title_zh": "Jasper vs Phind"
+  },
+  {
+    "slug": "leonardo-vs-canva-ai",
+    "a": "leonardo",
+    "b": "canva-ai",
+    "cluster": "image",
+    "title_en": "Leonardo vs Canva AI",
+    "title_zh": "Leonardo vs Canva AI"
+  },
+  {
+    "slug": "midjourney-vs-stable-diffusion",
+    "a": "midjourney",
+    "b": "stable-diffusion",
+    "cluster": "image",
+    "title_en": "Midjourney vs Stable Diffusion",
+    "title_zh": "Midjourney vs Stable Diffusion"
+  },
+  {
+    "slug": "suno-vs-fireflies",
+    "a": "suno",
+    "b": "fireflies",
+    "cluster": "audio",
+    "title_en": "Suno vs Fireflies",
+    "title_zh": "Suno vs Fireflies"
+  },
+  {
+    "slug": "chatgpt-vs-claude",
+    "a": "chatgpt",
+    "b": "claude",
+    "cluster": "text",
+    "title_en": "ChatGPT vs Claude",
+    "title_zh": "ChatGPT vs Claude"
+  },
+  {
+    "slug": "krea-vs-uizard",
+    "a": "krea",
+    "b": "uizard",
+    "cluster": "image",
+    "title_en": "Krea vs Uizard",
+    "title_zh": "Krea vs Uizard"
+  },
+  {
+    "slug": "canva-ai-vs-gamma",
+    "a": "canva-ai",
+    "b": "gamma",
+    "cluster": "image",
+    "title_en": "Canva AI vs Gamma",
+    "title_zh": "Canva AI vs Gamma"
+  },
+  {
+    "slug": "udio-vs-suno",
+    "a": "udio",
+    "b": "suno",
+    "cluster": "audio",
+    "title_en": "Udio vs Suno",
+    "title_zh": "Udio vs Suno"
+  },
+  {
+    "slug": "photoroom-vs-removebg",
+    "a": "photoroom",
+    "b": "removebg",
+    "cluster": "image",
+    "title_en": "Photoroom vs Removebg",
+    "title_zh": "Photoroom vs Removebg"
+  },
+  {
+    "slug": "runway-vs-synthesia",
+    "a": "runway",
+    "b": "synthesia",
+    "cluster": "video",
+    "title_en": "Runway vs Synthesia",
+    "title_zh": "Runway vs Synthesia"
+  },
+  {
+    "slug": "ttsmaker-vs-murf",
+    "a": "ttsmaker",
+    "b": "murf",
+    "cluster": "audio",
+    "title_en": "TTSMaker vs Murf",
+    "title_zh": "TTSMaker vs Murf"
   }
 ]

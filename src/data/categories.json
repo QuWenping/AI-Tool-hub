@@ -185,5 +185,25 @@
     ],
     "title_zh": "2026 年最佳 AI 视频生成工具",
     "desc_zh": "用于文本转视频、图片转视频和 AI 视频生成的工具——从提示词、图像或脚本模板创建视频。"
+  },
+  {
+    "slug": "ai-for-architects",
+    "title_en": "Best AI Tools for Architects 2026",
+    "desc_en": "AI tools for architectural design, rendering, project management, and visualization.",
+    "tools": [
+      "midjourney",
+      "stable-diffusion",
+      "krea",
+      "canva-ai",
+      "adobe-firefly",
+      "luma",
+      "runway",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "notion-ai"
+    ],
+    "title_zh": "2026 年最佳建筑 AI 工具",
+    "desc_zh": "用于建筑设计、渲染、项目管理和可视化的 AI 工具。"
   }
 ]

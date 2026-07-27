@@ -15,6 +15,10 @@ export default defineConfig({
   site: 'https://thebestaitoolsreview.com',
   trailingSlash: 'always',
   build: { format: 'directory' },
+  redirects: {
+    '/tool/[...slug]': '/tools/[...slug]',
+    '/zh/tool/[...slug]': '/zh/tools/[...slug]',
+  },
   i18n: { defaultLocale: 'en', locales: ['en', 'zh'], routing: { prefixDefaultLocale: false, fallbackType: 'rewrite' }, fallback: { zh: 'en' } },
   integrations: [
     sitemap({

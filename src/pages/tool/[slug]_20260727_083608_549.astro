@@ -1,0 +1,6 @@
+---
+// 301 redirect from /tool/[slug]/ to /tools/[slug]/
+export const prerender = false;
+const { slug } = Astro.params;
+return Astro.redirect(`/tools/${slug}/`, 301);
+---

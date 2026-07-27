@@ -186,6 +186,31 @@ const promptDataZh: Record<string, any> = {
     exampleOutput: "## AI 风险登记册\n### 风险 1：训练数据隐私\n- 严重性：高\n- 可能性：中\n- 影响：违反 GDPR，罚款高达营收 4%\n- 缓解：数据匿名化流水线、保留期限\n### 风险 2：生产环境模型幻觉\n- 严重性：高\n- 可能性：高\n- 影响：错误输出影响用户决策\n- 缓解：人工审核环节、置信度阈值\n### 风险 3：提示注入\n- 严重性：严重\n- 可能性：中\n- 影响：未授权数据访问\n- 缓解：输入净化、基于角色的访问控制",
     relatedTools: ["claude", "chatgpt"],
   },
+  "any-comms-plan": {
+    title: "AI 传播计划提示词",
+    description: "使用 AI 生成综合传播计划的战略提示词模板。涵盖利益相关者映射、信息框架、渠道策略、时间表和危机传播协议。",
+    tags: ["商业", "ChatGPT", "营销"],
+    useCase: "传播经理、公关专业人员和营销负责人为产品发布、企业公告和品牌活动制定多渠道传播策略。",
+    exampleOutput: "## 传播计划：Q3 2026 产品发布\n### 利益相关者地图\n- 主要：现有客户（邮件 + 应用内通知）、科技媒体（新闻稿 + 禁发期）\n- 次要：行业分析师、社交媒体关注者\n### 关键信息\n1. '比上一版本快 3 倍'\n2. '企业级安全，现已包含'\n### 渠道策略\n- 第 1 周：预热活动（社交 + 博客）\n- 第 2 周：媒体禁发期 + 客户抢先体验\n- 第 3 周：公开发布 + 付费媒体\n### 危机协议\n- 发言人：CMO\n- 审批链：法务 → 传播副总裁 → CEO",
+    relatedTools: ["chatgpt", "claude"],
+  },
+  "chatgpt-pr-desc": {
+    title: "ChatGPT PR 描述提示词",
+    description: "使用 ChatGPT 从 Git diff、提交历史和工作票上下文编写引人注目的 Pull Request 描述的提示词模板。生成结构化的 PR 描述，包含摘要、变更、测试和截图等部分。",
+    tags: ["编程", "ChatGPT", "Git"],
+    useCase: "希望节省编写 PR 描述时间的开发者。该提示词生成清晰、结构化的描述，帮助审查者快速理解上下文和变更内容。",
+    exampleOutput: "## PR：添加 OAuth2 社交登录（修复 #342）\n### 摘要\n实现了 Google 和 GitHub OAuth2 登录流程，并颁发 JWT 令牌。\n### 变更\n- 新增 `OAuthService` 类，支持提供商抽象\n- 添加 `/auth/google` 和 `/auth/github` 回调路由\n- 更新用户 Schema，增加 `oauth_provider` 和 `oauth_id` 字段\n- 数据库迁移：`20260727_add_oauth_fields.sql`\n### 测试\n- [x] OAuthService 单元测试（12 个用例）\n- [x] 使用模拟 OAuth 提供商的集成测试\n- [x] 手动测试：Google + GitHub 登录流程\n### 截图\n[带新社交按钮的登录页面]\n[响应头中的 JWT 令牌]",
+    relatedTools: ["chatgpt", "cursor"],
+  },
+  "any-coding-roadmap": {
+    title: "AI 编程学习路线图提示词",
+    description: "使用 AI 生成个性化编程学习路线图的提示词。涵盖技能评估、学习路径设计、项目里程碑、资源策划和进度追踪。",
+    tags: ["教育", "ChatGPT", "编程"],
+    useCase: "自学者、编程训练营学员和转行者，需要根据当前水平和目标岗位量身定制的结构化学习计划。",
+    exampleOutput: "## 编程路线图：前端到全栈（12 周）\n### 当前水平\n- HTML/CSS：熟练\n- JavaScript：中级（ES6+、async/await）\n- React：基础（组件、Hooks）\n### 第 1-4 周：后端基础\n- Node.js + Express 基础\n- REST API 设计原则\n- PostgreSQL + Prisma ORM\n- 项目：构建任务管理 API\n### 第 5-8 周：高级主题\n- 认证（JWT、OAuth）\n- 文件上传 + 云存储\n- 测试（Jest、Supertest）\n- 项目：带认证的电商后端\n### 第 9-12 周：DevOps 与部署\n- Docker + 容器化\n- GitHub Actions CI/CD\n- AWS/云端部署\n- 最终项目：全栈 SaaS MVP",
+    relatedTools: ["chatgpt", "cursor", "github-copilot"],
+  },
+
 };
 
 export async function getStaticPaths() {
@@ -197,6 +222,7 @@ export async function getStaticPaths() {
     "cursor-debug-strategy", "windsurf-fullstack", "any-orchestration-d",
     "chatgpt-learning", "midjourney-info-bg", "deepseek-opt",
     "cursor-new-project-setup", "any-risk-reg",
+    "any-comms-plan", "chatgpt-pr-desc", "any-coding-roadmap",
   ];
   return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }

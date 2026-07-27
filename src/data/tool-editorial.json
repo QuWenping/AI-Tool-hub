@@ -6295,5 +6295,80 @@
       "best": "You need full codebase context and AI-powered code search across repositories.",
       "avoid": "You need a more polished AI code editor experience like Cursor."
     }
+  },
+  "civitai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-26",
+    "testedVersion": "2026.07",
+    "score": 8.0,
+    "quickFacts": {
+      "en": {
+        "Category": "AI Model Community",
+        "Website": "civitai.com",
+        "Free Tier": "Yes",
+        "Best For": "Stable Diffusion models, LoRA sharing"
+      },
+      "zh": {
+        "类别": "AI 模型社区",
+        "网站": "civitai.com",
+        "免费版": "有",
+        "最适合": "Stable Diffusion 模型、LoRA 分享"
+      }
+    },
+    "pricingSummary": {
+      "en": "Free, with optional Buzz credits for generation",
+      "zh": "免费，可选 Buzz 积分用于生成"
+    },
+    "faq": [
+      {
+        "q": {
+          "en": "What is CivitAI?",
+          "zh": "CivitAI 是什么？"
+        },
+        "a": {
+          "en": "CivitAI is the largest community platform for sharing AI image generation models, LoRA weights, and embeddings. It hosts thousands of models for Stable Diffusion, Flux, and other open-source text-to-image architectures.",
+          "zh": "CivitAI 是最大的 AI 图像生成模型、LoRA 权重和嵌入分享社区平台，托管数千个 Stable Diffusion、Flux 等开源文生图模型。"
+        }
+      },
+      {
+        "q": {
+          "en": "Is CivitAI free to use?",
+          "zh": "CivitAI 可以免费使用吗？"
+        },
+        "a": {
+          "en": "Yes, CivitAI is free to browse and download models. On-site image generation requires Buzz credits, which can be earned through community participation or purchased.",
+          "zh": "是的，浏览和下载模型完全免费。站内图像生成需要 Buzz 积分，可通过社区参与获得或购买。"
+        }
+      },
+      {
+        "q": {
+          "en": "How does CivitAI compare to Hugging Face?",
+          "zh": "CivitAI 与 Hugging Face 相比如何？"
+        },
+        "a": {
+          "en": "CivitAI is focused exclusively on image/video generation models with a visual-first gallery interface. Hugging Face is a broader ML platform. For image generation models, CivitAI's user experience and discovery are significantly better.",
+          "zh": "CivitAI 专注图像/视频生成模型，采用视觉优先的画廊界面。Hugging Face 是更广泛的 ML 平台。对于图像生成模型，CivitAI 的用户体验和发现能力明显更好。"
+        }
+      }
+    ],
+    "scoreBreakdown": {
+      "easeOfUse": 8.5,
+      "features": 7.5,
+      "performance": 8.0,
+      "valueForMoney": 9.0,
+      "community": 9.5
+    },
+    "long_desc": {
+      "en": "CivitAI is the go-to platform for discovering, sharing, and downloading AI image generation models. With a gallery-first interface, users can browse model outputs before downloading, making model discovery significantly faster than traditional model hubs. The platform hosts thousands of checkpoints, LoRAs, textual inversions, and ControlNet models for Stable Diffusion, Flux, and other architectures. The community rating and review system helps surface the highest quality models, and the on-site generator lets users test models without leaving the browser.",
+      "zh": "CivitAI 是发现、分享和下载 AI 图像生成模型的首选平台。采用画廊优先界面，用户可在下载前浏览模型输出，使模型发现比传统模型中心快得多。平台托管数千个检查点、LoRA、文本反转和 ControlNet 模型，适用于 Stable Diffusion、Flux 等架构。社区评分和评论系统帮助筛选最高质量模型，站内生成器让用户无需离开浏览器即可测试模型。"
+    },
+    "editorialIntro": {
+      "en": "CivitAI has quietly become the central nervous system of the open-source image generation world. If you use Stable Diffusion, Flux, or any fine-tuned checkpoint, you have probably downloaded something from CivitAI without realizing it. The platform's visual-first approach to model discovery - browsing by images rather than technical specs - is the reason it overtook Hugging Face for image generation models.",
+      "zh": "CivitAI 已悄然成为开源图像生成世界的中枢神经系统。如果你使用 Stable Diffusion、Flux 或任何微调检查点，你可能在不知不觉中从 CivitAI 下载过东西。平台视觉优先的模型发现方式——通过图像而非技术参数浏览——是它超越 Hugging Face 成为图像生成模型首选平台的原因。"
+    },
+    "editorialVerdict": {
+      "en": "For anyone working with open-source image generation, CivitAI is essential infrastructure. The model discovery UX is best-in-class, the community is active and helpful, and the free tier is genuinely generous. The only real limitation is that it is not a model training platform - you will need to train elsewhere and upload to CivitAI for sharing.",
+      "zh": "对于任何从事开源图像生成的人来说，CivitAI 是必不可少的基础设施。模型发现体验业界领先，社区活跃且乐于助人，免费版真正慷慨。唯一的实际限制是它不是模型训练平台——你需要在他处训练后上传到 CivitAI 分享。"
+    }
   }
 }

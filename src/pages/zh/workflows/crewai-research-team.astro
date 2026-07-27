@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+const title = "CrewAI 研究团队自动化工作流";
+---
+
+<BaseLayout title={title} description="使用 CrewAI 智能代理构建自主 AI 研究团队。多代理工作流，用于深度研究、分析和报告生成。">
+  <article class="legal-page">
+    <nav class="breadcrumbs">
+      <a href="/zh/">首页</a> &rsaquo;
+      <a href="/zh/workflows/">AI 工作流</a> &rsaquo;
+      <span>{title}</span>
+    </nav>
+    <header class="page-hero">
+      <span class="eyebrow">工作流</span>
+      <h1>{title}</h1>
+      <p class="lede">使用 CrewAI 构建自主 AI 研究团队。定义专业代理协作进行深度研究、分析和综合报告生成。</p>
+    </header>
+    <section class="article-body">
+      <h2>概述</h2>
+      <p>此 CrewAI 工作流创建一个多代理研究团队，自主调查主题、收集资料、分析发现并生成结构化报告。每个代理都有专业角色——研究员、分析师和撰写者——它们按顺序协作以生成高质量输出。</p>
+
+      <h2>代理角色</h2>
+      <ul>
+        <li><strong>研究代理</strong>: 搜索网络、学术数据库和内部知识库。收集原始数据、引用和源材料。</li>
+        <li><strong>分析代理</strong>: 将原始研究处理为结构化洞察。识别模式、矛盾点和关键要点。</li>
+        <li><strong>撰写代理</strong>: 将分析转化为精美的报告，包含执行摘要、发现和建议。</li>
+      </ul>
+
+      <h2>工作流步骤</h2>
+      <ol>
+        <li><strong>任务定义</strong>: 用户提供研究主题、范围和输出格式要求。</li>
+        <li><strong>并行研究</strong>: 研究代理同时查询多个来源。</li>
+        <li><strong>综合</strong>: 分析代理整合发现，去除重复项，识别空白。</li>
+        <li><strong>报告生成</strong>: 撰写代理按请求格式（Markdown、PDF 或 DOCX）生成最终输出。</li>
+        <li><strong>审核与迭代</strong>: 最终交付前的可选人工审核步骤。</li>
+      </ol>
+
+      <h2>所需工具</h2>
+      <ul>
+        <li>CrewAI（Python 框架）</li>
+        <li>OpenAI API 或 Anthropic API 密钥</li>
+        <li>可选：Serper API 用于网络搜索，arXiv API 用于学术论文</li>
+      </ul>
+
+      <h2>适用场景</h2>
+      <ul>
+        <li>竞争情报报告</li>
+        <li>市场研究和趋势分析</li>
+        <li>学术文献综述</li>
+        <li>尽职调查文档</li>
+      </ul>
+    </section>
+  </article>
+</BaseLayout>
