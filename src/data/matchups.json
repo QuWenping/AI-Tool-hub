@@ -306,5 +306,15 @@
     "title_en": "LangGraph vs CrewAI (2026): Graph-Based vs Role-Based AI Agents",
     "cluster": "code",
     "title_zh": "LangGraph vs CrewAI（2026）：图驱动 vs 角色驱动 AI 智能体"
+  },
+  {
+    "slug": "koala",
+    "a": "koala-writer",
+    "b": "jasper",
+    "tool_a": "Koala Writer",
+    "tool_b": "Jasper",
+    "title_en": "Koala Writer vs Jasper (2026): AI Blog Writer vs AI Marketing Copy",
+    "cluster": "text",
+    "title_zh": "Koala Writer vs Jasper（2026）：AI 博客写作 vs AI 营销文案"
   }
 ]

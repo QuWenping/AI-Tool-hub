@@ -7,7 +7,7 @@ meta_description: 'Agnes AI Review 2026: We test this free multimodal API for te
 desc_en: 'In-depth Agnes AI review for 2026: is the free omni-modal API worth it? See features, pricing, and honest comparison vs current-generation models, Claude,.'
 category: Comparisons
 author: AI Tool Hub Research Team
-date: '2026-06-01'
+date: '2026-12-31'
 tags:
   - agnes-ai
   - free-ai
