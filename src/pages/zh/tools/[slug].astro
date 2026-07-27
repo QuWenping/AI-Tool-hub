@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import ArticleToc from "../../../components/ui/ArticleToc.astro";
 import toolsData from "../../../data/tools.json";
 import { getTranslations } from "../../../utils/i18n";
 
@@ -65,6 +66,15 @@ const useCasesList = tool.use_cases?.zh || tool.use_cases?.en || [];
 const audienceList = tool.target_audience?.zh || tool.target_audience?.en || [];
 const scenesList = tool.scenes?.zh || tool.scenes?.en || [];
 const industryTags = tool.industry_tags || [];
+
+const tocSections = [
+  { id: "deep-dive", label: "深度评测" },
+  { id: "pros-cons", label: "优点与缺点" },
+  ...(featuresList.length > 0 ? [{ id: "key-features", label: "核心功能" }] : []),
+  { id: "use-cases", label: "适用场景" },
+  ...(audienceList.length > 0 ? [{ id: "target-audience", label: "适合人群" }] : []),
+  { id: "quick-overview", label: "快速概览" },
+];
 ---
 
 <BaseLayout title={seoTitle} description={seoDescription} keywords={`${toolNameZh} 评测, AI工具, ${slug}, ${tool.cat}`} lang={pageLang}>
@@ -91,7 +101,7 @@ const industryTags = tool.industry_tags || [];
           <p class="lede">{shortDesc}</p>
         </header>
 
-        <section>
+        <section id="deep-dive">
           <h2>深度评测</h2>
           <p>{longDesc}</p>
         </section>
@@ -104,7 +114,7 @@ const industryTags = tool.industry_tags || [];
           </p>
         )}
 
-        <section>
+        <section id="pros-cons">
           <h2>优点与缺点</h2>
           <div class="pros-cons-box">
             <div class="pro-list">
@@ -123,7 +133,7 @@ const industryTags = tool.industry_tags || [];
         </section>
 
         {featuresList.length > 0 && (
-          <section>
+          <section id="key-features">
             <h2>核心功能</h2>
             <ul>
               {featuresList.map(f => <li>{f}</li>)}
@@ -131,7 +141,7 @@ const industryTags = tool.industry_tags || [];
           </section>
         )}
 
-        <section>
+        <section id="use-cases">
           <h2>适用场景</h2>
           <ul>
             {useCasesList.map(u => <li>{u}</li>)}
@@ -139,7 +149,7 @@ const industryTags = tool.industry_tags || [];
         </section>
 
         {audienceList.length > 0 && (
-          <section>
+          <section id="target-audience">
             <h2>适合人群</h2>
             <ul>
               {audienceList.map(a => <li>{a}</li>)}
@@ -147,7 +157,7 @@ const industryTags = tool.industry_tags || [];
           </section>
         )}
 
-        <section class="detail-section">
+        <section class="detail-section" id="quick-overview">
           <h2>快速概览</h2>
           <table>
             <tbody>
@@ -183,6 +193,7 @@ const industryTags = tool.industry_tags || [];
           </p>
         )}
       </div>
+      <ArticleToc sections={tocSections} />
     </div>
   </article>
 </BaseLayout>

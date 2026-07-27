@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import ArticleToc from "../../components/ui/ArticleToc.astro";
 import toolsData from "../../data/tools.json";
 import { getTranslations } from "../../utils/i18n";
 
@@ -70,6 +71,15 @@ const useCasesList = pageLang === "zh" ? (tool.use_cases?.zh || tool.use_cases?.
 const audienceList = pageLang === "zh" ? (tool.target_audience?.zh || tool.target_audience?.en || []) : (tool.target_audience?.en || []);
 const scenesList = pageLang === "zh" ? (tool.scenes?.zh || tool.scenes?.en || []) : (tool.scenes?.en || []);
 const industryTags = tool.industry_tags || [];
+
+const tocSections = [
+  { id: "deep-dive", label: "Deep Dive Review" },
+  { id: "pros-cons", label: "Pros & Cons" },
+  ...(featuresList.length > 0 ? [{ id: "key-features", label: "Key Features" }] : []),
+  { id: "use-cases", label: "Use Cases" },
+  ...(audienceList.length > 0 ? [{ id: "target-audience", label: "Target Audience" }] : []),
+  { id: "quick-overview", label: "Quick Overview" },
+];
 ---
 
 <BaseLayout title={seoTitle} description={seoDescription} keywords={`${toolName} review, AI writing tools, ${slug}, ${tool.cat}`}>
@@ -96,7 +106,7 @@ const industryTags = tool.industry_tags || [];
           <p class="lede">{shortDesc}</p>
         </header>
 
-        <section>
+        <section id="deep-dive">
           <h2>{pageLang === "zh" ? "深度评测" : "Deep Dive Review"}</h2>
           <p>{longDesc}</p>
         </section>
@@ -109,7 +119,7 @@ const industryTags = tool.industry_tags || [];
           </p>
         )}
 
-        <section>
+        <section id="pros-cons">
           <h2>{pageLang === "zh" ? "优点与缺点" : "Pros & Cons"}</h2>
           <div class="pros-cons-box">
             <div class="pro-list">
@@ -128,7 +138,7 @@ const industryTags = tool.industry_tags || [];
         </section>
 
         {featuresList.length > 0 && (
-          <section>
+          <section id="key-features">
             <h2>{pageLang === "zh" ? "核心功能" : "Key Features"}</h2>
             <ul>
               {featuresList.map(f => <li>{f}</li>)}
@@ -136,7 +146,7 @@ const industryTags = tool.industry_tags || [];
           </section>
         )}
 
-        <section>
+        <section id="use-cases">
           <h2>{pageLang === "zh" ? "适用场景" : "Use Cases"}</h2>
           <ul>
             {useCasesList.map(u => <li>{u}</li>)}
@@ -144,7 +154,7 @@ const industryTags = tool.industry_tags || [];
         </section>
 
         {audienceList.length > 0 && (
-          <section>
+          <section id="target-audience">
             <h2>{pageLang === "zh" ? "适合人群" : "Target Audience"}</h2>
             <ul>
               {audienceList.map(a => <li>{a}</li>)}
@@ -152,7 +162,7 @@ const industryTags = tool.industry_tags || [];
           </section>
         )}
 
-        <section class="detail-section">
+        <section class="detail-section" id="quick-overview">
           <h2>{pageLang === "zh" ? "快速概览" : "Quick Overview"}</h2>
           <table>
             <tbody>
@@ -188,6 +198,7 @@ const industryTags = tool.industry_tags || [];
           </p>
         )}
       </div>
+      <ArticleToc sections={tocSections} />
     </div>
   </article>
 </BaseLayout>
