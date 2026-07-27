@@ -1,0 +1,188 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import toolsData from "../../../data/tools.json";
+import { getTranslations } from "../../../utils/i18n";
+
+export async function getStaticPaths() {
+  return Object.keys(toolsData)
+    .filter(k => !k.startsWith("_"))
+    .map(slug => ({ params: { slug }, props: { slug } }));
+}
+
+const { slug } = Astro.props;
+const pageLang = "zh";
+const t = getTranslations("tools", pageLang);
+
+const tool = toolsData[slug];
+if (!tool || !tool.name) {
+  return new Response("工具未找到", { status: 404 });
+}
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/tools/" + slug + "/";
+const toolName = tool.name?.en || slug;
+const toolNameZh = tool.name?.zh || toolName;
+const displayName = toolNameZh;
+const shortDesc = tool.short_desc?.zh || tool.short_desc?.en || "";
+const longDesc = tool.long_desc?.zh || tool.long_desc?.en || "";
+const pricingLabel = tool.pricing?.zh || tool.pricing?.en || "多种";
+const catLabelsZh = { text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "效率" };
+const catDisplay = catLabelsZh[tool.cat] || tool.cat;
+
+const seoTitle = `${toolNameZh} 评测 — 功能、定价与真实体验（2026）`;
+const seoDescription = `深度评测 ${toolNameZh}：${shortDesc.slice(0, 120)}。真实优缺点、定价、适用场景与替代方案。`;
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": seoTitle,
+  "description": seoDescription,
+  "url": pageUrl,
+  "mainEntityOfPage": { "@type": "WebPage", "@id": pageUrl },
+  "image": { "@type": "ImageObject", "url": siteUrl + "/og-image.svg", "width": 1200, "height": 630 },
+  "datePublished": "2026-07-08",
+  "dateModified": "2026-07-11",
+  "author": { "@type": "Person", "name": "Lin Chen" },
+  "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl, "logo": { "@type": "ImageObject", "url": siteUrl + "/logo.svg", "width": 300, "height": 60 } },
+  "articleSection": "AI Tools",
+  "inLanguage": "zh"
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "首页", "item": siteUrl + "/zh/" },
+    { "@type": "ListItem", "position": 2, "name": "AI 工具", "item": siteUrl + "/zh/category/" },
+    { "@type": "ListItem", "position": 3, "name": displayName, "item": pageUrl }
+  ]
+};
+
+const prosList = tool.pros?.zh || tool.pros?.en || [];
+const consList = tool.cons?.zh || tool.cons?.en || [];
+const featuresList = tool.features?.zh || tool.features?.en || [];
+const useCasesList = tool.use_cases?.zh || tool.use_cases?.en || [];
+const audienceList = tool.target_audience?.zh || tool.target_audience?.en || [];
+const scenesList = tool.scenes?.zh || tool.scenes?.en || [];
+const industryTags = tool.industry_tags || [];
+---
+
+<BaseLayout title={seoTitle} description={seoDescription} keywords={`${toolNameZh} 评测, AI工具, ${slug}, ${tool.cat}`} lang={pageLang}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+  </Fragment>
+
+  <article class="legal-page">
+    <div class="article-grid">
+      <div class="article-main">
+        <nav class="breadcrumbs">
+          <a href="/zh/">首页</a> &rsaquo;
+          <a href="/zh/category/">AI 工具</a> &rsaquo;
+          <span>{displayName}</span>
+        </nav>
+
+        <header class="cat-hero">
+          <div class="tool-review-icon" style="font-size:2.5rem;margin-bottom:1rem;">
+            <i class={`fas ${tool.icon || "fa-robot"}`}></i>
+          </div>
+          <span class="eyebrow">{catDisplay}</span>
+          <h1>{displayName}</h1>
+          <p class="lede">{shortDesc}</p>
+        </header>
+
+        <section>
+          <h2>深度评测</h2>
+          <p>{longDesc}</p>
+        </section>
+
+        {tool.url && (
+          <p style="margin:1.5rem 0;">
+            <a href={tool.url} rel="noopener" target="_blank" class="cta-primary">
+              访问 {displayName} 官网 →
+            </a>
+          </p>
+        )}
+
+        <section>
+          <h2>优点与缺点</h2>
+          <div class="pros-cons-box">
+            <div class="pro-list">
+              <strong>优点</strong>
+              <ul>
+                {prosList.map(p => <li>{p}</li>)}
+              </ul>
+            </div>
+            <div class="con-list">
+              <strong>缺点</strong>
+              <ul>
+                {consList.map(c => <li>{c}</li>)}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {featuresList.length > 0 && (
+          <section>
+            <h2>核心功能</h2>
+            <ul>
+              {featuresList.map(f => <li>{f}</li>)}
+            </ul>
+          </section>
+        )}
+
+        <section>
+          <h2>适用场景</h2>
+          <ul>
+            {useCasesList.map(u => <li>{u}</li>)}
+          </ul>
+        </section>
+
+        {audienceList.length > 0 && (
+          <section>
+            <h2>适合人群</h2>
+            <ul>
+              {audienceList.map(a => <li>{a}</li>)}
+            </ul>
+          </section>
+        )}
+
+        <section class="detail-section">
+          <h2>快速概览</h2>
+          <table>
+            <tbody>
+              <tr>
+                <td><strong>分类</strong></td>
+                <td>{catDisplay}</td>
+              </tr>
+              <tr>
+                <td><strong>定价</strong></td>
+                <td>{pricingLabel}</td>
+              </tr>
+              {scenesList.length > 0 && (
+                <tr>
+                  <td><strong>标签</strong></td>
+                  <td>{scenesList.join("，")}</td>
+                </tr>
+              )}
+              {industryTags.length > 0 && (
+                <tr>
+                  <td><strong>行业</strong></td>
+                  <td>{industryTags.join("，")}</td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </section>
+
+        {tool.url && (
+          <p style="margin:2rem 0;">
+            <a href={tool.url} rel="noopener" target="_blank" class="cta-primary">
+              前往 {displayName} 官网 →
+            </a>
+          </p>
+        )}
+      </div>
+    </div>
+  </article>
+</BaseLayout>
