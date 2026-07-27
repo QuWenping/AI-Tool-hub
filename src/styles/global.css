@@ -791,6 +791,7 @@ textarea.form-input { resize: vertical; }
 .legal-page ol, .legal-page ul { margin: 12px 0 16px 24px; }
 .legal-page li { margin-bottom: 8px; color: var(--text-main); }
 .legal-page a { color: var(--accent-color); }
+.legal-page .cta-primary { color: #fff; }
 .legal-page strong { color: var(--text-main); }
 .updated-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--green-bg); border: 1px solid var(--green-border); border-radius: var(--r-sm); padding: 4px 12px; margin-top: var(--s-2); font-size: 13px; font-weight: var(--fw-bold); color: var(--green); }
 .lede { font-size: 17px; color: var(--text-soft); line-height: 1.55; margin-bottom: 20px; }
