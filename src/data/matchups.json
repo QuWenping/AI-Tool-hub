@@ -316,5 +316,55 @@
     "title_en": "Koala Writer vs Jasper (2026): AI Blog Writer vs AI Marketing Copy",
     "cluster": "text",
     "title_zh": "Koala Writer vs Jasper（2026）：AI 博客写作 vs AI 营销文案"
+  },
+  {
+    "slug": "stable-diffusion-vs-leonardo",
+    "a": "stable-diffusion",
+    "b": "leonardo",
+    "tool_a": "Stable Diffusion",
+    "tool_b": "Leonardo.AI",
+    "title_en": "Stable Diffusion vs Leonardo.AI (2026): Open-Source vs Premium AI Art",
+    "cluster": "image",
+    "title_zh": "Stable Diffusion vs Leonardo.AI（2026）：开源 vs 高端 AI 绘画"
+  },
+  {
+    "slug": "gamma-vs-notion-ai",
+    "a": "gamma",
+    "b": "notion-ai",
+    "tool_a": "Gamma",
+    "tool_b": "Notion AI",
+    "title_en": "Gamma vs Notion AI (2026): AI Presentations vs AI-Powered Docs",
+    "cluster": "productivity",
+    "title_zh": "Gamma vs Notion AI（2026）：AI 演示文稿 vs AI 文档"
+  },
+  {
+    "slug": "cline-vs-replit",
+    "a": "cline",
+    "b": "replit",
+    "tool_a": "Cline",
+    "tool_b": "Replit",
+    "title_en": "Cline vs Replit (2026): VS Code AI Agent vs Browser IDE",
+    "cluster": "code",
+    "title_zh": "Cline vs Replit（2026）：VS Code AI 智能体 vs 浏览器 IDE"
+  },
+  {
+    "slug": "hailuo-vs-synthesia",
+    "a": "hailuo",
+    "b": "synthesia",
+    "tool_a": "Hailuo",
+    "tool_b": "Synthesia",
+    "title_en": "Hailuo vs Synthesia (2026): Chinese AI Video vs AI Avatar Platform",
+    "cluster": "video",
+    "title_zh": "Hailuo vs Synthesia（2026）：国产 AI 视频 vs AI 数字人平台"
+  },
+  {
+    "slug": "pika-vs-runway",
+    "a": "pika",
+    "b": "runway",
+    "tool_a": "Pika",
+    "tool_b": "Runway",
+    "title_en": "Pika vs Runway (2026): Social Video AI vs Pro Video Suite",
+    "cluster": "video",
+    "title_zh": "Pika vs Runway（2026）：社交视频 AI vs 专业视频套件"
   }
 ]

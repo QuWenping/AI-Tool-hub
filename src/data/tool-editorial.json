@@ -6412,5 +6412,40 @@
     "long_desc": {
       "en": "AI content writing with fact-checking"
     }
+  },
+  "lipsync": {
+    "reviewed": true,
+    "updatedAt": "2026-07-28",
+    "testedVersion": "current",
+    "score": 7.5,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Desktop"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Open-source and free. Wav2Lip is an academic project with no commercial pricing."
+    },
+    "faq": [
+      {
+        "q_en": "What is Wav2Lip?",
+        "a_en": "Wav2Lip is an open-source AI model that accurately lip-syncs video to any audio input, producing realistic talking-head videos."
+      },
+      {
+        "q_en": "Is Wav2Lip free?",
+        "a_en": "Yes, Wav2Lip is completely free and open-source under academic license."
+      }
+    ],
+    "long_desc": {
+      "en": "Wav2Lip is an open-source AI lip-syncing model that produces highly accurate talking-head videos from any audio input. It excels at matching lip movements to speech with state-of-the-art accuracy."
+    },
+    "editorialIntro": {
+      "en": "Wav2Lip is the leading open-source lip-sync solution for generating realistic talking-head videos. Our testing focused on accuracy, ease of use, and output quality."
+    },
+    "editorialVerdict": {
+      "en": "Wav2Lip delivers excellent lip-sync accuracy for an open-source tool. Best suited for developers and creators comfortable with Python, though it lacks a user-friendly GUI."
+    }
   }
 }

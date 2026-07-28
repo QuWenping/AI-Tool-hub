@@ -210,7 +210,97 @@ const promptDataZh: Record<string, any> = {
     exampleOutput: "## 编程路线图：前端到全栈（12 周）\n### 当前水平\n- HTML/CSS：熟练\n- JavaScript：中级（ES6+、async/await）\n- React：基础（组件、Hooks）\n### 第 1-4 周：后端基础\n- Node.js + Express 基础\n- REST API 设计原则\n- PostgreSQL + Prisma ORM\n- 项目：构建任务管理 API\n### 第 5-8 周：高级主题\n- 认证（JWT、OAuth）\n- 文件上传 + 云存储\n- 测试（Jest、Supertest）\n- 项目：带认证的电商后端\n### 第 9-12 周：DevOps 与部署\n- Docker + 容器化\n- GitHub Actions CI/CD\n- AWS/云端部署\n- 最终项目：全栈 SaaS MVP",
     relatedTools: ["chatgpt", "cursor", "github-copilot"],
   },
+  "chatgpt-pd": {
+    title: "ChatGPT 产品描述提示词",
+    description: "使用 ChatGPT 生成引人注目、SEO 优化的产品描述提示词模板，适用于电商、营销页面和产品目录。",
+    tags: ["写作", "ChatGPT", "电商"],
+    useCase: "电商经理、文案撰写者和营销人员生成具有转化力的产品描述，涵盖特性、利益和情感吸引力。",
+    exampleOutput: "## 产品描述：ErgoLux 办公椅\n### 标题\n用人体工学卓越改变你的工作日\n### 正文\n体验 ErgoLux 办公椅带来的全天候舒适——配备 4D 可调扶手、动态腰部支撑和透气网布。无论你是在应对接连不断的会议还是深度编程，ErgoLux 都能适应你的身体，而非让你去适应它。\n### 核心特性\n- 4D 可调扶手：自定义高度、深度、角度和宽度\n- 动态腰部支撑：自动适应脊柱曲线\n- 透气网布：8 小时以上保持凉爽\n- 10 年质保：经久耐用",
+    relatedTools: ["chatgpt", "claude"],
+  },
+  "claude-peer-review": {
+    title: "Claude 代码审查提示词",
+    description: "使用 Claude 进行彻底代码审查的提示词。涵盖代码质量、安全性、性能、可读性和最佳实践合规性。",
+    tags: ["编程", "Claude", "审查"],
+    useCase: "软件开发者和工程团队使用 Claude 进行自动化代码审查，在合并前发现 Bug、强制执行标准并提升代码质量。",
+    exampleOutput: "## 代码审查：`src/services/payment.ts`\n### 严重：高\n- 第 42 行：SQL 注入风险——用户输入 `invoiceId` 直接拼接到查询中。应使用参数化查询。\n### 严重：中\n- 第 78 行：`stripe.charges.create` 缺少错误处理——添加 try/catch 并加入重试逻辑。\n- 第 103 行：`getOrderItems` 中存在 N+1 查询模式——批量获取关联模型。\n### 严重：低\n- 第 15 行：魔数 `0.08`——提取为命名常量 `TAX_RATE`。\n- 第 56 行：`calculateTotal` 函数超过 40 行——建议提取 `applyDiscounts` 和 `computeTax`。\n### 总体评价\n- 测试覆盖率：62%——建议补充边界情况测试（退款流程、部分支付）。\n- 类型安全：全程良好使用 TypeScript 接口。",
+    relatedTools: ["claude", "cursor"],
+  },
+  "any-persona": {
+    title: "AI 角色扮演提示词",
+    description: "一个通用提示词，用于指示 AI 扮演特定角色、专家身份或人物，使交互更具沉浸感和场景相关性。",
+    tags: ["通用", "ChatGPT", "Claude"],
+    useCase: '任何希望 AI 以特定语气、专业水平和个性风格回复的人——从"资深财务顾问"到"友好编程导师"。',
+    exampleOutput: "## 角色：经验丰富的创业公司 CTO\n### 语气\n直接、务实、久经沙场。不讲 buzzword。戳穿炒作。\n### 知识领域\n- 规模化系统架构（10 万+ 用户）\n- 工程团队招聘与管理\n- 技术债务权衡\n### 示例回复\n'听着，微服务解决不了你创业公司的真正问题。你只有 3 个工程师和 200 个用户。先用单体架构，做到产品-市场契合，等真正需要的时候再来拆分。我见过 50 人的团队还没发布一个功能就被 Kubernetes 淹没了。先发布，后扩展。'",
+    relatedTools: ["chatgpt", "claude"],
+  },
 
+
+
+  "claude-user-research": {
+    title: "Claude 用户研究提示词",
+    description: "使用 Claude 规划、执行和综合用户研究的提示词模板。涵盖访谈提纲生成、问卷设计、可用性测试脚本和洞察综合。",
+    tags: ["研究", "Claude", "UX"],
+    useCase: "UX 研究员、产品经理和设计师使用 Claude 加速用户研究工作流，从规划到报告。",
+    exampleOutput: "## 用户研究计划：移动应用改版\n### 研究目标\n1. 了解当前结算流程中的痛点\n2. 评估新导航模式\n### 方法\n- 主持式可用性测试（8 名参与者）\n- 基于任务：完成购买、查找订单历史\n### 关键发现\n- 结算：6/8 用户对配送选项布局感到困惑\n- 导航：新底部标签栏将任务完成时间缩短 40%\n### 建议\n- 采用渐进式披露重新设计配送步骤\n- 向所有用户推广新导航",
+    relatedTools: ["claude", "chatgpt"],
+  },
+  "cursor-docker": {
+    title: "Cursor Docker 提示词",
+    description: "使用 Cursor 编写、调试和优化 Docker 配置的提示词模板。涵盖 Dockerfile 编写、docker-compose 编排、多阶段构建和容器安全最佳实践。",
+    tags: ["编程", "Cursor", "Docker"],
+    useCase: "容器化应用的开发者，需要 AI 协助处理 Dockerfile、compose 文件和容器调试。",
+    exampleOutput: "## Docker 设置：Node.js + PostgreSQL\n### Dockerfile（多阶段）\n```dockerfile\nFROM node:20-alpine AS builder\nWORKDIR /app\nCOPY package*.json ./\nRUN npm ci --only=production\n\nFROM node:20-alpine\nWORKDIR /app\nCOPY --from=builder /app/node_modules ./node_modules\nCOPY . .\nEXPOSE 3000\nCMD [\"node\", \"server.js\"]\n```\n### docker-compose.yml\n- 应用容器 + PostgreSQL 16\n- 使用 pg_isready 健康检查\n- 命名卷用于数据库持久化\n- 网络：app-network（桥接）",
+    relatedTools: ["cursor", "github-copilot"],
+  },
+  "cursor-search-debounce": {
+    title: "Cursor 搜索防抖提示词",
+    description: "使用 Cursor 实现搜索防抖模式的提示词模板。涵盖防抖 Hook、AbortController 取消请求、加载状态及快速输入和竞态条件等边界情况。",
+    tags: ["编程", "Cursor", "前端"],
+    useCase: "构建搜索界面的前端开发者，需要能够处理取消、加载状态和错误恢复的健壮防抖实现。",
+    exampleOutput: "## 搜索防抖实现（React + TypeScript）\n### Hook：useDebouncedSearch\n```typescript\nfunction useDebouncedSearch(delay = 300) {\n  const [query, setQuery] = useState('');\n  const debounced = useDebounce(query, delay);\n  \n  useEffect(() => {\n    const controller = new AbortController();\n    if (debounced) fetchResults(debounced, controller.signal);\n    return () => controller.abort();\n  }, [debounced]);\n}\n```\n### 处理的边界情况\n- 竞态条件：AbortController 取消过期请求\n- 空查询：跳过 API 调用，清除结果\n- 快速输入：防抖确保只有最终值触发搜索\n- 网络错误：显示重试按钮，指数退避",
+    relatedTools: ["cursor", "github-copilot"],
+  },
+  "dify-chain": {
+    title: "Dify 工作流链提示词",
+    description: "在 Dify 中设计多步骤 AI 工作流链的提示词模板。涵盖节点配置、条件分支、变量传递以及 LLM、知识检索和代码执行节点的错误处理。",
+    tags: ["工作流", "Dify", "AI 智能体"],
+    useCase: "AI 工作流构建者和无代码开发者，在 Dify 可视化编辑器中创建复杂的多步骤 AI 流水线。",
+    exampleOutput: "## Dify 工作流链：客服分流\n### 节点 1：意图分类器（LLM）\n- 输入：用户消息\n- 输出：意图（账单/技术/账户/通用）\n### 节点 2：路由器（条件分支）\n- 账单 → 节点 3a：知识检索（账单 FAQ）\n- 技术 → 节点 3b：代码执行器（诊断）\n- 账户 → 节点 3c：API 调用（账户查询）\n### 节点 4：回复生成器（LLM）\n- 合并所有分支，生成最终回复\n### 错误处理\n- 超时（10s）：回退到通用 FAQ\n- 检索为空：升级到人工客服",
+    relatedTools: ["dify", "langchain"],
+  },
+  "gemini-market-analysis": {
+    title: "Gemini 市场分析提示词",
+    description: "使用 Google Gemini 进行结构化市场分析的提示词模板。涵盖 TAM/SAM/SOM 估算、竞争格局映射、趋势识别和 SWOT 分析生成。",
+    tags: ["商业", "Gemini", "分析"],
+    useCase: "商业分析师、策略师和创业者利用 Gemini 的长上下文和多模态能力进行全面的市场研究。",
+    exampleOutput: "## 市场分析：AI 视频生成（Q3 2026）\n### TAM：$42 亿（34% CAGR 增长中）\n### 竞争格局\n| 玩家 | 优势 | 劣势 |\n|------|------|------|\n| Runway | 专业编辑套件 | 价格高（$15/月）|\n| Pika | 社交优先、快速 | 专业功能有限 |\n| Sora | 质量领先 | 仅限候补名单 |\n### 趋势\n1. 实时生成将于 2027 年到来\n2. 企业培训视频采用率增长 120%\n### SWOT：市场进入机会\n- 优势：SMB 细分市场服务不足（$50-200/月区间）\n- 劣势：计算成本高\n- 机会：垂直聚焦（房地产展示）\n- 威胁：大厂捆绑（Adobe、Canva）",
+    relatedTools: ["gemini", "chatgpt", "claude"],
+  },
+  "kling-product-video": {
+    title: "Kling 产品视频提示词",
+    description: "使用 Kling AI 生成产品展示视频的提示词模板。涵盖镜头构图、灯光、产品聚焦、背景风格和电商营销视频的动态效果。",
+    tags: ["视频", "Kling", "电商"],
+    useCase: "电商营销人员、产品设计师和内容创作者使用 Kling 的 AI 视频生成功能制作专业产品视频。",
+    exampleOutput: "## 产品视频：无线耳机\n### 镜头 1（0-3s）：产品亮相\n- 特写，缓慢 360 度旋转，暗色渐变背景\n- 灯光：柔和的轮廓光突出金属质感\n### 镜头 2（3-6s）：功能展示\n- 分屏：降噪可视化 + 生活场景\n- 转场：平滑左滑\n### 镜头 3（6-8s）：行动号召\n- 产品居中，价格叠加，'立即购买'按钮\n### 设置\n- 分辨率：1080p，24fps\n- 风格：Apple 风格产品摄影\n- 时长：8 秒",
+    relatedTools: ["kling", "runway", "sora"],
+  },
+  "mj-abstract-3d": {
+    title: "Midjourney 抽象 3D 提示词",
+    description: "使用 Midjourney 生成抽象 3D 艺术的精选提示词模板。涵盖材质定义（玻璃、金属、液体）、灯光设置、几何构图和渲染风格参数。",
+    tags: ["图像", "Midjourney", "3D"],
+    useCase: "数字艺术家、设计师和 NFT 创作者生成抽象 3D 作品，用于壁纸、品牌素材和概念艺术。",
+    exampleOutput: "## 抽象 3D 渲染：液态玻璃几何体\n- 风格：Octane 渲染，彩虹玻璃材质，焦散效果\n- 构图：浮动几何体（球体、环面、二十面体）以动态布局排列\n- 灯光：工作室 HDRI + 轮廓光，柔和阴影，半透明元素的次表面散射\n- 颜色：从深紫 #4a0e4e 渐变到青色 #00d4ff\n- 背景：极简渐变，地面微妙的网格反射\n- 参数：--ar 16:9 --stylize 250 --v 7 --style raw",
+    relatedTools: ["midjourney", "dalle3"],
+  },
+  "claude-grant-d": {
+    title: "Claude 授权设计提示词",
+    description: "使用 Claude 设计和撰写资助申请书的提示词模板。涵盖问题陈述框架、方法论设计、预算论证、影响力衡量和资助方对接策略。",
+    tags: ["写作", "Claude", "资助"],
+    useCase: "非营利组织负责人、研究人员和资助申请撰写者使用 Claude 构建与资助方优先事项一致的、有说服力的资助申请书。",
+    exampleOutput: "## 资助申请书：服务不足社区的 AI 素养\n### 问题陈述\n78% 的低收入学生缺乏 AI 素养项目，而富裕学区仅为 12%。\n### 解决方案\n为期 12 周的课后项目，通过动手实践教授 AI 基础知识。目标：覆盖 10 个社区中心的 500 名学生。\n### 方法论\n- 课程由教师和 AI 研究员共同设计\n- 前/后评估衡量 AI 概念掌握程度\n- 同伴指导模式确保可持续性\n### 预算\n总计：$150,000（人员 60%，设备 25%，评估 15%）\n### 影响力指标\n- 80% 参与者展示 AI 概念熟练度\n- 50% 继续深造 STEM 课程\n- 项目材料开源供复制推广",
+    relatedTools: ["claude", "chatgpt"],
+  },
 };
 
 export async function getStaticPaths() {
@@ -225,6 +315,15 @@ export async function getStaticPaths() {
     "any-comms-plan", "chatgpt-pr-desc", "any-coding-roadmap",
     "any-etl-spec2", "mj-landscape", "any-kb-structure", "any-react-pat",
     "chatgpt-biz-plan", "cursor-worker", "any-cicd",
+    "chatgpt-pd", "claude-peer-review", "any-persona",
+    "claude-user-research",
+    "cursor-docker",
+    "cursor-search-debounce",
+    "dify-chain",
+    "gemini-market-analysis",
+    "kling-product-video",
+    "mj-abstract-3d",
+    "claude-grant-d"
   ];
   return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }

@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const pageLang = Astro.currentLocale || "en";
+---
+
+<BaseLayout title="Prompt Templates | AI Tool Hub" description="A curated library of AI prompt templates for coding, writing, image generation, and more." lang={pageLang}>
+  <article class="legal-page">
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> &rsaquo;
+      <span>Prompt Templates</span>
+    </nav>
+    <header class="page-hero">
+      <span class="eyebrow">Resources</span>
+      <h1>Prompt Templates</h1>
+      <p class="lede">A curated library of AI prompt templates to help you get better results from ChatGPT, Claude, Midjourney, Cursor, and more. Copy, customize, and ship faster.</p>
+    </header>
+
+    <section>
+      <h2>Get Started</h2>
+      <p>Browse our growing collection of prompt templates organized by category. Each template includes a title, description, use case, and an example output so you know exactly what to expect.</p>
+      <p>Check out the <a href="/prompts/">Prompts directory</a> for the full list of available prompt templates.</p>
+    </section>
+
+    <section style="margin-top: 48px;">
+      <h2>Categories</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/prompts/">
+          <div class="related-icon"><i class="fas fa-terminal"></i></div>
+          <div>
+            <h3>All Prompts</h3>
+            <p>Browse the complete collection of AI prompt templates</p>
+          </div>
+        </a>
+        <a class="related-card" href="/category/code/">
+          <div class="related-icon"><i class="fas fa-code"></i></div>
+          <div>
+            <h3>Coding Prompts</h3>
+            <p>Templates for Cursor, GitHub Copilot, and code generation</p>
+          </div>
+        </a>
+        <a class="related-card" href="/category/image/">
+          <div class="related-icon"><i class="fas fa-image"></i></div>
+          <div>
+            <h3>Image Prompts</h3>
+            <p>Templates for Midjourney, DALL-E, and AI image generation</p>
+          </div>
+        </a>
+        <a class="related-card" href="/category/text/">
+          <div class="related-icon"><i class="fas fa-pen-fancy"></i></div>
+          <div>
+            <h3>Writing Prompts</h3>
+            <p>Templates for content creation, editing, and summarization</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section style="margin-top: 48px;">
+      <h2>Why Use Prompt Templates?</h2>
+      <p>Prompt templates save you time by providing battle-tested starting points. Instead of staring at a blank input box, you get a structured prompt that's already optimized for the specific AI tool and use case. Each template on this site has been tested by our editorial team to ensure quality output.</p>
+      <p>More templates are added weekly. If you have a template suggestion, <a href="/contact/">let us know</a>.</p>
+    </section>
+  </article>
+</BaseLayout>

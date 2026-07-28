@@ -284,6 +284,96 @@ const promptData: Record<string, any> = {
     exampleOutput: "## Architecture: Microservices E-Commerce Platform\n### System Overview\n- API Gateway (Kong) routes to 12 microservices\n- Event bus (Kafka) for async communication\n- Service mesh (Istio) for observability\n### Component: Order Service\n- Responsibility: Order lifecycle management\n- Database: PostgreSQL with read replicas\n- Dependencies: Inventory Service, Payment Service\n### Data Flow\n1. Client -> API Gateway -> Order Service\n2. Order Service -> Kafka (order.created event)\n3. Inventory Service consumes event, reserves stock\n### ADR-004: Chose Kafka over RabbitMQ\n- Rationale: Better replay capabilities, higher throughput for order events",
     relatedTools: ["claude", "chatgpt"],
   },
+  "chatgpt-pd": {
+    title: "ChatGPT Product Description Prompt",
+    description: "A prompt template for using ChatGPT to generate compelling, SEO-optimized product descriptions for e-commerce, marketing pages, and catalogs.",
+    tags: ["Writing", "ChatGPT", "E-commerce"],
+    useCase: "E-commerce managers, copywriters, and marketers generating product descriptions that convert, covering features, benefits, and emotional appeal.",
+    exampleOutput: "## Product Description: ErgoLux Office Chair\n### Headline\nTransform Your Workday with Ergonomic Excellence\n### Body\nExperience all-day comfort with the ErgoLux Office Chair — engineered with 4D adjustable armrests, dynamic lumbar support, and breathable mesh fabric. Whether you're powering through back-to-back meetings or deep-focus coding sessions, ErgoLux adapts to your body, not the other way around.\n### Key Features\n- 4D Adjustable Armrests: Customize height, depth, angle, and width\n- Dynamic Lumbar Support: Automatically adjusts to your spine's curve\n- Breathable Mesh: Stays cool during 8+ hour sessions\n- 10-Year Warranty: Built to last",
+    relatedTools: ["chatgpt", "claude"],
+  },
+  "claude-peer-review": {
+    title: "Claude Peer Review Prompt",
+    description: "A prompt for using Claude to conduct thorough peer reviews of code. Covers code quality, security, performance, readability, and adherence to best practices.",
+    tags: ["Coding", "Claude", "Review"],
+    useCase: "Software developers and engineering teams using Claude for automated code review to catch bugs, enforce standards, and improve code quality before merging.",
+    exampleOutput: "## Code Review: `src/services/payment.ts`\n### Severity: High\n- Line 42: SQL injection risk — user input `invoiceId` directly interpolated in query. Use parameterized queries.\n### Severity: Medium\n- Line 78: Missing error handling for `stripe.charges.create` — add try/catch with retry logic.\n- Line 103: N+1 query pattern in `getOrderItems` — batch fetch related models.\n### Severity: Low\n- Line 15: Magic number `0.08` — extract to named constant `TAX_RATE`.\n- Line 56: Function `calculateTotal` exceeds 40 lines — consider extracting `applyDiscounts` and `computeTax`.\n### Overall\n- Test coverage: 62% — recommend adding tests for edge cases (refund flow, partial payment).\n- Type safety: Good use of TypeScript interfaces throughout.",
+    relatedTools: ["claude", "cursor"],
+  },
+  "any-persona": {
+    title: "AI Persona Prompt",
+    description: "A versatile prompt for instructing any AI to adopt a specific persona, expert role, or character for more engaging and contextually relevant interactions.",
+    tags: ["General", "ChatGPT", "Claude"],
+    useCase: "Anyone who wants AI to respond with a specific tone, expertise level, or personality — from 'expert financial advisor' to 'friendly coding mentor'.",
+    exampleOutput: "## Persona: Seasoned Startup CTO\n### Tone\nDirect, pragmatic, battle-tested. No buzzwords. Cuts through hype.\n### Knowledge Domains\n- System architecture at scale (100K+ users)\n- Hiring and managing engineering teams\n- Technical debt trade-offs\n### Example Response\n'Look, microservices won't fix your startup's real problem. You have 3 engineers and 200 users. Start with a monolith, get to product-market fit, then split when you actually need it. I've seen 50-person teams drown in Kubernetes before shipping a single feature. Ship first, scale later.'",
+    relatedTools: ["chatgpt", "claude"],
+  },
+
+
+  "claude-user-research": {
+    title: "Claude User Research Prompt",
+    description: "A prompt template for using Claude to plan, conduct, and synthesize user research. Covers interview guide generation, survey design, usability test scripts, and insight synthesis.",
+    tags: ["Research", "Claude", "UX"],
+    useCase: "UX researchers, product managers, and designers using Claude to accelerate user research workflows from planning to reporting.",
+    exampleOutput: "## User Research Plan: Mobile App Redesign\n### Research Goals\n1. Understand pain points in current checkout flow\n2. Evaluate new navigation pattern\n### Method\n- Moderated usability test (8 participants)\n- Task-based: complete purchase, find order history\n### Key Findings\n- Checkout: 6/8 users confused by shipping options layout\n- Navigation: new bottom tab bar reduced time-to-task by 40%\n### Recommendations\n- Redesign shipping step with progressive disclosure\n- Roll out new navigation to all users",
+    relatedTools: ["claude", "chatgpt"],
+  },
+  "cursor-docker": {
+    title: "Cursor Docker Prompt",
+    description: "A prompt template for using Cursor to write, debug, and optimize Docker configurations. Covers Dockerfile authoring, docker-compose orchestration, multi-stage builds, and container security best practices.",
+    tags: ["Coding", "Cursor", "Docker"],
+    useCase: "Developers containerizing applications who need AI assistance with Dockerfiles, compose files, and container debugging in Cursor.",
+    exampleOutput: "## Docker Setup: Node.js + PostgreSQL\n### Dockerfile (multi-stage)\n```dockerfile\nFROM node:20-alpine AS builder\nWORKDIR /app\nCOPY package*.json ./\nRUN npm ci --only=production\n\nFROM node:20-alpine\nWORKDIR /app\nCOPY --from=builder /app/node_modules ./node_modules\nCOPY . .\nEXPOSE 3000\nCMD [\"node\", \"server.js\"]\n```\n### docker-compose.yml\n- App container + PostgreSQL 16\n- Healthcheck with pg_isready\n- Named volume for db persistence\n- Network: app-network (bridge)",
+    relatedTools: ["cursor", "github-copilot"],
+  },
+  "cursor-search-debounce": {
+    title: "Cursor Search Debounce Prompt",
+    description: "A prompt for implementing search debounce patterns with Cursor. Covers debounce hooks, API request cancellation with AbortController, loading states, and edge cases like rapid input and race conditions.",
+    tags: ["Coding", "Cursor", "Frontend"],
+    useCase: "Frontend developers building search UIs who need robust debounce implementations that handle cancellation, loading states, and error recovery.",
+    exampleOutput: "## Search Debounce Implementation (React + TypeScript)\n### Hook: useDebouncedSearch\n```typescript\nfunction useDebouncedSearch(delay = 300) {\n  const [query, setQuery] = useState('');\n  const debounced = useDebounce(query, delay);\n  \n  useEffect(() => {\n    const controller = new AbortController();\n    if (debounced) fetchResults(debounced, controller.signal);\n    return () => controller.abort();\n  }, [debounced]);\n}\n```\n### Edge Cases Handled\n- Race condition: AbortController cancels stale requests\n- Empty query: skip API call, clear results\n- Rapid typing: debounce ensures only final value triggers search\n- Network error: show retry button with exponential backoff",
+    relatedTools: ["cursor", "github-copilot"],
+  },
+  "dify-chain": {
+    title: "Dify Chain Prompt",
+    description: "A prompt template for designing multi-step AI workflow chains in Dify. Covers node configuration, conditional branching, variable passing, and error handling across LLM, knowledge retrieval, and code execution nodes.",
+    tags: ["Workflow", "Dify", "AI Agents"],
+    useCase: "AI workflow builders and no-code developers creating complex multi-step AI pipelines in Dify's visual editor.",
+    exampleOutput: "## Dify Chain: Customer Support Triage\n### Node 1: Intent Classifier (LLM)\n- Input: user message\n- Output: intent (billing/technical/account/general)\n### Node 2: Router (Conditional Branch)\n- billing → Node 3a: Knowledge Retrieval (billing FAQ)\n- technical → Node 3b: Code Executor (diagnostics)\n- account → Node 3c: API call (account lookup)\n### Node 4: Response Generator (LLM)\n- Merges all branches, generates final reply\n### Error Handling\n- Timeout (10s): fallback to general FAQ\n- Empty retrieval: escalate to human agent",
+    relatedTools: ["dify", "langchain"],
+  },
+  "gemini-market-analysis": {
+    title: "Gemini Market Analysis Prompt",
+    description: "A prompt template for using Google Gemini to conduct structured market analysis. Covers TAM/SAM/SOM estimation, competitive landscape mapping, trend identification, and SWOT analysis generation.",
+    tags: ["Business", "Gemini", "Analysis"],
+    useCase: "Business analysts, strategists, and entrepreneurs using Gemini's long-context and multimodal capabilities for comprehensive market research.",
+    exampleOutput: "## Market Analysis: AI Video Generation (Q3 2026)\n### TAM: $4.2B (growing at 34% CAGR)\n### Competitive Landscape\n| Player | Strength | Weakness |\n|--------|----------|----------|\n| Runway | Pro editing suite | High price ($15/mo) |\n| Pika | Social-first, fast | Limited pro features |\n| Sora | Quality leader | Waitlist only |\n### Trends\n1. Real-time generation arriving in 2027\n2. Enterprise adoption for training videos up 120%\n### SWOT: Market Entry Opportunity\n- Strength: Underserved SMB segment ($50-200/mo range)\n- Weakness: High compute costs\n- Opportunity: Vertical focus (real estate walkthroughs)\n- Threat: Big tech bundling (Adobe, Canva)",
+    relatedTools: ["gemini", "chatgpt", "claude"],
+  },
+  "kling-product-video": {
+    title: "Kling Product Video Prompt",
+    description: "A prompt template for generating product showcase videos with Kling AI. Covers shot composition, lighting, product focus, background styling, and motion dynamics for e-commerce and marketing videos.",
+    tags: ["Video", "Kling", "E-commerce"],
+    useCase: "E-commerce marketers, product designers, and content creators generating professional product videos with Kling's AI video generation.",
+    exampleOutput: "## Product Video: Wireless Earbuds\n### Shot 1 (0-3s): Hero reveal\n- Close-up, slow 360 rotation, dark gradient background\n- Lighting: soft rim light highlighting metallic finish\n### Shot 2 (3-6s): Feature showcase\n- Split screen: noise cancellation visualization + lifestyle shot\n- Transition: smooth slide left\n### Shot 3 (6-8s): CTA\n- Product centered, price overlay, 'Shop Now' button\n### Settings\n- Resolution: 1080p, 24fps\n- Style: Apple-style product cinematography\n- Duration: 8 seconds",
+    relatedTools: ["kling", "runway", "sora"],
+  },
+  "mj-abstract-3d": {
+    title: "Midjourney Abstract 3D Prompt",
+    description: "A curated prompt for generating abstract 3D art with Midjourney. Covers material definitions (glass, metal, liquid), lighting setups, geometric composition, and render style parameters.",
+    tags: ["Image", "Midjourney", "3D"],
+    useCase: "Digital artists, designers, and NFT creators generating abstract 3D compositions for wallpapers, branding assets, and concept art.",
+    exampleOutput: "## Abstract 3D Render: Liquid Glass Geometry\n- Style: Octane render, iridescent glass material, caustics\n- Composition: Floating geometric primitives (sphere, torus, icosahedron) in dynamic arrangement\n- Lighting: Studio HDRI + rim light, soft shadows, subsurface scattering on translucent elements\n- Colors: Gradient from deep violet #4a0e4e to cyan #00d4ff\n- Background: Minimal gradient, subtle grid reflection on floor\n- Parameters: --ar 16:9 --stylize 250 --v 7 --style raw",
+    relatedTools: ["midjourney", "dalle3"],
+  },
+  "claude-grant-d": {
+    title: "Claude Grant Design Prompt",
+    description: "A prompt template for using Claude to design and draft grant proposals. Covers problem statement framing, methodology design, budget justification, impact measurement, and funder alignment strategies.",
+    tags: ["Writing", "Claude", "Funding"],
+    useCase: "Nonprofit leaders, researchers, and grant writers using Claude to structure compelling grant proposals that align with funder priorities.",
+    exampleOutput: "## Grant Proposal: AI Literacy for Underserved Communities\n### Problem Statement\n78% of low-income students lack access to AI literacy programs compared to 12% in affluent districts.\n### Proposed Solution\n12-week after-school program teaching AI fundamentals through hands-on projects. Target: 500 students across 10 community centers.\n### Methodology\n- Curriculum co-designed with teachers and AI researchers\n- Pre/post assessment measuring AI concept mastery\n- Peer mentoring model for sustainability\n### Budget\nTotal: $150,000 (Personnel 60%, Equipment 25%, Evaluation 15%)\n### Impact Metrics\n- 80% of participants demonstrate AI concept proficiency\n- 50% pursue further STEM coursework\n- Program materials open-sourced for replication",
+    relatedTools: ["claude", "chatgpt"],
+  },
 };
 
 export async function getStaticPaths() {
@@ -301,6 +391,15 @@ export async function getStaticPaths() {
 
     "any-feature-store", "any-sql-schema", "chatgpt-networking", "mj-tech-render",
     "any-agent-memory", "chatgpt-diff-instruction", "claude-arch-doc", "any-cicd",
+    "chatgpt-pd", "claude-peer-review", "any-persona",
+    "claude-user-research",
+    "cursor-docker",
+    "cursor-search-debounce",
+    "dify-chain",
+    "gemini-market-analysis",
+    "kling-product-video",
+    "mj-abstract-3d",
+    "claude-grant-d"
   ];
   return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }
