@@ -1,0 +1,133 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout 
+  title="Editorial Policy | AI Tool Hub" 
+  description="Our editorial policy: how we review AI tools, our 5-dimension scoring system, AI usage disclosure, content update practices, and how we handle sponsorships and partnerships."
+  keywords="editorial policy, AI tool review standards, scoring methodology, content guidelines, AI disclosure"
+>
+  <article class="legal-page">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <span>Editorial Policy</span></nav>
+    <header class="page-hero">
+      <span class="eyebrow">How We Work</span>
+      <h1>Editorial Policy</h1>
+      <p class="lede">Every review, comparison, and guide on AI Tool Hub follows a strict editorial process. This page explains our content standards, scoring methodology, AI usage practices, and how we handle sponsorships — so you can judge our work for yourself.</p>
+      <p class="lede-sub">Last updated: July 28, 2026</p>
+    </header>
+
+    <section>
+      <h2>Content Standards</h2>
+      <p>All content published on AI Tool Hub must meet the following standards:</p>
+      <ul>
+        <li><strong>Hands-on testing required.</strong> Every review is based on actual use of the tool for a minimum of 2 weeks. We do not publish reviews based on documentation reading, competitor analysis, second-hand descriptions, or vendor-provided marketing materials. Each reviewer uses the tool to complete real-world tasks in their domain of expertise.</li>
+        <li><strong>Named human authors.</strong> Every review, comparison, and guide carries a byline. The author's name links to their profile page with their background, expertise, and contact information. We do not use anonymous or pseudonymous bylines for editorial content.</li>
+        <li><strong>Reviewed by attribution.</strong> Long-form reviews undergo a secondary review by a senior editor. The reviewing editor's name is listed on the article with "Reviewed by" attribution. This ensures factual accuracy and consistency with our scoring methodology.</li>
+        <li><strong>Original analysis, not aggregation.</strong> We do not summarize other people's reviews, scrape app store ratings, or aggregate opinions from social media. Every verdict is our own, based on our own testing. When we reference external benchmarks or third-party data, we cite the source explicitly.</li>
+        <li><strong>No AI-written reviews.</strong> AI tools may be used as writing assistants (see AI Disclosure below), but the core analysis, scoring decisions, and editorial verdicts are made by human reviewers who have actually used the tool. We never publish AI-generated content as editorial.</li>
+        <li><strong>No paid positive reviews.</strong> We do not accept payment to write favorable reviews, increase scores, or rank any tool higher. Vendors who want us to review their tool can submit it for free consideration; payment does not influence the outcome.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Scoring System</h2>
+      <p>Every reviewed tool receives a score from 0.0 to 10.0 based on our 5-dimension rubric. Scores are not an average of subscores; they represent our holistic editorial judgment informed by, but not mechanically determined by, the sub-scores.</p>
+
+      <h3>The Five Dimensions</h3>
+      <ol>
+        <li><strong>User Experience (Weight: 25%)</strong> — Onboarding speed, interface clarity, learning curve, documentation quality, mobile experience, overall UX polish.<br/>Scored 1-10: 1 = unusable without training; 10 = intuitive enough for a first-time user to be productive in under 5 minutes.</li>
+        <li><strong>Capability &amp; Output Quality (Weight: 30%)</strong> — How well the tool performs its core function. For generative tools: output coherence, accuracy, creativity, consistency. For productivity tools: speed, feature depth, reliability, edge case handling.<br/>Scored 1-10: 1 = output is unusable; 10 = output rivals or exceeds the best human work in the domain.</li>
+        <li><strong>Pricing &amp; Value (Weight: 20%)</strong> — Price relative to competitors, free tier quality, transparency of pricing page, hidden costs, ROI for target users.<br/>Scored 1-10: 1 = predatory pricing with hidden fees; 10 = exceptional value — you get far more than you pay for.</li>
+        <li><strong>Growth &amp; Ecosystem (Weight: 15%)</strong> — Update frequency, community activity, integration ecosystem, platform support (web + mobile + API), developer docs, third-party plugin/extension availability.<br/>Scored 1-10: 1 = abandoned project with no updates; 10 = thriving ecosystem with weekly updates, active community, and broad integrations.</li>
+        <li><strong>Trust &amp; Transparency (Weight: 10%)</strong> — Privacy policy quality, data handling practices, security track record, corporate transparency, terms of service fairness, user data ownership, open-source status.<br/>Scored 1-10: 1 = actively deceptive about data practices; 10 = exemplary transparency with clear privacy commitments and no dark patterns.</li>
+      </ol>
+
+      <h3>What Scores Mean</h3>
+      <ul>
+        <li><strong>9.0 — 10.0:</strong> Exceptional. Best-in-class. We recommend it without reservation for its primary use case.</li>
+        <li><strong>8.0 — 8.9:</strong> Excellent. A top-tier tool. Minor limitations in specific areas, but outstanding overall.</li>
+        <li><strong>7.0 — 7.9:</strong> Good. Solid tool that delivers value. Has noticeable gaps but is worth using for its target audience.</li>
+        <li><strong>6.0 — 6.9:</strong> Adequate. Functional but unremarkable. Gets the job done but better alternatives exist in most cases.</li>
+        <li><strong>Below 6.0:</strong> Not recommended. We decline to list tools scoring below 6.0. If a listed tool's score drops below 6.0, we add a prominent warning and may delist it.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Review Process</h2>
+      <p>Each tool review follows a structured 4-step process designed to ensure consistency, fairness, and depth:</p>
+      <ol>
+        <li><strong>Eligibility Screening (1-3 days).</strong> A tool must meet our minimum quality bar of 6.0/10, be publicly available (no invite-only betas), and have a clearly defined use case that fits our editorial scope. We prioritize tools that solve real problems over "AI wrappers" with no substantive value-add.</li>
+        <li><strong>Hands-on Testing (minimum 2 weeks).</strong> The assigned reviewer uses the tool for real tasks in their domain — not demo scripts or tutorials. They test edge cases, compare outputs against alternatives, and document their experience. For paid tools, we purchase our own subscription; we never use vendor-provided test accounts.</li>
+        <li><strong>Internal Review (2-3 days).</strong> A senior editor who was not involved in the testing reviews the draft for factual accuracy, scoring consistency, and editorial quality. If the reviewer and editor disagree on a score, the editor's judgment prevails, but the disagreement is documented internally for future calibration.</li>
+        <li><strong>Publication and Monitoring.</strong> Once published, reviews are scheduled for quarterly re-evaluation. If a tool ships a major update, we fast-track the re-review. Score changes are documented in our changelog with the date and reason for the change.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>AI Usage and Disclosure</h2>
+      <p>We are transparent about how we use AI tools in our editorial workflow. Here is exactly what AI does and does not do in our content creation process:</p>
+
+      <h3>What AI Is Used For</h3>
+      <ul>
+        <li><strong>Research assistance.</strong> AI tools help us search across documentation, changelogs, and community discussions to ensure we do not miss features or known issues. All AI-sourced information is verified against primary sources before inclusion.</li>
+        <li><strong>Drafting assistance for routine sections.</strong> AI may help draft structured sections like "Quick Facts" boxes, pricing tables, and spec comparisons — where the data is factual and the structure is templated. These sections are always reviewed and corrected by a human editor.</li>
+        <li><strong>Grammar and clarity editing.</strong> AI-powered grammar and style checkers (similar to Grammarly) are used to catch typos, improve sentence flow, and enforce style guide consistency. These tools do not alter meaning, analysis, or editorial voice.</li>
+        <li><strong>Translation assistance.</strong> For our Chinese (zh) content, AI translation tools produce initial drafts that are then reviewed and refined by bilingual editors to ensure accuracy and natural phrasing.</li>
+      </ul>
+
+      <h3>What AI Is NOT Used For</h3>
+      <ul>
+        <li><strong>Writing full editorial content.</strong> AI never writes our reviews, comparisons, verdicts, or analysis. The core editorial content — what makes a tool good or bad, who it is for, how it compares — comes entirely from the human reviewer's testing experience and judgment.</li>
+        <li><strong>Determining scores.</strong> AI does not assign or suggest review scores. Scores are determined by human reviewers and editors using our documented rubric.</li>
+        <li><strong>Generating fake testimonials or use cases.</strong> All use cases, examples, and scenarios described in our reviews are based on real testing or publicly verifiable information. We never use AI to fabricate plausible-sounding but false examples.</li>
+        <li><strong>Automated content publishing.</strong> AI-generated content is never published without human review. Every piece of content on this site has been read, fact-checked, and approved by at least one human editor before publication.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Update and Correction Policy</h2>
+      <p>AI tools evolve rapidly. Our content must keep pace:</p>
+      <ul>
+        <li><strong>Quarterly re-evaluation.</strong> Every reviewed tool is re-tested and re-scored at least once per quarter. If the tool has changed significantly, we update the review with a new score, new test date, and a summary of what changed.</li>
+        <li><strong>Major update fast-track.</strong> If a tool releases a major version update (e.g., GPT-4 to GPT-5, Midjourney V6 to V7), we fast-track the re-review within 2 weeks of the update.</li>
+        <li><strong>Corrections.</strong> Factual errors reported by readers or discovered internally are corrected within 48 hours. Significant corrections (anything that would change a reader's understanding or decision) are noted at the top of the article with the correction date and description.</li>
+        <li><strong>Score changes.</strong> Every score adjustment is recorded in our public changelog with the old score, new score, date, and reason.</li>
+        <li><strong>Content deprecation.</strong> If a tool shuts down, pivots away from AI, or drops significantly in quality, we add a deprecation notice to the review page and move it to our deprecated tools section. We do not silently delete reviews.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Sponsorship and Partnership Disclosure</h2>
+      <p>We believe readers deserve to know who pays for the content they consume. Our policy:</p>
+      <ul>
+        <li><strong>Clear labeling.</strong> Any content that involves payment from a third party is labeled as "Sponsored," "Partner Content," or "Advertisement" — both at the top of the page and in any index pages where it appears. We use visually distinct formatting so sponsored content cannot be mistaken for editorial.</li>
+        <li><strong>Editorial independence.</strong> Sponsors have no influence over our editorial content. They do not review, approve, or edit our reviews. They do not see editorial content before publication. Our reviewers and editors do not know which tools are sponsors when they write reviews.</li>
+        <li><strong>Affiliate disclosure.</strong> Some links on our site are affiliate links, meaning we may earn a small commission if you click through and make a purchase — at no additional cost to you. Affiliate links are marked with a visible "affiliate" tag and rel="sponsored" attribute. Affiliate relationships do not influence our rankings, scores, or recommendations.</li>
+        <li><strong>No pay-to-play.</strong> We do not accept payment to list a tool, rank it higher, give it a better review, or remove a negative review. We have turned down every such offer we have received and will continue to do so.</li>
+        <li><strong>Free review submissions.</strong> Any tool maker can submit their tool for review for free. Submission does not guarantee a review; we prioritize tools that solve real problems and have a minimum quality bar of 6.0/10.</li>
+      </ul>
+      <p>For detailed information about our monetization, see our <a href="/advertising/">Advertising Policy</a> and <a href="/advertise/">Advertise page</a>.</p>
+    </section>
+
+    <section>
+      <h2>Reader Feedback and Complaints</h2>
+      <p>We welcome feedback on our editorial content and policies. If you believe a review is inaccurate, biased, or violates this editorial policy, you can:</p>
+      <ul>
+        <li>Email <a href="mailto:contact@thebestaitoolsreview.com">contact@thebestaitoolsreview.com</a> with the subject "Editorial concern" and a link to the relevant page.</li>
+        <li>Contact the individual reviewer through their profile page.</li>
+        <li>Submit a correction request with specific details and supporting evidence.</li>
+      </ul>
+      <p>We review all editorial complaints within 5 business days. If the complaint is substantiated, we issue a correction. If we disagree, we respond with a detailed explanation. We may publish anonymized summaries of substantive complaints and our responses on the relevant review page.</p>
+    </section>
+
+    <section>
+      <h2>Related Pages</h2>
+      <ul>
+        <li><a href="/methodology/">Review Methodology</a> — Detailed scoring rubric and testing procedures</li>
+        <li><a href="/editorial-guidelines/">Editorial Guidelines</a> — Day-to-day editorial standards and practices</li>
+        <li><a href="/advertising/">Advertising Policy</a> — How we handle ads, sponsorships, and affiliate relationships</li>
+        <li><a href="/about/">About Us</a> — Our team, mission, and independence commitments</li>
+      </ul>
+    </section>
+  </article>
+</BaseLayout>

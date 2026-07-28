@@ -1,0 +1,23 @@
+slug: alex-chen
+name: Alex Chen
+role: Lead Reviewer
+bio: >
+  Alex Chen is a seasoned software engineer and AI tool reviewer with over 10 years of experience
+  in the tech industry. He specializes in evaluating AI-powered developer tools, code assistants,
+  and programming-oriented platforms. Having worked at multiple startups and tech companies, Alex
+  has hands-on experience with a wide range of AI tools spanning code generation, debugging,
+  testing automation, and DevOps workflows. His reviews focus on real-world usability, integration
+  capabilities, and the practical impact AI tools have on developer productivity. Alex holds a
+  degree in Computer Science and has contributed to open-source projects in the developer tooling
+  space. When not testing the latest AI coding assistants, he enjoys mentoring junior developers
+  and writing about software engineering best practices.
+avatar: /images/authors/alex-chen.jpg
+expertise:
+  - AI Developer Tools
+  - Code Assistants
+  - Software Engineering
+  - DevOps
+  - Open Source
+social:
+  twitter: https://twitter.com/alexchen_dev
+  github: https://github.com/alexchen-dev

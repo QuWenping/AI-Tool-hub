@@ -12,6 +12,7 @@ const blogCollection = defineCollection({
     author: z.string(),
     author_slug: z.string().optional(),
     date: z.string(),
+    dateModified: z.string().optional(),
     tags: z.array(z.string()).default([]),
     read_time: z.string().optional(),
     image: z.string().optional(),
@@ -113,4 +114,21 @@ const toolsCollection = defineCollection({
   }),
 });
 
-export const collections = { blog: blogCollection, tools: toolsCollection };
+const authorsCollection = defineCollection({
+  type: 'data',
+  schema: z.object({
+    slug: z.string(),
+    name: z.string(),
+    role: z.string(),
+    bio: z.string(),
+    avatar: z.string(),
+    expertise: z.array(z.string()).default([]),
+    social: z.object({
+      twitter: z.string().optional(),
+      linkedin: z.string().optional(),
+      github: z.string().optional(),
+    }).optional(),
+  }),
+});
+
+export const collections = { blog: blogCollection, tools: toolsCollection, authors: authorsCollection };

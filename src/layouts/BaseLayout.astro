@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import categoriesData from "../data/categories.json";
 import Newsletter from "../components/Newsletter.astro";
 import CookieConsent from "../components/CookieConsent.astro";
+import CookieConsentZh from "../components/CookieConsentZh.astro";
 import "../styles/global.css";
 import { localePath, navLabel, getTranslations } from "../utils/i18n";
 const allTools = await getCollection("tools");
@@ -300,9 +301,14 @@ const ogImage = image ? siteUrl + image : siteUrl + "/og-image.svg";
     <div class="container">
       <p>(c) 2026 AI Tool Hub. An ultra-minimal, curated directory of useful AI tools.</p>
       <ul class="nav-links">
-        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/team/">Team</a></li>
         <li><a href="/privacy/">Privacy</a></li>
         <li><a href="/terms/">Terms</a></li>
+        <li><a href="/cookie-policy/">Cookie Policy</a></li>
+        <li><a href="/editorial-guidelines/">Editorial Policy</a></li>
+        <li><a href="/advertise/">Advertising</a></li>
+        <li><a href="/contact/">Contact</a></li>
       </ul>
     </div>
   </footer>
@@ -312,7 +318,7 @@ const ogImage = image ? siteUrl + image : siteUrl + "/og-image.svg";
 
 
 
-<CookieConsent />
+{lang === "zh" ? <CookieConsentZh /> : <CookieConsent />}
 <script is:inline>
 // Lazy load images without loading attribute
 document.addEventListener('DOMContentLoaded',function(){

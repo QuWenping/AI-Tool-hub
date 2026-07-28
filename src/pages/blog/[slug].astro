@@ -16,6 +16,8 @@ const post = Astro.props.post;
 const postData = post.data;
 const postBody = post.body || '';
 const allBlogPosts = await getCollection('blog');
+const allAuthors = await getCollection('authors');
+const matchedAuthor = postData.author_slug ? allAuthors.find(a => a.data.slug === postData.author_slug) : null;
 const zhAvailable = !!(postData.title_zh || postData.desc_zh || postData.content_zh);
 const postTitle = pageLang === "zh" && postData.title_zh ? postData.title_zh : postData.title_en;
 const postDesc = pageLang === "zh" && postData.desc_zh ? postData.desc_zh : postData.desc_en;
@@ -32,11 +34,12 @@ const faqItems = postData.faq && postData.faq.length > 0 ? postData.faq : [
   { q: "Who is this for?", a: "Anyone interested in " + postData.category + " - " + postData.desc_en },
   { q: "How was this content created?", a: "Our editorial team tested real AI tools on real work over multiple weeks before publishing this review." }
 ];
-const authorSchema = postData.author_slug ? {
+const authorSchema = matchedAuthor ? {
   "@type": "Person",
-  "name": "Lin Chen",
-  "url": siteUrl + "/author/" + postData.author_slug + "/",
-  "jobTitle": "Lead Reviewer and Editor-in-Chief",
+  "name": matchedAuthor.data.name,
+  "url": siteUrl + "/author/" + matchedAuthor.data.slug + "/",
+  "jobTitle": matchedAuthor.data.role,
+  "description": matchedAuthor.data.bio,
   "affiliation": {
     "@type": "Organization",
     "name": "AI Tool Hub",
@@ -60,7 +63,7 @@ const articleSchema = {
     "height": 630
   },
   "datePublished": postData.date,
-  "dateModified": postData.date,
+  "dateModified": postData.dateModified || postData.date,
   "author": authorSchema,
   "publisher": {
     "@type": "Organization",
@@ -110,13 +113,18 @@ const faqSchema = {
       <h1>{postTitle}</h1>
       <p class="lede">{postDesc}</p>
       <div class="article-meta">
-        <span class="meta-item"><i class="far fa-calendar"></i> {postData.date}</span>
+        <span class="meta-item"><i class="far fa-calendar"></i> Published {postData.date}</span>
+        {postData.dateModified && postData.dateModified !== postData.date && (
+          <span class="meta-item"><i class="far fa-history"></i> Updated {postData.dateModified}</span>
+        )}
         <span class="meta-item"><i class="far fa-clock"></i> {postData.read_time} read</span>
         <span class="meta-item"><i class="far fa-user"></i> {postData.author}</span>
-        <span class="meta-item reviewer">
-          <i class="fas fa-user-check"></i>
-          Reviewed by <strong><a href="/author/lin-chen/">Lin Chen</a></strong>, Lead Reviewer (5+ years testing AI tools)
-        </span>
+        {matchedAuthor && (
+          <span class="meta-item reviewer">
+            <i class="fas fa-user-check"></i>
+            Reviewed by <strong><a href={`/author/${matchedAuthor.data.slug}/`}>{matchedAuthor.data.name}</a></strong>, {matchedAuthor.data.role}
+          </span>
+        )}
       </div>
     </header>
 
@@ -166,6 +174,31 @@ const faqSchema = {
         <div class="audience-tags">
           {postData.tags.map(t => <span class="audience-tag">#{t}</span>)}
         </div>
+      </section>
+    )}
+
+    {matchedAuthor && (
+      <section class="section-mt author-bio-card">
+        <div class="author-bio-header">
+          <img src={matchedAuthor.data.avatar} alt={matchedAuthor.data.name} class="author-avatar" width="80" height="80" />
+          <div>
+            <h3>{matchedAuthor.data.name}</h3>
+            <p class="author-role">{matchedAuthor.data.role}</p>
+          </div>
+        </div>
+        <p class="author-bio-text">{matchedAuthor.data.bio}</p>
+        {matchedAuthor.data.expertise.length > 0 && (
+          <div class="author-expertise">
+            {matchedAuthor.data.expertise.map(e => <span class="expertise-tag">{e}</span>)}
+          </div>
+        )}
+        {matchedAuthor.data.social && (
+          <div class="author-social">
+            {matchedAuthor.data.social.twitter && <a href={matchedAuthor.data.social.twitter} target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>}
+            {matchedAuthor.data.social.linkedin && <a href={matchedAuthor.data.social.linkedin} target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>}
+            {matchedAuthor.data.social.github && <a href={matchedAuthor.data.social.github} target="_blank" rel="noopener"><i class="fab fa-github"></i></a>}
+          </div>
+        )}
       </section>
     )}
 

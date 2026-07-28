@@ -61,7 +61,7 @@ const articleSchema = {
     "height": 630
   },
   "datePublished": postData.date,
-  "dateModified": postData.date,
+  "dateModified": postData.dateModified || postData.date,
   "author": authorSchema,
   "publisher": {
     "@type": "Organization",
@@ -112,8 +112,11 @@ const faqSchema = {
       <h1>{postTitle}</h1>
       <p class="lede">{postDesc}</p>
       <div class="article-meta">
-        <span class="meta-item"><i class="far fa-calendar"></i> {postData.date}</span>
-        <span class="meta-item"><i class="far fa-clock"></i> {postData.read_time} read</span>
+        <span class="meta-item"><i class="far fa-calendar"></i> 发布于 {postData.date}</span>
+        {postData.dateModified && postData.dateModified !== postData.date && (
+          <span class="meta-item"><i class="far fa-history"></i> 更新于 {postData.dateModified}</span>
+        )}
+        <span class="meta-item"><i class="far fa-clock"></i> {postData.read_time} 阅读</span>
         <span class="meta-item"><i class="far fa-user"></i> {postData.author}</span>
         <span class="meta-item reviewer">
           <i class="fas fa-user-check"></i>

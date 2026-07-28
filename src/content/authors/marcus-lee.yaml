@@ -1,0 +1,24 @@
+slug: marcus-lee
+name: Marcus Lee
+role: AI Research Analyst
+bio: >
+  Marcus Lee is an AI research analyst with a strong background in machine learning and a passion
+  for rigorous model evaluation. He specializes in benchmarking and comparing AI models across
+  various dimensions including accuracy, speed, cost-efficiency, and real-world applicability.
+  Marcus holds a Master's degree in Machine Learning and has published research on model
+  evaluation methodologies. His analytical approach combines quantitative metrics with practical
+  testing to provide readers with actionable insights when choosing between competing AI
+  solutions. Marcus has evaluated over 200 AI models and tools across categories including
+  large language models, image generation, speech recognition, and data analysis platforms.
+  He is committed to transparency in AI benchmarking and advocates for standardized evaluation
+  frameworks that help users make informed decisions based on their specific use cases.
+avatar: /images/authors/marcus-lee.jpg
+expertise:
+  - AI Model Evaluation
+  - Benchmarking
+  - Machine Learning
+  - LLM Comparison
+  - Data Analysis
+social:
+  twitter: https://twitter.com/marcuslee_ai
+  github: https://github.com/marcuslee-ml

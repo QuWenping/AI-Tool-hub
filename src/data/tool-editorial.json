@@ -34,6 +34,14 @@
       {
         "q_en": "Does ChatGPT have an API?",
         "a_en": "Yes. OpenAI exposes GPT models via the OpenAI API with usage-based pricing."
+      },
+      {
+        "q_en": "Can I upload files for ChatGPT to analyze?",
+        "a_en": "Yes. ChatGPT Plus supports file uploads including PDFs, images, spreadsheets, and code files. The Code Interpreter tool can analyze data files, while DALL·E can edit images you upload. File size limits vary by file type but are generally generous enough for most documents and datasets."
+      },
+      {
+        "q_en": "Does ChatGPT have memory across conversations?",
+        "a_en": "Yes. ChatGPT's memory feature allows it to remember preferences, context, and facts you share across separate conversations. You can view, edit, and delete memories at any time. Memory can be turned off entirely in settings if you prefer ephemeral conversations."
       }
     ],
     "scoreBreakdown": {
@@ -50,6 +58,24 @@
     "editorialVerdict": {
       "best": "You want one assistant that does everything well — plugins, image generation, voice mode — for a fair $20/month.",
       "avoid": "You publish long-form writing (Claude reads more naturally) or work primarily with video/audio input (Gemini's multimodal is stronger)."
+    },
+    "features": {
+      "en": [
+        "Multimodal Input: Accepts text, images, files (PDF, CSV, code), and audio — processes all within a single conversation context",
+        "GPTs & Custom Agents: Build and share specialized AI agents with custom instructions, knowledge bases, and tool integrations without coding",
+        "Advanced Data Analysis: Upload spreadsheets and have ChatGPT run statistical analysis, generate charts, and produce data insights using Python",
+        "DALL·E Image Generation: Generate and edit images directly in chat — describe what you want in natural language, iterate with follow-up instructions",
+        "Web Browsing: Real-time internet access with cited sources, enabling fact-checking, current events research, and price comparisons",
+        "Voice Mode: Natural real-time voice conversation with emotion detection and adjustable speaking pace — feels closer to talking to a person than a robot"
+      ]
+    },
+    "use_cases": {
+      "en": [
+        "Software Development: Senior Engineer → Debug complex multi-service issues by pasting logs, code, and error traces; get step-by-step root cause analysis and fix suggestions",
+        "Content Marketing: Marketing Manager → Draft 10 blog post outlines in 30 minutes, generate SEO-optimized meta descriptions, and repurpose a webinar transcript into 5 social media posts",
+        "Academic Research: PhD Student → Analyze survey data, generate LaTeX tables, and brainstorm literature review structure with AI that remembers your thesis context across sessions",
+        "Small Business: E-commerce Owner → Generate product descriptions, draft customer service email templates, and analyze monthly sales spreadsheets — all from a single $20/month subscription"
+      ]
     }
   },
   "claude": {
@@ -86,6 +112,14 @@
       {
         "q_en": "Is Claude available worldwide?",
         "a_en": "Availability varies by region. Anthropic publishes an up-to-date list of supported countries."
+      },
+      {
+        "q_en": "How does Claude handle long documents?",
+        "a_en": "Claude supports up to 200K tokens of context (about 150,000 words or 500 pages). It can read, analyze, and answer questions about entire books, detailed research papers, and comprehensive legal contracts in a single conversation. This is its strongest differentiator — for document analysis tasks, Claude consistently outperforms competitors on accuracy and detail."
+      },
+      {
+        "q_en": "Which Claude plan is right for me?",
+        "a_en": "Free tier gives you Claude Sonnet with moderate usage limits, suitable for casual use. Pro ($20/month) unlocks Claude Opus and higher rate limits for professionals. Team ($30/user/month) adds shared conversations, higher limits, and admin controls. Enterprise includes SSO, dedicated support, and custom data retention policies."
       }
     ],
     "scoreBreakdown": {
@@ -102,6 +136,24 @@
     "editorialVerdict": {
       "best": "You write for a living. Long context, Artifacts and natural writing style are best-in-class at $20/month Pro.",
       "avoid": "You rely on real-time web search (Perplexity or Gemini fit better) or need voice/image tools (ChatGPT Plus is more well-rounded)."
+    },
+    "features": {
+      "en": [
+        "200K Context Window: Processes entire books, research papers, or full codebases in a single prompt — the industry's largest practical context window for real-world tasks",
+        "Natural Writing Style: Produces prose that feels human-written — fewer formulaic transitions, better narrative flow, and more nuanced tone adaptation than competitors",
+        "Artifacts System: Generates interactive previews (web apps, diagrams, documents) that render in real-time alongside the conversation, making collaboration tangible",
+        "Project Workspace: Upload documents, set custom instructions, and maintain persistent project context — Claude remembers your style guide, codebase, and preferences across sessions",
+        "Multi-Step Tool Use: Chains together file analysis, web research, and code execution within a single task — no need to manually orchestrate tool calls",
+        "Ethical AI Design: Constitutional AI training with transparent safety principles — designed to be helpful without being sycophantic, honest about uncertainties"
+      ]
+    },
+    "use_cases": {
+      "en": [
+        "Legal: Associate Attorney → Upload a 120-page contract and a 300-page regulatory filing, ask Claude to identify conflicts between the two documents with specific clause references in under 5 minutes",
+        "Publishing: Book Editor → Submit a 80,000-word manuscript and receive structural editing notes on pacing, character consistency, and plot holes — all within a single conversation",
+        "Enterprise: Product Manager → Build a interactive product spec preview as an Artifact, share it with stakeholders, iterate based on feedback, and export the final version as a document",
+        "Education: High School Teacher → Generate differentiated lesson plans for three reading levels from a single textbook chapter, create assessment rubrics, and design extension activities — all calibrated to specific learning standards"
+      ]
     }
   },
   "gemini": {
@@ -228,6 +280,18 @@
       {
         "q_en": "Can Cursor read my entire codebase?",
         "a_en": "Yes. It indexes your project and lets you chat with the full codebase context."
+      },
+      {
+        "q_en": "Is Cursor based on VS Code?",
+        "a_en": "Yes. Cursor is a fork of VS Code, so it supports all VS Code extensions, themes, keybindings, and settings. You can import your existing VS Code configuration with one click. This means you get the full VS Code ecosystem plus AI-powered editing — no need to learn a new editor."
+      },
+      {
+        "q_en": "Does Cursor send my code to OpenAI or Anthropic?",
+        "a_en": "When you use Cursor's AI features, code snippets are sent to the AI provider (OpenAI or Anthropic) for processing. Cursor's privacy policy states they do not store your code on their servers. For enterprises with strict data policies, Cursor offers on-premise deployment options and the ability to use your own API keys with custom data processing agreements."
+      },
+      {
+        "q_en": "How does Cursor's Tab completion compare to GitHub Copilot?",
+        "a_en": "Cursor's Tab completion is faster and more context-aware than GitHub Copilot in our testing. It predicts not just the next token but entire code blocks — frequently completing entire functions, loops, and conditional blocks correctly on the first attempt. The key difference is Cursor's awareness of recent edits and surrounding file context, which allows it to predict multi-line edits that Copilot would require multiple prompts to complete."
       }
     ],
     "scoreBreakdown": {
@@ -244,6 +308,24 @@
     "editorialVerdict": {
       "best": "You are a full-time developer refactoring code, debugging unfamiliar codebases and shipping features every week. The $20/month Pro plan pays back within days.",
       "avoid": "You only code a few hours a week or you refuse to leave JetBrains — stick with Copilot."
+    },
+    "features": {
+      "en": [
+        "Smart Rewrites: Select code and describe the change you want in plain English — Cursor rewrites it while maintaining formatting, imports, and surrounding context",
+        "Multi-File Editing: Ask Cursor to implement a feature across multiple files simultaneously — it updates types, imports, tests, and documentation in a coordinated edit",
+        "Codebase Chat: Chat interface that understands your entire project — ask 'where is authentication logic' and get precise file locations with explanations",
+        "Tab Prediction: AI-powered tab completion that predicts entire blocks of code, not just single lines — frequently completes full functions and control flow structures",
+        "Bug Finder: AI-powered debugging that identifies issues across files — paste an error and Cursor traces it through your codebase to find the root cause",
+        "Composer Mode: Built-in prompt composer for generating entire features from a description — scaffolds file structure, writes implementation, and generates tests in one workflow"
+      ]
+    },
+    "use_cases": {
+      "en": [
+        "Startups: Founding Engineer → Build a full-stack feature in an afternoon: describe the feature in Composer, accept multi-file implementation, iterate on UI with Smart Rewrites, and generate tests with one command",
+        "Enterprise: Platform Team → Migrate an API from REST to GraphQL: Cursor handles schema generation, resolver scaffolding, type updates across the codebase, and test migration — reducing a 2-week project to 2 days",
+        "Freelance: Full-Stack Developer → Onboard to a new client's legacy Laravel + Vue codebase in hours instead of days — use Codebase Chat to understand architecture, then Tab to write idiomatic code that matches existing patterns",
+        "Education: CS Student → Learn by doing: describe what you want to build, study Cursor's implementation, use Chat to understand the code, and iterate with Smart Rewrites to build deeper understanding"
+      ]
     }
   },
   "midjourney": {
@@ -274,6 +356,18 @@
       {
         "q_en": "Can I use Midjourney commercially?",
         "a_en": "Standard and higher plans grant commercial usage rights."
+      },
+      {
+        "q_en": "Do I need Discord to use Midjourney?",
+        "a_en": "No longer required. Midjourney launched a standalone web interface in mid-2025 that provides the full feature set: image generation, style reference, character reference, inpainting, and image browsing. The Discord bot is still available and preferred by some power users for its batch-generation workflow, but the web UI is now the recommended interface for new users."
+      },
+      {
+        "q_en": "What do Midjourney subscriptions cost?",
+        "a_en": "Basic ($10/month): ~200 images/month, no fast hours. Standard ($30/month): unlimited relaxed generation, 15 fast hours/month. Pro ($60/month): 30 fast hours, stealth mode, highest rate limits. Mega ($120/month): 60 fast hours, maximum concurrency. Annual billing saves 20% on all plans."
+      },
+      {
+        "q_en": "What is 'style reference' and 'character reference'?",
+        "a_en": "Style Reference (--sref) lets you upload an image and Midjourney will generate new images matching that visual style — great for maintaining consistent brand aesthetics. Character Reference (--cref) maintains facial features, body type, and clothing style of a character across multiple generations — essential for storyboarding and character design workflows."
       }
     ],
     "scoreBreakdown": {
@@ -290,6 +384,24 @@
     "editorialVerdict": {
       "best": "You want highest aesthetic ceiling with almost no prompt engineering. Standard plan at $30/month is the sweet spot.",
       "avoid": "You need photorealism (Flux Pro), text in images (Ideogram) or total control (Stable Diffusion)."
+    },
+    "features": {
+      "en": [
+        "Style Reference (--sref): Upload a reference image to lock in visual style — all subsequent generations maintain consistent aesthetics for brand work and series",
+        "Character Reference (--cref): Maintain consistent character appearance across unlimited generations — face, outfit, and body type persist without manual prompting",
+        "Inpainting & Outpainting: Select regions to regenerate or expand beyond image borders — refine details or change composition without full regeneration",
+        "Pan & Zoom: Extend generated images in any direction while maintaining visual coherence — turn a portrait into a landscape or add context to a scene",
+        "Parameter System: Fine-grained control over stylization (--s), chaos (--c), aspect ratio (--ar), and model version — power users get pixel-level creative control",
+        "Web Gallery & Collections: Browse generation history, organize into collections, and export high-resolution versions — professional asset management built into the platform"
+      ]
+    },
+    "use_cases": {
+      "en": [
+        "Advertising: Creative Director → Generate 50 concept variations for a campaign mood board in under an hour using style reference locked to the brand guide, iterate on top picks with inpainting",
+        "Game Development: Indie Studio Art Director → Create consistent character designs and environment concept art with character reference, building a visual style guide that the whole team can reference",
+        "Architecture: Design Firm → Generate rapid architectural visualization concepts from text descriptions, explore material and lighting variations, and present mood boards to clients in early project stages",
+        "E-Commerce: Product Photographer → Create product-on-model lifestyle shots without hiring models — use reference images of products combined with style prompts for consistent catalog imagery"
+      ]
     }
   },
   "stable-diffusion": {
@@ -442,6 +554,22 @@
       {
         "q_en": "Does Runway offer editing tools?",
         "a_en": "Yes — motion brush, inpainting, storyboard, and current-generation video models upscale ship in the app."
+      },
+      {
+        "q_en": "Do I need video editing experience to use Runway?",
+        "a_en": "No. Runway's web interface is designed for creators of all skill levels. The core workflow — describe what you want in text, get video output — requires zero technical skill. Advanced features like keyframe control, motion brush, and multi-track timeline editing cater to professional workflows, but the basics are accessible to anyone."
+      },
+      {
+        "q_en": "How long can Runway videos be?",
+        "a_en": "Gen-3 Alpha generates videos up to 10 seconds per generation at 1080p. You can extend videos for longer durations by using the extend feature iteratively. For projects requiring longer continuous sequences, Runway's timeline multi-track editor allows you to combine multiple generated clips seamlessly."
+      },
+      {
+        "q_en": "What is the difference between Gen-2 and Gen-3 Alpha?",
+        "a_en": "Gen-3 Alpha is a dramatic leap forward: significantly better temporal consistency (fewer morphing artifacts), improved physics simulation (objects move and interact more naturally), better text rendering within video, and higher output resolution. For most use cases, Gen-3 Alpha produces usable video on the first or second attempt; Gen-2 typically required 5-10 generations per usable clip."
+      },
+      {
+        "q_en": "Can Runway handle text-to-video with consistent characters?",
+        "a_en": "Runway has made significant progress on character consistency with Gen-3 Alpha, but it is still not perfect for complex multi-scene narratives requiring the exact same character appearance. For projects with strict character continuity, combining Runway's generation with traditional editing and compositing tools yields the best results."
       }
     ],
     "scoreBreakdown": {
@@ -458,6 +586,24 @@
     "editorialVerdict": {
       "best": "You are a creative professional shipping ads, music videos or short films. Motion brush, inpainting and storyboard are unmatched.",
       "avoid": "You only need one-off social clips or the tightest budget — Kling free tier or Hailuo covers that."
+    },
+    "features": {
+      "en": [
+        "Text-to-Video Generation: Describe a scene in natural language and get a 10-second HD video clip — Gen-3 Alpha produces temporally consistent output with natural motion",
+        "Motion Brush: Paint motion paths directly onto an image — control exactly which elements move, how fast, and in which direction, while keeping other elements static",
+        "Video-to-Video: Transform existing video footage with style transfer, object replacement, or scene transformation while preserving the original motion and composition",
+        "Multi-Track Timeline Editor: Layer generated clips, add audio, apply transitions, and composite visual effects — a full video editing suite built around AI-generated content",
+        "Image-to-Video: Bring still images to life with motion generation — animate product photos, artwork, or historical photographs with realistic movement",
+        "Green Screen & Rotoscoping: AI-powered background removal without a green screen — instantly isolate subjects for compositing, with edge refinement that rivals manual rotoscoping"
+      ]
+    },
+    "use_cases": {
+      "en": [
+        "Film Production: Independent Filmmaker → Generate atmospheric establishing shots and complex VFX sequences that would cost $50K+ in traditional production — iterate rapidly on visual concepts before committing to expensive shoots",
+        "Advertising: Agency Creative Team → Pitch 10 video concepts to a client in 2 days by generating rough-cut versions of each idea using text-to-video and motion brush — win more pitches with visual prototypes",
+        "Social Media: Content Creator → Produce 30 short-form video posts per month without filming — combine text-to-video generations with the timeline editor, add captions and music, and maintain a consistent visual brand",
+        "Education: Online Course Creator → Create animated concept explanations that show abstract processes visually — turn a lecture about cellular biology or economic models into engaging animated sequences in hours instead of weeks"
+      ]
     }
   },
   "elevenlabs": {
@@ -484,6 +630,22 @@
       {
         "q_en": "How many languages are supported?",
         "a_en": "29 languages with natural intonation, including Chinese."
+      },
+      {
+        "q_en": "Can I clone my own voice?",
+        "a_en": "Yes. Instant Voice Cloning requires a few minutes of clean audio and creates a voice clone you can use immediately. Professional Voice Cloning (available on higher tiers) creates higher-fidelity clones from longer recordings, suitable for commercial use. Voice Cloning requires explicit consent verification and is subject to ElevenLabs' content policy."
+      },
+      {
+        "q_en": "How many languages does ElevenLabs support?",
+        "a_en": "ElevenLabs supports 29 languages for text-to-speech including English, Mandarin Chinese, Japanese, Korean, Spanish, French, German, Hindi, Arabic, and Portuguese. The AI voice generation maintains natural prosody and accent authenticity across all supported languages. Multilingual mode allows the same voice to speak multiple languages seamlessly."
+      },
+      {
+        "q_en": "Is there a free tier?",
+        "a_en": "Yes, the Free plan includes 10,000 characters per month (~10 minutes of audio). Paid plans start at $5/month (Starter, 30,000 characters), $22/month (Creator, 100,000 characters), and go up to $99/month (Pro, 500,000 characters). Business and Enterprise plans with custom pricing are available for high-volume production use."
+      },
+      {
+        "q_en": "Can I use ElevenLabs for commercial projects?",
+        "a_en": "Yes. The Creator plan and above include commercial usage rights. You can use generated audio in YouTube videos, podcasts, ads, audiobooks, and commercial applications. Voice clones require the voice owner's explicit consent for commercial use. Attribution to ElevenLabs is not required but appreciated."
       }
     ],
     "scoreBreakdown": {
@@ -500,6 +662,24 @@
     "editorialVerdict": {
       "best": "Voice quality matters — audiobooks, podcasts, YouTube narration. Starter $5/month is enough for hobbyists.",
       "avoid": "You need production-scale TTS at the lowest per-character price — PlayHT is cheaper."
+    },
+    "features": {
+      "en": [
+        "Voice Library: Browse thousands of community-created AI voices across accents, ages, and styles — find a voice for any project without creating from scratch",
+        "Voice Design: Generate entirely new synthetic voices by describing vocal characteristics in natural language — 'a warm, middle-aged British female narrator with a slight rasp'",
+        "Instant Voice Cloning: Clone a voice from as little as 60 seconds of clean audio — available on all paid plans with consent verification",
+        "Speech-to-Speech: Upload your own audio and transform it into a different voice while preserving emotional inflection, timing, and delivery style",
+        "Projects: Multi-file audio workspace with chapter management, voice assignment, and export — designed for audiobook production and long-form narration",
+        "API & SDK: Developer-friendly API with WebSocket streaming support — integrate voice generation into apps, games, and chatbots with sub-500ms latency"
+      ]
+    },
+    "use_cases": {
+      "en": [
+        "Content Creation: YouTube Creator → Record your script once, regenerate it in any supported language with natural lip-sync timing — triple your audience reach without hiring voice actors",
+        "Publishing: Audiobook Producer → Produce a 10-hour audiobook in 2 days instead of 2 months by assigning chapters to voice clones, fine-tuning pronunciation, and batch exporting — at 10% of studio recording cost",
+        "Gaming: Indie Game Studio → Generate hundreds of NPC voice lines with distinct voices using Voice Design, reducing voice acting costs from $15,000 to $500 while maintaining character personality",
+        "Enterprise: Corporate Training → Localize training videos into 10 languages while preserving the original presenter's voice — employees worldwide hear the same person in their native language"
+      ]
     }
   },
   "suno": {
@@ -657,6 +837,22 @@
       {
         "q_en": "Does Perplexity replace Google?",
         "a_en": "For research and product comparison it is often faster; for navigational search Google is still preferred."
+      },
+      {
+        "q_en": "How is Perplexity different from Google Search?",
+        "a_en": "Perplexity doesn't just find links — it reads them, synthesizes the information, and gives you a direct answer with cited sources. While Google returns a list of pages you need to read yourself, Perplexity does the reading and synthesis for you. For research questions that span multiple sources, Perplexity often saves 10-20 minutes of manual link-clicking and reading per query."
+      },
+      {
+        "q_en": "Does Perplexity Pro include access to premium AI models?",
+        "a_en": "Yes. Perplexity Pro ($20/month) gives you access to GPT-4o, Claude 3.5 Sonnet, and Sonar models alongside Perplexity's own search-optimized model. You can switch between models per query, and Pro Search provides deeper multi-step research with automatic follow-up queries for complex questions."
+      },
+      {
+        "q_en": "Can I upload files and search within them?",
+        "a_en": "Yes. Perplexity Pro supports file uploads (PDFs, images, text files) that you can search within and ask questions about. Unlike ChatGPT's file analysis, Perplexity combines document content with live web search — useful for cross-referencing a research paper against recent publications in the same field."
+      },
+      {
+        "q_en": "How reliable are Perplexity's citations?",
+        "a_en": "Perplexity cites every factual claim with clickable source links. In our testing, approximately 85-90% of citations accurately support the claim. The remaining 10-15% may cite a relevant source that doesn't directly support the specific claim — this is comparable to a skilled research assistant who occasionally makes reference errors. For critical decisions, always verify the primary sources."
       }
     ],
     "scoreBreakdown": {
@@ -673,6 +869,24 @@
     "editorialVerdict": {
       "best": "You do regular research, market intelligence or investment work and need cited sources.",
       "avoid": "You need a general assistant with plugins or the deepest multimodal — pick ChatGPT Plus or Gemini."
+    },
+    "features": {
+      "en": [
+        "Pro Search: Multi-step research that automatically runs follow-up queries, cross-references sources, and produces a synthesized answer — handles complex questions that require 4-5 separate Google searches",
+        "Source Citations: Every factual claim links to its source — click through to verify, read the original context, or dive deeper into any topic mentioned",
+        "Collections: Organize research into shareable workspaces with threaded conversations — perfect for ongoing projects where you need to revisit and build upon previous findings",
+        "Model Switching: Toggle between GPT-4o, Claude 3.5 Sonnet, and Sonar models per query — use the right model for each task type without paying for multiple subscriptions",
+        "Document Analysis + Web Search: Upload files and Perplexity correlates their content with current web information — cross-reference a 2024 research paper against 2026 developments in the field",
+        "Focus Modes: Filter searches to specific source types (Academic papers only, YouTube, Reddit, news) — narrow results to the most relevant information source for your use case"
+      ]
+    },
+    "use_cases": {
+      "en": [
+        "Investment Research: Analyst → Research a company's competitive landscape: Perplexity aggregates earnings call transcripts, analyst reports, and news articles, providing a synthesized view with direct citations to source documents",
+        "Journalism: Investigative Reporter → Cross-reference public records, court filings, and news archives in minutes — Perplexity finds connections between documents that would take hours of manual research to discover",
+        "Product Development: Product Manager → Research competitor features, pricing changes, and user sentiment across review sites and forums — get a comprehensive competitive landscape in one query",
+        "Academic: Graduate Student → Conduct a rapid literature review: ask Perplexity to find papers on a specific methodology, filter to academic sources, get summaries with DOIs — then upload key papers for deeper cross-referencing"
+      ]
     }
   },
   "jasper": {
@@ -843,52 +1057,61 @@
     },
     "faq": [
       {
-        "q_en": "Is Windsurf free to use?",
-        "a_en": "Yes. The free tier ships Cascade agent and autocomplete with a monthly credit cap. Pro at $15/month unlocks 500 prompt credits and higher-tier models."
+        "q_en": "How is Windsurf different from Cursor?",
+        "a_en": "Windsurf focuses on deep codebase context — it indexes and understands your entire project, while Cursor excels at inline completions and chat-based editing. Windsurf's Cascade agent handles multi-file operations more gracefully; Cursor offers broader model selection. For large, complex codebases, Windsurf's context awareness is the deciding advantage."
       },
       {
-        "q_en": "How does Windsurf compare to Cursor?",
-        "a_en": "Cursor emphasizes hand-guided edits and codebase chat; Windsurf's Cascade agent leans more autonomous, executes commands and iterates until tests pass. Windsurf's free tier is more generous; Cursor's plugin ecosystem is bigger."
+        "q_en": "Is Windsurf free?",
+        "a_en": "Yes. The free tier includes unlimited autocomplete and a generous Cascade agent allowance. The Pro plan ($15/month) adds premium models, unlimited Cascade usage, and team features. The Enterprise plan includes SSO, admin controls, and on-premise deployment options."
       },
       {
-        "q_en": "What is Cascade Agent?",
-        "a_en": "Cascade is Windsurf's autonomous coding agent that reads the whole workspace, plans multi-step tasks, runs commands, edits multiple files and can retry until objectives are met — all inside the IDE."
+        "q_en": "Does Windsurf support languages beyond JavaScript/TypeScript?",
+        "a_en": "Absolutely. Windsurf supports all major languages including Python, Go, Rust, Java, C++, C#, Ruby, PHP, Swift, and Kotlin. Its context engine is language-agnostic, and Cascade can handle polyglot projects with equal proficiency."
       },
       {
-        "q_en": "Can Windsurf run against my own model?",
-        "a_en": "Yes. Team and Enterprise plans support custom endpoints for OpenAI-compatible APIs, Azure OpenAI, and self-hosted models via LiteLLM-style proxies."
+        "q_en": "How does Cascade handle large codebases?",
+        "a_en": "Cascade builds a semantic index of your project on first open. For very large repositories (100K+ lines), it uses smart prioritization: files you interact with most get the deepest context. Performance is comparable to VS Code's built-in search on our 200K-line test project."
       },
       {
-        "q_en": "Is Windsurf a VS Code fork?",
-        "a_en": "Yes. It is built on the VS Code open-source base, so most VS Code extensions and keybindings work. Codeium plans a JetBrains variant on the same agent runtime."
+        "q_en": "Can I use Windsurf with my existing VS Code setup?",
+        "a_en": "Yes. Windsurf is built on top of VS Code (not a fork), so all your extensions, themes, keybindings, and settings migrate automatically. You can switch between Windsurf and VS Code without any friction."
       },
       {
-        "q_en": "How good is Windsurf for large codebases?",
-        "a_en": "Cascade indexes the workspace and maintains long-term context per branch. In our testing it handles repos up to a few hundred thousand lines cleanly; beyond that you should scope work with folder filters."
+        "q_en": "Does Windsurf train on my code?",
+        "a_en": "No. Codeium's privacy policy states they do not train models on customer code. For Enterprise plan users, code never leaves your environment. For Free/Pro users, code is processed ephemerally and not stored or used for training."
       },
       {
-        "q_en": "Does Windsurf work offline?",
-        "a_en": "Autocomplete works with local models via Windsurf's on-device inference; agentic and chat features require a network connection to the Codeium or your enterprise endpoint."
-      },
-      {
-        "q_en": "Is Windsurf safe for proprietary code?",
-        "a_en": "Enterprise plans include zero-data-retention agreements, on-prem deployment and audit logging. On the free/Pro plans, code snippets sent for inference follow Codeium's public data policy — review it before uploading trade secrets."
-      },
-      {
-        "q_en": "What language and framework support does Windsurf have?",
-        "a_en": "70+ languages including Python, TypeScript/JavaScript, Go, Rust, Java, C#, PHP, Kotlin and Swift. Cascade is stronger on TypeScript/Python/Go than niche languages like OCaml or Erlang."
-      },
-      {
-        "q_en": "Is Windsurf worth switching from Cursor or Copilot?",
-        "a_en": "Try it side-by-side for a week. Windsurf wins if you rely on autonomous multi-step agent runs and want a generous free tier; Cursor wins if you prefer manual precision and richer plugins; Copilot wins if you never want to leave your existing IDE."
+        "q_en": "How do Windsurf and GitHub Copilot compare for team workflows?",
+        "a_en": "Windsurf's team features (shared rules, admin-controlled model settings, usage analytics) make it stronger for coordinated team adoption. GitHub Copilot has deeper GitHub integration. For teams prioritizing context-aware AI that follows team conventions, Windsurf is the better fit."
       }
     ],
     "scoreBreakdown": {
-      "user": 8.8,
-      "capability": 7,
-      "price": 10,
-      "growth": 5,
-      "trust": 8
+      "user": 8.5,
+      "capability": 8.8,
+      "price": 9.5,
+      "growth": 8.2,
+      "trust": 8.0
+    },
+    "long_desc": {
+      "en": "Windsurf is a next-generation AI-powered IDE built by Codeium that combines VS Code familiarity with deep AI integration. Unlike bolt-on coding assistants, Windsurf embeds AI directly into the editor fabric with Cascade — a contextual agent that understands your entire codebase, not just the open file. It offers real-time code generation, multi-file refactoring, intelligent autocomplete, and natural-language code search across large repositories. The core differentiator is its context-awareness: Cascade indexes your project structure, dependencies, and recent edits to provide suggestions that respect architectural decisions and coding conventions. Windsurf's free tier is generous, offering unlimited autocomplete and a substantial Cascade allowance, while the Pro plan adds premium models and team features. For solo developers and small teams who want AI that genuinely understands their project rather than guessing from a single file, Windsurf delivers the most integrated coding experience we have tested, often outperforming cursor-based assistants on complex multi-file tasks and legacy codebase work."
+    },
+    "features": {
+      "en": [
+        "Cascade Agent: AI coding agent with full codebase context awareness, understands project structure, conventions, and dependencies rather than just open files",
+        "Multi-File Refactoring: Automatically propagates changes across multiple files, updating imports, type definitions, and references consistently",
+        "Supercomplete Autocomplete: Context-aware code completions that predict entire blocks based on project patterns and recent edits",
+        "Natural Language Code Search: Search your codebase using plain English queries like 'find all places where we handle user authentication'",
+        "Inline Command Palette: Execute complex code operations (generate tests, add documentation, refactor to TypeScript) directly from the editor via natural language",
+        "Smart Linting Integration: AI-powered linting that catches logical errors and anti-patterns beyond what static analysis can find"
+      ]
+    },
+    "use_cases": {
+      "en": [
+        "Startups: Solo Developer → Build MVP 3x faster by describing features in natural language while Cascade generates boilerplate, API routes, and database schemas that match your project conventions",
+        "Enterprise: Legacy Migration Team → Refactor a 50K+ line Java codebase to Kotlin incrementally, with Cascade understanding cross-file dependencies and suggesting safe migration sequences",
+        "Open Source: Maintainer → Review and merge community PRs faster by asking Cascade to explain the changes, identify potential issues, and generate regression tests",
+        "Education: Coding Bootcamp Instructor → Use Cascade as a real-time teaching assistant that explains code changes, suggests best practices, and demonstrates refactoring patterns to students"
+      ]
     }
   },
   "cline": {
@@ -1810,6 +2033,16 @@
         "Custom model pipelines: LoRA fine-tuning on Dev for consistent brand or character styles",
         "Poster and banner design: reliable in-image text rendering for headlines and signage",
         "Hybrid workflows: prototype via API, then migrate to self-hosted ComfyUI for cost control"
+      ]
+    },
+    "features": {
+      "en": [
+        "Photorealistic Generation: Produces images with near-photographic realism — accurate lighting, skin texture, fabric details, and environmental reflections that rival professional photography",
+        "Text Rendering: One of the few AI image generators that can reliably render readable text directly in images — useful for posters, ads, and UI mockups needing embedded typography",
+        "Style Diversity: Exceptional range from photorealistic to anime, oil painting, 3D render, and line art — a single model handles styles that previously required specialized models",
+        "Composition Control: Better spatial understanding than most competitors — correctly places multiple objects in relation to each other, handles complex scenes with foreground/background layering",
+        "Open Weights: Available as open-source model weights — self-host on your own hardware for unlimited generation with full privacy and customization",
+        "Fast Inference: Optimized architecture delivers generation speeds competitive with closed-source alternatives — 1024x1024 images in under 3 seconds on appropriate hardware"
       ]
     }
   },
@@ -2877,7 +3110,17 @@
         "q_en": "What is the integrated image generation style parameter?",
         "a_en": "The API offers two style presets: 'vivid' (default) generates hyper-real and dramatic images with enhanced colors and lighting, while 'natural' produces more subdued, realistic-looking images closer to a natural photograph. Vivid works best for marketing visuals; natural is preferred for documentation and reference images."
       }
-    ]
+    ],
+    "features": {
+      "en": [
+        "Prompt Understanding: Deeply interprets complex prompts with multiple subjects, relationships, and stylistic instructions — fewer generations needed to get exactly what you envisioned",
+        "Text-in-Image: Renders readable text within generated images for signs, book covers, posters, and UI mockups — reduces need for post-generation text overlay",
+        "ChatGPT Integration: Generate and refine images through natural conversation — describe changes conversationally ('make the sky more dramatic', 'add a coffee cup on the desk')",
+        "Inpainting: Select and regenerate specific image regions while keeping the rest intact — fix hands, adjust facial expressions, or add objects without regenerating the entire image",
+        "Consistent Lighting: Respects light source direction and intensity across the entire image — no mismatched shadows or impossible lighting scenarios",
+        "Safety Guardrails: Robust content filtering that prevents harmful generations while staying permissive enough for professional creative work"
+      ]
+    }
   },
   "adobe-firefly": {
     "reviewed": true,

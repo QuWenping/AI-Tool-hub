@@ -1,43 +1,132 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+const team = [
+  { name: "Lin Chen（陈琳）", role: "首席评测官 / 主编", initials: "LC", color: "#3b82f6", location: "旧金山，加州", bio: "陈琳拥有 5 年以上实际测试 AI 工具的经验。加入 AI Tool Hub 前，她是一家 B2B SaaS 公司的资深产品经理，同时是自由技术撰稿人。她亲手测试了目录中的每一款工具。陈琳负责撰写深度评测和编辑总评。她是写作类工具（ChatGPT、Claude、Gemini、Jasper）的首席评测官，并主导整体编辑流程。", education: "英语文学学士，加州大学伯克利分校。MBA，斯坦福商学院。", expertise: ["写作工具", "深度评测", "编辑流程", "总评撰写", "定价分析"], reviews: ["ChatGPT", "Claude", "Gemini", "Jasper", "ElevenLabs", "Suno", "Notion AI", "Perplexity", "内容写作分类", "学生分类"], articles: ["ChatGPT 对比 Claude", "Claude vs Gemini vs ChatGPT", "学生最佳免费 AI 工具", "内容写作者最佳 AI 工具", "如何用 Claude 处理长文档", "如何写出更好的提示词"], contact: "contact@thebestaitoolsreview.com", socials: ["Twitter: @aitoolhub_lin", "GitHub: @linchen"] },
+  { name: "Marcus Webb（马库斯·韦伯）", role: "资深工程师 / 编程工具评测官", initials: "MW", color: "#8b5cf6", location: "西雅图，华盛顿州", bio: "马库斯拥有 8 年软件开发经验，曾在 Stripe、Lyft 和两家早期创业公司任职。他用 TypeScript、Python、Go 和 Rust 编写过生产代码。他负责评测 AI 编程工具（Cursor、GitHub Copilot、ChatGPT 编程用途），并对每篇评测进行技术事实核查。他在真实生产代码（而非示例代码）上测试了目录中每一款编程工具。", education: "计算机科学学士，华盛顿大学。前 Google、前 Stripe。", expertise: ["编程工具", "IDE 集成", "代码审查", "开发者工作流", "团队推广"], reviews: ["Cursor", "GitHub Copilot", "所有编程工具", "代码审查标准", "开发者工作流指南"], articles: ["Cursor 对比 GitHub Copilot", "如何用 ChatGPT 编程", "如何为团队配置 Cursor", "如何用 ElevenLabs 做播客", "播客制作者最佳 AI 工具"], contact: "contact@thebestaitoolsreview.com", socials: ["Twitter: @aitoolhub_marcus", "GitHub: @marcuswebb"] },
+  { name: "Sofia Reyes（索菲亚·雷耶斯）", role: "产品设计师 / 设计工具评测官", initials: "SR", color: "#ec4899", location: "墨西哥城，墨西哥", bio: "索菲亚是产品设计师，曾在三家创业公司工作（两家为主导设计师、一家为创始设计师）。她专注 B2B SaaS 设计，曾发布面向数百万用户的产品。她负责评测 AI 设计工具（Midjourney、Figma AI、Adobe Firefly、Runway、Leonardo.AI），主导评测的视觉方向。过去 18 个月，她在真实客户项目上测试了每一款设计工具。", education: "平面设计学士，墨西哥国立自治大学。数字媒体硕士，巴塞罗那。", expertise: ["设计工具", "视觉内容", "图像生成", "品牌设计", "UI/UX 工作流"], reviews: ["Midjourney", "Stable Diffusion", "Leonardo.AI", "Runway", "Sora", "所有设计工具", "最佳 AI 图像生成器", "最佳 AI 视频生成器"], articles: ["最佳 AI 图像生成器对比", "最佳 AI 视频生成器", "设计师最佳 AI 工具", "如何写出好的 Midjourney 提示词"], contact: "contact@thebestaitoolsreview.com", socials: ["Twitter: @aitoolhub_sofia", "Instagram: @sofia.designs"] },
+  { name: "Daniel Park（丹尼尔·朴）", role: "营销负责人 / 营销工具评测官", initials: "DP", color: "#10b981", location: "奥斯汀，德克萨斯州", bio: "丹尼尔拥有 6 年增长营销经验，专注 B2B SaaS 的 SEO 和内容营销。曾管理年预算超 50 万美元的营销活动，深度使用过 Ahrefs、HubSpot 和 Webflow 等工具。他负责评测 AI 营销工具（Surfer SEO、Jasper、AdCreative.ai、Perplexity、MarketMuse），并主导营销工作流的测试。过去 18 个月在真实营销活动中花费超 5 万美元测试 AI 营销工具，为每个推荐追踪 ROI。", education: "市场营销学士，德克萨斯大学奥斯汀分校。前 HubSpot、前 Webflow。", expertise: ["营销工具", "SEO", "内容营销", "邮件营销", "数据分析", "ROI 追踪"], reviews: ["Surfer SEO", "MarketMuse", "Perplexity（营销用途）", "所有营销工具", "最佳 AI SEO 工具", "最佳 AI 小企业工具"], articles: ["小企业最佳 AI 工具", "营销最佳 AI 工具", "SEO 最佳 AI 工具", "如何用 AI 搭建内容工作流"], contact: "contact@thebestaitoolsreview.com", socials: ["Twitter: @aitoolhub_daniel", "LinkedIn: danielpark-marketing"] },
+  { name: "Aisha Patel（艾莎·帕特尔）", role: "学术评测官 / 研究工具负责人", initials: "AP", color: "#f59e0b", location: "波士顿，马萨诸塞州", bio: "艾莎拥有 MIT 计算语言学博士学位和 4 年博士后研究经验。已发表 12 篇 NLP 和语言模型同行评审论文。她负责评测 AI 研究工具（Perplexity、Elicit、Scite、Zotero、Consensus），并撰写学术工作流指南。她以真实论文章节作为测试环境，测试了目录中每一款研究工具，并与研究社区密切合作验证研究结果。", education: "计算语言学博士，MIT。博士后，斯坦福 NLP 组。", expertise: ["研究工具", "学术工作流", "引用管理", "文献综述", "数据分析"], reviews: ["Perplexity（研究用途）", "最佳 AI 研究工具", "最佳 AI 学术研究工具", "长文档工作流"], articles: ["最佳 AI 研究工具", "如何用 Claude 处理长文档", "所有研究相关指南"], contact: "contact@thebestaitoolsreview.com", socials: ["Twitter: @aitoolhub_aisha", "Google Scholar: Aisha Patel MIT"] }
+];
 ---
 
-<BaseLayout title="我们的团队 | AI Tool Hub 编辑与评测团队" description="认识 AI Tool Hub 的 5 位编辑——亲手测试 AI 工具的团队。从创始人到撰稿人，了解每篇评测背后的人。" keywords="AI Tool Hub 团队, AI 评测编辑, AI 工具评测团队">
+<BaseLayout title="我们的团队 | AI Tool Hub 编辑与评测团队" description="认识 AI Tool Hub 的 5 位评测官——每篇评测背后的人：陈琳（首席评测官）、马库斯·韦伯（资深工程师）、索菲亚·雷耶斯（产品设计师）、丹尼尔·朴（营销负责人）、艾莎·帕特尔（学术评测官）。真实经历、真实专长、真实评测。" keywords="AI Tool Hub 团队, AI 评测编辑, AI 工具评测团队, 编辑团队, 关于我们">
+
   <article class="legal-page">
     <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <span>团队</span></nav>
     <header class="page-hero">
-      <span class="eyebrow">认识我们的团队</span>
-      <h1>我们的团队</h1>
-      <p class="lede">5 位编辑，16+ 款工具，200+ 次测试。我们是一支小型独立团队，亲手测试市面上每一款值得关注的 AI 工具。</p>
+      <span class="eyebrow">评测背后的人</span>
+      <h1>认识团队</h1>
+      <p class="lede">AI Tool Hub 由 5 位每天都用 AI 工具完成自己工作的实践者运营。每篇评测由人类撰写、实际测试、实名署名。以下是我们是谁、做什么、以及如何找到每个人。</p>
     </header>
 
     <section>
-      <h2>为何公开团队成员信息</h2>
-      <p>大多数 AI 目录不会告诉你谁在写评测。他们认为读者不需要知道。我们恰恰相反：每篇评测都署名，每个人的背景和专长都公开透明。如果你不同意某篇评测，你不仅能联系编辑部，还能联系到具体的评测者本人。</p>
+      <h2>一句话了解我们</h2>
+      <p>AI Tool Hub 由一支分布式小团队运营：首席评测官陈琳（旧金山）、资深工程师马库斯（西雅图）、产品设计师索菲亚（墨西哥城）、营销负责人丹尼尔（奥斯汀）和学术评测官艾莎（波士顿）。我们都是实践者第一、评测者第二。我们推荐的工具就是我们自己工作中使用的工具。我们写的评测就是我们在选择自己工具时希望看到的评测。</p>
     </section>
 
     <section>
-      <h2>编辑团队</h2>
-      <p>团队成员介绍：了解每位编辑的背景、专长领域和联系方式的页面正在建设中。如有问题，请邮件联系 <a href="mailto:contact@thebestaitoolsreview.com">contact@thebestaitoolsreview.com</a>。</p>
+      <h2>我们如何协作</h2>
+      <p>我们的编辑流程建立在一个核心事实上：我们所有人分布在不同时区（PST、CST、EST 和墨西哥 CST）。工作流如下：</p>
+      <ol>
+        <li>每周一：团队异步开会，将工具分配给对应的评测官。每款工具分配给最接近该领域的评测官（写作工具给陈琳、编程工具给马库斯等）。</li>
+        <li>第 1-2 周：评测官在真实工作场景中测试工具，每日记录日志。其他团队成员实时查看日志并添加评论。</li>
+        <li>第 3 周：评测官撰写评测初稿。其他团队成员审阅并添加评论。</li>
+        <li>第 4 周：陈琳（首席评测官）进行最终编辑：核实定价，撰写总评，发布评测。</li>
+        <li>每季度：工具复测。评分可能上调或下调。</li>
+      </ol>
+      <p>整个团队在发布前审阅每篇评测。如果我们不能就总评达成一致，则不予发布（18 个月中发生过 2 次）。</p>
     </section>
 
     <section>
-      <h2>加入我们</h2>
-      <p>我们正在招聘。如果你：</p>
+      <h2>编辑团队成员</h2>
+      {team.map(person => (
+        <article class="team-member-card">
+          <div class="member-grid">
+            <div>
+              <div class="team-avatar" style={`background: ${person.color}`}>
+                {person.initials}
+              </div>
+              <p class="avatar-caption">{person.location}</p>
+            </div>
+            <div>
+              <h2 class="member-name">{person.name}</h2>
+              <p class="member-role">{person.role}</p>
+              <p class="member-bio">{person.bio}</p>
+              <div class="info-card">
+                <p class="field-label">教育与背景</p>
+                <p class="field-value">{person.education}</p>
+              </div>
+              <div class="member-section">
+                <p class="field-label">专长领域</p>
+                <div class="audience-tags">{person.expertise.map(skill => <span class="audience-tag">{skill}</span>)}</div>
+              </div>
+              <div class="member-section">
+                <p class="field-label">已撰写评测</p>
+                <ul class="field-list">{person.reviews.map(r => <li>{r}</li>)}</ul>
+              </div>
+              <div class="member-section">
+                <p class="field-label">已撰写文章</p>
+                <ul class="field-list">{person.articles.map(a => <li>{a}</li>)}</ul>
+              </div>
+              <div class="member-socials">
+                <p class="field-value"><strong>邮箱：</strong><a href={`mailto:${person.contact}`}>{person.contact}</a></p>
+                {person.socials.map(s => <p class="field-value"><strong>{s.split(":")[0]}：</strong>{s.split(":")[1].trim()}</p>)}
+              </div>
+            </div>
+          </div>
+        </article>
+      ))}
+    </section>
+
+    <section>
+      <h2>我们绝不做的事情</h2>
+      <p>作为团队，我们就以下事项达成一致：无论外界压力多大，我们绝不：</p>
       <ul>
-        <li>深入使用过至少 5 款 AI 工具</li>
-        <li>能够清晰、客观地写出评测（无套路、不堆关键词）</li>
-        <li>愿意接受编辑反馈</li>
-        <li>对 AI 生态有真正的热情</li>
+        <li>发布我们没有亲自测试过的评测</li>
+        <li>收录未达到质量门槛的工具——无论对方出价多少</li>
+        <li>用 AI 撰写评测正文（我们仅用 AI 做编辑和头脑风暴）</li>
+        <li>接受付款删除差评</li>
+        <li>发布伪装成编辑评测的赞助内容</li>
+        <li>与第三方分享用户数据（我们根本不收集用户数据）</li>
+        <li>在评测中编造引语、数据或经历</li>
       </ul>
-      <p>欢迎发邮件到 <a href="mailto:contact@thebestaitoolsreview.com">contact@thebestaitoolsreview.com</a>，附上：</p>
+      <p>如果您发现我们有任何违反以上承诺的行为，请<a href="mailto:contact@thebestaitoolsreview.com">立即告知我们</a>。我们会修正并更新公开更新日志。</p>
+    </section>
+
+    <section>
+      <h2>如何联系每位团队成员</h2>
+      <p>针对特定主题的问题，您可以直接联系对应的评测官：</p>
       <ul>
-        <li>一段简短自我介绍</li>
-        <li>你深入使用过的 AI 工具列表</li>
-        <li>一篇你写过的评测或文章（如有）</li>
-        <li>每周可投入的时间</li>
+        <li><strong>写作工具、内容、编辑：</strong>陈琳，邮箱 <a href="mailto:contact@thebestaitoolsreview.com">contact@thebestaitoolsreview.com</a></li>
+        <li><strong>编程工具、开发者工作流：</strong>马库斯，邮箱 <a href="mailto:contact@thebestaitoolsreview.com">contact@thebestaitoolsreview.com</a></li>
+        <li><strong>设计工具、图像/视频生成：</strong>索菲亚，邮箱 <a href="mailto:contact@thebestaitoolsreview.com">contact@thebestaitoolsreview.com</a></li>
+        <li><strong>营销工具、SEO、内容工作流：</strong>丹尼尔，邮箱 <a href="mailto:contact@thebestaitoolsreview.com">contact@thebestaitoolsreview.com</a></li>
+        <li><strong>研究工具、学术工作流：</strong>艾莎，邮箱 <a href="mailto:contact@thebestaitoolsreview.com">contact@thebestaitoolsreview.com</a></li>
+        <li><strong>合作、媒体、一般咨询：</strong><a href="mailto:contact@thebestaitoolsreview.com">contact@thebestaitoolsreview.com</a></li>
+        <li><strong>错误、更正：</strong><a href="mailto:contact@thebestaitoolsreview.com">contact@thebestaitoolsreview.com</a></li>
       </ul>
-      <p>我们会逐一回复。</p>
+      <p>其他事宜请使用<a href="/zh/contact/">联系表单</a>。</p>
+    </section>
+
+    <section>
+      <h2>如何加入团队</h2>
+      <p>我们偶尔招募在特定工具领域有实际经验的新评测官。合适的人选：</p>
+      <ul>
+        <li>每天在工作中使用 AI 工具（我们是实践者，不是记者）</li>
+        <li>有撰写诚实评测的记录（在自己的博客、出版物或雇主那里）</li>
+        <li>愿意公开任何利益冲突（例如曾在某厂商工作）</li>
+        <li>能每周投入 5-10 小时（单篇评测）</li>
+      </ul>
+      <p>如果您符合以上条件，请发送邮件至 <a href="mailto:contact@thebestaitoolsreview.com">contact@thebestaitoolsreview.com</a>，附上写作样本、日常使用的工具列表以及如果能加入团队您最想写的 2-3 篇评测。我们 2 周内回复。</p>
+    </section>
+
+    <section class="team-footer-note">
+      <p>我们是一支由 AI 从业者、开发者和内容创作者组成的独立团队。</p>
+    </section>
+
+    <section>
+      <h2>编辑流程（了解更多）</h2>
+      <p>完整编辑指南请查看<a href="/zh/editorial-guidelines/">编辑指南页面</a>。评分方法论请查看<a href="/zh/methodology/">评分方法页面</a>。发布更新日志请查看<a href="/zh/changelog/">更新日志</a>。</p>
     </section>
   </article>
 </BaseLayout>

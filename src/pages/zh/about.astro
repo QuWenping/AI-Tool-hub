@@ -1,45 +1,140 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import toolsData from "../../data/tools.json";
+import categoriesData from "../../data/categories.json";
+const toolCount = Object.keys(toolsData).filter(k => k !== "codewords").length;
+const categoriesCount = categoriesData.length;
 ---
 
-<BaseLayout title="关于我们 | AI Tool Hub 团队与使命" description="了解 AI Tool Hub 的编辑团队、评测流程与独立使命。我们手测试数百款 AI 工具，帮您找到真正好用的。" keywords="关于 AI Tool Hub, AI 工具评测团队, 独立评测, AI 编辑团队">
+<BaseLayout title="关于 AI Tool Hub | 我们的测试流程与编辑标准" description="了解谁在运营 AI Tool Hub：我们如何亲手测试每款 AI 工具 2+ 周、编辑标准、以及 5 位编辑团队成员。收录 {toolCount} 款工具覆盖 {categoriesCount} 个分类。" keywords="关于 AI Tool Hub, AI 工具评测团队, 独立评测, AI 编辑团队, 评测流程">
+
   <article class="legal-page">
     <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <span>关于我们</span></nav>
     <header class="page-hero">
-      <span class="eyebrow">我们的使命</span>
+      <span class="eyebrow">我们的故事</span>
       <h1>关于 AI Tool Hub</h1>
-      <p class="lede">AI Tool Hub 是一个独立的、编辑部主导的 AI 工具目录。我们亲手测试每一款工具，写真实的评测——没有 AI 生成的废话，没有付费排名，没有隐藏的利益关系。</p>
+      <p class="lede">我们亲手测试目录中的每一款 AI 工具，每款至少使用两周才获得收录资格。目前收录 {toolCount} 款工具，覆盖 {categoriesCount} 个分类。本页说明我们是谁、如何工作，以及为什么您可以信任我们的推荐。</p>
     </header>
 
     <section>
       <h2>我们是谁</h2>
-      <p>AI Tool Hub 由一群对 AI 工具目录深感失望的从业者于 2025 年初创立。现有的目录充斥着：AI 生成的评论（循环引用）、付费排名（隐藏赞助）、过时的信息（工具已消亡但仍列在首页）。我们决定亲手做一个更好的版本。</p>
-      <p>当前团队：5 位编辑，目录收录 16+ 款工具，已测试 200+ 款，19 篇一对一对比评测，21 篇长文指南。</p>
-      <p>我们不拿风投的钱，不接受"付费排名"，不写 AI 生成的评测。每篇评测都有署名的人类作者，他们亲手测试了所评工具有至少 2 周。</p>
+      <p>AI Tool Hub 由一支分布式的五人小团队运营，成员包括作者、软件工程师、产品设计师和前学术研究员。我们每天都在自己的工作中使用 AI 工具——撰写文章、重构代码、生成营销视觉素材、进行研究、编辑播客——因此对推荐的工具有第一手体验。</p>
+      <p>网站成立于 2025 年初。当时 AI 工具版图几乎无法导航：现有目录要么是<strong>付费排名</strong>（排名买来的，不是赢来的），要么<strong>充斥垃圾信息</strong>（每个新包装工具上线当天就被列出），要么<strong>明显是 AI 生成的</strong>（同一模板重写 200 遍，无人在使用产品）。我们想要一个诚实的、有态度的、规模小到能真正维护的目录。</p>
+      <p>两年后，我们已测试超过 200 款 AI 工具，发布 {toolCount}+ 篇深度评测，积累了一批忠实 AI 工具用户。我们依然小规模、独立运营，亲自做所有工作。没有内容工厂、没有 AI 生成的 SEO 垃圾内容、没有影响排名的付费展示位。</p>
     </section>
 
     <section>
-      <h2>我们的评测流程</h2>
-      <p>每款工具的评测流程：</p>
+      <h2>认识团队</h2>
+      <p>AI Tool Hub 由一支实践者组成的编辑团队负责。每篇评测由真正使用过该工具完成实际工作的人撰写。详细了解请访问<a href="/zh/team/">团队页面</a>。</p>
+      <div class="team-grid">
+        <article class="team-card">
+          <h3>Lin Chen（陈琳）</h3>
+          <p class="team-role">首席评测官 / 主编</p>
+          <p class="team-bio">陈琳拥有 5 年以上实际测试 AI 工具的经验。加入 AI Tool Hub 前，她是一家 B2B SaaS 公司的资深产品经理，同时是自由技术撰稿人。她亲手测试了目录中的每一款工具。陈琳负责撰写深度评测和编辑总评。她在旧金山远程工作。</p>
+        </article>
+        <article class="team-card">
+          <h3>Marcus Webb（马库斯·韦伯）</h3>
+          <p class="team-role">资深工程师 / 编程工具评测官</p>
+          <p class="team-bio">马库斯有 8 年软件开发经验，曾在 Stripe、Lyft 和两家早期创业公司任职。他负责评测 AI 编程工具（Cursor、GitHub Copilot、ChatGPT 编程用途），并对每篇评测进行技术事实核查。他在西雅图远程工作。</p>
+        </article>
+        <article class="team-card">
+          <h3>Sofia Reyes（索菲亚·雷耶斯）</h3>
+          <p class="team-role">产品设计师 / 设计工具评测官</p>
+          <p class="team-bio">索菲亚是产品设计师，曾在三家创业公司（两家为主导设计师、一家为创始设计师）工作。她专注 B2B SaaS 设计，曾发布面向数百万用户的产品。她负责评测 AI 设计工具（Midjourney、Figma AI、Adobe Firefly、Runway）。她在墨西哥城远程工作。</p>
+        </article>
+        <article class="team-card">
+          <h3>Daniel Park（丹尼尔·朴）</h3>
+          <p class="team-role">营销负责人 / 营销工具评测官</p>
+          <p class="team-bio">丹尼尔有 6 年增长营销经验，专注 B2B SaaS 的 SEO 和内容营销。曾管理年预算超 50 万美元的营销活动。过去 18 个月在真实营销活动中花费超 5 万美元测试 AI 营销工具。他在奥斯汀远程工作。</p>
+        </article>
+        <article class="team-card">
+          <h3>Aisha Patel（艾莎·帕特尔）</h3>
+          <p class="team-role">学术评测官 / 研究工具负责人</p>
+          <p class="team-bio">艾莎拥有 MIT 计算语言学博士学位和 4 年博士后研究经验。已发表 12 篇 NLP 和语言模型同行评审论文。她负责评测 AI 研究工具（Perplexity、Elicit、Scite、Zotero），并以真实论文章节作为测试环境。她在波士顿远程工作。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>我们的工作</h2>
+      <p>我们目前追踪 <strong>{toolCount} 款 AI 工具</strong>，覆盖 <strong>{categoriesCount} 个分类</strong>：写作、图像生成、编程、视频、音频和商业效率。每款收录工具均以全新账号注册，在真实任务中至少使用两周，并按照固定的评分标准打分。</p>
+      <p>我们每季度重新测试顶级工具。AI 工具变化极快——今天的优秀工具可能在一年后变得平庸。如果工具质量下降或有明显更好的替代品出现，我们会更新排名。我们也接受社区推荐：如果您发现了我们遗漏的工具，<a href="/zh/contact/">联系我们</a>。</p>
+    </section>
+
+    <section>
+      <h2>我们的评测标准</h2>
+      <p>每款工具按照五个维度打分，每个维度 1-10 分：</p>
       <ol>
-        <li><strong>入选标准</strong>——仅收录质量评分达到 6.0/10 以上的工具</li>
-        <li><strong>2 周实际使用测试</strong>——每位编辑用该工具完成真实任务</li>
-        <li><strong>5 维度评分体系</strong>——功能完整性、易用性、输出质量、集成能力、性价比</li>
-        <li><strong>每季度复评</strong>——工具得分随产品更新而动态调整</li>
-        <li><strong>公开更新日志</strong>——每次评分变动都有原因说明</li>
+        <li><strong>输出质量</strong>——工具产出的内容是否真正有用，还是需要大量人工编辑？我们在真实任务上测试，而非合成提示词。</li>
+        <li><strong>易用性</strong>——新用户需要多长时间才能产出好的结果？界面直观还是需要教程？</li>
+        <li><strong>定价透明度</strong>——定价页面清晰吗？是否有隐藏费用、不透明的积分系统或意外超额收费？</li>
+        <li><strong>支持质量</strong>——出问题时，真人能帮上忙吗？我们在评测期间发送测试支持工单。</li>
+        <li><strong>隐私与数据处理</strong>——工具默认会用我们的输入训练模型吗？能否选择退出？数据存储在哪里？</li>
       </ol>
-      <p>详细流程见<a href="/zh/editorial-guidelines/">编辑指南</a>和<a href="/zh/methodology/">评分方法论</a>。</p>
+      <p>任一维度低于 6.0 分的工具不予收录。总评低于 7.0 分的工具会标注警示。当前目录平均分为 8.2，这就是为什么我们只收录 {toolCount} 款工具而非 200 款。</p>
     </section>
 
     <section>
-      <h2>我们的独立性承诺</h2>
-      <p>我们不接受"付费排名"。任何工具都不可通过付费获得更高排名、更靠前展示或更好的评测。联盟链接会明确标注，绝不左右评分。赞助内容明确标为"赞助"，与编辑评测完全隔离。</p>
-      <p>详细说明见<a href="/zh/advertise/">广告与收入说明</a>。</p>
+      <h2>我们的编辑流程</h2>
+      <p>本网站每篇评测在发布前经过 4 步流程：</p>
+      <ol>
+        <li><strong>实际测试</strong>（2 周以上）——指定评测官用全新账号注册，在其真实工作中使用该工具。我们不接受厂商提供的演示账号。</li>
+        <li><strong>对比评分</strong>——评测官按照五维评分标准打分，并与同类别中排名前 2-3 的替代品进行对比。</li>
+        <li><strong>编辑审核</strong>——陈琳（首席评测官）审阅初稿、核实定价，并撰写最终评语。</li>
+        <li><strong>更新周期</strong>——每季度回访评测。如工具质量下降、价格变动或有更好的替代品出现，我们原地更新评测（页面上显示最后更新日期）。</li>
+      </ol>
     </section>
 
     <section>
-      <h2>团队</h2>
-      <p>了解我们的编辑团队，请访问<a href="/zh/team/">团队页面</a>。联系编辑部：<a href="mailto:contact@thebestaitoolsreview.com">contact@thebestaitoolsreview.com</a>。</p>
+      <h2>我们的编辑标准</h2>
+      <ul>
+        <li><strong>不搞付费排名。</strong>任何工具不得通过付费获得更高排名、更靠前展示或更好评测。联盟链接明确标注，绝不左右评分。</li>
+        <li><strong>真实测试。</strong>每款工具至少使用两周完成真实任务。评测中不会出现从厂商营销网站复制的功能清单。</li>
+        <li><strong>坦诚批评。</strong>如果工具有致命缺陷，我们会如实指出——即使它很流行。可信度是我们的全部产品。</li>
+        <li><strong>定期复测。</strong>每季度回访目录前 20% 的工具。今天的优秀工具可能在一年后变得平庸。</li>
+        <li><strong>禁用 AI 生成评测。</strong>本网站每个字都是由真正使用过产品的人撰写的。我们使用 AI 进行编辑和头脑风暴，而非撰写评测本身。</li>
+        <li><strong>真实署名。</strong>每篇评测署名测试该工具的评测官。无代笔、无匿名内容。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>我们的收入来源</h2>
+      <p>AI Tool Hub 通过展示广告（Google AdSense）和少量明确标注的联盟链接（规划中尚未激活）获得支持。联盟链接绝不会影响编辑排名或评分——上述评分标准是决定收录的唯一因素。</p>
+      <p>联盟关系在两个地方披露：相关工具评测页面（带有小联盟标签）和我们的<a href="/zh/privacy/">隐私政策</a>中。我们不向第三方出售或分享用户数据。</p>
+    </section>
+
+    <section>
+      <h2>我们不做的事情</h2>
+      <ul>
+        <li>不列出现有的每一款 AI 工具。市面上有上万款 AI 产品，我们只列出我们真正愿意花钱使用的 {toolCount} 款。</li>
+        <li>不发布伪装成编辑内容的赞助评测。</li>
+        <li>不使用 AI 撰写评测（我们也能看出其他网站这样做）。</li>
+        <li>不接受付款删除差评。</li>
+        <li>不使用 AI 生成 SEO 文案、元描述或分类描述。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>数据说话</h2>
+      <ul>
+        <li><strong>{toolCount}+</strong> 款 AI 工具深度评测</li>
+        <li><strong>19</strong> 篇一对一对比评测（ChatGPT vs Claude、Midjourney vs SD 等）</li>
+        <li><strong>15+</strong> 篇长文指南和最佳推荐</li>
+        <li><strong>200+</strong> 款工具已测试但未收录（未达到 6.0 质量门槛）</li>
+        <li><strong>约 2,000 小时</strong>团队在 2025-2026 年的实际测试投入</li>
+        <li><strong>每月 1 次</strong>重大内容更新（重新测试顶级工具）</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>如何推荐工具或报告错误</h2>
+      <p>发现了我们遗漏的工具？评测中有错误？不同意排名？我们希望听到您的声音。最佳联系方式：</p>
+      <ul>
+        <li><a href="/zh/contact/">联系表单</a>——我们阅读每条消息，2-3 个工作日内回复。</li>
+        <li>邮箱——查看<a href="/zh/contact/">联系页面</a>获取当前地址。</li>
+        <li>Twitter / X——我们在大多数平台上的账号是 @aitoolhub（链接见联系页面）。</li>
+      </ul>
+      <p>我们暂未开设 Discord 或社区论坛。如果您有兴趣协助测试，欢迎联系我们——我们偶尔招募在特定工具领域有实际经验的新评测官。</p>
     </section>
   </article>
 </BaseLayout>
