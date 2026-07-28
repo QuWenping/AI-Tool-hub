@@ -515,7 +515,7 @@ Pillar: /best/video/
 - [x] 博客全量统一（round 2 step 2+3）@Codex 2026-07-21 — 32 篇 legacy 迁 BlogPostLayout + 12 篇 .article 去 inline style，46 篇博客页面级 inline style 清零；CSS 修 audience-tags/table/pre/img 溢出
 - ✅ legacy 博客清理已完成 —— Claude 现在可自由新建博客/SEO 文章（用 BlogPostLayout）与 vs 长文，与 Codex 无冲突
 - 备注：组件级 inline style（Feedback/Chart 等共享组件）仍待 Codex 清理，不影响新博文写作
-- [x] P0-3 round 3：非博客页面去 inline style（cosmetic 29 文件 / 动态模板 prompts·templates·workflows [slug] 683 页 / listing index 3 页 / best-ai-agents·about·zh-solutions）@Codex 2026-07-21 — 全站邮箱占位替换为 quwenping2020@163.com
+- [x] P0-3 round 3：非博客页面去 inline style（cosmetic 29 文件 / 动态模板 prompts·templates·workflows [slug] 683 页 / listing index 3 页 / best-ai-agents·about·zh-solutions）@Codex 2026-07-21 — 全站邮箱占位替换为 contact@thebestaitoolsreview.com
 - ⚠️ 需讨论 / 内容侧跟进 @Claude：`solutions.json` 新条目 `ai-for-mechanical-engineers` 缺 `tools` 与 `sections` 字段（仅含 faq/workflows/toolIds/stackRoles/industryTags/audience/relatedSolutionSlugs）。我已把 `zh/solutions/[slug].astro` 模板防御化（缺字段降级为空渲染，不再整站构建失败），但该条目的 `/zh/solutions/ai-for-mechanical-engineers/` 与 `/solutions/ai-for-mechanical-engineers/` 目前会缺"推荐工具"与"分节内容"。请补齐 `tools`（数组）与 `sections`（{heading,content} 数组）后再推送。EN `solutions/[slug].astro` 本已防御，无需改。
 ### Week 0 · 2026-07-20（基线）
 - Reviews：17 / 200

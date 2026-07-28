@@ -16,9 +16,33 @@ scenes:
   - management
 pros:
   en:
-  - See review
+  - Smart task grouping with AI — automatically clusters related subtasks into projects
+  - 'Natural-language due dates: type ''next Friday'' or ''EOQ'' and Asana parses it correctly'
+  - AI-generated progress summaries for stakeholders — replaces manual status reports
+  - Deep integration with Slack, Gmail, and 200+ apps keeps workflows centralized
 cons:
   en:
-  - See review
+  - AI features locked behind Advanced/Enterprise tiers — not available on free or Starter plans
+  - 'Learning curve for administrators: configuring custom fields and rules takes time'
+  - Mobile app has fewer AI capabilities than the desktop version
 pricing:
   en: Freemium
+use_cases:
+  en:
+  - 'Cross-functional project management: track engineering, design, and marketing in one workspace'
+  - 'Executive reporting: auto-generate weekly progress digests from project data'
+  - 'Sprint planning: use AI work breakdown to decompose epics into sized tasks'
+  - 'Client onboarding: template-driven project setup with automated task assignments'
+features:
+  en:
+  - AI-powered smart goals and automatic task prioritization
+  - Workflow Builder with drag-and-drop automation rules
+  - Timeline and Gantt views for project scheduling and dependency mapping
+  - Portfolio dashboard aggregating progress across multiple projects
+  - '200+ integrations: Slack, Microsoft Teams, Google Workspace, Jira, Salesforce'
+target_audience:
+  en:
+  - Mid-size to enterprise teams managing complex, multi-stakeholder projects
+  - Project managers and PMOs needing portfolio-level visibility and reporting
+  - Marketing and creative teams coordinating campaigns with approval workflows
+  - Remote or distributed teams that rely on async status updates and AI summaries

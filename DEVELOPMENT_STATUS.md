@@ -51,7 +51,7 @@ related:
   - prompts/templates/workflows [slug] 3 模板全部 inline style → 工具类，惠及 683 生成页
   - 新增公共工具类：.code-card/.copy-btn/.prompt-code、.tag-row/.tag-pill(+diff-*)/.tag-chip/.meta-text、.info-card(+amber/blue)/.qa-box、.step-list/.step-item/.step-icon、.back-link
   - 3 模板各 0 inline style；Playwright 6 检查全绿；构建 2142 页；门禁全绿；已推送
-- **Sprint 6（2026-07-21）side**：全站占位邮箱 `*@ai-tool-hub.example` 替换为真实邮箱 `quwenping2020@163.com`（contact + 8 页，0 占位残留）
+- **Sprint 6（2026-07-21）side**：全站占位邮箱 `*@ai-tool-hub.example` 替换为真实邮箱 `contact@thebestaitoolsreview.com`（contact + 8 页，0 占位残留）
 - **Sprint 6（2026-07-21）step 4（round 3 step 1）**：P0-3 非博客 cosmetic inline style 清理
   - 审计非博客页面：805 inline style / 63 文件；29 个 cosmetic-only 文件批量剥离 140 个（methodology 76、deep-dive-* 9、use-case-for-* 4、zh 镜像 9 等）
   - 34 个含结构性 inline style 的文件（含 11 交互式 tools/*.astro）待下一节点逐个转 class

@@ -5,8 +5,7 @@ short_desc:
   en: Free omni-modal AI API platform
   zh: 免费全模态 AI API 平台
 long_desc:
-  en: >-
-    Agnes AI by Sapiens AI is a free omni-modal AI API platform offering text, image, and video generation. Includes Agnes
+  en: Agnes AI by Sapiens AI is a free omni-modal AI API platform offering text, image, and video generation. Includes Agnes
     2.0 Flash text model, Agnes Image for image generation, and Agnes Video for video generation. Developers get free API
     credits and keys.
 cat: productivity
@@ -50,53 +49,61 @@ quickFacts:
   - API
   - Web Dashboard
 pricingSummary:
-  en: >-
-    Entirely free: text, image, and video generation via a single API. No credit card required. Open-source client SDKs available
-    on GitHub.
+  en: 'Entirely free: text, image, and video generation via a single API. No credit card required. Open-source client SDKs
+    available on GitHub.'
 faq:
 - q_en: Is Agnes AI really free?
-  a_en: >-
-    Yes. The entire API platform is free to use — no credit card, no usage limits for the core modalities. The project is
-    open-source and community-driven.
+  a_en: Yes. The entire API platform is free to use — no credit card, no usage limits for the core modalities. The project
+    is open-source and community-driven.
 - q_en: What modalities does Agnes AI support?
-  a_en: >-
-    Text generation, image generation, and video generation — all through a single API endpoint. Additional models are added
-    regularly.
+  a_en: Text generation, image generation, and video generation — all through a single API endpoint. Additional models are
+    added regularly.
 - q_en: How good is Agnes AI compared to current-generation models or Claude?
-  a_en: >-
-    The individual models do not yet match the quality of frontier models like current-generation models or Claude Sonnet
+  a_en: The individual models do not yet match the quality of frontier models like current-generation models or Claude Sonnet
     for complex tasks. The value is in the free omni-modal access, not the ceiling quality.
 - q_en: Is Agnes AI suitable for production use?
-  a_en: >-
-    The API is stable and the open-source SDKs are well-documented, but uptime is not guaranteed by a commercial SLA. Best
-    suited for prototyping, side projects, and learning.
+  a_en: The API is stable and the open-source SDKs are well-documented, but uptime is not guaranteed by a commercial SLA.
+    Best suited for prototyping, side projects, and learning.
 - q_en: Does Agnes AI have an API key?
-  a_en: >-
-    Yes. Register on the website for a free API key. The key works across all text, image, and video endpoints with no separate
-    billing.
+  a_en: Yes. Register on the website for a free API key. The key works across all text, image, and video endpoints with no
+    separate billing.
 - q_en: What is the image quality like?
-  a_en: >-
-    Comparable to Midjourney v5 for general prompts. Lags behind Midjourney (current version), Flux, and Ideogram for fine
-    details, text rendering, and photorealism.
+  a_en: Comparable to Midjourney v5 for general prompts. Lags behind Midjourney (current version), Flux, and Ideogram for
+    fine details, text rendering, and photorealism.
 - q_en: Is Agnes AI open-source?
-  a_en: >-
-    The client SDKs and some model infrastructure are open-source on GitHub. The core API server is proprietary but freely
+  a_en: The client SDKs and some model infrastructure are open-source on GitHub. The core API server is proprietary but freely
     accessible.
 - q_en: Can I use Agnes AI for commercial projects?
-  a_en: >-
-    Yes, the free tier permits commercial use. Check the latest license on GitHub for any restrictions on derivative models
+  a_en: Yes, the free tier permits commercial use. Check the latest license on GitHub for any restrictions on derivative models
     or redistribution.
 - q_en: What is the best alternative to Agnes AI?
-  a_en: >-
-    If you need higher quality at low cost: DeepSeek (text) + Flux (images) + Kling (video). If you need a single paid provider:
-    OpenAI current-generation models with its built-in image and voice capabilities.
+  a_en: 'If you need higher quality at low cost: DeepSeek (text) + Flux (images) + Kling (video). If you need a single paid
+    provider: OpenAI current-generation models with its built-in image and voice capabilities.'
 - q_en: Who should use Agnes AI?
-  a_en: >-
-    Developers prototyping multi-modal apps on a zero budget, students learning API integration, and hobbyists exploring AI-generated
-    content without financial commitment.
+  a_en: Developers prototyping multi-modal apps on a zero budget, students learning API integration, and hobbyists exploring
+    AI-generated content without financial commitment.
 scoreBreakdown:
   user: 8.5
   capability: 5
   price: 10
   growth: 7
   trust: 8
+use_cases:
+  en:
+  - 'Rapid prototyping: spin up multi-modal AI demos (text + image + video) without paying API fees'
+  - 'Student/hobbyist projects: experiment with state-of-the-art models when budget is zero'
+  - 'Internal tooling: build lightweight AI assistants for teams using the free API endpoint'
+  - 'Model comparison: test the same prompt across Agnes Code, Qwen, and Gemini models to pick the best fit'
+features:
+  en:
+  - Free omni-modal API supporting text, image, and video generation
+  - Agnes Code — lightweight coding assistant for in-browser rapid development
+  - 'Multiple model backends: Qwen, Gemini, and proprietary Agnes models'
+  - Open-source core on GitHub with permissive licensing
+  - Browser-based playground — no local setup required to start testing
+target_audience:
+  en:
+  - Developers building AI-powered apps on a zero-cost budget
+  - Students and researchers exploring multi-modal AI capabilities
+  - Startups prototyping AI features before committing to paid APIs
+  - Hobbyist makers who want a free playground for the latest models
