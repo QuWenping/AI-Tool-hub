@@ -7,6 +7,50 @@
   function setUser(user) { localStorage.setItem(STORAGE_KEY, JSON.stringify(user)); }
   function clearUser() { localStorage.removeItem(STORAGE_KEY); }
 
+  function injectModalHTML() {
+    var container = document.getElementById('signin-modal');
+    if (!container) return;
+    container.className = 'signin-modal';
+    container.setAttribute('hidden', '');
+    container.innerHTML = '<div class="signin-modal-overlay"></div>' +
+      '<div class="signin-modal-content">' +
+        '<button id="signin-modal-close" class="signin-modal-close" aria-label="Close">&times;</button>' +
+        '<div id="signin-form-view" class="auth-view">' +
+          '<h2>Sign in</h2>' +
+          '<div class="signin-providers">' +
+            '<button class="signin-provider github" id="github-signin-btn"><i class="fab fa-github"></i><span>Continue with GitHub</span></button>' +
+          '</div>' +
+          '<div class="signin-divider"><span>or</span></div>' +
+          '<form id="email-signin-form" class="signin-email-form">' +
+            '<div class="signin-field"><label for="signin-email">Email</label><input type="email" id="signin-email" placeholder="your@email.com" required></div>' +
+            '<div class="signin-field"><label for="signin-password">Password</label><input type="password" id="signin-password" placeholder="Enter your password" required></div>' +
+            '<button type="submit" class="signin-submit-btn">Sign in</button>' +
+          '</form>' +
+          '<p class="signin-switch">Don\'t have an account? <a href="#" id="switch-to-signup">Sign up</a></p>' +
+        '</div>' +
+        '<div id="signup-form-view" class="auth-view" hidden>' +
+          '<h2>Create account</h2>' +
+          '<div class="signin-providers">' +
+            '<button class="signin-provider github" id="github-signup-btn"><i class="fab fa-github"></i><span>Continue with GitHub</span></button>' +
+          '</div>' +
+          '<div class="signin-divider"><span>or</span></div>' +
+          '<div id="signup-step-email" class="signup-step">' +
+            '<div class="signin-field"><label for="signup-email">Email</label><input type="email" id="signup-email" placeholder="your@email.com" required></div>' +
+            '<button type="button" id="send-code-btn" class="signin-submit-btn">Send verification code</button>' +
+            '<p class="signin-hint" id="send-code-status"></p>' +
+          '</div>' +
+          '<div id="signup-step-code" class="signup-step" hidden>' +
+            '<div class="signin-field"><label for="signup-code">Verification code</label><input type="text" id="signup-code" placeholder="Enter the code sent to your email" required></div>' +
+            '<div class="signin-field"><label for="signup-password">Password</label><input type="password" id="signup-password" placeholder="At least 6 characters" minlength="6" required></div>' +
+            '<button type="button" id="create-account-btn" class="signin-submit-btn">Create account</button>' +
+            '<p class="signin-hint" id="create-account-status"></p>' +
+          '</div>' +
+          '<p class="signin-switch">Already have an account? <a href="#" id="switch-to-signin">Sign in</a></p>' +
+        '</div>' +
+        '<p class="signin-terms">By signing in, you agree to our <a href="/privacy/">Privacy Policy</a> and <a href="/terms/">Terms of Service</a>.</p>' +
+      '</div>';
+  }
+
   async function signInWithOAuth(provider) {
     try {
       console.log(`[Auth] Starting ${provider} OAuth sign-in...`);
@@ -225,6 +269,7 @@
   let pendingEmail = '';
 
   function init() {
+    injectModalHTML();
     const btn = document.getElementById('signin-btn');
     const modal = document.getElementById('signin-modal');
     const close = document.getElementById('signin-modal-close');
