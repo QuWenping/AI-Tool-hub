@@ -301,6 +301,30 @@ const promptDataZh: Record<string, any> = {
     exampleOutput: "## 资助申请书：服务不足社区的 AI 素养\n### 问题陈述\n78% 的低收入学生缺乏 AI 素养项目，而富裕学区仅为 12%。\n### 解决方案\n为期 12 周的课后项目，通过动手实践教授 AI 基础知识。目标：覆盖 10 个社区中心的 500 名学生。\n### 方法论\n- 课程由教师和 AI 研究员共同设计\n- 前/后评估衡量 AI 概念掌握程度\n- 同伴指导模式确保可持续性\n### 预算\n总计：$150,000（人员 60%，设备 25%，评估 15%）\n### 影响力指标\n- 80% 参与者展示 AI 概念熟练度\n- 50% 继续深造 STEM 课程\n- 项目材料开源供复制推广",
     relatedTools: ["claude", "chatgpt"],
   },
+  "midjourney-product-shot": {
+    title: "Midjourney 产品摄影提示词",
+    description: "使用 Midjourney 生成专业产品摄影的精选提示词。涵盖灯光设置、相机角度、背景风格和材质渲染，适用于电商和营销视觉设计。",
+    tags: ["图像", "Midjourney", "电商"],
+    useCase: "电商营销人员、产品设计师和品牌经理使用 Midjourney 为在线商店、社交媒体和广告生成高品质产品图片。",
+    exampleOutput: "## 产品摄影：高端耳机\n- 风格：Apple 风格产品摄影\n- 灯光：摄影棚柔光箱，边缘光突出轮廓\n- 材质：拉丝铝耳罩，皮革头带\n- 相机：85mm 微距，f/2.8，浅景深\n- 背景：灰色到白色渐变，微妙的表面反射\n--ar 1:1 --stylize 150 --v 7",
+    relatedTools: ["midjourney", "dalle3"],
+  },
+  "chatgpt-regex-explain": {
+    title: "ChatGPT 正则表达式解释提示词",
+    description: "使用 ChatGPT 将复杂正则表达式分解为通俗易懂的文字说明。涵盖捕获组、前瞻、量词，并提供可视化分解。",
+    tags: ["编程", "ChatGPT", "正则表达式"],
+    useCase: "正在调试或学习正则表达式的开发者，需要人类可读的复杂正则模式解释。",
+    exampleOutput: "## 正则表达式：^(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d@$!%*?&]{8,}$\n### 分解\n- `^` — 字符串开头\n- `(?=.*[A-Z])` — 正向预查：必须包含至少一个大写字母\n- `(?=.*\\d)` — 正向预查：必须包含至少一个数字\n- `[A-Za-z\\d@$!%*?&]{8,}` — 字符类：8 个及以上字母、数字或特殊字符\n- `$` — 字符串结尾\n### 匹配什么\n一个密码，至少 8 个字符，包含一个大写字母和一个数字。",
+    relatedTools: ["chatgpt", "claude"],
+  },
+  "chatgpt-roadmap-p": {
+    title: "ChatGPT 路线图规划提示词",
+    description: "使用 ChatGPT 创建结构化的产品/项目路线图。涵盖时间线规划、里程碑定义、资源分配、依赖关系映射和利益相关者沟通。",
+    tags: ["效率", "ChatGPT", "规划"],
+    useCase: "产品经理、项目负责人和创始人需要为产品开发、团队协调和投资人演示创建可视化的可执行路线图。",
+    exampleOutput: "## 产品路线图：AI 邮件助手（2026 Q3-Q4）\n### Q3 2026：MVP\n- 语气检测智能撰写（第 1-4 周）\n- 邮件摘要（第 5-8 周）\n- Gmail + Outlook 集成（第 9-12 周）\n### Q4 2026：增长\n- 跟进提醒自动化（第 13-16 周）\n- 团队分析仪表板（第 17-20 周）\n- 企业 SSO（第 21-24 周）\n### 依赖关系\n- NLP 模型微调必须在第 5 周前完成\n- OAuth 审批需在第 8 周前获得",
+    relatedTools: ["chatgpt", "claude", "notion-ai"],
+  },
 };
 
 export async function getStaticPaths() {
@@ -323,7 +347,10 @@ export async function getStaticPaths() {
     "gemini-market-analysis",
     "kling-product-video",
     "mj-abstract-3d",
-    "claude-grant-d"
+    "claude-grant-d",
+    "midjourney-product-shot",
+    "chatgpt-regex-explain",
+    "chatgpt-roadmap-p",
   ];
   return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }

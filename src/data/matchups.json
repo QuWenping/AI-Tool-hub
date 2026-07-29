@@ -456,5 +456,35 @@
     "title_en": "CrewAI vs AutoGPT (2026): Multi-Agent Framework vs Autonomous Agent",
     "cluster": "code",
     "title_zh": "CrewAI vs AutoGPT（2026）：多智能体框架 vs 自主智能体"
+  },
+  {
+    "slug": "play-ht-vs-udio",
+    "a": "play-ht",
+    "b": "udio",
+    "tool_a": "PlayHT",
+    "tool_b": "Udio",
+    "title_en": "PlayHT vs Udio (2026): AI Voice vs AI Music Generation",
+    "cluster": "audio",
+    "title_zh": "PlayHT vs Udio（2026）：AI 语音 vs AI 音乐生成"
+  },
+  {
+    "slug": "synthesia-vs-heygen",
+    "a": "synthesia",
+    "b": "heygen",
+    "tool_a": "Synthesia",
+    "tool_b": "HeyGen",
+    "title_en": "Synthesia vs HeyGen (2026): AI Avatar Video Platform Showdown",
+    "cluster": "video",
+    "title_zh": "Synthesia vs HeyGen（2026）：AI 数字人视频平台对决"
+  },
+  {
+    "slug": "notion-ai-vs-chatgpt",
+    "a": "notion-ai",
+    "b": "chatgpt",
+    "tool_a": "Notion AI",
+    "tool_b": "ChatGPT",
+    "title_en": "Notion AI vs ChatGPT (2026): Workspace AI vs General-Purpose AI",
+    "cluster": "productivity",
+    "title_zh": "Notion AI vs ChatGPT（2026）：工作空间 AI vs 通用 AI"
   }
 ]

@@ -374,6 +374,30 @@ const promptData: Record<string, any> = {
     exampleOutput: "## Grant Proposal: AI Literacy for Underserved Communities\n### Problem Statement\n78% of low-income students lack access to AI literacy programs compared to 12% in affluent districts.\n### Proposed Solution\n12-week after-school program teaching AI fundamentals through hands-on projects. Target: 500 students across 10 community centers.\n### Methodology\n- Curriculum co-designed with teachers and AI researchers\n- Pre/post assessment measuring AI concept mastery\n- Peer mentoring model for sustainability\n### Budget\nTotal: $150,000 (Personnel 60%, Equipment 25%, Evaluation 15%)\n### Impact Metrics\n- 80% of participants demonstrate AI concept proficiency\n- 50% pursue further STEM coursework\n- Program materials open-sourced for replication",
     relatedTools: ["claude", "chatgpt"],
   },
+  "midjourney-product-shot": {
+    title: "Midjourney Product Shot Prompt",
+    description: "A curated prompt for generating professional product photography with Midjourney. Covers lighting setups, camera angles, background styling, and material rendering for e-commerce and marketing visuals.",
+    tags: ["Image", "Midjourney", "E-commerce"],
+    useCase: "E-commerce marketers, product designers, and brand managers generating high-quality product images for online stores, social media, and advertising.",
+    exampleOutput: "## Product Shot: Premium Headphones\n- Style: Apple-style product photography\n- Lighting: Studio softbox, rim light for edge definition\n- Materials: Brushed aluminum ear cups, leather headband\n- Camera: 85mm macro, f/2.8, shallow depth of field\n- Background: Gradient grey to white, subtle floor reflection\n--ar 1:1 --stylize 150 --v 7",
+    relatedTools: ["midjourney", "dalle3"],
+  },
+  "chatgpt-regex-explain": {
+    title: "ChatGPT Regex Explainer Prompt",
+    description: "A prompt for using ChatGPT to explain and break down complex regular expressions into plain English. Covers capture groups, lookaheads, quantifiers, and provides visual breakdowns.",
+    tags: ["Coding", "ChatGPT", "Regex"],
+    useCase: "Developers debugging or learning regular expressions who need human-readable explanations of complex regex patterns.",
+    exampleOutput: "## Regex: ^(?=.*[A-Z])(?=.*\\d)[A-Za-z\\d@$!%*?&]{8,}$\n### Breakdown\n- `^` — Start of string\n- `(?=.*[A-Z])` — Positive lookahead: must contain at least one uppercase letter\n- `(?=.*\\d)` — Positive lookahead: must contain at least one digit\n- `[A-Za-z\\d@$!%*?&]{8,}` — Character class: 8+ chars of letters, digits, or special chars\n- `$` — End of string\n### What it matches\nA password with at least 8 characters, one uppercase letter, and one digit.",
+    relatedTools: ["chatgpt", "claude"],
+  },
+  "chatgpt-roadmap-p": {
+    title: "ChatGPT Roadmap Planner Prompt",
+    description: "A prompt template for using ChatGPT to create structured product/project roadmaps. Covers timeline planning, milestone definition, resource allocation, dependency mapping, and stakeholder communication.",
+    tags: ["Productivity", "ChatGPT", "Planning"],
+    useCase: "Product managers, project leads, and founders creating visual and actionable roadmaps for product development, team alignment, and investor presentations.",
+    exampleOutput: "## Product Roadmap: AI Email Assistant (Q3-Q4 2026)\n### Q3 2026: MVP\n- Smart compose with tone detection (Week 1-4)\n- Email summarization (Week 5-8)\n- Gmail + Outlook integration (Week 9-12)\n### Q4 2026: Growth\n- Follow-up reminder automation (Week 13-16)\n- Team analytics dashboard (Week 17-20)\n- Enterprise SSO (Week 21-24)\n### Dependencies\n- NLP model fine-tuning must complete before Week 5\n- OAuth approval needed by Week 8",
+    relatedTools: ["chatgpt", "claude", "notion-ai"],
+  },
 };
 
 export async function getStaticPaths() {
@@ -399,7 +423,10 @@ export async function getStaticPaths() {
     "gemini-market-analysis",
     "kling-product-video",
     "mj-abstract-3d",
-    "claude-grant-d"
+    "claude-grant-d",
+    "midjourney-product-shot",
+    "chatgpt-regex-explain",
+    "chatgpt-roadmap-p",
   ];
   return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }
