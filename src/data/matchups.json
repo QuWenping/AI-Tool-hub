@@ -366,5 +366,95 @@
     "title_en": "Pika vs Runway (2026): Social Video AI vs Pro Video Suite",
     "cluster": "video",
     "title_zh": "Pika vs Runway（2026）：社交视频 AI vs 专业视频套件"
+  },
+  {
+    "slug": "canva-ai-vs-uizard",
+    "a": "canva-ai",
+    "b": "uizard",
+    "tool_a": "Canva AI",
+    "tool_b": "Uizard",
+    "title_en": "Canva AI vs Uizard (2026): AI Design Platform Showdown",
+    "cluster": "image",
+    "title_zh": "Canva AI vs Uizard（2026）：AI 设计平台对决"
+  },
+  {
+    "slug": "quillbot-vs-grammarly",
+    "a": "quillbot",
+    "b": "grammarly-ai",
+    "tool_a": "QuillBot",
+    "tool_b": "Grammarly",
+    "title_en": "QuillBot vs Grammarly (2026): Paraphrasing vs Grammar Correction",
+    "cluster": "text",
+    "title_zh": "QuillBot vs Grammarly（2026）：改写工具 vs 语法纠错"
+  },
+  {
+    "slug": "gemini-vs-deepseek",
+    "a": "gemini",
+    "b": "deepseek",
+    "tool_a": "Gemini",
+    "tool_b": "DeepSeek",
+    "title_en": "Gemini vs DeepSeek (2026): Google AI vs Chinese Challenger",
+    "cluster": "text",
+    "title_zh": "Gemini vs DeepSeek（2026）：谷歌 AI vs 中国挑战者"
+  },
+  {
+    "slug": "scholarcy-vs-paperpile",
+    "a": "scholarcy",
+    "b": "paperpile",
+    "tool_a": "Scholarcy",
+    "tool_b": "Paperpile",
+    "title_en": "Scholarcy vs Paperpile (2026): Research Paper Management Compared",
+    "cluster": "productivity",
+    "title_zh": "Scholarcy vs Paperpile（2026）：学术论文管理对比"
+  },
+  {
+    "slug": "scholarcy-vs-researchrabbit",
+    "a": "scholarcy",
+    "b": "researchrabbit",
+    "tool_a": "Scholarcy",
+    "tool_b": "Research Rabbit",
+    "title_en": "Scholarcy vs Research Rabbit (2026): AI Research Assistants Face Off",
+    "cluster": "productivity",
+    "title_zh": "Scholarcy vs Research Rabbit（2026）：AI 学术研究助手对决"
+  },
+  {
+    "slug": "stable-diffusion-vs-krea",
+    "a": "stable-diffusion",
+    "b": "krea",
+    "tool_a": "Stable Diffusion",
+    "tool_b": "Krea",
+    "title_en": "Stable Diffusion vs Krea (2026): Open-Source vs Real-Time AI Art",
+    "cluster": "image",
+    "title_zh": "Stable Diffusion vs Krea（2026）：开源 vs 实时 AI 绘画"
+  },
+  {
+    "slug": "tome-vs-gamma",
+    "a": "tome",
+    "b": "gamma",
+    "tool_a": "Tome",
+    "tool_b": "Gamma",
+    "title_en": "Tome vs Gamma (2026): AI Presentation Builder Showdown",
+    "cluster": "productivity",
+    "title_zh": "Tome vs Gamma（2026）：AI 演示文稿构建器对决"
+  },
+  {
+    "slug": "leonardo-vs-midjourney",
+    "a": "leonardo",
+    "b": "midjourney",
+    "tool_a": "Leonardo.AI",
+    "tool_b": "Midjourney",
+    "title_en": "Leonardo.AI vs Midjourney (2026): Versatile AI Art vs Aesthetic Master",
+    "cluster": "image",
+    "title_zh": "Leonardo.AI vs Midjourney（2026）：全能 AI 绘画 vs 美学大师"
+  },
+  {
+    "slug": "crewai-vs-autogpt",
+    "a": "crewai",
+    "b": "autogpt",
+    "tool_a": "CrewAI",
+    "tool_b": "AutoGPT",
+    "title_en": "CrewAI vs AutoGPT (2026): Multi-Agent Framework vs Autonomous Agent",
+    "cluster": "code",
+    "title_zh": "CrewAI vs AutoGPT（2026）：多智能体框架 vs 自主智能体"
   }
 ]
