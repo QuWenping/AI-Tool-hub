@@ -12,6 +12,13 @@
     { "source": "/zh/tool/:slug*", "destination": "/zh/tools/:slug*", "statusCode": 301 }
   ],
   "rewrites": [
+    { "source": "/favicon.ico", "destination": "/favicon.svg" },
+    { "source": "/favicon.png", "destination": "/favicon.svg" },
+    { "source": "/icon/favicon.ico", "destination": "/favicon.svg" },
+    { "source": "/static/favicon.ico", "destination": "/favicon.svg" },
+    { "source": "/img/favicon.ico", "destination": "/favicon.svg" },
+    { "source": "/images/favicon.ico", "destination": "/favicon.svg" },
+    { "source": "/assets/favicon.ico", "destination": "/favicon.svg" },
     { "source": "/(.*)", "destination": "/api/index" }
   ]
 }
