@@ -22,7 +22,8 @@ const fullTitle = title
   : "AI Tool Hub | Best AI Tools Directory";
 const desc = description || "Explore curated AI tools for writing, coding, image generation, video, audio and productivity.";
 const kw = keywords || "AI tools, best AI tools, AI writing, AI coding, AI image generators";
-const url = canonical || siteUrl + Astro.url.pathname;
+const normalizedPath = Astro.url.pathname.replace(/\/+$/, "") + "/";
+const url = canonical || siteUrl + normalizedPath;
 const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "/index.html";
 // AdSense policy: no ads on non-content / legal / meta pages
 const noAdsSlugs = ["privacy","terms","contact","about","sponsor","advertise","press-kit","changelog","submit-sitemap","accessibility","editorial-guidelines","methodology","team"];
