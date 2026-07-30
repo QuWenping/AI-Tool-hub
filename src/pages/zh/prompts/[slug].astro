@@ -325,6 +325,14 @@ const promptDataZh: Record<string, any> = {
     exampleOutput: "## 产品路线图：AI 邮件助手（2026 Q3-Q4）\n### Q3 2026：MVP\n- 语气检测智能撰写（第 1-4 周）\n- 邮件摘要（第 5-8 周）\n- Gmail + Outlook 集成（第 9-12 周）\n### Q4 2026：增长\n- 跟进提醒自动化（第 13-16 周）\n- 团队分析仪表板（第 17-20 周）\n- 企业 SSO（第 21-24 周）\n### 依赖关系\n- NLP 模型微调必须在第 5 周前完成\n- OAuth 审批需在第 8 周前获得",
     relatedTools: ["chatgpt", "claude", "notion-ai"],
   },
+  "any-agent-memory": {
+    title: "AI 智能体记忆架构提示词",
+    description: "用于设计 AI 智能体记忆架构的提示词模板。涵盖短期上下文窗口、长期向量存储、情节记忆和检索增强生成（RAG）策略。",
+    tags: ["架构", "Claude", "AI 智能体"],
+    useCase: "需要为自主智能体设计跨会话记忆系统的 AI 工程师和架构师，使其能够保留上下文并从历史交互中学习。",
+    exampleOutput: "## 智能体记忆架构\n### 第 1 层：短期记忆\n- 上下文窗口：200K token\n- 滑动窗口策略：最近 5 轮对话\n- 摘要压缩：超过 80% 容量时触发\n### 第 2 层：工作记忆\n- 当前任务状态存储\n- 中间步骤追踪\n- 工具调用结果缓存\n### 第 3 层：长期记忆\n- 向量数据库：Pinecone\n- 嵌入模型：text-embedding-3-large\n- 检索策略：混合搜索（BM25 + 语义）\n### 第 4 层：情节记忆\n- 成功/失败经验编码\n- 用户偏好学习\n- A/B 测试反馈循环",
+    relatedTools: ["claude", "cursor"],
+  },
 };
 
 export async function getStaticPaths() {
@@ -351,13 +359,14 @@ export async function getStaticPaths() {
     "midjourney-product-shot",
     "chatgpt-regex-explain",
     "chatgpt-roadmap-p",
+    "any-agent-memory",
   ];
   return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }
 
 const { slug } = Astro.props;
 const pageLang = "zh";
-const pd = promptDataZh[slug] || { title: slug.replace(/-/g, ' '), description: '', tags: [], useCase: '', exampleOutput: '', relatedTools: [] };
+const pd = promptDataZh[slug] || { title: slug.replace(/-/g, ' '), description: '', tags: [], useCase: '', eexampleOutput: '', relatedTools: [] };
 const title = pd.title;
 const description = pd.description || '';
 const tags = pd.tags || [];

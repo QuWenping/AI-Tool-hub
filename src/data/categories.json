@@ -205,5 +205,28 @@
     ],
     "title_zh": "2026 年最佳建筑 AI 工具",
     "desc_zh": "用于建筑设计、渲染、项目管理和可视化的 AI 工具。"
+  },
+  {
+    "slug": "free",
+    "title_en": "Best Free AI Tools in 2026",
+    "desc_en": "Completely free AI tools across writing, image generation, coding, video, and productivity — no credit card required.",
+    "tools": [
+      "chatgpt",
+      "claude",
+      "deepseek",
+      "perplexity",
+      "midjourney",
+      "stable-diffusion",
+      "ideogram",
+      "cursor",
+      "windsurf",
+      "cline",
+      "sora",
+      "runway",
+      "elevenlabs",
+      "suno"
+    ],
+    "title_zh": "2026 年最佳免费 AI 工具",
+    "desc_zh": "完全免费的 AI 工具，涵盖写作、图像生成、编程、视频和效率领域——无需信用卡。"
   }
 ]

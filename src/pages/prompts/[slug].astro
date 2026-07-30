@@ -398,6 +398,38 @@ const promptData: Record<string, any> = {
     exampleOutput: "## Product Roadmap: AI Email Assistant (Q3-Q4 2026)\n### Q3 2026: MVP\n- Smart compose with tone detection (Week 1-4)\n- Email summarization (Week 5-8)\n- Gmail + Outlook integration (Week 9-12)\n### Q4 2026: Growth\n- Follow-up reminder automation (Week 13-16)\n- Team analytics dashboard (Week 17-20)\n- Enterprise SSO (Week 21-24)\n### Dependencies\n- NLP model fine-tuning must complete before Week 5\n- OAuth approval needed by Week 8",
     relatedTools: ["chatgpt", "claude", "notion-ai"],
   },
+"gamma-webinar": {
+    title: "Gamma Webinar Prompt",
+    description: "A prompt template for generating engaging AI webinar scripts and presentations with Gamma. Covers slide structure, speaker notes, interactive elements, and audience engagement tactics.",
+    tags: ["Writing", "Gamma", "Marketing"],
+    useCase: "Marketers, educators, and business professionals creating AI-powered webinar presentations that capture and retain audience attention.",
+    exampleOutput: "## Webinar: AI Tools for Small Business\n### Slide 1: Title\n- Hook: 'How 3 AI tools saved us 20 hours/week'\n### Slide 2: Problem\n- 67% of SMB owners spend >10hrs on admin\n### Slide 3: Solution Demo\n- Live demo of ChatGPT for email drafts\n- Before/after comparison\n### Slide 4: CTA\n- Free trial link + resource download",
+    relatedTools: ["gamma", "chatgpt"],
+  },
+  "claude-grant": {
+    title: "Claude Grant Proposal Prompt",
+    description: "A prompt template for using Claude to craft compelling grant proposals. Covers problem statement, methodology, budget justification, and impact measurement.",
+    tags: ["Writing", "Claude", "Funding"],
+    useCase: "Nonprofit leaders, researchers, and grant writers using Claude to structure persuasive grant proposals aligned with funder priorities.",
+    exampleOutput: "## Grant Proposal: Digital Literacy Program\n### Problem Statement\n45% of rural seniors lack basic digital skills, limiting access to telehealth and online services.\n### Proposed Solution\n8-week community workshop series teaching smartphone basics, online safety, and telehealth navigation.\n### Budget\nTotal: $85,000 (Instructors 50%, Equipment 30%, Marketing 20%)\n### Impact Metrics\n- 500 seniors trained in Year 1\n- 80% report increased confidence using digital tools",
+    relatedTools: ["claude", "chatgpt"],
+  },
+  "any-email-pack": {
+    title: "AI Email Sequence Prompt Pack",
+    description: "A comprehensive prompt pack for generating complete email marketing sequences using AI. Covers welcome series, nurture campaigns, re-engagement emails, and transactional notifications.",
+    tags: ["Marketing", "ChatGPT", "Email"],
+    useCase: "Email marketers, growth hackers, and business owners creating automated email sequences that convert subscribers into customers.",
+    exampleOutput: "## Email Sequence: SaaS Onboarding (7 days)\n### Day 1: Welcome\nSubject: Welcome to [Product] — here's your quick start\nBody: 3-step setup guide + link to dashboard\n### Day 3: Value Hook\nSubject: The feature that saves our users 5 hours/week\nBody: Case study + GIF tutorial\n### Day 5: Social Proof\nSubject: 'I wish I found this sooner' — [Customer Name]\nBody: Testimonial + results screenshot\n### Day 7: CTA\nSubject: Your trial ends in 3 days — ready to upgrade?\nBody: Pricing comparison + limited-time offer",
+    relatedTools: ["chatgpt", "claude"],
+  },
+  "any-breakdown": {
+    title: "AI Concept Breakdown Prompt",
+    description: "A prompt template for using AI to break down complex concepts into digestible, layered explanations. Covers technical, business, and scientific domains with progressive detail levels.",
+    tags: ["Education", "ChatGPT", "Learning"],
+    useCase: "Educators, technical writers, and content creators explaining complex topics at multiple difficulty levels for diverse audiences.",
+    exampleOutput: "## Concept: Blockchain\n### Level 1 (ELI5)\nImagine a notebook that everyone can see. When someone writes in it, everyone's copy updates automatically. No one can erase what's written.\n### Level 2 (Beginner)\nBlockchain is a decentralized digital ledger. Transactions are grouped into blocks, cryptographically linked, and distributed across a network of computers.\n### Level 3 (Intermediate)\nEach block contains a timestamp, transaction data, and a hash of the previous block. Consensus mechanisms (PoW, PoS) ensure all nodes agree on the chain state.\n### Level 4 (Advanced)\nMerkle trees enable efficient verification, Byzantine fault tolerance ensures network resilience, and smart contracts enable Turing-complete programmable transactions.",
+    relatedTools: ["chatgpt", "claude", "perplexity"],
+  },
 };
 
 export async function getStaticPaths() {
@@ -427,13 +459,14 @@ export async function getStaticPaths() {
     "midjourney-product-shot",
     "chatgpt-regex-explain",
     "chatgpt-roadmap-p",
+    "gamma-webinar", "claude-grant", "any-email-pack", "any-breakdown",
   ];
   return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }
 
 const { slug } = Astro.props;
 const pageLang = Astro.currentLocale || "en";
-const pd = promptData[slug] || { title: slug.replace(/-/g, ' '), description: '', tags: [], useCase: '', exampleOutput: '', relatedTools: [] };
+const pd = promptData[slug] || { title: slug.replace(/-/g, ' '), description: '', tags: [], useCase: '', eexampleOutput: '', relatedTools: [] };
 const title = pd.title;
 const description = pd.description || '';
 const tags = pd.tags || [];

@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Claude Code Review Pipeline Automation";
+---
+
+<BaseLayout title={title} description="Automate code review with Claude AI. A CI/CD pipeline integration that adds intelligent, context-aware code reviews to every pull request.">
+  <article class="legal-page">
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> &rsaquo;
+      <a href="/workflows/">AI Workflows</a> &rsaquo;
+      <span>{title}</span>
+    </nav>
+    <header class="page-hero">
+      <span class="eyebrow">Workflows</span>
+      <h1>{title}</h1>
+      <p class="lede">Integrate Claude into your CI/CD pipeline for automated, intelligent code reviews. Catch bugs, enforce best practices, and maintain code quality with AI-powered pull request analysis.</p>
+    </header>
+    <section class="article-body">
+      <h2>Overview</h2>
+      <p>This workflow integrates Anthropic Claude into a GitHub Actions or GitLab CI pipeline to automatically review pull requests. Claude analyzes code changes for bugs, security vulnerabilities, performance issues, and style consistency — providing actionable inline comments and a summary report.</p>
+
+      <h2>Pipeline Stages</h2>
+      <ol>
+        <li><strong>Trigger</strong>: Pipeline runs on every pull request or push to protected branches.</li>
+        <li><strong>Diff Extraction</strong>: Extract changed files and diff content from the PR metadata.</li>
+        <li><strong>Context Gathering</strong>: Collect repository-level context — coding standards, architecture docs, and recent related PRs.</li>
+        <li><strong>AI Review</strong>: Claude analyzes each changed file for bugs, readability, security flaws, and architectural consistency.</li>
+        <li><strong>Report Generation</strong>: Produce structured review comments posted as inline PR annotations and a summary report.</li>
+        <li><strong>Approval Gate (Optional)</strong>: Block merge if critical issues are detected.</li>
+      </ol>
+
+      <h2>Configuration Options</h2>
+      <ul>
+        <li><strong>Review Depth</strong>: Shallow (syntax + style) or Deep (logic + security + architecture).</li>
+        <li><strong>Ignore Patterns</strong>: Skip generated files, migrations, or test fixtures.</li>
+        <li><strong>Severity Threshold</strong>: Only report issues above a configurable severity level (info/warning/critical).</li>
+        <li><strong>Auto-Fix Suggestions</strong>: Claude can generate suggested code patches alongside each finding.</li>
+      </ul>
+
+      <h2>Tools Required</h2>
+      <ul>
+        <li>Anthropic API key (Claude 3.5 Sonnet or Claude Opus)</li>
+        <li>GitHub Actions or GitLab CI</li>
+        <li>Python 3.10+ with anthropic SDK</li>
+        <li>Optional: Linear / Jira integration for ticket referencing</li>
+      </ul>
+
+      <h2>Use Cases</h2>
+      <ul>
+        <li>Enforcing code quality standards across distributed teams</li>
+        <li>Reducing manual review time in high-velocity CI/CD pipelines</li>
+        <li>Catching security vulnerabilities before they reach production</li>
+        <li>Onboarding new developers with consistent, educational review feedback</li>
+        <li>Maintaining architectural consistency in monorepo environments</li>
+      </ul>
+    </section>
+  </article>
+</BaseLayout>

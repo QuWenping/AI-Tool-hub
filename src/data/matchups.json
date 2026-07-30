@@ -486,5 +486,25 @@
     "title_en": "Notion AI vs ChatGPT (2026): Workspace AI vs General-Purpose AI",
     "cluster": "productivity",
     "title_zh": "Notion AI vs ChatGPT（2026）：工作空间 AI vs 通用 AI"
+  },
+  {
+    "slug": "midjourney-vs-dalle-3",
+    "a": "midjourney",
+    "b": "dalle3",
+    "tool_a": "Midjourney",
+    "tool_b": "DALL-E 3",
+    "title_en": "Midjourney vs DALL-E 3 (2026): Which AI Image Generator Is Better?",
+    "cluster": "image",
+    "title_zh": "Midjourney vs DALL·E 3（2026）：哪个 AI 图像生成器更强？"
+  },
+  {
+    "slug": "chatgpt-vs-gemini",
+    "a": "chatgpt",
+    "b": "gemini",
+    "tool_a": "ChatGPT",
+    "tool_b": "Gemini",
+    "title_en": "ChatGPT vs Gemini (2026): OpenAI vs Google AI Showdown",
+    "cluster": "text",
+    "title_zh": "ChatGPT vs Gemini（2026）：OpenAI vs Google AI 对决"
   }
 ]
