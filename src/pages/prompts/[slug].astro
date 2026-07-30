@@ -430,6 +430,24 @@ const promptData: Record<string, any> = {
     exampleOutput: "## Concept: Blockchain\n### Level 1 (ELI5)\nImagine a notebook that everyone can see. When someone writes in it, everyone's copy updates automatically. No one can erase what's written.\n### Level 2 (Beginner)\nBlockchain is a decentralized digital ledger. Transactions are grouped into blocks, cryptographically linked, and distributed across a network of computers.\n### Level 3 (Intermediate)\nEach block contains a timestamp, transaction data, and a hash of the previous block. Consensus mechanisms (PoW, PoS) ensure all nodes agree on the chain state.\n### Level 4 (Advanced)\nMerkle trees enable efficient verification, Byzantine fault tolerance ensures network resilience, and smart contracts enable Turing-complete programmable transactions.",
     relatedTools: ["chatgpt", "claude", "perplexity"],
   },
+
+"chatgpt-positioning": {
+    title: "ChatGPT Positioning Prompt",
+    description: "A prompt template for using ChatGPT to develop brand positioning strategies. Covers market differentiation, value proposition crafting, competitive landscape analysis, and messaging architecture.",
+    tags: ["Business", "ChatGPT", "Marketing"],
+    useCase: "Brand strategists, marketing managers, and startup founders using ChatGPT to define and refine their brand\'s market position and messaging strategy.",
+    exampleOutput: "## Brand Positioning: EcoFleet\n### Market Differentiator\nFirst carbon-neutral last-mile delivery service with real-time emissions tracking visible to end consumers.\n### Value Proposition\n'Deliveries your customers feel good about — 100% carbon-neutral, 100% transparent.'\n### Competitive Landscape\n- Amazon Logistics: Speed leader, no sustainability transparency\n- DHL GoGreen: Established, slower adoption\n### Messaging Pillars\n1. Transparency (live carbon tracker per delivery)\n2. Community (local fleet partners, not gig workers)\n3. Innovation (AI-optimized routes reduce emissions 34%)",
+    relatedTools: ["chatgpt", "claude"],
+  },
+
+"any-knowledge-transfer": {
+    title: "AI Knowledge Transfer Prompt",
+    description: "A prompt template for using AI to facilitate structured knowledge transfer between team members. Covers documentation generation, onboarding guides, handover notes, and institutional knowledge capture.",
+    tags: ["Business", "ChatGPT", "Knowledge"],
+    useCase: "Engineering managers, team leads, and HR professionals capturing departing employees\' knowledge and creating structured onboarding documentation for new hires.",
+    exampleOutput: "## Knowledge Transfer: Backend Lead Handover\n### System Architecture\n- 12 microservices, orchestrated via Kubernetes\n- Event bus: Kafka with 3-node cluster\n- Primary DB: PostgreSQL 16 with read replicas\n### Critical Processes\n1. Payment reconciliation runs nightly at 2AM UTC\n2. User data export pipeline (GDPR compliance, 30-day SLA)\n### Watch Points\n- Memory leak in auth-service under >5K concurrent connections\n- DNS caching issue in staging environment\n### Onboarding Plan (Week 1-2)\n- Day 1: Architecture diagram walkthrough\n- Day 2-3: Pair on bug fix in payment service\n- Day 4-5: Own a small feature end-to-end",
+    relatedTools: ["chatgpt", "claude", "notion-ai"],
+  },
 };
 
 export async function getStaticPaths() {
@@ -460,6 +478,7 @@ export async function getStaticPaths() {
     "chatgpt-regex-explain",
     "chatgpt-roadmap-p",
     "gamma-webinar", "claude-grant", "any-email-pack", "any-breakdown",
+    "chatgpt-positioning", "any-knowledge-transfer"
   ];
   return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }

@@ -6690,5 +6690,30 @@
     "editorialVerdict": {
       "en": "Wav2Lip delivers excellent lip-sync accuracy for an open-source tool. Best suited for developers and creators comfortable with Python, though it lacks a user-friendly GUI."
     }
+  },
+  "mem-ai": {
+    "reviewed": true,
+    "updatedAt": "2026-07-30",
+    "score": 75,
+    "overall_score": 75,
+    "quickFacts": {
+      "freeTier": true,
+      "hasApi": false,
+      "platforms": [
+        "Web",
+        "Mac",
+        "iOS"
+      ]
+    },
+    "pricingSummary": {
+      "en": "Freemium, Pro from $14.99/mo"
+    },
+    "scoreBreakdown": {
+      "user": 78,
+      "capability": 72,
+      "price": 80,
+      "growth": 70,
+      "trust": 75
+    }
   }
 }

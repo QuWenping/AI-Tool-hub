@@ -506,5 +506,25 @@
     "title_en": "ChatGPT vs Gemini (2026): OpenAI vs Google AI Showdown",
     "cluster": "text",
     "title_zh": "ChatGPT vs Gemini（2026）：OpenAI vs Google AI 对决"
+  },
+  {
+    "slug": "suno-vs-udio",
+    "a": "suno",
+    "b": "udio",
+    "tool_a": "Suno",
+    "tool_b": "Udio",
+    "title_en": "Suno vs Udio (2026): AI Music Generation Showdown",
+    "cluster": "audio",
+    "title_zh": "Suno vs Udio（2026）：AI 音乐生成对决"
+  },
+  {
+    "slug": "perplexity-vs-elicit",
+    "a": "perplexity",
+    "b": "elicit",
+    "tool_a": "Perplexity",
+    "tool_b": "Elicit",
+    "title_en": "Perplexity vs Elicit (2026): AI Research Assistants Compared",
+    "cluster": "productivity",
+    "title_zh": "Perplexity vs Elicit（2026）：AI 研究助手对比"
   }
 ]

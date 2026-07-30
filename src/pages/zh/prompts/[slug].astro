@@ -333,6 +333,24 @@ const promptDataZh: Record<string, any> = {
     exampleOutput: "## 智能体记忆架构\n### 第 1 层：短期记忆\n- 上下文窗口：200K token\n- 滑动窗口策略：最近 5 轮对话\n- 摘要压缩：超过 80% 容量时触发\n### 第 2 层：工作记忆\n- 当前任务状态存储\n- 中间步骤追踪\n- 工具调用结果缓存\n### 第 3 层：长期记忆\n- 向量数据库：Pinecone\n- 嵌入模型：text-embedding-3-large\n- 检索策略：混合搜索（BM25 + 语义）\n### 第 4 层：情节记忆\n- 成功/失败经验编码\n- 用户偏好学习\n- A/B 测试反馈循环",
     relatedTools: ["claude", "cursor"],
   },
+
+  "any-ghost-write": {
+    title: "AI 代写提示词",
+    description: "使用 AI 进行代写的通用提示词模板。涵盖语气匹配、风格模仿、内容结构调整和多版本生成，适用于博客、邮件、社交媒体和商务文档。",
+    tags: ["写作", "ChatGPT", "效率"],
+    useCase: "内容创作者、营销人员和忙碌的专业人士，需要 AI 在保持个人风格的前提下协助撰写各类文本。",
+    exampleOutput: "## 代写输出示例\n### 版本 A（正式商务）\n尊敬的投资人：感谢您抽出时间审阅我们的 Q3 业务回顾。本期亮点包括 ARR 增长 34% 至 $2.8M，企业客户留存率达 92%。\n### 版本 B（轻松友好）\nHey team — Q3 numbers are in and there\'s a lot to celebrate! ARR is up 34%, we closed 8 new enterprise accounts, and our NPS hit an all-time high of 72.",
+    relatedTools: ["chatgpt", "claude"],
+  },
+
+  "any-knowledge-transfer": {
+    title: "AI 知识转移提示词",
+    description: "使用 AI 促进团队成员之间结构化知识转移的提示词模板。涵盖文档生成、入职指南、交接说明和机构知识获取。",
+    tags: ["商业", "ChatGPT", "知识管理"],
+    useCase: "工程经理、团队负责人和 HR 专业人员，捕捉离职员工的知识并创建结构化的新员工入职文档。",
+    exampleOutput: "## 知识转移：后端负责人交接\n### 系统架构\n- 12 个微服务，Kubernetes 编排\n- 事件总线：Kafka 3 节点集群\n- 主数据库：PostgreSQL 16 含只读副本\n### 关键流程\n1. 支付对账每日凌晨 2 点 UTC 运行\n2. 用户数据导出流水线（GDPR 合规，30 天 SLA）\n### 注意事项\n- auth-service 在 5K+ 并发连接时出现内存泄漏\n- 测试环境的 DNS 缓存问题\n### 入职计划（第 1-2 周）\n- 第 1 天：架构图讲解\n- 第 2-3 天：结对修复支付服务 Bug\n- 第 4-5 天：独立完成一个小功能的端到端开发",
+    relatedTools: ["chatgpt", "claude", "notion-ai"],
+  },
 };
 
 export async function getStaticPaths() {
@@ -360,6 +378,7 @@ export async function getStaticPaths() {
     "chatgpt-regex-explain",
     "chatgpt-roadmap-p",
     "any-agent-memory",
+    "any-ghost-write", "any-knowledge-transfer"
   ];
   return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }
