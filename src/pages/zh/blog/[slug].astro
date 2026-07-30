@@ -27,7 +27,7 @@ const relatedTools = (postData.related_tools || []).map(tid => {
 }).filter(Boolean);
 const relatedSolution = solutionsData.find(s => s.slug === postData.related_solution);
 const siteUrl = "https://thebestaitoolsreview.com";
-const pageUrl = siteUrl + "/blog/" + post.slug + "/";
+const pageUrl = siteUrl + "/zh/blog/" + post.slug + "/";
 const faqItems = postData.faq && postData.faq.length > 0 ? postData.faq : [
   { q: "What is " + postData.title_en + "?", a: postData.desc_en },
   { q: "Who is this for?", a: "Anyone interested in " + postData.category + " - " + postData.desc_en },
@@ -79,7 +79,7 @@ const breadcrumbSchema = {
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl + "/" },
     { "@type": "ListItem", "position": 2, "name": "Blog", "item": siteUrl + "/blog/" },
-    { "@type": "ListItem", "position": 3, "name": postData.title_en, "item": pageUrl }
+    { "@type": "ListItem", "position": 3, "name": postTitle, "item": pageUrl }
   ]
 };
 const faqSchema = {
