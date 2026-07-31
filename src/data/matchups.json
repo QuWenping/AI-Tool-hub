@@ -526,5 +526,35 @@
     "title_en": "Perplexity vs Elicit (2026): AI Research Assistants Compared",
     "cluster": "productivity",
     "title_zh": "Perplexity vs Elicit（2026）：AI 研究助手对比"
+  },
+  {
+    "slug": "consensus-pro-vs-researchrabbit",
+    "a": "consensus",
+    "b": "researchrabbit",
+    "tool_a": "Consensus",
+    "tool_b": "ResearchRabbit",
+    "title_en": "Consensus vs ResearchRabbit (2026): AI Research Tools Compared",
+    "cluster": "productivity",
+    "title_zh": "Consensus vs ResearchRabbit（2026）：AI 学术研究工具对比"
+  },
+  {
+    "slug": "windsurf-vs-copilot",
+    "a": "windsurf",
+    "b": "github-copilot",
+    "tool_a": "Windsurf",
+    "tool_b": "GitHub Copilot",
+    "title_en": "Windsurf vs GitHub Copilot (2026): AI Code Editors Compared",
+    "cluster": "code",
+    "title_zh": "Windsurf vs GitHub Copilot（2026）：AI 代码编辑器对比"
+  },
+  {
+    "slug": "cursor-vs-codeium",
+    "a": "cursor",
+    "b": "codeium",
+    "tool_a": "Cursor",
+    "tool_b": "Codeium",
+    "title_en": "Cursor vs Codeium (2026): AI Code Editors Face Off",
+    "cluster": "code",
+    "title_zh": "Cursor vs Codeium（2026）：AI 代码编辑器对决"
   }
 ]

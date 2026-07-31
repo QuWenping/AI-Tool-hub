@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const title = "Dify Data Analysis Agent Workflow";
+---
+
+<BaseLayout title={title} description="Build an automated data analysis agent using Dify. Multi-step workflow for data ingestion, cleaning, analysis, visualization, and report generation.">
+  <article class="legal-page">
+    <nav class="breadcrumbs">
+      <a href="/">Home</a> &rsaquo;
+      <a href="/workflows/">AI Workflows</a> &rsaquo;
+      <span>{title}</span>
+    </nav>
+    <header class="page-hero">
+      <span class="eyebrow">Workflows</span>
+      <h1>{title}</h1>
+      <p class="lede">Build an automated data analysis agent using Dify's visual workflow editor. This pipeline ingests raw data, performs cleaning and transformation, runs statistical analysis, generates visualizations, and produces a formatted report — all without writing code.</p>
+    </header>
+    <section class="article-body">
+      <h2>Overview</h2>
+      <p>This Dify workflow automates the end-to-end data analysis process. Upload a CSV or connect a database, and the agent handles everything from data profiling to final report generation using LLM-powered reasoning at each step.</p>
+
+      <h2>Workflow Steps</h2>
+      <ol>
+        <li><strong>Data Ingestion</strong>: Accept CSV upload or database connection. Validate schema and detect data types automatically.</li>
+        <li><strong>Data Cleaning</strong>: Handle missing values, remove duplicates, standardize formats, and detect outliers using statistical methods.</li>
+        <li><strong>Exploratory Analysis</strong>: Generate summary statistics, correlation matrices, and distribution analysis. LLM interprets initial patterns.</li>
+        <li><strong>Deep Analysis</strong>: Run hypothesis tests, trend analysis, segmentation, and predictive modeling as configured.</li>
+        <li><strong>Visualization</strong>: Generate charts and graphs (bar, line, scatter, heatmap) based on analysis results.</li>
+        <li><strong>Report Generation</strong>: Compile findings, charts, and recommendations into a formatted Markdown or PDF report.</li>
+      </ol>
+
+      <h2>Tools Required</h2>
+      <ul>
+        <li>Dify (open-source LLM application platform)</li>
+        <li>Python Code Executor node for data processing</li>
+        <li>LLM node (OpenAI / Claude / local model) for reasoning and report writing</li>
+        <li>Chart generation library (Matplotlib / Plotly via Code Executor)</li>
+      </ul>
+
+      <h2>Use Cases</h2>
+      <ul>
+        <li>Business analysts automating weekly sales reports from CRM exports</li>
+        <li>Marketing teams analyzing campaign performance data across channels</li>
+        <li>Researchers running statistical analysis on survey results without coding</li>
+        <li>Product teams monitoring user engagement metrics with automated insights</li>
+      </ul>
+    </section>
+  </article>
+</BaseLayout>
