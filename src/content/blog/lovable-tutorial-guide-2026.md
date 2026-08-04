@@ -1,29 +1,19 @@
 ---
+
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_lovable_20260803_001
-    ReservedCode1: O0X5JxNIAsy/PnYwPM2YiGvedhXthxpACLvH6GyZ3iVsKP56qGTk+REoLED/z0LsALj0IDNSVAuopwKqbQ2s3IwiORcH9VR6AoSTUILSdDXCaXaFvJBK/7tCvcASjeapUmpedyCV2HDQJTWv3G7UTWGBEGc72hlxX7vxuVixpsv47MW2O2TYxy1FI4g=
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_c6aac9848ee211f1857c525400826444
+    ReservedCode1: +SOPQhHw5MdGm8sdwy3ifj4g1XDiZtNuffZKIWJU8C07s8SGxabJb/9cm5aB2BmOOsyVeaWn6Nn/E3NOb+PdW/S8RrxBsVSNKL2XpPOuieZkSSWAXWHrsggTu7MGx+mCopqO3saSY7M5U8jyhbsmlrfPAohlxwuVeTi6KglrDSfexVdfvfVK/bkCB5A=
     ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_lovable_20260803_001
-    ReservedCode2: O0X5JxNIAsy/PnYwPM2YiGvedhXthxpACLvH6GyZ3iVsKP56qGTk+REoLED/z0LsALj0IDNSVAuopwKqbQ2s3IwiORcH9VR6AoSTUILSdDXCaXaFvJBK/7tCvcASjeapUmpedyCV2HDQJTWv3G7UTWGBEGc72hlxX7vxuVixpsv47MW2O2TYxy1FI4g=
-
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_c6aac9848ee211f1857c525400826444
+    ReservedCode2: +SOPQhHw5MdGm8sdwy3ifj4g1XDiZtNuffZKIWJU8C07s8SGxabJb/9cm5aB2BmOOsyVeaWn6Nn/E3NOb+PdW/S8RrxBsVSNKL2XpPOuieZkSSWAXWHrsggTu7MGx+mCopqO3saSY7M5U8jyhbsmlrfPAohlxwuVeTi6KglrDSfexVdfvfVK/bkCB5A=
+title_en: 'Lovable Tutorial Guide (2026): Full Review & Hands-On Test'
+desc_en: 'Building full-stack SaaS MVPs with authentication, database, and role-based access without writing backend code, using AI-powered visual development.'
+category: AI TOOL REVIEW + TUTORIAL
 author: AI Tool Hub Research Team
-category: Tutorial
-tags:
-  - Lovable
-  - AI app builder
-  - no-code
-  - Supabase
-  - SaaS MVP
-  - AI tutorial
-related_tools:
-  - lovable
-title_en: 'I Tested Lovable for 30 Days: Building Full-Stack Apps Without Writing Backend Code'
-date: '2026-08-03'
-desc_en: A hands-on tutorial guide to Lovable (lovable.dev), the no-code AI app builder powered by Supabase. We built a client-feedback portal with auth, database, and role-based access — entirely through chat prompts. Covers workflow, pricing, failure cases, and comparison with Bolt.
+date: '2026-07-28'
 ---
-
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. This does not affect our editorial assessment — we recommend tools based on hands-on testing and real-world use, not commission rates.
 
 ## Quick Answer: Is Lovable Right for You?
@@ -248,3 +238,4 @@ Lovable handles CRUD operations, authentication flows, and basic business logic 
 ---
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. Our recommendations are based on hands-on testing conducted in July–August 2026 and reflect our genuine assessment of each tool's capabilities for the described use cases.
+*（内容由AI生成，仅供参考）*

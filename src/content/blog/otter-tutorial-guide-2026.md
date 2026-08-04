@@ -1,4 +1,5 @@
 ---
+
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
@@ -7,12 +8,12 @@ AIGC:
     ContentPropagator: 001191440300708461136T1XGW3
     PropagateID: d49fe9e58e84b114ae630734f70cf3ca_1bc6b0038d8511f1bfea525400e6dd8f
     ReservedCode2: ihGObm5pUVVqBFkD0OrNDCGeRR0GWTRA69z6SJYAutmIVHE1HlMdObBajgjSZdxkQ+d+q3r59QZkSGEwcAecVcGrNiYSaAdkpDoFgxq5LTztcFCRoJsxmQm2A38/Tk9fDuz6NjREczsafXH9xUFlKBHoJdOfp64Z6ZYk1Vwm98thRT8z3+dpwV9iN8Y=
+title_en: 'Otter.ai Tutorial Guide (2026): Full Review & Hands-On Test'
+desc_en: 'End-user meeting and lecture transcription — auto-joins Zoom/Meet/Teams, produces real-time transcripts with speaker labels, and lets you query your meeting history by keyword.'
+category: AI TOOL REVIEW + TUTORIAL
+author: AI Tool Hub Research Team
+date: '2026-07-28'
 ---
-
-
-
-
-
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. This does not affect our editorial assessment — we recommend tools based on hands-on testing and real-world use, not commission rates.
 
 ## Quick Answer: Should You Use Otter.ai?

@@ -1,4 +1,5 @@
 ---
+
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
@@ -7,10 +8,12 @@ AIGC:
     ContentPropagator: 001191440300708461136T1XGW3
     PropagateID: d49fe9e58e84b114ae630734f70cf3ca_570739fe8d4f11f1bfea525400e6dd8f
     ReservedCode2: 7/ztbPkuTDq8bRA3TmF519tMaxQg3OmQlEGAjOtMc26LO9B6nFzzDKYI4HZNrHQSi+ZsIPi+M+Twq+eBxgImaf+3TMFgf6O6cmBQ4jkOH/gJg1oaLXRbo2JRp49Vc/onzzM884Kma7YtQhsBat6wpYU8eddFYk6TPX59op1y4Lgqs3m8ZO+PbS7ddh0=
+title_en: 'Bolt.new Tutorial Guide (2026): Full Review & Hands-On Test'
+desc_en: 'Turning a one-sentence idea into a running full-stack web application in under 2 minutes, with zero local setup. Ideal for prototyping, MVPs, and learning full-stack patterns.'
+category: AI TOOL REVIEW + TUTORIAL
+author: AI Tool Hub Research Team
+date: '2026-07-28'
 ---
-
-
-
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. This does not affect our editorial assessment — we recommend tools based on hands-on testing and real-world use, not commission rates.
 
 ## Quick Answer: Should You Use Bolt?

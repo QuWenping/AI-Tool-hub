@@ -1,30 +1,19 @@
 ---
+
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_cline_20260803_005
-    ReservedCode1: O0X5JxNIAsy/PnYwPM2YiGvedhXthxpACLvH6GyZ3iVsKP56qGTk+REoLED/z0LsALj0IDNSVAuopwKqbQ2s3IwiORcH9VR6AoSTUILSdDXCaXaFvJBK/7tCvcASjeapUmpedyCV2HDQJTWv3G7UTWGBEGc72hlxX7vxuVixpsv47MW2O2TYxy1FI4g=
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_cae098588ee211f1857c525400826444
+    ReservedCode1: RlVISAXlKxJg/iXuvEiZO+SjM1JurNqD5tphlZcVEYe97225MeX3jhfsVDaETiRSlcp7dqwiPsgfpBG/x36DCmoF+a+XPdxbTbHuo/VgpgAEsfoANprpgUqRLsghwKasOnSFky6USr4Nz0NCGbl0pAc+FU42wOfwiHEbMMXAxqlRbCIj9J12cMHaJs0=
     ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_cline_20260803_005
-    ReservedCode2: O0X5JxNIAsy/PnYwPM2YiGvedhXthxpACLvH6GyZ3iVsKP56qGTk+REoLED/z0LsALj0IDNSVAuopwKqbQ2s3IwiORcH9VR6AoSTUILSdDXCaXaFvJBK/7tCvcASjeapUmpedyCV2HDQJTWv3G7UTWGBEGc72hlxX7vxuVixpsv47MW2O2TYxy1FI4g=
-
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_cae098588ee211f1857c525400826444
+    ReservedCode2: RlVISAXlKxJg/iXuvEiZO+SjM1JurNqD5tphlZcVEYe97225MeX3jhfsVDaETiRSlcp7dqwiPsgfpBG/x36DCmoF+a+XPdxbTbHuo/VgpgAEsfoANprpgUqRLsghwKasOnSFky6USr4Nz0NCGbl0pAc+FU42wOfwiHEbMMXAxqlRbCIj9J12cMHaJs0=
+title_en: 'Cline Tutorial Guide (2026): Full Review & Hands-On Test'
+desc_en: 'Cline plans and executes multi-step tasks autonomously — reading files, writing code, running tests, and iterating based on results, functioning like an AI pair programmer in VS Code.'
+category: AI TOOL REVIEW + TUTORIAL
 author: AI Tool Hub Research Team
-category: Tutorial
-tags:
-  - Cline
-  - AI coding
-  - VS Code
-  - open source
-  - AI assistant
-  - developer tools
-  - AI tutorial
-related_tools:
-  - cline
-title_en: 'I Tested Cline for 30 Days: Autonomous AI Coding Inside VS Code'
-date: '2026-08-03'
-desc_en: A hands-on tutorial guide to Cline in 2026, the open-source autonomous AI coding assistant for VS Code. We tested multi-file refactoring, terminal-driven debugging, model switching (Claude/DeepSeek/Ollama), and agentic workflows across 60+ coding tasks. Covers setup, token cost management, failure cases, and comparison with Cursor.
+date: '2026-07-28'
 ---
-
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. This does not affect our editorial assessment — we recommend tools based on hands-on testing and real-world use, not commission rates.
 
 ## Quick Answer: Is Cline Right for You?
@@ -273,3 +262,4 @@ Developers who want autonomous AI coding assistance without switching editors or
 ---
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. Our recommendations are based on hands-on testing conducted in July–August 2026 and reflect our genuine assessment of each tool's capabilities for the described use cases.
+*（内容由AI生成，仅供参考）*

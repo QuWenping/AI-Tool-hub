@@ -1,29 +1,19 @@
 ---
+
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_canvaai_20260803_002
-    ReservedCode1: O0X5JxNIAsy/PnYwPM2YiGvedhXthxpACLvH6GyZ3iVsKP56qGTk+REoLED/z0LsALj0IDNSVAuopwKqbQ2s3IwiORcH9VR6AoSTUILSdDXCaXaFvJBK/7tCvcASjeapUmpedyCV2HDQJTWv3G7UTWGBEGc72hlxX7vxuVixpsv47MW2O2TYxy1FI4g=
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_c807f4868ee211f1857c525400826444
+    ReservedCode1: YbwM6HeXscjVnOTfRnscQD+C7H2Z0LnWW6plfzfmMnZazEfTyLJKzVclse0FcOPbjhH5uCsjGCjFHwgFdRRgN6w4VM9vfQyljbB1KLibWja8jc6xR/WbKEcGQZ5K2auMVpPJQU1talWCsJ6I53NDRNJNa0hZJLJl0UdsvovQt9RXRMKZtaXZBM0rQkU=
     ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_canvaai_20260803_002
-    ReservedCode2: O0X5JxNIAsy/PnYwPM2YiGvedhXthxpACLvH6GyZ3iVsKP56qGTk+REoLED/z0LsALj0IDNSVAuopwKqbQ2s3IwiORcH9VR6AoSTUILSdDXCaXaFvJBK/7tCvcASjeapUmpedyCV2HDQJTWv3G7UTWGBEGc72hlxX7vxuVixpsv47MW2O2TYxy1FI4g=
-
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_c807f4868ee211f1857c525400826444
+    ReservedCode2: YbwM6HeXscjVnOTfRnscQD+C7H2Z0LnWW6plfzfmMnZazEfTyLJKzVclse0FcOPbjhH5uCsjGCjFHwgFdRRgN6w4VM9vfQyljbB1KLibWja8jc6xR/WbKEcGQZ5K2auMVpPJQU1talWCsJ6I53NDRNJNa0hZJLJl0UdsvovQt9RXRMKZtaXZBM0rQkU=
+title_en: 'Canva AI Tutorial Guide (2026): Full Review & Hands-On Test'
+desc_en: 'Producing on-brand social media graphics, presentations, flyers, and marketing materials quickly without Photoshop skills, using AI-powered design tools.'
+category: AI TOOL REVIEW + TUTORIAL
 author: AI Tool Hub Research Team
-category: Tutorial
-tags:
-  - Canva
-  - Canva AI
-  - AI design
-  - Magic Studio
-  - graphic design
-  - AI tutorial
-related_tools:
-  - canva-ai
-title_en: 'I Tested Canva AI for 30 Days: A Complete Design Workflow Guide for Non-Designers'
-date: '2026-08-03'
-desc_en: A hands-on tutorial guide to Canva AI's Magic Studio in 2026. We tested Magic Write, Magic Design, Magic Edit, and Brand Kit across 70+ prompts to build a full social media campaign. Covers workflow, pricing, failure cases, and comparison with Adobe Firefly.
+date: '2026-07-28'
 ---
-
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. This does not affect our editorial assessment — we recommend tools based on hands-on testing and real-world use, not commission rates.
 
 ## Quick Answer: Is Canva AI Right for You?
@@ -245,3 +235,4 @@ Yes. Canva Pro unlocks CMYK color profile export, high-resolution PDF (300 DPI),
 ---
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. Our recommendations are based on hands-on testing conducted in July–August 2026 and reflect our genuine assessment of each tool's capabilities for the described use cases.
+*（内容由AI生成，仅供参考）*
