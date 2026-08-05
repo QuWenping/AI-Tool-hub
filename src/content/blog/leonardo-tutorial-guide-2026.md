@@ -1,19 +1,15 @@
 ---
-author: AI Tool Hub Research Team
-category: Tutorial
-tags:
-  - Leonardo.AI
-  - AI image generation
-  - game art
-  - character design
-  - concept art
-  - AI tutorial
-related_tools:
-  - leonardo
-title_en: 'I Tested Leonardo.AI for Game Art and Character Design: A 2026 Tutorial'
-date: '2026-08-04'
-desc_en: A complete tutorial for Leonardo.AI in 2026. We tested Alchemy mode, Canvas editor, and character design workflows across 70+ prompts. Covers style consistency, iterative refinement, and free-tier production for game developers and concept artists.
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_1c4779c08faa11f18305525400e6dd8f
+    ReservedCode1: BmEE9xm5r3TvMbBfrgCRWg+wzmz4egVIr2En+UcU0vbVo0uh97d9SkRdZZfyBoiPlMdgN3GnDVXDzZTWUV/wByTwML1DYXY0IcHofP7uc0IApfY0rJX6BfyY0E52g2X/fXoLOkmoXc0RKMuSULj6bmC6NdRwHsj6Y5ojJb/7L6GMRatRWsKnp7GqDss=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_1c4779c08faa11f18305525400e6dd8f
+    ReservedCode2: BmEE9xm5r3TvMbBfrgCRWg+wzmz4egVIr2En+UcU0vbVo0uh97d9SkRdZZfyBoiPlMdgN3GnDVXDzZTWUV/wByTwML1DYXY0IcHofP7uc0IApfY0rJX6BfyY0E52g2X/fXoLOkmoXc0RKMuSULj6bmC6NdRwHsj6Y5ojJb/7L6GMRatRWsKnp7GqDss=
 ---
+
+
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. This does not affect our editorial assessment — we recommend tools based on hands-on testing and real-world use, not commission rates.
 
@@ -262,3 +258,4 @@ Leonardo.AI's primary interface is web-based. As of our testing in August 2026, 
   "disclosure": "This article was AI-assisted and underwent human editorial review including fact-checking, structure refinement, and compliance verification against Google AdSense content policies."
 }
 -->
+*（内容由AI生成，仅供参考）*

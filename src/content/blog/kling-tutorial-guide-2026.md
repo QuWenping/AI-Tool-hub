@@ -1,19 +1,15 @@
 ---
-author: AI Tool Hub Research Team
-category: Tutorial
-tags:
-  - Kling
-  - AI video
-  - Kuaishou
-  - text-to-video
-  - image-to-video
-  - AI tutorial
-related_tools:
-  - kling
-title_en: 'I Tested Kling AI for Human Motion Video: A Complete Creator Guide for 2026'
-date: '2026-08-04'
-desc_en: A hands-on tutorial for Kling AI in 2026. We tested text-to-video and image-to-video generation across 75+ prompts focusing on human motion, dance, and social content. Covers start/end frame control, API batch generation, and regional availability.
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_1b83f7368faa11f18305525400e6dd8f
+    ReservedCode1: f9Fr/jiM1pl0NJHdYUI8/wMPzKjvx4oxsVat1DCdPmxzXxU2yCOcS69cTllAQ7i4kAOzC7S1GLUevF2FFx2ViBKCa6nyR1Fb+MJIJGAXavrK0HmP0bqXnngIxXgkcm2tJEanpyzmJoxrfTpRyXksB6D7ZH6CUOJ+qJsJlvU/1iV6MfaaWebrmJ/xu+c=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_1b83f7368faa11f18305525400e6dd8f
+    ReservedCode2: f9Fr/jiM1pl0NJHdYUI8/wMPzKjvx4oxsVat1DCdPmxzXxU2yCOcS69cTllAQ7i4kAOzC7S1GLUevF2FFx2ViBKCa6nyR1Fb+MJIJGAXavrK0HmP0bqXnngIxXgkcm2tJEanpyzmJoxrfTpRyXksB6D7ZH6CUOJ+qJsJlvU/1iV6MfaaWebrmJ/xu+c=
 ---
+
+
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. This does not affect our editorial assessment — we recommend tools based on hands-on testing and real-world use, not commission rates.
 
@@ -276,3 +272,4 @@ Kling's lip-sync quality is strong for short clips where the speaker's face is c
   "disclosure": "This article was AI-assisted and underwent human editorial review including fact-checking, structure refinement, and compliance verification against Google AdSense content policies."
 }
 -->
+*（内容由AI生成，仅供参考）*

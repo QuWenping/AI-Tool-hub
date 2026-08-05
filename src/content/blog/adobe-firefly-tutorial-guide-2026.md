@@ -1,19 +1,15 @@
 ---
-author: AI Tool Hub Research Team
-category: Tutorial
-tags:
-  - Adobe Firefly
-  - AI image generation
-  - generative fill
-  - Photoshop
-  - Adobe
-  - AI tutorial
-related_tools:
-  - adobe-firefly
-title_en: 'I Tested Adobe Firefly for Commercial Design: A Complete 2026 Tutorial'
-date: '2026-08-04'
-desc_en: A practical tutorial for Adobe Firefly in 2026. We tested Generative Fill, Text to Image, Generative Expand, and Adobe ecosystem integration across 80+ prompts. Covers commercially safe AI image generation, Photoshop workflows, and template-based design automation.
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_1dd8fd1e8faa11f18305525400e6dd8f
+    ReservedCode1: vRA5o1EoG4c2oNdsQLoqOoBPBFcHrVCBFMjLO8DDfXn5BzplzKk0VtY/8398A4qNYPgQPWe0EeL7YWzBzaY8SLey/H8Jvyq1O0PE/iKqdiu62xJYNsc0mwAXux0/YqvHN39dkdxjkRQq1Z4zollvx+DeE53Zt4LPYfBsQzxjg28Ciiq3Xczuu+mD9vA=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_1dd8fd1e8faa11f18305525400e6dd8f
+    ReservedCode2: vRA5o1EoG4c2oNdsQLoqOoBPBFcHrVCBFMjLO8DDfXn5BzplzKk0VtY/8398A4qNYPgQPWe0EeL7YWzBzaY8SLey/H8Jvyq1O0PE/iKqdiu62xJYNsc0mwAXux0/YqvHN39dkdxjkRQq1Z4zollvx+DeE53Zt4LPYfBsQzxjg28Ciiq3Xczuu+mD9vA=
 ---
+
+
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. This does not affect our editorial assessment — we recommend tools based on hands-on testing and real-world use, not commission rates.
 
@@ -277,3 +273,4 @@ Firefly and Midjourney serve different stages of the design workflow. Midjourney
   "disclosure": "This article was AI-assisted and underwent human editorial review including fact-checking, structure refinement, and compliance verification against Google AdSense content policies."
 }
 -->
+*（内容由AI生成，仅供参考）*

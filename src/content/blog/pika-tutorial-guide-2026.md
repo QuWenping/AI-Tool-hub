@@ -1,19 +1,15 @@
 ---
-author: AI Tool Hub Research Team
-category: Tutorial
-tags:
-  - Pika
-  - AI video
-  - Pikaffects
-  - video generation
-  - social media
-  - AI tutorial
-related_tools:
-  - pika
-title_en: 'I Tested Pika for Social Video Creation: A Complete 2026 Tutorial'
-date: '2026-08-04'
-desc_en: A hands-on tutorial for Pika AI video generation in 2026. We tested Pikaffects, camera motion controls, image-to-video animation, and social content workflows across 70+ prompts. Covers styling effects, motion direction, and rapid iteration for creators and marketers.
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_1d0acc108faa11f18305525400e6dd8f
+    ReservedCode1: VPgIG8vIZlodiKhJ7RD+5GrrkG1NOoeVhC3DRWmu3GWLWGlYaINrD0vNMfjHOnPbB7ti4JPZkRn5JEAzSP3Mx7KmhWGkHJICFOHjvWQktFlpxWfcWq9vmLyT8v5FxrSGWNGyhvQTi2Z7xVzxtfR3P0vEKyjJNlMCQeapT7fwGuQTM/gmqZHz09zxsis=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_1d0acc108faa11f18305525400e6dd8f
+    ReservedCode2: VPgIG8vIZlodiKhJ7RD+5GrrkG1NOoeVhC3DRWmu3GWLWGlYaINrD0vNMfjHOnPbB7ti4JPZkRn5JEAzSP3Mx7KmhWGkHJICFOHjvWQktFlpxWfcWq9vmLyT8v5FxrSGWNGyhvQTi2Z7xVzxtfR3P0vEKyjJNlMCQeapT7fwGuQTM/gmqZHz09zxsis=
 ---
+
+
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. This does not affect our editorial assessment — we recommend tools based on hands-on testing and real-world use, not commission rates.
 
@@ -271,3 +267,4 @@ Pika and Runway serve different creative priorities. Pika's strength is effects-
   "disclosure": "This article was AI-assisted and underwent human editorial review including fact-checking, structure refinement, and compliance verification against Google AdSense content policies."
 }
 -->
+*（内容由AI生成，仅供参考）*
