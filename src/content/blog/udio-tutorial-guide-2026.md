@@ -1,20 +1,15 @@
 ---
-title_en: "Udio Tutorial: How to Generate Professional AI Music (Tested v1.5)"
-title_zh: "Udio 教程：如何用 AI 生成专业级音乐（v1.5 实测）"
-desc_en: "A step-by-step guide to Udio AI music generation. Learn how to create complete songs with vocals, use stem splitting, remix tracks, and navigate licensing for commercial use."
-desc_zh: "Udio AI 音乐生成完整教程，涵盖完整歌曲创作、人声分离、Remix 和商用授权指南。"
-category: "tutorial"
-category_zh: "教程"
-author: "AI Tool Hub Editorial Team"
-author_slug: "ai-tool-hub-team"
-date: "2026-08-05"
-dateModified: "2026-08-05"
-tags: ["ai-music", "udio", "music-generation", "suno-alternative", "stem-splitting", "audio-to-audio"]
-read_time: "12 min"
-related_tools: ["suno", "elevenlabs", "aiva", "soundraw"]
-related_posts: ["ai-music-creation-for-beginners-2026", "best-ai-tools-for-content-writers-2026"]
-image: "/images/tutorials/udio-tutorial-2026.jpg"
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_cb1cda4d907311f1bcfc525400e6dd8f
+    ReservedCode1: k8A8yWvh46YjBKGTiQu7jSYVZT1mFixMNrIkMxhSoevCa4EkDJm7dLvZV0a1O3xEFAyqVP9+5JpK6tB0NkQDr61kZAIkxaT0Acuqm3u1jjZ9rcr/EblMOjoVtO/PVxTwVDTVs/YTI6EKUESlLEkGmlW6iWsPdDfChttwNpqLSHJjs2woKW4rvg+X+Fw=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_cb1cda4d907311f1bcfc525400e6dd8f
+    ReservedCode2: k8A8yWvh46YjBKGTiQu7jSYVZT1mFixMNrIkMxhSoevCa4EkDJm7dLvZV0a1O3xEFAyqVP9+5JpK6tB0NkQDr61kZAIkxaT0Acuqm3u1jjZ9rcr/EblMOjoVtO/PVxTwVDTVs/YTI6EKUESlLEkGmlW6iWsPdDfChttwNpqLSHJjs2woKW4rvg+X+Fw=
 ---
+
+
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
@@ -239,3 +234,4 @@ Independent musicians needing high-quality AI-generated tracks for streaming, co
 - Licensing terms verified against Udio Terms of Service as of July 23, 2026
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases. Our evaluation and methodology remain independent. Test data represents our internal workflow assessment and individual results may vary.
+*（内容由AI生成，仅供参考）*

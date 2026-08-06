@@ -1,20 +1,15 @@
 ---
-title_en: "Hailuo AI Tutorial: How to Generate High-Quality AI Videos on a Budget (2026)"
-title_zh: "Hailuo AI 教程：低成本生成高质量 AI 视频完整指南（2026）"
-desc_en: "A practical guide to MiniMax Hailuo AI video generation. Learn image-to-video, short-form content creation for TikTok and Reels, and how to pair Hailuo with ElevenLabs for complete video production."
-desc_zh: "MiniMax Hailuo AI 视频生成实操指南，涵盖图生视频、竖屏短视频创作、配合 ElevenLabs 完成完整视频制作。"
-category: "tutorial"
-category_zh: "教程"
-author: "AI Tool Hub Editorial Team"
-author_slug: "ai-tool-hub-team"
-date: "2026-08-05"
-dateModified: "2026-08-05"
-tags: ["ai-video-generation", "hailuo", "minimax", "short-video", "tiktok", "image-to-video", "sora-alternative"]
-read_time: "12 min"
-related_tools: ["sora", "runway", "kling", "pika", "elevenlabs", "suno"]
-related_posts: ["ai-video-creation-guide-2026", "sora-vs-runway", "sora-vs-kling"]
-image: "/images/tutorials/hailuo-tutorial-2026.jpg"
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_ccf6a931907311f1bcfc525400e6dd8f
+    ReservedCode1: cILM7pHZ4QMyv5VmztGYKhOZ08Eh+g4hBG860z/QmqomnwnRQyMLQpI1kgzQ6HOcESCGsqf+wzaolJVnRrXTqEwDvPcj2t7iWC4PcgkvAznP7d6dlEC7UI++xRsKXu9WbHPoTNIdweOo6to7k/tifHetUgqMMyAKVIU+ogiKjDT1RDPsHzCfcRGZd4o=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_ccf6a931907311f1bcfc525400e6dd8f
+    ReservedCode2: cILM7pHZ4QMyv5VmztGYKhOZ08Eh+g4hBG860z/QmqomnwnRQyMLQpI1kgzQ6HOcESCGsqf+wzaolJVnRrXTqEwDvPcj2t7iWC4PcgkvAznP7d6dlEC7UI++xRsKXu9WbHPoTNIdweOo6to7k/tifHetUgqMMyAKVIU+ogiKjDT1RDPsHzCfcRGZd4o=
 ---
+
+
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
@@ -217,3 +212,4 @@ Social media creators producing short-form vertical content, marketers creating 
 - Pricing verified against official plan pages as of July 23, 2026
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases. Our evaluation and methodology remain independent. Test data represents our internal workflow assessment and individual results may vary.
+*（内容由AI生成，仅供参考）*

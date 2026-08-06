@@ -1,20 +1,15 @@
 ---
-title_en: "Amazon Q Developer Tutorial: AWS-Native AI Coding Assistant Guide (2026)"
-title_zh: "Amazon Q Developer 教程：AWS 原生 AI 编程助手完整指南（2026）"
-desc_en: "Learn Amazon Q Developer for AWS cloud development. Master security scanning, Infrastructure as Code generation, natural language SQL, and Java/.NET code transformation."
-desc_zh: "掌握 Amazon Q Developer 进行 AWS 云开发，涵盖安全扫描、IaC 生成、自然语言 SQL 和 Java/.NET 代码转换。"
-category: "tutorial"
-category_zh: "教程"
-author: "AI Tool Hub Editorial Team"
-author_slug: "ai-tool-hub-team"
-date: "2026-08-05"
-dateModified: "2026-08-05"
-tags: ["aws", "amazon-q", "ai-coding", "code-security", "iac", "cloudformation", "java-migration", "devops"]
-read_time: "12 min"
-related_tools: ["github-copilot", "cursor", "cline", "deepseek"]
-related_posts: ["ai-coding-workflow-2026", "how-to-build-a-content-workflow-with-ai-2026"]
-image: "/images/tutorials/amazon-q-tutorial-2026.jpg"
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_ce89791e907311f1a102525400826444
+    ReservedCode1: gYQqbFHPkJmSMJY0sRvn8dPcIBNBiSDfcuqDkI79Y+6MpKOPZq+MerrgQfXk0dglLDUTXXzdbt9jrY1Chtv6Q33p5BRYQZouM+PjauqcAtBPQIU7X/hTq/6a9Z//0Rl6z4h11/jCYs7tGtIpzvNNAt2VpY+4iHO7oIVLBHQd9YupV2oISDBKMpR/Sug=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_ce89791e907311f1a102525400826444
+    ReservedCode2: gYQqbFHPkJmSMJY0sRvn8dPcIBNBiSDfcuqDkI79Y+6MpKOPZq+MerrgQfXk0dglLDUTXXzdbt9jrY1Chtv6Q33p5BRYQZouM+PjauqcAtBPQIU7X/hTq/6a9Z//0Rl6z4h11/jCYs7tGtIpzvNNAt2VpY+4iHO7oIVLBHQd9YupV2oISDBKMpR/Sug=
 ---
+
+
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
@@ -279,3 +274,4 @@ The Pro tier ($19/user/month) includes an admin dashboard for managing team memb
 - Comparison testing with GitHub Copilot on identical AWS and non-AWS coding tasks
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases. Our evaluation and methodology remain independent. Test data represents our internal workflow assessment and individual results may vary.
+*（内容由AI生成，仅供参考）*

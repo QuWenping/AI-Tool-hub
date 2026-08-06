@@ -1,20 +1,15 @@
 ---
-title_en: "Aider Tutorial: AI Pair Programming from the Terminal (Open Source, 2026)"
-title_zh: "Aider 教程：终端原生 AI 结对编程实战指南（开源，2026）"
-desc_en: "Master Aider, the open-source terminal-native AI coding assistant. Learn multi-file refactoring, Git-integrated undo, offline coding with local models, and routing to cost-effective LLMs like DeepSeek."
-desc_zh: "掌握 Aider 开源终端 AI 编程助手，涵盖多文件重构、Git 集成撤销、本地模型离线编程和低成本 LLM 路由。"
-category: "tutorial"
-category_zh: "教程"
-author: "AI Tool Hub Editorial Team"
-author_slug: "ai-tool-hub-team"
-date: "2026-08-05"
-dateModified: "2026-08-05"
-tags: ["ai-coding", "aider", "pair-programming", "open-source", "cli", "git", "deepseek", "ollama"]
-read_time: "13 min"
-related_tools: ["cursor", "windsurf", "cline", "github-copilot", "deepseek"]
-related_posts: ["ai-coding-workflow-2026", "cursor-vs-windsurf", "cursor-vs-aider"]
-image: "/images/tutorials/aider-tutorial-2026.jpg"
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_cdb64709907311f1bcfc525400e6dd8f
+    ReservedCode1: uzqk84NqBlWrz4Cyoerog6c6MHiF2nnVVkMMpfMQ9OqfFlUYMDl0+zA0vglSxPEknbfVNvwlI7N1iQWOrkQWY6TB0DAXiGWwv5ENfyRbukcVdymCaFR5HLS2CVe3qt79b/VOb0mvsisVSasgHA+NZHTkXXimSEFvnZ4J+3KOBoLDCYQsNHP1Pkl1LlM=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_cdb64709907311f1bcfc525400e6dd8f
+    ReservedCode2: uzqk84NqBlWrz4Cyoerog6c6MHiF2nnVVkMMpfMQ9OqfFlUYMDl0+zA0vglSxPEknbfVNvwlI7N1iQWOrkQWY6TB0DAXiGWwv5ENfyRbukcVdymCaFR5HLS2CVe3qt79b/VOb0mvsisVSasgHA+NZHTkXXimSEFvnZ4J+3KOBoLDCYQsNHP1Pkl1LlM=
 ---
+
+
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
@@ -283,3 +278,4 @@ Developers who are comfortable with terminal and Git, who want full control over
 - Comparison data from side-by-side testing with Cursor and GitHub Copilot on identical tasks
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases. Our evaluation and methodology remain independent. Test data represents our internal workflow assessment and individual results may vary.
+*（内容由AI生成，仅供参考）*
