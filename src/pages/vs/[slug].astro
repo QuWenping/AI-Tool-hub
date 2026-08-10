@@ -16,6 +16,7 @@ export async function getStaticPaths() {
   return matchups.map(function(m){return {params:{slug:m.slug},props:{m:m}}});
 }
 const { m } = Astro.props;
+if (!m) return Astro.redirect('/vs/', 301);
 const a = toolsData[m.a];
 const b = toolsData[m.b];
 const clusterSlug = m.cluster || (a && a.cat) || "code";

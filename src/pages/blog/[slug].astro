@@ -13,6 +13,7 @@ export async function getStaticPaths() {
   return posts.map(p => ({ params: { slug: p.slug }, props: { post: p } }));
 }
 const post = Astro.props.post;
+if (!post) return Astro.redirect('/blog/', 301);
 const postData = post.data;
 const postBody = post.body || '';
 const allBlogPosts = await getCollection('blog');

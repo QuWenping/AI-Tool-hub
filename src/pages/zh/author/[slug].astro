@@ -12,6 +12,7 @@ export async function getStaticPaths() {
 }
 
 const { author } = Astro.props;
+if (!author) return Astro.redirect('/zh/author/', 301);
 const { data } = author;
 
 const pageLang = "zh";

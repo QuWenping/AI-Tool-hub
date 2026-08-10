@@ -17,6 +17,7 @@ export async function getStaticPaths() {
 }
 
 const { solution } = Astro.props;
+if (!solution) return Astro.redirect('/zh/solutions/', 301);
 const pageLang = "zh";
 const t = getTranslations("solutions", pageLang);
 

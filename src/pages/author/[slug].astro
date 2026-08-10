@@ -10,6 +10,7 @@ export async function getStaticPaths() {
 }
 
 const { author } = Astro.props;
+if (!author) return Astro.redirect('/author/', 301);
 
 const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/author/" + author.slug + "/";

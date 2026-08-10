@@ -16,7 +16,7 @@ const t = getTranslations("tools", pageLang);
 
 const tool = toolsData[slug];
 if (!tool || !tool.name) {
-  return new Response("Tool not found", { status: 404 });
+  return Astro.redirect('/tools/', 301);
 }
 
 const siteUrl = "https://thebestaitoolsreview.com";

@@ -13,6 +13,7 @@ export async function getStaticPaths() {
     .map(function(e){return {params:{slug:e[0]},props:{id:e[0],tool:e[1]}}});
 }
 const { id, tool } = Astro.props;
+if (!tool) return Astro.redirect('/zh/alternatives/', 301);
 const alternatives = Object.entries(toolsData)
   .filter(function(e){return e[0] !== id && e[0] !== "codewords" && e[1].cat === tool.cat})
   .slice(0, 8)

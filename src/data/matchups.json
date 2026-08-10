@@ -556,5 +556,1575 @@
     "title_en": "Cursor vs Codeium (2026): AI Code Editors Face Off",
     "cluster": "code",
     "title_zh": "Cursor vs Codeium（2026）：AI 代码编辑器对决"
+  },
+  {
+    "slug": "suno-vs-murf",
+    "a": "suno",
+    "b": "murf",
+    "tool_a": "Suno",
+    "tool_b": "Murf",
+    "title_en": "Suno vs Murf (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "Suno vs Murf（2026）：全面对比"
+  },
+  {
+    "slug": "claude-vs-copy-ai",
+    "a": "claude",
+    "b": "copy-ai",
+    "tool_a": "Claude",
+    "tool_b": "Copy.ai",
+    "title_en": "Claude vs Copy.ai (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "Claude vs Copy.ai（2026）：全面对比"
+  },
+  {
+    "slug": "sora-vs-midjourney",
+    "a": "sora",
+    "b": "midjourney",
+    "tool_a": "Sora",
+    "tool_b": "Midjourney",
+    "title_en": "Sora vs Midjourney (2026): Comprehensive Comparison",
+    "cluster": "video",
+    "title_zh": "Sora vs Midjourney（2026）：全面对比"
+  },
+  {
+    "slug": "sora-vs-heygen",
+    "a": "sora",
+    "b": "heygen",
+    "tool_a": "Sora",
+    "tool_b": "HeyGen",
+    "title_en": "Sora vs HeyGen (2026): Comprehensive Comparison",
+    "cluster": "video",
+    "title_zh": "Sora vs HeyGen（2026）：全面对比"
+  },
+  {
+    "slug": "github-copilot-vs-chatgpt",
+    "a": "github-copilot",
+    "b": "chatgpt",
+    "tool_a": "GitHub Copilot",
+    "tool_b": "ChatGPT",
+    "title_en": "GitHub Copilot vs ChatGPT (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "GitHub Copilot vs ChatGPT（2026）：全面对比"
+  },
+  {
+    "slug": "murf-vs-udio",
+    "a": "murf",
+    "b": "udio",
+    "tool_a": "Murf",
+    "tool_b": "Udio",
+    "title_en": "Murf vs Udio (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "Murf vs Udio（2026）：全面对比"
+  },
+  {
+    "slug": "consensus-pro-vs-scite-ai",
+    "a": "consensus",
+    "b": "scite-ai",
+    "tool_a": "Consensus",
+    "tool_b": "Scite",
+    "title_en": "Consensus vs Scite (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Consensus vs Scite（2026）：全面对比"
+  },
+  {
+    "slug": "descript-vs-udio",
+    "a": "descript",
+    "b": "udio",
+    "tool_a": "Descript",
+    "tool_b": "Udio",
+    "title_en": "Descript vs Udio (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "Descript vs Udio（2026）：全面对比"
+  },
+  {
+    "slug": "cline-vs-codeium",
+    "a": "cline",
+    "b": "codeium",
+    "tool_a": "Cline",
+    "tool_b": "Codeium",
+    "title_en": "Cline vs Codeium (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Cline vs Codeium（2026）：全面对比"
+  },
+  {
+    "slug": "deepseek-vs-phind",
+    "a": "deepseek",
+    "b": "phind",
+    "tool_a": "DeepSeek",
+    "tool_b": "Phind",
+    "title_en": "DeepSeek vs Phind (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "DeepSeek vs Phind（2026）：全面对比"
+  },
+  {
+    "slug": "suno-vs-descript",
+    "a": "suno",
+    "b": "descript",
+    "tool_a": "Suno",
+    "tool_b": "Descript",
+    "title_en": "Suno vs Descript (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "Suno vs Descript（2026）：全面对比"
+  },
+  {
+    "slug": "deepseek-vs-copy-ai",
+    "a": "deepseek",
+    "b": "copy-ai",
+    "tool_a": "DeepSeek",
+    "tool_b": "Copy.ai",
+    "title_en": "DeepSeek vs Copy.ai (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "DeepSeek vs Copy.ai（2026）：全面对比"
+  },
+  {
+    "slug": "descript-vs-play-ht",
+    "a": "descript",
+    "b": "play-ht",
+    "tool_a": "Descript",
+    "tool_b": "PlayHT",
+    "title_en": "Descript vs PlayHT (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "Descript vs PlayHT（2026）：全面对比"
+  },
+  {
+    "slug": "snyk-ai-vs-cursor",
+    "a": "snyk-ai",
+    "b": "cursor",
+    "tool_a": "Snyk Code",
+    "tool_b": "Cursor",
+    "title_en": "Snyk Code vs Cursor (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Snyk Code vs Cursor（2026）：全面对比"
+  },
+  {
+    "slug": "kling-vs-synthesia",
+    "a": "kling",
+    "b": "synthesia",
+    "tool_a": "Kling",
+    "tool_b": "Synthesia",
+    "title_en": "Kling vs Synthesia (2026): Comprehensive Comparison",
+    "cluster": "video",
+    "title_zh": "Kling vs Synthesia（2026）：全面对比"
+  },
+  {
+    "slug": "flux-vs-midjourney",
+    "a": "flux",
+    "b": "midjourney",
+    "tool_a": "Flux",
+    "tool_b": "Midjourney",
+    "title_en": "Flux vs Midjourney (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "Flux vs Midjourney（2026）：全面对比"
+  },
+  {
+    "slug": "grok-vs-chatgpt",
+    "a": "grok",
+    "b": "chatgpt",
+    "tool_a": "Grok",
+    "tool_b": "ChatGPT",
+    "title_en": "Grok vs ChatGPT (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "Grok vs ChatGPT（2026）：全面对比"
+  },
+  {
+    "slug": "windsurf-vs-aider",
+    "a": "windsurf",
+    "b": "aider",
+    "tool_a": "Windsurf",
+    "tool_b": "Aider",
+    "title_en": "Windsurf vs Aider (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Windsurf vs Aider（2026）：全面对比"
+  },
+  {
+    "slug": "codeium-vs-replit",
+    "a": "codeium",
+    "b": "replit",
+    "tool_a": "Codeium",
+    "tool_b": "Replit",
+    "title_en": "Codeium vs Replit (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Codeium vs Replit（2026）：全面对比"
+  },
+  {
+    "slug": "consensus-pro-vs-zotero-ai",
+    "a": "consensus",
+    "b": "zotero-ai",
+    "tool_a": "Consensus",
+    "tool_b": "Zotero AI",
+    "title_en": "Consensus vs Zotero AI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Consensus vs Zotero AI（2026）：全面对比"
+  },
+  {
+    "slug": "ideogram-vs-canva-ai",
+    "a": "ideogram",
+    "b": "canva-ai",
+    "tool_a": "Ideogram",
+    "tool_b": "Canva AI",
+    "title_en": "Ideogram vs Canva AI (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "Ideogram vs Canva AI（2026）：全面对比"
+  },
+  {
+    "slug": "elevenlabs-vs-otter",
+    "a": "elevenlabs",
+    "b": "otter",
+    "tool_a": "ElevenLabs",
+    "tool_b": "Otter",
+    "title_en": "ElevenLabs vs Otter (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "ElevenLabs vs Otter（2026）：全面对比"
+  },
+  {
+    "slug": "deepseek-vs-chatgpt",
+    "a": "deepseek",
+    "b": "chatgpt",
+    "tool_a": "DeepSeek",
+    "tool_b": "ChatGPT",
+    "title_en": "DeepSeek vs ChatGPT (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "DeepSeek vs ChatGPT（2026）：全面对比"
+  },
+  {
+    "slug": "suno-vs-elevenlabs",
+    "a": "suno",
+    "b": "elevenlabs",
+    "tool_a": "Suno",
+    "tool_b": "ElevenLabs",
+    "title_en": "Suno vs ElevenLabs (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "Suno vs ElevenLabs（2026）：全面对比"
+  },
+  {
+    "slug": "elevenlabs-vs-runway",
+    "a": "elevenlabs",
+    "b": "runway",
+    "tool_a": "ElevenLabs",
+    "tool_b": "Runway",
+    "title_en": "ElevenLabs vs Runway (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "ElevenLabs vs Runway（2026）：全面对比"
+  },
+  {
+    "slug": "researchrabbit-vs-connected-papers",
+    "a": "researchrabbit",
+    "b": "connected-papers",
+    "tool_a": "Research Rabbit",
+    "tool_b": "Connected Papers",
+    "title_en": "Research Rabbit vs Connected Papers (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Research Rabbit vs Connected Papers（2026）：全面对比"
+  },
+  {
+    "slug": "devika-ai-vs-cursor",
+    "a": "devika-ai",
+    "b": "cursor",
+    "tool_a": "Devika",
+    "tool_b": "Cursor",
+    "title_en": "Devika vs Cursor (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Devika vs Cursor（2026）：全面对比"
+  },
+  {
+    "slug": "claude-vs-perplexity",
+    "a": "claude",
+    "b": "perplexity",
+    "tool_a": "Claude",
+    "tool_b": "Perplexity",
+    "title_en": "Claude vs Perplexity (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "Claude vs Perplexity（2026）：全面对比"
+  },
+  {
+    "slug": "elicit-vs-consensus",
+    "a": "elicit",
+    "b": "consensus",
+    "tool_a": "Elicit",
+    "tool_b": "Consensus",
+    "title_en": "Elicit vs Consensus (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Elicit vs Consensus（2026）：全面对比"
+  },
+  {
+    "slug": "n8n-vs-make",
+    "a": "n8n",
+    "b": "make-com",
+    "tool_a": "n8n",
+    "tool_b": "Make",
+    "title_en": "n8n vs Make (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "n8n vs Make（2026）：全面对比"
+  },
+  {
+    "slug": "clockwise-ai-vs-reclaim-ai",
+    "a": "clockwise-ai",
+    "b": "reclaim-ai",
+    "tool_a": "Clockwise",
+    "tool_b": "Reclaim AI",
+    "title_en": "Clockwise vs Reclaim AI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Clockwise vs Reclaim AI（2026）：全面对比"
+  },
+  {
+    "slug": "codeium-vs-v0",
+    "a": "codeium",
+    "b": "v0",
+    "tool_a": "Codeium",
+    "tool_b": "v0",
+    "title_en": "Codeium vs v0 (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Codeium vs v0（2026）：全面对比"
+  },
+  {
+    "slug": "scite-ai-vs-paperpile",
+    "a": "scite-ai",
+    "b": "paperpile",
+    "tool_a": "Scite",
+    "tool_b": "Paperpile",
+    "title_en": "Scite vs Paperpile (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Scite vs Paperpile（2026）：全面对比"
+  },
+  {
+    "slug": "hailuo-vs-runway",
+    "a": "hailuo",
+    "b": "runway",
+    "tool_a": "Hailuo",
+    "tool_b": "Runway",
+    "title_en": "Hailuo vs Runway (2026): Comprehensive Comparison",
+    "cluster": "video",
+    "title_zh": "Hailuo vs Runway（2026）：全面对比"
+  },
+  {
+    "slug": "read-ai-vs-otter",
+    "a": "read-ai",
+    "b": "otter",
+    "tool_a": "Read AI",
+    "tool_b": "Otter",
+    "title_en": "Read AI vs Otter (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Read AI vs Otter（2026）：全面对比"
+  },
+  {
+    "slug": "invideo-ai-vs-fliki",
+    "a": "invideo-ai",
+    "b": "fliki",
+    "tool_a": "Invideo AI",
+    "tool_b": "Fliki",
+    "title_en": "Invideo AI vs Fliki (2026): Comprehensive Comparison",
+    "cluster": "video",
+    "title_zh": "Invideo AI vs Fliki（2026）：全面对比"
+  },
+  {
+    "slug": "phind-vs-perplexity",
+    "a": "phind",
+    "b": "perplexity",
+    "tool_a": "Phind",
+    "tool_b": "Perplexity",
+    "title_en": "Phind vs Perplexity (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "Phind vs Perplexity（2026）：全面对比"
+  },
+  {
+    "slug": "taskade-vs-read-ai",
+    "a": "taskade",
+    "b": "read-ai",
+    "tool_a": "Taskade",
+    "tool_b": "Read AI",
+    "title_en": "Taskade vs Read AI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Taskade vs Read AI（2026）：全面对比"
+  },
+  {
+    "slug": "elevenlabs-vs-descript",
+    "a": "elevenlabs",
+    "b": "descript",
+    "tool_a": "ElevenLabs",
+    "tool_b": "Descript",
+    "title_en": "ElevenLabs vs Descript (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "ElevenLabs vs Descript（2026）：全面对比"
+  },
+  {
+    "slug": "cline-vs-windsurf",
+    "a": "cline",
+    "b": "windsurf",
+    "tool_a": "Cline",
+    "tool_b": "Windsurf",
+    "title_en": "Cline vs Windsurf (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Cline vs Windsurf（2026）：全面对比"
+  },
+  {
+    "slug": "play-ht-vs-fireflies",
+    "a": "play-ht",
+    "b": "fireflies",
+    "tool_a": "PlayHT",
+    "tool_b": "Fireflies",
+    "title_en": "PlayHT vs Fireflies (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "PlayHT vs Fireflies（2026）：全面对比"
+  },
+  {
+    "slug": "chatgpt-vs-midjourney",
+    "a": "chatgpt",
+    "b": "midjourney",
+    "tool_a": "ChatGPT",
+    "tool_b": "Midjourney",
+    "title_en": "ChatGPT vs Midjourney (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "ChatGPT vs Midjourney（2026）：全面对比"
+  },
+  {
+    "slug": "gemini-vs-chatgpt",
+    "a": "gemini",
+    "b": "chatgpt",
+    "tool_a": "Gemini",
+    "tool_b": "ChatGPT",
+    "title_en": "Gemini vs ChatGPT (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "Gemini vs ChatGPT（2026）：全面对比"
+  },
+  {
+    "slug": "stable-diffusion-vs-midjourney",
+    "a": "stable-diffusion",
+    "b": "midjourney",
+    "tool_a": "Stable Diffusion",
+    "tool_b": "Midjourney",
+    "title_en": "Stable Diffusion vs Midjourney (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "Stable Diffusion vs Midjourney（2026）：全面对比"
+  },
+  {
+    "slug": "inciteful-vs-researchrabbit",
+    "a": "inciteful",
+    "b": "researchrabbit",
+    "tool_a": "Inciteful",
+    "tool_b": "Research Rabbit",
+    "title_en": "Inciteful vs Research Rabbit (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Inciteful vs Research Rabbit（2026）：全面对比"
+  },
+  {
+    "slug": "luma-vs-hailuo",
+    "a": "luma",
+    "b": "hailuo",
+    "tool_a": "Luma",
+    "tool_b": "Hailuo",
+    "title_en": "Luma vs Hailuo (2026): Comprehensive Comparison",
+    "cluster": "video",
+    "title_zh": "Luma vs Hailuo（2026）：全面对比"
+  },
+  {
+    "slug": "gamma-vs-consensus",
+    "a": "gamma",
+    "b": "consensus",
+    "tool_a": "Gamma",
+    "tool_b": "Consensus",
+    "title_en": "Gamma vs Consensus (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Gamma vs Consensus（2026）：全面对比"
+  },
+  {
+    "slug": "scite-ai-vs-inciteful",
+    "a": "scite-ai",
+    "b": "inciteful",
+    "tool_a": "Scite",
+    "tool_b": "Inciteful",
+    "title_en": "Scite vs Inciteful (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Scite vs Inciteful（2026）：全面对比"
+  },
+  {
+    "slug": "elicit-vs-coda-ai",
+    "a": "elicit",
+    "b": "coda-ai",
+    "tool_a": "Elicit",
+    "tool_b": "Coda AI",
+    "title_en": "Elicit vs Coda AI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Elicit vs Coda AI（2026）：全面对比"
+  },
+  {
+    "slug": "kling-vs-heygen",
+    "a": "kling",
+    "b": "heygen",
+    "tool_a": "Kling",
+    "tool_b": "HeyGen",
+    "title_en": "Kling vs HeyGen (2026): Comprehensive Comparison",
+    "cluster": "video",
+    "title_zh": "Kling vs HeyGen（2026）：全面对比"
+  },
+  {
+    "slug": "ideogram-vs-krea",
+    "a": "ideogram",
+    "b": "krea",
+    "tool_a": "Ideogram",
+    "tool_b": "Krea",
+    "title_en": "Ideogram vs Krea (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "Ideogram vs Krea（2026）：全面对比"
+  },
+  {
+    "slug": "claude-vs-gemini",
+    "a": "claude",
+    "b": "gemini",
+    "tool_a": "Claude",
+    "tool_b": "Gemini",
+    "title_en": "Claude vs Gemini (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "Claude vs Gemini（2026）：全面对比"
+  },
+  {
+    "slug": "pika-vs-synthesia",
+    "a": "pika",
+    "b": "synthesia",
+    "tool_a": "Pika",
+    "tool_b": "Synthesia",
+    "title_en": "Pika vs Synthesia (2026): Comprehensive Comparison",
+    "cluster": "video",
+    "title_zh": "Pika vs Synthesia（2026）：全面对比"
+  },
+  {
+    "slug": "taskade-vs-coda-ai",
+    "a": "taskade",
+    "b": "coda-ai",
+    "tool_a": "Taskade",
+    "tool_b": "Coda AI",
+    "title_en": "Taskade vs Coda AI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Taskade vs Coda AI（2026）：全面对比"
+  },
+  {
+    "slug": "jasper-vs-chatgpt",
+    "a": "jasper",
+    "b": "chatgpt",
+    "tool_a": "Jasper",
+    "tool_b": "ChatGPT",
+    "title_en": "Jasper vs ChatGPT (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "Jasper vs ChatGPT（2026）：全面对比"
+  },
+  {
+    "slug": "paperpile-vs-zotero-ai",
+    "a": "paperpile",
+    "b": "zotero-ai",
+    "tool_a": "Paperpile",
+    "tool_b": "Zotero AI",
+    "title_en": "Paperpile vs Zotero AI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Paperpile vs Zotero AI（2026）：全面对比"
+  },
+  {
+    "slug": "height-ai-vs-asana-ai",
+    "a": "height-ai",
+    "b": "asana-ai",
+    "tool_a": "Height",
+    "tool_b": "Asana AI",
+    "title_en": "Height vs Asana AI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Height vs Asana AI（2026）：全面对比"
+  },
+  {
+    "slug": "flux-vs-uizard",
+    "a": "flux",
+    "b": "uizard",
+    "tool_a": "Flux",
+    "tool_b": "Uizard",
+    "title_en": "Flux vs Uizard (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "Flux vs Uizard（2026）：全面对比"
+  },
+  {
+    "slug": "perplexity-vs-coda-ai",
+    "a": "perplexity",
+    "b": "coda-ai",
+    "tool_a": "Perplexity",
+    "tool_b": "Coda AI",
+    "title_en": "Perplexity vs Coda AI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Perplexity vs Coda AI（2026）：全面对比"
+  },
+  {
+    "slug": "claude-vs-jasper",
+    "a": "claude",
+    "b": "jasper",
+    "tool_a": "Claude",
+    "tool_b": "Jasper",
+    "title_en": "Claude vs Jasper (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "Claude vs Jasper（2026）：全面对比"
+  },
+  {
+    "slug": "cline-vs-cursor",
+    "a": "cline",
+    "b": "cursor",
+    "tool_a": "Cline",
+    "tool_b": "Cursor",
+    "title_en": "Cline vs Cursor (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Cline vs Cursor（2026）：全面对比"
+  },
+  {
+    "slug": "notion-ai-vs-read-ai",
+    "a": "notion-ai",
+    "b": "read-ai",
+    "tool_a": "Notion AI",
+    "tool_b": "Read AI",
+    "title_en": "Notion AI vs Read AI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Notion AI vs Read AI（2026）：全面对比"
+  },
+  {
+    "slug": "pika-vs-hailuo",
+    "a": "pika",
+    "b": "hailuo",
+    "tool_a": "Pika",
+    "tool_b": "Hailuo",
+    "title_en": "Pika vs Hailuo (2026): Comprehensive Comparison",
+    "cluster": "video",
+    "title_zh": "Pika vs Hailuo（2026）：全面对比"
+  },
+  {
+    "slug": "jasper-vs-deepseek",
+    "a": "jasper",
+    "b": "deepseek",
+    "tool_a": "Jasper",
+    "tool_b": "DeepSeek",
+    "title_en": "Jasper vs DeepSeek (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "Jasper vs DeepSeek（2026）：全面对比"
+  },
+  {
+    "slug": "inciteful-vs-zotero-ai",
+    "a": "inciteful",
+    "b": "zotero-ai",
+    "tool_a": "Inciteful",
+    "tool_b": "Zotero AI",
+    "title_en": "Inciteful vs Zotero AI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Inciteful vs Zotero AI（2026）：全面对比"
+  },
+  {
+    "slug": "elicit-vs-taskade",
+    "a": "elicit",
+    "b": "taskade",
+    "tool_a": "Elicit",
+    "tool_b": "Taskade",
+    "title_en": "Elicit vs Taskade (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Elicit vs Taskade（2026）：全面对比"
+  },
+  {
+    "slug": "dalle3-vs-midjourney",
+    "a": "dalle3",
+    "b": "midjourney",
+    "tool_a": "DALL-E 3",
+    "tool_b": "Midjourney",
+    "title_en": "DALL-E 3 vs Midjourney (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "DALL·E 3 vs Midjourney（2026）：全面对比"
+  },
+  {
+    "slug": "kling-vs-hailuo",
+    "a": "kling",
+    "b": "hailuo",
+    "tool_a": "Kling",
+    "tool_b": "Hailuo",
+    "title_en": "Kling vs Hailuo (2026): Comprehensive Comparison",
+    "cluster": "video",
+    "title_zh": "Kling vs Hailuo（2026）：全面对比"
+  },
+  {
+    "slug": "scite-ai-vs-scholarcy",
+    "a": "scite-ai",
+    "b": "scholarcy",
+    "tool_a": "Scite",
+    "tool_b": "Scholarcy",
+    "title_en": "Scite vs Scholarcy (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Scite vs Scholarcy（2026）：全面对比"
+  },
+  {
+    "slug": "leonardo-vs-uizard",
+    "a": "leonardo",
+    "b": "uizard",
+    "tool_a": "Leonardo.AI",
+    "tool_b": "Uizard",
+    "title_en": "Leonardo.AI vs Uizard (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "Leonardo.AI vs Uizard（2026）：全面对比"
+  },
+  {
+    "slug": "gemini-vs-phind",
+    "a": "gemini",
+    "b": "phind",
+    "tool_a": "Gemini",
+    "tool_b": "Phind",
+    "title_en": "Gemini vs Phind (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "Gemini vs Phind（2026）：全面对比"
+  },
+  {
+    "slug": "murf-vs-elevenlabs",
+    "a": "murf",
+    "b": "elevenlabs",
+    "tool_a": "Murf",
+    "tool_b": "ElevenLabs",
+    "title_en": "Murf vs ElevenLabs (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "Murf vs ElevenLabs（2026）：全面对比"
+  },
+  {
+    "slug": "descript-vs-fireflies",
+    "a": "descript",
+    "b": "fireflies",
+    "tool_a": "Descript",
+    "tool_b": "Fireflies",
+    "title_en": "Descript vs Fireflies (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "Descript vs Fireflies（2026）：全面对比"
+  },
+  {
+    "slug": "scholarcy-vs-connected-papers",
+    "a": "scholarcy",
+    "b": "connected-papers",
+    "tool_a": "Scholarcy",
+    "tool_b": "Connected Papers",
+    "title_en": "Scholarcy vs Connected Papers (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Scholarcy vs Connected Papers（2026）：全面对比"
+  },
+  {
+    "slug": "github-copilot-vs-replit",
+    "a": "github-copilot",
+    "b": "replit",
+    "tool_a": "GitHub Copilot",
+    "tool_b": "Replit",
+    "title_en": "GitHub Copilot vs Replit (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "GitHub Copilot vs Replit（2026）：全面对比"
+  },
+  {
+    "slug": "leonardo-vs-ideogram",
+    "a": "leonardo",
+    "b": "ideogram",
+    "tool_a": "Leonardo.AI",
+    "tool_b": "Ideogram",
+    "title_en": "Leonardo.AI vs Ideogram (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "Leonardo.AI vs Ideogram（2026）：全面对比"
+  },
+  {
+    "slug": "consensus-pro-vs-inciteful",
+    "a": "consensus",
+    "b": "inciteful",
+    "tool_a": "Consensus",
+    "tool_b": "Inciteful",
+    "title_en": "Consensus vs Inciteful (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Consensus vs Inciteful（2026）：全面对比"
+  },
+  {
+    "slug": "gemini-vs-quillbot",
+    "a": "gemini",
+    "b": "quillbot",
+    "tool_a": "Gemini",
+    "tool_b": "QuillBot",
+    "title_en": "Gemini vs QuillBot (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "Gemini vs QuillBot（2026）：全面对比"
+  },
+  {
+    "slug": "play-ht-vs-murf",
+    "a": "play-ht",
+    "b": "murf",
+    "tool_a": "PlayHT",
+    "tool_b": "Murf",
+    "title_en": "PlayHT vs Murf (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "PlayHT vs Murf（2026）：全面对比"
+  },
+  {
+    "slug": "windsurf-vs-codeium",
+    "a": "windsurf",
+    "b": "codeium",
+    "tool_a": "Windsurf",
+    "tool_b": "Codeium",
+    "title_en": "Windsurf vs Codeium (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Windsurf vs Codeium（2026）：全面对比"
+  },
+  {
+    "slug": "inciteful-vs-paperpile",
+    "a": "inciteful",
+    "b": "paperpile",
+    "tool_a": "Inciteful",
+    "tool_b": "Paperpile",
+    "title_en": "Inciteful vs Paperpile (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Inciteful vs Paperpile（2026）：全面对比"
+  },
+  {
+    "slug": "scite-ai-vs-connected-papers",
+    "a": "scite-ai",
+    "b": "connected-papers",
+    "tool_a": "Scite",
+    "tool_b": "Connected Papers",
+    "title_en": "Scite vs Connected Papers (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Scite vs Connected Papers（2026）：全面对比"
+  },
+  {
+    "slug": "descript-vs-otter",
+    "a": "descript",
+    "b": "otter",
+    "tool_a": "Descript",
+    "tool_b": "Otter",
+    "title_en": "Descript vs Otter (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "Descript vs Otter（2026）：全面对比"
+  },
+  {
+    "slug": "windsurf-vs-replit",
+    "a": "windsurf",
+    "b": "replit",
+    "tool_a": "Windsurf",
+    "tool_b": "Replit",
+    "title_en": "Windsurf vs Replit (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Windsurf vs Replit（2026）：全面对比"
+  },
+  {
+    "slug": "runway-vs-kling",
+    "a": "runway",
+    "b": "kling",
+    "tool_a": "Runway",
+    "tool_b": "Kling",
+    "title_en": "Runway vs Kling (2026): Comprehensive Comparison",
+    "cluster": "video",
+    "title_zh": "Runway vs Kling（2026）：全面对比"
+  },
+  {
+    "slug": "hostinger-vs-chatgpt",
+    "a": "hostinger",
+    "b": "chatgpt",
+    "tool_a": "Hostinger",
+    "tool_b": "ChatGPT",
+    "title_en": "Hostinger vs ChatGPT (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "hostinger vs ChatGPT（2026）：全面对比"
+  },
+  {
+    "slug": "murf-vs-otter",
+    "a": "murf",
+    "b": "otter",
+    "tool_a": "Murf",
+    "tool_b": "Otter",
+    "title_en": "Murf vs Otter (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "Murf vs Otter（2026）：全面对比"
+  },
+  {
+    "slug": "otter-vs-udio",
+    "a": "otter",
+    "b": "udio",
+    "tool_a": "Otter",
+    "tool_b": "Udio",
+    "title_en": "Otter vs Udio (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "Otter vs Udio（2026）：全面对比"
+  },
+  {
+    "slug": "inciteful-vs-connected-papers",
+    "a": "inciteful",
+    "b": "connected-papers",
+    "tool_a": "Inciteful",
+    "tool_b": "Connected Papers",
+    "title_en": "Inciteful vs Connected Papers (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Inciteful vs Connected Papers（2026）：全面对比"
+  },
+  {
+    "slug": "play-ht-vs-elevenlabs",
+    "a": "play-ht",
+    "b": "elevenlabs",
+    "tool_a": "PlayHT",
+    "tool_b": "ElevenLabs",
+    "title_en": "PlayHT vs ElevenLabs (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "PlayHT vs ElevenLabs（2026）：全面对比"
+  },
+  {
+    "slug": "riverside-vs-descript",
+    "a": "riverside",
+    "b": "descript",
+    "tool_a": "Riverside",
+    "tool_b": "Descript",
+    "title_en": "Riverside vs Descript (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "Riverside vs Descript（2026）：全面对比"
+  },
+  {
+    "slug": "consensus-pro-vs-scholarcy",
+    "a": "consensus",
+    "b": "scholarcy",
+    "tool_a": "Consensus",
+    "tool_b": "Scholarcy",
+    "title_en": "Consensus vs Scholarcy (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Consensus vs Scholarcy（2026）：全面对比"
+  },
+  {
+    "slug": "cursor-vs-github-copilot",
+    "a": "cursor",
+    "b": "github-copilot",
+    "tool_a": "Cursor",
+    "tool_b": "GitHub Copilot",
+    "title_en": "Cursor vs GitHub Copilot (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Cursor vs GitHub Copilot（2026）：全面对比"
+  },
+  {
+    "slug": "gamma-vs-read-ai",
+    "a": "gamma",
+    "b": "read-ai",
+    "tool_a": "Gamma",
+    "tool_b": "Read AI",
+    "title_en": "Gamma vs Read AI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Gamma vs Read AI（2026）：全面对比"
+  },
+  {
+    "slug": "sora-vs-synthesia",
+    "a": "sora",
+    "b": "synthesia",
+    "tool_a": "Sora",
+    "tool_b": "Synthesia",
+    "title_en": "Sora vs Synthesia (2026): Comprehensive Comparison",
+    "cluster": "video",
+    "title_zh": "Sora vs Synthesia（2026）：全面对比"
+  },
+  {
+    "slug": "lovable-vs-bolt",
+    "a": "lovable",
+    "b": "bolt",
+    "tool_a": "Lovable",
+    "tool_b": "Bolt",
+    "title_en": "Lovable vs Bolt (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Lovable vs Bolt（2026）：全面对比"
+  },
+  {
+    "slug": "claude-vs-quillbot",
+    "a": "claude",
+    "b": "quillbot",
+    "tool_a": "Claude",
+    "tool_b": "QuillBot",
+    "title_en": "Claude vs QuillBot (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "Claude vs QuillBot（2026）：全面对比"
+  },
+  {
+    "slug": "suno-vs-play-ht",
+    "a": "suno",
+    "b": "play-ht",
+    "tool_a": "Suno",
+    "tool_b": "PlayHT",
+    "title_en": "Suno vs PlayHT (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "Suno vs PlayHT（2026）：全面对比"
+  },
+  {
+    "slug": "n8n-vs-dify-agents",
+    "a": "n8n",
+    "b": "dify",
+    "tool_a": "n8n",
+    "tool_b": "Dify",
+    "title_en": "n8n vs Dify (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "n8n vs Dify（2026）：全面对比"
+  },
+  {
+    "slug": "taskade-pro-vs-notion-ai",
+    "a": "taskade",
+    "b": "notion-ai",
+    "tool_a": "Taskade",
+    "tool_b": "Notion AI",
+    "title_en": "Taskade vs Notion AI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Taskade vs Notion AI（2026）：全面对比"
+  },
+  {
+    "slug": "pika-labs-vs-kling",
+    "a": "pika",
+    "b": "kling",
+    "tool_a": "Pika",
+    "tool_b": "Kling",
+    "title_en": "Pika vs Kling (2026): Comprehensive Comparison",
+    "cluster": "video",
+    "title_zh": "Pika vs Kling（2026）：全面对比"
+  },
+  {
+    "slug": "connected-papers-vs-consensus",
+    "a": "connected-papers",
+    "b": "consensus",
+    "tool_a": "Connected Papers",
+    "tool_b": "Consensus",
+    "title_en": "Connected Papers vs Consensus (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Connected Papers vs Consensus（2026）：全面对比"
+  },
+  {
+    "slug": "lovo-ai-vs-elevenlabs",
+    "a": "lovo-ai",
+    "b": "elevenlabs",
+    "tool_a": "LOVO AI",
+    "tool_b": "ElevenLabs",
+    "title_en": "LOVO AI vs ElevenLabs (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "LOVO AI vs ElevenLabs（2026）：全面对比"
+  },
+  {
+    "slug": "sonarqube-vs-cursor",
+    "a": "sonarqube",
+    "b": "cursor",
+    "tool_a": "SonarQube",
+    "tool_b": "Cursor",
+    "title_en": "SonarQube vs Cursor (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "SonarQube vs Cursor（2026）：全面对比"
+  },
+  {
+    "slug": "cline-vs-v0",
+    "a": "cline",
+    "b": "v0",
+    "tool_a": "Cline",
+    "tool_b": "v0",
+    "title_en": "Cline vs v0 (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Cline vs v0（2026）：全面对比"
+  },
+  {
+    "slug": "capcut-vs-kapwing",
+    "a": "capcut",
+    "b": "kapwing",
+    "tool_a": "CapCut",
+    "tool_b": "Kapwing",
+    "title_en": "CapCut vs Kapwing (2026): Comprehensive Comparison",
+    "cluster": "video",
+    "title_zh": "CapCut vs Kapwing（2026）：全面对比"
+  },
+  {
+    "slug": "jasper-vs-quillbot",
+    "a": "jasper",
+    "b": "quillbot",
+    "tool_a": "Jasper",
+    "tool_b": "QuillBot",
+    "title_en": "Jasper vs QuillBot (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "Jasper vs QuillBot（2026）：全面对比"
+  },
+  {
+    "slug": "cody-vs-cursor",
+    "a": "cody",
+    "b": "cursor",
+    "tool_a": "Cody",
+    "tool_b": "Cursor",
+    "title_en": "Cody vs Cursor (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Cody vs Cursor（2026）：全面对比"
+  },
+  {
+    "slug": "surfer-seo-vs-frase",
+    "a": "surfer-seo",
+    "b": "frase",
+    "tool_a": "Surfer SEO",
+    "tool_b": "Frase",
+    "title_en": "Surfer SEO vs Frase (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "Surfer SEO vs Frase（2026）：全面对比"
+  },
+  {
+    "slug": "krea-vs-flux",
+    "a": "krea",
+    "b": "flux",
+    "tool_a": "Krea",
+    "tool_b": "Flux",
+    "title_en": "Krea vs Flux (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "Krea vs Flux（2026）：全面对比"
+  },
+  {
+    "slug": "sora-vs-hailuo",
+    "a": "sora",
+    "b": "hailuo",
+    "tool_a": "Sora",
+    "tool_b": "Hailuo",
+    "title_en": "Sora vs Hailuo (2026): Comprehensive Comparison",
+    "cluster": "video",
+    "title_zh": "Sora vs Hailuo（2026）：全面对比"
+  },
+  {
+    "slug": "consensus-pro-vs-connected-papers",
+    "a": "consensus",
+    "b": "connected-papers",
+    "tool_a": "Consensus",
+    "tool_b": "Connected Papers",
+    "title_en": "Consensus vs Connected Papers (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Consensus vs Connected Papers（2026）：全面对比"
+  },
+  {
+    "slug": "gemini-vs-copy-ai",
+    "a": "gemini",
+    "b": "copy-ai",
+    "tool_a": "Gemini",
+    "tool_b": "Copy.ai",
+    "title_en": "Gemini vs Copy.ai (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "Gemini vs Copy.ai（2026）：全面对比"
+  },
+  {
+    "slug": "github-copilot-vs-cline",
+    "a": "github-copilot",
+    "b": "cline",
+    "tool_a": "GitHub Copilot",
+    "tool_b": "Cline",
+    "title_en": "GitHub Copilot vs Cline (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "GitHub Copilot vs Cline（2026）：全面对比"
+  },
+  {
+    "slug": "perplexity-vs-taskade",
+    "a": "perplexity",
+    "b": "taskade",
+    "tool_a": "Perplexity",
+    "tool_b": "Taskade",
+    "title_en": "Perplexity vs Taskade (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Perplexity vs Taskade（2026）：全面对比"
+  },
+  {
+    "slug": "cursor-vs-v0",
+    "a": "cursor",
+    "b": "v0",
+    "tool_a": "Cursor",
+    "tool_b": "v0",
+    "title_en": "Cursor vs v0 (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Cursor vs v0（2026）：全面对比"
+  },
+  {
+    "slug": "flux-vs-canva-ai",
+    "a": "flux",
+    "b": "canva-ai",
+    "tool_a": "Flux",
+    "tool_b": "Canva AI",
+    "title_en": "Flux vs Canva AI (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "Flux vs Canva AI（2026）：全面对比"
+  },
+  {
+    "slug": "ideogram-vs-uizard",
+    "a": "ideogram",
+    "b": "uizard",
+    "tool_a": "Ideogram",
+    "tool_b": "Uizard",
+    "title_en": "Ideogram vs Uizard (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "Ideogram vs Uizard（2026）：全面对比"
+  },
+  {
+    "slug": "pika-vs-heygen",
+    "a": "pika",
+    "b": "heygen",
+    "tool_a": "Pika",
+    "tool_b": "HeyGen",
+    "title_en": "Pika vs HeyGen (2026): Comprehensive Comparison",
+    "cluster": "video",
+    "title_zh": "Pika vs HeyGen（2026）：全面对比"
+  },
+  {
+    "slug": "autogen-vs-crewai",
+    "a": "autogen",
+    "b": "crewai",
+    "tool_a": "Microsoft AutoGen",
+    "tool_b": "CrewAI",
+    "title_en": "Microsoft AutoGen vs CrewAI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Microsoft AutoGen vs CrewAI（2026）：全面对比"
+  },
+  {
+    "slug": "replit-vs-v0",
+    "a": "replit",
+    "b": "v0",
+    "tool_a": "Replit",
+    "tool_b": "v0",
+    "title_en": "Replit vs v0 (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Replit vs v0（2026）：全面对比"
+  },
+  {
+    "slug": "play-ht-vs-otter",
+    "a": "play-ht",
+    "b": "otter",
+    "tool_a": "PlayHT",
+    "tool_b": "Otter",
+    "title_en": "PlayHT vs Otter (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "PlayHT vs Otter（2026）：全面对比"
+  },
+  {
+    "slug": "aider-vs-replit",
+    "a": "aider",
+    "b": "replit",
+    "tool_a": "Aider",
+    "tool_b": "Replit",
+    "title_en": "Aider vs Replit (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Aider vs Replit（2026）：全面对比"
+  },
+  {
+    "slug": "gamma-vs-elicit",
+    "a": "gamma",
+    "b": "elicit",
+    "tool_a": "Gamma",
+    "tool_b": "Elicit",
+    "title_en": "Gamma vs Elicit (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Gamma vs Elicit（2026）：全面对比"
+  },
+  {
+    "slug": "aider-vs-cline",
+    "a": "aider",
+    "b": "cline",
+    "tool_a": "Aider",
+    "tool_b": "Cline",
+    "title_en": "Aider vs Cline (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Aider vs Cline（2026）：全面对比"
+  },
+  {
+    "slug": "zotero-ai-vs-connected-papers",
+    "a": "zotero-ai",
+    "b": "connected-papers",
+    "tool_a": "Zotero AI",
+    "tool_b": "Connected Papers",
+    "title_en": "Zotero AI vs Connected Papers (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Zotero AI vs Connected Papers（2026）：全面对比"
+  },
+  {
+    "slug": "perplexity-vs-read-ai",
+    "a": "perplexity",
+    "b": "read-ai",
+    "tool_a": "Perplexity",
+    "tool_b": "Read AI",
+    "title_en": "Perplexity vs Read AI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Perplexity vs Read AI（2026）：全面对比"
+  },
+  {
+    "slug": "descript-vs-murf",
+    "a": "descript",
+    "b": "murf",
+    "tool_a": "Descript",
+    "tool_b": "Murf",
+    "title_en": "Descript vs Murf (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "Descript vs Murf（2026）：全面对比"
+  },
+  {
+    "slug": "claude-vs-phind",
+    "a": "claude",
+    "b": "phind",
+    "tool_a": "Claude",
+    "tool_b": "Phind",
+    "title_en": "Claude vs Phind (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "Claude vs Phind（2026）：全面对比"
+  },
+  {
+    "slug": "comfyui-vs-stable-diffusion",
+    "a": "comfyui",
+    "b": "stable-diffusion",
+    "tool_a": "ComfyUI",
+    "tool_b": "Stable Diffusion",
+    "title_en": "ComfyUI vs Stable Diffusion (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "ComfyUI vs Stable Diffusion（2026）：全面对比"
+  },
+  {
+    "slug": "replicate-ai-vs-comfyui",
+    "a": "replicate-ai",
+    "b": "comfyui",
+    "tool_a": "Replicate",
+    "tool_b": "ComfyUI",
+    "title_en": "Replicate vs ComfyUI (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "Replicate vs ComfyUI（2026）：全面对比"
+  },
+  {
+    "slug": "paperpile-vs-researchrabbit",
+    "a": "paperpile",
+    "b": "researchrabbit",
+    "tool_a": "Paperpile",
+    "tool_b": "Research Rabbit",
+    "title_en": "Paperpile vs Research Rabbit (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Paperpile vs Research Rabbit（2026）：全面对比"
+  },
+  {
+    "slug": "scite-ai-vs-zotero-ai",
+    "a": "scite-ai",
+    "b": "zotero-ai",
+    "tool_a": "Scite",
+    "tool_b": "Zotero AI",
+    "title_en": "Scite vs Zotero AI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Scite vs Zotero AI（2026）：全面对比"
+  },
+  {
+    "slug": "notion-ai-vs-perplexity",
+    "a": "notion-ai",
+    "b": "perplexity",
+    "tool_a": "Notion AI",
+    "tool_b": "Perplexity",
+    "title_en": "Notion AI vs Perplexity (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Notion AI vs Perplexity（2026）：全面对比"
+  },
+  {
+    "slug": "aider-vs-v0",
+    "a": "aider",
+    "b": "v0",
+    "tool_a": "Aider",
+    "tool_b": "v0",
+    "title_en": "Aider vs v0 (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Aider vs v0（2026）：全面对比"
+  },
+  {
+    "slug": "perplexity-vs-consensus",
+    "a": "perplexity",
+    "b": "consensus",
+    "tool_a": "Perplexity",
+    "tool_b": "Consensus",
+    "title_en": "Perplexity vs Consensus (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Perplexity vs Consensus（2026）：全面对比"
+  },
+  {
+    "slug": "v0-vs-bolt",
+    "a": "v0",
+    "b": "bolt",
+    "tool_a": "v0",
+    "tool_b": "Bolt",
+    "title_en": "v0 vs Bolt (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "v0 vs Bolt（2026）：全面对比"
+  },
+  {
+    "slug": "chatgpt-vs-phind",
+    "a": "chatgpt",
+    "b": "phind",
+    "tool_a": "ChatGPT",
+    "tool_b": "Phind",
+    "title_en": "ChatGPT vs Phind (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "ChatGPT vs Phind（2026）：全面对比"
+  },
+  {
+    "slug": "elicit-vs-read-ai",
+    "a": "elicit",
+    "b": "read-ai",
+    "tool_a": "Elicit",
+    "tool_b": "Read AI",
+    "title_en": "Elicit vs Read AI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Elicit vs Read AI（2026）：全面对比"
+  },
+  {
+    "slug": "read-ai-vs-coda-ai",
+    "a": "read-ai",
+    "b": "coda-ai",
+    "tool_a": "Read AI",
+    "tool_b": "Coda AI",
+    "title_en": "Read AI vs Coda AI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Read AI vs Coda AI（2026）：全面对比"
+  },
+  {
+    "slug": "midjourney-vs-uizard",
+    "a": "midjourney",
+    "b": "uizard",
+    "tool_a": "Midjourney",
+    "tool_b": "Uizard",
+    "title_en": "Midjourney vs Uizard (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "Midjourney vs Uizard（2026）：全面对比"
+  },
+  {
+    "slug": "krea-vs-midjourney",
+    "a": "krea",
+    "b": "midjourney",
+    "tool_a": "Krea",
+    "tool_b": "Midjourney",
+    "title_en": "Krea vs Midjourney (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "Krea vs Midjourney（2026）：全面对比"
+  },
+  {
+    "slug": "sora-vs-pika",
+    "a": "sora",
+    "b": "pika",
+    "tool_a": "Sora",
+    "tool_b": "Pika",
+    "title_en": "Sora vs Pika (2026): Comprehensive Comparison",
+    "cluster": "video",
+    "title_zh": "Sora vs Pika（2026）：全面对比"
+  },
+  {
+    "slug": "stable-diffusion-vs-flux",
+    "a": "stable-diffusion",
+    "b": "flux",
+    "tool_a": "Stable Diffusion",
+    "tool_b": "Flux",
+    "title_en": "Stable Diffusion vs Flux (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "Stable Diffusion vs Flux（2026）：全面对比"
+  },
+  {
+    "slug": "quillbot-vs-phind",
+    "a": "quillbot",
+    "b": "phind",
+    "tool_a": "QuillBot",
+    "tool_b": "Phind",
+    "title_en": "QuillBot vs Phind (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "QuillBot vs Phind（2026）：全面对比"
+  },
+  {
+    "slug": "consensus-vs-coda-ai",
+    "a": "consensus",
+    "b": "coda-ai",
+    "tool_a": "Consensus",
+    "tool_b": "Coda AI",
+    "title_en": "Consensus vs Coda AI (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Consensus vs Coda AI（2026）：全面对比"
+  },
+  {
+    "slug": "gamma-vs-taskade",
+    "a": "gamma",
+    "b": "taskade",
+    "tool_a": "Gamma",
+    "tool_b": "Taskade",
+    "title_en": "Gamma vs Taskade (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Gamma vs Taskade（2026）：全面对比"
+  },
+  {
+    "slug": "chatgpt-vs-quillbot",
+    "a": "chatgpt",
+    "b": "quillbot",
+    "tool_a": "ChatGPT",
+    "tool_b": "QuillBot",
+    "title_en": "ChatGPT vs QuillBot (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "ChatGPT vs QuillBot（2026）：全面对比"
+  },
+  {
+    "slug": "krea-vs-canva-ai",
+    "a": "krea",
+    "b": "canva-ai",
+    "tool_a": "Krea",
+    "tool_b": "Canva AI",
+    "title_en": "Krea vs Canva AI (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "Krea vs Canva AI（2026）：全面对比"
+  },
+  {
+    "slug": "amazon-q-vs-copilot",
+    "a": "amazon-q",
+    "b": "github-copilot",
+    "tool_a": "Amazon Q",
+    "tool_b": "GitHub Copilot",
+    "title_en": "Amazon Q vs GitHub Copilot (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "Amazon Q vs GitHub Copilot（2026）：全面对比"
+  },
+  {
+    "slug": "gemini-vs-jasper",
+    "a": "gemini",
+    "b": "jasper",
+    "tool_a": "Gemini",
+    "tool_b": "Jasper",
+    "title_en": "Gemini vs Jasper (2026): Comprehensive Comparison",
+    "cluster": "text",
+    "title_zh": "Gemini vs Jasper（2026）：全面对比"
+  },
+  {
+    "slug": "notion-ai-vs-consensus",
+    "a": "notion-ai",
+    "b": "consensus",
+    "tool_a": "Notion AI",
+    "tool_b": "Consensus",
+    "title_en": "Notion AI vs Consensus (2026): Comprehensive Comparison",
+    "cluster": "productivity",
+    "title_zh": "Notion AI vs Consensus（2026）：全面对比"
+  },
+  {
+    "slug": "fireflies-vs-udio",
+    "a": "fireflies",
+    "b": "udio",
+    "tool_a": "Fireflies",
+    "tool_b": "Udio",
+    "title_en": "Fireflies vs Udio (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "Fireflies vs Udio（2026）：全面对比"
+  },
+  {
+    "slug": "stable-diffusion-vs-uizard",
+    "a": "stable-diffusion",
+    "b": "uizard",
+    "tool_a": "Stable Diffusion",
+    "tool_b": "Uizard",
+    "title_en": "Stable Diffusion vs Uizard (2026): Comprehensive Comparison",
+    "cluster": "image",
+    "title_zh": "Stable Diffusion vs Uizard（2026）：全面对比"
+  },
+  {
+    "slug": "suno-vs-otter",
+    "a": "suno",
+    "b": "otter",
+    "tool_a": "Suno",
+    "tool_b": "Otter",
+    "title_en": "Suno vs Otter (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "Suno vs Otter（2026）：全面对比"
+  },
+  {
+    "slug": "uberduck-vs-elevenlabs",
+    "a": "uberduck",
+    "b": "elevenlabs",
+    "tool_a": "Uberduck",
+    "tool_b": "ElevenLabs",
+    "title_en": "Uberduck vs ElevenLabs (2026): Comprehensive Comparison",
+    "cluster": "audio",
+    "title_zh": "Uberduck vs ElevenLabs（2026）：全面对比"
+  },
+  {
+    "slug": "deepcode-ai-vs-cursor",
+    "a": "deepcode-ai",
+    "b": "cursor",
+    "tool_a": "DeepCode",
+    "tool_b": "Cursor",
+    "title_en": "DeepCode vs Cursor (2026): Comprehensive Comparison",
+    "cluster": "code",
+    "title_zh": "DeepCode vs Cursor（2026）：全面对比"
   }
 ]

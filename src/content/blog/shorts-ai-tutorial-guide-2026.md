@@ -1,4 +1,20 @@
 ---
+
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_a66fee8e920511f1a102525400826444
+    ReservedCode1: sZFaYHzoeGNEutDMLHZQRrirxbO1jr0Krn/C8z5pTWDoD1u0RaFHs8uKCO89YwdBACPipxCg+apuUWNEtuH1TENJoZovF/fBmYeTpOtDI/O3f3vPMsKRp9TW0IyLj52cJe6qBaf2Amte661sVqSRvs56B/8nUZ0xt7wIaHpz7luvctZ7am9u634EwHM=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_a66fee8e920511f1a102525400826444
+    ReservedCode2: sZFaYHzoeGNEutDMLHZQRrirxbO1jr0Krn/C8z5pTWDoD1u0RaFHs8uKCO89YwdBACPipxCg+apuUWNEtuH1TENJoZovF/fBmYeTpOtDI/O3f3vPMsKRp9TW0IyLj52cJe6qBaf2Amte661sVqSRvs56B/8nUZ0xt7wIaHpz7luvctZ7am9u634EwHM=
+title_en: 'Shorts AI Tutorial Guide (2026): Full Review & Hands-On Test'
+desc_en: 'Comprehensive tutorial guide and hands-on review of Shorts AI.'
+category: AI TOOL REVIEW + TUTORIAL
+author: AI Tool Hub Research Team
+date: '2026-07-28'
+---
+---
 title_en: 'Shorts AI Tutorial Guide (2026): Full Review & Hands-On Test'
 desc_en: 'Complete Shorts AI tutorial guide for 2026. Hands-on review, step-by-step short-form video creation, AI scripting, pricing, pros/cons, and real-world use cases.'
 category: AI TOOL REVIEW + TUTORIAL
@@ -181,3 +197,4 @@ A: Script generation and captions in 30+ languages including English, Spanish, F
 Shorts AI solves a specific, high-value problem for content creators: converting existing long-form content into short-form videos without touching a timeline editor. The URL-to-video pipeline is fast (roughly 3 minutes per video), the AI script writer understands short-form structure (hooks, value stacking, CTAs), and the caption styling is polished enough for direct posting. For creators repurposing blog posts into daily TikTok or Reels content, the time savings are significant — what would take 30-45 minutes of manual editing happens in minutes. The trade-offs are real: the stock footage library is small and sometimes imprecise, the free tier is essentially a demo with a prominent watermark, and there is zero support for non-short-form content. Supplement the AI-matched footage with your own clips for product or brand videos, and treat the tool as a short-form content engine rather than a general video editor. At $15/month, Shorts AI delivers strong value for daily short-form creators who prioritize speed and consistency over extensive manual control.
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. Our recommendations are based on hands-on testing and real-world evaluation.
+*（内容由AI生成，仅供参考）*

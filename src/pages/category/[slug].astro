@@ -8,6 +8,7 @@ export async function getStaticPaths() {
   return categories.map(cat => ({ params: { slug: cat.slug }, props: { cat } }));
 }
 const { cat } = Astro.props;
+if (!cat) return Astro.redirect('/category/', 301);
 const pageLang = Astro.currentLocale || "en";
 const t = getTranslations("category", pageLang);
 

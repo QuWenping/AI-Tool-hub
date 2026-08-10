@@ -12,6 +12,7 @@ export async function getStaticPaths() {
   return categories.map(function(cat){return {params:{slug:cat.slug},props:{cat:cat}}});
 }
 const { cat } = Astro.props;
+if (!cat) return Astro.redirect('/zh/best/', 301);
 const pageLang = "zh";
 const t = getTranslations("best", pageLang);
 
