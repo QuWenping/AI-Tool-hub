@@ -1,27 +1,23 @@
 ---
+title_en: 'Galileo Ai Tutorial Guide 2026'
+desc_en: 'Complete tutorial guide for Galileo Ai in 2026. Step-by-step instructions, tips, and best practices.'
+category: Tutorial
+author: AI Tool Hub Research Team
+date: '2026-07-15'
+tags:
+  - tutorial
+  - ai-tools
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p
-    ReservedCode1: qWxR3tY7uI0pLkJhGfDsAmNbVcXzQwErTyUiOpAsDfGhJkLzXcVbNmQwErTyUiOpAsDfGhJkLzXcVbNmQwErTyUiOpAsDfGhJkLzXcVbN
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_bb659b17946411f1bcfc525400e6dd8f
+    ReservedCode1: ti0rdnclJlz2LHEK9LxSNwTcMA1f3NUTK9KxcYtFV+WrWc9qBu1FoIQ8ai0hEju9Gvv7uY+FhBUQ1MJBBH3m6g/MQFQCUpa30Kf+P7IzBj2CNd1yc4jk9jurcdaQya4+5ypN9Gt5RQh2jMbi2OXt+oiaWoN/QCp3qacJ5RvVUwF2LrBF+bnCIgHR+ZM=
     ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_1a2b3c4d5e6f7g8h9i0j1k2l3m4n5o6p
-    ReservedCode2: qWxR3tY7uI0pLkJhGfDsAmNbVcXzQwErTyUiOpAsDfGhJkLzXcVbNmQwErTyUiOpAsDfGhJkLzXcVbNmQwErTyUiOpAsDfGhJkLzXcVbN
-
-author: AI Tool Hub Research Team
-category: Tutorial
-tags:
-  - Galileo AI
-  - AI tutorial
-  - UI design
-  - prototyping
-  - text-to-UI
-related_tools:
-  - galileo-ai
-title_en: 'Galileo AI Tutorial Guide 2026: Text-to-UI Prototyping with Hands-On Examples'
-date: '2026-08-10'
-desc_en: A practical tutorial guide to Galileo AI in 2026. Covers text-to-UI generation, editable mockups, rapid prototyping workflows, and real-world use cases for designers and product teams.
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_bb659b17946411f1bcfc525400e6dd8f
+    ReservedCode2: ti0rdnclJlz2LHEK9LxSNwTcMA1f3NUTK9KxcYtFV+WrWc9qBu1FoIQ8ai0hEju9Gvv7uY+FhBUQ1MJBBH3m6g/MQFQCUpa30Kf+P7IzBj2CNd1yc4jk9jurcdaQya4+5ypN9Gt5RQh2jMbi2OXt+oiaWoN/QCp3qacJ5RvVUwF2LrBF+bnCIgHR+ZM=
 ---
+
+
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. This does not affect our editorial assessment — we recommend tools based on hands-on testing and real-world use, not commission rates.
 
@@ -271,3 +267,4 @@ The tool is not a replacement for Figma or a professional design workflow. Compl
 
 ---
 *本文由 AI 协助撰写，经人工审核。*
+*（内容由AI生成，仅供参考）*

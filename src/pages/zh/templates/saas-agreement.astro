@@ -1,0 +1,100 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/templates/saas-agreement/";
+const faqItems = [
+  { q: "SaaS 服务协议模板包含哪些关键条款？", a: "包含服务范围与可用性（SLA）、付费与续费条款、数据安全与隐私、知识产权归属、责任限制、终止条件等 SaaS 合同的核心条款。" },
+  { q: "模板可以直接使用吗？", a: "本模板仅供参考。正式合同需由专业律师根据具体业务情况和适用法律进行调整。" }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"SaaS 服务协议模板","description":"一份全面的中文 SaaS 服务协议模板，涵盖 SLA、付费条款、数据安全和知识产权等核心内容。","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":siteUrl+"/zh/"},{"@type":"ListItem","position":2,"name":"模板","item":siteUrl+"/zh/templates/"},{"@type":"ListItem","position":3,"name":"SaaS 服务协议","item":pageUrl}] };
+---
+
+<BaseLayout title="SaaS 服务协议模板 | AI 工具中心" description="全面的中文 SaaS 服务协议模板，涵盖 SLA、付费条款、数据安全和知识产权。" keywords="SaaS协议模板, 服务协议, SaaS合同, 软件即服务" lang="zh">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/templates/">模板</a> &rsaquo; <span>SaaS 服务协议</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">免费模板</span>
+      <h1>SaaS 服务协议模板</h1>
+      <p>一份全面的 SaaS 服务协议模板，涵盖服务级别协议（SLA）、付费条款、数据安全、知识产权和终止条件。</p>
+    </header>
+    <section class="article-body">
+
+      <h2>模板</h2>
+      <pre class="prompt-block"><code># SaaS 服务协议
+
+本协议由以下双方于 [日期] 签订：
+
+**服务提供方：** [公司名称]，[地址]（以下简称"甲方"）
+**客户方：** [公司名称]，[地址]（以下简称"乙方"）
+
+---
+
+## 1. 服务范围
+甲方同意向乙方提供 [服务名称] 软件即服务，具体功能描述见附件 A《服务功能说明》。
+
+## 2. 服务级别协议（SLA）
+### 2.1 可用性承诺
+甲方保证服务月度可用性不低于 [99.9]%。
+
+### 2.2 支持响应
+| 优先级 | 响应时间 | 解决时间 |
+|--------|----------|----------|
+| P0 紧急 | 30 分钟 | 4 小时 |
+| P1 高 | 2 小时 | 24 小时 |
+| P2 中 | 8 小时 | 72 小时 |
+
+## 3. 费用与支付
+### 3.1 费用结构
+- 基础版：[¥X]/月，含 [N] 用户席位
+- 专业版：[¥X]/月，含 [N] 用户席位
+- 企业版：[¥X]/月，含 [N] 用户席位
+
+### 3.2 支付周期
+[月度/季度/年度] 预付，发票出具后 [N] 个工作日内支付。
+
+## 4. 数据安全与隐私
+甲方承诺：
+- 数据加密传输与存储
+- 定期安全审计与渗透测试
+- 未经乙方书面授权不访问客户数据
+
+## 5. 知识产权
+- 甲方保留服务软件及相关技术的全部知识产权
+- 乙方保留其上传和生成的所有数据的全部权利
+
+## 6. 保密条款
+双方对在合作期间获知的对方商业信息承担保密义务，保密期限为协议终止后 [N] 年。
+
+## 7. 责任限制
+在任何情况下，甲方的累计赔偿责任不超过乙方在事件发生前 [12] 个月内向甲方支付的服务费用总额。
+
+## 8. 协议期限与终止
+- 初始期限：[12] 个月，到期自动续约
+- 任一方可提前 [30] 天书面通知终止
+- 重大违约可立即终止
+
+---
+
+甲方（盖章）：______________  日期：______________
+乙方（盖章）：______________  日期：______________
+
+**免责声明：** 本模板仅供学习参考，不构成法律建议。</code></pre>
+
+      <h2>常见问题</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card"><h3>{f.q}</h3><p>{f.a}</p></div>
+        ))}
+      </div>
+      <p class="back-link"><a href="/zh/templates/">所有模板</a></p>
+    </section>
+  </div>
+</BaseLayout>

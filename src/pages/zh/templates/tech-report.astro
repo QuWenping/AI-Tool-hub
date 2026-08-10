@@ -1,0 +1,92 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/templates/tech-report/";
+const faqItems = [
+  { q: "技术报告应包含哪些内容？", a: "一份完整的技术报告应包含：摘要、背景与目标、方法论/架构设计、实验/测试结果、数据分析与解读、结论与建议。" },
+  { q: "技术报告和 PRD 有什么区别？", a: "PRD 定义产品要做什么，面向开发团队。技术报告记录已完成的技术研究、实验或架构决策，面向更广泛的技术受众。" }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"技术报告模板","description":"一份结构完整的技术报告模板，涵盖背景、方法论、实验结果和结论建议。","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":siteUrl+"/zh/"},{"@type":"ListItem","position":2,"name":"模板","item":siteUrl+"/zh/templates/"},{"@type":"ListItem","position":3,"name":"技术报告","item":pageUrl}] };
+---
+
+<BaseLayout title="技术报告模板 | AI 工具中心" description="一份结构完整的技术报告模板，涵盖背景、方法论、实验结果和结论。" keywords="技术报告模板, 技术文档, 研究报告, 实验报告" lang="zh">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/templates/">模板</a> &rsaquo; <span>技术报告</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">免费模板</span>
+      <h1>技术报告模板</h1>
+      <p>一份结构完整的技术报告模板，适用于技术研究、实验分析、架构评审和方案评估。</p>
+    </header>
+    <section class="article-body">
+
+      <h2>模板</h2>
+      <pre class="prompt-block"><code># [项目名称] 技术报告
+## 版本 [X.Y] | 日期 [YYYY-MM-DD] | 作者 [姓名]
+
+---
+
+## 1. 摘要
+[用 3-5 句话概述：研究目标、方法、关键发现和结论]
+
+## 2. 背景与目标
+### 2.1 背景
+[为什么需要做这项研究？业务或技术驱动因素]
+
+### 2.2 目标
+- [目标 1]
+- [目标 2]
+- [目标 3]
+
+## 3. 方法论 / 架构设计
+### 3.1 方案概述
+[描述技术方案或实验设计]
+
+### 3.2 技术选型
+| 组件 | 选型 | 理由 |
+|------|------|------|
+| | | |
+
+### 3.3 架构图
+[系统架构描述或图表链接]
+
+## 4. 实验 / 测试与结果
+### 4.1 测试环境
+- 硬件：[规格]
+- 软件：[版本]
+- 数据集：[描述与规模]
+
+### 4.2 实验结果
+| 指标 | 方案 A | 方案 B | 提升 |
+|------|--------|--------|------|
+| | | | |
+
+### 4.3 数据分析
+[解读实验结果，分析异常值和边界情况]
+
+## 5. 结论与建议
+- **结论：**[研究得出的核心结论]
+- **建议：**[推荐下一步行动]
+- **遗留问题：**[需要进一步研究的问题]
+
+## 6. 附录
+- [A：原始数据]
+- [B：代码仓库链接]</code></pre>
+
+      <h2>常见问题</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card"><h3>{f.q}</h3><p>{f.a}</p></div>
+        ))}
+      </div>
+      <p class="back-link"><a href="/zh/templates/">所有模板</a></p>
+    </section>
+  </div>
+</BaseLayout>

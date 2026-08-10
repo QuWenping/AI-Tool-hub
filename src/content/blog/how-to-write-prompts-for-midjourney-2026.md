@@ -12,10 +12,10 @@ tags:
   - prompts
   - ai-art
 faq:
-  - q: What is the best Midjourney prompt structure?
-    a: Use this formula: [Subject] + [Style/Medium] + [Lighting] + [Composition] + [Parameters]. Example: "A cyberpunk samurai, digital painting style, neon lighting, portrait composition --ar 16:9 --v 7"
-  - q: How do I get consistent characters in Midjourney?
-    a: Use the --cref (character reference) parameter with a URL to your reference image. Combine with --cw (character weight) to control how much of the reference to preserve.
+  - q: "What is the best Midjourney prompt structure?"
+    a: 'Use this formula: [Subject] + [Style/Medium] + [Lighting] + [Composition] + [Parameters]. Example: "A cyberpunk samurai, digital painting style, neon lighting, portrait composition --ar 16:9 --v 7"'
+  - q: "How do I get consistent characters in Midjourney?"
+    a: "Use the --cref (character reference) parameter with a URL to your reference image. Combine with --cw (character weight) to control how much of the reference to preserve."
 ---
 
 ## Midjourney Prompt Structure

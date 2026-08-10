@@ -12,10 +12,10 @@ tags:
   - prompt-engineering
   - productivity
 faq:
-  - q: What makes a good AI prompt?
-    a: A good prompt is specific, provides context, defines the desired format, and includes constraints. The best prompts follow the formula: Role + Context + Task + Format + Constraints.
-  - q: How long should a prompt be?
-    a: There is no ideal length. Simple tasks need short prompts. Complex tasks need detailed prompts with examples. The key is including all necessary context without irrelevant information.
+  - q: "What makes a good AI prompt?"
+    a: "A good prompt is specific, provides context, defines the desired format, and includes constraints. The best prompts follow the formula: Role + Context + Task + Format + Constraints."
+  - q: "How long should a prompt be?"
+    a: "There is no ideal length. Simple tasks need short prompts. Complex tasks need detailed prompts with examples. The key is including all necessary context without irrelevant information."
 ---
 
 ## The Prompt Formula

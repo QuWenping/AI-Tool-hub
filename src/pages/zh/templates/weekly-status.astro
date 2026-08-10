@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/templates/weekly-status/";
+const faqItems = [
+  { q: "周报模板应该包含哪些内容？", a: "周报应包含本周完成事项、下周计划、遇到的问题/阻塞点、需要的支持。保持简洁，突出结果和影响而非过程。" }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"周报状态更新模板","description":"一份结构清晰的周报模板，含本周完成、下周计划、阻塞项和需要的支持。","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":siteUrl+"/zh/"},{"@type":"ListItem","position":2,"name":"模板","item":siteUrl+"/zh/templates/"},{"@type":"ListItem","position":3,"name":"周报","item":pageUrl}] };
+---
+
+<BaseLayout title="周报状态更新模板 | AI 工具中心" description="结构清晰的周报模板，含本周完成、下周计划、阻塞项和需要的支持。" keywords="周报模板, 状态更新, 团队汇报, 工作周报" lang="zh">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/templates/">模板</a> &rsaquo; <span>周报</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">免费模板</span>
+      <h1>周报状态更新模板</h1>
+      <p>一份结构清晰的周报模板，适用于团队同步、向上汇报和个人工作追踪。</p>
+    </header>
+    <section class="article-body">
+
+      <h2>模板</h2>
+      <pre class="prompt-block"><code># [姓名] 周报 | [YYYY/MM/DD - YYYY/MM/DD]
+
+---
+
+## 本周完成
+1. ✅ [任务 1] — [结果/影响]
+2. ✅ [任务 2] — [结果/影响]
+3. ✅ [任务 3] — [结果/影响]
+
+## 关键指标
+| 指标 | 当前值 | 目标值 | 状态 |
+|------|--------|--------|------|
+| | | | 🟢/🟡/🔴 |
+
+## 遇到的问题
+1. ⚠️ [问题 1] — [影响/状态/需要的支持]
+2. ⚠️ [问题 2] — [影响/状态/需要的支持]
+
+## 下周计划
+1. 📋 [任务 1] — 预计 [X] 天，截止 [日期]
+2. 📋 [任务 2] — 预计 [X] 天，截止 [日期]
+3. 📋 [任务 3] — 预计 [X] 天，截止 [日期]
+
+## 需要的支持
+- [向谁] 需要 [什么支持] — [截止日期]
+- [向谁] 需要 [什么支持] — [截止日期]
+
+## 学习与反思
+- 💡 [本周学到的一个经验或洞见]
+
+---
+
+**提交时间：** [YYYY-MM-DD HH:mm]</code></pre>
+
+      <h2>常见问题</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card"><h3>{f.q}</h3><p>{f.a}</p></div>
+        ))}
+      </div>
+      <p class="back-link"><a href="/zh/templates/">所有模板</a></p>
+    </section>
+  </div>
+</BaseLayout>

@@ -1,0 +1,63 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/workflows/mcp-claude-file-system/";
+const faqItems = [
+  { q: "什么是 Claude 文件系统 MCP？", a: "通过 Model Context Protocol（MCP）将本地文件系统暴露给 Claude，使其能读取、写入、搜索和管理文件。本工作流模板提供配置步骤和权限边界建议。" },
+  { q: "使用文件系统 MCP 安全吗？", a: "安全取决于你授权的目录范围。建议仅授权特定工作目录，避免暴露系统目录或敏感文件。Claude 只能在你授权的路径内操作。" }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Claude 文件系统 MCP 工作流","description":"通过 MCP 协议将本地文件系统接入 Claude 的配置工作流，含权限边界与安全建议。","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":siteUrl+"/zh/"},{"@type":"ListItem","position":2,"name":"工作流","item":siteUrl+"/zh/workflows/"},{"@type":"ListItem","position":3,"name":"文件系统 MCP","item":pageUrl}] };
+---
+
+<BaseLayout title="Claude 文件系统 MCP 工作流 | AI 工具中心" description="通过 MCP 协议将本地文件系统接入 Claude 的配置工作流，含权限边界与安全建议。" keywords="Claude, MCP, 文件系统, 工作流, AI助手" lang="zh">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/workflows/">工作流</a> &rsaquo; <span>文件系统 MCP</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">工作流</span>
+      <h1>Claude 文件系统 MCP 工作流</h1>
+      <p>通过 Model Context Protocol（MCP）将本地文件系统接入 Claude，使其能读取、写入、搜索和管理文件。本模板提供配置步骤与权限边界建议。</p>
+    </header>
+    <section class="article-body">
+
+      <h2>配置步骤</h2>
+      <ol>
+        <li><strong>安装 MCP 文件系统服务器：</strong><code>npx -y @modelcontextprotocol/server-filesystem</code></li>
+        <li><strong>配置授权目录：</strong>在 Claude 配置中指定允许访问的目录（如 <code>~/Documents/projects</code>）</li>
+        <li><strong>启动 Claude 并加载 MCP：</strong>确认文件系统工具已出现在可用工具列表中</li>
+        <li><strong>测试读取：</strong>让 Claude 列出授权目录中的文件，验证连接</li>
+        <li><strong>设置权限边界：</strong>仅授权工作目录，排除系统目录与敏感文件</li>
+      </ol>
+
+      <h2>可用能力</h2>
+      <ul>
+        <li>读取/写入文本与代码文件</li>
+        <li>递归搜索目录与文件名匹配</li>
+        <li>创建/删除目录（在授权范围内）</li>
+        <li>批量重命名与整理</li>
+      </ul>
+
+      <h2>安全建议</h2>
+      <ul>
+        <li>仅授权单一工作目录，避免 <code>C:\Windows</code> 或 <code>~/.ssh</code></li>
+        <li>对删除操作启用二次确认</li>
+        <li>定期审查 MCP 访问日志</li>
+      </ul>
+
+      <h2>常见问题</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card"><h3>{f.q}</h3><p>{f.a}</p></div>
+        ))}
+      </div>
+      <p class="back-link"><a href="/zh/workflows/">所有工作流</a></p>
+    </section>
+  </div>
+</BaseLayout>

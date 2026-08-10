@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/workflows/comfyui-style-transfer-pipeline/";
+const faqItems = [
+  { q: "What is a ComfyUI style transfer pipeline?", a: "A multi-stage ComfyUI workflow that takes a content image and a style reference, then generates a new image preserving the content's structure while adopting the reference's artistic style. This template chains img2img, ControlNet, and upscaling nodes." },
+  { q: "Which ControlNet works best for style transfer?", a: "For preserving structure, use ControlNet with canny or depth preprocessor on the content image. Set control strength around 0.6-0.8 to keep composition while allowing style to dominate." }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"ComfyUI Style Transfer Pipeline","description":"A production-ready ComfyUI style transfer workflow. Chain img2img, ControlNet, and upscaling to apply artistic styles while preserving structure.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Workflows","item":siteUrl+"/workflows/"},{"@type":"ListItem","position":3,"name":"Style Transfer","item":pageUrl}] };
+---
+
+<BaseLayout title="ComfyUI Style Transfer Pipeline | AI Tool Hub" description="A production-ready ComfyUI style transfer workflow chaining img2img, ControlNet, and upscaling." keywords="ComfyUI, style transfer, ControlNet, img2img, AI art workflow" lang="en">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/workflows/">Workflows</a> &rsaquo; <span>Style Transfer</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Workflow</span>
+      <h1>ComfyUI Style Transfer Pipeline</h1>
+      <p>A production-ready ComfyUI workflow that applies an artistic style to a content image while preserving its structure. Chains img2img, ControlNet, and upscaling into one pipeline.</p>
+    </header>
+    <section class="article-body">
+
+      <h2>Pipeline Stages</h2>
+      <ol>
+        <li><strong>Load Content Image:</strong> the image whose structure you want to keep</li>
+        <li><strong>Load Style Reference:</strong> the artistic image whose style you want to adopt</li>
+        <li><strong>Preprocess ControlNet:</strong> run canny or depth on the content image (control strength 0.6-0.8)</li>
+        <li><strong>Load Checkpoint:</strong> SDXL or SD1.5 base model</li>
+        <li><strong>Positive Prompt:</strong> describe the style reference (e.g., "oil painting, impasto brushstrokes, warm palette")</li>
+        <li><strong>Negative Prompt:</strong> "blurry, deformed, low quality, watermark"</li>
+        <li><strong>VAE Encode (content):</strong> encode content image to latent</li>
+        <li><strong>KSampler:</strong> denoise 0.55-0.7, steps 25-30, CFG 7-9, with ControlNet applied</li>
+        <li><strong>VAE Decode:</strong> latent to image</li>
+        <li><strong>Upscale (optional):</strong> 4x-UltraSharp for final detail</li>
+        <li><strong>Save Image:</strong> output to disk</li>
+      </ol>
+
+      <h2>Recommended Parameters</h2>
+      <ul>
+        <li><strong>ControlNet strength:</strong> 0.7 (structure preservation)</li>
+        <li><strong>Denoisestrength:</strong> 0.6</li>
+        <li><strong>Steps:</strong> 28</li>
+        <li><strong>CFG:</strong> 8</li>
+      </ul>
+
+      <h2>FAQ</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card"><h3>{f.q}</h3><p>{f.a}</p></div>
+        ))}
+      </div>
+      <p class="back-link"><a href="/workflows/">All Workflows</a></p>
+    </section>
+  </div>
+</BaseLayout>

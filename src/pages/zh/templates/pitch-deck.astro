@@ -1,0 +1,147 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/templates/pitch-deck/";
+const faqItems = [
+  { q: "融资路演 PPT 应该包含哪些内容？", a: "核心 10-12 页：问题、解决方案、市场机会、产品演示、商业模式、竞争优势、市场策略、团队、财务预期、融资需求。每页一个核心观点。" }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"融资路演 PPT 模板","description":"面向投资人的融资路演 PPT 结构模板，涵盖问题、解决方案、市场、商业模式和财务预期。","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":siteUrl+"/zh/"},{"@type":"ListItem","position":2,"name":"模板","item":siteUrl+"/zh/templates/"},{"@type":"ListItem","position":3,"name":"路演 PPT","item":pageUrl}] };
+---
+
+<BaseLayout title="融资路演 PPT 模板 | AI 工具中心" description="面向投资人的融资路演 PPT 结构模板，涵盖问题、解决方案和市场策略。" keywords="路演PPT, 融资BP, pitch deck, 商业计划书, 创业" lang="zh">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/templates/">模板</a> &rsaquo; <span>路演 PPT</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">免费模板</span>
+      <h1>融资路演 PPT 模板</h1>
+      <p>面向投资人的融资路演幻灯片结构模板。每页一个核心观点，12 页讲清你的商业故事。</p>
+    </header>
+    <section class="article-body">
+
+      <h2>模板</h2>
+      <pre class="prompt-block"><code># PITCH DECK：[公司名称]
+## 轮次：[种子轮 / A 轮 / B 轮] | 融资金额：[$X]M
+
+---
+
+## 第 1 页：愿景
+**一句话定义公司：** [用一句话说清你们在做什么]
+"我们是 [公司名]，正在通过 [方式] 解决 [问题]。"
+
+---
+
+## 第 2 页：问题
+**市场痛点：**
+- [痛点 1：用户/企业面临的具体困扰]
+- [痛点 2]
+- [痛点 3]
+
+**为什么现有方案不够好？** [竞品/替代方案的问题]
+
+---
+
+## 第 3 页：解决方案
+**我们的产品/服务：** [核心价值主张，不超过 3 句话]
+
+**核心功能：**
+1. [功能 1] — 解决 [对应痛点]
+2. [功能 2] — 解决 [对应痛点]
+3. [功能 3] — 解决 [对应痛点]
+
+---
+
+## 第 4 页：市场机会
+- **总目标市场（TAM）：** [$X]B
+- **可服务市场（SAM）：** [$X]B
+- **可获取市场（SOM）：** [$X]M
+- **年复合增长率（CAGR）：** [X]%
+
+---
+
+## 第 5 页：产品演示
+[产品截图/原型图]
+**"在使用 [我们的产品] 之前：** [旧流程的糟糕体验]"
+**"在使用 [我们的产品] 之后：** [新流程的流畅体验]"
+
+---
+
+## 第 6 页：商业模式
+| 方案 | 价格 | 目标用户 | 核心功能 |
+|------|------|----------|----------|
+| 免费版 | ¥0 | [描述] | [功能列表] |
+| 专业版 | ¥[X]/月 | [描述] | [功能列表] |
+| 企业版 | ¥[X]/月 | [描述] | [功能列表] |
+
+---
+
+## 第 7 页：竞争优势
+| 维度 | 我们 | 竞品 A | 竞品 B |
+|------|------|--------|--------|
+| 价格 | | | |
+| 功能 | | | |
+| 用户体验 | | | |
+| 壁垒 | | | |
+
+---
+
+## 第 8 页：市场策略
+- **获客渠道：** [内容营销 / 销售团队 / 合作伙伴 / 病毒增长]
+- **客户获取成本（CAC）：** ¥[X]
+- **客户终身价值（LTV）：** ¥[X]
+- **LTV/CAC 比率：** [X]x
+
+---
+
+## 第 9 页：牵引力（Traction）
+| 指标 | 当前 | 3 个月前 |
+|------|------|----------|
+| 用户数 | | |
+| 月营收 | | |
+| 月增长 | | |
+| 留存率 | | |
+
+---
+
+## 第 10 页：团队
+- **[姓名]** · CEO · 前 [公司]，[经历亮点]
+- **[姓名]** · CTO · 前 [公司]，[经历亮点]
+- **[姓名]** · COO · 前 [公司]，[经历亮点]
+
+---
+
+## 第 11 页：财务预期
+| | 第 1 年 | 第 2 年 | 第 3 年 |
+|------|---------|---------|---------|
+| 营收 | ¥X | ¥X | ¥X |
+| 毛利 | ¥X | ¥X | ¥X |
+| 团队规模 | N | N | N |
+
+---
+
+## 第 12 页：融资需求
+**本轮融资：** [$X]M
+**资金用途：**
+- [X]% — 产品研发
+- [X]% — 市场拓展
+- [X]% — 团队扩张
+
+**联系方式：** [邮箱] | [电话]</code></pre>
+
+      <h2>常见问题</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card"><h3>{f.q}</h3><p>{f.a}</p></div>
+        ))}
+      </div>
+      <p class="back-link"><a href="/zh/templates/">所有模板</a></p>
+    </section>
+  </div>
+</BaseLayout>
