@@ -1,0 +1,114 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/templates/srs-template/";
+
+const faqItems = [
+  { q: "What is an SRS document?", a: "A Software Requirements Specification (SRS) is a comprehensive document that describes what a software system must do. It covers functional requirements, non-functional requirements, system architecture, and constraints." },
+  { q: "Who writes an SRS?", a: "Typically written by a business analyst or product manager in collaboration with stakeholders, developers, and QA. It serves as the single source of truth for the development team." }
+];
+
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Software Requirements Specification (SRS) Template","description":"A complete SRS template for software projects. Covers functional requirements, non-functional requirements, system architecture, and acceptance criteria.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Templates","item":siteUrl+"/templates/"},{"@type":"ListItem","position":3,"name":"SRS Template","item":pageUrl}] };
+---
+
+<BaseLayout title="SRS Template — Software Requirements Specification | AI Tool Hub" description="A complete SRS template for software projects. Covers functional and non-functional requirements, architecture, and acceptance criteria." keywords="SRS template, software requirements, technical specification, product requirements" lang="en">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/templates/">Templates</a> &rsaquo; <span>SRS Template</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Free Template</span>
+      <h1>Software Requirements Specification (SRS) Template</h1>
+      <p>A comprehensive SRS template covering functional requirements, non-functional requirements, system architecture, and acceptance criteria.</p>
+    </header>
+    <section class="article-body">
+
+      <h2>Template</h2>
+      <pre class="prompt-block"><code># SOFTWARE REQUIREMENTS SPECIFICATION
+## Project: [Name] | Version: [X.Y] | Date: [YYYY-MM-DD]
+
+---
+
+## 1. INTRODUCTION
+### 1.1 Purpose
+[Describe the purpose and scope of this software system]
+
+### 1.2 Intended Audience
+- Developers
+- QA Engineers
+- Project Managers
+- Stakeholders
+
+### 1.3 Definitions and Acronyms
+| Term | Definition |
+|------|------------|
+| | |
+
+## 2. OVERALL DESCRIPTION
+### 2.1 Product Perspective
+[How this system fits into the larger ecosystem]
+
+### 2.2 User Characteristics
+| User Type | Needs | Technical Level |
+|-----------|-------|----------------|
+| | | |
+
+### 2.3 Assumptions and Dependencies
+- [Assumption 1]
+- [Dependency 1]
+
+## 3. FUNCTIONAL REQUIREMENTS
+### 3.1 [Feature/Module Name]
+- **ID:** FR-001
+- **Description:** [What the system must do]
+- **Priority:** [High/Medium/Low]
+- **Acceptance Criteria:**
+  1. [Criterion 1]
+  2. [Criterion 2]
+
+## 4. NON-FUNCTIONAL REQUIREMENTS
+### 4.1 Performance
+- Response time: < [X]ms for [operation]
+- Concurrent users: [N]
+
+### 4.2 Security
+- Authentication: [method]
+- Data encryption: [standard]
+- Compliance: [GDPR/SOC2/HIPAA]
+
+### 4.3 Reliability
+- Uptime: [99.X]%
+- Recovery time: < [X] hours
+
+## 5. SYSTEM ARCHITECTURE
+[High-level architecture diagram description]
+
+## 6. EXTERNAL INTERFACES
+| Interface | Type | Protocol | Purpose |
+|-----------|------|----------|---------|
+| | | | |
+
+## 7. APPENDICES
+- [Appendix A: Glossary]
+- [Appendix B: Revision History]</code></pre>
+
+      <h2>FAQ</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card">
+            <h3>{f.q}</h3>
+            <p>{f.a}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="back-link"><a href="/templates/">All Templates</a></p>
+    </section>
+  </div>
+</BaseLayout>

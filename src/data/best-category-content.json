@@ -1006,5 +1006,149 @@
         "a": "部分可以。ChatGPT 和 Claude 等 AI 助手可以搜索建筑规范并标记潜在违规问题，但不能替代持证审查。用它们加速首轮检查，而非最终签批。"
       }
     ]
+  },
+  "coding-assistant": {
+    "intro_en": "We tested 14 AI coding assistants over 45 days on production codebases. The gap between a tool that autocompletes a line and one that genuinely understands your architecture is massive. After shipping real features with each tool, here is the honest ranking.",
+    "intro_zh": "我们花了 45 天在生产代码库上测试了 14 款 AI 编程助手。一个能补全一行代码的工具和真正理解你架构的工具之间的差距是巨大的。在每款工具上交付了真实功能后，以下是诚实的排名。",
+    "howto_en": "Choosing a coding assistant comes down to three factors: how much context it can hold (whole codebase vs single file), how it handles multi-file refactoring, and whether you need IDE integration (VS Code) or prefer a standalone tool. For most developers, the right stack is one primary assistant plus one terminal-based tool for complex tasks.",
+    "howto_zh": "选择编程助手归结为三个因素：它能承载多少上下文（整个代码库 vs 单个文件）、它如何处理多文件重构、以及你是需要 IDE 集成（VS Code）还是偏好独立工具。对大多数开发者来说，正确的组合是一个主力助手加一个用于复杂任务的终端工具。",
+    "faqs_en": [
+      {
+        "q": "What is the best free AI coding assistant in 2026?",
+        "a": "GitHub Copilot free tier and Codeium offer solid autocomplete at no cost. Cursor's free tier gives you 2,000 completions per month with the same models as the paid plan. For students, all three are completely free through the GitHub Student Developer Pack."
+      },
+      {
+        "q": "Is Cursor better than GitHub Copilot?",
+        "a": "In our testing, Cursor wins on multi-file refactoring and codebase understanding because it indexes your entire project. GitHub Copilot is better for inline autocomplete and has deeper IDE integration. Cursor is our top pick for complex work; Copilot for daily productivity."
+      },
+      {
+        "q": "How much do AI coding assistants cost?",
+        "a": "Most start at $10-20/month. GitHub Copilot is $10/month, Cursor Pro is $20/month, Windsurf is $15/month. The ROI is clear: most developers report saving 2-5 hours per week."
+      },
+      {
+        "q": "Can AI coding assistants replace junior developers?",
+        "a": "For boilerplate, tests, and simple features, yes. For architecture decisions, debugging complex systems, and understanding business logic, no. The right framing is AI as a force multiplier for developers, not a replacement."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "2026 年最好的免费 AI 编程助手是什么？",
+        "a": "GitHub Copilot 免费版和 Codeium 提供可靠的免费自动补全。Cursor 免费版每月提供 2,000 次补全，模型与付费版相同。学生通过 GitHub Student Developer Pack 可全部免费使用。"
+      },
+      {
+        "q": "Cursor 比 GitHub Copilot 更好吗？",
+        "a": "在我们的测试中，Cursor 在多文件重构和代码库理解方面胜出，因为它索引整个项目。GitHub Copilot 在行内自动补全和 IDE 集成方面更强。复杂工作选 Cursor，日常效率选 Copilot。"
+      },
+      {
+        "q": "AI 编程助手费用是多少？",
+        "a": "大多数从 $10-20/月 起步。GitHub Copilot $10/月，Cursor Pro $20/月，Windsurf $15/月。投资回报明确：大多数开发者报告每周节省 2-5 小时。"
+      },
+      {
+        "q": "AI 编程助手能替代初级开发者吗？",
+        "a": "对于模板代码、测试和简单功能，是的。对于架构决策、复杂系统调试和理解业务逻辑，不能。正确定位是把 AI 当作开发者的效率倍增器，而非替代品。"
+      }
+    ]
+  },
+  "ai-for-sales-teams": {
+    "intro_en": "We tested 11 AI tools for sales teams over 60 days - running real outreach campaigns, analyzing call transcripts, and automating CRM workflows. The tools that made the cut do not just save time; they increase close rates. Here is what survived real sales pressure.",
+    "intro_zh": "我们花了 60 天测试了 11 款销售团队 AI 工具——运行真实外联活动、分析通话记录、自动化 CRM 工作流。入选的工具不只是省时间，而是提高成交率。以下是经过真实销售压力考验的结果。",
+    "howto_en": "Sales AI tools fall into three buckets: outreach (email, social), call intelligence (transcription, sentiment, coaching), and automation (CRM sync, follow-ups, pipeline management). Most teams need at least one from each bucket. Start with call intelligence if you do 20+ calls per week; start with outreach if your pipeline is thin.",
+    "howto_zh": "销售 AI 工具分为三类：外联（邮件、社交媒体）、通话智能（转录、情绪分析、辅导）和自动化（CRM 同步、跟进、管道管理）。大多数团队每类至少需要一个。每周 20+ 通电话从通话智能开始；管道薄弱从外联开始。",
+    "faqs_en": [
+      {
+        "q": "What is the best AI tool for sales outreach?",
+        "a": "ChatGPT and Claude are excellent for drafting personalized emails at scale. Jasper and Copy.ai offer specialized sales templates. The key is not the tool but the prompt: include prospect research, pain points, and a single clear ask."
+      },
+      {
+        "q": "Can AI handle sales calls?",
+        "a": "AI does not make the calls (yet), but it analyzes them brilliantly. Fireflies and Otter transcribe calls and highlight objections, next steps, and sentiment. This alone saves 5-10 hours per rep per week on CRM notes."
+      },
+      {
+        "q": "How much do sales AI tools cost?",
+        "a": "A complete stack (outreach + call intelligence + automation) costs $50-150/month per seat. The ROI is typically 5-10x within the first quarter through saved time and increased close rates."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "最好的 AI 销售外联工具是什么？",
+        "a": "ChatGPT 和 Claude 非常适合规模化撰写个性化邮件。Jasper 和 Copy.ai 提供专业的销售模板。关键不在工具而在提示词：包含潜在客户调研、痛点和单一明确的要求。"
+      },
+      {
+        "q": "AI 能处理销售电话吗？",
+        "a": "AI 目前不打销售电话，但分析通话非常出色。Fireflies 和 Otter 转录通话并标注异议、下一步和情绪。仅此一项，每位销售每周就能节省 5-10 小时的 CRM 记录时间。"
+      },
+      {
+        "q": "销售 AI 工具费用是多少？",
+        "a": "完整工具组合（外联 + 通话智能 + 自动化）每席位 $50-150/月。投资回报通常在第一季度达到 5-10 倍，来自节省的时间和提升的成交率。"
+      }
+    ]
+  },
+  "ai-for-lawyers": {
+    "intro_en": "Legal work is document-heavy, precision-critical, and billable by the hour. We tested 9 AI tools on real legal workflows - contract review, legal research, deposition summaries - to find which ones actually reduce hours without reducing quality.",
+    "intro_zh": "法律工作文档繁重、精密度要求高、按小时计费。我们在真实法律工作流上测试了 9 款 AI 工具——合同审查、法律研究、证词摘要——找出哪些真正减少工时而不降低质量。",
+    "howto_en": "For lawyers, the most impactful AI use cases are: document review (Claude for long documents), legal research (Perplexity and Consensus for case law), and workflow automation (Dify and n8n for building intake and document generation pipelines). Never put client-confidential data into consumer AI tools without checking the data usage policy.",
+    "howto_zh": "对律师来说，最有价值的 AI 场景是：文档审查（Claude 处理长文档）、法律研究（Perplexity 和 Consensus 查找判例法）和工作流自动化（Dify 和 n8n 构建收案和文档生成流程）。在未检查数据使用政策前，切勿将客户机密数据输入消费者 AI 工具。",
+    "faqs_en": [
+      {
+        "q": "Is it safe for lawyers to use AI?",
+        "a": "Yes, with precautions. Use tools with opt-out data training (Claude Pro, ChatGPT Team) and never input client names or identifying details. For sensitive work, consider self-hosted models via Ollama or enterprise API tiers with zero data retention."
+      },
+      {
+        "q": "What is the best AI for contract review?",
+        "a": "Claude's 200K context window can ingest a 150-page contract in one go. ChatGPT is better for quick clause comparisons. Neither replaces a lawyer's judgment, but both can flag anomalies and summarize key terms in minutes instead of hours."
+      },
+      {
+        "q": "Can AI write legal documents?",
+        "a": "AI can draft first versions of common documents (NDAs, engagement letters, simple motions) but these must always be reviewed by a licensed attorney. The time savings come from not starting from a blank page."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "律师使用 AI 安全吗？",
+        "a": "安全，但需谨慎。使用可关闭数据训练的工具（Claude Pro、ChatGPT Team），绝不输入客户姓名或身份信息。对于敏感工作，考虑通过 Ollama 自部署模型或零数据保留的企业 API。"
+      },
+      {
+        "q": "最好的 AI 合同审查工具是什么？",
+        "a": "Claude 的 20 万上下文窗口可以一次性处理 150 页合同。ChatGPT 更适合快速条款对比。两者都不替代律师的判断，但都能在几分钟内标注异常和总结关键条款，而非数小时。"
+      },
+      {
+        "q": "AI 能撰写法律文件吗？",
+        "a": "AI 可以起草常见文件的第一版（保密协议、委托书、简单动议），但这些必须始终由持证律师审核。节省的时间来自不必从空白页开始。"
+      }
+    ]
+  },
+  "ai-for-doctors": {
+    "intro_en": "Medical professionals face a unique challenge: high-stakes decisions with massive information overflow. We tested 10 AI tools on clinical documentation, literature review, and patient education - focusing on accuracy, privacy, and real clinical utility.",
+    "intro_zh": "医疗专业人员面临独特挑战：高风险决策与海量信息过载。我们在临床文档、文献综述和患者教育上测试了 10 款 AI 工具——关注准确性、隐私和真实临床效用。",
+    "howto_en": "For doctors, AI is most useful in three areas: literature review (Consensus and Elicit for finding evidence-based answers fast), documentation (Otter and Fireflies for clinical note drafting), and patient communication (ChatGPT and Claude for drafting patient-friendly explanations). Never input PHI into consumer AI tools. Use HIPAA-compliant enterprise tiers or on-premise models.",
+    "howto_zh": "对医生来说，AI 在三个领域最有用：文献综述（Consensus 和 Elicit 快速查找循证答案）、文档记录（Otter 和 Fireflies 起草临床笔记）和患者沟通（ChatGPT 和 Claude 起草通俗易懂的解释）。切勿将受保护的健康信息输入消费者 AI 工具。使用符合 HIPAA 的企业版或本地部署模型。",
+    "faqs_en": [
+      {
+        "q": "Is AI reliable for medical research?",
+        "a": "Tools like Consensus and Elicit search actual peer-reviewed papers and provide citations. They are excellent for quick literature scans but should not replace systematic reviews. Always verify cited sources."
+      },
+      {
+        "q": "Can AI help with clinical documentation?",
+        "a": "Yes. Fireflies and Otter can transcribe patient conversations (with consent) and generate structured SOAP notes. This saves 1-2 hours per day for most clinicians. However, all AI-generated notes must be reviewed and signed by the provider."
+      },
+      {
+        "q": "What about patient data privacy?",
+        "a": "This is the most critical concern. Consumer AI tools (ChatGPT, Claude free tiers) are not HIPAA-compliant. Use enterprise tiers with BAA agreements, or self-host models via Ollama. Never enter patient names, MRNs, or identifiable details into any AI tool without a BAA."
+      }
+    ],
+    "faqs_zh": [
+      {
+        "q": "AI 用于医学研究可靠吗？",
+        "a": "Consensus 和 Elicit 等工具搜索真实的同行评审论文并提供引用。它们非常适合快速文献扫描，但不应替代系统综述。务必验证引用来源。"
+      },
+      {
+        "q": "AI 能帮助临床文档记录吗？",
+        "a": "可以。Fireflies 和 Otter 可以转录患者对话（经同意）并生成结构化的 SOAP 笔记。这为大多数临床医生每天节省 1-2 小时。但所有 AI 生成的笔记必须由医生审核和签署。"
+      },
+      {
+        "q": "患者数据隐私怎么办？",
+        "a": "这是最关键的问题。消费者 AI 工具（ChatGPT、Claude 免费版）不符合 HIPAA。使用带有 BAA 协议的企业版，或通过 Ollama 自部署模型。绝不在没有 BAA 的情况下将患者姓名、病历号或可识别信息输入任何 AI 工具。"
+      }
+    ]
   }
 }

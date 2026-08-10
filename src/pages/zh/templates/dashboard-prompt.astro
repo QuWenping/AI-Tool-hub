@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/templates/dashboard-prompt/";
+const faqItems = [
+  { q: "什么是仪表盘提示词模板？", a: "一个用于通过 AI 工具生成数据仪表盘的结构化提示词模板。定义关键指标、图表类型、筛选器和布局，帮助快速生成功能完善的仪表盘。" }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"仪表盘提示词模板","description":"使用此结构化提示词模板，通过 AI 工具生成专业数据仪表盘。定义关键指标、图表和布局。","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":siteUrl+"/zh/"},{"@type":"ListItem","position":2,"name":"模板","item":siteUrl+"/zh/templates/"},{"@type":"ListItem","position":3,"name":"仪表盘提示词","item":pageUrl}] };
+---
+
+<BaseLayout title="仪表盘提示词模板 | AI 工具中心" description="使用此结构化提示词模板生成专业数据仪表盘。" keywords="仪表盘提示词, AI仪表盘, 数据可视化, KPI模板" lang="zh">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/templates/">模板</a> &rsaquo; <span>仪表盘提示词</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">免费模板</span>
+      <h1>仪表盘提示词模板</h1>
+      <p>一个结构化的提示词模板，用于生成数据仪表盘。定义关键指标、图表类型、筛选器和布局，适用于销售、营销、产品和运营等各领域。</p>
+    </header>
+    <section class="article-body">
+
+      <h2>模板</h2>
+      <pre class="prompt-block"><code># 仪表盘提示词模板
+
+## 领域
+[销售 / 营销 / 产品分析 / 运营 / 财务 / 人力资源]
+
+## 核心指标（顶部卡片行）
+1. [指标1名称]：当前值[X]，目标值[Y]，趋势[上升/下降/持平]
+2. [指标2名称]：当前值[X]，目标值[Y]，趋势[上升/下降/持平]
+3. [指标3名称]：当前值[X]，目标值[Y]，趋势[上升/下降/持平]
+4. [指标4名称]：当前值[X]，目标值[Y]，趋势[上升/下降/持平]
+
+## 图表（主区域）
+### 图表 1
+- 类型：[折线图 / 柱状图 / 饼图 / 面积图 / 散点图]
+- 标题："[图表标题]"
+- X 轴：[维度]
+- Y 轴：[指标]
+
+### 图表 2
+- 类型：[图表类型]
+- 标题："[图表标题]"
+
+## 筛选器（侧边栏或顶部）
+- 日期范围：[默认：近 30 天]
+- [筛选器2]：[选项]
+- [筛选器3]：[选项]
+
+## 布局
+- 顶部：4 个指标卡片
+- 左侧（60%）：主图表
+- 右侧（40%）：次要图表 + 数据表格
+
+## 样式
+- 配色方案：[浅色 / 深色 / 品牌色]
+- 图表颜色：[调色板名称或色值]</code></pre>
+
+      <h2>常见问题</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card"><h3>{f.q}</h3><p>{f.a}</p></div>
+        ))}
+      </div>
+      <p class="back-link"><a href="/zh/templates/">所有模板</a></p>
+    </section>
+  </div>
+</BaseLayout>

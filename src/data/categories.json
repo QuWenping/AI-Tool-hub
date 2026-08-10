@@ -228,5 +228,186 @@
     ],
     "title_zh": "2026 年最佳免费 AI 工具",
     "desc_zh": "完全免费的 AI 工具，涵盖写作、图像生成、编程、视频和效率领域——无需信用卡。"
+  },
+  {
+    "slug": "coding-assistant",
+    "title_en": "Best AI Coding Assistants in 2026",
+    "desc_en": "AI-powered code completion, refactoring and pair-programming tools for developers.",
+    "tools": [
+      "github-copilot",
+      "cursor",
+      "cline",
+      "windsurf",
+      "aider",
+      "codeium",
+      "replit",
+      "v0",
+      "lovable",
+      "bolt",
+      "tabnine",
+      "amazon-q",
+      "cody",
+      "ollama"
+    ],
+    "title_zh": "2026 年最佳 AI 编程助手",
+    "desc_zh": "面向开发者的 AI 代码补全、重构和结对编程工具。"
+  },
+  {
+    "slug": "research",
+    "title_en": "Best AI Research Tools in 2026",
+    "desc_en": "AI tools for academic research, literature review, and scientific discovery.",
+    "tools": [
+      "consensus-pro",
+      "scite-ai",
+      "inciteful",
+      "scholarcy",
+      "paperpile",
+      "zotero-ai",
+      "researchrabbit",
+      "connected-papers",
+      "lens-ai",
+      "sciencedirect",
+      "elicit",
+      "consensus",
+      "perplexity"
+    ],
+    "title_zh": "2026 年最佳 AI 研究工具",
+    "desc_zh": "用于学术研究、文献综述和科学发现的 AI 工具。"
+  },
+  {
+    "slug": "ai-for-lawyers",
+    "title_en": "Best AI Tools for Lawyers in 2026",
+    "desc_en": "AI tools for legal research, contract review, document automation, and case management.",
+    "tools": [
+      "claude",
+      "chatgpt",
+      "perplexity",
+      "notion-ai",
+      "otter",
+      "fireflies",
+      "coda-ai",
+      "dify",
+      "n8n"
+    ],
+    "title_zh": "2026 年最佳律师 AI 工具",
+    "desc_zh": "用于法律研究、合同审查、文档自动化和案件管理的 AI 工具。"
+  },
+  {
+    "slug": "ai-for-doctors",
+    "title_en": "Best AI Tools for Doctors in 2026",
+    "desc_en": "AI tools for medical research, clinical documentation, and healthcare workflow automation.",
+    "tools": [
+      "claude",
+      "chatgpt",
+      "perplexity",
+      "consensus",
+      "elicit",
+      "scite-ai",
+      "otter",
+      "fireflies",
+      "notion-ai",
+      "dify"
+    ],
+    "title_zh": "2026 年最佳医生 AI 工具",
+    "desc_zh": "用于医学研究、临床文档和医疗工作流自动化的 AI 工具。"
+  },
+  {
+    "slug": "ai-for-sales-teams",
+    "title_en": "Best AI Tools for Sales Teams in 2026",
+    "desc_en": "AI tools for sales outreach, CRM automation, call analysis, and pipeline management.",
+    "tools": [
+      "chatgpt",
+      "claude",
+      "jasper",
+      "copy-ai",
+      "notion-ai",
+      "fireflies",
+      "make-com",
+      "n8n",
+      "coda-ai",
+      "gamma",
+      "taskade"
+    ],
+    "title_zh": "2026 年最佳销售团队 AI 工具",
+    "desc_zh": "用于销售外联、CRM 自动化、通话分析和销售管道管理的 AI 工具。"
+  },
+  {
+    "slug": "image-generation",
+    "title_en": "Best AI Image Generation Tools in 2026",
+    "desc_en": "Text-to-image and AI image generation tools for creators, designers and marketers.",
+    "tools": [
+      "midjourney",
+      "stable-diffusion",
+      "ideogram",
+      "krea",
+      "flux",
+      "leonardo",
+      "dalle3",
+      "adobe-firefly",
+      "canva-ai",
+      "comfyui",
+      "photoroom"
+    ],
+    "title_zh": "2026 年最佳 AI 图像生成工具",
+    "desc_zh": "面向创作者、设计师和营销人员的文本到图像和 AI 图像生成工具。"
+  },
+  {
+    "slug": "designers",
+    "title_en": "Best AI Tools for Designers in 2026",
+    "desc_en": "AI-powered design tools for UI/UX, graphic design, prototyping, and creative workflows.",
+    "tools": [
+      "midjourney",
+      "stable-diffusion",
+      "figma-ai",
+      "canva-ai",
+      "adobe-firefly",
+      "uizard",
+      "leonardo",
+      "flux",
+      "comfyui",
+      "galileo-ai",
+      "krea",
+      "ideogram"
+    ],
+    "title_zh": "2026 年最佳设计师 AI 工具",
+    "desc_zh": "用于 UI/UX、平面设计、原型制作和创意工作流的 AI 工具。"
+  },
+  {
+    "slug": "seo",
+    "title_en": "Best AI SEO Tools in 2026",
+    "desc_en": "AI tools for SEO optimization, keyword research, content strategy, and SERP analysis.",
+    "tools": [
+      "surfer-seo",
+      "frase",
+      "writesonic",
+      "jasper",
+      "copy-ai",
+      "anyword",
+      "chatgpt",
+      "claude",
+      "perplexity"
+    ],
+    "title_zh": "2026 年最佳 AI SEO 工具",
+    "desc_zh": "用于 SEO 优化、关键词研究、内容策略和 SERP 分析的 AI 工具。"
+  },
+  {
+    "slug": "small-business",
+    "title_en": "Best AI Tools for Small Business in 2026",
+    "desc_en": "Affordable AI tools for small business owners covering marketing, operations, and customer service.",
+    "tools": [
+      "chatgpt",
+      "claude",
+      "notion-ai",
+      "canva-ai",
+      "make-com",
+      "n8n",
+      "jasper",
+      "copy-ai",
+      "gamma",
+      "fireflies",
+      "coda-ai"
+    ],
+    "title_zh": "2026 年最佳小型企业 AI 工具",
+    "desc_zh": "面向小企业主的实惠 AI 工具，覆盖营销、运营和客户服务。"
   }
 ]

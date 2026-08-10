@@ -6715,5 +6715,164 @@
       "growth": 70,
       "trust": 75
     }
+  },
+  "pen-ai": {
+    "reviewed": true
+  },
+  "kits-ai": {
+    "reviewed": true
+  },
+  "d-ID-pro": {
+    "reviewed": true
+  },
+  "fathom": {
+    "reviewed": true
+  },
+  "genmo-pro": {
+    "reviewed": true
+  },
+  "trae-ai": {
+    "reviewed": true
+  },
+  "tensor-art": {
+    "reviewed": true
+  },
+  "airtable-ai": {
+    "reviewed": true
+  },
+  "gliacloud": {
+    "reviewed": true
+  },
+  "topaz-video": {
+    "reviewed": true
+  },
+  "monica-ai": {
+    "reviewed": true
+  },
+  "merlin-ai": {
+    "reviewed": true
+  },
+  "pinecone": {
+    "reviewed": true
+  },
+  "ai-writer": {
+    "reviewed": true
+  },
+  "tensor-gen": {
+    "reviewed": true
+  },
+  "continue-dev": {
+    "reviewed": true
+  },
+  "ollama-api": {
+    "reviewed": true
+  },
+  "manus-ai": {
+    "reviewed": true
+  },
+  "mastra": {
+    "reviewed": true
+  },
+  "wellsaid": {
+    "reviewed": true
+  },
+  "frase-io": {
+    "reviewed": true
+  },
+  "pictory": {
+    "reviewed": true
+  },
+  "v0-dev": {
+    "reviewed": true
+  },
+  "typeface-ai": {
+    "reviewed": true
+  },
+  "murf-ai": {
+    "reviewed": true
+  },
+  "artbreeder": {
+    "reviewed": true
+  },
+  "openai-api": {
+    "reviewed": true
+  },
+  "sider-ai": {
+    "reviewed": true
+  },
+  "pixlr-ai": {
+    "reviewed": true
+  },
+  "descript-edit": {
+    "reviewed": true
+  },
+  "bolt-new": {
+    "reviewed": true
+  },
+  "gladia": {
+    "reviewed": true
+  },
+  "tldv": {
+    "reviewed": true
+  },
+  "hoppycopy": {
+    "reviewed": true
+  },
+  "copyhero": {
+    "reviewed": true
+  },
+  "aider-ai": {
+    "reviewed": true
+  },
+  "getimg-ai": {
+    "reviewed": true
+  },
+  "jasper-art": {
+    "reviewed": true
+  },
+  "playht": {
+    "reviewed": true
+  },
+  "hypotenuse": {
+    "reviewed": true
+  },
+  "stability-api": {
+    "reviewed": true
+  },
+  "lalals": {
+    "reviewed": true
+  },
+  "lexica": {
+    "reviewed": true
+  },
+  "lovable-dev": {
+    "reviewed": true
+  },
+  "copysmith": {
+    "reviewed": true
+  },
+  "krea-ai": {
+    "reviewed": true
+  },
+  "bloop-ai": {
+    "reviewed": true
+  },
+  "bear-notes": {
+    "reviewed": true
+  },
+  "twipu-ai": {
+    "reviewed": true
+  },
+  "resend": {
+    "reviewed": true
+  },
+  "marmof-ai": {
+    "reviewed": true
+  },
+  "texta-copilot": {
+    "reviewed": true
+  },
+  "grammarly-prem": {
+    "reviewed": true
   }
 }

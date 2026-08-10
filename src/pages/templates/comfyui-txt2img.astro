@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/templates/comfyui-txt2img/";
+
+const faqItems = [
+  { q: "What is ComfyUI txt2img?", a: "ComfyUI txt2img is a workflow that converts text prompts into images using Stable Diffusion models through ComfyUI's node-based interface. This template provides a production-ready pipeline." },
+  { q: "What models work with this workflow?", a: "SDXL, SD 3, Flux, and most Stable Diffusion-based models. Adjust the model loader node to point to your downloaded checkpoint file." }
+];
+
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"ComfyUI Text-to-Image Workflow Template","description":"A production-ready ComfyUI workflow for text-to-image generation. Includes model loading, prompt processing, image generation, and upscaling nodes.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Templates","item":siteUrl+"/templates/"},{"@type":"ListItem","position":3,"name":"ComfyUI Text-to-Image","item":pageUrl}] };
+---
+
+<BaseLayout title="ComfyUI Text-to-Image Workflow Template | AI Tool Hub" description="Production-ready ComfyUI workflow for text-to-image generation with Stable Diffusion." keywords="ComfyUI, txt2img, Stable Diffusion, workflow, image generation" lang="en">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/templates/">Templates</a> &rsaquo; <span>ComfyUI Text-to-Image</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Free Template</span>
+      <h1>ComfyUI Text-to-Image Workflow</h1>
+      <p>A production-ready ComfyUI workflow for high-quality text-to-image generation. Load this JSON into ComfyUI to get started immediately.</p>
+    </header>
+    <section class="article-body">
+
+      <h2>Workflow Nodes</h2>
+      <ol>
+        <li><strong>Load Checkpoint:</strong> Load your Stable Diffusion model (SDXL, SD3, or Flux)</li>
+        <li><strong>CLIP Text Encode (Positive):</strong> Your main prompt — be specific about subject, style, and quality</li>
+        <li><strong>CLIP Text Encode (Negative):</strong> What to avoid — "blurry, low quality, distorted, watermark"</li>
+        <li><strong>Empty Latent Image:</strong> Set resolution (1024x1024 for SDXL, configurable)</li>
+        <li><strong>KSampler:</strong> Configure steps (20-30), CFG (7-9), sampler (dpmpp_2m), scheduler (karras)</li>
+        <li><strong>VAE Decode:</strong> Convert latent to image</li>
+        <li><strong>Upscale (optional):</strong> 2x upscale with 4x-UltraSharp model</li>
+        <li><strong>Save Image:</strong> Output to your chosen directory</li>
+      </ol>
+
+      <h2>Recommended Settings</h2>
+      <ul>
+        <li><strong>SDXL:</strong> 1024x1024, 20-30 steps, CFG 7</li>
+        <li><strong>Flux:</strong> 1024x1024, 25-30 steps, CFG 3.5</li>
+        <li><strong>SD 3:</strong> 1024x1024, 28 steps, CFG 4.5</li>
+      </ul>
+
+      <h2>FAQ</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card">
+            <h3>{f.q}</h3>
+            <p>{f.a}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="back-link"><a href="/templates/">All Templates</a></p>
+    </section>
+  </div>
+</BaseLayout>

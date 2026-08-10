@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/templates/comfyui-txt2img/";
+const faqItems = [
+  { q: "ComfyUI txt2img 是什么？", a: "ComfyUI txt2img 是通过 ComfyUI 的节点式界面，利用 Stable Diffusion 模型将文本提示词转换为图像的工作流。本模板提供即开即用的生产级管线。" },
+  { q: "支持哪些模型？", a: "SDXL、SD 3、Flux 及大多数基于 Stable Diffusion 的模型均支持。将模型加载节点指向你下载的 checkpoint 文件即可。" }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"ComfyUI 文生图工作流模板","description":"即开即用的 ComfyUI 文生图工作流，含模型加载、提示词处理、图像生成和放大节点。","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":siteUrl+"/zh/"},{"@type":"ListItem","position":2,"name":"模板","item":siteUrl+"/zh/templates/"},{"@type":"ListItem","position":3,"name":"ComfyUI 文生图","item":pageUrl}] };
+---
+
+<BaseLayout title="ComfyUI 文生图工作流模板 | AI 工具中心" description="即开即用的 ComfyUI 文生图工作流，使用 Stable Diffusion 生成高质量图像。" keywords="ComfyUI, 文生图, Stable Diffusion, 工作流, AI绘画" lang="zh">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/templates/">模板</a> &rsaquo; <span>ComfyUI 文生图</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">免费模板</span>
+      <h1>ComfyUI 文生图工作流</h1>
+      <p>即开即用的 ComfyUI 文生图工作流。将此 JSON 加载到 ComfyUI 中即可开始生成高质量图像。</p>
+    </header>
+    <section class="article-body">
+
+      <h2>工作流节点</h2>
+      <ol>
+        <li><strong>加载模型：</strong>加载 Stable Diffusion 模型（SDXL、SD3 或 Flux）</li>
+        <li><strong>正向提示词：</strong>详细描述主体、风格和质量要求</li>
+        <li><strong>反向提示词：</strong>排除项——"模糊、低质量、扭曲、水印"</li>
+        <li><strong>空白潜空间：</strong>设定分辨率（SDXL 推荐 1024x1024）</li>
+        <li><strong>KSampler：</strong>步数 20-30，CFG 7-9，采样器 dpmpp_2m，调度器 karras</li>
+        <li><strong>VAE 解码：</strong>潜空间转图像</li>
+        <li><strong>放大（可选）：</strong>使用 4x-UltraSharp 模型 2 倍放大</li>
+        <li><strong>保存图像：</strong>输出至指定目录</li>
+      </ol>
+
+      <h2>推荐参数</h2>
+      <ul>
+        <li><strong>SDXL：</strong>1024x1024，20-30 步，CFG 7</li>
+        <li><strong>Flux：</strong>1024x1024，25-30 步，CFG 3.5</li>
+        <li><strong>SD 3：</strong>1024x1024，28 步，CFG 4.5</li>
+      </ul>
+
+      <h2>常见问题</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card"><h3>{f.q}</h3><p>{f.a}</p></div>
+        ))}
+      </div>
+      <p class="back-link"><a href="/zh/templates/">所有模板</a></p>
+    </section>
+  </div>
+</BaseLayout>

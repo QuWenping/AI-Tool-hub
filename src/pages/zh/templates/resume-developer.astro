@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/templates/resume-developer/";
+const faqItems = [
+  { q: "简历上要不要放 GitHub？", a: "建议放。附上 GitHub 个人主页链接，突出有指标的项目（星标数、下载量、贡献者数量），并说明你使用的技术栈。" },
+  { q: "开发者简历多长合适？", a: "初级/中级（0-7 年经验）控制在一页。资深/架构师最多两页。重点突出影响力和成果，而非罗列所有用过技术。" }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"软件开发工程师简历模板","description":"ATS 友好的开发者简历模板，含项目亮点、量化成果和开源贡献。","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":siteUrl+"/zh/"},{"@type":"ListItem","position":2,"name":"模板","item":siteUrl+"/zh/templates/"},{"@type":"ListItem","position":3,"name":"开发者简历","item":pageUrl}] };
+---
+
+<BaseLayout title="软件开发工程师简历模板 | AI 工具中心" description="ATS 友好的开发者简历模板，含项目亮点、量化成果和开源贡献。" keywords="开发者简历, 软件工程师简历, 技术简历模板, 程序员简历" lang="zh">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/templates/">模板</a> &rsaquo; <span>开发者简历</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">免费模板</span>
+      <h1>软件开发工程师简历模板</h1>
+      <p>一份 ATS 友好的开发者简历模板。突出项目经历、技术影响力和开源贡献，用可量化的成果说话。</p>
+    </header>
+    <section class="article-body">
+
+      <h2>模板</h2>
+      <pre class="prompt-block"><code># [你的姓名]
+[城市] | [邮箱] | [GitHub] | [领英] | [个人网站]
+
+## 个人概述
+全栈开发工程师，[X] 年大型 Web 应用开发经验。精通 [语言/框架]。[用指标说明关键成就]。
+
+## 技术能力
+- 语言：[Python, TypeScript, Go, ...]
+- 前端：[React, Next.js, Vue, ...]
+- 后端：[Node.js, Django, FastAPI, ...]
+- 基础设施：[AWS, Docker, Kubernetes, Terraform, ...]
+- 数据库：[PostgreSQL, Redis, MongoDB, ...]
+
+## 工作经历
+
+### [公司名称] | 高级软件工程师 | [YYYY - 至今]
+- 设计并构建了 [系统/功能]，日均处理 [N] 次请求，可用性 99.9%
+- 通过 [优化手段] 将 API 延迟降低 [X]%
+- 指导 [N] 名初级开发人员，主导架构评审
+
+### [公司名称] | 软件工程师 | [YYYY - YYYY]
+- 将 [旧系统] 迁移至 [新技术栈]，部署时间从 [X] 缩短至 [Y] 分钟
+- 搭建 CI/CD 流水线，发布周期从每周提升为每日
+
+## 项目
+
+### [项目名称] | [技术栈]
+- [简介] — GitHub [N] 星，月下载量 [N]
+- 使用 [技术] 构建；解决了 [问题]，实现了 [成果]
+
+## 教育背景
+[大学名称] — 计算机科学 学士，[年份]</code></pre>
+
+      <h2>常见问题</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card"><h3>{f.q}</h3><p>{f.a}</p></div>
+        ))}
+      </div>
+      <p class="back-link"><a href="/zh/templates/">所有模板</a></p>
+    </section>
+  </div>
+</BaseLayout>

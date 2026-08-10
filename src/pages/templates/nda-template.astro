@@ -1,0 +1,94 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/templates/nda-template/";
+const faqItems = [
+  { q: "Is this NDA template legally binding?", a: "This is a template for reference and educational purposes. For legally binding agreements, consult a qualified attorney who can tailor the NDA to your specific jurisdiction and circumstances." },
+  { q: "What is the difference between mutual and unilateral NDA?", a: "A unilateral NDA protects one party's confidential information. A mutual NDA protects both parties' information. Use mutual NDAs when both parties will share sensitive information." }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Non-Disclosure Agreement (NDA) Template","description":"A comprehensive NDA template for protecting confidential information in business relationships. Covers mutual and unilateral agreements.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Templates","item":siteUrl+"/templates/"},{"@type":"ListItem","position":3,"name":"NDA Template","item":pageUrl}] };
+---
+
+<BaseLayout title="Non-Disclosure Agreement (NDA) Template | AI Tool Hub" description="A comprehensive NDA template for protecting confidential information." keywords="NDA template, non-disclosure agreement, confidentiality agreement, legal template" lang="en">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/templates/">Templates</a> &rsaquo; <span>NDA Template</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Free Template</span>
+      <h1>Non-Disclosure Agreement (NDA) Template</h1>
+      <p>A comprehensive NDA template for protecting confidential information. Suitable for freelancers, agencies, startups, and enterprise partnerships.</p>
+    </header>
+    <section class="article-body">
+
+      <h2>Template</h2>
+      <pre class="prompt-block"><code># NON-DISCLOSURE AGREEMENT
+
+**This Agreement** is made on [Date] between:
+
+**Disclosing Party:** [Company Name], [Address]
+**Receiving Party:** [Company/Individual Name], [Address]
+
+(Collectively "Parties")
+
+---
+
+## 1. PURPOSE
+The Parties wish to explore a potential business relationship regarding [describe purpose]. In connection with this purpose, the Disclosing Party may disclose Confidential Information to the Receiving Party.
+
+## 2. CONFIDENTIAL INFORMATION
+"Confidential Information" means any information disclosed by the Disclosing Party to the Receiving Party, whether orally, in writing, or in any other form, that:
+- Is marked or identified as "Confidential" at the time of disclosure
+- Relates to [business plans, financial data, customer lists, trade secrets, technical specifications, source code]
+
+## 3. EXCLUSIONS
+Confidential Information does not include information that:
+a) Is or becomes publicly available through no fault of the Receiving Party
+b) Was rightfully in the Receiving Party's possession prior to disclosure
+c) Is independently developed by the Receiving Party without use of Confidential Information
+d) Is required to be disclosed by law or court order
+
+## 4. OBLIGATIONS
+The Receiving Party agrees to:
+a) Use Confidential Information solely for the Purpose
+b) Limit access to employees/contractors who need to know
+c) Protect Confidential Information with at least reasonable care
+d) Not copy, distribute, or reverse engineer Confidential Information
+e) Return or destroy all Confidential Information upon written request
+
+## 5. TERM
+This Agreement shall remain in effect for [2/3/5] years from the date of signing.
+
+## 6. NO LICENSE
+Nothing in this Agreement grants any license, ownership, or rights to Confidential Information.
+
+## 7. GOVERNING LAW
+This Agreement shall be governed by the laws of [State/Country].
+
+---
+
+**IN WITNESS WHEREOF**, the Parties have executed this Agreement:
+
+Disclosing Party: ____________________ Date: ________
+Receiving Party:  ____________________ Date: ________
+
+---
+
+**Disclaimer:** This is a template for informational purposes only and does not constitute legal advice.</code></pre>
+
+      <h2>FAQ</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card"><h3>{f.q}</h3><p>{f.a}</p></div>
+        ))}
+      </div>
+      <p class="back-link"><a href="/templates/">All Templates</a></p>
+    </section>
+  </div>
+</BaseLayout>

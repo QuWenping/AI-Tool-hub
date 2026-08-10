@@ -1,0 +1,74 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/templates/resume-developer/";
+const faqItems = [
+  { q: "Should I include GitHub on my resume?", a: "Yes. Include your GitHub profile link and highlight key projects with metrics (stars, downloads, contributors). Mention open-source contributions and the technologies used." },
+  { q: "How long should a developer resume be?", a: "One page for junior/mid-level (0-7 years). Two pages max for senior/staff engineers. Focus on impact and results, not a laundry list of every technology used." }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Software Developer Resume Template","description":"ATS-friendly developer resume template. Includes sections for technical skills, project highlights with metrics, and open-source contributions.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Templates","item":siteUrl+"/templates/"},{"@type":"ListItem","position":3,"name":"Developer Resume","item":pageUrl}] };
+---
+
+<BaseLayout title="Software Developer Resume Template | AI Tool Hub" description="ATS-friendly developer resume template with project highlights, metrics, and open-source contributions." keywords="developer resume, software engineer CV, tech resume template, ATS resume" lang="en">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/templates/">Templates</a> &rsaquo; <span>Developer Resume</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Free Template</span>
+      <h1>Software Developer Resume Template</h1>
+      <p>An ATS-friendly resume template for software developers. Highlights projects, technical impact, and open-source contributions with measurable results.</p>
+    </header>
+    <section class="article-body">
+
+      <h2>Template</h2>
+      <pre class="prompt-block"><code># [YOUR NAME]
+[City, State] | [Email] | [GitHub] | [LinkedIn] | [Portfolio]
+
+## SUMMARY
+Full-stack developer with [X] years of experience building scalable web applications. Proficient in [languages/frameworks]. [Key achievement with metric].
+
+## TECHNICAL SKILLS
+- Languages: [Python, TypeScript, Go, ...]
+- Frontend: [React, Next.js, Vue, ...]
+- Backend: [Node.js, Django, FastAPI, ...]
+- Infrastructure: [AWS, Docker, Kubernetes, Terraform, ...]
+- Databases: [PostgreSQL, Redis, MongoDB, ...]
+
+## EXPERIENCE
+
+### [Company] | Senior Software Engineer | [YYYY - Present]
+- Designed and built [system/feature] serving [N] requests/day with 99.9% uptime
+- Reduced API latency by [X]% through [optimization technique]
+- Mentored [N] junior developers and led architecture reviews
+
+### [Company] | Software Engineer | [YYYY - YYYY]
+- Migrated [legacy system] to [modern stack], reducing deploy time from [X] to [Y] minutes
+- Built CI/CD pipeline reducing release cycle from weekly to daily
+
+## PROJECTS
+
+### [Project Name] | [Tech Stack]
+- [Description] — [N] stars on GitHub, [N] monthly downloads
+- Built with [technologies]; solved [problem] resulting in [outcome]
+
+## EDUCATION
+[University] — B.S. in Computer Science, [Year]
+</code></pre>
+
+      <h2>FAQ</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card"><h3>{f.q}</h3><p>{f.a}</p></div>
+        ))}
+      </div>
+      <p class="back-link"><a href="/templates/">All Templates</a></p>
+    </section>
+  </div>
+</BaseLayout>

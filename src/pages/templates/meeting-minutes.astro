@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/templates/meeting-minutes/";
+const faqItems = [
+  { q: "What should meeting minutes include?", a: "Meeting minutes should include date, attendees, agenda items, decisions made, action items with owners and deadlines, and next meeting date. Be concise — capture decisions, not verbatim discussion." }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Meeting Minutes Template","description":"A clean, structured meeting minutes template. Captures decisions, action items, attendees, and follow-ups efficiently.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Templates","item":siteUrl+"/templates/"},{"@type":"ListItem","position":3,"name":"Meeting Minutes","item":pageUrl}] };
+---
+
+<BaseLayout title="Meeting Minutes Template | AI Tool Hub" description="A clean meeting minutes template capturing decisions, action items, and follow-ups." keywords="meeting minutes template, meeting notes, action items, meeting template" lang="en">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/templates/">Templates</a> &rsaquo; <span>Meeting Minutes</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Free Template</span>
+      <h1>Meeting Minutes Template</h1>
+      <p>A structured template for capturing meeting decisions, action items, and follow-ups. Works for standups, sprint planning, client calls, and team syncs.</p>
+    </header>
+    <section class="article-body">
+
+      <h2>Template</h2>
+      <pre class="prompt-block"><code># MEETING MINUTES
+
+## Meeting Info
+- **Meeting:** [Name/Purpose]
+- **Date:** [YYYY-MM-DD]
+- **Time:** [Start] - [End]
+- **Location:** [Room / Video Link]
+- **Attendees:** [Name], [Name], [Name]
+- **Absent:** [Name]
+
+---
+
+## Agenda
+1. [Agenda item 1]
+2. [Agenda item 2]
+3. [Agenda item 3]
+
+---
+
+## Discussion & Decisions
+
+### 1. [Agenda Item 1]
+- **Discussion:** [Brief summary of discussion]
+- **Decision:** [Decision reached]
+- **Rationale:** [Why this decision was made]
+
+### 2. [Agenda Item 2]
+- **Discussion:** [Summary]
+- **Decision:** [Decision / Deferred / More info needed]
+
+---
+
+## Action Items
+| # | Action | Owner | Due Date | Status |
+|---|--------|-------|----------|--------|
+| 1 | [Action description] | [Name] | [YYYY-MM-DD] | ⭕ New |
+| 2 | [Action description] | [Name] | [YYYY-MM-DD] | ⭕ New |
+
+---
+
+## Next Meeting
+- **Date:** [YYYY-MM-DD] at [Time]
+- **Agenda items to carry forward:** [Items]
+
+---
+
+Minutes recorded by: [Name]
+</code></pre>
+
+      <h2>FAQ</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card"><h3>{f.q}</h3><p>{f.a}</p></div>
+        ))}
+      </div>
+      <p class="back-link"><a href="/templates/">All Templates</a></p>
+    </section>
+  </div>
+</BaseLayout>

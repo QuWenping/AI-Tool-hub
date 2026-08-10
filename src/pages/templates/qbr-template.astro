@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/templates/qbr-template/";
+
+const faqItems = [
+  { q: "What is a QBR template?", a: "A Quarterly Business Review template helps you structure customer-facing presentations that demonstrate value delivered, align on goals, and plan the next quarter's initiatives." },
+  { q: "What should a QBR deck include?", a: "A complete QBR deck includes: executive summary, QoQ metrics review, value delivered, challenges and solutions, roadmap alignment, and next quarter goals." }
+];
+
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Quarterly Business Review (QBR) Template","description":"A professional QBR template for customer success and sales teams. Structure your quarterly reviews to demonstrate value and align on next steps.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Templates","item":siteUrl+"/templates/"},{"@type":"ListItem","position":3,"name":"QBR Template","item":pageUrl}] };
+---
+
+<BaseLayout title="QBR Template — Quarterly Business Review Deck | AI Tool Hub" description="A professional QBR template for customer success and sales teams. Structure quarterly reviews to demonstrate value." keywords="QBR template, quarterly business review, customer success template, sales deck template" lang="en">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/templates/">Templates</a> &rsaquo; <span>QBR Template</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Free Template</span>
+      <h1>Quarterly Business Review (QBR) Template</h1>
+      <p>A structured QBR deck template to demonstrate customer value, align on goals, and plan the next quarter. Designed for customer success and sales teams.</p>
+    </header>
+    <section class="article-body">
+
+      <h2>Template</h2>
+      <pre class="prompt-block"><code># QUARTERLY BUSINESS REVIEW | [Customer Name]
+## Q[1-4] [Year] | Presented by: [Name] | Date: [MM/DD/YYYY]
+
+---
+
+## 1. EXECUTIVE SUMMARY
+- Key highlights from the past quarter
+- Top 3 achievements
+- Overall health score: [Green/Yellow/Red]
+
+## 2. METRICS REVIEW
+| Metric | Last Q | This Q | Change | Target |
+|--------|--------|--------|--------|--------|
+| [Metric 1] | | | | |
+| [Metric 2] | | | | |
+| [Metric 3] | | | | |
+
+## 3. VALUE DELIVERED
+### Feature Adoption
+- [Feature 1]: [X]% adoption, [result]
+- [Feature 2]: [X]% adoption, [result]
+
+### ROI Summary
+- Time saved: [X] hours/month
+- Cost reduction: $[X]/year
+- Revenue impact: $[X]/year
+
+## 4. CHALLENGES & SOLUTIONS
+| Challenge | Impact | Resolution | Status |
+|-----------|--------|------------|--------|
+| | | | |
+
+## 5. PRODUCT ROADMAP ALIGNMENT
+- Upcoming features relevant to customer
+- Customer feature requests status
+
+## 6. NEXT QUARTER GOALS
+1. [Goal 1] — Owner: [Name], Target: [Date]
+2. [Goal 2] — Owner: [Name], Target: [Date]
+3. [Goal 3] — Owner: [Name], Target: [Date]
+
+## 7. NEXT STEPS
+- [ ] Schedule monthly check-in
+- [ ] Send follow-up materials
+- [ ] Update CRM with action items</code></pre>
+
+      <h2>How to Use This Template</h2>
+      <ol>
+        <li>Copy into Google Slides, PowerPoint, or Notion</li>
+        <li>Fill in customer-specific data and metrics</li>
+        <li>Customize sections based on your product and relationship</li>
+        <li>Share with internal stakeholders for review before the meeting</li>
+        <li>Present and leave time for discussion and feedback</li>
+      </ol>
+
+      <h2>FAQ</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card">
+            <h3>{f.q}</h3>
+            <p>{f.a}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="back-link"><a href="/templates/">All Templates</a></p>
+    </section>
+  </div>
+</BaseLayout>

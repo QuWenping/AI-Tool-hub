@@ -1,0 +1,96 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/templates/prd-template/";
+const faqItems = [
+  { q: "What is a PRD?", a: "A Product Requirements Document defines what a product or feature should do. It aligns stakeholders (engineering, design, marketing) on scope, requirements, success metrics, and timeline." },
+  { q: "Who writes the PRD?", a: "Typically the Product Manager, with input from engineering leads, designers, and stakeholders. The PM owns the document and drives alignment." }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Product Requirements Document (PRD) Template","description":"A comprehensive PRD template covering problem statement, user stories, functional requirements, success metrics, and timeline.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Templates","item":siteUrl+"/templates/"},{"@type":"ListItem","position":3,"name":"PRD Template","item":pageUrl}] };
+---
+
+<BaseLayout title="Product Requirements Document (PRD) Template | AI Tool Hub" description="A comprehensive PRD template with problem statement, user stories, success metrics, and timeline." keywords="PRD template, product requirements, product management, feature spec" lang="en">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/templates/">Templates</a> &rsaquo; <span>PRD Template</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Free Template</span>
+      <h1>Product Requirements Document (PRD) Template</h1>
+      <p>A comprehensive PRD template covering problem statement, user stories, functional requirements, success metrics, and implementation timeline.</p>
+    </header>
+    <section class="article-body">
+
+      <h2>Template</h2>
+      <pre class="prompt-block"><code># PRODUCT REQUIREMENTS DOCUMENT
+## [Feature/Product Name] | Version [X.Y] | Status: [Draft/Review/Approved]
+
+---
+
+## 1. PROBLEM STATEMENT
+### Current State
+[Describe the current situation and pain points]
+
+### User Problem
+[Who is affected? How severe is the problem? What data supports this?]
+
+### Why Now?
+[Market timing, competitive pressure, strategic alignment]
+
+## 2. GOALS & SUCCESS METRICS
+| Goal | Metric | Target | Measurement |
+|------|--------|--------|-------------|
+| | | | |
+
+**North Star Metric:** [Primary metric]
+
+## 3. USER STORIES
+| Priority | As a... | I want to... | So that... | Acceptance Criteria |
+|----------|---------|--------------|------------|---------------------|
+| P0 | | | | |
+| P1 | | | | |
+
+## 4. FUNCTIONAL REQUIREMENTS
+### FR-001: [Feature Name]
+- **Description:** [What the feature does]
+- **Priority:** [P0/P1/P2]
+- **Dependencies:** [Other features, APIs, teams]
+- **Edge Cases:** [Error states, empty states, loading states]
+
+## 5. NON-FUNCTIONAL REQUIREMENTS
+- Performance: [Response time, throughput targets]
+- Security: [Auth requirements, data handling]
+- Accessibility: [WCAG level, screen reader support]
+
+## 6. DESIGN
+- [Link to Figma/Sketch designs]
+- [Key design decisions and rationale]
+
+## 7. TIMELINE & MILESTONES
+| Milestone | Date | Owner | Deliverable |
+|-----------|------|-------|-------------|
+| Design Complete | | | |
+| Dev Complete | | | |
+| QA Sign-off | | | |
+| Launch | | | |
+
+## 8. OPEN QUESTIONS
+- [Question 1] — Owner: [Name], Target: [Date]
+- [Question 2] — Owner: [Name], Target: [Date]</code></pre>
+
+      <h2>FAQ</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card"><h3>{f.q}</h3><p>{f.a}</p></div>
+        ))}
+      </div>
+      <p class="back-link"><a href="/templates/">All Templates</a></p>
+    </section>
+  </div>
+</BaseLayout>

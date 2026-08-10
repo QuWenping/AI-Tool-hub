@@ -1,0 +1,84 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/templates/ui-prompt-template/";
+
+const faqItems = [
+  { q: "What is a UI prompt template?", a: "A UI prompt template helps designers write effective prompts for AI design tools like Figma AI, Uizard, and v0. It provides a structured format for describing UI components, layouts, and interactions." },
+  { q: "Can AI generate complete UI designs?", a: "AI can generate high-fidelity mockups and component-level designs. For complete applications, you still need a designer to ensure consistency, accessibility, and brand alignment across all screens." }
+];
+
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"UI Prompt Template for AI Design Tools","description":"A structured prompt template for generating consistent UI designs with AI tools. Works with Figma AI, v0, Uizard, and more.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Templates","item":siteUrl+"/templates/"},{"@type":"ListItem","position":3,"name":"UI Prompt Template","item":pageUrl}] };
+---
+
+<BaseLayout title="UI Prompt Template for AI Design Tools | AI Tool Hub" description="A structured prompt template for generating consistent UI designs with AI tools. Works with Figma AI, v0, and Uizard." keywords="UI prompt template, AI design prompts, Figma AI, v0 prompts, UI generation" lang="en">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/templates/">Templates</a> &rsaquo; <span>UI Prompt Template</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Free Template</span>
+      <h1>UI Prompt Template for AI Design Tools</h1>
+      <p>A structured prompt template for generating consistent, professional UI designs with AI tools like Figma AI, v0, and Uizard.</p>
+    </header>
+    <section class="article-body">
+
+      <h2>Template</h2>
+      <pre class="prompt-block"><code># UI PROMPT TEMPLATE
+
+## SCREEN TYPE
+[Login / Dashboard / Landing Page / Settings / Profile / Data Table / Form]
+
+## LAYOUT
+- Structure: [Single column / Two column / Grid / Card layout]
+- Navigation: [Top nav / Side nav / Bottom tab / None]
+- Key sections: [Header, Main content, Sidebar, Footer]
+
+## STYLE
+- Design system: [Material Design / iOS / Minimal / Dark mode / Branded]
+- Color palette: [Primary: #XXXXXX, Secondary: #XXXXXX, Background: #XXXXXX]
+- Typography: [Sans-serif / Serif / Mono], [Size range]
+- Spacing: [Compact / Comfortable / Spacious]
+
+## COMPONENTS NEEDED
+- [Component 1]: [Description and behavior]
+- [Component 2]: [Description and behavior]
+
+## CONTENT
+- Title: "[Page title]"
+- Placeholder data: [Describe realistic but non-sensitive data]
+- Empty state: [What to show when no data exists]
+
+## INTERACTIONS
+- Primary action: [Button label] → [What happens]
+- Secondary action: [Button/link] → [What happens]
+
+## RESPONSIVE BEHAVIOR
+- Desktop: [Layout description]
+- Tablet: [Layout changes]
+- Mobile: [Layout changes]
+
+## EXAMPLES / INSPIRATION
+- Reference designs: [URLs or descriptions]
+- Competitor references: [Names]</code></pre>
+
+      <h2>FAQ</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card">
+            <h3>{f.q}</h3>
+            <p>{f.a}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="back-link"><a href="/templates/">All Templates</a></p>
+    </section>
+  </div>
+</BaseLayout>

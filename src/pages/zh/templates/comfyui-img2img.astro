@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/zh/templates/comfyui-img2img/";
+const faqItems = [
+  { q: "ComfyUI img2img 是什么？", a: "ComfyUI img2img 是以已有图像为输入、通过 Stable Diffusion 生成风格化或增强变体图像的工作流。可用于风格迁移、图像增强和变体生成。" }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"ComfyUI 图生图工作流模板","description":"即开即用的 ComfyUI 图生图工作流，支持风格迁移、图像增强和变体生成。","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":siteUrl+"/zh/"},{"@type":"ListItem","position":2,"name":"模板","item":siteUrl+"/zh/templates/"},{"@type":"ListItem","position":3,"name":"ComfyUI 图生图","item":pageUrl}] };
+---
+
+<BaseLayout title="ComfyUI 图生图工作流模板 | AI 工具中心" description="即开即用的 ComfyUI 图生图工作流，支持风格迁移和图像增强。" keywords="ComfyUI, 图生图, img2img, AI绘画, 图像增强" lang="zh">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href="/zh/templates/">模板</a> &rsaquo; <span>ComfyUI 图生图</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">免费模板</span>
+      <h1>ComfyUI 图生图工作流</h1>
+      <p>一个即开即用的 ComfyUI 图生图工作流。以已有图像为输入，通过 Stable Diffusion 生成风格化变体或增强版本。</p>
+    </header>
+    <section class="article-body">
+
+      <h2>工作流节点</h2>
+      <ol>
+        <li><strong>加载图像：</strong>加载输入图像，作为生成基础</li>
+        <li><strong>加载模型：</strong>选择 Stable Diffusion 模型</li>
+        <li><strong>正向提示词：</strong>描述期望的风格变化或增强效果</li>
+        <li><strong>反向提示词：</strong>排除不需要的元素</li>
+        <li><strong>VAE 编码：</strong>将输入图像编码为潜空间表示</li>
+        <li><strong>KSampler：</strong>控制去噪强度（0.4-0.7 推荐范围）</li>
+        <li><strong>VAE 解码：</strong>潜空间转输出图像</li>
+        <li><strong>保存图像：</strong>输出至指定目录</li>
+      </ol>
+
+      <h2>推荐参数</h2>
+      <ul>
+        <li><strong>去噪强度：</strong>0.4-0.5（微调）/ 0.6-0.75（大幅变化）</li>
+        <li><strong>步数：</strong>20-30</li>
+        <li><strong>CFG：</strong>7-9</li>
+      </ul>
+
+      <h2>常见问题</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card"><h3>{f.q}</h3><p>{f.a}</p></div>
+        ))}
+      </div>
+      <p class="back-link"><a href="/zh/templates/">所有模板</a></p>
+    </section>
+  </div>
+</BaseLayout>

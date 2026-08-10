@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/templates/resume-pm/";
+const faqItems = [
+  { q: "What should a PM resume include?", a: "A strong PM resume highlights product launches, metrics-driven results, cross-functional leadership, and specific methodologies (Agile, Scrum). Use numbers: '% improvement', '$ revenue', '# of users'." },
+  { q: "ATS-friendly resume format?", a: "Use a clean single-column layout. Avoid tables, images, and columns. Use standard section headings (Experience, Education, Skills). Save as PDF with text selectable." }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Product Manager Resume Template","description":"ATS-friendly PM resume template optimized for product management roles. Includes sections for metrics-driven achievements, product launches, and leadership.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Templates","item":siteUrl+"/templates/"},{"@type":"ListItem","position":3,"name":"PM Resume","item":pageUrl}] };
+---
+
+<BaseLayout title="Product Manager Resume Template | AI Tool Hub" description="ATS-friendly PM resume template with metrics-driven achievements and product launches." keywords="PM resume template, product manager resume, ATS resume, product management CV" lang="en">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/templates/">Templates</a> &rsaquo; <span>PM Resume</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Free Template</span>
+      <h1>Product Manager Resume Template</h1>
+      <p>An ATS-friendly resume template optimized for product management roles. Highlights metrics-driven achievements, product launches, and cross-functional leadership.</p>
+    </header>
+    <section class="article-body">
+
+      <h2>Template</h2>
+      <pre class="prompt-block"><code># [YOUR NAME]
+[City, State] | [Email] | [LinkedIn] | [Portfolio]
+
+## PROFESSIONAL SUMMARY
+Results-driven Product Manager with [X] years of experience launching [B2B/B2C/SaaS] products. Led [N] product launches generating [$X]M in revenue. Expert in [methodologies] with a track record of [key achievement].
+
+## EXPERIENCE
+
+### [Company Name] | Product Manager | [MM/YYYY - Present]
+- Led end-to-end development of [product], driving [X]% user growth to [N] MAU
+- Defined product strategy and roadmap, resulting in [$X]M ARR increase
+- Managed cross-functional team of [N] engineers, [N] designers
+- Launched [N] features with [X]% adoption rate in first quarter
+
+### [Company Name] | Associate Product Manager | [MM/YYYY - MM/YYYY]
+- Conducted [N] user interviews identifying [key insight], leading to [result]
+- Created PRDs and managed backlog of [N]+ items using Jira/Linear
+- Reduced churn by [X]% through [intervention]
+
+## SKILLS
+- Product: Roadmapping, PRDs, User Research, A/B Testing, OKRs
+- Technical: SQL, Python (basic), APIs, Figma, Mixpanel/Amplitude
+- Methodologies: Agile, Scrum, Design Thinking, JTBD
+- Tools: Jira, Linear, Notion, Figma, Miro
+
+## EDUCATION
+[University] — [Degree] in [Major], [Year]
+</code></pre>
+
+      <h2>FAQ</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card"><h3>{f.q}</h3><p>{f.a}</p></div>
+        ))}
+      </div>
+      <p class="back-link"><a href="/templates/">All Templates</a></p>
+    </section>
+  </div>
+</BaseLayout>

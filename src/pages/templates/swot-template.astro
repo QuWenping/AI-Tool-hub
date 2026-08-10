@@ -1,0 +1,98 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/templates/swot-template/";
+const faqItems = [
+  { q: "What is a SWOT analysis?", a: "SWOT stands for Strengths, Weaknesses, Opportunities, and Threats. It's a strategic planning framework used to evaluate a business, product, or project's competitive position." },
+  { q: "How do I use this SWOT template?", a: "Fill each quadrant with honest assessments. Strengths and Weaknesses are internal factors. Opportunities and Threats are external. Use the insights to inform strategy decisions." }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"SWOT Analysis Template","description":"A structured SWOT analysis template for strategic planning. Evaluate strengths, weaknesses, opportunities, and threats for any business or product.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Templates","item":siteUrl+"/templates/"},{"@type":"ListItem","position":3,"name":"SWOT Template","item":pageUrl}] };
+---
+
+<BaseLayout title="SWOT Analysis Template | AI Tool Hub" description="A structured SWOT analysis template for strategic planning and competitive assessment." keywords="SWOT analysis template, strategic planning, competitive analysis, business strategy" lang="en">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/templates/">Templates</a> &rsaquo; <span>SWOT Template</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Free Template</span>
+      <h1>SWOT Analysis Template</h1>
+      <p>A structured framework for evaluating your project or business. Identify internal strengths and weaknesses alongside external opportunities and threats.</p>
+    </header>
+    <section class="article-body">
+
+      <h2>Template</h2>
+      <pre class="prompt-block"><code># SWOT ANALYSIS: [Company / Product / Project Name]
+## Date: [YYYY-MM-DD] | Prepared by: [Name]
+
+---
+
+## POSITIVE
+
+### STRENGTHS (Internal)
+What do we do well? What advantages do we have?
+
+1. [Strength 1 — e.g., Strong brand recognition in target market]
+2. [Strength 2]
+3. [Strength 3]
+4. [Strength 4]
+
+### OPPORTUNITIES (External)
+What trends or changes can we capitalize on?
+
+1. [Opportunity 1 — e.g., Competitor X exiting market segment]
+2. [Opportunity 2]
+3. [Opportunity 3]
+
+---
+
+## NEGATIVE
+
+### WEAKNESSES (Internal)
+What could we improve? What should we avoid?
+
+1. [Weakness 1 — e.g., Limited engineering capacity for new features]
+2. [Weakness 2]
+3. [Weakness 3]
+
+### THREATS (External)
+What external factors could harm us?
+
+1. [Threat 1 — e.g., New regulation affecting data handling]
+2. [Threat 2]
+3. [Threat 3]
+
+---
+
+## STRATEGIC IMPLICATIONS
+
+### Leverage Strengths → Opportunities
+- [How to use strength 1 to capture opportunity 1]
+
+### Address Weaknesses → Avoid Threats
+- [How to mitigate weakness 1 against threat 1]
+
+### Convert Weaknesses → Strengths
+- [Action plan to improve weakness 1]
+
+### Priority Actions
+1. [Action 1] — Owner: [Name], Timeline: [Period]
+2. [Action 2] — Owner: [Name], Timeline: [Period]
+3. [Action 3] — Owner: [Name], Timeline: [Period]</code></pre>
+
+      <h2>FAQ</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card"><h3>{f.q}</h3><p>{f.a}</p></div>
+        ))}
+      </div>
+      <p class="back-link"><a href="/templates/">All Templates</a></p>
+    </section>
+  </div>
+</BaseLayout>

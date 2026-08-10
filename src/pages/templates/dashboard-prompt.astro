@@ -1,0 +1,89 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/templates/dashboard-prompt/";
+
+const faqItems = [
+  { q: "What is a dashboard prompt template?", a: "A structured prompt template for generating data dashboards with AI tools. It defines KPIs, chart types, filters, and layout — everything needed to generate a functional dashboard." },
+  { q: "Can AI generate real data dashboards?", a: "AI can generate the dashboard layout and static mockups. For real-time data, you need to connect the generated design to actual data sources using tools like Google Data Studio, Tableau, or custom code." }
+];
+
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Dashboard Prompt Template for AI Tools","description":"Generate professional data dashboards with AI using this structured prompt template. Define KPIs, charts, and layout for any domain.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Templates","item":siteUrl+"/templates/"},{"@type":"ListItem","position":3,"name":"Dashboard Prompt","item":pageUrl}] };
+---
+
+<BaseLayout title="Dashboard Prompt Template for AI Tools | AI Tool Hub" description="Generate professional data dashboards with AI using this structured prompt template." keywords="dashboard prompt, AI dashboard, KPI template, data visualization" lang="en">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/templates/">Templates</a> &rsaquo; <span>Dashboard Prompt</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Free Template</span>
+      <h1>Dashboard Prompt Template</h1>
+      <p>A structured prompt template for generating data dashboards. Define KPIs, chart types, filters, and layout for any domain — sales, marketing, product, or operations.</p>
+    </header>
+    <section class="article-body">
+
+      <h2>Template</h2>
+      <pre class="prompt-block"><code># DASHBOARD PROMPT TEMPLATE
+
+## DOMAIN
+[Sales / Marketing / Product Analytics / Operations / Finance / HR]
+
+## KEY KPIs (Top Row)
+1. [KPI 1 name]: Current: [X], Target: [Y], Trend: [up/down/flat]
+2. [KPI 2 name]: Current: [X], Target: [Y], Trend: [up/down/flat]
+3. [KPI 3 name]: Current: [X], Target: [Y], Trend: [up/down/flat]
+4. [KPI 4 name]: Current: [X], Target: [Y], Trend: [up/down/flat]
+
+## CHARTS (Main Area)
+### Chart 1
+- Type: [Line / Bar / Pie / Area / Scatter / Heatmap]
+- Title: "[Chart title]"
+- X-axis: [Dimension]
+- Y-axis: [Metric]
+- Group by: [Category]
+
+### Chart 2
+- Type: [Chart type]
+- Title: "[Chart title]"
+- Data: [Description]
+
+## FILTERS (Sidebar or Top)
+- Date range: [Default: Last 30 days]
+- [Filter 2]: [Options]
+- [Filter 3]: [Options]
+
+## LAYOUT
+- Top row: 4 KPI cards
+- Left column (60%): Main charts
+- Right column (40%): Secondary charts + table
+
+## TABLE / DETAIL VIEW
+- Columns: [Col 1], [Col 2], [Col 3], [Col 4]
+- Sort: Default by [Column]
+- Actions: [Export, Filter, Search]
+
+## STYLE
+- Color theme: [Light / Dark / Brand]
+- Chart colors: [Palette name or hex codes]</code></pre>
+
+      <h2>FAQ</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card">
+            <h3>{f.q}</h3>
+            <p>{f.a}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="back-link"><a href="/templates/">All Templates</a></p>
+    </section>
+  </div>
+</BaseLayout>
