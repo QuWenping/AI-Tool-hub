@@ -1,4 +1,13 @@
 ---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_3a4c760295f411f195a2525400e6dd8f
+    ReservedCode1: RjJt5enBcflPjPfs4IYJZoEzHichKRU2EmA6xO5cAyaXQ+j7Y1cNZ+0ns7RlqMIEidrnI3W0M+HsiIZyAJAiz0apbqTZ/KBdmdQkNq0OIPiQFASYAmXo26YtbfKWKk20p/NQmcEbbCqE8csbRYsZ4mjJxMrPtTbCoHRRs/+Hx9/y0xymrxXYl7zPim8=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_3a4c760295f411f195a2525400e6dd8f
+    ReservedCode2: RjJt5enBcflPjPfs4IYJZoEzHichKRU2EmA6xO5cAyaXQ+j7Y1cNZ+0ns7RlqMIEidrnI3W0M+HsiIZyAJAiz0apbqTZ/KBdmdQkNq0OIPiQFASYAmXo26YtbfKWKk20p/NQmcEbbCqE8csbRYsZ4mjJxMrPtTbCoHRRs/+Hx9/y0xymrxXYl7zPim8=
+
 author: AI Tool Hub Research Team
 category: Tutorial
 tags:
@@ -246,3 +255,4 @@ If you cancel your Pro subscription, your presentations remain accessible but yo
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. Our recommendations are based on hands-on testing conducted in July–August 2026 and reflect our genuine assessment of each tool's capabilities for the described use cases.
 
+*（内容由AI生成，仅供参考）*

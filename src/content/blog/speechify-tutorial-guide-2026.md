@@ -1,4 +1,13 @@
 ---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_37be59da95f411f1b50c525400826444
+    ReservedCode1: V0IPiM1RE8dMIjsgIEir+1y3EeFTDj6fLjXizhx/7H2C+r3LF+xPU9ajp1aY6gm83Hge3iOOAsT5kdEBB2XoQ5fHvFmdSrhvXBXL0uPjxwALgPiVCadgxeqAHHlOXqs/dFTCkl7w6bl+ttGGSbAuGWfwpgYxkhdIbmCeW6Xv60w1AqCe2fr464SIKeo=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_37be59da95f411f1b50c525400826444
+    ReservedCode2: V0IPiM1RE8dMIjsgIEir+1y3EeFTDj6fLjXizhx/7H2C+r3LF+xPU9ajp1aY6gm83Hge3iOOAsT5kdEBB2XoQ5fHvFmdSrhvXBXL0uPjxwALgPiVCadgxeqAHHlOXqs/dFTCkl7w6bl+ttGGSbAuGWfwpgYxkhdIbmCeW6Xv60w1AqCe2fr464SIKeo=
+
 author: AI Tool Hub Research Team
 category: Tutorial
 tags:
@@ -244,3 +253,4 @@ No. Speechify's voice library is licensed for personal listening and accessibili
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. Our recommendations are based on hands-on testing conducted in July–August 2026 and reflect our genuine assessment of each tool's capabilities for the described use cases.
 
+*（内容由AI生成，仅供参考）*

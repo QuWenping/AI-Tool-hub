@@ -1,4 +1,13 @@
 ---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_38a4713a95f411f1b50c525400826444
+    ReservedCode1: botsPtxh/jYpjgMdrnwv+XOZJ9AcHXqbCfw5fnKSHDxCaBWWGMRmg0Jonfny8GooGAiC1hoeQpKq+1gsoGoRt9+JLAePVrxPL/MDjLTiLjnzgAzSVGyfykygel7bdej2NPJmkxtjV9gQ2iy052syJXoqFPpWSBmh+ey6mAgJk8sZYmXbOlBpWP9/pMQ=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_38a4713a95f411f1b50c525400826444
+    ReservedCode2: botsPtxh/jYpjgMdrnwv+XOZJ9AcHXqbCfw5fnKSHDxCaBWWGMRmg0Jonfny8GooGAiC1hoeQpKq+1gsoGoRt9+JLAePVrxPL/MDjLTiLjnzgAzSVGyfykygel7bdej2NPJmkxtjV9gQ2iy052syJXoqFPpWSBmh+ey6mAgJk8sZYmXbOlBpWP9/pMQ=
+
 author: AI Tool Hub Research Team
 category: Tutorial
 tags:
@@ -242,3 +251,4 @@ Kapwing's auto-subtitle feature supports 30+ languages for transcription. Additi
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. Our recommendations are based on hands-on testing conducted in July–August 2026 and reflect our genuine assessment of each tool's capabilities for the described use cases.
 
+*（内容由AI生成，仅供参考）*
