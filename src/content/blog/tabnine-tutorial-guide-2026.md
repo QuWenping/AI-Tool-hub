@@ -142,7 +142,7 @@ For sensitive projects, administrators can enforce Local Mode organization-wide 
 
 ### Use Case 1: Financial Services Developer — Compliance-Approved AI Coding
 
-A developer at a mid-sized fintech company used Tabnine Enterprise with local deployment because their compliance team required that no proprietary code leave the corporate network. Tabnine's self-hosted model met this requirement — the AI models ran on internal servers, and code context never touched external infrastructure. The developer reported that local-model completions were accurate enough to meaningfully accelerate daily coding (primarily Python and Java) even if they were not as broadly capable as cloud-based alternatives.
+A developer at a mid-sized fintech company used Tabnine Enterprise with local deployment because their compliance team required that no proprietary code leave the corporate network. Tabnine's self-hosted model met this requirement — the AI models ran on internal servers, and code context did not touch external infrastructure during the evaluation period. The developer reported that local-model completions were accurate enough to meaningfully accelerate daily coding (primarily Python and Java) even if they were not as broadly capable as cloud-based alternatives.
 
 ### Use Case 2: Healthcare Software Team — PHI Protection with AI Assistance
 

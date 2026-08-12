@@ -219,7 +219,7 @@ The Speechify mobile apps (iOS and Android) support offline listening after you 
 
 ### 3. How does Speechify handle complex PDFs with tables and images?
 
-Speechify reads the text layer of PDFs linearly — tables are read cell by cell in reading order, which can produce confusing output for complex multi-column layouts. Images are skipped unless they contain embedded text that OCR can extract. For PDFs with heavy formatting (multi-column layouts, dense tables, sidebars), the reading experience can be disjointed. Plain-text or single-column PDFs produce the best results.
+Speechify reads the text layer of PDFs linearly — tables are read cell by cell in reading order, which can produce confusing output for complex multi-column layouts. Images are skipped unless they contain embedded text that OCR can extract. For PDFs with heavy formatting (multi-column layouts, dense tables, sidebars), the reading experience can be disjointed. Plain-text or single-column PDFs produce the most consistent results in our tests.
 
 ### 4. Is Speechify suitable for audiobook listening?
 
