@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 
 export const GET: APIRoute = async () => {
-  const baseUrl = "https://ai-tool-hub-self.vercel.app";
+  const baseUrl = "https://thebestaitoolsreview.com";
   const entries = [
     { date: "2026-07-24", title: "Added editorial guidelines, methodology, team, advertise, and changelog pages", desc: "5 new long-form pages documenting our editorial process. 21 articles + 5 trust pages." },
     { date: "2026-07-22", title: "Added 6 how-to tutorials and contact rewrite", desc: "ChatGPT coding, Claude long docs, Midjourney prompts, Cursor team setup, ElevenLabs podcasts, content workflow." },

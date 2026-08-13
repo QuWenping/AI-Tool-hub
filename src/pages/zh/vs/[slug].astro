@@ -83,8 +83,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": t("home"), "item": siteUrl + "/" },
-    { "@type": "ListItem", "position": 2, "name": t("tocComparisons"), "item": siteUrl + "/vs/" },
+    { "@type": "ListItem", "position": 1, "name": t("home"), "item": siteUrl + "/zh/" },
+    { "@type": "ListItem", "position": 2, "name": t("tocComparisons"), "item": siteUrl + "/zh/vs/" },
     { "@type": "ListItem", "position": 3, "name": pageLang === "zh" && m.title_zh ? m.title_zh : m.title_en, "item": pageUrl }
   ]
 };
@@ -137,9 +137,9 @@ const seoDesc = pageLang === "zh"
   <div class="article-grid">
     <div class="article-main">
     <nav class="breadcrumbs">
-      <a href="/">{t("home")}</a> &rsaquo;
-      <a href="/vs/">{t("tocComparisons")}</a> &rsaquo;
-      <a href={"/best/" + aCat + "/"}>{pageLang === "zh" ? (({ text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商务" }[aCat] || aCat) + " 工具") : ((categoryLabels[aCat] || aCat) + " tools")}</a> &rsaquo;
+      <a href="/zh/">{t("home")}</a> &rsaquo;
+      <a href="/zh/vs/">{t("tocComparisons")}</a> &rsaquo;
+      <a href={"/zh/best/" + aCat + "/"}>{pageLang === "zh" ? (({ text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "商务" }[aCat] || aCat) + " 工具") : ((categoryLabels[aCat] || aCat) + " tools")}</a> &rsaquo;
       <span>{pageLang === "zh" && m.title_zh ? m.title_zh : m.title_en}</span>
     </nav>
 

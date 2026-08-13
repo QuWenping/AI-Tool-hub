@@ -1,9 +1,34 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const title = "n8n RSS to Blog Post Automation Workflow";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/workflows/n8n-rss-to-blog-post/";
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": title,
+  "description": "Automatically convert RSS feed items into formatted blog posts using n8n automation workflow with AI-powered content transformation.",
+  "url": pageUrl,
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "RSS Trigger", "text": "Poll configured RSS feeds at your chosen interval." },
+    { "@type": "HowToStep", "position": 2, "name": "Duplicate Check", "text": "Compare against previously processed items to avoid republishing." },
+    { "@type": "HowToStep", "position": 3, "name": "Content Extraction", "text": "Fetch full article text from each RSS item URL." },
+    { "@type": "HowToStep", "position": 4, "name": "AI Rewriting", "text": "Send content to ChatGPT or Claude API for summarization and style formatting." },
+    { "@type": "HowToStep", "position": 5, "name": "SEO Generation", "text": "Create meta title, description, and tags automatically." },
+    { "@type": "HowToStep", "position": 6, "name": "Output", "text": "Push to WordPress, Webflow, Markdown file, or email digest based on your configuration." }
+  ]
+};
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":title,"description":"Automatically convert RSS feed items into formatted blog posts using n8n automation workflow. AI-powered content transformation with publishing-ready output.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl+"/"},{"@type":"ListItem","position":2,"name":"Workflows","item":siteUrl+"/workflows/"},{"@type":"ListItem","position":3,"name":title,"item":pageUrl}] };
 ---
 
 <BaseLayout title={title} description="Automatically convert RSS feed items into formatted blog posts using n8n automation workflow. AI-powered content transformation with publishing-ready output.">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
   <article class="legal-page">
     <nav class="breadcrumbs">
       <a href="/">Home</a> &rsaquo;

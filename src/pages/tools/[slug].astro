@@ -54,12 +54,34 @@ const articleSchema = {
   "inLanguage": pageLang === "zh" ? "zh" : "en"
 };
 
+// SEO V2 P1-12：补充 SoftwareApplication schema（使用工具真实字段）
+const softwareAppSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": displayName,
+  "url": pageUrl,
+  "description": shortDesc,
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "inLanguage": pageLang === "zh" ? "zh" : "en",
+  "offers": {
+    "@type": "Offer",
+    ...(tool.url ? { "url": tool.url } : {}),
+    ...(tool.pricing?.en ? { "description": tool.pricing.en } : {})
+  },
+  "publisher": { "@type": "Organization", "name": "AI Tool Hub", "url": siteUrl }
+};
+
+const homeBreadcrumbUrl = pageLang === "zh" ? siteUrl + "/zh/" : siteUrl + "/";
+const homeLink = pageLang === "zh" ? "/zh/" : "/";
+const categoryLink = pageLang === "zh" ? "/zh/category/" : "/category/";
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": pageLang === "zh" ? "首页" : "Home", "item": siteUrl + "/" },
-    { "@type": "ListItem", "position": 2, "name": pageLang === "zh" ? "AI 工具" : "AI Tools", "item": siteUrl + "/category/" },
+    { "@type": "ListItem", "position": 1, "name": pageLang === "zh" ? "首页" : "Home", "item": homeBreadcrumbUrl },
+    { "@type": "ListItem", "position": 2, "name": pageLang === "zh" ? "AI 工具" : "AI Tools", "item": siteUrl + categoryLink },
     { "@type": "ListItem", "position": 3, "name": displayName, "item": pageUrl }
   ]
 };
@@ -85,6 +107,7 @@ const tocSections = [
 <BaseLayout title={seoTitle} description={seoDescription} keywords={`${toolName} review, AI writing tools, ${slug}, ${tool.cat}`}>
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(softwareAppSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
   </Fragment>
 
@@ -92,8 +115,8 @@ const tocSections = [
     <div class="article-grid">
       <div class="article-main">
         <nav class="breadcrumbs">
-          <a href="/">{pageLang === "zh" ? "首页" : "Home"}</a> &rsaquo;
-          <a href="/category/">{pageLang === "zh" ? "AI 工具" : "AI Tools"}</a> &rsaquo;
+          <a href={homeLink}>{pageLang === "zh" ? "首页" : "Home"}</a> &rsaquo;
+          <a href={categoryLink}>{pageLang === "zh" ? "AI 工具" : "AI Tools"}</a> &rsaquo;
           <span>{displayName}</span>
         </nav>
 

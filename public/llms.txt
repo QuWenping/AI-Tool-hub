@@ -34,10 +34,10 @@ AI Tool Hub is an independent directory of 16+ AI tools across 20 categories, wi
 
 ## Contact
 
-- Website: https://ai-tool-hub-self.vercel.app
-- Contact: https://ai-tool-hub-self.vercel.app/contact/
-- Privacy: https://ai-tool-hub-self.vercel.app/privacy/
-- Terms: https://ai-tool-hub-self.vercel.app/terms/
+- Website: https://thebestaitoolsreview.com
+- Contact: https://thebestaitoolsreview.com/contact/
+- Privacy: https://thebestaitoolsreview.com/privacy/
+- Terms: https://thebestaitoolsreview.com/terms/
 
 ## Pricing disclosure
 

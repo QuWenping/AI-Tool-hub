@@ -77,8 +77,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: t("home"), item: siteUrl + "/" },
-    { "@type": "ListItem", position: 2, name: t("breadcrumbSolutions"), item: siteUrl + "/solutions/" },
+    { "@type": "ListItem", position: 1, name: t("home"), item: siteUrl + "/zh/" },
+    { "@type": "ListItem", position: 2, name: t("breadcrumbSolutions"), item: siteUrl + "/zh/solutions/" },
     { "@type": "ListItem", position: 3, name: solution.industry, item: pageUrl }
   ]
 };
@@ -128,8 +128,8 @@ const bestRankingHref = {
   </Fragment>
   <article class="solution-detail">
     <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <a href="/">{t("home")}</a> &rsaquo;
-      <a href="/solutions/">{t("breadcrumbSolutions")}</a> &rsaquo;
+      <a href="/zh/">{t("home")}</a> &rsaquo;
+      <a href="/zh/solutions/">{t("breadcrumbSolutions")}</a> &rsaquo;
       <span>{solution.industry}</span>
     </nav>
 

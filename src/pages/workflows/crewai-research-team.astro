@@ -1,9 +1,33 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 const title = "CrewAI Research Team Automation Workflow";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/workflows/crewai-research-team/";
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": title,
+  "description": "Build an autonomous AI research team using CrewAI agents for deep research, analysis, and report generation.",
+  "url": pageUrl,
+  "step": [
+    { "@type": "HowToStep", "position": 1, "name": "Task Definition", "text": "User provides research topic, scope, and output format requirements." },
+    { "@type": "HowToStep", "position": 2, "name": "Parallel Research", "text": "Research Agent queries multiple sources simultaneously." },
+    { "@type": "HowToStep", "position": 3, "name": "Synthesis", "text": "Analyst Agent consolidates findings, removes duplicates, and identifies gaps." },
+    { "@type": "HowToStep", "position": 4, "name": "Report Generation", "text": "Writer Agent produces final output in requested format (Markdown, PDF, or DOCX)." },
+    { "@type": "HowToStep", "position": 5, "name": "Review & Iterate", "text": "Optional human review step before final delivery." }
+  ]
+};
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":title,"description":"Build an autonomous AI research team using CrewAI agents. Multi-agent workflow for deep research, analysis, and report generation.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl+"/"},{"@type":"ListItem","position":2,"name":"Workflows","item":siteUrl+"/workflows/"},{"@type":"ListItem","position":3,"name":title,"item":pageUrl}] };
 ---
 
 <BaseLayout title={title} description="Build an autonomous AI research team using CrewAI agents. Multi-agent workflow for deep research, analysis, and report generation.">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
   <article class="legal-page">
     <nav class="breadcrumbs">
       <a href="/">Home</a> &rsaquo;

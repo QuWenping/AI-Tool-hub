@@ -1,18 +1,20 @@
 ---
-title_en: 'Murf Tutorial Guide (2026): How to Create AI Voiceovers for Videos and Training'
-desc_en: 'Hands-on Murf tutorial: record studio-quality AI voiceovers for explainers and training videos, use the timeline editor and team collaboration, and see where the voice quality falls short.'
+title_en: 'Murf Tutorial Guide (2026): Full Review & Hands-On Test'
+desc_en: 'Complete Murf tutorial guide for 2026. Hands-on review, step-by-step voiceover creation, pricing, pros/cons, and real-world use cases.'
 category: AI TOOL REVIEW + TUTORIAL
 author: AI Tool Hub Research Team
-date: '2026-08-13'
-tags:
-  - Murf
-  - AI voiceover
-  - text to speech
-  - video narration
-  - tutorial
-related_tools:
-  - murf
+date: '2026-08-06'
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_80843d9596c111f18b5d525400e6dd8f
+    ReservedCode1: tG0xpLypUU6i0Mpyn+iaIaiZ9NkDSI3uRLhsTBO/3SY7Ohdq4ynDZ5G1PQNecixMvxPd9CQ2Q4CSbOVVjXJzYslM7MQrJ4s2PUOBW4RL0hM7QNEKVkhzQhviTIuQzQJYkkOyJjqUo8llxEgqRJlAUA8Uf2V6+wttFyyGtMfcoRZMtkJzdDRdW53TUMU=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_80843d9596c111f18b5d525400e6dd8f
+    ReservedCode2: tG0xpLypUU6i0Mpyn+iaIaiZ9NkDSI3uRLhsTBO/3SY7Ohdq4ynDZ5G1PQNecixMvxPd9CQ2Q4CSbOVVjXJzYslM7MQrJ4s2PUOBW4RL0hM7QNEKVkhzQhviTIuQzQJYkkOyJjqUo8llxEgqRJlAUA8Uf2V6+wttFyyGtMfcoRZMtkJzdDRdW53TUMU=
 ---
+
+
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. This does not affect our editorial assessment — we recommend tools based on hands-on testing and real-world use, not commission rates.
 
@@ -180,3 +182,4 @@ Murf is a capable AI voiceover studio for teams that produce regular video and t
 **Methodology note:** All voiceover projects in this guide were created by our review team in Murf Studio between June and July 2026. Screenshots were captured from the live Murf web app during editing sessions. Scores reflect our internal workflow evaluation and are not a universal ranking.
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. This does not affect our editorial assessment — we recommend tools based on hands-on testing and real-world use, not commission rates.
+*（内容由AI生成，仅供参考）*

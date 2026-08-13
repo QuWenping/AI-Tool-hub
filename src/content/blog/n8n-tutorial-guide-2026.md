@@ -1,18 +1,20 @@
 ---
-title_en: 'n8n Tutorial Guide (2026): How to Build Your First AI Automation Workflow'
-desc_en: 'Step-by-step n8n tutorial: create your first automation and AI agent workflow, self-host or use cloud, connect 400+ integrations, and avoid the mistakes we made during testing.'
+title_en: 'n8n Tutorial Guide (2026): Full Review & Hands-On Test'
+desc_en: 'Complete n8n tutorial guide for 2026. Hands-on review, step-by-step workflow automation, pricing, pros/cons, and real-world use cases.'
 category: AI TOOL REVIEW + TUTORIAL
 author: AI Tool Hub Research Team
-date: '2026-08-13'
-tags:
-  - n8n
-  - workflow automation
-  - AI agents
-  - no-code
-  - tutorial
-related_tools:
-  - n8n
+date: '2026-08-06'
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_7fc2525e96c111f18b5d525400e6dd8f
+    ReservedCode1: DYZHZSTMpssAEA38N6lgXnHQaCuR4TD6gQ+JubSFjb1QcOVXD0C6NF6EtY1wPKDv+TgSBoEkC1Ut8WiKVISLFSh5QXTJ30iy/XbWGfP9mwJXzq9RCNIoXtlfmJZ2UUJ61xCxc3XB6C0x5rJjUzEIsAABCGUhM+0A0QH2r4HQgWf8dFUtgD3HeSnQdEU=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_7fc2525e96c111f18b5d525400e6dd8f
+    ReservedCode2: DYZHZSTMpssAEA38N6lgXnHQaCuR4TD6gQ+JubSFjb1QcOVXD0C6NF6EtY1wPKDv+TgSBoEkC1Ut8WiKVISLFSh5QXTJ30iy/XbWGfP9mwJXzq9RCNIoXtlfmJZ2UUJ61xCxc3XB6C0x5rJjUzEIsAABCGUhM+0A0QH2r4HQgWf8dFUtgD3HeSnQdEU=
 ---
+
+
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. This does not affect our editorial assessment — we recommend tools based on hands-on testing and real-world use, not commission rates.
 
@@ -189,3 +191,4 @@ n8n is one of the strongest workflow automation platforms we tested for teams th
 **Methodology note:** All workflows in this guide were built and executed by our review team on a self-hosted n8n instance and a n8n Cloud trial between June and July 2026. Screenshots were captured from the n8n editor during live executions. Scores reflect our internal workflow evaluation and are not a universal ranking.
 
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. This does not affect our editorial assessment — we recommend tools based on hands-on testing and real-world use, not commission rates.
+*（内容由AI生成，仅供参考）*

@@ -55,8 +55,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": t("home"), "item": siteUrl + "/" },
-    { "@type": "ListItem", "position": 2, "name": t("bestAITools"), "item": siteUrl + "/best/" },
+    { "@type": "ListItem", "position": 1, "name": t("home"), "item": siteUrl + "/zh/" },
+    { "@type": "ListItem", "position": 2, "name": t("bestAITools"), "item": siteUrl + "/zh/best/" },
     { "@type": "ListItem", "position": 3, "name": pageLang === "zh" ? (cat.title_zh || cat.title_en) : cat.title_en, "item": pageUrl }
   ]
 };
@@ -96,7 +96,7 @@ const tocSections = [
   <article class="legal-page">
     <div class="article-grid">
       <div class="article-main">
-    <nav class="breadcrumbs"><a href="/">{t("home")}</a> &rsaquo; <a href="/">Best AI Tools</a> &rsaquo; <span>{pageLang === "zh" ? (cat.title_zh || cat.title_en) : cat.title_en}</span></nav>
+    <nav class="breadcrumbs"><a href="/zh/">{t("home")}</a> &rsaquo; <a href="/zh/best/">Best AI Tools</a> &rsaquo; <span>{pageLang === "zh" ? (cat.title_zh || cat.title_en) : cat.title_en}</span></nav>
     <header class="cat-hero">
       <span class="eyebrow" data-i18n="eyebrow_best">{t("eyebrow")}</span>
       <h1 data-i18n="best_h1_template">{pageLang === "zh" ? cat.title_zh : cat.title_en}</h1>

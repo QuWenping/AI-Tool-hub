@@ -39,10 +39,10 @@ const faq = [
   { q: "Should I switch from " + aName + " to an alternative?", a: "Only if you have a specific reason. The alternatives on this page are not categorically better - they are different tools that excel in different use cases. Switching costs include relearning the interface, re-doing your prompts, and rebuilding any integrations. The right time to switch is when you have a clear use case the current tool does not handle well, not because a new tool launched." }
 ];
 const siteUrl = "https://thebestaitoolsreview.com";
-const pageUrl = siteUrl + "/alternatives/" + id + "/";
+const pageUrl = siteUrl + "/zh/alternatives/" + id + "/";
 const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faq.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
 const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"Best " + aName + " Alternatives in 2026","description":"Looking for " + aName + " alternatives? Top options ranked by use case, pricing, and editorial testing.","author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"mainEntityOfPage":pageUrl,"datePublished":"2026-07-14","dateModified":"2026-07-14" };
-const breadcrumbSchema = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":aName,"item":siteUrl+"/tools/"+id+"/"},{"@type":"ListItem","position":3,"name":"Alternatives","item":pageUrl}] };
+const breadcrumbSchema = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":siteUrl+"/zh/"},{"@type":"ListItem","position":2,"name":aNameZh,"item":siteUrl+"/zh/tools/"+id+"/"},{"@type":"ListItem","position":3,"name":"替代品","item":pageUrl}] };
 
 const seoTitle = pageLang === "zh"
   ? `最佳 ${aNameZh} 替代品 2026（实测对比）`
@@ -60,7 +60,7 @@ const seoDesc = pageLang === "zh"
   </Fragment>
 
   <article class="legal-page">
-    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href={"/tools/" + id + "/"}>{aName}</a> &rsaquo; <span>Alternatives</span></nav>
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <a href={"/zh/tools/" + id + "/"}>{aNameZh}</a> &rsaquo; <span>替代品</span></nav>
     <header class="page-hero">
       <span class="eyebrow" data-i18n="eyebrow_alt">Alternatives</span>
       <h1>Best {aName} Alternatives in 2026</h1>

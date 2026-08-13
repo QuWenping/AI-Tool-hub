@@ -23,8 +23,10 @@ const fullTitle = title
 const desc = description || "Explore curated AI tools for writing, coding, image generation, video, audio and productivity.";
 const kw = keywords || "AI tools, best AI tools, AI writing, AI coding, AI image generators";
 const normalizedPath = Astro.url.pathname.replace(/\/+$/, "") + "/";
-const url = canonical || siteUrl + normalizedPath;
 const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "/index.html";
+// zh 首页由 i18n fallback 渲染，URL pathname 为 "/"，需显式规范到 /zh/ 避免 canonical 指回英文首页
+const isZhHome = isHome && lang === "zh";
+const url = canonical || siteUrl + (isZhHome ? "/zh/" : normalizedPath);
 // AdSense policy: no ads on non-content / legal / meta pages
 const noAdsSlugs = ["privacy","terms","contact","about","sponsor","advertise","press-kit","changelog","submit-sitemap","accessibility","editorial-guidelines","methodology","team"];
 const _cleanPath = Astro.url.pathname.replace(/\/+$/, "");

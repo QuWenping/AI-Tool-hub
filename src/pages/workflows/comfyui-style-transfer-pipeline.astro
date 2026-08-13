@@ -10,6 +10,16 @@ const faqItems = [
 const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
 const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"ComfyUI Style Transfer Pipeline","description":"A production-ready ComfyUI style transfer workflow. Chain img2img, ControlNet, and upscaling to apply artistic styles while preserving structure.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
 const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Workflows","item":siteUrl+"/workflows/"},{"@type":"ListItem","position":3,"name":"Style Transfer","item":pageUrl}] };
+const howToSchema = { "@context":"https://schema.org","@type":"HowTo","name":"ComfyUI Style Transfer Pipeline","description":"A production-ready ComfyUI style transfer workflow chaining img2img, ControlNet, and upscaling.","url":pageUrl,"step":[
+  {"@type":"HowToStep","position":1,"name":"Load Content Image","text":"Load the image whose structure you want to keep."},
+  {"@type":"HowToStep","position":2,"name":"Load Style Reference","text":"Load the artistic image whose style you want to adopt."},
+  {"@type":"HowToStep","position":3,"name":"Preprocess ControlNet","text":"Run canny or depth on the content image with control strength 0.6-0.8."},
+  {"@type":"HowToStep","position":4,"name":"Load Checkpoint","text":"Load SDXL or SD1.5 base model."},
+  {"@type":"HowToStep","position":5,"name":"Set Prompts","text":"Describe the style reference in the positive prompt and use a negative prompt like blurry, deformed, low quality, watermark."},
+  {"@type":"HowToStep","position":6,"name":"KSampler","text":"Denoise 0.55-0.7, steps 25-30, CFG 7-9, with ControlNet applied."},
+  {"@type":"HowToStep","position":7,"name":"VAE Decode","text":"Decode latent back to image."},
+  {"@type":"HowToStep","position":8,"name":"Upscale and Save","text":"Optionally upscale 4x with UltraSharp and save the output image."}
+]};
 ---
 
 <BaseLayout title="ComfyUI Style Transfer Pipeline | AI Tool Hub" description="A production-ready ComfyUI style transfer workflow chaining img2img, ControlNet, and upscaling." keywords="ComfyUI, style transfer, ControlNet, img2img, AI art workflow" lang="en">
@@ -17,6 +27,7 @@ const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","i
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)}></script>
   </Fragment>
   <div class="article">
     <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/workflows/">Workflows</a> &rsaquo; <span>Style Transfer</span></nav>
