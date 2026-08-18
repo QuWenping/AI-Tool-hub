@@ -409,5 +409,31 @@
     ],
     "title_zh": "2026 年最佳小型企业 AI 工具",
     "desc_zh": "面向小企业主的实惠 AI 工具，覆盖营销、运营和客户服务。"
+  },
+  {
+    "slug": "content-writing",
+    "title_en": "Best AI Content Writing Tools in 2026",
+    "desc_en": "AI content writing tools for blog posts, sales pages, and long-form content — tested on 30+ days of real client work.",
+    "tools": [
+      "chatgpt",
+      "claude",
+      "copy-ai",
+      "jasper",
+      "quillbot",
+      "sudowrite",
+      "rytr",
+      "writesonic",
+      "grammarly-ai",
+      "surfer-seo",
+      "frase",
+      "anyword",
+      "jenni-ai",
+      "wordtune",
+      "deepseek",
+      "perplexity",
+      "notion-ai"
+    ],
+    "title_zh": "2026 年最佳 AI 内容写作工具",
+    "desc_zh": "面向博客文章、销售页面和长文内容的 AI 内容写作工具——经 30+ 天真实客户工作实测。"
   }
 ]

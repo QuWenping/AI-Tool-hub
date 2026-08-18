@@ -31,12 +31,13 @@ const catLabels = { text: "Writing", image: "Image", code: "Coding", video: "Vid
 const catLabelZh = { text: "写作", image: "图像", code: "编程", video: "视频", audio: "音频", productivity: "效率" };
 const catDisplay = pageLang === "zh" ? (catLabelZh[tool.cat] || tool.cat) : (catLabels[tool.cat] || tool.cat);
 
+// SEO V3 S01/S02：支持 tools.json 中可选的 seo_title / seo_desc 差异化覆盖（en/zh），无则回退模板
 const seoTitle = pageLang === "zh"
-  ? `${toolNameZh} 评测 — 功能、定价与真实体验（2026）`
-  : `${toolName} Review — Features, Pricing & Real-World Testing (2026)`;
+  ? (tool.seo_title?.zh || `${toolNameZh} 评测 — 功能、定价与真实体验（2026）`)
+  : (tool.seo_title?.en || `${toolName} Review — Features, Pricing & Real-World Testing (2026)`);
 const seoDescription = pageLang === "zh"
-  ? `深度评测 ${toolNameZh}：${shortDesc.slice(0, 120)}。真实优缺点、定价、适用场景与替代方案。`
-  : `In-depth ${toolName} review: ${shortDesc.slice(0, 120)}. Real pros & cons, pricing, use cases, and alternatives.`;
+  ? (tool.seo_desc?.zh || `深度评测 ${toolNameZh}：${shortDesc.slice(0, 120)}。真实优缺点、定价、适用场景与替代方案。`)
+  : (tool.seo_desc?.en || `In-depth ${toolName} review: ${shortDesc.slice(0, 120)}. Real pros & cons, pricing, use cases, and alternatives.`);
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -86,6 +87,22 @@ const breadcrumbSchema = {
   ]
 };
 
+// SEO V3 S01：工具页 FAQ（来自 tools.json 的 faq 字段，q_en/a_en），并注入 FAQPage Schema
+const faqItems = (tool.faq || []).map(f => ({
+  q: pageLang === "zh" ? (f.q_zh || f.q_en) : f.q_en,
+  a: pageLang === "zh" ? (f.a_zh || f.a_en) : f.a_en,
+}));
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "url": pageUrl,
+  "mainEntity": faqItems.map(f => ({
+    "@type": "Question",
+    "name": f.q,
+    "acceptedAnswer": { "@type": "Answer", "text": f.a }
+  }))
+};
+
 const prosList = pageLang === "zh" ? (tool.pros?.zh || tool.pros?.en || []) : (tool.pros?.en || []);
 const consList = pageLang === "zh" ? (tool.cons?.zh || tool.cons?.en || []) : (tool.cons?.en || []);
 const featuresList = pageLang === "zh" ? (tool.features?.zh || tool.features?.en || []) : (tool.features?.en || []);
@@ -109,6 +126,7 @@ const tocSections = [
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(softwareAppSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>
+    {faqItems.length > 0 && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>}
   </Fragment>
 
   <article class="legal-page">
@@ -219,6 +237,18 @@ const tocSections = [
               {pageLang === "zh" ? `前往 ${displayName} 官网 →` : `Go to ${toolName} Website →`}
             </a>
           </p>
+        )}
+
+        {faqItems.length > 0 && (
+          <section id="faq" class="detail-section">
+            <h2>{pageLang === "zh" ? "常见问题" : "Frequently Asked Questions"}</h2>
+            {faqItems.map(f => (
+              <details>
+                <summary>{f.q}</summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
+          </section>
         )}
       </div>
       <ArticleToc sections={tocSections} />

@@ -1,9 +1,9 @@
 ---
 
-title_en: 'How to Use Claude for Long Documents in 2026 — Complete Guide'
-title_zh: '2026 年如何使用 Claude 处理长文档——完整指南'
-desc_en: 'Master Claude for long-form document work: contract review, research papers, book analysis, and more. Leverage the 200K context window effectively.'
-desc_zh: '掌握 Claude 处理长文档：合同审查、研究论文、书籍分析等。有效利用 20 万上下文窗口。'
+title_en: 'How to Use Claude for Long Documents in 2026: 200K Context Guide'
+title_zh: '2026 年如何使用 Claude 处理长文档：20 万上下文指南'
+desc_en: 'Learn to use Claude''s 200K context window for contracts, research papers & books. Step-by-step methods, real examples, and pro tips — start reading smarter today.'
+desc_zh: '学会用 Claude 的 20 万上下文窗口处理合同、研究论文与书籍。分步方法、真实示例与专业技巧——今天就开始更聪明地阅读。'
 category: Guides
 category_zh: 指南
 author: AI Tool Hub Research Team

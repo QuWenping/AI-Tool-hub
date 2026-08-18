@@ -28,9 +28,12 @@ const clusterMatchups = matchupsData.filter(function(m){return m.cluster === cat
 const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/best/" + cat.slug + "/";
 // i18n: SEO + display variables
-const seoTitle = pageLang === "zh"
-  ? "2026 年最佳 " + (cat.title_zh || cat.title_en) + "（定期更新）"
-  : "Best " + cat.title_en + " in 2026 (Regularly Updated)";
+const enTitle = cat.title_en;
+const zhTitle = cat.title_zh || cat.title_en;
+const enBase = enTitle.startsWith("Best ") ? enTitle : "Best " + enTitle;
+const enFinal = /2026\s*$/.test(enBase) ? enBase + " (Regularly Updated)" : enBase + " in 2026 (Regularly Updated)";
+const zhBase = zhTitle.startsWith("2026 年最佳") ? zhTitle : "2026 年最佳 " + zhTitle;
+const seoTitle = pageLang === "zh" ? zhBase + "（定期更新）" : enFinal;
 const seoDescription = pageLang === "zh"
   ? (cat.desc_zh || cat.desc_en) + " 基于最新信息实测。真实评测，真实优缺点，无付费排名。"
   : cat.desc_en + " Tested with the latest information. Real reviews, real pros and cons, no pay-to-play rankings.";

@@ -6,7 +6,9 @@ const pageUrl = siteUrl + "/templates/qbr-template/";
 
 const faqItems = [
   { q: "What is a QBR template?", a: "A Quarterly Business Review template helps you structure customer-facing presentations that demonstrate value delivered, align on goals, and plan the next quarter's initiatives." },
-  { q: "What should a QBR deck include?", a: "A complete QBR deck includes: executive summary, QoQ metrics review, value delivered, challenges and solutions, roadmap alignment, and next quarter goals." }
+  { q: "What should a QBR deck include?", a: "A complete QBR deck includes: executive summary, QoQ metrics review, value delivered, challenges and solutions, roadmap alignment, and next quarter goals." },
+  { q: "How do I create a QBR deck with AI?", a: "Use ChatGPT or Claude to draft the executive summary and metric narratives from your CRM data, then paste the results into this template. AI can also generate talking points and customer-specific value stories." },
+  { q: "What metrics should I track in a QBR?", a: "Track product adoption, feature usage, time-to-value, ROI delivered, support tickets, and renewal health. Compare quarter-over-quarter and against the targets set in the previous QBR." }
 ];
 
 const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
@@ -14,7 +16,7 @@ const articleSchema = { "@context":"https://schema.org","@type":"Article","headl
 const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Templates","item":siteUrl+"/templates/"},{"@type":"ListItem","position":3,"name":"QBR Template","item":pageUrl}] };
 ---
 
-<BaseLayout title="QBR Template — Quarterly Business Review Deck | AI Tool Hub" description="A professional QBR template for customer success and sales teams. Structure quarterly reviews to demonstrate value." keywords="QBR template, quarterly business review, customer success template, sales deck template" lang="en">
+<BaseLayout title="QBR Template 2026 — Quarterly Business Review Deck | AI Tool Hub" description="A professional QBR template for customer success and sales teams. Structure quarterly reviews to demonstrate value." keywords="QBR template, quarterly business review, customer success template, sales deck template" lang="en">
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
@@ -96,6 +98,14 @@ const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","i
       </div>
 
       <p class="back-link"><a href="/templates/">All Templates</a></p>
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/templates/meeting-minutes/">Meeting Minutes Template</a> — structure your QBR follow-up meetings</li>
+        <li><a href="/templates/onboarding-checklist/">Onboarding Checklist Template</a> — drive adoption before the next QBR</li>
+        <li><a href="/tools/chatgpt/">ChatGPT review</a> — draft QBR narratives with AI</li>
+        <li><a href="/tools/claude/">Claude review</a> — generate customer value stories</li>
+      </ul>
     </section>
   </div>
 </BaseLayout>

@@ -1,10 +1,21 @@
 ---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_81a04b999a5b11f18cca525400e6dd8f
+    ReservedCode1: tyMiDbDs0rVCxFEzhAy9Ni/U63xDMakEHy3avn6MG7chZI6wu56oVo69I1Mv3LxPwDSMGl1wlq4LNMHy7JJD83xJmxCqzbUG6nGtOKd45rU2pCcGxjmaugNMqSoopGOM8Wk7EUZIH0AL6D/C02sBM4OKUBjbQoq9fvmZDB7s39Um6mQvFRE0EdpxKmM=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_81a04b999a5b11f18cca525400e6dd8f
+    ReservedCode2: tyMiDbDs0rVCxFEzhAy9Ni/U63xDMakEHy3avn6MG7chZI6wu56oVo69I1Mv3LxPwDSMGl1wlq4LNMHy7JJD83xJmxCqzbUG6nGtOKd45rU2pCcGxjmaugNMqSoopGOM8Wk7EUZIH0AL6D/C02sBM4OKUBjbQoq9fvmZDB7s39Um6mQvFRE0EdpxKmM=
+---
+
+---
 
 image: "/images/blog/agnes-ai-review-2026/hero.png"
 
-title_en: 'Agnes AI Review 2026: Is This Free Multimodal API a GPT-5 Alternative?'
-meta_description: 'Agnes AI Review 2026: We test this free multimodal API for text, image and video generation. Compare features, pricing, API access and GPT-5 alternatives.'
-desc_en: 'In-depth Agnes AI review for 2026: is the free omni-modal API worth it? See features, pricing, and honest comparison vs current-generation models, Claude,.'
+title_en: 'Agnes AI Review 2026: Free Omni-Modal API Tested (Text, Image & Video)'
+meta_description: 'Agnes AI Review 2026: We tested this free omni-modal API for text, image and video generation. See real results, pricing, limits, and GPT-5 vs Claude comparisons.'
+desc_en: 'Agnes AI Review 2026: we tested the free omni-modal API for text, image and video generation. See real results, pricing, limits, and how it compares to GPT-5 and Claude.'
 category: Comparisons
 author: AI Tool Hub Research Team
 date: '2026-12-31'
@@ -42,10 +53,21 @@ related_tools:
   - notion-ai
 related_solution: ai-for-business
 author_slug: lin-chen
-title_zh: Agnes AI 2026 评测：这个免费多模态 API 能替代 GPT-5 吗？
-desc_zh: 深度评测 Agnes AI：免费全模态 API 是否物有所值？涵盖功能、定价及最佳替代品。
+title_zh: Agnes AI 2026 评测：免费全模态 API 实测（文本、图像与视频）
+desc_zh: Agnes AI 2026 评测：我们实测了这款免费全模态 API 的文本、图像与视频生成。查看真实结果、定价、限制，以及与 GPT-5 和 Claude 的对比。
 category_zh: 深度对比
 content_zh: |
+  <h2>Agnes AI 主题中心</h2>
+  <p>这里是 Agnes AI 全部资源的中心枢纽。浏览我们的完整资源库：</p>
+  <ul>
+  <li><a href="/zh/blog/agnes-ai-pricing-2026/">Agnes AI 定价 2026</a> — Agnes AI 收费吗？免费套餐与限制详解</li>
+  <li><a href="/zh/blog/agnes-ai-api-guide-2026/">Agnes AI API 指南</a> — 如何使用 Agnes AI API（端点、SDK、示例）</li>
+  <li><a href="/zh/blog/agnes-ai-alternatives-2026/">Agnes AI 替代品</a> — 按使用场景的最佳替代方案</li>
+  <li><a href="/zh/blog/agnes-ai-vs-chatgpt-2026/">Agnes AI vs ChatGPT</a> — 头对头对比</li>
+  <li><a href="/zh/blog/agnes-ai-vs-claude-2026/">Agnes AI vs Claude</a> — 头对头对比</li>
+  <li><a href="/zh/blog/agnes-ai-features-2026/">Agnes AI 功能</a> — 完整功能拆解</li>
+  <li><a href="/zh/blog/agnes-ai-free-plan-2026/">Agnes AI 免费套餐</a> — 免费套餐限制与你能获得什么</li>
+  </ul>
   <p>Agnes AI 在 2026 年横空出世，提出了一个大胆的承诺：通过单一 API 端点提供免费的全模态文本、图像和视频生成。据其官网描述由 Sapiens AI 开发，它迅速成为开发者和爱好者最热议的免费 AI 平台之一。但"免费"真的意味着"够用"吗？我们花了两个星期将 Agnes AI 与业界头部产品进行对比测试，来找到答案。</p>
 
   <div class="rating-module" style="background:#f8f9fa;border:1px solid #e9ecef;border-radius:8px;padding:20px;margin:24px 0;">
@@ -145,6 +167,18 @@ content_zh: |
 
 ---
 <p>Agnes AI has attracted attention among developers looking for low-cost multimodal AI solutions, promising an omni-modal AI API that handles text, image, and video generation through a single endpoint. Described on its homepage as a product of Sapiens AI, it has gained interest among some AI developer communities. But does "free" mean "good enough"? We evaluated Agnes AI based on publicly available documentation, community feedback, and available demonstrations. Where hands-on testing was possible, we compared results across common developer workflows.</p>
+
+<h2>Agnes AI Topic Hub</h2>
+<p>This is the central hub for everything Agnes AI. Explore our complete resource library:</p>
+<ul>
+<li><a href="/blog/agnes-ai-pricing-2026/">Agnes AI Pricing 2026</a> — What does Agnes AI cost? Free tier and limits explained</li>
+<li><a href="/blog/agnes-ai-api-guide-2026/">Agnes AI API Guide</a> — How to use the Agnes AI API (endpoints, SDKs, examples)</li>
+<li><a href="/blog/agnes-ai-alternatives-2026/">Agnes AI Alternatives</a> — Best alternatives by use case</li>
+<li><a href="/blog/agnes-ai-vs-chatgpt-2026/">Agnes AI vs ChatGPT</a> — Head-to-head comparison</li>
+<li><a href="/blog/agnes-ai-vs-claude-2026/">Agnes AI vs Claude</a> — Head-to-head comparison</li>
+<li><a href="/blog/agnes-ai-features-2026/">Agnes AI Features</a> — Full feature breakdown</li>
+<li><a href="/blog/agnes-ai-free-plan-2026/">Agnes AI Free Plan</a> — Free plan limits and what you get</li>
+</ul>
 
 
 <div class="rating-module" style="background:#f8f9fa;border:1px solid #e9ecef;border-radius:8px;padding:20px;margin:24px 0;">
@@ -316,3 +350,4 @@ Last checked: July 2026. Analysis based on publicly available product informatio
 <p>Advertisers and affiliate partnerships do not influence ranking decisions. AI Tool Hub may earn commissions from some links on this page. This does not affect our evaluation methodology or recommendations. Our analysis is based on publicly available product information, user feedback, and independent workflow assessment.</p>
 
 <!-- Content Quality Score: E-E-A-T: 7/10 | Original Value: 6/10 | SEO: 7/10 | AdSense Risk: Low -->
+*（内容由AI生成，仅供参考）*

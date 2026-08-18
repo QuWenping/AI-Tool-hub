@@ -1,9 +1,9 @@
 ---
 
-title_en: 'How to Write Prompts for Midjourney in 2026 — The Ultimate Guide'
-title_zh: '2026 年 Midjourney 提示词编写终极指南'
-desc_en: 'Master Midjourney prompt writing with this comprehensive guide covering structure, parameters, style references, and pro techniques for stunning AI art.'
-desc_zh: '通过本指南掌握 Midjourney 提示词编写，涵盖结构、参数、风格参考和专业技巧。'
+title_en: 'How to Write Midjourney Prompts in 2026: Structure, Parameters & Pro Tips'
+title_zh: '2026 年 Midjourney 提示词编写：结构、参数与专业技巧'
+desc_en: 'Write Midjourney prompts that actually work: structure, --parameters, style references & pro techniques. 20+ real examples to copy — start creating better AI art now.'
+desc_zh: '写出真正有效的 Midjourney 提示词：结构、--参数、风格参考与专业技巧。20+ 个可直接复制的真实示例——现在就开始创作更好的 AI 艺术。'
 category: Guides
 category_zh: 指南
 author: AI Tool Hub Research Team
@@ -29,6 +29,8 @@ The most important thing to understand about Midjourney is that prompt quality d
 - **"a warrior"** → Generic, bland, unremarkable
 - **"a cyberpunk samurai warrior"** → Better, but unfocused
 - **"a cyberpunk samurai warrior, digital painting style, neon blue and pink rim lighting, portrait composition, detailed battle-worn armor, rain effect, moody atmosphere --ar 16:9 --v 7 --s 750"** → Professional, striking, publication-ready
+
+**Want to compare Midjourney against DALL-E, Flux, and Ideogram?** See our [Best AI Image Generators 2026](/blog/best-ai-image-generators-compared-2026/) comparison with real test results, pricing, and a pick for every use case.
 
 ## How We Tested Midjourney Prompts
 
