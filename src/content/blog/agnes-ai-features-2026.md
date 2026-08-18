@@ -7,6 +7,28 @@ AIGC:
     ContentPropagator: 001191440300708461136T1XGW3
     PropagateID: d49fe9e58e84b114ae630734f70cf3ca_869797df9a5b11f19bec525400826444
     ReservedCode2: h73CBvGVyvBALgHXvK7MU9dsiMJBNAkPkQqu6LZF9sLrfoCHI9Z0SYzAtje0yAIeh6cdp5PwMH/jUztxqOlrzialNchDcPmot0uYOc7rtYINzEYk+Nsu/Sbzjb4c7utGCNusmZ2uONGnfjgvyMB+/X3AWPQXCjtkV7ax8S2EMwi8GcpTP8FwZytVtdw=
+title_en: 'Agnes AI Features 2026: Text, Image & Video Generation Explained'
+desc_en: 'Agnes AI features 2026: text generation, image generation (5 styles), video generation (3-10s), unified endpoint and free access explained.'
+author: AI Tool Hub Research Team
+category: Comparisons
+date: '2026-08-18'
+read_time: 5 min
+tags:
+  - agnes-ai
+  - free-ai
+  - omni-modal
+  - api
+related_tools:
+  - agnes-ai
+related_posts:
+  - agnes-ai-review-free-omni-modal-api-2026
+  - agnes-ai-pricing-2026
+  - agnes-ai-api-guide-2026
+  - agnes-ai-alternatives-2026
+  - agnes-ai-vs-chatgpt-2026
+  - agnes-ai-vs-claude-2026
+  - agnes-ai-features-2026
+  - agnes-ai-free-plan-2026
 ---
 
 

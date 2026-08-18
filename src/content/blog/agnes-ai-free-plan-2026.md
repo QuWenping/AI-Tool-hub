@@ -7,6 +7,28 @@ AIGC:
     ContentPropagator: 001191440300708461136T1XGW3
     PropagateID: d49fe9e58e84b114ae630734f70cf3ca_8757af199a5b11f19bec525400826444
     ReservedCode2: Gg2CnwbsOgBgdWG0YOd62opJdhrs7xeiVey7E4OO6hXIjgo0pVI3sEYBOMnWacaQhfvJByKo7v3rbazu+5gy8b6x1WyBLQ1Wsyxp0Bl51yRl5h/1QBLHVyazuv89MacyKjJmm2GWfaswL/hAEzow/isklP4m4HYf5AweohAOiBXBhtmx4xTFbb8FUZU=
+title_en: 'Agnes AI Free Plan 2026: What You Get, Limits & Is It Enough?'
+desc_en: 'Agnes AI free plan 2026: what is included, rate limits, latency, no SLA, and whether the free tier is enough for your project.'
+author: AI Tool Hub Research Team
+category: Comparisons
+date: '2026-08-18'
+read_time: 5 min
+tags:
+  - agnes-ai
+  - free-ai
+  - omni-modal
+  - api
+related_tools:
+  - agnes-ai
+related_posts:
+  - agnes-ai-review-free-omni-modal-api-2026
+  - agnes-ai-pricing-2026
+  - agnes-ai-api-guide-2026
+  - agnes-ai-alternatives-2026
+  - agnes-ai-vs-chatgpt-2026
+  - agnes-ai-vs-claude-2026
+  - agnes-ai-features-2026
+  - agnes-ai-free-plan-2026
 ---
 
 

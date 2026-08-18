@@ -7,6 +7,28 @@ AIGC:
     ContentPropagator: 001191440300708461136T1XGW3
     PropagateID: d49fe9e58e84b114ae630734f70cf3ca_844896939a5b11f18cca525400e6dd8f
     ReservedCode2: zdpwXKRG59HB80Jw2/5jQVBW0GMbuzWzpoiUTlBUdalhHtTM92B/967MGiCqWydwT7HWcFDB5Raetb4924BbHdXbJvnMKZ+25bPNQtOyRoc2ZwYS/qYwS1nAIm+fVbJqOBc9w0C/FvACtlOXk+g1H/sAihpw1M7UQFykyW5DNdCNNx4rCVOZQsqbTqA=
+title_en: 'Best Agnes AI Alternatives 2026: GPT-5, Claude 4 & More Compared'
+desc_en: 'Best Agnes AI alternatives 2026: GPT-5, Claude 4, Gemini 2.5 Pro, DeepSeek V3, Replicate and Runway compared by use case and pricing.'
+author: AI Tool Hub Research Team
+category: Comparisons
+date: '2026-08-18'
+read_time: 5 min
+tags:
+  - agnes-ai
+  - free-ai
+  - omni-modal
+  - api
+related_tools:
+  - agnes-ai
+related_posts:
+  - agnes-ai-review-free-omni-modal-api-2026
+  - agnes-ai-pricing-2026
+  - agnes-ai-api-guide-2026
+  - agnes-ai-alternatives-2026
+  - agnes-ai-vs-chatgpt-2026
+  - agnes-ai-vs-claude-2026
+  - agnes-ai-features-2026
+  - agnes-ai-free-plan-2026
 ---
 
 
