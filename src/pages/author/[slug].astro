@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
 import authors from "../../data/authors.json";
 
 export async function getStaticPaths() {
@@ -11,6 +12,11 @@ export async function getStaticPaths() {
 
 const { author } = Astro.props;
 if (!author) return Astro.redirect('/author/', 301);
+
+// 动态判断 zh 兄弟页是否存在（zh 作者 collection 中含同 slug 才互链）
+const zhAuthorEntries = await getCollection("authors");
+const zhAuthorSlugs = new Set(zhAuthorEntries.map(a => a.data.slug));
+const hasZhSibling = zhAuthorSlugs.has(author.slug);
 
 const siteUrl = "https://thebestaitoolsreview.com";
 const pageUrl = siteUrl + "/author/" + author.slug + "/";
@@ -37,6 +43,7 @@ const authorSchema = {
   title={`${author.name} | ${author.role} — AI Tool Hub`}
   description={author.bio}
   keywords={`${author.name}, ${author.role}, AI Tool Hub author, AI tools reviewer, ${author.expertise?.slice(0, 5).join(", ")}`}
+  noZhSibling={!hasZhSibling}
 >
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(authorSchema)}></script>

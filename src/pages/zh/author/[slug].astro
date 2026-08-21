@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
+import enAuthors from "../../../data/authors.json";
 
 export async function getStaticPaths() {
   const authors = await getCollection("authors");
@@ -16,6 +17,10 @@ if (!author) return Astro.redirect('/zh/author/', 301);
 const { data } = author;
 
 const pageLang = "zh";
+
+// 动态判断 en 兄弟页是否存在（en authors.json 中含同 slug 才互链）
+const enAuthorSlugs = new Set(Object.values(enAuthors).map(a => a.slug).filter(Boolean));
+const hasEnSibling = enAuthorSlugs.has(data.slug || author.id);
 
 const i18n = {
   articles: "文章",
@@ -34,6 +39,7 @@ const i18n = {
   title={`${data.name} - AI Tool Hub 作者`}
   description={data.bio?.slice(0, 160) || `${data.name} 在 AI Tool Hub 的作者页面`}
   lang={pageLang}
+  noEnSibling={!hasEnSibling}
 >
   <article class="legal-page">
     <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <span>{data.name}</span></nav>

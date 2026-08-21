@@ -14,7 +14,6 @@ AIGC:
     ReservedCode2: gYQqbFHPkJmSMJY0sRvn8dPcIBNBiSDfcuqDkI79Y+6MpKOPZq+MerrgQfXk0dglLDUTXXzdbt9jrY1Chtv6Q33p5BRYQZouM+PjauqcAtBPQIU7X/hTq/6a9Z//0Rl6z4h11/jCYs7tGtIpzvNNAt2VpY+4iHO7oIVLBHQd9YupV2oISDBKMpR/Sug=
 ---
 
-
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3

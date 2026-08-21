@@ -1,20 +1,4 @@
 ---
-
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_211776e1939911f1a102525400826444
-    ReservedCode1: 1PPcBUojGDyH6+yY4N/3x01AHz6LDSWfSanU7TkNqsGukR5Gr4a/rPyn8uoa+pso7TytAbZzxcp7hiLU1dAweKN1qdbYGnKqGlrQUlwqUP2Qsb+T/HBmVMPF1qXYvFgLPY0sJGpnKSRZWQ90+5Zwg5b47RHpVbQGLQOKgza/6UafhoPrEtyjQkUpnPE=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_211776e1939911f1a102525400826444
-    ReservedCode2: 1PPcBUojGDyH6+yY4N/3x01AHz6LDSWfSanU7TkNqsGukR5Gr4a/rPyn8uoa+pso7TytAbZzxcp7hiLU1dAweKN1qdbYGnKqGlrQUlwqUP2Qsb+T/HBmVMPF1qXYvFgLPY0sJGpnKSRZWQ90+5Zwg5b47RHpVbQGLQOKgza/6UafhoPrEtyjQkUpnPE=
-title_en: 'InVideo AI Tutorial Guide (2026): Full Review & Hands-On Test'
-desc_en: 'Comprehensive tutorial guide and hands-on review of InVideo AI.'
-category: AI TOOL REVIEW + TUTORIAL
-author: AI Tool Hub Research Team
-date: '2026-07-28'
----
----
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3

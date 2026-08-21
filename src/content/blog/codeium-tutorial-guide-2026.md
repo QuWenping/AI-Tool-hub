@@ -1,20 +1,4 @@
 ---
-title_en: 'Codeium Tutorial Guide (2026): Full Review & Hands-On Test'
-desc_en: 'Complete Codeium tutorial guide for 2026. Hands-on review, step-by-step setup, pricing, pros/cons, and real-world use cases.'
-category: AI TOOL REVIEW + TUTORIAL
-author: AI Tool Hub Research Team
-date: '2026-08-06'
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_419f3760913d11f1bcfc525400e6dd8f
-    ReservedCode1: PGRRaflzeyFUQhxerdNtuEsK3ADqGLHPY3K2Xks1dhyEyhHf1t6Z+oavXGPDht0r3ejuGjcwzGLtq71t2W3yy/t/Krb1TemXmVhAVUhHyZ9GixXsaBYHeK511cN9UiiwUaBDdXMzj87aP5K/sKDfrHjqiFTlZhjAjfArmHW9a97OPLiPO7eTzlhCAXg=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_419f3760913d11f1bcfc525400e6dd8f
-    ReservedCode2: PGRRaflzeyFUQhxerdNtuEsK3ADqGLHPY3K2Xks1dhyEyhHf1t6Z+oavXGPDht0r3ejuGjcwzGLtq71t2W3yy/t/Krb1TemXmVhAVUhHyZ9GixXsaBYHeK511cN9UiiwUaBDdXMzj87aP5K/sKDfrHjqiFTlZhjAjfArmHW9a97OPLiPO7eTzlhCAXg=
----
-
----
 author: AI Tool Hub Research Team
 category: Tutorial
 tags:

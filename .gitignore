@@ -41,4 +41,12 @@ deploy-redesign.ps1
 public/styles.css
 public/script.js
 
+# Build/temp scratch files (P2-1 hygiene)
+build_*.txt
+build*.txt
+check_*.txt
+preview.html
+temp_*.py
+test-*.mjs
+
 .env

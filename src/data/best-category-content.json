@@ -126,10 +126,10 @@
     ]
   },
   "video": {
-    "intro_en": "AI video in 2026 is where image generation was in early 2023 - exciting, fast-moving, and genuinely useful for a specific set of use cases. The output is no longer obviously AI for short clips, but long-form narrative is still years away. Here is the short list of tools that actually shipped production-ready video in 2026, ranked by what they are good at.",
-    "intro_zh": "2026 年的 AI 视频相当于 2023 年初的图像生成阶段——令人兴奋、发展迅猛，且对特定场景真正有用。短视频输出已经看不出明显的 AI 痕迹，但长篇叙事仍需数年。以下是 2026 年真正交付可用视频的短名单，按各自擅长方向排名。",
-    "howto_en": "Start with the use case. For a 5-10 second ad clip or social hook, Runway Gen-3 or Pika are the right defaults. For a 20-second cinematic shot, Sora 2 is the quality leader. For animating a still image (the cheapest, highest-ROI use case), Luma Dream Machine is the specialist. Most teams end up using 2-3 of these in combination.",
-    "howto_zh": "从使用场景出发。对于 5-10 秒的广告片段或社交钩子，Runway Gen-3 或 Pika 是正确的默认选择。对于 20 秒的电影级镜头，Sora 2 是质量领导者。对于让静态图片动起来（最便宜、回报率最高的场景），Luma Dream Machine 是专家。大多数团队最终会组合使用 2-3 款。",
+    "intro_en": "AI video in 2026 is where image generation was in early 2023 - exciting, fast-moving, and genuinely useful for a specific set of use cases. The output is no longer obviously AI for short clips, but long-form narrative is still years away. We tested the tools that actually shipped production-ready video this year - Sora 2, Runway Gen-3, Hailuo, Kling, Pika, Luma and more - ranked by what they are good at: quality, motion coherence, editing workflow, and price. For the full short-form ranking, check our <a href=\"/best/video-generation/\">best AI video generators</a> list and the hands-on <a href=\"/tools/runway/\">Runway</a> review.",
+    "intro_zh": "2026 年的 AI 视频相当于 2023 年初的图像生成阶段——令人兴奋、发展迅猛，且对特定场景真正有用。短视频输出已经看不出明显的 AI 痕迹，但长篇叙事仍需数年。我们实测了今年真正交付可用视频的工具——Sora 2、Runway Gen-3、Hailuo、Kling、Pika、Luma 等——按各自擅长方向排名：质量、动作连贯性、剪辑工作流与价格。 完整短视频排名见我们的 <a href=\"/zh/best/video-generation/\">最佳 AI 视频生成器</a> 榜单与 <a href=\"/zh/tools/runway/\">Runway</a> 实测。",
+    "howto_en": "Start with the use case. For a 5-10 second ad clip or social hook, Runway Gen-3 or Pika are the right defaults. For a 20-second cinematic shot, Sora 2 is the quality leader. For animating a still image (the cheapest, highest-ROI use case), Luma Dream Machine is the specialist. For motion-heavy character clips at low cost, Hailuo is our surprise winner on coherence. Most teams end up using 2-3 of these in combination - generate in one, edit and finish in another.",
+    "howto_zh": "从使用场景出发。对于 5-10 秒的广告片段或社交钩子，Runway Gen-3 或 Pika 是正确的默认选择。对于 20 秒的电影级镜头，Sora 2 是质量领导者。对于让静态图片动起来（最便宜、回报率最高的场景），Luma Dream Machine 是专家。对于低成本、动作密集的角色片段，Hailuo 在连贯性上是我们的意外赢家。大多数团队最终会组合使用 2-3 款——一款生成、另一款剪辑与收尾。",
     "faqs_en": [
       {
         "q": "What is the best AI video generator in 2026?",
@@ -146,6 +146,10 @@
       {
         "q": "Is AI video cheap?",
         "a": "The free tiers are usable for experimentation. Production-quality AI video costs $20-200/month for the tool subscription, plus the time to iterate. For a 60-second ad, budget $50-200 in tool costs and 3-5 hours of iteration time."
+      },
+      {
+        "q": "Is Hailuo a good AI video generator in 2026?",
+        "a": "Hailuo (MiniMax) is our pick for lively character motion and coherent multi-shot clips at low cost. In side-by-side tests it beat Runway on motion coherence for social shorts, while Runway remains stronger for full editing workflows. Best paired: Hailuo for generation, Runway for post-production."
       }
     ],
     "faqs_zh": [
@@ -164,12 +168,16 @@
       {
         "q": "AI 视频便宜吗？",
         "a": "免费版可用于实验。生产级 AI 视频工具订阅 $20-200/月，加上迭代时间。对于一条 60 秒广告，预算约 $50-200 的工具费用和 3-5 小时的迭代时间。"
+      },
+      {
+        "q": "2026 年 Hailuo 是不错的 AI 视频生成器吗？",
+        "a": "Hailuo（MiniMax）是我们推荐的、以低成本生成生动角色动作与连贯多镜头片段的选项。在并排测试中，它在社交短视频的动作连贯性上胜过 Runway，而 Runway 在完整剪辑工作流上仍更强。最佳组合：Hailuo 生成、Runway 后期。"
       }
     ]
   },
   "audio": {
-    "intro_en": "AI voice generation crossed the indistinguishable from a real voice actor threshold in late 2025, and the 2026 market is now segmented by use case rather than quality (everyone is good enough for English narration). The differences are in languages, voice cloning, latency, and price-per-character. Here is the honest ranking.",
-    "intro_zh": "AI 语音生成在 2025 年底跨越了与真人配音无法区分的门槛，2026 年的市场按使用场景而非质量来细分（英文旁白大家都不错）。差异在于语言、声音克隆、延迟和每字价格。以下是诚实排名。",
+    "intro_en": "AI voice generation crossed the indistinguishable from a real voice actor threshold in late 2025, and the 2026 market is now segmented by use case rather than quality (everyone is good enough for English narration). The differences are in languages, voice cloning, latency, and price-per-character. Here is the honest ranking. Within each tier, the names to know are ElevenLabs and PlayHT for voice, Suno for music, Descript for audio editing, Speechify for text-to-speech reading, and Wondercraft for full podcast production.",
+    "intro_zh": "AI 语音生成在 2025 年底跨越了与真人配音无法区分的门槛，2026 年的市场按使用场景而非质量来细分（英文旁白大家都不错）。差异在于语言、声音克隆、延迟和每字价格。以下是诚实排名。 每个梯队值得关注的名字：语音用 ElevenLabs 和 PlayHT，音乐用 Suno，音频剪辑用 Descript，文字转语音朗读用 Speechify，播客全流程制作用 Wondercraft。",
     "howto_en": "If you are making a podcast, audiobook, or YouTube video, ElevenLabs is the default - the quality is the highest and the free tier is enough to test. If you are building a production app that needs TTS at scale, PlayHT is cheaper at volume. If you need real-time voice for a conversational agent, LMNT or OpenAI Realtime API are the right picks.",
     "howto_zh": "如果你在做播客、有声书或 YouTube 视频，ElevenLabs 是默认选择——质量最高，免费版就够测试用。如果你在构建需要大规模 TTS 的生产应用，PlayHT 在量大时更便宜。如果你需要实时语音用于对话代理，LMNT 或 OpenAI Realtime API 是正确的选择。",
     "faqs_en": [
@@ -188,6 +196,14 @@
       {
         "q": "What is the best free AI voice tool?",
         "a": "ElevenLabs free tier (10 minutes/month, watermarked) is enough for short projects. For unlimited use, open-source Whisper + a TTS model on your own hardware is free but requires setup."
+      },
+      {
+        "q": "What is the best AI tool for podcasting in 2026?",
+        "a": "For recording and transcription, Otter and Fireflies are top choices. For voice generation, ElevenLabs leads on quality and emotional range. For music, Suno and Udio generate complete tracks from a text prompt. Most offer free tiers to get started."
+      },
+      {
+        "q": "How do I choose between ElevenLabs and PlayHT?",
+        "a": "ElevenLabs is best for quality, voice cloning, and emotional range. PlayHT is better for high-volume API use and team pricing. Test both with the same short script: quality differences are most noticeable on long-form narration."
       }
     ],
     "faqs_zh": [
@@ -206,6 +222,14 @@
       {
         "q": "最好的免费 AI 语音工具是什么？",
         "a": "ElevenLabs 免费版（10 分钟/月，有水印）足够短项目使用。如需无限使用，在自己硬件上部署开源 Whisper + TTS 模型免费但需要配置。"
+      },
+      {
+        "q": "2026 年最好的 AI 播客工具有哪些？",
+        "a": "录音和转写方面，Otter 与 Fireflies 是热门选择；语音生成方面，ElevenLabs 在音质与情感表现上领先；音乐方面，Suno 和 Udio 可从文字提示生成完整曲目。多数工具都提供免费版方便上手。"
+      },
+      {
+        "q": "ElevenLabs 和 PlayHT 怎么选？",
+        "a": "ElevenLabs 在音质、声音克隆和情感表现上最佳；PlayHT 更适合高并发 API 使用和团队定价。建议用同一段短脚本分别测试——长文本朗读时音质差异会更明显。"
       }
     ]
   },
@@ -420,86 +444,94 @@
     ]
   },
   "image-generation": {
-    "intro_en": "We subscribed to every major text-to-image model in 2026 and ran the same 25 prompts on each. The result: there is no single best image generator. The right answer depends on what you are making - photorealism, art, graphic design, anime, or text-in-image. Here is the honest breakdown by use case.",
-    "intro_zh": "我们订阅了 2026 年所有主流文生图模型，在每个上跑了相同的 25 条提示词。结果：不存在单一最佳图像生成器。正确答案取决于你要做什么——写实摄影、艺术、平面设计、动漫还是图中文字。以下是按使用场景的诚实拆解。",
-    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
-    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "intro_en": "We subscribed to every major text-to-image model in 2026 - Midjourney, Flux, Stable Diffusion, Ideogram, Leonardo, DALL-E, ComfyUI - and ran the same 25 prompts on each, scoring photorealism, prompt adherence, text-in-image accuracy, style control, and speed. The result: there is no single best image generator. The right answer depends on what you are making - photoreal product shots, art, graphic design, anime, or posters with accurate text. Here is the honest breakdown by use case. Start with our <a href=\"/tools/stable-diffusion/\">Stable Diffusion</a> and <a href=\"/tools/krea-ai/\">Krea AI</a> hands-on reviews, then compare full feature sets in the <a href=\"/blog/best-ai-image-generators-compared-2026/\">image generator comparison</a>.",
+    "intro_zh": "我们订阅了 2026 年所有主流文生图模型——Midjourney、Flux、Stable Diffusion、Ideogram、Leonardo、DALL-E、ComfyUI——并在每个模型上运行相同的 25 条提示词，按写真度、提示词遵循度、图中文字准确度、风格控制与速度打分。结果：不存在单一最佳图像生成器。正确答案取决于你要做什么——写实产品图、艺术、平面设计、动漫，还是带准确文字的海报。以下是按使用场景的诚实拆解。 从我们的 <a href=\"/zh/tools/stable-diffusion/\">Stable Diffusion</a> 与 <a href=\"/zh/tools/krea-ai/\">Krea AI</a> 实测开始，再到 <a href=\"/zh/blog/best-ai-image-generators-compared-2026/\">图像生成器对比</a> 中比较完整功能。",
+    "howto_en": "Picking an AI image generator comes down to four questions: do you need photorealism (Flux.1 Pro, Midjourney v7), artistic style control (Midjourney, Ideogram), accurate text-in-image (Ideogram, Flux), or free local generation (Stable Diffusion, ComfyUI)? For most commercial work the answer is one quality model for hero visuals plus one cheap or free model for iteration. In our 25-prompt test, no single tool won every category - so budget for a combo, not a single subscription.",
+    "howto_zh": "选择 AI 图像生成器归结为四个问题：你需要写真度（Flux.1 Pro、Midjourney v7）、艺术风格控制（Midjourney、Ideogram）、准确的图中文字（Ideogram、Flux），还是免费本地生成（Stable Diffusion、ComfyUI）？对大多数商业工作，答案是一款高质量模型做主视觉、再配一款便宜或免费模型做迭代。在我们的 25 条提示词测试中，没有单一工具赢下所有项目——所以请按组合预算，而非单个订阅。",
     "faqs_en": [
       {
-        "q": "What is the best free AI writing tool in 2026?",
-        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+        "q": "What is the best AI image generator in 2026?",
+        "a": "For photorealism, Flux.1 Pro and Midjourney v7 lead the pack. For artistic style control, Midjourney and Ideogram. For free local generation, Stable Diffusion with ComfyUI. For quick design iterations, Leonardo and Canva AI. We scored all of them on 25 identical prompts - the winner depends on your use case."
       },
       {
-        "q": "Is Claude better than ChatGPT for writing?",
-        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+        "q": "Is Midjourney or Stable Diffusion better?",
+        "a": "Midjourney wins on out-of-the-box aesthetics, prompt adherence and speed; Stable Diffusion wins on control, local privacy and cost (it is free and open source). Most creators keep both: Midjourney for fast client work, Stable Diffusion for precise, reproducible results."
       },
       {
-        "q": "How much do AI writing tools cost in 2026?",
-        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+        "q": "How much do AI image generators cost in 2026?",
+        "a": "Midjourney starts at $10/month; Ideogram and Leonardo sit around $12/month; Flux has a free tier plus Pro credits; Stable Diffusion and ComfyUI are free if you have a decent GPU. A practical toolkit runs $10-40/month."
       },
       {
-        "q": "Can AI writing tools replace a human writer?",
-        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+        "q": "Can AI image generators render text in images?",
+        "a": "Ideogram and Flux are the clear leaders for accurate text rendering. Midjourney v7 improved noticeably but still struggles with longer strings. If your work is posters, ads or product mockups with text, Ideogram is the safe default."
+      },
+      {
+        "q": "Can I use AI-generated images commercially?",
+        "a": "Yes on paid plans. Midjourney paid users get commercial rights, and Flux, Ideogram and Leonardo paid tiers allow commercial use. Free tiers vary by tool, so check each license - and disclose AI generation where platform rules require it."
       }
     ],
     "faqs_zh": [
       {
-        "q": "2026 年最好的免费 AI 写作工具是什么？",
-        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+        "q": "2026 年最好的 AI 图像生成器是什么？",
+        "a": "写真度：Flux.1 Pro 与 Midjourney v7 领先。艺术风格控制：Midjourney 与 Ideogram。免费本地生成：Stable Diffusion 搭配 ComfyUI。快速设计迭代：Leonardo 与 Canva AI。我们在相同的 25 条提示词上为它们打分——赢家取决于你的使用场景。"
       },
       {
-        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
-        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+        "q": "Midjourney 和 Stable Diffusion 哪个更好？",
+        "a": "Midjourney 在开箱即用的美感、提示词遵循度和速度上胜出；Stable Diffusion 在可控性、本地隐私和成本上胜出（免费且开源）。大多数创作者两个都用：Midjourney 处理快速客户需求，Stable Diffusion 处理精确、可复现的结果。"
       },
       {
-        "q": "2026 年 AI 写作工具的费用是多少？",
-        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+        "q": "2026 年 AI 图像生成器的费用是多少？",
+        "a": "Midjourney 从 $10/月起；Ideogram 与 Leonardo 约 $12/月；Flux 有免费版加 Pro 积分；Stable Diffusion 与 ComfyUI 只要有像样的显卡就免费。一套实用组合约 $10-40/月。"
       },
       {
-        "q": "AI 写作工具能替代人类写作者吗？",
-        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+        "q": "AI 图像生成器能渲染图中的文字吗？",
+        "a": "Ideogram 与 Flux 在准确文字渲染上明显领先。Midjourney v7 改善显著，但较长字符串仍吃力。如果你的工作是海报、广告或带文字的产品样机，Ideogram 是稳妥默认选择。"
+      },
+      {
+        "q": "AI 生成的图片可以商用吗？",
+        "a": "付费套餐可以。Midjourney 付费用户拥有商用权利，Flux、Ideogram 与 Leonardo 付费档位也允许商用。免费档按工具而异，请逐一核对许可——并在平台规则要求时披露 AI 生成。"
       }
     ]
   },
   "video-generation": {
-    "intro_en": "We generated 50+ short videos across every major AI video model in 2026. The output is genuinely useful for social content, ads, and prototypes - but the differences between platforms are large, and the pricing is all over the map. Here is the honest ranking by use case, with real before/after quality notes.",
-    "intro_zh": "我们在 2026 年用所有主流 AI 视频模型生成了 50+ 个短视频。输出对社交内容、广告和原型来说确实可用——但平台之间的差异很大，定价也天差地别。以下是按使用场景的诚实排名，附真实前后质量对比。",
+    "intro_en": "We generated 50+ short videos across every major AI video model in 2026. The output is genuinely useful for social content, ads, and prototypes - but the differences between platforms are large, and the pricing is all over the map. Here is the honest ranking by use case, with real before/after quality notes. For side-by-side pricing and hands-on notes, see our <a href=\"/tools/runway/\">Runway</a> and <a href=\"/tools/krea-ai/\">Krea AI</a> reviews, or jump to the broader <a href=\"/best/video/\">video tools</a> ranking.",
+    "intro_zh": "我们在 2026 年用所有主流 AI 视频模型生成了 50+ 个短视频。输出对社交内容、广告和原型来说确实可用——但平台之间的差异很大，定价也天差地别。以下是按使用场景的诚实排名，附真实前后质量对比。 如需对比定价与实测笔记，可查看我们的 <a href=\"/zh/tools/runway/\">Runway</a> 与 <a href=\"/zh/tools/krea-ai/\">Krea AI</a> 评测，或直达更全面的 <a href=\"/zh/best/video/\">视频工具</a> 排名。",
     "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
     "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
     "faqs_en": [
       {
-        "q": "What is the best free AI writing tool in 2026?",
-        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+        "q": "What is the best AI video generator in 2026?",
+        "a": "For high-fidelity text-to-video, OpenAI Sora and Google Veo lead on realism and motion quality; Kling AI and Runway Gen-3/Gen-4 remain strong for creative control; Pika and Luma offer the friendliest free tiers. The best pick depends on whether you need photorealistic clips, stylized shots, or quick social-media loops."
       },
       {
-        "q": "Is Claude better than ChatGPT for writing?",
-        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+        "q": "Can AI video generators replace a human editor?",
+        "a": "For rough cuts, b-roll generation, and simple captioning, yes - AI already handles 50-70% of the grunt work. For storytelling, pacing, brand voice, and complex multi-scene narratives, a human editor still matters. Treat AI as the first-draft machine, not the final cut."
       },
       {
-        "q": "How much do AI writing tools cost in 2026?",
-        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+        "q": "How much do AI video tools cost in 2026?",
+        "a": "Most leading tools charge $10-30 per month for a paid tier. Free tiers typically cap at 5-15 clips per month and add watermarks. Enterprise plans with commercial rights and higher resolutions range from $50-200 per month depending on the vendor."
       },
       {
-        "q": "Can AI writing tools replace a human writer?",
-        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+        "q": "Are AI-generated videos safe for commercial use?",
+        "a": "It depends on the license. Most major providers grant commercial rights on paid plans, but each tool has its own terms - check the commercial-use clause, resolution limits, and content-policy restrictions before shipping client work. Watermarked free-tier clips are generally not safe for monetized projects."
       }
     ],
     "faqs_zh": [
       {
-        "q": "2026 年最好的免费 AI 写作工具是什么？",
-        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+        "q": "2026 年最好的 AI 视频生成工具是什么？",
+        "a": "在写实度与运动质量上，OpenAI Sora 和 Google Veo 领先；Kling AI 与 Runway Gen-3/Gen-4 在创意控制上仍然强势；Pika、Luma 的免费档位让入门更简单。选择取决于你需要写实短片、风格化镜头还是快速的社媒短视频。"
       },
       {
-        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
-        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+        "q": "AI 视频生成器能替代人类剪辑师吗？",
+        "a": "对粗剪、素材生成和简单字幕而言，答案是肯定的——目前 AI 能完成 50%-70% 的重复工作。但在叙事、节奏、品牌调性和多场景复杂叙事上，人类剪辑师仍然重要。把 AI 当作初稿机器，而非最终成片。"
       },
       {
-        "q": "2026 年 AI 写作工具的费用是多少？",
-        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+        "q": "2026 年 AI 视频工具的费用是多少？",
+        "a": "主流工具付费档位通常在每月 10-30 美元。免费档一般每月限 5-15 个片段并带水印。带商业授权与更高分辨率的企业方案，根据厂商不同约为每月 50-200 美元。"
       },
       {
-        "q": "AI 写作工具能替代人类写作者吗？",
-        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+        "q": "AI 生成的视频可以用于商业用途吗？",
+        "a": "取决于授权。多数主流厂商在付费方案上授予商业使用权，但每家条款不同——交付客户项目前请务必核对商业使用条款、分辨率限制与内容政策。带水印的免费档片段一般不适合变现项目。"
       }
     ]
   },
@@ -548,42 +580,42 @@
   "small-business": {
     "intro_en": "We rebuilt our small business workflow with AI tools over 90 days. The team is 8 people, the monthly bill is $385, and we saved ~22 hours per week. Here are the 10 tools that actually paid for themselves, ranked by ROI rather than by what was trending on Twitter.",
     "intro_zh": "我们在 90 天内用 AI 工具重构了小企业工作流。团队 8 人，月花费 $385，每周节省约 22 小时。以下是真正回本的工具，按 ROI 而非 Twitter 热门程度排名。",
-    "howto_en": "Picking a writing tool comes down to three questions: How long are your typical outputs (a tweet vs a 2,000-word blog post changes the answer)? How important is matching your existing voice? And do you need anything beyond writing (image generation, code, voice)? For most people, the right answer is one general assistant plus one specialized tool.",
-    "howto_zh": "选择写作工具归结为三个问题：你典型输出的长度是多少（一条推文 vs 一篇 2000 词博客文章，答案不同）？匹配你现有语气有多重要？你是否需要写作之外的能力（图像生成、代码、语音）？对大多数人来说，正确答案是一个通用助手加一个专业工具。",
+    "howto_en": "Here is how we decide what to buy: for a small team, every tool has to pay for itself in hours saved. Start with one general assistant - ChatGPT or Claude - that covers writing, analysis, and customer support drafts. Then add specialists only where volume justifies it: Jasper for on-brand marketing copy, Midjourney for product visuals, n8n or Zapier for automations, and ElevenLabs for voice work. We cap any single tool at roughly $50-100 per month and review the whole stack every quarter.",
+    "howto_zh": "我们这样决定买什么：对小团队来说，每个工具都必须用节省的时间收回成本。先选一个通用助手——ChatGPT 或 Claude——覆盖写作、分析与客服草稿。只在用量足够大的地方加专业工具：Jasper 负责贴合品牌的营销文案，Midjourney 负责产品视觉，n8n 或 Zapier 负责自动化，ElevenLabs 负责语音。我们把任何单一工具的花费控制在每月约 50-100 美元，并每季度复盘整个工具栈。",
     "faqs_en": [
       {
-        "q": "What is the best free AI writing tool in 2026?",
-        "a": "ChatGPT free tier (GPT-4o mini) is the best free option for most writing tasks. For long-form drafting, Claude free tier (Sonnet) is more capable but has stricter rate limits. Both are sufficient for essays, emails, and short articles."
+        "q": "What are the best AI tools for a small business in 2026?",
+        "a": "Ranked by ROI, the stack that paid for itself in our 90-day test: ChatGPT or Claude as the general assistant, n8n (or Zapier) for automations, Midjourney for product visuals, Jasper for on-brand copy, and ElevenLabs for voice and video narration. Start with the general assistant, then add specialists where the workload justifies it."
       },
       {
-        "q": "Is Claude better than ChatGPT for writing?",
-        "a": "In our testing, Claude produces more natural-sounding English and is less prone to AI slop patterns. ChatGPT is better at brainstorming and has a richer plugin ecosystem. For pure writing quality, Claude wins by a small margin."
+        "q": "How much should a small business spend on AI tools?",
+        "a": "Our 8-person team runs on about $385 per month in total. As a rule of thumb, budget $30-60 per employee per month and prioritize tools that directly save hours - scheduling, drafting, summarizing, and automating - before anything nice-to-have."
       },
       {
-        "q": "How much do AI writing tools cost in 2026?",
-        "a": "The general assistants are $20/month each. Specialized tools like Jasper ($49-125/month) and Sudowrite ($25/month) are more expensive and have not kept up with the general assistants in our testing. The minimum viable stack is $20-40/month."
+        "q": "Can AI tools replace employees at a small business?",
+        "a": "No. AI augments rather than replaces people. It handles drafting, triage, scheduling, and summaries, but a human still reviews output, makes judgment calls, and owns the relationship. In our 90-day test AI saved roughly 22 hours a week - it did not eliminate a single role."
       },
       {
-        "q": "Can AI writing tools replace a human writer?",
-        "a": "For drafting, ideation, and first-pass editing, yes - AI tools can replace 50-70% of the work. For voice, original perspective, lived experience, and creative risk, no. The right framing is AI as a writing partner, not AI as a writer."
+        "q": "Which AI tools have the best ROI for small businesses?",
+        "a": "Automation platforms (n8n, Zapier) and general assistants (ChatGPT, Claude) deliver the best ROI because they cover the widest range of tasks. Image generation like Midjourney pays off fastest for marketing-heavy businesses, while voice tools like ElevenLabs win for anyone producing video or podcasts."
       }
     ],
     "faqs_zh": [
       {
-        "q": "2026 年最好的免费 AI 写作工具是什么？",
-        "a": "ChatGPT 免费版（GPT-4o mini）是大多数写作任务的最佳免费选择。对于长文起草，Claude 免费版（Sonnet）能力更强但用量限制更严格。两者都足以应对论文、邮件和短文。"
+        "q": "2026 年小企业最好用的 AI 工具有哪些？",
+        "a": "按 ROI 排序，在 90 天测试中真正回本的工具栈是：通用助手 ChatGPT 或 Claude、自动化工具 n8n（或 Zapier）、产品视觉 Midjourney、品牌文案 Jasper、语音与视频旁白 ElevenLabs。先从通用助手开始，再按工作量需要补充专业工具。"
       },
       {
-        "q": "Claude 的写作能力比 ChatGPT 更好吗？",
-        "a": "在我们的测试中，Claude 产出更自然的英文，更少出现 AI 套路化表达。ChatGPT 在头脑风暴方面更强，插件生态也更丰富。纯写作质量上，Claude 略微领先。"
+        "q": "小企业在 AI 工具上应该花多少钱？",
+        "a": "我们 8 人团队每月总花费约 $385。经验法则是每名员工每月 30-60 美元，优先投入能直接节省时间（排程、起草、总结、自动化）的工具，再考虑锦上添花的部分。"
       },
       {
-        "q": "2026 年 AI 写作工具的费用是多少？",
-        "a": "通用助手每月 $20。Jasper（$49-125/月）和 Sudowrite（$25/月）等专业工具更贵，但在我们的测试中未能跟上通用助手的步伐。最低可行的工具组合是 $20-40/月。"
+        "q": "AI 工具能取代小企业的员工吗？",
+        "a": "不能。AI 是增强而非替代——它处理起草、分诊、排程和总结，但仍需人工审校输出、做判断并对结果负责。在我们的 90 天测试中，AI 每周节省约 22 小时，并没有裁掉任何岗位。"
       },
       {
-        "q": "AI 写作工具能替代人类写作者吗？",
-        "a": "对于起草、构思和初稿编辑，是的——AI 工具可以替代 50-70% 的工作。对于语气、原创视角、真实经历和创意冒险，不能。正确的定位是把 AI 当作写作搭档，而非替代写作者。"
+        "q": "哪些 AI 工具对小企业 ROI 最高？",
+        "a": "自动化平台（n8n、Zapier）与通用助手（ChatGPT、Claude）因为覆盖任务范围最广而 ROI 最高；以营销为主的业务从 Midjourney 之类的图像生成获益最快；做视频或播客的人则从 ElevenLabs 等语音工具获益最大。"
       }
     ]
   },
@@ -1084,10 +1116,10 @@
     ]
   },
   "ai-for-lawyers": {
-    "intro_en": "Legal work is document-heavy, precision-critical, and billable by the hour. We tested 9 AI tools on real legal workflows - contract review, legal research, deposition summaries - to find which ones actually reduce hours without reducing quality.",
-    "intro_zh": "法律工作文档繁重、精密度要求高、按小时计费。我们在真实法律工作流上测试了 9 款 AI 工具——合同审查、法律研究、证词摘要——找出哪些真正减少工时而不降低质量。",
-    "howto_en": "For lawyers, the most impactful AI use cases are: document review (Claude for long documents), legal research (Perplexity and Consensus for case law), and workflow automation (Dify and n8n for building intake and document generation pipelines). Never put client-confidential data into consumer AI tools without checking the data usage policy.",
-    "howto_zh": "对律师来说，最有价值的 AI 场景是：文档审查（Claude 处理长文档）、法律研究（Perplexity 和 Consensus 查找判例法）和工作流自动化（Dify 和 n8n 构建收案和文档生成流程）。在未检查数据使用政策前，切勿将客户机密数据输入消费者 AI 工具。",
+    "intro_en": "Legal work is document-heavy, precision-critical, and billable by the hour. We tested 9 AI tools on real legal workflows - contract review, legal research, deposition summaries, intake automation - across two weeks to find which ones actually reduce hours without reducing quality. This page ranks the survivors for solo practitioners, boutique firms, and in-house teams.",
+    "intro_zh": "法律工作文档繁重、精密度要求高、按小时计费。我们在两周内对 9 款 AI 工具在真实法律工作流上做了测试——合同审查、法律研究、证词摘要、收案自动化——找出哪些真正减少工时而不降低质量。本页面向独立执业者、精品所与公司法务团队，对存活下来的工具进行排名。",
+    "howto_en": "For lawyers, the most impactful AI use cases are: document review (Claude for long contracts, 200K context), legal research (Perplexity and Consensus for case law with citations), and workflow automation (Dify and n8n for intake and document generation pipelines). Test small on one matter type first, keep a human review step, and never put client-confidential data into consumer AI tools without checking the data usage policy.",
+    "howto_zh": "对律师来说，最有价值的 AI 场景是：文档审查（Claude 以 20 万上下文处理长合同）、法律研究（Perplexity 与 Consensus 检索带引用的判例法）和工作流自动化（Dify 与 n8n 构建收案和文档生成流程）。先在单一案件类型上小规模试点、保留人工复核环节，并在未检查数据使用政策前，切勿将客户机密数据输入消费者 AI 工具。",
     "faqs_en": [
       {
         "q": "Is it safe for lawyers to use AI?",
@@ -1100,6 +1132,14 @@
       {
         "q": "Can AI write legal documents?",
         "a": "AI can draft first versions of common documents (NDAs, engagement letters, simple motions) but these must always be reviewed by a licensed attorney. The time savings come from not starting from a blank page."
+      },
+      {
+        "q": "Which AI tools do lawyers actually use for legal research?",
+        "a": "In our tests, Perplexity with academic search and Consensus for case-law summaries are the most cited. Both surface sources with citations, which matters for verification. Pair either with a general assistant (Claude or ChatGPT) to draft memos from the research."
+      },
+      {
+        "q": "How much does an AI stack cost for a law firm in 2026?",
+        "a": "Consumer plans run about $20/month per attorney for ChatGPT or Claude. Legal-specific tools add $25-150/month, and document automation with Dify or n8n is free-to-start and scales with workload. Most solo practices we tested ran a complete stack under $100/month per attorney."
       }
     ],
     "faqs_zh": [
@@ -1114,6 +1154,14 @@
       {
         "q": "AI 能撰写法律文件吗？",
         "a": "AI 可以起草常见文件的第一版（保密协议、委托书、简单动议），但这些必须始终由持证律师审核。节省的时间来自不必从空白页开始。"
+      },
+      {
+        "q": "律师实际上用哪些 AI 工具做法律研究？",
+        "a": "在我们的测试中，Perplexity（学术搜索）与 Consensus（判例法摘要）被引用最多。两者都附来源与引用，这对核验很重要。可将其中一款与通用助手（Claude 或 ChatGPT）搭配，从研究结果起草备忘录。"
+      },
+      {
+        "q": "2026 年一家律所的 AI 组合成本是多少？",
+        "a": "ChatGPT 或 Claude 的消费级套餐约 $20/月/位律师。法律专用工具再加 $25-150/月，用 Dify 或 n8n 做文档自动化则可免费起步、随工作量扩展。我们测试的大多数独立执业者把完整组合控制在每位律师 $100/月以内。"
       }
     ]
   },

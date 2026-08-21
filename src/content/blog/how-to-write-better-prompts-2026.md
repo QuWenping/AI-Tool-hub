@@ -12,11 +12,23 @@ tags:
   - prompts
   - prompt-engineering
   - productivity
+related_tools:
+  - chatgpt
+  - claude
+  - midjourney
+related_posts:
+  - chatgpt-tutorial-guide-2026
+  - claude-tutorial-guide-2026
+  - how-to-write-prompts-for-midjourney-2026
 faq:
   - q: "What makes a good AI prompt?"
     a: "A good prompt is specific, provides context, defines the desired format, and includes constraints. The best prompts follow the formula: Role + Context + Task + Format + Constraints."
   - q: "How long should a prompt be?"
     a: "There is no ideal length. Simple tasks need short prompts. Complex tasks need detailed prompts with examples. The key is including all necessary context without irrelevant information."
+  - q: "Which AI tools respond best to structured prompts?"
+    a: "ChatGPT, Claude, and Midjourney all respond strongly to structured prompts. Use role, context, format, and constraints with ChatGPT and Claude for text, and specific style keywords with Midjourney for images. Our step-by-step guides cover each tool's prompt syntax in detail."
+  - q: "How do I prompt AI for better images?"
+    a: "For image tools like Midjourney, structure prompts as subject + style + lighting + composition + technical settings. Keywords like cinematic lighting, 35mm, and specific artist styles move results dramatically. See our Midjourney prompt guide for tested examples and copy-paste templates."
 ---
 
 ## Quick Answer: The Prompt Formula

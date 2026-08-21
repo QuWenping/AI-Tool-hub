@@ -1,20 +1,4 @@
 ---
-
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_a66fee8e920511f1a102525400826444
-    ReservedCode1: sZFaYHzoeGNEutDMLHZQRrirxbO1jr0Krn/C8z5pTWDoD1u0RaFHs8uKCO89YwdBACPipxCg+apuUWNEtuH1TENJoZovF/fBmYeTpOtDI/O3f3vPMsKRp9TW0IyLj52cJe6qBaf2Amte661sVqSRvs56B/8nUZ0xt7wIaHpz7luvctZ7am9u634EwHM=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_a66fee8e920511f1a102525400826444
-    ReservedCode2: sZFaYHzoeGNEutDMLHZQRrirxbO1jr0Krn/C8z5pTWDoD1u0RaFHs8uKCO89YwdBACPipxCg+apuUWNEtuH1TENJoZovF/fBmYeTpOtDI/O3f3vPMsKRp9TW0IyLj52cJe6qBaf2Amte661sVqSRvs56B/8nUZ0xt7wIaHpz7luvctZ7am9u634EwHM=
-title_en: 'Shorts AI Tutorial Guide (2026): Full Review & Hands-On Test'
-desc_en: 'Comprehensive tutorial guide and hands-on review of Shorts AI.'
-category: AI TOOL REVIEW + TUTORIAL
-author: AI Tool Hub Research Team
-date: '2026-07-28'
----
----
 title_en: 'Shorts AI Tutorial Guide (2026): Full Review & Hands-On Test'
 desc_en: 'Complete Shorts AI tutorial guide for 2026. Hands-on review, step-by-step short-form video creation, AI scripting, pricing, pros/cons, and real-world use cases.'
 category: AI TOOL REVIEW + TUTORIAL

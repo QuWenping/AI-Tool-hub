@@ -1,20 +1,4 @@
 ---
-title_en: 'Copy Ai Tutorial Guide (2026): Full Review & Hands-On Test'
-desc_en: 'Complete Copy Ai tutorial guide for 2026. Hands-on review, step-by-step setup, pricing, pros/cons, and real-world use cases.'
-category: AI TOOL REVIEW + TUTORIAL
-author: AI Tool Hub Research Team
-date: '2026-08-06'
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_42e7b2da913d11f1a102525400826444
-    ReservedCode1: xWKO5mrMOxGmvuy3aU2v4RHdlsBS2SXYrFDu71ymfNfKTgapkPX3MuVWijDXO1wrGpdkCMpR/VWUff/js0zrP8Al/mAqcgXXi8JLBLPsS4G1OIzuHc6uIgpsMhBwDCVzRVWvzO68izF/F+5R2T5uvk227uKNDmIJa0WMRdnGbKAtAFeli2mtlip5ENE=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_42e7b2da913d11f1a102525400826444
-    ReservedCode2: xWKO5mrMOxGmvuy3aU2v4RHdlsBS2SXYrFDu71ymfNfKTgapkPX3MuVWijDXO1wrGpdkCMpR/VWUff/js0zrP8Al/mAqcgXXi8JLBLPsS4G1OIzuHc6uIgpsMhBwDCVzRVWvzO68izF/F+5R2T5uvk227uKNDmIJa0WMRdnGbKAtAFeli2mtlip5ENE=
----
-
----
 author: AI Tool Hub Research Team
 category: Tutorial
 tags:

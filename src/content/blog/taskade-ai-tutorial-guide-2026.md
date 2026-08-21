@@ -1,20 +1,4 @@
 ---
-
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_a4daa168920511f1a102525400826444
-    ReservedCode1: 5gTFYmolVY0aKR0PprBjidzk/Jhj2MPgAKmsaDbGffEedLIE9nq1nwoBK3nURAEzhZ0GYjECNu+vXvO+04q5zpzUDBugyGgPM7ZMC3NS0g6FFcLdi9KSoPxFFCcEp3zeWjnMsGml5M4224oTnxEEDe2Fa7f6TLecPKytSYj3A03UJjcCKOPn6bBZzZ0=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_a4daa168920511f1a102525400826444
-    ReservedCode2: 5gTFYmolVY0aKR0PprBjidzk/Jhj2MPgAKmsaDbGffEedLIE9nq1nwoBK3nURAEzhZ0GYjECNu+vXvO+04q5zpzUDBugyGgPM7ZMC3NS0g6FFcLdi9KSoPxFFCcEp3zeWjnMsGml5M4224oTnxEEDe2Fa7f6TLecPKytSYj3A03UJjcCKOPn6bBZzZ0=
-title_en: 'Taskade AI Tutorial Guide (2026): Full Review & Hands-On Test'
-desc_en: 'Comprehensive tutorial guide and hands-on review of Taskade AI.'
-category: AI TOOL REVIEW + TUTORIAL
-author: AI Tool Hub Research Team
-date: '2026-07-28'
----
----
 title_en: 'Taskade AI Tutorial Guide (2026): Full Review & Hands-On Test'
 desc_en: 'Complete Taskade AI tutorial guide for 2026. Hands-on review, step-by-step setup, AI agent project management, pricing, pros/cons, and real-world use cases.'
 category: AI TOOL REVIEW + TUTORIAL

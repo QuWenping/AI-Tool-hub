@@ -20,6 +20,13 @@ const howToSchema = {
   ]
 };
 const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":title,"description":"Build an automated data analysis agent using Dify. Multi-step workflow for data ingestion, cleaning, analysis, visualization, and report generation.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-07-26","dateModified":"2026-07-26" };
+const faqItems = [
+  { q: "What is a Dify data analysis agent?", a: "It is a Dify workflow that automates the full data analysis pipeline — ingestion, cleaning, exploration, deep analysis, visualization, and reporting — using LLM reasoning at each step, with no code required." },
+  { q: "Do I need to write code to use this workflow?", a: "No. Dify's visual editor lets you connect CSV upload or database nodes, LLM nodes, and a Python Code Executor node. The Code Executor runs the actual data processing, but you configure it through the UI." },
+  { q: "What data sources does it support?", a: "CSV upload and database connections. You can add connectors for PostgreSQL, MySQL, or other databases supported by Dify, then validate schema and detect data types automatically." },
+  { q: "Can I customize the analysis steps?", a: "Yes. Each HowTo step maps to a node in the workflow — you can add or remove cleaning rules, switch LLM providers, change visualization types, and adjust the final report format (Markdown or PDF)." }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
 const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl+"/"},{"@type":"ListItem","position":2,"name":"Workflows","item":siteUrl+"/workflows/"},{"@type":"ListItem","position":3,"name":title,"item":pageUrl}] };
 ---
 
@@ -27,6 +34,7 @@ const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","i
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(howToSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
   </Fragment>
   <article class="legal-page">
@@ -68,6 +76,21 @@ const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","i
         <li>Marketing teams analyzing campaign performance data across channels</li>
         <li>Researchers running statistical analysis on survey results without coding</li>
         <li>Product teams monitoring user engagement metrics with automated insights</li>
+      </ul>
+
+      <h2>FAQ</h2>
+      {faqItems.map(f => (
+        <div class="info-card">
+          <h3>{f.q}</h3>
+          <p>{f.a}</p>
+        </div>
+      ))}
+
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/tools/dify/">Dify review: features, pricing, and use cases</a></li>
+        <li><a href="/workflows/n8n-rss-to-blog-post/">n8n RSS-to-blog workflow</a></li>
+        <li><a href="/workflows/">All AI workflows</a></li>
       </ul>
     </section>
   </article>

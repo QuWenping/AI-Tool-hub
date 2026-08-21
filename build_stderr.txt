@@ -1,1 +1,0 @@
-The collection "authors" does not exist or is empty. Ensure a collection directory with this name exists.

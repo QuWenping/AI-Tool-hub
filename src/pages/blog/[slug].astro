@@ -96,7 +96,7 @@ const faqSchema = {
   }))
 };
 ---
-<BaseLayout title={postTitle} description={postDesc} keywords={postData.tags?.join(", ") || postTitle} lang={pageLang} image={postData.image}>
+<BaseLayout title={postTitle} description={postDesc} keywords={postData.tags?.join(", ") || postTitle} lang={pageLang} image={postData.image} pubDate={postData.date}>
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>

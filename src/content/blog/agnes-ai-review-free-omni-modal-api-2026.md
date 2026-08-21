@@ -8,7 +8,7 @@ AIGC:
     PropagateID: d49fe9e58e84b114ae630734f70cf3ca_81a04b999a5b11f18cca525400e6dd8f
     ReservedCode2: tyMiDbDs0rVCxFEzhAy9Ni/U63xDMakEHy3avn6MG7chZI6wu56oVo69I1Mv3LxPwDSMGl1wlq4LNMHy7JJD83xJmxCqzbUG6nGtOKd45rU2pCcGxjmaugNMqSoopGOM8Wk7EUZIH0AL6D/C02sBM4OKUBjbQoq9fvmZDB7s39Um6mQvFRE0EdpxKmM=
 
-image: "/images/blog/agnes-ai-review-2026/hero.png"
+image: "/images/blog/agnes-ai-review-2026/hero.webp"
 
 title_en: 'Agnes AI Review 2026: Free Omni-Modal API Tested (Text, Image & Video)'
 meta_description: 'Agnes AI Review 2026: We tested this free omni-modal API for text, image and video generation. See real results, pricing, limits, and GPT-5 vs Claude comparisons.'
@@ -96,13 +96,13 @@ content_zh: |
   <p><strong>局限性：</strong>未进行独立基准测试。性能评分反映实际评估场景。</p>
   <h2>Agnes AI 是什么？免费多模态 API 详解</h2><p>Agnes AI 是一个全模态 API 平台，通过一个免费入口集成了三种能力：</p><p>如需了解对比背景，可查看我们的 <a href="/tools/chatgpt/">GPT-5/ChatGPT 工具页面</a>。</p><ul><li><strong>Agnes 2.0 Flash</strong> — 文本生成模型，适用于对话、摘要和代码辅助</li><li><strong>Agnes Image</strong> — 图像生成，基于公开演示，输出质量接近 Midjourney v5 水平</li><li><strong>Agnes Video</strong> — 视频生成（仍处于预览阶段，质量参差不齐）</li></ul><p>三种能力均可通过单一 API 密钥访问，GitHub 上提供开源 SDK，公开定价页面截至 2026 年 7 月未列出信用卡要求。平台还包含 Agnes Code，一个面向开发工作流的编码助手。</p>
 
-  <img src="/images/blog/agnes-ai/api-architecture.png" alt="Agnes AI API Architecture">
+  <img src="/images/blog/agnes-ai/api-architecture.webp" alt="Agnes AI API Architecture">
 
   <h2>核心功能一览</h2><ul><li><strong>全模态 API：</strong>通过一个端点实现文本、图像和视频生成</li><li><strong>免费模式：</strong>公开定价页面未列出信用卡要求，核心模态目前未列出使用限制</li><li><strong>开源 SDK：</strong>GitHub 上提供 Python、JavaScript 等客户端库</li><li><strong>Agnes Code：</strong>内置开发者编码助手</li><li><strong>商业用途：</strong>免费套餐允许商业项目使用</li></ul>
 
   <h2>定价：免费套餐的实际情况</h2>
 
-  <img src="/images/blog/agnes-ai/free-tier-pricing.png" alt="Agnes AI Free Tier Pricing">
+  <img src="/images/blog/agnes-ai/free-tier-pricing.webp" alt="Agnes AI Free Tier Pricing">
 
   <p>Agnes AI 目前以免费模式运营——根据公开定价页面，截至 2026 年 7 月未列出收费项目。文本、图像或视频生成的具体使用上限尚未经独立验证，用户应查阅官方文档确认当前限制。该平台据其官网描述由开源社区和 Sapiens AI 的支持维持运营。代价是：没有商业 SLA、没有正常运行时间保证、没有优先支持。对于生产级应用来说，这是一个有意义的限制，但对于原型开发、学习和副项目来说，这是领先的性价比。</p><h2>性能表现：Agnes AI 的强项与短板</h2><p><strong>文本生成（Agnes 2.0 Flash）：</strong>在通用对话、摘要和基础编码任务上表现合格。在复杂推理、细腻的写作和高级代码生成方面不如 GPT-5 和 Claude 4。可以将其视为一个优秀的中端模型——比 GPT-3.5 强，但尚未达到前沿模型的水准。</p><p><strong>图像生成（Agnes Image）：</strong>基于公开演示，输出质量接近 Midjourney v5 水平。构图和色彩处理不错，但在精细细节、图像内文字渲染和照片级真实感方面落后于 Midjourney v7.0、Flux 和 Ideogram。适合社交媒体配图和概念艺术。</p><p><strong>视频生成（Agnes Video）：</strong>仍处于预览阶段。支持一分钟以内的短视频片段，配有基础动画效果。基于公开演示，在专业视频制作方面尚未达到 Sora 2 或 Runway 最新视频模型的水平，但对于简单的动画内容来说功能可用。</p><h2>Agnes AI vs 主要竞品：横向对比</h2><table><thead><tr><th>功能</th><th>Agnes AI</th><th>GPT-5</th><th>Claude 4</th><th>Gemini 2.5 Pro</th><th>DeepSeek V3</th></tr></thead><tbody><tr><td><strong>价格</strong></td><td>免费</td><td>$20/月 (Plus)</td><td>$20/月 (Pro)</td><td>免费套餐 + $19.99/月</td><td>免费</td></tr><tr><td><strong>输入模态</strong></td><td>文本、图像、视频</td><td>文本、图像、语音</td><td>文本、图像</td><td>文本、图像、音频、视频</td><td>文本</td></tr><tr><td><strong>免费套餐</strong></td><td>是（限制可能适用）</td><td>有限免费套餐</td><td>有限免费套餐</td><td>是（慷慨）</td><td>是（完全免费）</td></tr><tr><td><strong>API 访问</strong></td><td>免费 API 密钥</td><td>付费 API（按量计费）</td><td>付费 API（按量计费）</td><td>免费 + 付费 API 层级</td><td>免费 API</td></tr><tr><td><strong>最适合</strong></td><td>原型开发、学习、预算有限的全模态需求</td><td>最佳整体质量、多模态、生态系统</td><td>长文写作、深度分析、超大上下文窗口</td><td>多模态研究、Google 生态集成</td><td>开源文本生成、编程、经济型 AI</td></tr></tbody></table><h2>Agnes AI vs Claude vs Gemini — 快速对比</h2>
   <table><thead><tr><th>功能</th><th>Agnes AI</th><th>Claude</th><th>Gemini</th></tr></thead><tbody>
@@ -120,7 +120,7 @@ content_zh: |
   <p>在测试中，Agnes Video 的预览模式在处理涉及多主体复杂场景切换的提示时产生了乱码输出。原因在于视频模型的预览层级在大负载下使用了简化的管线，导致时序一致性约束丢失。切换到单主体、单场景提示后，结果变得可用。这让我们认识到，免费层级的视频生成最适合简单的概念验证演示，而非制作级工作。</p>
   <h2>最终结论：谁应该用 Agnes AI？</h2><p>Agnes AI 是一个出色的免费平台，为特定使用场景提供了真实价值。它不是 GPT-5 杀手，也没打算成为。它的优势在于让全模态 AI 对每个人都触手可及——根据公开定价页面，截至 2026 年 7 月未列出付费墙或信用卡要求，具体使用上限需查阅官方文档。</p><p><strong>选择 Agnes AI，如果你：</strong>是零预算开发多模态应用原型的开发者、学习 API 集成的学生，或是无需经济投入即可探索 AI 生成内容的爱好者。</p><p><strong>跳过 Agnes AI，如果你：</strong>需要生产级可靠性、复杂任务的前沿模型质量，或面向客户应用的稳定运行时间保障。对于这些需求，GPT-5、Claude 4 或 Gemini 2.5 Pro 是更稳妥的选择。</p><p>总结：Agnes AI 是 2026 年领先的免费全模态 API 平台。它不会替代你的 ChatGPT Plus 订阅，但它是每个开发者工具包中的宝贵补充——而且价格无可匹敌。</p>
 
-  <img src="/images/blog/agnes-ai/use-case-comparison.png" alt="Agnes AI Use Case Comparison">
+  <img src="/images/blog/agnes-ai/use-case-comparison.webp" alt="Agnes AI Use Case Comparison">
   
   
   <h2>参考来源</h2>
@@ -163,6 +163,7 @@ content_zh: |
 
 
 ---
+
 <p>Agnes AI has attracted attention among developers looking for low-cost multimodal AI solutions, promising an omni-modal AI API that handles text, image, and video generation through a single endpoint. Described on its homepage as a product of Sapiens AI, it has gained interest among some AI developer communities. But does "free" mean "good enough"? We evaluated Agnes AI based on publicly available documentation, community feedback, and available demonstrations. Where hands-on testing was possible, we compared results across common developer workflows.</p>
 
 <h2>Agnes AI Topic Hub</h2>
@@ -175,6 +176,7 @@ content_zh: |
 <li><a href="/blog/agnes-ai-vs-claude-2026/">Agnes AI vs Claude</a> — Head-to-head comparison</li>
 <li><a href="/blog/agnes-ai-features-2026/">Agnes AI Features</a> — Full feature breakdown</li>
 <li><a href="/blog/agnes-ai-free-plan-2026/">Agnes AI Free Plan</a> — Free plan limits and what you get</li>
+<li><a href="/tools/agnes-ai/">Agnes AI Tool Page</a> — Key features, pricing and alternatives at a glance</li>
 </ul>
 
 
@@ -223,7 +225,7 @@ content_zh: |
 
 <h2>What Is Agnes AI? Free Multimodal API Explained</h2><p>Agnes AI is an omni-modal API platform that bundles three capabilities into one free access point:</p><ul><li><strong>Agnes 2.0 Flash</strong> — text generation model for chat, summarization, and code assistance</li><li><strong>Agnes Image</strong> — image generation that, based on available demonstrations, appears to approach Midjourney v5 level for general prompts</li><li><strong>Agnes Video</strong> — video generation (still in preview, quality varies)</li></ul><p>All three are accessible through a single API key, with open-source SDKs on GitHub. The public pricing page does not list a credit card requirement as of July 2026. The platform also includes Agnes Code, a coding assistant for development workflows.</p>
 
-<img src="/images/blog/agnes-ai/api-architecture.png" alt="Agnes AI API Architecture">
+<img src="/images/blog/agnes-ai/api-architecture.webp" alt="Agnes AI API Architecture">
 
 <h2>Key Features at a Glance</h2><ul><li><strong>Omni-modal API:</strong> Text, image, and video generation from one endpoint</li><li><strong>Free Access Model:</strong> Agnes AI currently advertises a free access model based on publicly available information. Availability, limits, and pricing may change.</li><li><strong>Open-source SDKs:</strong> Client libraries available on GitHub for Python, JavaScript, and more</li><li><strong>Agnes Code:</strong> Built-in coding assistant for developers</li><li><strong>Commercial Use:</strong> Users should consult the official License documentation at <a href="https://agnes.ai/docs" rel="nofollow noopener" target="_blank">agnes.ai/docs</a> for commercial usage terms.</li></ul>
 
@@ -240,7 +242,7 @@ content_zh: |
 
 <h2>Pricing: The Free Tier Reality</h2><p>Agnes AI currently offers a free access model — Agnes AI currently promotes a free access model rather than a traditional paid-only product. However, exact usage limits and availability should be verified through official documentation. We could not independently verify unlimited usage across all modalities. Users should confirm current limits in official documentation. The platform is described on its homepage as sustained by its open-source community and Sapiens AI. The trade-off: no commercial SLA, no guaranteed uptime, and no priority support. For production applications, this is a meaningful limitation, but for prototyping, learning, and side projects, it is leading value.</p>
 
-<img src="/images/blog/agnes-ai/free-tier-pricing.png" alt="Agnes AI Free Tier Pricing">
+<img src="/images/blog/agnes-ai/free-tier-pricing.webp" alt="Agnes AI Free Tier Pricing">
 
 <h2>Performance: Where Agnes AI Shines (and Where It Doesn't)</h2><p><strong>Text Generation (Agnes 2.0 Flash):</strong> Competent for general chat, summarization, and basic coding tasks. Falls short of GPT-5 and Claude 4 on complex reasoning, nuanced writing, and advanced code generation. Think of it as a strong mid-tier model — better than GPT-3.5, but not competing with frontier models yet.</p><p><strong>Image Generation (Agnes Image):</strong> Based on available demonstrations, output quality appears to approach Midjourney v5 level for general prompts. Decent composition and color handling, but lags behind Midjourney v7.0, Flux, and Ideogram for fine details, text rendering inside images, and photorealism. See our <a href="/blog/best-ai-image-generators-compared-2026/">best AI image generators comparison</a> for alternatives. Adequate for social media graphics and concept art.</p><p><strong>Video Generation (Agnes Video):</strong> Still in preview. Short clips (under a minute) with basic motion. Based on publicly available demonstrations, output quality does not yet appear to match Sora 2 or Runway current-generation video models for production video work, but functional for simple animated content. Explore more video generation options in our <a href="/blog/best-ai-video-generators-2026/">best AI video generators guide</a>.</p>
 <h2>Agnes AI vs GPT-5: Can It Replace ChatGPT?</h2>
@@ -339,7 +341,7 @@ Last checked: July 2026. Analysis based on publicly available product informatio
 <p>However, the free tier comes with meaningful limitations. Rate limits and queue priority mean it is not suitable for production workloads with latency requirements. The model's performance on edge cases — particularly complex visual reasoning and audio transcription in noisy environments — trails established paid APIs from OpenAI and Anthropic. For a comparable free-tier experience, check our <a href="/tools/gemini/">Gemini tool page</a>. Documentation quality and community support are still maturing, which means developers should budget extra time for troubleshooting. For non-critical projects, prototyping, and learning, Agnes is a strong entry point. For production applications requiring reliability and scale, investing in a paid API remains necessary.</p>
 <p>The most effective approach is to match the tool to the task rather than searching for one tool to rule them all.</p>
 
-<img src="/images/blog/agnes-ai/use-case-comparison.png" alt="Agnes AI Use Case Comparison">
+<img src="/images/blog/agnes-ai/use-case-comparison.webp" alt="Agnes AI Use Case Comparison">
 
 
 

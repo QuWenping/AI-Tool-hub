@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import categories from "../../../data/categories.json";
+import toolsData from "../../../data/tools.json";
+const siteUrl = "https://thebestaitoolsreview.com";
+const breadcrumb = {
+  "@context": "https://schema.org", "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "首页", "item": siteUrl + "/zh/" },
+    { "@type": "ListItem", "position": 2, "name": "最佳 AI 工具", "item": siteUrl + "/zh/best/" }
+  ]
+};
+---
+<BaseLayout title="2026 年最佳 AI 工具 — 实测排名" description="2026 年各分类最佳 AI 工具排名：写作、编程、图像、视频、音频、效率等。所有榜单均经真实上手测试，真实优缺点，无付费排名。" keywords="2026最佳AI工具, AI工具排名, 最佳AI写作工具, 最佳AI编程工具">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="page-container">
+    <nav class="breadcrumbs"><a href="/zh/">首页</a> &rsaquo; <span>最佳 AI 工具</span></nav>
+    <h1 class="page-title">2026 年最佳 AI 工具</h1>
+    <p class="page-lede">覆盖 {categories.length} 个分类、经过真实上手测试的排名榜单。真实评测，真实优缺点，无付费排名。</p>
+    <div class="card-grid">
+      {categories.map(cat => {
+        const count = cat.tools.filter(id => toolsData[id]).length;
+        const title = cat.title_zh || cat.title_en;
+        const desc = cat.desc_zh || cat.desc_en;
+        return (
+          <a class="list-card" href={`/zh/best/${cat.slug}/`}>
+            <div class="card-head">
+              <h3>{title}</h3>
+              <span class="tool-pill">{count} 款工具</span>
+            </div>
+            <p class="card-desc">{desc}</p>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</BaseLayout>

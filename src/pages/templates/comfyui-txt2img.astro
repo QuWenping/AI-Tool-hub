@@ -6,7 +6,9 @@ const pageUrl = siteUrl + "/templates/comfyui-txt2img/";
 
 const faqItems = [
   { q: "What is ComfyUI txt2img?", a: "ComfyUI txt2img is a workflow that converts text prompts into images using Stable Diffusion models through ComfyUI's node-based interface. This template provides a production-ready pipeline." },
-  { q: "What models work with this workflow?", a: "SDXL, SD 3, Flux, and most Stable Diffusion-based models. Adjust the model loader node to point to your downloaded checkpoint file." }
+  { q: "What models work with this workflow?", a: "SDXL, SD 3, Flux, and most Stable Diffusion-based models. Adjust the model loader node to point to your downloaded checkpoint file." },
+  { q: "Why use a node-based workflow instead of AUTOMATIC1111?", a: "ComfyUI gives you explicit control over every step — samplers, schedulers, latents, and upscaling — and is significantly faster on the same hardware thanks to its optimized graph execution. The trade-off is a steeper learning curve." },
+  { q: "How do I fix blurry or distorted generations?", a: "Check your negative prompt (include 'blurry, low quality, distorted, watermark'), raise steps to 25-30, and verify CFG is not too high. For SDXL use 1024x1024 or larger; small canvas sizes produce artifacts. A 2x upscale pass with 4x-UltraSharp also helps." }
 ];
 
 const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
@@ -58,6 +60,16 @@ const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","i
         ))}
       </div>
 
+      <p class="back-link"><a href="/templates/">All Templates</a></p>
+    </section>
+
+    <section class="article-body" style="margin-top:1rem;">
+      <h2>Related Resources</h2>
+      <ul>
+        <li><a href="/tools/comfyui/">ComfyUI review: features, pricing, and how it compares</a></li>
+        <li><a href="/best/image/">Best AI image generators in 2026</a></li>
+        <li><a href="/templates/dashboard-prompt/">Dashboard prompt template</a></li>
+      </ul>
       <p class="back-link"><a href="/templates/">All Templates</a></p>
     </section>
   </div>

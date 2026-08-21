@@ -1,5 +1,10 @@
 ---
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { enPromptSlugs } from "../../../lib/prompt-langs";
+import toolsData from "../../../data/tools.json";
+
+const toolAlias: Record<string, string> = { surfer: "surfer-seo", canva: "canva-ai", copyai: "copy-ai", "hugging-face": "huggingface", notion: "notion-ai" };
+const toolSet = new Set(Object.keys(toolsData).filter((k) => k !== "_comment"));
 
 const promptDataZh: Record<string, any> = {
   "cursor-middleware": {
@@ -3222,13 +3227,14 @@ export async function getStaticPaths() {
 const { slug } = Astro.props;
 if (!promptDataZh[slug]) return Astro.redirect('/zh/prompts/', 301);
 const pageLang = "zh";
+const hasEnSibling = enPromptSlugs.has(slug);
 const pd = promptDataZh[slug] || { title: slug.replace(/-/g, ' '), description: '', tags: [], useCase: '', eexampleOutput: '', relatedTools: [] };
 const title = pd.title;
 const description = pd.description || '';
 const tags = pd.tags || [];
 ---
 
-<BaseLayout title={`${title} — AI 提示词模板`} description={description} lang={pageLang}>
+<BaseLayout title={`${title} — AI 提示词模板`} description={description} lang={pageLang} noEnSibling={!hasEnSibling}>
   <article class="legal-page">
     <nav class="breadcrumbs">
       <a href="/zh/">首页</a> &rsaquo;
@@ -3256,8 +3262,8 @@ const tags = pd.tags || [];
         <>
           <h2>相关工具</h2>
           <div class="tag-row">
-            {pd.relatedTools.map((tid: string) => (
-              <a class="tool-pill" href={`/zh/tools/${tid}/`}>{tid}</a>
+            {pd.relatedTools.filter((tid: string) => toolSet.has(toolAlias[tid] ?? tid)).map((tid: string) => (
+              <a class="tool-pill" href={`/zh/tools/${toolAlias[tid] ?? tid}/`}>{toolAlias[tid] ?? tid}</a>
             ))}
           </div>
         </>

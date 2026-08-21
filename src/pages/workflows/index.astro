@@ -1,56 +1,90 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import tools from "../../data/tools.json";
 
 const workflows = [
   {
-    title: "Content Repurposing Pipeline",
-    description: "Turn one blog post into social posts, newsletter, and video script using Claude + ChatGPT + ElevenLabs",
-    toolCount: 3
+    slug: "claude-code-review-pipeline",
+    title: "Claude Code Review Pipeline",
+    description: "Integrate Claude into your CI/CD pipeline for automated, intelligent code reviews. Catch bugs, enforce best practices, and maintain code quality with AI-powered pull request analysis.",
+    tools: "Claude + CI/CD"
   },
   {
-    title: "SEO Content Engine",
-    description: "Keyword research → outline → draft → optimize using ChatGPT + SurferSEO + Grammarly",
-    toolCount: 3
+    slug: "comfyui-style-transfer-pipeline",
+    title: "ComfyUI Style Transfer Pipeline",
+    description: "A production-ready ComfyUI workflow that applies an artistic style to a content image while preserving its structure. Chains img2img, ControlNet, and upscaling into one pipeline.",
+    tools: "ComfyUI + ControlNet"
   },
   {
-    title: "Design-to-Code Handoff",
-    description: "Figma mockup → AI code generation → review using Midjourney + Cursor + ChatGPT",
-    toolCount: 3
+    slug: "comfyui-video-frame-interpolation",
+    title: "ComfyUI Video Frame Interpolation",
+    description: "Turn choppy 24fps footage into silky 60fps or artifact-free slow motion. Chains video loading, RIFE/FILM interpolation, and re-encoding into one ComfyUI pipeline.",
+    tools: "ComfyUI + RIFE/FILM"
   },
   {
-    title: "Customer Support Automation",
-    description: "Ticket triage → draft response → human review using ChatGPT + Claude + Make",
-    toolCount: 3
+    slug: "crewai-research-team",
+    title: "CrewAI Research Team Automation",
+    description: "Build an autonomous AI research team using CrewAI. Define specialized agents that collaborate on deep research, analysis, and comprehensive report generation.",
+    tools: "CrewAI + Claude"
   },
   {
-    title: "Data Analysis Pipeline",
-    description: "Raw data → clean → visualize → report using ChatGPT Code Interpreter + Claude",
-    toolCount: 2
+    slug: "dify-data-analysis-agent",
+    title: "Dify Data Analysis Agent",
+    description: "Build an automated data analysis agent using Dify. Multi-step workflow for data ingestion, cleaning, analysis, visualization, and report generation.",
+    tools: "Dify + Claude"
   },
   {
-    title: "Video Production Suite",
-    description: "Script → voiceover → edit → captions using Claude + ElevenLabs + Runway + Descript",
-    toolCount: 4
+    slug: "dify-sales-assistant",
+    title: "Dify Sales Assistant Workflow",
+    description: "An AI sales assistant built in Dify. It classifies inbound inquiries, retrieves answers from your product knowledge base, drafts replies, and escalates complex cases to a human.",
+    tools: "Dify + ChatGPT"
+  },
+  {
+    slug: "langgraph-customer-support",
+    title: "LangGraph Customer Support Automation",
+    description: "Build an intelligent customer support automation system using LangGraph. Features multi-agent orchestration with triage routing, knowledge base retrieval, human escalation, and automated resolution.",
+    tools: "LangGraph + Claude"
+  },
+  {
+    slug: "n8n-rss-to-blog-post",
+    title: "n8n RSS to Blog Post Workflow",
+    description: "Automatically convert RSS feed items into formatted blog posts using n8n. Includes AI-powered content rewriting, SEO metadata generation, and CMS publishing.",
+    tools: "n8n + ChatGPT"
   }
+];
+
+const faqItems = [
+  { q: "What is an AI workflow?", a: "An AI workflow is a repeatable automation that chains multiple AI tools and steps - such as data ingestion, LLM processing, human review, and publishing - into a single pipeline that runs without manual intervention." },
+  { q: "Do I need to know how to code to use these workflows?", a: "No. Several workflows here (Dify, n8n, ComfyUI) use visual editors where you connect nodes by dragging. Others (LangGraph, CrewAI) are code-first, but each guide includes copy-paste templates and setup instructions." },
+  { q: "Which workflow should I start with?", a: "Start with the workflow that automates your most time-consuming repeated task. For most teams that is either content production (n8n RSS to blog) or customer support (Dify or LangGraph)." },
+  { q: "Can I combine these workflows?", a: "Yes. The workflows are modular. For example, an n8n RSS-to-blog pipeline can feed a ComfyUI image pipeline, and both can trigger a Claude code review before publishing to your CMS." }
 ];
 ---
 
 <BaseLayout
-  title="AI Workflows - Pre-built Multi-Tool Automation Workflows"
-  description="Pre-built multi-tool workflows to automate your daily tasks. Combine ChatGPT, Claude, Midjourney, ElevenLabs and more."
+  title="AI Workflows - Pre-built Multi-Tool Automation Workflows (2026)"
+  description="Pre-built, step-by-step AI workflows that chain multiple tools to automate content production, customer support, code review, data analysis, and more. Free guides for n8n, Dify, LangGraph, CrewAI and ComfyUI."
 >
   <div class="page-container">
     <h1 class="page-title">AI Workflows</h1>
-    <p class="page-lede">Pre-built multi-tool workflows to automate your daily tasks.</p>
+    <p class="page-lede">Pre-built multi-tool workflows to automate your daily tasks. Each guide includes the full architecture, step-by-step setup, and the tools you need - no fluff.</p>
 
     <div class="card-grid">
       {workflows.map(w => (
-        <div class="list-card">
+        <a class="list-card" href={"/workflows/" + w.slug + "/"} style="display:block;text-decoration:none;color:inherit;">
           <div class="card-head">{w.title}</div>
           <p class="card-desc">{w.description}</p>
-          <span>{w.toolCount} tools</span>
-        </div>
+          <span>{w.tools}</span>
+        </a>
+      ))}
+    </div>
+
+    <h2 class="page-title" style="font-size:1.4rem;margin-top:2.5rem;">Frequently Asked Questions</h2>
+    <div class="faq-section" style="max-width:820px;">
+      {faqItems.map(f => (
+        <details>
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
       ))}
     </div>
   </div>

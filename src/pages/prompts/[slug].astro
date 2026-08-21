@@ -1,5 +1,10 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { zhPromptSlugs } from "../../lib/prompt-langs";
+import toolsData from "../../data/tools.json";
+
+const toolAlias: Record<string, string> = { surfer: "surfer-seo", canva: "canva-ai", copyai: "copy-ai", "hugging-face": "huggingface", notion: "notion-ai" };
+const toolSet = new Set(Object.keys(toolsData).filter((k) => k !== "_comment"));
 
 const promptData: Record<string, any> = {
   "cursor-middleware": {
@@ -2880,6 +2885,22 @@ const promptData: Record<string, any> = {
     useCase: "Professionals using ChatGPT to handle competitor analysis tasks efficiently with optimized prompt engineering techniques.",
     exampleOutput: "## Competitor Analysis AI Prompt\n- Key outcome: Optimized result for competitor analysis\n- Tool: ChatGPT\n- Format: Structured, actionable output",
     relatedTools: ["chatgpt", "claude"],
+  },
+  "claude-sow-doc": {
+    title: "Claude Statement of Work (SoW) Prompt",
+    description: "A prompt template for using Claude to draft, review, and optimize Statements of Work (SoW). Leverages long-context understanding and deep reasoning for detailed, accurate deliverables.",
+    tags: ["Claude", "Business"],
+    useCase: "Consultants, project managers, and freelancers using Claude to draft comprehensive SoW documents covering scope, deliverables, timelines, milestones, payment terms, and assumptions.",
+    exampleOutput: "## Statement of Work: Website Redesign\n### Project Scope\n- Full redesign of marketing site (12 pages)\n- CMS migration from WordPress to Headless\n### Deliverables\n1. Design system + component library\n2. Fully responsive templates\n3. CMS content model + import scripts\n### Timeline\n- Phase 1 (Weeks 1-3): Discovery & design\n- Phase 2 (Weeks 4-8): Build & integration\n- Phase 3 (Weeks 9-10): QA & launch\n### Payment Terms\n- 30% upon signature, 40% at design approval, 30% on launch\n### Assumptions & Exclusions\n- Client provides brand assets and copy\n- Hosting and domain handled by client",
+    relatedTools: ["claude", "chatgpt"],
+  },
+  "chatgpt-todo": {
+    title: "ChatGPT To-Do List Management Prompt",
+    description: "A prompt template for using ChatGPT to organize, prioritize, and manage daily to-do lists. Covers task breakdown, prioritization frameworks, scheduling, and progress tracking.",
+    tags: ["ChatGPT", "Productivity"],
+    useCase: "Professionals and students using ChatGPT to break down overwhelming task lists into prioritized, scheduled, and trackable action items.",
+    exampleOutput: "## Daily To-Do Plan\n### Inbox\n- Prepare Q3 board deck\n- Review vendor contract (deadline: Friday)\n- Book dentist appointment\n- Draft team retro notes\n- Reply to 12 unread emails\n### Prioritized Plan (Eisenhower Matrix)\n- Urgent & Important: Review vendor contract (Fri)\n- Important Not Urgent: Q3 board deck (block 2h Tue)\n- Urgent Not Important: Unread emails (batch 30min)\n- Delegate/Defer: Retro notes (ask Sasha to draft)\n### Schedule\n- Tue 09:00-11:00: Board deck deep work\n- Wed 10:00-11:00: Contract review\n### Next Actions\n- [ ] Draft deck outline\n- [ ] Send contract to legal for review\n- [ ] Set reminder: vendor deadline Fri 17:00",
+    relatedTools: ["chatgpt", "claude", "notion-ai"],
   }};
 
 export async function getStaticPaths() {
@@ -3212,20 +3233,23 @@ export async function getStaticPaths() {
     "any-ml-spec-d",
     "chatgpt-retirement",
     "any-tool-builder",
-    "chatgpt-competitor-analysis"  ];
+    "chatgpt-competitor-analysis",
+    "claude-sow-doc",
+    "chatgpt-todo"  ];
   return slugs.map(slug => ({ params: { slug }, props: { slug } }));
 }
 
 const { slug } = Astro.props;
 if (!promptData[slug]) return Astro.redirect('/prompts/', 301);
 const pageLang = Astro.currentLocale || "en";
+const hasZhSibling = zhPromptSlugs.has(slug);
 const pd = promptData[slug] || { title: slug.replace(/-/g, ' '), description: '', tags: [], useCase: '', eexampleOutput: '', relatedTools: [] };
 const title = pd.title;
 const description = pd.description || '';
 const tags = pd.tags || [];
 ---
 
-<BaseLayout title={`${title} — AI Prompt Template`} description={description} lang={pageLang}>
+<BaseLayout title={`${title} — AI Prompt Template`} description={description} lang={pageLang} noZhSibling={!hasZhSibling}>
   <article class="legal-page">
     <nav class="breadcrumbs">
       <a href="/">Home</a> &rsaquo;
@@ -3253,8 +3277,8 @@ const tags = pd.tags || [];
         <>
           <h2>Related Tools</h2>
           <div class="tag-row">
-            {pd.relatedTools.map((tid: string) => (
-              <a class="tool-pill" href={`/tools/${tid}/`}>{tid}</a>
+            {pd.relatedTools.filter((tid: string) => toolSet.has(toolAlias[tid] ?? tid)).map((tid: string) => (
+              <a class="tool-pill" href={`/tools/${toolAlias[tid] ?? tid}/`}>{toolAlias[tid] ?? tid}</a>
             ))}
           </div>
         </>

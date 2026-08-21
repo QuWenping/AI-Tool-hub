@@ -17,6 +17,19 @@ faq:
     a: No. AI automates administrative tasks, research, and data entry. Building relationships, negotiating, and closing deals still require human skills. AI makes salespeople more effective, not obsolete.
   - q: What's the ROI of AI for sales teams?
     a: Most teams see ROI within the first month. A complete AI stack costs $50-150 per seat per month. With 5+ hours saved per rep per week, the payback is typically 5-10x.
+  - q: What are the best AI tools for sales outreach?
+    a: ChatGPT and Claude for drafting personalized emails and follow-ups, n8n for automating outreach sequences, and Perplexity for prospect and account research. ElevenLabs is a strong choice when you want AI voice or call handling.
+  - q: Can AI analyze sales calls and meetings?
+    a: Yes. AI meeting assistants transcribe and summarize discovery and sales calls, surface objection patterns, and auto-log action items into your CRM. This is one of the fastest ROI use cases for sales teams.
+related_tools:
+  - chatgpt
+  - claude
+  - n8n
+  - perplexity
+  - elevenlabs
+related_solution: ai-for-marketing
+related_posts:
+  - how-to-use-ai-for-customer-support-2026
 ---
 
 ## Why AI Matters for Sales in 2026

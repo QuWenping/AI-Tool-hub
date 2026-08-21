@@ -87,7 +87,13 @@ const breadcrumbSchema = {
     { "@type": "ListItem", "position": 3, "name": pageLang === "zh" && m.title_zh ? m.title_zh : m.title_en, "item": pageUrl }
   ]
 };
-const faqItems = pageLang === "zh" ? [
+const matchupFaq = Array.isArray(m.faq) ? m.faq : [];
+const faqItems = matchupFaq.length
+  ? matchupFaq.map(f => ({
+      q: pageLang === "zh" ? (f.q_zh || f.q_en || f.q) : (f.q_en || f.q),
+      a: pageLang === "zh" ? (f.a_zh || f.a_en || f.a) : (f.a_en || f.a)
+    }))
+  : (pageLang === "zh" ? [
   { q: `${aNameZh || aName} vs ${bNameZh || bName}：2026 年哪个更好？`, a: `${aNameZh || aName} 和 ${bNameZh || bName} 都是不错的选择。选择 ${aNameZh || aName} 如果你需要 ${aUse}。选择 ${bNameZh || bName} 如果你需要 ${bUse}。` },
   { q: "这次对比是如何进行的？", a: "我们在相同的任务上对两款工具进行了两周的并排测试：写作、编程、图像生成（如适用）和集成。结论反映的是真实的实际操作体验，而非功能列表。" },
   { q: `我可以同时使用 ${aNameZh || aName} 和 ${bNameZh || bName} 吗？`, a: "可以——我们的很多读者同时订阅两者，用于不同任务。定价通常足够低，双订阅对重度用户来说是合理的。" }
@@ -95,7 +101,7 @@ const faqItems = pageLang === "zh" ? [
   { q: aName + " vs " + bName + ": which is better in 2026?", a: "Both " + aName + " and " + bName + " are strong choices. Pick " + aName + " for " + aUse.toLowerCase() + ". Pick " + bName + " for " + bUse.toLowerCase() + "." },
   { q: "How was this comparison done?", a: "We tested both tools side by side for two weeks on the same tasks: writing, coding, image generation (where applicable), and integration. The verdict reflects real hands-on experience, not a feature list." },
   { q: "Can I use both " + aName + " and " + bName + " together?", a: "Yes - many of our readers subscribe to both and use them for different tasks. The pricing is usually low enough that dual subscription is justified for power users." }
-];
+]);
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -122,8 +128,8 @@ const seoTitle = pageLang === "zh"
   ? `${aNameZh} vs ${bNameZh}：全面对比评测`
   : m.title_en;
 const seoDesc = pageLang === "zh"
-  ? `${aNameZh} 和 ${bNameZh} 的全面对比：功能、价格、优缺点及最终结论。`
-  : `Side-by-side comparison of ${aName} vs ${bName}`;
+  ? (m.desc_zh || `${aNameZh} 和 ${bNameZh} 的全面对比：功能、价格、优缺点及最终结论。`)
+  : (m.desc_en || `Side-by-side comparison of ${aName} vs ${bName}`);
 
 ---
 <BaseLayout title={seoTitle} description={seoDesc} lang={pageLang}>

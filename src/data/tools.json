@@ -456,6 +456,34 @@
   "industry_tags": [
    "engineering",
    "software-development"
+  ],
+  "seo_title": {
+   "en": "Cursor Review 2026: The AI Code Editor Tested Hands-On",
+   "zh": "Cursor 评测 2026：AI 代码编辑器实测"
+  },
+  "seo_desc": {
+   "en": "We tested Cursor, the AI code editor with agent mode. Features, pricing, pros & cons, and how it compares for full-stack development in 2026.",
+   "zh": "我们实测了带 Agent 模式的 AI 代码编辑器 Cursor：功能、定价、优缺点，以及 2026 年全栈开发中的表现。"
+  },
+  "faq": [
+   {
+    "q_en": "Is Cursor free to use?",
+    "a_en": "Cursor offers a free tier with limited premium model usage, plus paid plans (Pro and Business) for higher quotas and team features.",
+    "q_zh": "Cursor 免费吗？",
+    "a_zh": "Cursor 提供带有限高级模型额度的免费版，另有 Pro 和 Business 付费套餐提供更高额度和团队功能。"
+   },
+   {
+    "q_en": "How does Cursor compare to VS Code?",
+    "a_en": "Cursor is a VS Code fork, so it keeps the familiar editor and extensions, but adds deep AI features like agent mode, multi-file refactoring, and Tab completion.",
+    "q_zh": "Cursor 与 VS Code 相比如何？",
+    "a_zh": "Cursor 是 VS Code 的分支，保留了熟悉的编辑器和扩展生态，同时加入 Agent 模式、多文件重构和 Tab 补全等深度 AI 能力。"
+   },
+   {
+    "q_en": "Is Cursor good for beginners?",
+    "a_en": "Yes. Cursor works as a normal editor out of the box, and its AI features help beginners learn faster through inline suggestions and natural language edits.",
+    "q_zh": "Cursor 适合初学者吗？",
+    "a_zh": "适合。Cursor 开箱即用，其 AI 能力通过内联建议和自然语言编辑帮助初学者更快上手。"
+   }
   ]
  },
  "sora": {
@@ -1439,6 +1467,34 @@
    "small-business",
    "education",
    "marketing"
+  ],
+  "seo_title": {
+   "en": "Notion AI Review 2026: Smart Writing & Knowledge Management",
+   "zh": "Notion AI 评测 2026：智能写作与知识管理"
+  },
+  "seo_desc": {
+   "en": "Notion AI is built into Notion for inline writing, meeting summaries and database help. Pricing, pros & cons, and how it fits your knowledge workflow.",
+   "zh": "Notion AI 内置于 Notion，提供内联写作、会议摘要和数据库辅助。含定价、优缺点及如何融入你的知识工作流。"
+  },
+  "faq": [
+   {
+    "q_en": "What is Notion AI?",
+    "a_en": "Notion AI is an AI assistant built into Notion that helps with writing, summarizing meetings, generating action items, and working with your databases.",
+    "q_zh": "Notion AI 是什么？",
+    "a_zh": "Notion AI 是内置于 Notion 的 AI 助手，可辅助写作、总结会议、生成行动项以及处理你的数据库。"
+   },
+   {
+    "q_en": "How much does Notion AI cost?",
+    "a_en": "Notion AI is an add-on on top of Notion's paid plans, billed per member per month. There is no permanent free AI tier.",
+    "q_zh": "Notion AI 多少钱？",
+    "a_zh": "Notion AI 是 Notion 付费套餐之上的附加项，按成员每月计费，没有永久免费 AI 额度。"
+   },
+   {
+    "q_en": "Is Notion AI good for meeting notes?",
+    "a_en": "Yes. Notion AI can summarize meeting notes, extract action items, and auto-fill database properties, which makes it popular with teams.",
+    "q_zh": "Notion AI 适合会议记录吗？",
+    "a_zh": "适合。Notion AI 可以总结会议记录、提取行动项并自动填充数据库属性，深受团队欢迎。"
+   }
   ]
  },
  "perplexity": {
@@ -1580,6 +1636,18 @@
    {
     "q_en": "What are Perplexity's main limitations?",
     "a_en": "It is not designed for navigational search, Pro Search can be slower, and answer quality depends on source quality."
+   },
+   {
+    "q_en": "Is Perplexity better than ChatGPT for research?",
+    "a_en": "For questions where sources and citations matter — facts, comparisons, regulatory checks — Perplexity wins because every answer links its sources. ChatGPT is better for drafting, reasoning, and open-ended creative work. For research-first workflows, Perplexity Pro is the stronger tool.",
+    "q_zh": "研究场景下 Perplexity 比 ChatGPT 更好吗？",
+    "a_zh": "对来源与引用重要的问题——事实、对比、合规核查——Perplexity 胜出，因为每条回答都链接来源。ChatGPT 更擅长起草、推理与开放式创意工作。研究优先的工作流，Perplexity Pro 更强。"
+   },
+   {
+    "q_en": "Does Perplexity have a free tier?",
+    "a_en": "Yes. The free tier includes a limited number of Pro Search queries and standard search with citations. Pro Search (multi-step research) is quota-limited on free, while regular answers remain usable.",
+    "q_zh": "Perplexity 有免费版吗？",
+    "a_zh": "有。免费版包含有限次数的 Pro Search 查询与带引用的标准搜索。Pro Search（多步研究）在免费版有配额限制，而常规回答仍可使用。"
    }
   ]
  },
@@ -4913,6 +4981,34 @@
   },
   "industry_tags": [
    "construction"
+  ],
+  "seo_title": {
+   "en": "Taskade Review 2026: AI Team Collaboration & Project Management",
+   "zh": "Taskade 评测 2026：AI 团队协作与项目管理"
+  },
+  "seo_desc": {
+   "en": "Taskade combines an AI assistant with project management - tasks, notes, mind maps and team collaboration in one workspace. Pricing, pros & cons and use cases.",
+   "zh": "Taskade 将 AI 助手与项目管理结合，在一个工作区内管理任务、笔记、思维导图和团队协作。含定价、优缺点与适用场景。"
+  },
+  "faq": [
+   {
+    "q_en": "What is Taskade?",
+    "a_en": "Taskade is an AI-powered productivity workspace that combines task management, notes, mind maps and team collaboration in one tool.",
+    "q_zh": "Taskade 是什么？",
+    "a_zh": "Taskade 是一款 AI 赋能的效率工作区，将任务管理、笔记、思维导图和团队协作整合在一个工具中。"
+   },
+   {
+    "q_en": "Is Taskade better than Notion?",
+    "a_en": "Taskade is generally more task-focused and faster to set up, while Notion offers deeper databases and customization. Both are strong - it depends on your workflow.",
+    "q_zh": "Taskade 比 Notion 好吗？",
+    "a_zh": "Taskade 更偏任务导向、上手更快，而 Notion 提供更深的数据库与自定义能力。两者都很强，取决于你的工作流。"
+   },
+   {
+    "q_en": "Does Taskade have a free plan?",
+    "a_en": "Yes. Taskade offers a generous free tier for individuals and small teams, with paid plans adding more AI credits and collaboration features.",
+    "q_zh": "Taskade 有免费版吗？",
+    "a_zh": "有。Taskade 为个人和小团队提供慷慨的免费版，付费套餐增加更多 AI 额度和协作功能。"
+   }
   ]
  },
  "read-ai": {
@@ -8151,6 +8247,14 @@
     "Content",
     "Workflows"
    ]
+  },
+  "seo_title": {
+   "en": "CrewAI Review 2026: Multi-Agent Framework for Real Workflows Tested",
+   "zh": "CrewAI 评测 2026：多智能体协作框架实测"
+  },
+  "seo_desc": {
+   "en": "Hands-on CrewAI review: how this open-source multi-agent collaboration framework performs on real workflows in 2026, plus pricing, pros, cons and alternatives.",
+   "zh": "CrewAI 实测评测：这个开源多智能体协作框架在 2026 年真实工作流中的表现，以及定价、优缺点与替代方案。"
   }
  },
  "huggingface": {
@@ -8571,7 +8675,15 @@
    "crewai",
    "autogpt",
    "dify"
-  ]
+  ],
+  "seo_title": {
+   "en": "LangGraph Review 2026: Stateful Multi-Agent Workflows Tested Hands-On",
+   "zh": "LangGraph 评测 2026：LangChain 多智能体编排框架实测"
+  },
+  "seo_desc": {
+   "en": "Hands-on LangGraph review: how the stateful multi-agent orchestration framework from LangChain handles production workflows in 2026 - features, pricing, pros and cons.",
+   "zh": "LangGraph 实测评测：来自 LangChain 的有状态多智能体编排框架如何在 2026 年支撑生产级工作流——功能、定价、优缺点。"
+  }
  },
  "browser-use": {
   "name": {
@@ -9102,7 +9214,15 @@
     "See review"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Krea AI Review 2026: Real-Time Image & Video Generation Tested Hands-On",
+   "zh": "Krea AI 评测 2026：实时图像与视频生成工具实测"
+  },
+  "seo_desc": {
+   "en": "Our hands-on Krea AI review covers real-time image and video generation, pricing, free tier limits, and how it compares to Midjourney and other image tools in 2026.",
+   "zh": "Krea AI 实测评测：实时图像与视频生成、定价、免费额度，以及与 Midjourney 等图像工具在 2026 年的对比。"
+  }
  },
  "topaz-video": {
   "name": {
@@ -9632,7 +9752,8 @@
    "zh": "Claude API 服务"
   },
   "long_desc": {
-   "en": "Official Claude API with 200K context"
+   "en": "The Anthropic API is the official way to access Claude models - including Sonnet and Opus with a 200K token context window - for production applications. It adds prompt caching, batch processing, structured outputs, and tool use, making it a strong foundation for agents, RAG, and enterprise workflows.",
+   "zh": "Anthropic API 是访问 Claude 模型（包括 200K 上下文窗口的 Sonnet 与 Opus）的官方途径。它提供提示词缓存、批量处理、结构化输出与工具调用，是构建 agent、RAG 与企业级工作流的坚实基础。"
   },
   "scenes": {
    "en": [
@@ -9655,7 +9776,71 @@
     "See review"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Anthropic Claude API Review 2026: Pricing, Models, & Developer Guide",
+   "zh": "Anthropic Claude API 评测 2026：定价、模型与开发者指南"
+  },
+  "seo_desc": {
+   "en": "Anthropic Claude API review: models, pricing, context window, and features like prompt caching and tool use. How it compares to OpenAI and Google APIs.",
+   "zh": "Anthropic Claude API 评测：模型、定价、上下文窗口，以及提示词缓存与工具调用等特性，并对比 OpenAI、Google API。"
+  },
+  "use_cases": {
+   "en": [
+    "Building LLM-powered applications",
+    "Agentic workflows with tool use",
+    "RAG and long-document processing"
+   ],
+   "zh": [
+    "构建 LLM 应用",
+    "带工具调用的 agent 工作流",
+    "RAG 与长文档处理"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Developers",
+    "Startups",
+    "Enterprise AI teams"
+   ],
+   "zh": [
+    "开发者",
+    "初创公司",
+    "企业 AI 团队"
+   ]
+  },
+  "features": {
+   "en": [
+    "200K token context window",
+    "Prompt caching & batch API",
+    "Tool use & structured outputs"
+   ],
+   "zh": [
+    "200K token 上下文窗口",
+    "提示词缓存与批量 API",
+    "工具调用与结构化输出"
+   ]
+  },
+  "faq": [
+   {
+    "q_en": "How is Claude API priced?",
+    "a_en": "Claude API is pay-per-token with distinct input and output rates per model tier (Haiku, Sonnet, Opus). Prompt caching and batch processing reduce effective cost on repeated and high-volume workloads.",
+    "q_zh": "Claude API 如何定价？",
+    "a_zh": "Claude API 按 token 计费，各模型档位（Haiku、Sonnet、Opus）的输入与输出单价不同；提示词缓存与批量处理可降低重复及高并发场景的实际成本。"
+   },
+   {
+    "q_en": "What is Claude's context window?",
+    "a_en": "Claude Sonnet and Opus support a 200K token context window, large enough for multi-file codebases or long documents, with prompt caching to keep repeated context affordable.",
+    "q_zh": "Claude 的上下文窗口多大？",
+    "a_zh": "Claude Sonnet 与 Opus 支持 200K token 上下文窗口，足以容纳多文件代码库或长文档，并可通过提示词缓存降低重复上下文的成本。"
+   },
+   {
+    "q_en": "How does Anthropic API compare to OpenAI or Google APIs?",
+    "a_en": "Anthropic stands out for long-context reasoning, agent-friendly tool use, and careful safety alignment. OpenAI offers a broader ecosystem and image models; Google Gemini excels at multimodal input. Pick by workload and existing stack.",
+    "q_zh": "Anthropic API 与 OpenAI、Google API 相比如何？",
+    "a_zh": "Anthropic 在长上下文推理、面向 agent 的工具调用与安全性方面突出；OpenAI 生态更广并含图像模型；Google Gemini 多模态更强。按工作负载与现有技术栈选择即可。"
+   }
+  ]
  },
  "openai-api": {
   "name": {
@@ -10206,7 +10391,8 @@
    "zh": "AI 音频降噪"
   },
   "long_desc": {
-   "en": "Auto-remove background noise from recordings"
+   "en": "Audo AI is a professional audio cleanup service that uses AI to automatically remove background noise, hum, echo and other artifacts from voice recordings. It is designed for podcasters, content creators and remote workers who need studio-quality audio without any editing skills.",
+   "zh": "Audo AI 是一款专业音频清理服务，利用 AI 自动去除录音中的背景噪音、嗡鸣、回声等杂音，适合播客制作者、内容创作者和远程工作者在不具备剪辑技能的情况下获得录音室级音质。"
   },
   "scenes": {
    "en": [
@@ -10221,15 +10407,91 @@
   "rating": 0,
   "pros": {
    "en": [
-    "See review"
+    "Zero learning curve",
+    "High-quality results for voice",
+    "Fast turnaround"
+   ],
+   "zh": [
+    "零学习成本",
+    "人声处理效果出色",
+    "处理速度快"
    ]
   },
   "cons": {
    "en": [
-    "See review"
+    "Best for voice, less for music",
+    "Requires uploading recordings"
+   ],
+   "zh": [
+    "更适合人声而非音乐",
+    "需要上传录音文件"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Audo AI Review 2026: Best AI Noise Removal for Podcasts & Recordings",
+   "zh": "Audo AI 评测 2026：播客与录音的最佳 AI 降噪工具"
+  },
+  "seo_desc": {
+   "en": "Hands-on Audo AI review: how its AI removes background noise from recordings, pricing, pros & cons, and best use cases for podcasters and creators.",
+   "zh": "Audo AI 深度评测：AI 如何从录音中去除背景噪音、定价、优缺点及播客与创作者的适用场景。"
+  },
+  "use_cases": {
+   "en": [
+    "Podcast noise removal",
+    "Interview audio cleanup",
+    "Voice-over enhancement"
+   ],
+   "zh": [
+    "播客降噪",
+    "访谈录音清理",
+    "配音增强"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Podcasters",
+    "Content creators",
+    "Remote workers"
+   ],
+   "zh": [
+    "播客制作者",
+    "内容创作者",
+    "远程工作者"
+   ]
+  },
+  "features": {
+   "en": [
+    "One-click AI noise removal",
+    "Automatic hum and echo cleanup",
+    "Batch audio processing"
+   ],
+   "zh": [
+    "一键 AI 降噪",
+    "自动去除嗡鸣与回声",
+    "批量音频处理"
+   ]
+  },
+  "faq": [
+   {
+    "q_en": "What does Audo AI do?",
+    "a_en": "Audo AI automatically removes background noise, hum, echo and other artifacts from voice recordings using AI, so you get clean studio-quality audio without manual editing.",
+    "q_zh": "Audo AI 能做什么？",
+    "a_zh": "Audo AI 利用 AI 自动去除人声录音中的背景噪音、嗡鸣、回声等杂音，无需手动剪辑即可获得干净的录音室级音频。"
+   },
+   {
+    "q_en": "Is Audo AI good for podcasters?",
+    "a_en": "Yes. Podcasters use Audo AI to clean up interviews and remote recordings, saving hours of manual noise reduction in editing tools.",
+    "q_zh": "Audo AI 适合播客制作者吗？",
+    "a_zh": "适合。播客制作者用 Audo AI 清理访谈和远程录音，省去在剪辑软件中手动降噪的时间。"
+   },
+   {
+    "q_en": "What are Audo AI alternatives?",
+    "a_en": "Popular alternatives for noise removal and audio cleanup include Adobe Podcast Enhance, Krisp, and Descript's Studio Sound.",
+    "q_zh": "Audo AI 有哪些替代品？",
+    "a_zh": "常见的降噪与音频清理替代品包括 Adobe Podcast Enhance、Krisp 和 Descript 的 Studio Sound。"
+   }
+  ]
  },
  "adobe-podcast": {
   "name": {
@@ -10875,7 +11137,15 @@
     "See review"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Monica AI Review 2026: All-in-One AI Browser Assistant Tested",
+   "zh": "Monica AI 评测 2026：一站式 AI 浏览器助手实测"
+  },
+  "seo_desc": {
+   "en": "Our Monica AI review covers the all-in-one browser assistant: chat, search, writing and image features, free vs premium pricing, and pros and cons in 2026.",
+   "zh": "Monica AI 实测评测：一站式浏览器助手——聊天、搜索、写作与图像功能，免费版与付费版对比，2026 年优缺点。"
+  }
  },
  "merlin-ai": {
   "name": {
@@ -11536,7 +11806,8 @@
    "zh": "AI 数字人视频"
   },
   "long_desc": {
-   "en": "Create talking head videos from photos and text"
+   "en": "D-ID Pro turns a single photo into a talking avatar that speaks any text you provide, and scales to produce videos at volume via an API. It is widely used for marketing videos, e-learning, localized content and AI presenters.",
+   "zh": "D-ID Pro 能把一张照片变成会说话的数字人，说出你提供的任何文本，并通过 API 规模化产出视频。它被广泛用于营销视频、在线教育、本地化内容和 AI 主播。"
   },
   "scenes": {
    "en": [
@@ -11551,15 +11822,103 @@
   "rating": 0,
   "pros": {
    "en": [
-    "See review"
+    "No studio or actor needed",
+    "Fast, scalable video production",
+    "Multi-language support"
+   ],
+   "zh": [
+    "无需演播室或演员",
+    "快速可扩展的视频生产",
+    "多语言支持"
    ]
   },
   "cons": {
    "en": [
-    "See review"
+    "Avatar realism varies",
+    "Pricing adds up at high volume"
+   ],
+   "zh": [
+    "数字人真实感因素材而异",
+    "高产量时成本上升"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "D-ID Pro Review 2026: AI Talking Avatars for Video at Scale",
+   "zh": "D-ID Pro 评测 2026：规模化生成 AI 数字人视频"
+  },
+  "seo_desc": {
+   "en": "Hands-on D-ID Pro review: creating talking-head videos from photos and text, pricing, pros & cons and use cases for marketing and e-learning.",
+   "zh": "D-ID Pro 深度评测：从照片与文本创建数字人视频，含定价、优缺点及营销与在线教育场景。"
+  },
+  "use_cases": {
+   "en": [
+    "Talking-head videos from photos",
+    "Marketing & ad videos",
+    "Localized multi-language content"
+   ],
+   "zh": [
+    "照片生成数字人视频",
+    "营销与广告视频",
+    "多语言本地化内容"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Marketers",
+    "E-learning teams",
+    "Content agencies"
+   ],
+   "zh": [
+    "营销人员",
+    "在线教育团队",
+    "内容代理机构"
+   ]
+  },
+  "features": {
+   "en": [
+    "Photo-to-avatar animation",
+    "Text-to-speech lip sync",
+    "API for volume production"
+   ],
+   "zh": [
+    "照片到数字人动画",
+    "文本转语音唇形同步",
+    "支持批量生产的 API"
+   ]
+  },
+  "faq": [
+   {
+    "q_en": "What is D-ID Pro used for?",
+    "a_en": "D-ID Pro creates talking-head videos from a single photo and text, and is used for marketing, e-learning and AI presenters at scale.",
+    "q_zh": "D-ID Pro 用来做什么？",
+    "a_zh": "D-ID Pro 用一张照片和文本创建数字人视频，用于营销、在线教育和大规模 AI 主播。"
+   },
+   {
+    "q_en": "Can D-ID Pro clone my voice?",
+    "a_en": "D-ID supports voice cloning for consistent presenter voices, alongside a library of stock voices and multi-language TTS.",
+    "q_zh": "D-ID Pro 能克隆我的声音吗？",
+    "a_zh": "D-ID 支持声音克隆以获得一致的播音员声音，同时提供音库和多语言 TTS。"
+   },
+   {
+    "q_en": "Who should use D-ID Pro?",
+    "a_en": "Marketing teams, e-learning creators and agencies that need scalable presenter-style videos without filming are the primary audience.",
+    "q_zh": "谁适合用 D-ID Pro？",
+    "a_zh": "需要规模化生成主播式视频而无需拍摄的营销团队、在线教育创作者和代理机构是主要受众。"
+   },
+   {
+    "q_en": "How does D-ID compare to HeyGen or Synthesia for talking avatars?",
+    "a_en": "D-ID excels at photorealistic face animation from a single still image, while HeyGen and Synthesia are stronger for scripted, template-heavy studio videos. Choose D-ID when the priority is lifelike presenters at API scale.",
+    "q_zh": "D-ID 与 HeyGen、Synthesia 的数字人相比如何？",
+    "a_zh": "D-ID 擅长用单张照片生成写实的面部动画，HeyGen 与 Synthesia 则更适合模板化的演播室视频。当优先考虑 API 规模下的逼真主持人形象时选 D-ID。"
+   },
+   {
+    "q_en": "Can I create a talking avatar from just one photo with D-ID?",
+    "a_en": "Yes. D-ID's core feature is animating a single still portrait into a talking presenter using the text or audio you provide, without needing multi-angle footage or complex rigging.",
+    "q_zh": "用 D-ID 只凭一张照片就能生成说话头像吗？",
+    "a_zh": "可以。D-ID 的核心能力正是把单张静态人像按你提供的文本或音频动画成说话的主持人，无需多角度素材或复杂绑定。"
+   }
+  ]
  },
  "gliacloud": {
   "name": {
@@ -11688,7 +12047,8 @@
    "zh": "AI 口型同步工具"
   },
   "long_desc": {
-   "en": "Open-source lip sync from audio to video"
+   "en": "Wav2Lip is the open-source standard for lip-syncing video to audio. It takes a video of a person speaking (or singing) and a separate audio track, then adjusts the mouth movements to match — used for dubbing, re-voicing, deepfake-style tests, and AI singing videos. Runs locally, completely free.",
+   "zh": "Wav2Lip 是视频对口型的开源标准。它取一段人物说话（或唱歌）的视频和一条独立音轨，再调整口型使其匹配——用于配音、换声、类 deepfake 测试与 AI 演唱视频。本地运行，完全免费。"
   },
   "scenes": {
    "en": [
@@ -11703,15 +12063,113 @@
   "rating": 0,
   "pros": {
    "en": [
-    "See review"
+    "Free and open source",
+    "Accurate on clear talking heads",
+    "Works with any audio (speech or song)",
+    "Flexible: local or cloud"
+   ],
+   "zh": [
+    "免费开源",
+    "清晰对头部画面准确",
+    "支持任意音频（语音或歌曲）",
+    "部署灵活：本地或云端"
    ]
   },
   "cons": {
    "en": [
-    "See review"
+    "Setup requires a GPU for good speed",
+    "Accuracy drops with angles and occlusion"
+   ],
+   "zh": [
+    "好的速度需要 GPU",
+    "大角度与遮挡下准确度下降"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Wav2Lip (Lipsync) Review 2026: Best Free Open-Source AI Lip Sync Tool",
+   "zh": "Wav2Lip（Lipsync）评测 2026：最佳免费开源 AI 对口型工具"
+  },
+  "seo_desc": {
+   "en": "Wav2Lip syncs any video's lips to any audio track — free and open source. We tested accuracy, setup difficulty, and the best hosted alternatives in 2026.",
+   "zh": "Wav2Lip 能让任意视频的口型与任意音轨同步——免费开源。我们测试了准确度、配置难度，以及 2026 年最好的托管替代方案。"
+  },
+  "use_cases": {
+   "en": [
+    "Dub a video into another language with synced lips",
+    "Replace dialogue in an existing recording",
+    "Sync AI-generated voice (ElevenLabs) to any face",
+    "Create AI singing videos"
+   ],
+   "zh": [
+    "把视频配音成其他语言并对齐口型",
+    "替换既有录音中的对白",
+    "把 AI 生成语音（ElevenLabs）同步到任意人脸",
+    "制作 AI 演唱视频"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Video localizers",
+    "AI content creators",
+    "Deepfake researchers (ethical use)",
+    "Voiceover editors"
+   ],
+   "zh": [
+    "视频本地化从业者",
+    "AI 内容创作者",
+    "深度伪造研究者（合规使用）",
+    "配音剪辑师"
+   ]
+  },
+  "features": {
+   "en": [
+    "Free & open-source",
+    "Syncs to any audio",
+    "Handles song & speech",
+    "Local / cloud deployment",
+    "Large community models"
+   ],
+   "zh": [
+    "免费且开源",
+    "可同步任意音频",
+    "支持歌曲与语音",
+    "本地/云端部署",
+    "社区模型丰富"
+   ]
+  },
+  "faq": [
+   {
+    "q_en": "What is Wav2Lip used for?",
+    "a_en": "Wav2Lip syncs a person's lip movements in a video to a separate audio track. Common uses: dubbing, re-voicing, syncing AI voice to a character, and AI singing videos. It is the open-source standard and completely free.",
+    "q_zh": "Wav2Lip 用来做什么？",
+    "a_zh": "Wav2Lip 把视频中人物的口型与独立音轨同步。常见用途：配音、换声、把 AI 语音同步到角色、AI 演唱视频。它是开源标准且完全免费。"
+   },
+   {
+    "q_en": "How accurate is Wav2Lip?",
+    "a_en": "It is very accurate on frontal, well-lit faces and clear speech. Accuracy drops with heavy head movement, side angles, and glasses or occlusions. For clean talking-head footage it produces convincing sync in most cases.",
+    "q_zh": "Wav2Lip 准确度如何？",
+    "a_zh": "正脸、光线充足、语音清晰时非常准确。大幅头部移动、侧脸、眼镜或遮挡下准确度下降。干净的头部画面素材在大多数情况下都能得到可信的同步。"
+   },
+   {
+    "q_en": "How do I use Wav2Lip with ElevenLabs?",
+    "a_en": "Generate a voiceover with ElevenLabs, then feed the audio plus your video clip into Wav2Lip. The result is a character whose lips match the AI-generated speech — the core pipeline for dubbed AI content and AI singing videos.",
+    "q_zh": "如何把 Wav2Lip 与 ElevenLabs 搭配使用？",
+    "a_zh": "先用 ElevenLabs 生成配音，再把音频与视频片段喂给 Wav2Lip。结果是口型与 AI 生成语音匹配的角色——这是 AI 配音内容与 AI 演唱视频的核心流程。"
+   },
+   {
+    "q_en": "Is Wav2Lip free?",
+    "a_en": "Yes — Wav2Lip is free and open source. You can run it locally on a GPU, use a cloud notebook, or use one of the hosted web tools built on it. Be mindful of consent and deepfake regulations when applying it to real people.",
+    "q_zh": "Wav2Lip 免费吗？",
+    "a_zh": "是的——Wav2Lip 免费且开源。你可以在 GPU 上本地运行、使用云端 notebook，或用基于它的托管网页工具。应用到真人时请注意同意授权与深度伪造法规。"
+   },
+   {
+    "q_en": "What is the best AI lip sync tool in 2026?",
+    "a_en": "For free, open-source, full control: Wav2Lip. For polished hosted results with HD output and avatars: tools like HeyGen, Synthesia, and D-ID. Choose Wav2Lip for flexibility and cost, hosted tools for production polish.",
+    "q_zh": "2026 年最好的 AI 对口型工具是什么？",
+    "a_zh": "免费、开源、完全可控选 Wav2Lip；需要 HD 输出与虚拟形象的精致托管结果，选 HeyGen、Synthesia、D-ID 等。要灵活与成本选 Wav2Lip，要成品质感选托管工具。"
+   }
+  ]
  },
  "aider-ai": {
   "name": {
@@ -11802,7 +12260,8 @@
    "zh": "AI 编程扩展"
   },
   "long_desc": {
-   "en": "AI coding assistant VS Code extension"
+   "en": "Roo Code is an open-source AI coding agent that runs inside VS Code. It works with any model you have an API key for - Claude, GPT, DeepSeek, Gemini - to plan, write, and refactor code across your whole workspace using a Claude Code-style agent interface.",
+   "zh": "Roo Code 是一个运行在 VS Code 内的开源 AI 编程 agent。它支持接入你拥有 API key 的任何模型——Claude、GPT、DeepSeek、Gemini——以类似 Claude Code 的 agent 界面完成跨整个工作区的代码规划、编写与重构。"
   },
   "scenes": {
    "en": [
@@ -11825,7 +12284,71 @@
     "See review"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Roo Code Review 2026: Open-Source AI Coding Agent for VS Code",
+   "zh": "Roo Code 评测 2026：VS Code 开源 AI 编程 Agent"
+  },
+  "seo_desc": {
+   "en": "Roo Code review: the free, open-source VS Code AI coding agent that works with any LLM API. Setup, features, and how it compares to Cursor and Claude Code.",
+   "zh": "Roo Code 评测：这个免费开源的 VS Code AI 编程 agent 可接入任意 LLM API，含安装、功能及与 Cursor、Claude Code 的对比。"
+  },
+  "use_cases": {
+   "en": [
+    "Autonomous code planning & execution",
+    "Multi-file refactoring and bug fixing",
+    "Custom agent modes for different models"
+   ],
+   "zh": [
+    "自主代码规划与执行",
+    "多文件重构与缺陷修复",
+    "为不同模型定制 agent 模式"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Developers",
+    "Open-source contributors",
+    "Teams wanting model flexibility"
+   ],
+   "zh": [
+    "开发者",
+    "开源贡献者",
+    "需要模型灵活性的团队"
+   ]
+  },
+  "features": {
+   "en": [
+    "BYO-model support (Claude / GPT / DeepSeek / Gemini)",
+    "Claude Code-style agent interface in VS Code",
+    "Custom modes and command workflows"
+   ],
+   "zh": [
+    "自带模型接入（Claude / GPT / DeepSeek / Gemini）",
+    "VS Code 内 Claude Code 风格 agent 界面",
+    "自定义模式与命令工作流"
+   ]
+  },
+  "faq": [
+   {
+    "q_en": "How is Roo Code different from Cursor or GitHub Copilot?",
+    "a_en": "Cursor and Copilot lock you into their model stack. Roo Code is model-agnostic: bring any API key and the agent plans and executes multi-file changes in VS Code, which matters for teams that prefer open models or mix providers.",
+    "q_zh": "Roo Code 与 Cursor、GitHub Copilot 有何不同？",
+    "a_zh": "Cursor 和 Copilot 绑定各自的模型栈。Roo Code 与模型无关：带上任意 API key 即可让 agent 在 VS Code 内规划并执行多文件改动，这对偏好开源模型或混用供应商的团队很重要。"
+   },
+   {
+    "q_en": "Is Roo Code really free?",
+    "a_en": "Roo Code itself is free and open-source. You only pay for the model API usage you bring yourself, which can be much cheaper than per-seat AI IDE subscriptions.",
+    "q_zh": "Roo Code 真的免费吗？",
+    "a_zh": "Roo Code 本身免费且开源，你只需为自己接入的模型 API 用量付费，通常比按席位收费的 AI IDE 订阅便宜得多。"
+   },
+   {
+    "q_en": "Can Roo Code run completely locally?",
+    "a_en": "Yes. Because it accepts any model endpoint, you can point it at a local model via Ollama or a localhost endpoint, keeping all code and context on your machine.",
+    "q_zh": "Roo Code 能完全本地运行吗？",
+    "a_zh": "可以。由于它接受任意模型端点，可通过 Ollama 或 localhost 指向本地模型，让代码与上下文全部留在本机。"
+   }
+  ]
  },
  "ollama-api": {
   "name": {
@@ -12531,8 +13054,8 @@
    "midjourney"
   ],
   "seo_title": {
-   "en": "Agnes AI Review 2026: Free Omni-Modal AI API (Text, Image & Video)",
-   "zh": "Agnes AI 评测 2026：免费全模态 AI API（文本、图像与视频）"
+   "en": "Agnes AI Free Omni-Modal API 2026: Text, Image & Video Features, Pricing",
+   "zh": "Agnes AI 免费全模态 API 2026：文本、图像与视频功能与定价"
   },
   "seo_desc": {
    "en": "Agnes AI offers a free omni-modal API — text, image, and video generation with free credits. We tested quality, limits, and whether it's worth using in 2026.",
@@ -12550,8 +13073,64 @@
    {
     "q_en": "What are Agnes AI's limitations?",
     "a_en": "It is a new platform with a growing ecosystem, and some models are still in preview."
+   },
+   {
+    "q_en": "What can I build with the Agnes AI API?",
+    "a_en": "You can build chatbots, RAG pipelines, image and video generators, and coding assistants with a single free API key. Because the platform is omni-modal, one integration covers text, image, and video — which is unusual for a free tier.",
+    "q_zh": "用 Agnes AI API 能构建什么？",
+    "a_zh": "用一个免费 API Key 就能构建聊天机器人、RAG 流程、图像与视频生成器以及编程助手。由于平台是全模态的，一次集成即可覆盖文本、图像与视频——这在免费档中很罕见。"
+   },
+   {
+    "q_en": "How does Agnes compare to paid AI APIs?",
+    "a_en": "Agnes trades ecosystem maturity for price: it is completely free, so the main trade-offs are preview-stage models and a smaller community. For prototyping, education, and cost-sensitive projects, it is a strong substitute for paid APIs.",
+    "q_zh": "Agnes 与付费 AI API 相比如何？",
+    "a_zh": "Agnes 用生态成熟度换价格：它完全免费，主要权衡是模型处于预览阶段与社区较小。对原型开发、教育与成本敏感项目，它是付费 API 的有力替代。"
    }
-  ]
+  ],
+  "use_cases": {
+   "en": [
+    "Build a chatbot or RAG app with a free text API",
+    "Generate images and videos without paying per-item",
+    "Prototype an AI product before committing to a paid provider",
+    "Self-host or extend with the open-source Agnes models"
+   ],
+   "zh": [
+    "用免费文本 API 构建聊天机器人或 RAG 应用",
+    "生成图像和视频而无需按次付费",
+    "在投入付费服务商前先用它做 AI 产品原型",
+    "基于开源的 Agnes 模型自托管或扩展"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Indie developers",
+    "AI startups",
+    "Students building projects",
+    "Prototype teams"
+   ],
+   "zh": [
+    "独立开发者",
+    "AI 初创团队",
+    "做项目的学生",
+    "原型验证团队"
+   ]
+  },
+  "features": {
+   "en": [
+    "Free text, image & video API",
+    "Omni-modal unified endpoint",
+    "Open-source models on GitHub",
+    "Agnes Code coding assistant",
+    "Agnes 2.0 Flash fast text model"
+   ],
+   "zh": [
+    "免费的文本、图像与视频 API",
+    "全模态统一接口",
+    "GitHub 开源模型",
+    "Agnes Code 编程助手",
+    "Agnes 2.0 Flash 快速文本模型"
+   ]
+  }
  },
  "manus-ai": {
   "name": {
@@ -12756,7 +13335,8 @@
    "zh": "免费 AI 图像 API"
   },
   "long_desc": {
-   "en": "Free API for Stable Diffusion image generation"
+   "en": "Prodia provides a free API for generating images with Stable Diffusion models. Developers use it to add AI image generation to their apps, prototypes and automation without managing GPU infrastructure, with affordable paid tiers for higher volume.",
+   "zh": "Prodia 提供免费 API，用 Stable Diffusion 模型生成图像。开发者可用它为应用、原型和自动化添加 AI 图像生成能力，而无需管理 GPU 基础设施，高流量时提供经济实惠的付费档位。"
   },
   "scenes": {
    "en": [
@@ -12771,15 +13351,103 @@
   "rating": 0,
   "pros": {
    "en": [
-    "See review"
+    "Free tier to start",
+    "No GPU management",
+    "Good for prototyping"
+   ],
+   "zh": [
+    "免费起步",
+    "无需 GPU 管理",
+    "适合原型开发"
    ]
   },
   "cons": {
    "en": [
-    "See review"
+    "Rate limits on free tier",
+    "Queue time under heavy load"
+   ],
+   "zh": [
+    "免费版有限速",
+    "高负载时需排队"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Prodia Review 2026: Free Stable Diffusion API for Image Generation",
+   "zh": "Prodia 评测 2026：免费的 Stable Diffusion 图像生成 API"
+  },
+  "seo_desc": {
+   "en": "Hands-on Prodia review: the free Stable Diffusion image generation API, pricing, pros & cons and use cases for developers.",
+   "zh": "Prodia 深度评测：免费 Stable Diffusion 图像生成 API，含定价、优缺点与开发者适用场景。"
+  },
+  "use_cases": {
+   "en": [
+    "Add image gen to apps",
+    "Rapid prototyping",
+    "Automated creative pipelines"
+   ],
+   "zh": [
+    "为应用添加图像生成",
+    "快速原型开发",
+    "自动化创意流水线"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Developers",
+    "Indie builders",
+    "Prototype teams"
+   ],
+   "zh": [
+    "开发者",
+    "独立开发者",
+    "原型团队"
+   ]
+  },
+  "features": {
+   "en": [
+    "Free Stable Diffusion API",
+    "Multiple model choices",
+    "Simple REST interface"
+   ],
+   "zh": [
+    "免费 Stable Diffusion API",
+    "多种模型可选",
+    "简单的 REST 接口"
+   ]
+  },
+  "faq": [
+   {
+    "q_en": "Is Prodia really free?",
+    "a_en": "Prodia offers a free tier for experimentation and low-volume use, with paid plans for higher volume and priority access.",
+    "q_zh": "Prodia 真的免费吗？",
+    "a_zh": "Prodia 提供免费档用于试验和低流量使用，高流量和优先访问需要付费套餐。"
+   },
+   {
+    "q_en": "What models does Prodia support?",
+    "a_en": "Prodia supports a range of Stable Diffusion models that you can select per request for different styles and quality levels.",
+    "q_zh": "Prodia 支持哪些模型？",
+    "a_zh": "Prodia 支持一系列 Stable Diffusion 模型，可针对不同风格和质量按请求选择。"
+   },
+   {
+    "q_en": "Who should use Prodia?",
+    "a_en": "Developers and builders who want a simple, free API to add image generation to their products without managing GPU infrastructure.",
+    "q_zh": "谁适合用 Prodia？",
+    "a_zh": "希望用简单免费 API 为产品添加图像生成、又不想管理 GPU 基础设施的开发者与构建者。"
+   },
+   {
+    "q_en": "How does Prodia compare to Stability AI's official API or Replicate?",
+    "a_en": "Prodia offers the same open models (Stable Diffusion, SDXL, Flux) through a free tier and simple API, which makes it an economical choice for high-volume image generation. Replicate gives broader model variety, while the official Stability API adds the newest enterprise features.",
+    "q_zh": "Prodia 与 Stability AI 官方 API、Replicate 相比如何？",
+    "a_zh": "Prodia 通过免费额度与简单 API 提供同一批开源模型（Stable Diffusion、SDXL、Flux），适合高并发生图场景；Replicate 模型种类更广，Stability 官方 API 则提供最新的企业功能。"
+   },
+   {
+    "q_en": "Is Prodia free to use?",
+    "a_en": "Prodia offers a free tier with usage limits and paid plans for higher volume and faster queues, so small projects can start at zero cost and scale up as needed.",
+    "q_zh": "Prodia 免费吗？",
+    "a_zh": "Prodia 提供带使用限额的免费档，以及面向更高并发与更快队列的付费计划，小项目可零成本起步再按需扩容。"
+   }
+  ]
  },
  "stability-dev": {
   "name": {
@@ -12870,7 +13538,8 @@
    "zh": "ML 模型部署平台"
   },
   "long_desc": {
-   "en": "Deploy and serve ML models with serverless infrastructure"
+   "en": "Baseten is a serverless ML platform for deploying, scaling and serving AI models in production. It handles GPU infrastructure, autoscaling and observability so teams can focus on building with models like Stable Diffusion, LLMs and custom fine-tunes.",
+   "zh": "Baseten 是一个无服务器 ML 平台，用于在生产环境中部署、扩展和托管 AI 模型。它处理 GPU 基础设施、自动扩缩与可观测性，让团队专注于基于 Stable Diffusion、LLM 和自定义微调模型构建应用。"
   },
   "scenes": {
    "en": [
@@ -12885,15 +13554,103 @@
   "rating": 0,
   "pros": {
    "en": [
-    "See review"
+    "No infra management",
+    "Pays only for compute used",
+    "Fast time-to-production"
+   ],
+   "zh": [
+    "无需管理基础设施",
+    "仅按使用的算力付费",
+    "快速上线"
    ]
   },
   "cons": {
    "en": [
-    "See review"
+    "Less suited to tiny experiments",
+    "Cost needs monitoring at scale"
+   ],
+   "zh": [
+    "不适合小型试验",
+    "规模大时需监控成本"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Baseten Review 2026: Serverless ML Model Deployment Platform",
+   "zh": "Baseten 评测 2026：无服务器 ML 模型部署平台"
+  },
+  "seo_desc": {
+   "en": "Hands-on Baseten review: deploying and serving ML models with serverless infrastructure, pricing, pros & cons and best use cases.",
+   "zh": "Baseten 深度评测：用无服务器基础设施部署和托管 ML 模型，含定价、优缺点与适用场景。"
+  },
+  "use_cases": {
+   "en": [
+    "Deploy custom fine-tuned models",
+    "Serve Stable Diffusion & LLMs via API",
+    "Scale inference with autoscaling"
+   ],
+   "zh": [
+    "部署自定义微调模型",
+    "通过 API 托管 Stable Diffusion 与 LLM",
+    "自动扩缩推理"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "ML engineers",
+    "AI product teams",
+    "Startups"
+   ],
+   "zh": [
+    "ML 工程师",
+    "AI 产品团队",
+    "创业公司"
+   ]
+  },
+  "features": {
+   "en": [
+    "Serverless GPU inference",
+    "Autoscaling to zero",
+    "Observability & monitoring"
+   ],
+   "zh": [
+    "无服务器 GPU 推理",
+    "自动缩放到零",
+    "可观测性与监控"
+   ]
+  },
+  "faq": [
+   {
+    "q_en": "What is Baseten used for?",
+    "a_en": "Baseten is used to deploy and serve ML models - including fine-tunes, Stable Diffusion and LLMs - on serverless GPU infrastructure.",
+    "q_zh": "Baseten 用来做什么？",
+    "a_zh": "Baseten 用于在无服务器 GPU 基础设施上部署和托管 ML 模型，包括微调模型、Stable Diffusion 和 LLM。"
+   },
+   {
+    "q_en": "How does Baseten pricing work?",
+    "a_en": "Baseten charges for compute actually used with autoscaling, so you pay for GPU time instead of idle capacity.",
+    "q_zh": "Baseten 如何计费？",
+    "a_zh": "Baseten 按实际使用的算力计费并支持自动扩缩，只为 GPU 使用时间付费而非闲置容量。"
+   },
+   {
+    "q_en": "Who should use Baseten?",
+    "a_en": "ML engineers and AI product teams that want to get custom models into production without managing GPU infrastructure.",
+    "q_zh": "谁适合用 Baseten？",
+    "a_zh": "希望在不管理 GPU 基础设施的情况下把自定义模型投入生产的 ML 工程师与 AI 产品团队。"
+   },
+   {
+    "q_en": "How does Baseten compare to Replicate or AWS SageMaker?",
+    "a_en": "Replicate is fastest for prototyping with ready-to-run models, and SageMaker gives full AWS-native control. Baseten sits in between: production-grade autoscaling, GPU management, and API endpoints for models you deploy, with a developer-friendly workflow.",
+    "q_zh": "Baseten 与 Replicate、AWS SageMaker 相比如何？",
+    "a_zh": "Replicate 最适合用现成模型快速原型，SageMaker 提供 AWS 原生的完整控制。Baseten 介于两者之间：为自部署模型提供生产级自动扩缩、GPU 管理与 API 端点，且开发者体验友好。"
+   },
+   {
+    "q_en": "Can Baseten serve open-source models like Llama or Stable Diffusion?",
+    "a_en": "Yes. Baseten supports serving open-source and custom models, including Llama, Stable Diffusion, and fine-tuned variants, with autoscaling to zero and per-request billing.",
+    "q_zh": "Baseten 能托管 Llama、Stable Diffusion 等开源模型吗？",
+    "a_zh": "可以。Baseten 支持托管开源与自定义模型，包括 Llama、Stable Diffusion 及微调版本，支持缩容到零与按请求计费。"
+   }
+  ]
  },
  "replicate-ai": {
   "name": {
@@ -12946,7 +13703,8 @@
    "zh": "AI 模型中心"
   },
   "long_desc": {
-   "en": "Open-source AI model sharing platform with 1000+ models"
+   "en": "ModelScope is Alibaba's open-source AI model hub, hosting thousands of models, datasets, and demos — including Qwen, which competes with the top open models. It offers one-click deployment, a cloud playground, and API access, making it a practical alternative to Hugging Face, especially for Chinese-language models.",
+   "zh": "ModelScope 是阿里的开源 AI 模型平台，托管数千个模型、数据集与演示——包括与顶级开源模型竞争的 Qwen。它提供一键部署、云端试玩与 API 访问，是 Hugging Face 的实用替代，尤其适合中文模型。"
   },
   "scenes": {
    "en": [
@@ -12961,15 +13719,113 @@
   "rating": 0,
   "pros": {
    "en": [
-    "See review"
+    "Strong Chinese-language model selection",
+    "Qwen family available",
+    "Easy one-click deployment",
+    "Cloud playground to test before installing"
+   ],
+   "zh": [
+    "中文模型选择丰富",
+    "包含 Qwen 系列",
+    "一键部署简单",
+    "可在云端先试再装"
    ]
   },
   "cons": {
    "en": [
-    "See review"
+    "Smaller community than Hugging Face",
+    "Documentation mostly Chinese-first"
+   ],
+   "zh": [
+    "社区小于 Hugging Face",
+    "文档以中文优先"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "ModelScope Review 2026: Alibaba's Open-Source AI Model Hub Explained",
+   "zh": "ModelScope 评测 2026：阿里的开源 AI 模型平台详解"
+  },
+  "seo_desc": {
+   "en": "ModelScope hosts 1000+ open-source AI models and datasets. We tested download, deployment, and how it compares to Hugging Face for developers in 2026.",
+   "zh": "ModelScope 托管了 1000+ 开源 AI 模型与数据集。我们测试了下载、部署，以及 2026 年它与 Hugging Face 对开发者的差异。"
+  },
+  "use_cases": {
+   "en": [
+    "Download Qwen and other open models",
+    "Try models in the cloud playground",
+    "Deploy open-source models with one click",
+    "Access the Chinese-language model ecosystem"
+   ],
+   "zh": [
+    "下载 Qwen 等开源模型",
+    "在云端试玩体验模型",
+    "一键部署开源模型",
+    "接触中文模型生态"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "ML engineers",
+    "AI researchers",
+    "Students",
+    "Open-source model users"
+   ],
+   "zh": [
+    "机器学习工程师",
+    "AI 研究人员",
+    "学生",
+    "开源模型使用者"
+   ]
+  },
+  "features": {
+   "en": [
+    "1000+ models & datasets",
+    "One-click deployment",
+    "Cloud playground",
+    "Qwen family models",
+    "API access"
+   ],
+   "zh": [
+    "1000+ 模型与数据集",
+    "一键部署",
+    "云端试玩",
+    "Qwen 系列模型",
+    "API 访问"
+   ]
+  },
+  "faq": [
+   {
+    "q_en": "What is ModelScope?",
+    "a_en": "ModelScope is Alibaba's open-source AI platform — a hub for downloading, sharing, and deploying AI models and datasets. It hosts thousands of models including the Qwen family, offers a cloud playground, one-click deployment, and API access.",
+    "q_zh": "ModelScope 是什么？",
+    "a_zh": "ModelScope 是阿里的开源 AI 平台——下载、分享与部署 AI 模型和数据集的枢纽。它托管包括 Qwen 系列在内的数千个模型，提供云端试玩、一键部署与 API 访问。"
+   },
+   {
+    "q_en": "Is ModelScope better than Hugging Face?",
+    "a_en": "Hugging Face has a bigger community and more English-language models. ModelScope is stronger for Chinese-language models, faster downloads in China, and tighter integration with Alibaba Cloud deployment. Many developers use both.",
+    "q_zh": "ModelScope 比 Hugging Face 更好吗？",
+    "a_zh": "Hugging Face 社区更大、英文模型更多。ModelScope 在中文字模型、国内下载速度与阿里云部署集成上更强。许多开发者两者都用。"
+   },
+   {
+    "q_en": "Is ModelScope free?",
+    "a_en": "Downloading and using the open-source models is free. The cloud playground and one-click deployment have free tiers; heavier GPU usage is billed by Alibaba Cloud.",
+    "q_zh": "ModelScope 免费吗？",
+    "a_zh": "下载与使用开源模型免费。云端试玩与一键部署有免费档；较重 GPU 用量由阿里云计费。"
+   },
+   {
+    "q_en": "What models are on ModelScope?",
+    "a_en": "The standout is Qwen (Alibaba's LLM family, including Qwen2.5 and Qwen3 variants), plus vision models, diffusion models, speech, and datasets. It is a good source for state-of-the-art Chinese-language models.",
+    "q_zh": "ModelScope 上有哪些模型？",
+    "a_zh": "最突出的是 Qwen（阿里的 LLM 系列，含 Qwen2.5 与 Qwen3 变体），另有视觉模型、扩散模型、语音与数据集。是获取最新中文模型的良好来源。"
+   },
+   {
+    "q_en": "Can I deploy a ModelScope model in production?",
+    "a_en": "Yes — ModelScope provides one-click deployment on Alibaba Cloud, Docker images, and export to standard formats (ONNX, GGUF) so you can run models with Ollama or vLLM. It is a practical path from download to production.",
+    "q_zh": "能把 ModelScope 模型部署到生产环境吗？",
+    "a_zh": "可以——ModelScope 提供阿里云一键部署、Docker 镜像与标准格式导出（ONNX、GGUF），可用 Ollama 或 vLLM 运行。从下载到生产是一条实用路径。"
+   }
+  ]
  },
  "magicstudio": {
   "name": {
@@ -13022,7 +13878,8 @@
    "zh": "AI 视频风格迁移"
   },
   "long_desc": {
-   "en": "Transfer painting style to video frames"
+   "en": "EbSynth takes a single styled keyframe and transfers that style across an entire video, frame by frame, using the original footage as a guide. It is the standard tool for the rotoscope-style animation look popularized by indie films and music videos, and it is completely free.",
+   "zh": "EbSynth 用一张风格化关键帧，以原始素材为引导，把该风格逐帧迁移到整段视频。它是独立电影与 MV 中流行的转描动画风格的标配工具，完全免费。"
   },
   "scenes": {
    "en": [
@@ -13037,15 +13894,113 @@
   "rating": 0,
   "pros": {
    "en": [
-    "See review"
+    "Completely free",
+    "Unique painted / rotoscope look",
+    "Runs locally, private",
+    "Mature, widely used workflow"
+   ],
+   "zh": [
+    "完全免费",
+    "独特的绘制/转描风格",
+    "本地运行、隐私安全",
+    "成熟且广泛使用的工作流"
    ]
   },
   "cons": {
    "en": [
-    "See review"
+    "Steep learning curve for quality results",
+    "Manual keyframing required per shot"
+   ],
+   "zh": [
+    "想得到高质量结果有学习曲线",
+    "每个镜头需手动关键帧"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "EbSynth Review 2026: Free AI Style Transfer for Video (Frame-by-Frame Art)",
+   "zh": "EbSynth 评测 2026：免费视频 AI 风格迁移（逐帧艺术化）"
+  },
+  "seo_desc": {
+   "en": "EbSynth transfers a painted or stylized keyframe to an entire video for free. We tested workflow, quality, and how to use it with AI image generators in 2026.",
+   "zh": "EbSynth 免费把绘制或风格化的关键帧迁移到整段视频。我们测试了工作流、画质，以及 2026 年如何与 AI 图像生成器配合使用。"
+  },
+  "use_cases": {
+   "en": [
+    "Turn live-action footage into animated-style video",
+    "Paint one keyframe and propagate it across a shot",
+    "Combine with Midjourney/Flux keyframes for AI animation",
+    "Create art-house music video visuals"
+   ],
+   "zh": [
+    "把真人实拍转成动画风格视频",
+    "绘制一帧关键帧并扩展到整段镜头",
+    "结合 Midjourney/Flux 关键帧做 AI 动画",
+    "制作艺术电影风 MV 画面"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Independent filmmakers",
+    "Animators",
+    "Music video directors",
+    "AI art enthusiasts"
+   ],
+   "zh": [
+    "独立电影人",
+    "动画师",
+    "MV 导演",
+    "AI 艺术爱好者"
+   ]
+  },
+  "features": {
+   "en": [
+    "Free & open-source",
+    "Keyframe style transfer",
+    "Frame-by-frame consistency",
+    "Works with any painting tool",
+    "Local processing, full privacy"
+   ],
+   "zh": [
+    "免费且开源",
+    "关键帧风格迁移",
+    "逐帧一致性",
+    "兼容任意绘画工具",
+    "本地处理，完全隐私"
+   ]
+  },
+  "faq": [
+   {
+    "q_en": "What is EbSynth used for?",
+    "a_en": "EbSynth transfers the style of one painted keyframe onto every frame of a video, guided by the original footage. It creates the hand-drawn rotoscope look used in films, music videos, and AI-animation workflows, and it is completely free.",
+    "q_zh": "EbSynth 用来做什么？",
+    "a_zh": "EbSynth 以原始素材为引导，把一张绘制关键帧的风格迁移到视频每一帧。它创造电影、MV 与 AI 动画工作流中使用的手绘转描效果，完全免费。"
+   },
+   {
+    "q_en": "How do I use EbSynth with Midjourney or Flux?",
+    "a_en": "Generate a stylized keyframe with an AI image tool, then paint or clean it, and use EbSynth to propagate that style across your footage. This two-step workflow — AI keyframe plus EbSynth — is the most popular way to get stylized AI animation in 2026.",
+    "q_zh": "如何把 EbSynth 与 Midjourney 或 Flux 搭配使用？",
+    "a_zh": "用 AI 图像工具生成风格化关键帧，再绘制或清理，然后用 EbSynth 把该风格扩展到整个素材。这种两步工作流——AI 关键帧加 EbSynth——是 2026 年获得风格化 AI 动画最流行的方法。"
+   },
+   {
+    "q_en": "Is EbSynth good quality?",
+    "a_en": "For the rotoscope / painted look it is excellent — that is its purpose. It is not a photoreal video enhancer; it trades realism for a consistent artistic style. Quality depends heavily on how carefully you keyframe and how similar the footage is to the style.",
+    "q_zh": "EbSynth 画质好吗？",
+    "a_zh": "对于转描/绘制风格，它非常出色——这正是它的用途。它不是写实视频增强器；它以真实感换取一致的 artistic 风格。质量很大程度取决于关键帧的细致程度与素材与风格的相似度。"
+   },
+   {
+    "q_en": "Is EbSynth free?",
+    "a_en": "Yes. EbSynth is completely free and open-source. It runs locally on your machine, which also means your footage never leaves your computer.",
+    "q_zh": "EbSynth 免费吗？",
+    "a_zh": "是的。EbSynth 完全免费且开源。它在本地运行，也意味着你的素材永远不会离开电脑。"
+   },
+   {
+    "q_en": "What is the best tool for AI video style transfer?",
+    "a_en": "For the painted-keyframe look, EbSynth is the standard and it is free. For prompt-driven restyling, tools like Runway offer style transfer inside a full editor. For precise control and zero cost, EbSynth remains the pick.",
+    "q_zh": "AI 视频风格迁移最好的工具是什么？",
+    "a_zh": "绘制关键帧风格，EbSynth 是标准且免费。提示词驱动的重塑风格，Runway 等工具在完整编辑器内提供风格迁移。要精准控制且零成本，EbSynth 仍是首选。"
+   }
+  ]
  },
  "scenarios-ai": {
   "name": {
@@ -13060,7 +14015,8 @@
    "zh": "AI 游戏资产生成器"
   },
   "long_desc": {
-   "en": "Generate game assets with custom-trained AI models"
+   "en": "Scenario AI is a platform that lets game studios train and deploy custom AI models to generate consistent, on-brand game assets at scale. It covers characters, environments, textures and concept art, and is built for teams that need production-ready assets rather than one-off images.",
+   "zh": "Scenario AI 是一个让游戏工作室训练并部署定制 AI 模型、规模化生成风格一致且符合品牌要求的游戏资产的平台，覆盖角色、场景、贴图和概念美术，面向需要量产级资产而非一次性图片的团队。"
   },
   "scenes": {
    "en": [
@@ -13075,15 +14031,91 @@
   "rating": 0,
   "pros": {
    "en": [
-    "See review"
+    "Keeps a consistent art style",
+    "Scales asset production for teams",
+    "Custom models trained on your data"
+   ],
+   "zh": [
+    "保持统一美术风格",
+    "可扩展的团队资产生产",
+    "基于你的数据定制模型"
    ]
   },
   "cons": {
    "en": [
-    "See review"
+    "Aimed at teams, less for one-off users",
+    "Requires initial model training setup"
+   ],
+   "zh": [
+    "面向团队而非一次性用户",
+    "需要初始模型训练配置"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Scenario AI Review 2026: AI Game Asset Generation for Teams",
+   "zh": "Scenario AI 评测 2026：面向团队的 AI 游戏资产生成"
+  },
+  "seo_desc": {
+   "en": "Hands-on Scenario AI review: custom-trained AI models for game asset generation, pricing, pros & cons, and use cases for game studios and indie developers.",
+   "zh": "Scenario AI 深度评测：面向游戏资产的定制 AI 模型生成，含定价、优缺点及游戏工作室与独立开发者的适用场景。"
+  },
+  "use_cases": {
+   "en": [
+    "Character & concept art generation",
+    "Consistent asset style across a project",
+    "Prototyping game art quickly"
+   ],
+   "zh": [
+    "角色与概念美术生成",
+    "保持整个项目的资产风格一致",
+    "快速原型游戏美术"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Game studios",
+    "Indie developers",
+    "Art directors"
+   ],
+   "zh": [
+    "游戏工作室",
+    "独立开发者",
+    "美术总监"
+   ]
+  },
+  "features": {
+   "en": [
+    "Custom model training on your art style",
+    "Inference API for in-game generation",
+    "Asset library & versioning"
+   ],
+   "zh": [
+    "基于你的美术风格定制训练模型",
+    "供游戏内生成的推理 API",
+    "资产库与版本管理"
+   ]
+  },
+  "faq": [
+   {
+    "q_en": "What is Scenario AI used for?",
+    "a_en": "Scenario AI is used to generate game assets - characters, environments, textures and concept art - with custom-trained AI models that keep a consistent studio style.",
+    "q_zh": "Scenario AI 用于做什么？",
+    "a_zh": "Scenario AI 用于生成游戏资产（角色、场景、贴图、概念美术），通过定制训练的 AI 模型保持统一的工作室风格。"
+   },
+   {
+    "q_en": "Can Scenario AI keep my art style consistent?",
+    "a_en": "Yes. You train the model on your own art assets, so generated images match your existing style instead of looking generic.",
+    "q_zh": "Scenario AI 能保持我的美术风格一致吗？",
+    "a_zh": "可以。你用自己的美术资产训练模型，生成的图像会贴合既有风格而非千篇一律。"
+   },
+   {
+    "q_en": "Who should use Scenario AI?",
+    "a_en": "Game studios and indie developers who need production-ready, on-style game assets at scale are the primary audience.",
+    "q_zh": "谁适合用 Scenario AI？",
+    "a_zh": "需要规模化、贴合风格的游戏资产的游戏工作室和独立开发者是主要受众。"
+   }
+  ]
  },
  "vizcom-ai": {
   "name": {
@@ -13140,7 +14172,8 @@
    "zh": "AI 内容和图像"
   },
   "long_desc": {
-   "en": "AI content writing and image generation platform"
+   "en": "Marmof is an AI platform that combines content writing, image generation and automation tools in one subscription. It targets marketers and creators who want to produce blog posts, social media copy, ads and images without juggling multiple tools.",
+   "zh": "Marmof 是一个集 AI 内容写作、图像生成与自动化工具于一体的平台，目标用户是希望在一个订阅内产出博客文章、社媒文案、广告和图片，而无需在多个工具间切换的营销人员与创作者。"
   },
   "scenes": {
    "en": [
@@ -13155,15 +14188,103 @@
   "rating": 0,
   "pros": {
    "en": [
-    "See review"
+    "All-in-one content suite",
+    "Easy for non-designers",
+    "Good value vs separate tools"
+   ],
+   "zh": [
+    "一站式内容套件",
+    "非设计师也能轻松上手",
+    "相比分开购买更划算"
    ]
   },
   "cons": {
    "en": [
-    "See review"
+    "Quality varies by template",
+    "Less depth than specialist tools"
+   ],
+   "zh": [
+    "模板质量参差不齐",
+    "深度不及专业工具"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Marmof Review 2026: AI Content Writing & Image Generation in One",
+   "zh": "Marmof 评测 2026：AI 内容写作与图像生成一体"
+  },
+  "seo_desc": {
+   "en": "Hands-on Marmof review: AI content writing, image generation and automation in one platform. Pricing, pros & cons and best use cases.",
+   "zh": "Marmof 深度评测：一个集 AI 内容写作、图像生成与自动化于一体的平台，含定价、优缺点与适用场景。"
+  },
+  "use_cases": {
+   "en": [
+    "Blog & article writing",
+    "Social media copy",
+    "Image generation for content"
+   ],
+   "zh": [
+    "博客与文章写作",
+    "社交媒体文案",
+    "内容配图生成"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Marketers",
+    "Content creators",
+    "Small business owners"
+   ],
+   "zh": [
+    "营销人员",
+    "内容创作者",
+    "小企业主"
+   ]
+  },
+  "features": {
+   "en": [
+    "AI writing with templates",
+    "Image generation",
+    "Workflow automation"
+   ],
+   "zh": [
+    "带模板的 AI 写作",
+    "图像生成",
+    "工作流自动化"
+   ]
+  },
+  "faq": [
+   {
+    "q_en": "What does Marmof do?",
+    "a_en": "Marmof combines AI writing, image generation and automation so creators and marketers can produce content in one subscription.",
+    "q_zh": "Marmof 能做什么？",
+    "a_zh": "Marmof 结合 AI 写作、图像生成与自动化，让创作者和营销人员在单一订阅中产出内容。"
+   },
+   {
+    "q_en": "Is Marmof good for content marketing?",
+    "a_en": "Yes - it provides templates for blogs, social posts, ads and emails, making it a practical all-in-one for content marketing teams.",
+    "q_zh": "Marmof 适合内容营销吗？",
+    "a_zh": "适合——它提供博客、社媒、广告和邮件的模板，是内容营销团队的实用一体化工具。"
+   },
+   {
+    "q_en": "How does Marmof compare to ChatGPT?",
+    "a_en": "Marmof adds purpose-built templates, image generation and workflow automation on top of general AI chat, which can be faster for repeatable marketing tasks.",
+    "q_zh": "Marmof 与 ChatGPT 相比如何？",
+    "a_zh": "Marmof 在通用 AI 对话之上增加了专用模板、图像生成和工作流自动化，对可重复的营销任务更快。"
+   },
+   {
+    "q_en": "How does Marmof compare to dedicated tools like Jasper or Canva?",
+    "a_en": "Marmof bundles long-form AI writing with an AI image generator in one subscription, which suits solo marketers who want a single budget-friendly tool. Teams needing advanced brand voice (Jasper) or professional design workflows (Canva) may still prefer the specialists.",
+    "q_zh": "Marmof 与 Jasper、Canva 等专用工具相比如何？",
+    "a_zh": "Marmof 把长文 AI 写作与 AI 生图打包进一个订阅，适合想要单一低成本工具的独立营销人；需要高级品牌语气（Jasper）或专业设计流程（Canva）的团队仍可选用专业工具。"
+   },
+   {
+    "q_en": "Is Marmof good for SEO blog content?",
+    "a_en": "Marmof includes SEO-focused templates for blog outlines, intros, and article bodies, plus a plagiarism checker, making it a practical option for generating first drafts that you then fact-check and edit.",
+    "q_zh": "Marmof 适合写 SEO 博客内容吗？",
+    "a_zh": "Marmof 提供面向 SEO 的博客大纲、开头与正文模板，并带查重功能，适合生成初稿后再人工核对与润色。"
+   }
+  ]
  },
  "vance-ai": {
   "name": {
@@ -13596,7 +14717,8 @@
    "zh": "AI 编剧助手"
   },
   "long_desc": {
-   "en": "AI co-writer for screenplays and video scripts"
+   "en": "Dramatron is an AI co-writer for screenplays and video scripts. It turns a one-line logline into a structured story — characters, scenes, and dialogue — that a writer can then edit and refine. It is especially useful for breaking story structure fast and getting past writer's block.",
+   "zh": "Dramatron 是一款用于剧本与视频脚本的 AI 协作编剧。它能把一句话的故事梗概扩展成结构化故事——角色、场景与对白——供编剧编辑打磨。特别适合快速搭建故事结构、突破创作瓶颈。"
   },
   "scenes": {
    "en": [
@@ -13611,15 +14733,113 @@
   "rating": 0,
   "pros": {
    "en": [
-    "See review"
+    "Strong at story structure & scene breakdown",
+    "Good continuity across long scripts",
+    "Fast idea exploration and alternatives",
+    "Useful free tier"
+   ],
+   "zh": [
+    "擅长故事结构与分场",
+    "长篇剧本的连贯性好",
+    "快速探索创意与替代方案",
+    "免费版实用"
    ]
   },
   "cons": {
    "en": [
-    "See review"
+    "Dialogue needs a human polish pass",
+    "Output quality varies by genre"
+   ],
+   "zh": [
+    "对白需要人工打磨",
+    "输出质量随类型浮动"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Dramatron Review 2026: AI Screenwriting Co-Writer for Scripts & Storylines",
+   "zh": "Dramatron 评测 2026：AI 编剧助手，写剧本与剧情线"
+  },
+  "seo_desc": {
+   "en": "Dramatron helps writers build screenplays, storylines, and dialogue with AI. We tested how it co-writes scripts, where it shines, and who should use it in 2026.",
+   "zh": "Dramatron 帮助编剧用 AI 构建剧本、剧情线与对白。我们测试了它如何协同写作、优势在哪，以及 2026 年适合谁使用。"
+  },
+  "use_cases": {
+   "en": [
+    "Generate a full story structure from a single logline",
+    "Draft scene-by-scene outlines for a screenplay",
+    "Brainstorm character arcs and dialogue options",
+    "Kickstart YouTube or short-film scripts"
+   ],
+   "zh": [
+    "从一句话梗概生成完整故事结构",
+    "为剧本起草逐场大纲",
+    "头脑风暴角色弧与对白选项",
+    "为 YouTube 或短片脚本开篇"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Screenwriters",
+    "Video creators",
+    "Novelists outlining plots",
+    "Content teams"
+   ],
+   "zh": [
+    "编剧",
+    "视频创作者",
+    "构思情节的小说作者",
+    "内容团队"
+   ]
+  },
+  "features": {
+   "en": [
+    "Logline-to-structure generation",
+    "Character, scene & dialogue drafting",
+    "Story continuity across acts",
+    "Writer-in-the-loop editing",
+    "Free tier available"
+   ],
+   "zh": [
+    "梗概到结构生成",
+    "角色、场景与对白起草",
+    "跨幕故事连贯性",
+    "人机协作编辑",
+    "提供免费版"
+   ]
+  },
+  "faq": [
+   {
+    "q_en": "What is Dramatron used for?",
+    "a_en": "Dramatron is an AI screenwriting co-writer. You give it a one-line logline and it drafts a structured story — synopsis, characters, scenes, and dialogue — that you then edit. Writers use it to break story fast, escape blank-page paralysis, and explore alternatives.",
+    "q_zh": "Dramatron 用来做什么？",
+    "a_zh": "Dramatron 是一款 AI 编剧协作工具。你给它一句话梗概，它会起草结构化故事——梗概、角色、场景与对白——再由你编辑。编剧用它快速破题、摆脱空白页焦虑并探索替代方案。"
+   },
+   {
+    "q_en": "Is Dramatron good for writing a full screenplay?",
+    "a_en": "It is strong for structure, character, and scene generation, and weaker at polished, production-ready dialogue. Treat it as a first-draft engine that produces much of the skeleton — the human writer supplies voice, subtext, and the final pass.",
+    "q_zh": "Dramatron 适合写完整剧本吗？",
+    "a_zh": "它在结构、角色与场景生成上很强，在打磨好的成品对白上较弱。把它当作首稿引擎，产出大部分骨架——由人类编剧补充声音、潜台词与最终打磨。"
+   },
+   {
+    "q_en": "Is Dramatron free?",
+    "a_en": "Dramatron offers a freemium model: a free tier for trying the core story-generation flow, and paid plans for longer scripts, more generations, and commercial use.",
+    "q_zh": "Dramatron 免费吗？",
+    "a_zh": "Dramatron 采用免费增值模式：免费版可体验核心故事生成流程，付费版支持更长剧本、更多生成次数与商用。"
+   },
+   {
+    "q_en": "Can Dramatron write video scripts?",
+    "a_en": "Yes — for YouTube videos, shorts, and web series, Dramatron is especially useful because it structures an entire episode arc in one pass, including hooks, beats, and scene transitions.",
+    "q_zh": "Dramatron 能写视频脚本吗？",
+    "a_zh": "可以——对 YouTube 视频、短剧与网剧，Dramatron 尤其有用，因为它能一次性搭建整集弧光，包括钩子、节拍与场景转场。"
+   },
+   {
+    "q_en": "How does Dramatron compare to ChatGPT for writing?",
+    "a_en": "ChatGPT is a generalist that can write any format on demand. Dramatron is specialized: it maintains story structure and continuity across scenes and acts, which general chat models tend to lose over a long script.",
+    "q_zh": "写作上 Dramatron 与 ChatGPT 相比如何？",
+    "a_zh": "ChatGPT 是通用工具，可按要求写任何格式。Dramatron 是专精工具：它能在场景与幕之间保持故事结构与连贯性，这是通用聊天模型在长剧本中容易丢失的。"
+   }
+  ]
  },
  "bigmp4-video": {
   "name": {
@@ -13634,7 +14854,8 @@
    "zh": "AI 视频放大"
   },
   "long_desc": {
-   "en": "AI-powered video upscaling and enhancement"
+   "en": "BigMP4 is an AI-powered video upscaling and enhancement tool. It takes low-resolution or compressed footage and reconstructs detail — useful for restoring old home videos, upscaling game clips, and improving surveillance or stock footage. Browser-based, with batch-friendly output.",
+   "zh": "BigMP4 是一款 AI 视频放大与增强工具。它把低清或压缩素材重建细节——适合修复老旧家庭录像、放大游戏片段，以及改善监控或素材库画面。基于浏览器，支持批量输出。"
   },
   "scenes": {
    "en": [
@@ -13649,15 +14870,113 @@
   "rating": 0,
   "pros": {
    "en": [
-    "See review"
+    "Simple browser workflow",
+    "Good on clean source footage",
+    "Affordable credit pricing",
+    "No install needed"
+   ],
+   "zh": [
+    "浏览器流程简单",
+    "干净源素材效果佳",
+    "积分价格实惠",
+    "无需安装"
    ]
   },
   "cons": {
    "en": [
-    "See review"
+    "Heavily compressed video can look over-processed",
+    "Free tier limited to short clips"
+   ],
+   "zh": [
+    "重度压缩视频可能显得过度处理",
+    "免费版仅限短视频"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "BigMP4 Review 2026: AI Video Upscaler for Old & Low-Res Footage",
+   "zh": "BigMP4 评测 2026：老片与低清素材的 AI 视频放大工具"
+  },
+  "seo_desc": {
+   "en": "BigMP4 upscales low-resolution and old footage with AI. We tested quality, speed, free limits, and whether it beats Topaz Video AI for your use case.",
+   "zh": "BigMP4 用 AI 放大低清与老旧素材。我们测试了画质、速度、免费限制，以及在你的场景下是否胜过 Topaz Video AI。"
+  },
+  "use_cases": {
+   "en": [
+    "Upscale old home videos to HD or 4K",
+    "Improve game clips before uploading",
+    "Enhance low-quality surveillance or stock footage",
+    "Restore detail in compressed screen recordings"
+   ],
+   "zh": [
+    "把老旧家庭录像放大到高清或 4K",
+    "上传前改善游戏片段画质",
+    "增强低质量监控或素材库画面",
+    "修复压缩屏幕录制的细节"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Home video archivists",
+    "Gamers & streamers",
+    "Video editors",
+    "Small studios"
+   ],
+   "zh": [
+    "家庭录像存档者",
+    "玩家与主播",
+    "视频剪辑师",
+    "小型工作室"
+   ]
+  },
+  "features": {
+   "en": [
+    "AI detail reconstruction",
+    "HD / 4K upscaling presets",
+    "Browser-based, no install",
+    "Batch processing",
+    "Free tier for short clips"
+   ],
+   "zh": [
+    "AI 细节重建",
+    "高清/4K 放大预设",
+    "浏览器运行，无需安装",
+    "批量处理",
+    "短视频免费"
+   ]
+  },
+  "faq": [
+   {
+    "q_en": "What does BigMP4 do?",
+    "a_en": "BigMP4 is an AI video upscaler. It takes low-resolution or compressed video and reconstructs detail to output sharper HD or 4K footage, using AI to fill in information that was lost when the original was compressed.",
+    "q_zh": "BigMP4 是做什么的？",
+    "a_zh": "BigMP4 是一款 AI 视频放大器。它把低清或压缩视频重建细节，输出更清晰的高清或 4K 素材，用 AI 补回原始压缩时丢失的信息。"
+   },
+   {
+    "q_en": "Is BigMP4 better than Topaz Video AI?",
+    "a_en": "BigMP4 is browser-based, cheaper, and easier for quick single clips. Topaz Video AI runs locally with more control, higher maximum quality, and better batch handling for professionals. For one-off upscales, BigMP4 is the faster path.",
+    "q_zh": "BigMP4 比 Topaz Video AI 更好吗？",
+    "a_zh": "BigMP4 基于浏览器、更便宜，快速处理单个片段更简单。Topaz Video AI 本地运行、控制力更强、最高画质更高，对专业者的批处理更好。一次性放大场景，BigMP4 更快。"
+   },
+   {
+    "q_en": "Is BigMP4 free?",
+    "a_en": "BigMP4 offers a free tier for short clips with watermark, and paid credits for longer videos and higher resolutions. Check the pricing page for current limits.",
+    "q_zh": "BigMP4 免费吗？",
+    "a_zh": "BigMP4 对短视频提供带水印的免费档，更长视频与更高分辨率需付费积分。当前限制请查看定价页。"
+   },
+   {
+    "q_en": "Can BigMP4 upscale to 4K?",
+    "a_en": "Yes — HD and 4K presets are available on paid tiers. Quality depends on the source: clean footage upscales very well, while heavily compressed video gains sharpness but not true new detail.",
+    "q_zh": "BigMP4 能放大到 4K 吗？",
+    "a_zh": "可以——付费档提供高清与 4K 预设。画质取决于源素材：干净的素材放大效果很好，而重度压缩视频只会更锐利、并不会真正增加新细节。"
+   },
+   {
+    "q_en": "What is the best video upscaler in 2026?",
+    "a_en": "For browser convenience, BigMP4. For maximum quality and control, Topaz Video AI. For free and open-source, Real-ESRGAN pipelines. For most casual users, a good web upscaler like BigMP4 is the practical default.",
+    "q_zh": "2026 年最好的视频放大器是什么？",
+    "a_zh": "浏览器便捷性选 BigMP4；最高画质与可控性选 Topaz Video AI；免费开源选 Real-ESRGAN 管线。对大多数普通用户，BigMP4 这类优秀的网页放大器是实用默认。"
+   }
+  ]
  },
  "wz-ai": {
   "name": {
@@ -14075,7 +15394,15 @@
     "See review"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Voice123 AI Review 2026: AI Voice Casting Pricing, Features & Alternatives",
+   "zh": "Voice123 AI 评测 2026：AI 配音选角平台定价、功能与替代方案"
+  },
+  "seo_desc": {
+   "en": "Voice123 AI review: how the AI voice casting marketplace works in 2026, pricing, pros and cons, and how it compares to other voiceover tools.",
+   "zh": "Voice123 AI 评测：AI 配音选角平台在 2026 年的使用方式、定价、优缺点，以及与其他配音工具的对比。"
+  }
  },
  "typecast": {
   "name": {
@@ -14181,12 +15508,26 @@
   "rating": 0,
   "pros": {
    "en": [
-    "See review"
+    "Clean separation on studio tracks",
+    "No install required",
+    "Affordable freemium model",
+    "Fast turnaround"
+   ],
+   "zh": [
+    "录音室音轨分离干净",
+    "无需安装",
+    "实惠的免费增值模式",
+    "处理速度快"
    ]
   },
   "cons": {
    "en": [
-    "See review"
+    "Quality drops on heavily mixed tracks",
+    "Batch limits on free tier"
+   ],
+   "zh": [
+    "重度混音音轨上质量下降",
+    "免费档批量受限"
    ]
   },
   "alt": [],
@@ -14210,8 +15551,64 @@
    {
     "q_en": "Who is SongDonkey best for?",
     "a_en": "SongDonkey is best for musicians, DJs, and content creators who need to isolate vocals or instruments from existing tracks."
+   },
+   {
+    "q_en": "How good is SongDonkey's stem separation quality?",
+    "a_en": "On clean studio recordings, vocals, drums, and bass come out clean with minimal artifacts. On heavily mixed or noisy tracks, quality drops — expect some bleed on the low end. It matches top-tier separators like Moises and Lalal.ai on most material.",
+    "q_zh": "SongDonkey 的音轨分离质量如何？",
+    "a_zh": "干净的录音室录音上，人声、鼓、贝斯分离干净、伪影极少。重度混音或嘈杂音轨上质量下降——低频会有一些串音。在大多数素材上它与 Moises、Lalal.ai 等顶级分离器相当。"
+   },
+   {
+    "q_en": "Is SongDonkey free to use?",
+    "a_en": "Yes, there is a free tier that lets you split tracks with basic quality and queue limits. Paid plans add higher fidelity, faster processing, and commercial usage rights for your stems.",
+    "q_zh": "SongDonkey 免费吗？",
+    "a_zh": "是的，免费档可进行基础质量的音轨分离并有队列限制。付费版提供更高保真、更快处理以及音轨的商用权利。"
    }
-  ]
+  ],
+  "use_cases": {
+   "en": [
+    "Separate vocals for karaoke or remix practice",
+    "Isolate bass and drums for music production",
+    "Clean up demo tracks before release",
+    "Create acapella versions of existing songs"
+   ],
+   "zh": [
+    "分离人声用于卡拉OK或混音练习",
+    "分离贝斯与鼓声用于音乐制作",
+    "发布前清理 demo 音轨",
+    "制作现有歌曲的纯人声版本"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Musicians",
+    "DJs & remixers",
+    "Podcast & video editors",
+    "Karaoke creators"
+   ],
+   "zh": [
+    "音乐人",
+    "DJ 与混音师",
+    "播客与视频剪辑师",
+    "卡拉OK制作者"
+   ]
+  },
+  "features": {
+   "en": [
+    "Vocals / drums / bass / other stems",
+    "Browser-based, no install",
+    "High-fidelity AI separation",
+    "Free tier for basic splits",
+    "Batch-friendly workflow"
+   ],
+   "zh": [
+    "人声/鼓/贝斯/其他音轨分离",
+    "浏览器运行，无需安装",
+    "高保真 AI 分离",
+    "基础分离免费",
+    "适合批量处理"
+   ]
+  }
  },
  "sourcegraph": {
   "name": {
@@ -14492,7 +15889,8 @@
    "zh": "AI 代码测试"
   },
   "long_desc": {
-   "en": "AI-powered test generation and code analysis"
+   "en": "Qodo (formerly CodiumAI) is an AI-powered code testing and quality platform. It generates meaningful unit tests, analyzes pull requests for bugs and edge cases, and explains code across your IDE and CI/CD pipeline, helping teams make coverage a habit instead of a chore.",
+   "zh": "Qodo（原 CodiumAI）是一个 AI 驱动的代码测试与质量平台：在 IDE 与 CI/CD 流水线中生成有意义的单元测试、分析 Pull Request 的缺陷与边界情况并解释代码，帮助团队把覆盖率变成习惯而非负担。"
   },
   "scenes": {
    "en": [
@@ -14515,7 +15913,71 @@
     "See review"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Qodo AI Review 2026: AI Test Generation & Code Quality Platform",
+   "zh": "Qodo AI 评测 2026：AI 测试生成与代码质量平台"
+  },
+  "seo_desc": {
+   "en": "Qodo AI review: generate unit tests, analyze pull requests, and improve code quality with AI. Pricing, features, and comparison to CodiumAI alternatives.",
+   "zh": "Qodo AI 评测：用 AI 生成单元测试、分析 Pull Request、提升代码质量，含定价、功能与同类工具对比。"
+  },
+  "use_cases": {
+   "en": [
+    "Automatic unit test generation",
+    "Pull request bug & edge-case analysis",
+    "Code explanation and onboarding"
+   ],
+   "zh": [
+    "自动生成单元测试",
+    "Pull Request 缺陷与边界分析",
+    "代码解释与新人上手"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Developers",
+    "QA engineers",
+    "Engineering managers"
+   ],
+   "zh": [
+    "开发者",
+    "测试工程师",
+    "工程管理者"
+   ]
+  },
+  "features": {
+   "en": [
+    "AI-generated test cases from code",
+    "PR-level quality feedback in CI",
+    "IDE integration for instant analysis"
+   ],
+   "zh": [
+    "从代码生成测试用例",
+    "CI 中提供 PR 级质量反馈",
+    "IDE 集成即时分析"
+   ]
+  },
+  "faq": [
+   {
+    "q_en": "How does Qodo generate tests?",
+    "a_en": "Qodo analyzes your code's behavior and generates test cases that cover happy paths, edge cases, and error handling, then offers them as pull requests or in-IDE suggestions you can review before committing.",
+    "q_zh": "Qodo 如何生成测试？",
+    "a_zh": "Qodo 分析代码行为并生成覆盖正常路径、边界情况与错误处理的测试用例，然后以 PR 或 IDE 内建议的形式提供，提交前可人工审查。"
+   },
+   {
+    "q_en": "Can Qodo catch bugs in my pull requests?",
+    "a_en": "Yes. Qodo reviews PRs for potential bugs, missing edge cases, and security issues, posting actionable feedback directly in your CI or code review workflow.",
+    "q_zh": "Qodo 能发现我 Pull Request 里的缺陷吗？",
+    "a_zh": "可以。Qodo 会审查 PR 中潜在的缺陷、遗漏的边界情况与安全问题，并在 CI 或代码评审流程中直接给出可执行的反馈。"
+   },
+   {
+    "q_en": "How does Qodo compare to Codecov or SonarQube?",
+    "a_en": "Codecov tracks coverage and SonarQube does static analysis. Qodo generates the tests that raise your coverage and explains issues in natural language, so it complements rather than replaces both.",
+    "q_zh": "Qodo 与 Codecov、SonarQube 相比如何？",
+    "a_zh": "Codecov 追踪覆盖率，SonarQube 做静态分析。Qodo 生成提升覆盖率的测试并用自然语言解释问题，是两者的补充而非替代。"
+   }
+  ]
  },
  "sweep-ai": {
   "name": {
@@ -14530,7 +15992,8 @@
    "zh": "AI GitHub 助手"
   },
   "long_desc": {
-   "en": "AI that turns issues into pull requests"
+   "en": "Sweep AI is an AI junior developer that reads your GitHub issues, understands your codebase, and writes the code changes as a pull request for you to review. It automates the boring parts of issue resolution - searching the codebase, writing the diff, and drafting PR descriptions.",
+   "zh": "Sweep AI 是一位 AI 初级开发者：读取你的 GitHub Issue、理解代码库，并把代码改动写成待审查的 Pull Request。它自动化了问题解决的繁琐部分——搜索代码库、编写 diff、起草 PR 描述。"
   },
   "scenes": {
    "en": [
@@ -14545,15 +16008,103 @@
   "rating": 0,
   "pros": {
    "en": [
-    "See review"
+    "Frees up developer time",
+    "Understands repo context",
+    "Good for backlog cleanup"
+   ],
+   "zh": [
+    "解放开发者时间",
+    "理解仓库上下文",
+    "适合清理积压问题"
    ]
   },
   "cons": {
    "en": [
-    "See review"
+    "Best for clear, well-scoped issues",
+    "Needs human review before merge"
+   ],
+   "zh": [
+    "最适合清晰且边界明确的问题",
+    "合并前仍需人工审查"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Sweep AI Review 2026: Turn GitHub Issues Into Pull Requests",
+   "zh": "Sweep AI 评测 2026：将 GitHub Issue 变成 Pull Request"
+  },
+  "seo_desc": {
+   "en": "Hands-on Sweep AI review: how the AI junior developer turns GitHub issues into reviewed pull requests, pricing, pros & cons and best use cases.",
+   "zh": "Sweep AI 深度评测：这个 AI 初级开发者如何把 GitHub Issue 变成可审查的 Pull Request，含定价、优缺点与适用场景。"
+  },
+  "use_cases": {
+   "en": [
+    "Bug fix PRs from issues",
+    "Feature implementation drafts",
+    "Codebase search & navigation"
+   ],
+   "zh": [
+    "从 Issue 生成修复 PR",
+    "功能实现草稿",
+    "代码库搜索与导航"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Developers",
+    "Engineering teams",
+    "Maintainers"
+   ],
+   "zh": [
+    "开发者",
+    "工程团队",
+    "维护者"
+   ]
+  },
+  "features": {
+   "en": [
+    "Issue to PR automation",
+    "Codebase-aware context",
+    "PR description generation"
+   ],
+   "zh": [
+    "Issue 到 PR 的自动化",
+    "理解代码库的上下文",
+    "PR 描述生成"
+   ]
+  },
+  "faq": [
+   {
+    "q_en": "What does Sweep AI do?",
+    "a_en": "Sweep AI reads your GitHub issues, searches your codebase, and generates a pull request with the code changes, so developers review instead of implement from scratch.",
+    "q_zh": "Sweep AI 做什么？",
+    "a_zh": "Sweep AI 读取 GitHub Issue、搜索代码库并生成包含代码改动的 Pull Request，开发者只需审查而无需从零实现。"
+   },
+   {
+    "q_en": "Is Sweep AI reliable?",
+    "a_en": "It works best on clear, well-scoped issues. For ambiguous or cross-cutting changes, human review is required before merging.",
+    "q_zh": "Sweep AI 可靠吗？",
+    "a_zh": "它在清晰、边界明确的问题上表现最佳；对模糊或跨模块的改动，合并前必须人工审查。"
+   },
+   {
+    "q_en": "Who should use Sweep AI?",
+    "a_en": "Engineering teams and maintainers with a backlog of small, well-defined issues benefit most from Sweep AI's automation.",
+    "q_zh": "谁适合用 Sweep AI？",
+    "a_zh": "有大量小而明确问题积压的工程团队和维护者最能从 Sweep AI 的自动化中受益。"
+   },
+   {
+    "q_en": "How does Sweep AI compare to GitHub Copilot or Cursor?",
+    "a_en": "Copilot and Cursor help you write code interactively in the editor. Sweep AI works asynchronously: you file an issue and it returns a complete pull request, so it fits teams that want hands-off backlog cleanup rather than another IDE assistant.",
+    "q_zh": "Sweep AI 与 GitHub Copilot、Cursor 相比如何？",
+    "a_zh": "Copilot 和 Cursor 是在编辑器里交互式辅助写代码。Sweep AI 则是异步工作：提交 Issue 后返回完整 Pull Request，更适合希望自动化清理积压问题的团队，而非又一个 IDE 助手。"
+   },
+   {
+    "q_en": "Can Sweep AI be configured for a specific codebase?",
+    "a_en": "Yes. Sweep AI indexes your repository and can be pointed at specific directories or conventions, letting it generate PRs that match your existing architecture and style instead of generic diffs.",
+    "q_zh": "Sweep AI 能针对特定代码库做配置吗？",
+    "a_zh": "可以。Sweep AI 会索引你的仓库，可指定目录或约定，从而生成匹配现有架构与风格的 PR，而不是通用 diff。"
+   }
+  ]
  },
  "codemod-ai": {
   "name": {
@@ -14662,7 +16213,39 @@
    "en": "We tested Codemod's AI-powered codebase migration and refactoring — framework upgrades, dependency migrations, and large-scale changes. Real pros & cons, pricing, and who it's best for in 2026.",
    "zh": "我们实测了 Codemod 的 AI 代码库迁移与重构能力——框架升级、依赖迁移和大规模变更。真实优缺点、定价，以及 2026 年适合谁。"
   },
-  "alt": []
+  "alt": [],
+  "faq": [
+   {
+    "q_en": "What is Codemod used for?",
+    "a_en": "Codemod automates large-scale codebase migrations and refactoring - framework upgrades, dependency migrations and repository-wide changes - with AI.",
+    "q_zh": "Codemod 用来做什么？",
+    "a_zh": "Codemod 用 AI 自动化大规模代码库迁移与重构——框架升级、依赖迁移和仓库级改动。"
+   },
+   {
+    "q_en": "Is Codemod safe for production code?",
+    "a_en": "Codemod generates changes that are reviewable before merging, so teams validate the AI output against tests before shipping.",
+    "q_zh": "Codemod 对生产代码安全吗？",
+    "a_zh": "Codemod 生成的改动在合并前可审查，团队在发布前会用测试验证 AI 输出。"
+   },
+   {
+    "q_en": "Who should use Codemod?",
+    "a_en": "Engineering teams and platform engineers handling framework upgrades and large-scale refactors benefit most from Codemod.",
+    "q_zh": "谁适合用 Codemod？",
+    "a_zh": "处理框架升级和大型重构的工程团队与平台工程师最能从 Codemod 中受益。"
+   },
+   {
+    "q_en": "How does Codemod compare to Grit or OpenRewrite?",
+    "a_en": "OpenRewrite is a JVM-centric recipe ecosystem and Grit is a multi-language migration engine; Codemod builds on similar codemod technology but adds an AI agent that writes and executes the migration recipes for you, lowering the barrier for legacy codebases.",
+    "q_zh": "Codemod 与 Grit、OpenRewrite 相比如何？",
+    "a_zh": "OpenRewrite 是 JVM 为中心的 recipe 生态，Grit 是多语言迁移引擎；Codemod 基于同类 codemod 技术，但额外提供 AI agent 帮你编写并执行迁移 recipe，降低老代码库的迁移门槛。"
+   },
+   {
+    "q_en": "Can Codemod handle framework upgrades like React 17 to 18?",
+    "a_en": "Yes. Framework migrations are a core use case. Codemod's agent analyzes the codebase and applies framework-specific codemods, flagging manual steps that still require developer attention.",
+    "q_zh": "Codemod 能处理 React 17 到 18 之类的框架升级吗？",
+    "a_zh": "可以。框架迁移是核心场景。Codemod 的 agent 会分析代码库并应用框架专属的 codemod，同时标出仍需开发者手工处理的部分。"
+   }
+  ]
  },
  "bloop-ai": {
   "name": {
@@ -14677,7 +16260,8 @@
    "zh": "AI 代码搜索"
   },
   "long_desc": {
-   "en": "Natural language code search across your codebase"
+   "en": "Bloop AI is an AI-powered code search and understanding tool that lets you ask questions about your codebase in natural language. It indexes your repository and answers queries like \"where is the auth logic?\" with precise file and line references.",
+   "zh": "Bloop AI 是一款 AI 驱动的代码搜索与理解工具，让你用自然语言提问代码库。它会索引仓库并回答如「认证逻辑在哪里？」这类问题，并给出精确的文件与行号引用。"
   },
   "scenes": {
    "en": [
@@ -14692,15 +16276,103 @@
   "rating": 0,
   "pros": {
    "en": [
-    "See review"
+    "Works on very large repos",
+    "Answers in context with references",
+    "Great for onboarding"
+   ],
+   "zh": [
+    "适用于超大型仓库",
+    "带引用的上下文回答",
+    "非常适合入职引导"
    ]
   },
   "cons": {
    "en": [
-    "See review"
+    "Read-oriented, not a code generator",
+    "Setup requires indexing the repo"
+   ],
+   "zh": [
+    "偏阅读定位而非代码生成",
+    "需要先对仓库建立索引"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Bloop AI Review 2026: Natural Language Code Search for Large Codebases",
+   "zh": "Bloop AI 评测 2026：大型代码库的自然语言代码搜索"
+  },
+  "seo_desc": {
+   "en": "Hands-on Bloop AI review: how natural language code search works across large codebases, pricing, pros & cons and best use cases.",
+   "zh": "Bloop AI 深度评测：自然语言代码搜索如何在大型代码库中工作，含定价、优缺点与适用场景。"
+  },
+  "use_cases": {
+   "en": [
+    "Natural language code search",
+    "Repo understanding for onboarding",
+    "Locating logic across the codebase"
+   ],
+   "zh": [
+    "自然语言代码搜索",
+    "用于入职的仓库理解",
+    "跨代码库定位逻辑"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Developers",
+    "New hires",
+    "Engineering teams"
+   ],
+   "zh": [
+    "开发者",
+    "新入职员工",
+    "工程团队"
+   ]
+  },
+  "features": {
+   "en": [
+    "Indexes the whole repo",
+    "NL questions with line-level answers",
+    "Fast across large codebases"
+   ],
+   "zh": [
+    "索引整个仓库",
+    "自然语言提问并返回行级答案",
+    "大型代码库中响应快速"
+   ]
+  },
+  "faq": [
+   {
+    "q_en": "What is Bloop AI used for?",
+    "a_en": "Bloop AI is used to search and understand large codebases with natural language questions, returning precise file and line references.",
+    "q_zh": "Bloop AI 用来做什么？",
+    "a_zh": "Bloop AI 用于用自然语言提问来搜索和理解大型代码库，并返回精确的文件与行号引用。"
+   },
+   {
+    "q_en": "Is Bloop AI free?",
+    "a_en": "Bloop offers a free tier for individual use and paid plans for teams and larger repositories.",
+    "q_zh": "Bloop AI 免费吗？",
+    "a_zh": "Bloop 提供个人免费版以及面向团队和更大仓库的付费套餐。"
+   },
+   {
+    "q_en": "Does Bloop AI work on large codebases?",
+    "a_en": "Yes - Bloop is designed to index and search very large repositories quickly, which is its main strength over generic tools.",
+    "q_zh": "Bloop AI 能处理大型代码库吗？",
+    "a_zh": "可以——Bloop 专为快速索引和搜索超大型仓库而设计，这是它相对通用工具的主要优势。"
+   },
+   {
+    "q_en": "How does Bloop compare to GitHub code search or Sourcegraph?",
+    "a_en": "Bloop offers natural-language semantic search over large codebases, so you can ask questions like 'where is payment retry implemented' and get ranked results. Sourcegraph focuses on regex and symbol search, while Bloop adds AI understanding on top of fast Rust-based indexing.",
+    "q_zh": "Bloop 与 GitHub 代码搜索、Sourcegraph 相比如何？",
+    "a_zh": "Bloop 提供大代码库上的自然语言语义搜索，可提问如“支付重试在哪里实现”并得到排序结果；Sourcegraph 侧重正则与符号搜索，Bloop 则在快速 Rust 索引之上叠加了 AI 理解。"
+   },
+   {
+    "q_en": "Does Bloop work with local code and open-source models?",
+    "a_en": "Bloop supports searching local repositories and can pair with local or hosted LLMs, making it suitable for teams that need code intelligence without sending source code to a third-party API.",
+    "q_zh": "Bloop 支持本地代码与开源模型吗？",
+    "a_zh": "Bloop 支持搜索本地仓库，并可搭配本地或托管 LLM，适合不希望把源码发送给第三方 API 的团队。"
+   }
+  ]
  },
  "mutable-ai": {
   "name": {
@@ -15368,7 +17040,15 @@
     "See review"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Pen AI Review 2026: AI Pen Writing Assistant Features, Pricing & Alternatives",
+   "zh": "Pen AI 评测 2026：AI 笔写助手功能、定价与替代方案"
+  },
+  "seo_desc": {
+   "en": "Hands-on Pen AI review: how the AI pen writing assistant works, pricing, pros and cons, and the best alternatives in 2026.",
+   "zh": "Pen AI 实测评测：AI 笔写助手的使用方式、定价、优缺点，以及 2026 年最佳替代方案。"
+  }
  },
  "inkforall-pro": {
   "name": {
@@ -15999,12 +17679,28 @@
   "rating": 0,
   "pros": {
    "en": [
-    "See review"
+    "Saves hours of literature review",
+    "Consensus score summarizes thousands of papers",
+    "Answers are always cited",
+    "Strong for medical and scientific questions"
+   ],
+   "zh": [
+    "节省数小时的文献综述时间",
+    "共识评分概括数千篇论文",
+    "回答始终附带引用",
+    "擅长医学与科学问题"
    ]
   },
   "cons": {
    "en": [
-    "See review"
+    "Weaker for non-scientific questions",
+    "Coverage skews to indexed journals",
+    "Paid tier needed for full depth"
+   ],
+   "zh": [
+    "非科学问题较弱",
+    "覆盖偏向已索引期刊",
+    "完整深度需要付费版"
    ]
   },
   "alt": [],
@@ -16028,8 +17724,64 @@
    {
     "q_en": "Who is Consensus Pro best for?",
     "a_en": "Consensus Pro is best for researchers, students, and professionals who need evidence-based answers grounded in peer-reviewed science."
+   },
+   {
+    "q_en": "Is Consensus Pro better than a regular Google Scholar search?",
+    "a_en": "For a yes/no question backed by science, yes: Consensus reads the abstract of every relevant paper and shows you the distribution of findings. Scholar is better when you already know exactly which paper you want.",
+    "q_zh": "Consensus Pro 比普通的 Google Scholar 搜索更好吗？",
+    "a_zh": "对有科学依据的是/否问题，是的：Consensus 会读取每篇相关论文的摘要并展示结论分布。当你已经确切知道要找哪篇论文时，Scholar 更好。"
+   },
+   {
+    "q_en": "Can Consensus Pro replace reading papers?",
+    "a_en": "No. Use it to find, rank, and summarize evidence — then read the full text of the key papers yourself. The consensus score is a starting point, not a substitute for your own judgment on study quality.",
+    "q_zh": "Consensus Pro 能替代阅读论文吗？",
+    "a_zh": "不能。用它来查找、排序与概括证据——然后自行阅读关键论文全文。共识评分是起点，不能替代你对研究质量的判断。"
    }
-  ]
+  ],
+  "use_cases": {
+   "en": [
+    "Verify a scientific claim before citing it in a report",
+    "Find consensus across hundreds of papers on a research question",
+    "Screen papers by study type, quality, and journal impact",
+    "Speed up literature review for a thesis or grant proposal"
+   ],
+   "zh": [
+    "在报告中引用科学结论前先核实",
+    "在数百篇论文上找研究问题的共识",
+    "按研究类型、质量与期刊影响力筛选论文",
+    "加速论文综述与基金申请资料准备"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Researchers",
+    "Medical professionals",
+    "Graduate students",
+    "Evidence-based writers"
+   ],
+   "zh": [
+    "研究人员",
+    "医疗专业人士",
+    "研究生",
+    "循证写作者"
+   ]
+  },
+  "features": {
+   "en": [
+    "Consensus meter across papers",
+    "Copilot for conversational research",
+    "Study type & quality filters",
+    "Citations to every source",
+    "Millions of papers indexed"
+   ],
+   "zh": [
+    "跨论文共识仪表",
+    "Copilot 对话式研究",
+    "研究类型与质量筛选",
+    "每条结论附来源引用",
+    "数百万篇论文索引"
+   ]
+  }
  },
  "scite-ai": {
   "name": {
@@ -16256,7 +18008,8 @@
    "zh": "AI 论文发现"
   },
   "long_desc": {
-   "en": "AI-powered paper discovery and citation mapping"
+   "en": "Research Rabbit is an AI-powered literature mapping tool. You add seed papers and it builds an interactive citation graph, recommends related work, and tracks new publications - turning paper discovery into a visual, navigable network across fields like AI, medicine, and physics.",
+   "zh": "Research Rabbit 是一个 AI 驱动的文献地图工具：添加种子论文后，它会构建交互式引用图谱、推荐相关文献并跟踪新出版物，把 AI、医学、物理等领域的论文发现变成可视化的可导航网络。"
   },
   "scenes": {
    "en": [
@@ -16279,7 +18032,71 @@
     "See review"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Research Rabbit Review 2026: AI Paper Discovery & Citation Mapping",
+   "zh": "Research Rabbit 评测 2026：AI 论文发现与引用图谱"
+  },
+  "seo_desc": {
+   "en": "Research Rabbit review: discover academic papers through AI citation mapping, get recommendations from seed papers, and track new research. Features and comparison.",
+   "zh": "Research Rabbit 评测：通过 AI 引用图谱发现学术论文，从种子论文获得推荐并跟踪新研究，含功能与对比。"
+  },
+  "use_cases": {
+   "en": [
+    "Literature review & discovery",
+    "Citation network visualization",
+    "Staying updated on new papers"
+   ],
+   "zh": [
+    "文献综述与发现",
+    "引用网络可视化",
+    "跟踪最新论文"
+   ]
+  },
+  "target_audience": {
+   "en": [
+    "Researchers",
+    "PhD students",
+    "Academic librarians"
+   ],
+   "zh": [
+    "科研人员",
+    "博士生",
+    "学术图书馆员"
+   ]
+  },
+  "features": {
+   "en": [
+    "Seed-paper based recommendations",
+    "Interactive citation graphs",
+    "Similar paper & author tracking"
+   ],
+   "zh": [
+    "基于种子论文的推荐",
+    "交互式引用图谱",
+    "相似论文与作者跟踪"
+   ]
+  },
+  "faq": [
+   {
+    "q_en": "How does Research Rabbit recommend papers?",
+    "a_en": "Research Rabbit analyzes the citation graph around your seed papers - who they cite and who cites them - and surfaces similar or related work ranked by relevance, far beyond simple keyword matching.",
+    "q_zh": "Research Rabbit 如何推荐论文？",
+    "a_zh": "Research Rabbit 分析种子论文周边的引用图谱——它们引用了谁、又被谁引用——并按相关性排序展示相似或相关工作，远超简单关键词匹配。"
+   },
+   {
+    "q_en": "Can I collaborate on collections in Research Rabbit?",
+    "a_en": "Yes. You can organize papers into collections and share them with collaborators, which makes systematic reviews and lab-wide reading lists much easier to coordinate.",
+    "q_zh": "Research Rabbit 支持协作吗？",
+    "a_zh": "可以。你可以把论文组织进集合并与协作者共享，让系统性综述和实验室共读清单的协调更轻松。"
+   },
+   {
+    "q_en": "How does Research Rabbit compare to Semantic Scholar or Connected Papers?",
+    "a_en": "Semantic Scholar is a search engine, and Connected Papers builds single-purpose graph visualizations. Research Rabbit combines recommendation, visualization, and ongoing tracking in one free tool designed around your library.",
+    "q_zh": "Research Rabbit 与 Semantic Scholar、Connected Papers 相比如何？",
+    "a_zh": "Semantic Scholar 是搜索引擎，Connected Papers 生成单一用途的图谱可视化。Research Rabbit 把推荐、可视化与持续跟踪整合到一个围绕你的文献库设计、且免费的工具中。"
+   }
+  ]
  },
  "connected-papers": {
   "name": {

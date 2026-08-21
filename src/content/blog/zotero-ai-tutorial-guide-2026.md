@@ -1,20 +1,4 @@
 ---
-title_en: 'Zotero Ai Tutorial Guide (2026): Full Review & Hands-On Test'
-desc_en: 'Complete Zotero Ai tutorial guide for 2026. Hands-on review, step-by-step setup, pricing, pros/cons, and real-world use cases.'
-category: AI TOOL REVIEW + TUTORIAL
-author: AI Tool Hub Research Team
-date: '2026-08-06'
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_45daea9b913d11f1bcfc525400e6dd8f
-    ReservedCode1: MHa6sboiQcrB/1a/PburLJ7X33WlQui8OEm7UjCrmhKzREHM+zuiCoxzt6XZLanI3uFoTPJ7br4yspcAwlYwr/h+ZWy9B0bhkGLO5NA6l29IfqyyJX6PKMdAnMm/FhaoIRiji17RXqrXb+kLwXSBuFHktTTf4OFhZyg/PDWEBGjmCjVXt2N3SsN/ZbA=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_45daea9b913d11f1bcfc525400e6dd8f
-    ReservedCode2: MHa6sboiQcrB/1a/PburLJ7X33WlQui8OEm7UjCrmhKzREHM+zuiCoxzt6XZLanI3uFoTPJ7br4yspcAwlYwr/h+ZWy9B0bhkGLO5NA6l29IfqyyJX6PKMdAnMm/FhaoIRiji17RXqrXb+kLwXSBuFHktTTf4OFhZyg/PDWEBGjmCjVXt2N3SsN/ZbA=
----
-
----
 author: AI Tool Hub Research Team
 category: Tutorial
 tags:

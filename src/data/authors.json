@@ -23,11 +23,10 @@
     },
     "articles": [
       { "title": "ChatGPT vs Claude", "slug": "chatgpt-vs-claude-2026" },
-      { "title": "Claude vs Gemini vs ChatGPT", "slug": "claude-vs-gemini-vs-chatgpt" },
-      { "title": "Best free AI tools for students", "slug": "best-free-ai-tools-students" },
-      { "title": "Best AI tools for content writers", "slug": "best-ai-content-writers" },
-      { "title": "How to use Claude for long documents", "slug": "how-to-use-claude-long-documents" },
-      { "title": "How to write better prompts", "slug": "how-to-write-better-prompts" }
+      { "title": "Claude vs Gemini vs ChatGPT", "slug": "claude-vs-gemini-vs-chatgpt-2026" },
+      { "title": "Best AI tools for content writers", "slug": "best-ai-tools-for-content-writers-2026" },
+      { "title": "How to use Claude for long documents", "slug": "how-to-use-claude-for-long-documents-2026" },
+      { "title": "How to write better prompts", "slug": "how-to-write-better-prompts-2026" }
     ]
   },
   "marcus-webb": {
@@ -54,8 +53,8 @@
     },
     "articles": [
       { "title": "Cursor vs GitHub Copilot", "slug": "cursor-vs-github-copilot-2026" },
-      { "title": "How to use ChatGPT for coding", "slug": "how-to-use-chatgpt-coding" },
-      { "title": "How to set up Cursor for your team", "slug": "how-to-set-up-cursor-team" }
+      { "title": "How to use ChatGPT for coding", "slug": "how-to-use-chatgpt-for-coding-2026" },
+      { "title": "Cursor tutorial: complete guide", "slug": "cursor-tutorial-guide-2026" }
     ]
   },
   "sofia-reyes": {
@@ -82,9 +81,9 @@
     },
     "articles": [
       { "title": "Best AI image generators compared", "slug": "best-ai-image-generators" },
-      { "title": "Best AI video generators", "slug": "best-ai-video-generators" },
+      { "title": "Best AI video generators", "slug": "best-ai-video-generators-2026" },
       { "title": "Best AI tools for designers", "slug": "best-ai-tools-designers" },
-      { "title": "How to write Midjourney prompts", "slug": "how-to-write-midjourney-prompts" }
+      { "title": "How to write Midjourney prompts", "slug": "how-to-write-prompts-for-midjourney-2026" }
     ]
   },
   "daniel-park": {
@@ -110,9 +109,8 @@
       "linkedin": "danielpark-marketing"
     },
     "articles": [
-      { "title": "Best AI tools for small business", "slug": "best-ai-small-business" },
-      { "title": "Best AI tools for marketing", "slug": "best-ai-marketing" },
-      { "title": "Best AI tools for SEO", "slug": "best-ai-seo" }
+      { "title": "Best AI tools for small business", "slug": "best-ai-tools-for-small-business-2026" },
+      { "title": "Surfer SEO tutorial: complete guide", "slug": "surfer-seo-tutorial-guide-2026" }
     ]
   },
   "aisha-patel": {
@@ -138,8 +136,8 @@
       "google_scholar": "Aisha Patel MIT"
     },
     "articles": [
-      { "title": "Best AI research tools", "slug": "best-ai-research-tools" },
-      { "title": "How to use Claude for long documents", "slug": "how-to-use-claude-long-documents" }
+      { "title": "Consensus: AI research tool tutorial", "slug": "consensus-tutorial-guide-2026" },
+      { "title": "How to use Claude for long documents", "slug": "how-to-use-claude-for-long-documents-2026" }
     ]
   }
 }

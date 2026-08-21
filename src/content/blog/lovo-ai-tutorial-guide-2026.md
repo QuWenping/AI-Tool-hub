@@ -1,20 +1,4 @@
 ---
-
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_a59fadac920511f1bcfc525400e6dd8f
-    ReservedCode1: U1KF6tRzJ2xK+3ABWLIQQzD/rEuDjj57iCU6b4ydf4heUOeoPoN+GlCExay8+yR7lLnWsAQAvc4GSJTxUTSyNOsWxHirobHxv/CUu4C9pjJhGlFsSahkj1/5kmqChsu+jIOaN0jtje1h7GNFPQPF/M9N+y5dko9aNQWdi8itzKrdLIg5zYIsGe4mc6w=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_a59fadac920511f1bcfc525400e6dd8f
-    ReservedCode2: U1KF6tRzJ2xK+3ABWLIQQzD/rEuDjj57iCU6b4ydf4heUOeoPoN+GlCExay8+yR7lLnWsAQAvc4GSJTxUTSyNOsWxHirobHxv/CUu4C9pjJhGlFsSahkj1/5kmqChsu+jIOaN0jtje1h7GNFPQPF/M9N+y5dko9aNQWdi8itzKrdLIg5zYIsGe4mc6w=
-title_en: 'Lovo AI Tutorial Guide (2026): Full Review & Hands-On Test'
-desc_en: 'Comprehensive tutorial guide and hands-on review of Lovo AI.'
-category: AI TOOL REVIEW + TUTORIAL
-author: AI Tool Hub Research Team
-date: '2026-07-28'
----
----
 title_en: 'LOVO AI Tutorial Guide (2026): Full Review & Hands-On Test'
 desc_en: 'Complete LOVO AI tutorial guide for 2026. Hands-on review, step-by-step voiceover creation, Genny voice generator, pricing, pros/cons, and real-world use cases.'
 category: AI TOOL REVIEW + TUTORIAL

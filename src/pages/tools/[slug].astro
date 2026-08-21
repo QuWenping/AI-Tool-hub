@@ -118,7 +118,13 @@ const tocSections = [
   { id: "use-cases", label: "Use Cases" },
   ...(audienceList.length > 0 ? [{ id: "target-audience", label: "Target Audience" }] : []),
   { id: "quick-overview", label: "Quick Overview" },
+  { id: "related-tools", label: "Related Tools" },
 ];
+
+// SEO V4：同分类相关工具内链（排除自身，最多 6 个）
+const relatedToolsList = Object.keys(toolsData)
+  .filter(k => !k.startsWith("_") && k !== slug && toolsData[k]?.cat === tool.cat)
+  .slice(0, 6);
 ---
 
 <BaseLayout title={seoTitle} description={seoDescription} keywords={`${toolName} review, AI writing tools, ${slug}, ${tool.cat}`}>
@@ -248,6 +254,23 @@ const tocSections = [
                 <p>{f.a}</p>
               </details>
             ))}
+          </section>
+        )}
+
+        {relatedToolsList.length > 0 && (
+          <section id="related-tools" class="detail-section">
+            <h2>{pageLang === "zh" ? "相关工具" : "Related Tools"}</h2>
+            <div class="card-grid">
+              {relatedToolsList.map(rid => {
+                const rt = toolsData[rid];
+                return (
+                  <a class="info-card" href={"/tools/" + rid + "/"} style="text-decoration:none;color:inherit;">
+                    <h3>{pageLang === "zh" ? (rt.name?.zh || rt.name?.en || rid) : (rt.name?.en || rid)}</h3>
+                    <p>{(rt.short_desc?.en || rt.short_desc || "").slice(0, 90)}</p>
+                  </a>
+                );
+              })}
+            </div>
           </section>
         )}
       </div>

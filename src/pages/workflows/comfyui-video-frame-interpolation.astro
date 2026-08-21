@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const siteUrl = "https://thebestaitoolsreview.com";
+const pageUrl = siteUrl + "/workflows/comfyui-video-frame-interpolation/";
+const faqItems = [
+  { q: "What is ComfyUI video frame interpolation?", a: "A ComfyUI workflow that generates intermediate frames between existing video frames using RIFE or FILM models. It turns a choppy 24fps clip into smooth 60fps, and doubles or quadruples frame count for slow-motion shots without re-recording." },
+  { q: "RIFE or FILM: which interpolation model should I use?", a: "RIFE is faster and better for real-time and high-volume work; FILM produces higher quality for challenging motion. Start with RIFE 4.x for 2x-4x upscaling, and switch to FILM for footage with fast or complex motion where artifacts matter more than speed." },
+  { q: "Can I use frame interpolation to create slow motion?", a: "Yes. Interpolate the clip 4x (24fps to 96fps), then reinterpret it at the original timeline speed - the extra frames let you slow the clip 4x while keeping motion smooth and artifact-free." }
+];
+const faqSchema = { "@context":"https://schema.org","@type":"FAQPage","url":pageUrl,"mainEntity": faqItems.map(f => ({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) };
+const articleSchema = { "@context":"https://schema.org","@type":"Article","headline":"ComfyUI Video Frame Interpolation Pipeline","description":"A production-ready ComfyUI workflow for video frame interpolation. Convert 24fps footage to 60fps or generate smooth slow motion with RIFE and FILM models.","url":pageUrl,"author":{"@type":"Organization","name":"AI Tool Hub"},"publisher":{"@type":"Organization","name":"AI Tool Hub"},"datePublished":"2026-08-19","dateModified":"2026-08-19" };
+const breadcrumb = { "@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":siteUrl},{"@type":"ListItem","position":2,"name":"Workflows","item":siteUrl+"/workflows/"},{"@type":"ListItem","position":3,"name":"Frame Interpolation","item":pageUrl}] };
+const howToSchema = { "@context":"https://schema.org","@type":"HowTo","name":"ComfyUI Video Frame Interpolation","description":"A ComfyUI workflow chaining video loading, frame extraction, RIFE/FILM interpolation, and re-encoding.","url":pageUrl,"step":[
+  {"@type":"HowToStep","position":1,"name":"Load Video","text":"Load the source clip and extract frames with a Video Loader node."},
+  {"@type":"HowToStep","position":2,"name":"Downscale Frames","text":"Resize frames to a workable resolution (e.g. 1280px on the longest side) to keep interpolation fast."},
+  {"@type":"HowToStep","position":3,"name":"Choose Interpolation Model","text":"Select RIFE 4.x for speed or FILM for quality on complex motion."},
+  {"@type":"HowToStep","position":4,"name":"Set Interpolation Factor","text":"Set the factor to 2x (e.g. 24fps to 48fps) or 4x (24fps to 96fps for smooth slow motion)."},
+  {"@type":"HowToStep","position":5,"name":"Run RIFE/FILM Node","text":"Interpolate in batches, watching VRAM; use tiling if frames exceed available memory."},
+  {"@type":"HowToStep","position":6,"name":"Reassemble Frames","text":"Combine the interpolated frames back into a video with a Video Combine node."},
+  {"@type":"HowToStep","position":7,"name":"Encode and Export","text":"Encode to H.264/H.265 with a high bitrate and export the smooth clip."}
+]};
+---
+
+<BaseLayout title="ComfyUI Video Frame Interpolation Pipeline | AI Tool Hub" description="A production-ready ComfyUI workflow for video frame interpolation. Convert 24fps footage to 60fps or generate smooth slow motion with RIFE and FILM models." keywords="ComfyUI, frame interpolation, RIFE, FILM, video upscaling, slow motion, AI video workflow" lang="en">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)}></script>
+  </Fragment>
+  <div class="article">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <a href="/workflows/">Workflows</a> &rsaquo; <span>Frame Interpolation</span></nav>
+    <header class="article-header">
+      <span class="eyebrow">Workflow</span>
+      <h1>ComfyUI Video Frame Interpolation Pipeline</h1>
+      <p>A production-ready ComfyUI workflow that turns choppy 24fps footage into silky 60fps, or generates artifact-free slow motion. Chains video loading, RIFE/FILM interpolation, and re-encoding into one pipeline.</p>
+    </header>
+    <section class="article-body">
+
+      <h2>Pipeline Stages</h2>
+      <ol>
+        <li><strong>Load Video:</strong> import the source clip and extract frames</li>
+        <li><strong>Downscale Frames:</strong> resize to ~1280px on the longest side for fast, stable interpolation</li>
+        <li><strong>Choose Model:</strong> RIFE 4.x for speed, FILM for quality on fast motion</li>
+        <li><strong>Set Factor:</strong> 2x for 24&rarr;48fps, 4x for 24&rarr;96fps (slow motion)</li>
+        <li><strong>Interpolate:</strong> run the RIFE/FILM node in batches, using tiling if VRAM is tight</li>
+        <li><strong>Reassemble:</strong> combine frames back into a video</li>
+        <li><strong>Encode:</strong> H.264/H.265 with a high bitrate, then export</li>
+      </ol>
+
+      <h2>Recommended Parameters</h2>
+      <ul>
+        <li><strong>Interpolation model:</strong> RIFE 4.x (default) or FILM (fast motion)</li>
+        <li><strong>Factor:</strong> 2x standard, 4x for slow motion</li>
+        <li><strong>Working resolution:</strong> 1280px longest side</li>
+        <li><strong>Batch size:</strong> 8-16 frames per pass, adjust to VRAM</li>
+        <li><strong>Output:</strong> H.264 or H.265, CRF 18-20</li>
+      </ul>
+
+      <h2>Use It With Other Workflows</h2>
+      <p>Frame interpolation is the final polish stage in a video pipeline. Run it after generation - pair it with an <a href="/tools/comfyui/">AI video or image model</a> to smooth AI-generated clips, or interpolate footage before editing in tools like <a href="/tools/runway/">Runway</a> or <a href="/tools/genmo-video/">Genmo Video</a>. For image-side control, see the <a href="/workflows/comfyui-style-transfer-pipeline/">ComfyUI Style Transfer Pipeline</a>.</p>
+
+      <h2>FAQ</h2>
+      <div class="card-grid">
+        {faqItems.map(f => (
+          <div class="info-card"><h3>{f.q}</h3><p>{f.a}</p></div>
+        ))}
+      </div>
+      <p class="back-link"><a href="/workflows/">All Workflows</a></p>
+    </section>
+  </div>
+</BaseLayout>

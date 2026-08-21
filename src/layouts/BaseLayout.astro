@@ -8,7 +8,7 @@ import "../styles/global.css";
 import { localePath, navLabel, getTranslations } from "../utils/i18n";
 const allTools = await getCollection("tools");
 const toolsById = Object.fromEntries(allTools.map(t => [t.id, t]));
-const { title, description, keywords, canonical, lang: propLang, fullWidth = false, image, ogType = "website", articleAuthor, pubDate } = Astro.props;
+const { title, description, keywords, canonical, lang: propLang, fullWidth = false, image, ogType = "website", articleAuthor, pubDate, noZhSibling, noEnSibling } = Astro.props;
 const lang = propLang || Astro.currentLocale || "en";
 const t = getTranslations("baseLayout", lang);
 const tc = getTranslations("common", lang);
@@ -27,6 +27,20 @@ const isHome = Astro.url.pathname === "/" || Astro.url.pathname === "/index.html
 // zh 首页由 i18n fallback 渲染，URL pathname 为 "/"，需显式规范到 /zh/ 避免 canonical 指回英文首页
 const isZhHome = isHome && lang === "zh";
 const url = canonical || siteUrl + (isZhHome ? "/zh/" : normalizedPath);
+// 语言兄弟缺失清单（静态页面；页面显式传 props 时以 props 为准）
+const noZhSiblingSet = new Set([
+  "/templates/meeting-minutes/", "/templates/nda-template/", "/templates/prd-template/", "/templates/qbr-template/",
+  "/templates/resume-pm/", "/templates/srs-template/", "/templates/swot-template/", "/templates/ui-prompt-template/",
+  "/workflows/claude-code-review-pipeline/", "/workflows/comfyui-style-transfer-pipeline/", "/workflows/comfyui-video-frame-interpolation/",
+  "/workflows/dify-data-analysis-agent/", "/workflows/dify-sales-assistant/",
+]);
+const noEnSiblingSet = new Set([
+  "/zh/templates/comfyui-img2img/", "/zh/templates/comfyui-upscale/", "/zh/templates/pitch-deck/",
+  "/zh/templates/saas-agreement/", "/zh/templates/tech-report/", "/zh/templates/weekly-status/",
+  "/zh/workflows/mcp-claude-file-system/", "/zh/workflows/n8n-email-triage-agent/",
+]);
+const noZhSiblingFinal = noZhSibling ?? noZhSiblingSet.has(normalizedPath);
+const noEnSiblingFinal = noEnSibling ?? noEnSiblingSet.has(normalizedPath);
 // AdSense policy: no ads on non-content / legal / meta pages
 const noAdsSlugs = ["privacy","terms","contact","about","sponsor","advertise","press-kit","changelog","submit-sitemap","accessibility","editorial-guidelines","methodology","team"];
 const _cleanPath = Astro.url.pathname.replace(/\/+$/, "");
@@ -44,8 +58,8 @@ const ogImage = image ? siteUrl + image : siteUrl + "/og-image.svg";
   <link rel="canonical" href={url}>
   <meta name="citation_title" content={fullTitle}>
   <meta name="citation_author" content="AI Tool Hub Editorial">
-  <meta name="citation_publication_date" content="2026-07-13">
-  <meta name="citation_online_date" content="2026-07-13">
+  <meta name="citation_publication_date" content={pubDate || "2026-07-13"}>
+  <meta name="citation_online_date" content={pubDate || "2026-07-13"}>
   <meta name="citation_publisher" content="AI Tool Hub">
   <meta name="citation_language" content={lang === "zh" ? "zh-CN" : "en-US"}>
   <meta name="author" content="AI Tool Hub Editorial Team">
@@ -83,16 +97,16 @@ const ogImage = image ? siteUrl + image : siteUrl + "/og-image.svg";
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content={image ? fullTitle : "AI Tool Hub - Best AI Tools Directory"}>
   <meta property="og:site_name" content="AI Tool Hub">
-  <link rel="alternate" hreflang="en" href={siteUrl + enPageUrl}>
-  <link rel="alternate" hreflang="zh" href={siteUrl + zhPageUrl}>
-  <link rel="alternate" hreflang="x-default" href={siteUrl + enPageUrl}>
+  {(!isZhPath || !noEnSiblingFinal) && <link rel="alternate" hreflang="en" href={siteUrl + enPageUrl}>}
+  {(isZhPath || !noZhSiblingFinal) && <link rel="alternate" hreflang="zh" href={siteUrl + zhPageUrl}>}
+  {(!isZhPath || !noEnSiblingFinal) && <link rel="alternate" hreflang="x-default" href={siteUrl + enPageUrl}>}
   <meta property="og:locale" content={lang === "zh" ? "zh_CN" : "en_US"}>
   {ogType === "article" && <meta property="article:author" content={articleAuthor || "AI Tool Hub Editorial"}>}
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content={fullTitle}>
   <meta name="twitter:description" content={desc}>
-  <meta name="twitter:image" content={siteUrl + "/twitter-card.svg"}>
+  <meta name="twitter:image" content={ogImage}>
   <meta name="twitter:image:alt" content="AI Tool Hub - Best AI Tools Directory">
   <meta name="twitter:site" content="@aitoolhub">
   <meta name="twitter:creator" content="@aitoolhub">
@@ -185,7 +199,10 @@ const ogImage = image ? siteUrl + image : siteUrl + "/og-image.svg";
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3930397953691472" crossorigin="anonymous"></script>
   )}
 
-  {isHome && <script type="application/json" id="tools-data" set:html={JSON.stringify(Object.fromEntries(allTools.filter(t => t.data.reviewed === true).map(t => [t.id, t.data])))}></script>}
+  {isHome && <script type="application/json" id="tools-data" set:html={JSON.stringify(Object.fromEntries(allTools.filter(t => t.data.reviewed === true).map(t => {
+    const d = t.data;
+    return [t.id, { name: d.name, short_desc: d.short_desc, cat: d.cat, icon: d.icon, featured: d.featured, hidden: d.hidden }];
+  })))}></script>}
   {isHome && <script type="application/json" id="categories-data" set:html={JSON.stringify(categoriesData)}></script>}
 </head>
 <body>
@@ -207,7 +224,9 @@ const ogImage = image ? siteUrl + image : siteUrl + "/og-image.svg";
         <div class="action-group">
           <button id="signin-btn" class="signin-btn" aria-label={t("signInAriaLabel")}>{t("signIn")}</button>
           <button id="theme-toggle" aria-label="Toggle theme"><i id="theme-icon" class="fas fa-moon"></i></button>
-          <a href={lang === "zh" ? enPageUrl : zhPageUrl} hreflang={lang === "zh" ? "en" : "zh"} id="lang-toggle" class="lang-toggle" aria-label={t("switchToEnglish")}>{t("langToggleLabel")}</a>
+          {!(isZhPath ? noEnSiblingFinal : noZhSiblingFinal) && (
+            <a href={lang === "zh" ? enPageUrl : zhPageUrl} hreflang={lang === "zh" ? "en" : "zh"} id="lang-toggle" class="lang-toggle" aria-label={t("switchToEnglish")}>{t("langToggleLabel")}</a>
+          )}
           <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="site-navigation" aria-expanded="false">
             <i class="fas fa-bars" aria-hidden="true"></i>
           </button>
@@ -234,6 +253,8 @@ const ogImage = image ? siteUrl + image : siteUrl + "/og-image.svg";
         <li><a href="/terms/">Terms</a></li>
         <li><a href="/cookie-policy/">Cookie Policy</a></li>
         <li><a href="/editorial-guidelines/">Editorial Policy</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/press-kit/">Press Kit</a></li>
         <li><a href="/advertise/">Advertising</a></li>
         <li><a href="/contact/">Contact</a></li>
       </ul>

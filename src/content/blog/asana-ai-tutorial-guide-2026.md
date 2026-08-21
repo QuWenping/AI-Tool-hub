@@ -1,20 +1,4 @@
 ---
-title_en: 'Asana Ai Tutorial Guide (2026): Full Review & Hands-On Test'
-desc_en: 'Complete Asana Ai tutorial guide for 2026. Hands-on review, step-by-step setup, pricing, pros/cons, and real-world use cases.'
-category: AI TOOL REVIEW + TUTORIAL
-author: AI Tool Hub Research Team
-date: '2026-08-06'
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_4512b58e913d11f1bcfc525400e6dd8f
-    ReservedCode1: w5L/doi46csNpgoOudH+B7tifh6lN+4YuWkfIv6vFAuoLLnU4qP9f95WZgAw3eR22CAEdxt02n9iyplh+FNkBVeQXDGWBYIuGVdgPvWIZsmdoO8Xl9ygoe0XnoDHOL0cK39Ar/9ly7I25Ek8GxkR+o5t9cQCmA00Gg4Qu5tgUI5f7R12Ulsr2PFfYXA=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_4512b58e913d11f1bcfc525400e6dd8f
-    ReservedCode2: w5L/doi46csNpgoOudH+B7tifh6lN+4YuWkfIv6vFAuoLLnU4qP9f95WZgAw3eR22CAEdxt02n9iyplh+FNkBVeQXDGWBYIuGVdgPvWIZsmdoO8Xl9ygoe0XnoDHOL0cK39Ar/9ly7I25Ek8GxkR+o5t9cQCmA00Gg4Qu5tgUI5f7R12Ulsr2PFfYXA=
----
-
----
 author: AI Tool Hub Research Team
 category: Tutorial
 tags:

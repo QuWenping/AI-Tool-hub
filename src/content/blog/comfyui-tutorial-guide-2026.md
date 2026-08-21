@@ -24,6 +24,7 @@ date: '2026-07-30'
 desc_en: A comprehensive tutorial guide to ComfyUI in 2026. Covers installation, node graph workflow fundamentals, ControlNet integration, custom nodes via ComfyUI Manager, and production-ready pipeline building for AI image generation.
 
 ---
+
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. This does not affect our editorial assessment — we recommend tools based on hands-on testing and real-world use, not commission rates.
 
 ## Quick Answer: Should You Use ComfyUI?

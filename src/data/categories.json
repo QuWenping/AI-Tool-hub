@@ -79,7 +79,7 @@
   {
     "slug": "video",
     "title_en": "Best AI Video Generators in 2026",
-    "desc_en": "Text-to-video AI tools for filmmakers and marketers.",
+    "desc_en": "Text-to-video AI tools for filmmakers and marketers, tested on real clips in 2026 - Sora, Runway, Hailuo, Kling, Pika, Luma and more.",
     "tools": [
       "sora",
       "runway",
@@ -99,7 +99,7 @@
       "capcut"
     ],
     "title_zh": "2026 年最佳 AI 视频生成器",
-    "desc_zh": "面向视频创作者和营销人员的文本到视频 AI 工具。"
+    "desc_zh": "面向视频创作者和营销人员的文本到视频 AI 工具，2026 年真实片段实测——Sora、Runway、Hailuo、Kling、Pika、Luma 等。"
   },
   {
     "slug": "audio",
@@ -277,7 +277,7 @@
   {
     "slug": "ai-for-lawyers",
     "title_en": "Best AI Tools for Lawyers in 2026",
-    "desc_en": "AI tools for legal research, contract review, document automation, and case management.",
+    "desc_en": "AI tools for legal research, contract review, document automation and case management - tested on real legal workflows in 2026.",
     "tools": [
       "claude",
       "chatgpt",
@@ -290,7 +290,7 @@
       "n8n"
     ],
     "title_zh": "2026 年最佳律师 AI 工具",
-    "desc_zh": "用于法律研究、合同审查、文档自动化和案件管理的 AI 工具。"
+    "desc_zh": "用于法律研究、合同审查、文档自动化和案件管理的 AI 工具，2026 年在真实法律工作流中实测。"
   },
   {
     "slug": "ai-for-doctors",
@@ -334,7 +334,7 @@
   {
     "slug": "image-generation",
     "title_en": "Best AI Image Generation Tools in 2026",
-    "desc_en": "Text-to-image and AI image generation tools for creators, designers and marketers.",
+    "desc_en": "Text-to-image and AI image generation tools for creators, designers and marketers - tested for photorealism, style control, text-in-image accuracy and commercial use in 2026.",
     "tools": [
       "midjourney",
       "stable-diffusion",
@@ -349,7 +349,7 @@
       "photoroom"
     ],
     "title_zh": "2026 年最佳 AI 图像生成工具",
-    "desc_zh": "面向创作者、设计师和营销人员的文本到图像和 AI 图像生成工具。"
+    "desc_zh": "面向创作者、设计师和营销人员的文本到图像和 AI 图像生成工具——2026 年实测写真度、风格控制、图中文字准确度与商用许可。"
   },
   {
     "slug": "designers",

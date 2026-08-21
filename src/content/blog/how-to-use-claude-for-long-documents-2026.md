@@ -12,6 +12,13 @@ tags:
   - claude
   - document-analysis
   - productivity
+related_tools:
+  - claude
+  - chatgpt
+related_posts:
+  - claude-vs-gemini-vs-chatgpt-2026
+  - best-ai-tools-for-product-managers-2026
+  - bonsai-27b-on-device-ai-phone-2026
 faq:
   - q: How long of a document can Claude handle?
     a: Claude's 200K token context window can process approximately 150,000 words or 500 pages in a single session. This makes it the best AI for full-length books, contracts, and research papers.
@@ -29,6 +36,8 @@ faq:
 | Meeting Transcripts | Very Good | "Extract action items, decisions, and unresolved issues" |
 | Legal Document Review | Very Good | "Flag non-standard terms and regulatory concerns" |
 | Technical Documentation | Excellent | "Summarize API docs, identify breaking changes" |
+
+See Claude in action in our [Claude tool review](/tools/claude/) and the three-way [Claude vs Gemini vs ChatGPT](/blog/claude-vs-gemini-vs-chatgpt-2026/) breakdown — or read the [中文版指南](</zh/blog/how-to-use-claude-for-long-documents-2026/>).
 
 ## Why Claude for Long Documents?
 

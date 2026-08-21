@@ -1,20 +1,4 @@
 ---
-
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_2344e852939911f1a102525400826444
-    ReservedCode1: OYbejRYqxXVmP3KqL3QqB5eAjv4Ni89LC22c0ZET1rQFx9hw4LozkmbD0zN1psE3ba14N0CY4B1LnEXhro8XaHrPEcJvOU5vxMoU1QLvhS/Y2eCdsSRhr7JJYdoZmGxGEBUrC21CJNTekU3gatzM3+EQWDwHxIJHphtoXwdT8YPODS7n+mR5Mp29qws=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_2344e852939911f1a102525400826444
-    ReservedCode2: OYbejRYqxXVmP3KqL3QqB5eAjv4Ni89LC22c0ZET1rQFx9hw4LozkmbD0zN1psE3ba14N0CY4B1LnEXhro8XaHrPEcJvOU5vxMoU1QLvhS/Y2eCdsSRhr7JJYdoZmGxGEBUrC21CJNTekU3gatzM3+EQWDwHxIJHphtoXwdT8YPODS7n+mR5Mp29qws=
-title_en: 'Figma AI Tutorial Guide (2026): Full Review & Hands-On Test'
-desc_en: 'Comprehensive tutorial guide and hands-on review of Figma AI.'
-category: AI TOOL REVIEW + TUTORIAL
-author: AI Tool Hub Research Team
-date: '2026-07-28'
----
----
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3

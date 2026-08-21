@@ -15,6 +15,12 @@ tags:
   - self-hosted
   - productivity
   - rust
+related_tools:
+  - fireflies
+  - otter
+related_posts:
+  - fireflies-vs-otter
+  - ai-meeting-assistant-guide-2026
 author_slug: lin-chen
 faq:
   - q: 'Is Meetily completely free to use?'
@@ -23,6 +29,8 @@ faq:
     a: 'In our testing, Meetily’s Parakeet and Whisper models delivered near-cloud accuracy for clear English speech, though it still trails the very best cloud services on heavy accents, crosstalk, and niche jargon.'
   - q: 'Does Meetily work with Zoom, Google Meet, and Microsoft Teams?'
     a: 'Yes. Meetily captures system audio and microphone input, so it works with any video-call app running on your desktop, including Zoom, Google Meet, Teams, and Slack huddles.'
+  - q: 'How does Meetily compare to Otter and Fireflies?'
+    a: 'Otter and Fireflies are cloud-based and convenient, but your recordings are processed and stored on their servers. Meetily keeps everything local and free — at the cost of more setup effort and needing a capable laptop for on-device transcription and summarization.'
 ---
 
 <p>If you have hesitated to invite Otter or Fireflies into a sensitive sales call, investor update, or therapy appointment because you do not know where the recording ends up, you are not alone. Meetily, a new Rust-based open-source AI meeting assistant that transcribes and summarizes conversations entirely on your own machine, is quickly climbing GitHub’s trending charts as the privacy-first alternative everyone has been waiting for.</p>

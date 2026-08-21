@@ -1,6 +1,0 @@
-﻿13:23:18 [types] Generated 345ms
-13:23:18 [build] output: "static"
-13:23:18 [build] directory: C:\Users\qiura\Projects\active\AIToolHub\dist\
-13:23:18 [build] Collecting build info...
-13:23:18 [build] ✓ Completed in 374ms.
-13:23:18 [build] Building static entrypoints...

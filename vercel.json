@@ -8,35 +8,690 @@
     }
   },
   "redirects": [
-    { "source": "/:path*", "has": [{ "type": "host", "value": "www.thebestaitoolsreview.com" }], "destination": "https://thebestaitoolsreview.com/:path*", "statusCode": 301 },
-    { "source": "/tool/:slug*", "destination": "/tools/:slug*", "statusCode": 301 },
-    { "source": "/zh/tool/:slug*", "destination": "/zh/tools/:slug*", "statusCode": 301 },
-    { "source": "/deep-dive-claude/", "destination": "/blog/claude-vs-gemini-vs-chatgpt-2026/", "statusCode": 301 },
-    { "source": "/zh/deep-dive-claude/", "destination": "/zh/blog/claude-vs-gemini-vs-chatgpt-2026/", "statusCode": 301 },
-    { "source": "/prompts/any-cicd/", "destination": "/prompts/", "statusCode": 301 },
-    { "source": "/prompts/any-etl-spec2/", "destination": "/prompts/", "statusCode": 301 },
-    { "source": "/prompts/any-kb-structure/", "destination": "/prompts/", "statusCode": 301 },
-    { "source": "/prompts/any-react-pat/", "destination": "/prompts/", "statusCode": 301 },
-    { "source": "/prompts/chatgpt-biz-plan/", "destination": "/prompts/", "statusCode": 301 },
-    { "source": "/prompts/cursor-worker/", "destination": "/prompts/", "statusCode": 301 },
-    { "source": "/prompts/mj-landscape/", "destination": "/prompts/", "statusCode": 301 },
-    { "source": "/zh/prompts/any-cicd/", "destination": "/zh/prompts/", "statusCode": 301 },
-    { "source": "/zh/prompts/any-etl-spec2/", "destination": "/zh/prompts/", "statusCode": 301 },
-    { "source": "/zh/prompts/any-kb-structure/", "destination": "/zh/prompts/", "statusCode": 301 },
-    { "source": "/zh/prompts/any-react-pat/", "destination": "/zh/prompts/", "statusCode": 301 },
-    { "source": "/zh/prompts/chatgpt-biz-plan/", "destination": "/zh/prompts/", "statusCode": 301 },
-    { "source": "/zh/prompts/cursor-worker/", "destination": "/zh/prompts/", "statusCode": 301 },
-    { "source": "/zh/prompts/mj-landscape/", "destination": "/zh/prompts/", "statusCode": 301 },
-    { "source": "/:path((?!.*\\.)[^?#]+[^/])", "destination": "/:path/", "statusCode": 301 }
+    {
+      "source": "/deep-dive-chatgpt/",
+      "destination": "/blog/chatgpt-tutorial-guide-2026/",
+      "statusCode": 301
+    },
+    {
+      "source": "/deep-dive-cursor/",
+      "destination": "/blog/cursor-tutorial-guide-2026/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/submit-prompt/",
+      "destination": "/submit-tool/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/best-ai-tools-for-designers-2026/",
+      "destination": "/blog/best-ai-tools-designers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/free-ai-image-generator-2026/",
+      "destination": "/blog/best-ai-image-generators/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/free-ai-logo-maker-2026/",
+      "destination": "/best/designers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/free-ai-voice-generator-2026/",
+      "destination": "/best/audio/",
+      "statusCode": 301
+    },
+    {
+      "source": "/best/design/",
+      "destination": "/best/designers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/best/ecommerce/",
+      "destination": "/best/small-business/",
+      "statusCode": 301
+    },
+    {
+      "source": "/best/marketing/",
+      "destination": "/best/content-writing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/best/social-media/",
+      "destination": "/best/content-writing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/best/translation/",
+      "destination": "/best/text/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best/ai-for-teachers/",
+      "destination": "/zh/solutions/ai-for-education/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/best/students/",
+      "destination": "/zh/solutions/ai-for-students/",
+      "statusCode": 301
+    },
+    {
+      "source": "/templates/comfyui-img2img/",
+      "destination": "/templates/comfyui-txt2img/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/author/sofia-reyes/",
+      "destination": "/author/sofia-reyes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/vs/bloop-ai-vs-cursor/",
+      "destination": "/vs/",
+      "statusCode": 301
+    },
+    {
+      "source": "/vs/descript-vs-runway/",
+      "destination": "/vs/",
+      "statusCode": 301
+    },
+    {
+      "source": "/vs/stable-diffusion-vs-ideogram/",
+      "destination": "/vs/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/vs/consensus-pro-vs-paperpile/",
+      "destination": "/zh/vs/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/vs/naturalreader-vs-speechify/",
+      "destination": "/zh/vs/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/vs/notion-ai-vs-coda-ai/",
+      "destination": "/zh/vs/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/vs/sweep-ai-vs-cursor/",
+      "destination": "/zh/vs/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/any-brand-guidelines/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/any-docker/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/any-llm-eval/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/any-marketing-funnel/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/any-ml-pipeline/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/any-rag-chunk/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/any-react-spec/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/any-thumbnail/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/any-tiktok-script/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/chatgpt-event/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/chatgpt-garden/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/chatgpt-habits/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/chatgpt-meeting-agenda/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/chatgpt-wardrobe/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/claude-adr/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/cursor-api-endpoint/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/mj-floral-pattern/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/adobe-podcast/",
+      "destination": "/tools/adobe-podcast/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/anyword-ai/",
+      "destination": "/tools/anyword-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/audioalter/",
+      "destination": "/tools/audioalter/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/bhuman/",
+      "destination": "/tools/bhuman/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/clockwise-ai/",
+      "destination": "/tools/clockwise-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/easy-ai/",
+      "destination": "/tools/easy-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/glide-ai/",
+      "destination": "/tools/glide-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/harpa-ai/",
+      "destination": "/tools/harpa-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/ink-ai/",
+      "destination": "/tools/ink-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/listnr/",
+      "destination": "/tools/listnr/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/lm-studio/",
+      "destination": "/tools/lm-studio/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/magickpen/",
+      "destination": "/tools/magickpen/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/maxai/",
+      "destination": "/tools/maxai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/motion-ai/",
+      "destination": "/tools/motion-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/munch-ai/",
+      "destination": "/tools/munch-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/mutable-ai/",
+      "destination": "/tools/mutable-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/nightcafe/",
+      "destination": "/tools/nightcafe/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/novita-ai/",
+      "destination": "/tools/novita-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/pika-labs/",
+      "destination": "/tools/pika-labs/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/playground-ai/",
+      "destination": "/tools/playground-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/reflect-notes/",
+      "destination": "/tools/reflect-notes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/rytr-ai/",
+      "destination": "/tools/rytr-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/seaart/",
+      "destination": "/tools/seaart/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/songdonkey/",
+      "destination": "/tools/songdonkey/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/sudowrite-ai/",
+      "destination": "/tools/sudowrite-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/textcortex/",
+      "destination": "/tools/textcortex/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/ttsmaker/",
+      "destination": "/tools/ttsmaker/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/twilio-ai/",
+      "destination": "/tools/twilio-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/vizcom-ai/",
+      "destination": "/tools/vizcom-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/voice123/",
+      "destination": "/tools/voice123/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/voicemod-pro/",
+      "destination": "/tools/voicemod-pro/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/workflows/dify-content-pipeline/",
+      "destination": "/zh/workflows/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/workflows/dify-rag-document-qna/",
+      "destination": "/zh/workflows/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/workflows/mcp-github-code-review/",
+      "destination": "/zh/workflows/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/workflows/n8n-api-monitor/",
+      "destination": "/zh/workflows/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/workflows/n8n-marketing-automation/",
+      "destination": "/zh/workflows/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/workflows/n8n-social-media-scheduler/",
+      "destination": "/zh/workflows/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/solutions/",
+      "destination": "/zh/solutions/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/solutions/ai-for-architecture/",
+      "destination": "/zh/solutions/ai-for-architecture/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/solutions/ai-for-bim/",
+      "destination": "/zh/solutions/ai-for-bim/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/solutions/ai-for-business/",
+      "destination": "/zh/solutions/ai-for-business/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/solutions/ai-for-civil-engineers/",
+      "destination": "/zh/solutions/ai-for-civil-engineers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/solutions/ai-for-construction/",
+      "destination": "/zh/solutions/ai-for-construction/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/solutions/ai-for-creatives/",
+      "destination": "/zh/solutions/ai-for-creatives/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/solutions/ai-for-education/",
+      "destination": "/zh/solutions/ai-for-education/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/solutions/ai-for-finance/",
+      "destination": "/zh/solutions/ai-for-finance/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/solutions/ai-for-healthcare/",
+      "destination": "/zh/solutions/ai-for-healthcare/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/solutions/ai-for-hvac-engineers/",
+      "destination": "/zh/solutions/ai-for-hvac-engineers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/solutions/ai-for-industrial-design/",
+      "destination": "/zh/solutions/ai-for-industrial-design/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/solutions/ai-for-legal/",
+      "destination": "/zh/solutions/ai-for-legal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/solutions/ai-for-marketing/",
+      "destination": "/zh/solutions/ai-for-marketing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/solutions/ai-for-mep-engineers/",
+      "destination": "/zh/solutions/ai-for-mep-engineers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/solutions/ai-for-structural-engineers/",
+      "destination": "/zh/solutions/ai-for-structural-engineers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/best/ai-agents/",
+      "destination": "/zh/best/ai-agents/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/workflows/dify-sales-assistant/",
+      "destination": "/zh/workflows/dify-sales-assistant/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/workflows/langgraph-customer-support/",
+      "destination": "/zh/workflows/langgraph-customer-support/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/workflows/mcp-claude-file-system/",
+      "destination": "/zh/workflows/mcp-claude-file-system/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/workflows/n8n-email-triage-agent/",
+      "destination": "/zh/workflows/n8n-email-triage-agent/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/workflows/comfyui-design-pipeline/",
+      "destination": "/zh/workflows/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/workflows/dify-content-pipeline/",
+      "destination": "/zh/workflows/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/workflows/dify-customer-support-bot/",
+      "destination": "/zh/workflows/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/workflows/dify-rag-document-qna/",
+      "destination": "/zh/workflows/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/workflows/mcp-github-code-review/",
+      "destination": "/zh/workflows/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/workflows/n8n-api-monitor/",
+      "destination": "/zh/workflows/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/workflows/n8n-lead-enrichment/",
+      "destination": "/zh/workflows/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/workflows/n8n-marketing-automation/",
+      "destination": "/zh/workflows/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/workflows/n8n-social-media-scheduler/",
+      "destination": "/zh/workflows/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/zh/workflows/n8n-webhook-automation/",
+      "destination": "/zh/workflows/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.thebestaitoolsreview.com"
+        }
+      ],
+      "destination": "https://thebestaitoolsreview.com/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/tool/:slug*",
+      "destination": "/tools/:slug*",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/tool/:slug*",
+      "destination": "/zh/tools/:slug*",
+      "statusCode": 301
+    },
+    {
+      "source": "/deep-dive-claude/",
+      "destination": "/blog/claude-vs-gemini-vs-chatgpt-2026/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/deep-dive-claude/",
+      "destination": "/zh/blog/claude-vs-gemini-vs-chatgpt-2026/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/any-cicd/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/any-etl-spec2/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/any-kb-structure/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/any-react-pat/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/chatgpt-biz-plan/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/cursor-worker/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/prompts/mj-landscape/",
+      "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/prompts/any-cicd/",
+      "destination": "/zh/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/prompts/any-etl-spec2/",
+      "destination": "/zh/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/prompts/any-kb-structure/",
+      "destination": "/zh/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/prompts/any-react-pat/",
+      "destination": "/zh/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/prompts/chatgpt-biz-plan/",
+      "destination": "/zh/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/prompts/cursor-worker/",
+      "destination": "/zh/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/prompts/mj-landscape/",
+      "destination": "/zh/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path((?!.*\\.)[^?#]+[^/])",
+      "destination": "/:path/",
+      "statusCode": 301
+    }
   ],
   "rewrites": [
-    { "source": "/favicon.ico", "destination": "/favicon.svg" },
-    { "source": "/favicon.png", "destination": "/favicon.svg" },
-    { "source": "/icon/favicon.ico", "destination": "/favicon.svg" },
-    { "source": "/static/favicon.ico", "destination": "/favicon.svg" },
-    { "source": "/img/favicon.ico", "destination": "/favicon.svg" },
-    { "source": "/images/favicon.ico", "destination": "/favicon.svg" },
-    { "source": "/assets/favicon.ico", "destination": "/favicon.svg" },
-    { "source": "/(.*)", "destination": "/api/index" }
+    {
+      "source": "/favicon.ico",
+      "destination": "/favicon.svg"
+    },
+    {
+      "source": "/favicon.png",
+      "destination": "/favicon.svg"
+    },
+    {
+      "source": "/icon/favicon.ico",
+      "destination": "/favicon.svg"
+    },
+    {
+      "source": "/static/favicon.ico",
+      "destination": "/favicon.svg"
+    },
+    {
+      "source": "/img/favicon.ico",
+      "destination": "/favicon.svg"
+    },
+    {
+      "source": "/images/favicon.ico",
+      "destination": "/favicon.svg"
+    },
+    {
+      "source": "/assets/favicon.ico",
+      "destination": "/favicon.svg"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/api/index"
+    }
   ]
 }

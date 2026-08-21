@@ -15,9 +15,9 @@ const pageLang = Astro.currentLocale || "en";
 const T = {
   // Hero
   hero_badge:         { en: "🚀 NEW: AI Benchmark Lab v2.0", zh: "🚀 全新：AI 基准测试实验室 v2.0" },
-  hero_title_prefix:  { en: "Find Your Perfect", zh: "发现你的理想" },
-  hero_title_hl:      { en: "AI Stack", zh: "AI 工具组合" },
-  hero_subtitle:      { en: "Practical, hands-on AI tool reviews. Every recommendation backed by documented testing.", zh: "基于实测的 AI 工具评测。每条推荐都有实测数据支撑。" },
+  hero_title_prefix:  { en: "Best AI Tools", zh: "2026 最佳" },
+  hero_title_hl:      { en: "for 2026 — Hand-Tested", zh: "AI 工具实测推荐" },
+  hero_subtitle:      { en: "300+ AI tools reviewed, 200+ comparisons, every pick backed by documented hands-on testing in 2026.", zh: "300+ 款 AI 工具实测、200+ 组对比，2026 年每条推荐都有文档化实测数据支撑。" },
   hero_btn_primary:   { en: "Find My AI Stack", zh: "找到我的 AI 工具组合" },
   hero_btn_secondary: { en: "Explore All Tools", zh: "浏览全部工具" },
   hero_stat_reviewed: { en: "AI Tools Reviewed", zh: "款 AI 工具已评测" },
@@ -163,16 +163,21 @@ const popularComparisons = [
   { slug: "cursor-vs-github-copilot", title_en: "Cursor vs GitHub Copilot", title_zh: "Cursor vs GitHub Copilot", desc_en: "AI-native editor vs IDE plugin", desc_zh: "AI 原生编辑器 vs IDE 插件" },
   { slug: "claude-vs-gemini", title_en: "Claude vs Gemini", title_zh: "Claude vs Gemini", desc_en: "Writing quality vs multimodal power", desc_zh: "写作质量 vs 多模态能力" },
   { slug: "elevenlabs-vs-chatgpt", title_en: "ElevenLabs vs ChatGPT Voice", title_zh: "ElevenLabs vs ChatGPT Voice", desc_en: "Professional voice AI vs integrated voice", desc_zh: "专业语音 AI vs 集成语音" },
-  { slug: "sora-vs-runway", title_en: "Sora 2 vs Runway", title_zh: "Sora 2 vs Runway", desc_en: "Highest quality vs production tools", desc_zh: "最高画质 vs 生产工具" }
+  { slug: "sora-vs-runway", title_en: "Sora 2 vs Runway", title_zh: "Sora 2 vs Runway", desc_en: "Highest quality vs production tools", desc_zh: "最高画质 vs 生产工具" },
+  { slug: "hailuo-vs-runway", title_en: "Hailuo vs Runway", title_zh: "Hailuo vs Runway", desc_en: "Fast cinematic video vs pro toolkit", desc_zh: "快速电影级视频 vs 专业工具包" },
+  { slug: "github-copilot-vs-replit", title_en: "GitHub Copilot vs Replit", title_zh: "GitHub Copilot vs Replit", desc_en: "AI coding in your editor vs cloud IDE", desc_zh: "编辑器内 AI 编程 vs 云端 IDE" }
 ];
 
 const popularGuides = [
-  { slug: "best-free-ai-tools-for-students-2026", title_en: "10 Best Free AI Tools for Students", title_zh: "最适合学生的 10 款免费 AI 工具", desc_en: "Tested for two weeks on real assignments", desc_zh: "在真实作业上测试两周" },
-  { slug: "chatgpt-vs-claude-which-should-you-pick-2026", title_en: "ChatGPT vs Claude: Which to Pick?", title_zh: "ChatGPT vs Claude：该选哪个？", desc_en: "Two weeks of side-by-side testing", desc_zh: "为期两周的并排对比测试" },
-  { slug: "best-ai-image-generators-compared-2026", title_en: "Best AI Image Generators (2026)", title_zh: "最佳 AI 图像生成器（2026）", desc_en: "Midjourney vs SD vs DALL-E vs Flux", desc_zh: "Midjourney vs SD vs DALL-E vs Flux" }
+  { slug: "best-ai-tools-for-content-writers-2026", title_en: "Best AI Tools for Content Writers (2026)", title_zh: "最佳 AI 内容写作工具（2026）", desc_en: "Real hands-on testing of 17 tools", desc_zh: "17 款工具真实上手测试" },
+  { slug: "chatgpt-vs-claude-2026", title_en: "ChatGPT vs Claude: Which to Pick?", title_zh: "ChatGPT vs Claude：该选哪个？", desc_en: "Two weeks of side-by-side testing", desc_zh: "为期两周的并排对比测试" },
+  { slug: "best-ai-image-generators-compared-2026", title_en: "Best AI Image Generators (2026)", title_zh: "最佳 AI 图像生成器（2026）", desc_en: "Midjourney vs SD vs DALL-E vs Flux", desc_zh: "Midjourney vs SD vs DALL-E vs Flux" },
+  { slug: "best-ai-video-generators-2026", title_en: "Best AI Video Generators (2026)", title_zh: "最佳 AI 视频生成器（2026）", desc_en: "Hailuo, Runway, Kling & Sora tested", desc_zh: "实测 Hailuo、Runway、Kling 与 Sora" },
+  { slug: "ai-video-creation-guide-2026", title_en: "AI Video Creation Guide", title_zh: "AI 视频创作指南", desc_en: "Text-to-video workflow, tested end to end", desc_zh: "端到端实测文生视频工作流" }
 ];
 
 const editorialLog = [
+  { date: "2026-08-18", title_en: "Published new video & coding comparisons", title_zh: "发布全新视频与编程对比", desc_en: "Hailuo vs Runway and GitHub Copilot vs Replit, tested hands-on.", desc_zh: "实测 Hailuo vs Runway 与 GitHub Copilot vs Replit。" },
   { date: "2026-07-15", title_en: "Added Gemini, Leonardo.AI, and Jasper", title_zh: "新增 Gemini、Leonardo.AI 和 Jasper", desc_en: "Three new tools passed our hands-on quality review.", desc_zh: "三款新工具通过实测质量审核。" },
   { date: "2026-07-10", title_en: "Re-tested the top writing tools", title_zh: "重新评测头部写作工具", desc_en: "We refreshed rankings after another round of practical tests.", desc_zh: "经过新一轮实测后更新排名。" },
   { date: "2026-06-10", title_en: "Published our AI research tools guide", title_zh: "发布 AI 研究工具指南", desc_en: "Twelve research tools tested on a real thesis workflow.", desc_zh: "在真实论文工作流中测试了十二款研究工具。" }

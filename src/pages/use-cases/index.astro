@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const siteUrl = "https://thebestaitoolsreview.com";
+const useCases = [
+  { slug: "architecture-ai-tools", title: "Best AI Tools for Architects 2026", desc: "Generative design, rendering, and architectural visualization tools tested on real projects." },
+  { slug: "bim-ai-tools", title: "Best AI Tools for BIM Engineers 2026", desc: "AI tools for building information modeling, clash detection, and model automation." },
+  { slug: "construction-ai-tools", title: "AI Tools for Construction Projects 2026", desc: "AI for construction scheduling, safety, estimating, and project management." },
+  { slug: "engineering-ai-tools", title: "AI Tools for Engineers 2026", desc: "Design, analysis, and automation tools for mechanical and civil engineering workflows." },
+];
+const breadcrumb = {
+  "@context": "https://schema.org", "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl + "/" },
+    { "@type": "ListItem", "position": 2, "name": "Use Cases", "item": siteUrl + "/use-cases/" }
+  ]
+};
+---
+<BaseLayout title="AI Tools by Use Case — Architecture, BIM, Construction & Engineering" description="Explore AI tools organized by use case: architecture, BIM, construction, and engineering. Curated lists with real hands-on testing." keywords="AI tools by use case, AI for architects, AI for construction, AI for engineers">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumb)}></script>
+  </Fragment>
+  <div class="page-container">
+    <nav class="breadcrumbs"><a href="/">Home</a> &rsaquo; <span>Use Cases</span></nav>
+    <h1 class="page-title">AI Tools by Use Case</h1>
+    <p class="page-lede">Hands-on tested AI tool lists for architecture, BIM, construction, and engineering workflows.</p>
+    <div class="card-grid">
+      {useCases.map(uc => (
+        <a class="list-card" href={`/use-cases/${uc.slug}/`}>
+          <div class="card-head">
+            <h3>{uc.title}</h3>
+            <span class="tool-pill">Use Case</span>
+          </div>
+          <p class="card-desc">{uc.desc}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

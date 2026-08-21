@@ -14,8 +14,6 @@ AIGC:
     ReservedCode2: f9Fr/jiM1pl0NJHdYUI8/wMPzKjvx4oxsVat1DCdPmxzXxU2yCOcS69cTllAQ7i4kAOzC7S1GLUevF2FFx2ViBKCa6nyR1Fb+MJIJGAXavrK0HmP0bqXnngIxXgkcm2tJEanpyzmJoxrfTpRyXksB6D7ZH6CUOJ+qJsJlvU/1iV6MfaaWebrmJ/xu+c=
 ---
 
-
-
 > **Affiliate Disclosure:** AI Tool Hub may earn commissions from qualifying purchases made through links on this page. This does not affect our editorial assessment — we recommend tools based on hands-on testing and real-world use, not commission rates.
 
 ## Quick Answer: Is Kling AI Right for Your Video Projects?

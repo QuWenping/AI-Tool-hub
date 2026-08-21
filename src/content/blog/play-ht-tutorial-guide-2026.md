@@ -1,20 +1,4 @@
 ---
-title_en: 'Play Ht Tutorial Guide (2026): Full Review & Hands-On Test'
-desc_en: 'Complete Play Ht tutorial guide for 2026. Hands-on review, step-by-step setup, pricing, pros/cons, and real-world use cases.'
-category: AI TOOL REVIEW + TUTORIAL
-author: AI Tool Hub Research Team
-date: '2026-08-06'
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: d49fe9e58e84b114ae630734f70cf3ca_4428dd7b913d11f1bcfc525400e6dd8f
-    ReservedCode1: MYlcSCA2xxeBjfCJgfMqnaYNWO2k0rVDVrcvk8xSbRm3Uq7/2kuwo8ZQdBdUYFZwBL2c6bBzBrRgBj06zQ7d77+zq4zMbGMiH318HFIdZe0Z2nBBLv+TKo0TA85GaZP4+cQn5iQ0dGRSf8QCGW4Jol5Jo2Q4bIROyKSvC2aQQySqiaKjg49z+DDS9Gw=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: d49fe9e58e84b114ae630734f70cf3ca_4428dd7b913d11f1bcfc525400e6dd8f
-    ReservedCode2: MYlcSCA2xxeBjfCJgfMqnaYNWO2k0rVDVrcvk8xSbRm3Uq7/2kuwo8ZQdBdUYFZwBL2c6bBzBrRgBj06zQ7d77+zq4zMbGMiH318HFIdZe0Z2nBBLv+TKo0TA85GaZP4+cQn5iQ0dGRSf8QCGW4Jol5Jo2Q4bIROyKSvC2aQQySqiaKjg49z+DDS9Gw=
----
-
----
 author: AI Tool Hub Research Team
 category: Tutorial
 tags:
