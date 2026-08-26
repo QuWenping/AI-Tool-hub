@@ -1,4 +1,5 @@
 ---
+noindex: true
 title_en: "Cursor Middleware Prompt Guide"
 desc_en: "AI prompt template for Cursor Middleware Prompt Guide"
 category: "Prompts"

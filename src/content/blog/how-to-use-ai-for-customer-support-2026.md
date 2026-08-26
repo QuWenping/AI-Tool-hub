@@ -1,4 +1,5 @@
 ---
+noindex: true
 
 author: AI Tool Hub Research Team
 read_time: 6 min

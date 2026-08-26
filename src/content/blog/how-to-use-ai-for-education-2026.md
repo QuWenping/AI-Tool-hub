@@ -1,4 +1,5 @@
 ---
+noindex: true
 
 title_en: 'How to Use AI for Education in 2026 — Teacher and Student Guide'
 title_zh: '2026 年如何用 AI 赋能教育——师生指南'

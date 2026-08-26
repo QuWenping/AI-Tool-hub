@@ -1,4 +1,5 @@
 ---
+noindex: true
 
 title_en: 'How to Use Claude for Long Documents in 2026: 200K Context Guide'
 title_zh: '2026 年如何使用 Claude 处理长文档：20 万上下文指南'

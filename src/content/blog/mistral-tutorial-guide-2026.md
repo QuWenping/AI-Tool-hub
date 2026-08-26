@@ -1,4 +1,5 @@
 ---
+noindex: true
 
 AIGC:
     Label: "1"

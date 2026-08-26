@@ -1,4 +1,5 @@
 ---
+noindex: true
 
 author: AI Tool Hub Research Team
 author_slug: lin-chen

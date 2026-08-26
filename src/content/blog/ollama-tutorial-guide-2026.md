@@ -1,4 +1,5 @@
 ---
+noindex: true
 title_en: 'Ollama Tutorial Guide (2026): Full Review & Hands-On Test'
 desc_en: 'Complete Ollama tutorial guide for 2026. Hands-on review, step-by-step local LLM setup, model management, pricing (free), pros/cons, and real-world use cases.'
 category: AI TOOL REVIEW + TUTORIAL

@@ -24,6 +24,8 @@ const blogCollection = defineCollection({
       q: z.string(),
       a: z.string()
     })).default([]),
+    // SEO V4: per-article noindex flag (used for low-quality templated AIGC pages)
+    noindex: z.boolean().optional(),
   }),
 });
 

@@ -1,4 +1,5 @@
 ---
+noindex: true
 
 title_en: 'How to Build an AI Agent in 2026 — Step-by-Step Guide'
 title_zh: '2026 年如何构建 AI 智能体——分步指南'

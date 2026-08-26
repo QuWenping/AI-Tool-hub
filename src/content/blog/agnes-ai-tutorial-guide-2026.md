@@ -8,7 +8,7 @@ AIGC:
     ContentPropagator: 001191440300708461136T1XGW3
     PropagateID: d49fe9e58e84b114ae630734f70cf3ca_58929c038d4f11f1bfea525400e6dd8f
     ReservedCode2: 5G4DA+aQ/fhOFS1AO2vIBlCMI0AvFDfD8GPyw+zla6vtIYgjBOfTOs7YL1McfUAMoI5hz25LnjMAQjp6/rFdixTnYlvxHFc+NRkt2qsMwFho1f0Qwow0d5U7u+E055ogkEgrrzQTWnEZYMJBM7S96RjzCaUU0ScJTJRf402D6m5FgqoJBt5JzmMq0lA=
-title_en: 'Agnes AI Tutorial Guide (2026): Full Review & Hands-On Test'
+title_en: 'Agnes AI in 2026: A Hands-On Test of the Free, No-Credit-Card Generative API'
 desc_en: 'Zero-cost, credit-card-free access to text, image, and video generation through a single unified API — ideal for prototyping, classroom demos, and validating ideas before committing to paid services.'
 category: AI TOOL REVIEW + TUTORIAL
 author: AI Tool Hub Research Team

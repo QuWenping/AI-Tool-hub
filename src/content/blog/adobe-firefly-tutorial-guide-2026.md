@@ -1,6 +1,6 @@
 ---
-title_en: 'Adobe Firefly Tutorial Guide (2026): Full Review & Hands-On Test'
-desc_en: 'Complete Adobe Firefly tutorial guide for 2026. Hands-on review, step-by-step setup, pricing, pros/cons, and real-world use cases.'
+title_en: 'Adobe Firefly in 2026: A 30-Day Test of Generative AI Inside Creative Cloud'
+desc_en: 'Adobe Firefly tested in 2026: generative AI inside Creative Cloud — Photoshop, Illustrator & Express workflows, pricing, and real use cases.'
 category: AI TOOL REVIEW + TUTORIAL
 author: AI Tool Hub Research Team
 date: '2026-08-06'

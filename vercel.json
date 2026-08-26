@@ -94,6 +94,62 @@
       "statusCode": 301
     },
     {
+      "source": "/zh/templates/meeting-minutes/",
+      "destination": "/templates/meeting-minutes/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/templates/nda-template/",
+      "destination": "/templates/nda-template/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/templates/prd-template/",
+      "destination": "/templates/prd-template/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/templates/qbr-template/",
+      "destination": "/templates/qbr-template/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/templates/resume-pm/",
+      "destination": "/templates/resume-pm/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/templates/srs-template/",
+      "destination": "/templates/srs-template/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/templates/swot-template/",
+      "destination": "/templates/swot-template/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/templates/ui-prompt-template/",
+      "destination": "/templates/ui-prompt-template/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/workflows/comfyui-style-transfer-pipeline/",
+      "destination": "/workflows/comfyui-style-transfer-pipeline/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/workflows/comfyui-video-frame-interpolation/",
+      "destination": "/workflows/comfyui-video-frame-interpolation/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/workflows/dify-sales-assistant/",
+      "destination": "/workflows/dify-sales-assistant/",
+      "statusCode": 301
+    },
+
+    {
       "source": "/vs/bloop-ai-vs-cursor/",
       "destination": "/vs/",
       "statusCode": 301

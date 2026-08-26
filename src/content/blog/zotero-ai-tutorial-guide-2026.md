@@ -1,4 +1,5 @@
 ---
+noindex: true
 author: AI Tool Hub Research Team
 category: Tutorial
 tags:

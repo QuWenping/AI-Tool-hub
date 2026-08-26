@@ -8,7 +8,7 @@ AIGC:
     ContentPropagator: 001191440300708461136T1XGW3
     PropagateID: d49fe9e58e84b114ae630734f70cf3ca_cae098588ee211f1857c525400826444
     ReservedCode2: RlVISAXlKxJg/iXuvEiZO+SjM1JurNqD5tphlZcVEYe97225MeX3jhfsVDaETiRSlcp7dqwiPsgfpBG/x36DCmoF+a+XPdxbTbHuo/VgpgAEsfoANprpgUqRLsghwKasOnSFky6USr4Nz0NCGbl0pAc+FU42wOfwiHEbMMXAxqlRbCIj9J12cMHaJs0=
-title_en: 'Cline Tutorial Guide (2026): Full Review & Hands-On Test'
+title_en: 'I Tested Cline for 30 Days: The Open-Source Coding Agent That Runs on Any LLM'
 desc_en: 'Cline plans and executes multi-step tasks autonomously — reading files, writing code, running tests, and iterating based on results, functioning like an AI pair programmer in VS Code.'
 category: AI TOOL REVIEW + TUTORIAL
 author: AI Tool Hub Research Team

@@ -1,6 +1,6 @@
 ---
-title_en: 'Leonardo Tutorial Guide (2026): Full Review & Hands-On Test'
-desc_en: 'Complete Leonardo tutorial guide for 2026. Hands-on review, step-by-step setup, pricing, pros/cons, and real-world use cases.'
+title_en: 'I Tested Leonardo.AI for 30 Days: Game Art & Concept Design With AI (2026)'
+desc_en: 'Leonardo.AI tested over 30 days: AI image generation for game art, character design & concept art, with style-consistent tools and pricing.'
 category: AI TOOL REVIEW + TUTORIAL
 author: AI Tool Hub Research Team
 date: '2026-08-06'

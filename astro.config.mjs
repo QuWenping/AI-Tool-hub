@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import node from '@astrojs/node';
+import { readFileSync } from 'node:fs';
 
 export default defineConfig({
   output: 'hybrid',
@@ -33,6 +34,18 @@ export default defineConfig({
     '/zh/best/students/': '/zh/solutions/ai-for-students/',
     '/templates/comfyui-img2img/': '/templates/comfyui-txt2img/',
     '/zh/author/sofia-reyes/': '/author/sofia-reyes/',
+    '/zh/templates/meeting-minutes/': '/templates/meeting-minutes/',
+    '/zh/templates/nda-template/': '/templates/nda-template/',
+    '/zh/templates/prd-template/': '/templates/prd-template/',
+    '/zh/templates/qbr-template/': '/templates/qbr-template/',
+    '/zh/templates/resume-pm/': '/templates/resume-pm/',
+    '/zh/templates/srs-template/': '/templates/srs-template/',
+    '/zh/templates/swot-template/': '/templates/swot-template/',
+    '/zh/templates/ui-prompt-template/': '/templates/ui-prompt-template/',
+    '/zh/workflows/comfyui-style-transfer-pipeline/': '/workflows/comfyui-style-transfer-pipeline/',
+    '/zh/workflows/comfyui-video-frame-interpolation/': '/workflows/comfyui-video-frame-interpolation/',
+    '/zh/workflows/dify-sales-assistant/': '/workflows/dify-sales-assistant/',
+
     '/vs/bloop-ai-vs-cursor/': '/vs/',
     '/vs/descript-vs-runway/': '/vs/',
     '/vs/stable-diffusion-vs-ideogram/': '/vs/',
@@ -180,7 +193,14 @@ export default defineConfig({
           '/prompts/any-react-pat/', '/prompts/chatgpt-biz-plan/', '/prompts/cursor-worker/',
           '/prompts/mj-landscape/',
         ];
-        return !path.includes('/ads.txt') &&
+        // SEO V4: exclude all zh pages from sitemap to concentrate crawl budget on English content
+        // noindexLowQuality: read from content-queue/noindex-pages.json (low-quality AIGC pages kept noindex)
+        const noindexLowQuality = JSON.parse(
+          readFileSync(new URL('./content-queue/noindex-pages.json', import.meta.url), 'utf-8')
+        );
+        return !path.startsWith('/zh/') &&
+          !noindexLowQuality.includes(path) &&
+          !path.includes('/ads.txt') &&
           !path.includes('/baidu_verify') &&
           !path.includes('/google') &&
           !path.includes('/robots.txt') &&

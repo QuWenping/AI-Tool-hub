@@ -1,4 +1,5 @@
 ---
+noindex: true
 
 title_en: 'How to Use AI for Sales in 2026 — A Complete Guide'
 title_zh: '2026 年如何使用 AI 提升销售业绩——完整指南'

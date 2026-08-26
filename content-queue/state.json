@@ -3,5 +3,8 @@
   "published": [
     "claude-vs-gpt-2026-coding-showdown",
     "best-ai-tools-for-product-managers-2026"
-  ]
+  ],
+  "pipelinePaused": true,
+  "pausedReason": "SEO V4 Phase-1: 2026-08-25 暂停每日5篇纯AI批量生成, 改为每周3-5篇人工编辑; 存量AIGC分级中",
+  "pausedAt": "2026-08-25"
 }

@@ -1,4 +1,5 @@
 ---
+noindex: true
 
 title_en: 'How to Use ChatGPT for Coding in 2026 — Developer Guide'
 title_zh: '2026 年如何使用 ChatGPT 编程——开发者指南'

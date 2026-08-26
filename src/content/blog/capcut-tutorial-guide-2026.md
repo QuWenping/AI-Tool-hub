@@ -8,7 +8,7 @@ AIGC:
     ContentPropagator: 001191440300708461136T1XGW3
     PropagateID: d49fe9e58e84b114ae630734f70cf3ca_c9c95a468ee211f1912b525400e6dd8f
     ReservedCode2: eeyALa4BhH3G3VJHYy2fMmIqMMua9NcUdzzYEpLo2OwMzCr54oyNqOArkNo2sjnZX5DxYeW0Yeg0cWwQ4Fb1qsx4wUyNIBKs5waOOSS8x2fY7iJbY8UTpMWMHu1gFPsbvseDYvK8SzkiCR2LVLla6afcuoQiLwUVkvOD2yibe6Hr+njoKAAn6JY6zRA=
-title_en: 'CapCut Tutorial Guide (2026): Full Review & Hands-On Test'
+title_en: 'CapCut in 2026: A Hands-On Test of AI-Powered Short-Form Video Editing'
 desc_en: 'Fast, AI-assisted short-form video editing for TikTok, Instagram Reels, and YouTube Shorts — with auto-captions, background removal, and templates making professional editing accessible.'
 category: AI TOOL REVIEW + TUTORIAL
 author: AI Tool Hub Research Team

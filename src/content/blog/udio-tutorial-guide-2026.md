@@ -1,4 +1,5 @@
 ---
+noindex: true
 title_en: 'Udio Tutorial Guide (2026): Full Review & Hands-On Test'
 desc_en: 'Complete Udio tutorial guide for 2026. Hands-on review, step-by-step setup, pricing, pros/cons, and real-world use cases.'
 category: AI TOOL REVIEW + TUTORIAL

@@ -96,7 +96,7 @@ const faqSchema = {
   }))
 };
 ---
-<BaseLayout title={postTitle} description={postDesc} keywords={postData.tags?.join(", ") || postTitle} lang={pageLang} image={postData.image} pubDate={postData.date}>
+<BaseLayout title={postTitle} description={postDesc} keywords={postData.tags?.join(", ") || postTitle} lang={pageLang} image={postData.image} pubDate={postData.date} noindex={postData.noindex === true || postData.noindex === "true" || postData.noindex === 1}>
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(articleSchema)}></script>
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)}></script>

@@ -1,4 +1,5 @@
 ---
+noindex: true
 title_en: 'Letsenhance Tutorial Guide 2026'
 desc_en: 'Complete tutorial guide for Letsenhance in 2026. Step-by-step instructions, tips, and best practices.'
 category: Tutorial

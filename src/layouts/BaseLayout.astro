@@ -8,7 +8,7 @@ import "../styles/global.css";
 import { localePath, navLabel, getTranslations } from "../utils/i18n";
 const allTools = await getCollection("tools");
 const toolsById = Object.fromEntries(allTools.map(t => [t.id, t]));
-const { title, description, keywords, canonical, lang: propLang, fullWidth = false, image, ogType = "website", articleAuthor, pubDate, noZhSibling, noEnSibling } = Astro.props;
+const { title, description, keywords, canonical, lang: propLang, fullWidth = false, image, ogType = "website", articleAuthor, pubDate, noZhSibling, noEnSibling, noindex = false } = Astro.props;
 const lang = propLang || Astro.currentLocale || "en";
 const t = getTranslations("baseLayout", lang);
 const tc = getTranslations("common", lang);
@@ -64,7 +64,7 @@ const ogImage = image ? siteUrl + image : siteUrl + "/og-image.svg";
   <meta name="citation_language" content={lang === "zh" ? "zh-CN" : "en-US"}>
   <meta name="author" content="AI Tool Hub Editorial Team">
   <meta name="publisher" content="AI Tool Hub">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">  <meta name="theme-color" content="#3b82f6">
+  <meta name="robots" content={noindex || isZhPath || lang === "zh" ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}>  <meta name="theme-color" content="#3b82f6">
   <script is:inline>
     (function () {
       var saved = null;

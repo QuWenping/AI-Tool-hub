@@ -8,7 +8,7 @@ AIGC:
     ContentPropagator: 001191440300708461136T1XGW3
     PropagateID: d49fe9e58e84b114ae630734f70cf3ca_570739fe8d4f11f1bfea525400e6dd8f
     ReservedCode2: 7/ztbPkuTDq8bRA3TmF519tMaxQg3OmQlEGAjOtMc26LO9B6nFzzDKYI4HZNrHQSi+ZsIPi+M+Twq+eBxgImaf+3TMFgf6O6cmBQ4jkOH/gJg1oaLXRbo2JRp49Vc/onzzM884Kma7YtQhsBat6wpYU8eddFYk6TPX59op1y4Lgqs3m8ZO+PbS7ddh0=
-title_en: 'Bolt.new Tutorial Guide (2026): Full Review & Hands-On Test'
+title_en: 'Bolt.new in 2026: From One Sentence to a Full-Stack Web App in Minutes'
 desc_en: 'Turning a one-sentence idea into a running full-stack web application in under 2 minutes, with zero local setup. Ideal for prototyping, MVPs, and learning full-stack patterns.'
 category: AI TOOL REVIEW + TUTORIAL
 author: AI Tool Hub Research Team

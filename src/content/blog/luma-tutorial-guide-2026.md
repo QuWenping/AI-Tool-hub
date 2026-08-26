@@ -8,7 +8,7 @@ AIGC:
     ContentPropagator: 001191440300708461136T1XGW3
     PropagateID: d49fe9e58e84b114ae630734f70cf3ca_18d2083c8d8511f1b8c1525400826444
     ReservedCode2: rdnyISro5WJe8pmOO3bdR9wF+MXoNloE6FiH+DyFuHt15sMgz6ugBfigV+QSjAtcCd0KjXS/RriQArpViWFG/8ul7iiMXrQ4bjX9uT0EYUBZzGA+5w9XU2/GoJYv+RnsCDNROBPBhk7jpS4/p71+zpS2uPM2zFHhgmvA+LfsrNW4p7X6fs4x1RYtk0Q=
-title_en: 'Luma AI Tutorial Guide (2026): Full Review & Hands-On Test'
+title_en: 'Luma AI in 2026: Image-to-Video That Respects Physics — A 30-Day Test'
 desc_en: 'Turning still images into realistic 5-second video clips with believable physics and coherent lighting — top recommendation for image-to-video workflows.'
 category: AI TOOL REVIEW + TUTORIAL
 author: AI Tool Hub Research Team

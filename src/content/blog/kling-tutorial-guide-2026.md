@@ -1,6 +1,6 @@
 ---
-title_en: 'Kling Tutorial Guide (2026): Full Review & Hands-On Test'
-desc_en: 'Complete Kling tutorial guide for 2026. Hands-on review, step-by-step setup, pricing, pros/cons, and real-world use cases.'
+title_en: 'Kling AI in 2026: A Hands-On Test of AI Video Generation With Real Physics'
+desc_en: 'Kling AI tested in 2026: Kuaishou AI video model that turns text and images into short clips with strong physics. Pricing and hands-on tips.'
 category: AI TOOL REVIEW + TUTORIAL
 author: AI Tool Hub Research Team
 date: '2026-08-06'

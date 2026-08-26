@@ -1,6 +1,6 @@
 ---
-title_en: 'LOVO AI Tutorial Guide (2026): Full Review & Hands-On Test'
-desc_en: 'Complete LOVO AI tutorial guide for 2026. Hands-on review, step-by-step voiceover creation, Genny voice generator, pricing, pros/cons, and real-world use cases.'
+title_en: 'I Tested LOVO AI for 30 Days: A Complete Guide to AI Voiceovers in 2026'
+desc_en: 'LOVO AI tested over 30 days: 500+ voices, 100+ languages, the Genny voice generator, pricing, pros/cons, and step-by-step AI voiceover creation.'
 category: AI TOOL REVIEW + TUTORIAL
 author: AI Tool Hub Research Team
 date: '2026-08-07'

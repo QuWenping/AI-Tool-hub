@@ -22,8 +22,8 @@ desc_en: A hands-on tutorial guide to ChatGPT in 2026. We tested image generatio
 | Question | Answer |
 |----------|--------|
 | **What is ChatGPT best for?** | General-purpose productivity: writing, coding, research, image generation, and real-time voice conversation — all in one tool |
-| **What models does it use?** | current-generation models (free) and current-generation models (Plus); Plus adds image generation, voice mode, web browsing, and Advanced Data Analysis |
-| **How much does it cost?** | Free tier with current-generation models mini · Plus $20/mo · Team $30/user/mo · Enterprise custom pricing |
+| **What models does it use?** | GPT-5.6 Luna (free) and GPT-5.6 Sol (Plus); Plus adds image generation, voice mode, web browsing, and Advanced Data Analysis |
+| **How much does it cost?** | Free tier with GPT-5.6 Luna · Plus $20/mo · Team $30/user/mo · Enterprise custom pricing |
 | **Who should use it?** | Professionals, students, developers, and creators who need a single versatile AI assistant that handles writing, coding, research, and image creation without switching tools |
 | **Who should look elsewhere?** | Users who need the most natural long-form writing (consider Claude) or primarily work with video/audio multimodal input (consider Gemini) |
 
@@ -35,7 +35,7 @@ desc_en: A hands-on tutorial guide to ChatGPT in 2026. We tested image generatio
 
 | Detail | Value |
 |--------|-------|
-| Version tested | ChatGPT (current-generation models / current-generation models Plus) |
+| Version tested | ChatGPT (GPT-5.6 Sol / GPT-5.6 Sol Plus) |
 | Test scenarios | Content writing, code debugging, data analysis, image creation, research, voice conversation |
 | Prompt count | 90+ prompts across 6 scenarios |
 | Total interactions | 150+ conversation turns with follow-up refinements |
@@ -69,9 +69,9 @@ desc_en: A hands-on tutorial guide to ChatGPT in 2026. We tested image generatio
 
 ### Step 1: Understanding What Each Plan Unlocks
 
-ChatGPT's free tier ships current-generation models mini — capable for casual use including basic writing, coding questions, and factual lookups. The $20/month Plus plan is where the tool becomes a genuine productivity multiplier:
+ChatGPT's free tier ships GPT-5.6 Luna — capable for casual use including basic writing, coding questions, and factual lookups. The $20/month Plus plan is where the tool becomes a genuine productivity multiplier:
 
-- **current-generation models**: Full reasoning capability for complex multi-step tasks
+- **GPT-5.6 Sol**: Full reasoning capability for complex multi-step tasks
 - **Image generation**: Generate and edit images through natural conversation
 - **Web browsing**: Real-time internet access with cited sources
 - **Advanced Data Analysis**: Upload spreadsheets and run Python-powered analysis
@@ -196,7 +196,7 @@ We switched the prompt strategy entirely: "A glass water bottle with water insid
 
 - Formulaic writing style can feel less natural than Claude for long-form prose, particularly in creative and narrative contexts
 - Image generation struggles with abstract material properties like transparency and complex multi-object spatial relationships
-- The free tier's current-generation models mini can feel limited for complex reasoning tasks compared with the full current-generation models on Plus
+- The free tier's GPT-5.6 Luna can feel limited for complex reasoning tasks compared with the full GPT-5.6 Sol on Plus
 - Custom GPTs, while powerful, lack fine-grained access controls — shared GPTs expose your configuration to anyone with the link
 - Rate limits on image generation (especially during peak hours) can slow creative workflows on Plus
 
@@ -206,7 +206,7 @@ We switched the prompt strategy entirely: "A glass water bottle with water insid
 
 ### 1. Is ChatGPT free to use?
 
-Yes. The free tier provides access to current-generation models mini, which handles most everyday tasks like writing, basic coding help, and factual questions. The $20/month Plus plan adds current-generation models, image generation, Advanced Data Analysis, web browsing with citations, and voice mode. For most professional users who use ChatGPT more than a few times per week, Plus justifies its cost within the first month.
+Yes. The free tier provides access to GPT-5.6 Luna, which handles most everyday tasks like writing, basic coding help, and factual questions. The $20/month Plus plan adds GPT-5.6 Sol, image generation, Advanced Data Analysis, web browsing with citations, and voice mode. For most professional users who use ChatGPT more than a few times per week, Plus justifies its cost within the first month.
 
 ### 2. Can ChatGPT analyze my spreadsheets and documents?
 

@@ -1,4 +1,5 @@
 ---
+noindex: true
 title_en: 'Photoroom Tutorial Guide 2026'
 desc_en: 'Complete tutorial guide for Photoroom in 2026. Step-by-step instructions, tips, and best practices.'
 category: Tutorial

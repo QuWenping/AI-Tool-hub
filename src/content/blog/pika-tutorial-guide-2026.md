@@ -1,6 +1,6 @@
 ---
-title_en: 'Pika Tutorial Guide (2026): Full Review & Hands-On Test'
-desc_en: 'Complete Pika tutorial guide for 2026. Hands-on review, step-by-step setup, pricing, pros/cons, and real-world use cases.'
+title_en: 'Pika in 2026: A Hands-On Test of AI Video Generation & Creative Controls'
+desc_en: 'Pika tested in 2026: turn text, images and video prompts into short AI clips with standout creative controls. Pricing, pros/cons and workflows.'
 category: AI TOOL REVIEW + TUTORIAL
 author: AI Tool Hub Research Team
 date: '2026-08-06'

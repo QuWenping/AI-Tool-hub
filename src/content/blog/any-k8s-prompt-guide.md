@@ -1,4 +1,5 @@
 ---
+noindex: true
 title_en: "Kubernetes AI Prompt Guide"
 desc_en: "AI prompt template for Kubernetes AI Prompt Guide"
 category: "Prompts"
