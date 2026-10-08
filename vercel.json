@@ -9,6 +9,17 @@
   },
   "redirects": [
     {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.thebestaitoolsreview.com"
+        }
+      ],
+      "destination": "https://thebestaitoolsreview.com/:splat",
+      "statusCode": 301
+    },
+    {
       "source": "/deep-dive-chatgpt/",
       "destination": "/blog/chatgpt-tutorial-guide-2026/",
       "statusCode": 301
@@ -41,6 +52,26 @@
     {
       "source": "/blog/free-ai-logo-maker-2026/",
       "destination": "/best/designers/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/best-ai-voice-generators-2026/",
+      "destination": "/best/audio/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/best-ai-tools-for-marketing-2026/",
+      "destination": "/best/content-writing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/best-free-ai-tools-for-students-2026/",
+      "destination": "/best/students/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/chatgpt-vs-claude-which-should-you-pick-2026/",
+      "destination": "/vs/chatgpt-vs-claude/",
       "statusCode": 301
     },
     {
@@ -267,6 +298,116 @@
     {
       "source": "/prompts/mj-floral-pattern/",
       "destination": "/prompts/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/assembly-ai/",
+      "destination": "/tools/assembly-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/canva-ai/",
+      "destination": "/tools/canva-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/cody/",
+      "destination": "/tools/cody/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/devika-ai/",
+      "destination": "/tools/devika-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/gemini/",
+      "destination": "/tools/gemini/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/gorilla-cli/",
+      "destination": "/tools/gorilla-cli/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/immersion-ai/",
+      "destination": "/tools/immersion-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/kiri-ai/",
+      "destination": "/tools/kiri-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/morph-ai/",
+      "destination": "/tools/morph-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/motion-pro/",
+      "destination": "/tools/motion-pro/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/paperpile/",
+      "destination": "/tools/paperpile/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/polish-video/",
+      "destination": "/tools/polish-video/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/shorts-ai/",
+      "destination": "/tools/shorts-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/stability-dev/",
+      "destination": "/tools/stability-dev/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/tencent-zhiying/",
+      "destination": "/tools/tencent-zhiying/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/textify/",
+      "destination": "/tools/textify/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/trevor-ai/",
+      "destination": "/tools/trevor-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/twipu-ai/",
+      "destination": "/tools/twipu-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/type-ai/",
+      "destination": "/tools/type-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/vercel-sdk/",
+      "destination": "/tools/vercel-sdk/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/viz-ai/",
+      "destination": "/tools/viz-ai/",
+      "statusCode": 301
+    },
+    {
+      "source": "/alternatives/you-com/",
+      "destination": "/tools/you-com/",
       "statusCode": 301
     },
     {
@@ -609,17 +750,7 @@
       "destination": "/zh/workflows/",
       "statusCode": 301
     },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.thebestaitoolsreview.com"
-        }
-      ],
-      "destination": "https://thebestaitoolsreview.com/:path*",
-      "statusCode": 301
-    },
+
     {
       "source": "/tool/:slug*",
       "destination": "/tools/:slug*",

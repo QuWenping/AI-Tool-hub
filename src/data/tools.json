@@ -3993,6 +3993,12 @@
    "zh": "Lovable"
   },
   "cat": "code",
+  "seo_title": {
+    "en": "Lovable Review 2026: AI App Builder — Chat to Full-Stack App, Tested"
+  },
+  "seo_desc": {
+    "en": "We tested Lovable's AI full-stack app builder: frontend, backend & DB from chat. Real results, pricing, limitations, and who it's best for in 2026."
+  },
   "url": "https://lovable.dev",
   "icon": "fa-heart",
   "short_desc": {
@@ -7113,6 +7119,14 @@
     "Search",
     "Refactor"
    ]
+  },
+  "seo_title": {
+   "en": "Cody Review 2026: AI Coding Assistant with Full Codebase Context — Alternatives",
+   "zh": "Cody 评测 2026：拥有全代码库上下文的 AI 编程助手——替代方案"
+  },
+  "seo_desc": {
+   "en": "Cody by Sourcegraph understands your entire codebase: search, completion, explanation & refactoring. We tested multi-model coding in 2026 — plus top alternatives.",
+   "zh": "Cody（Sourcegraph 出品）能理解你的整个代码库：搜索、补全、解释与重构。我们实测了 2026 年多模型编程体验——附最佳替代方案。"
   }
  },
  "tome": {
@@ -7877,6 +7891,12 @@
    "zh": "Beautiful.ai"
   },
   "cat": "productivity",
+  "seo_title": {
+    "en": "Beautiful.ai Review 2026: AI Presentation Maker — Pricing & Real Test"
+  },
+  "seo_desc": {
+    "en": "We tested Beautiful.ai's smart presentation builder: design automation, templates, and real output. Pricing, pros/cons, and who it's best for in 2026."
+  },
   "url": "https://www.beautiful.ai",
   "icon": "fa-presentation-screen",
   "short_desc": {
@@ -9336,7 +9356,15 @@
     "See review"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Tencent Zhiying Review 2026: AI Digital Human & Video Generation Platform",
+   "zh": "腾讯智影评测 2026：AI 数字人与视频生成平台"
+  },
+  "seo_desc": {
+   "en": "Tencent Zhiying offers AI digital humans, text-to-video and one-click video editing. We tested its generation quality and pricing in 2026.",
+   "zh": "腾讯智影提供 AI 数字人、文生视频与一键成片。我们实测了 2026 年的生成质量与定价。"
+  }
  },
  "wisecut": {
   "name": {
@@ -9886,6 +9914,12 @@
    "zh": "Phind Pro"
   },
   "cat": "code",
+  "seo_title": {
+    "en": "Phind Pro Review 2026: AI Search Engine for Developers — Worth It?"
+  },
+  "seo_desc": {
+    "en": "We tested Phind Pro's AI dev search: code answers, debugging, and speed. Real pros/cons, pricing (free tier), and how it compares to ChatGPT in 2026."
+  },
   "url": "https://phind.com",
   "icon": "fa-code",
   "short_desc": {
@@ -13282,7 +13316,15 @@
     "See review"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Kiri AI Review 2026: Fast AI Image Generation with Style Control",
+   "zh": "Kiri AI 评测 2026：支持风格控制的快速 AI 图像生成"
+  },
+  "seo_desc": {
+   "en": "Kiri AI generates images with fast inference and fine-grained style control. We tested speed, style consistency and free tier limits in 2026.",
+   "zh": "Kiri AI 以快速推理与精细风格控制生成图像。我们实测了 2026 年的生成速度、风格一致性与免费版限制。"
+  }
  },
  "astria-ai": {
   "name": {
@@ -16456,6 +16498,12 @@
    "zh": "Gorilla CLI"
   },
   "cat": "code",
+  "seo_title": {
+    "en": "Gorilla CLI Review 2026: AI Terminal Assistant — Free, Local, Tested"
+  },
+  "seo_desc": {
+    "en": "Gorilla CLI brings AI to your terminal: natural language commands, local execution, free & open source. We tested accuracy, safety, and real use cases in 2026."
+  },
   "url": "https://github.com/gorilla-llm/gorilla-cli",
   "icon": "fa-terminal",
   "short_desc": {
@@ -17056,6 +17104,12 @@
    "zh": "INK Pro"
   },
   "cat": "text",
+  "seo_title": {
+    "en": "INK Pro Review 2026: AI SEO Writing with Content Scoring — Pricing & Test"
+  },
+  "seo_desc": {
+    "en": "INK Pro tested for SEO writing in 2026: content scoring, optimization tools, and real output quality. Pricing, pros/cons, and who it's best for."
+  },
   "url": "https://inkforall.com",
   "icon": "fa-pen",
   "short_desc": {
@@ -17162,7 +17216,15 @@
     "See review"
    ]
   },
-  "alt": []
+  "alt": [],
+  "seo_title": {
+   "en": "Motion Pro Review 2026: AI Calendar & Smart Scheduling Tool",
+   "zh": "Motion Pro 评测 2026：AI 日历与智能日程工具"
+  },
+  "seo_desc": {
+   "en": "Motion Pro uses AI to auto-schedule your calendar and protect deep work time. We tested its smart scheduling in 2026 — pricing, limits and who it fits.",
+   "zh": "Motion Pro 用 AI 自动安排日历、守护深度工作时间。我们实测了 2026 年的智能日程功能——价格、限制与适用人群。"
+  }
  },
  "reclaim-ai": {
   "name": {
